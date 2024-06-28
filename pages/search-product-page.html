@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/common/common.css" />
+    <link rel="stylesheet" href="../css/grid/grid.css" />
+    <link rel="stylesheet" href="../css/header/header.css" />
+    <link rel="stylesheet" href="../css/footer/footer.css" />
+    <link rel="stylesheet" href="../css/footer/footer-responisve.css" />
+    <link
+      rel="stylesheet"
+      href="../css/search-product-page/search-product-page.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../css/search-product-page/search-product_responsive.css"
+    />
+    <title>Tìm kiếm sản phẩm</title>
+  </head>
+  <body>
+    <div data-include-html="header.html"></div>
+    <main>
+      <div
+        class="search-body-wrapper background-wrapper"
+        style="padding-bottom: 42px"
+      >
+        <div class="subbar-top">
+          <div class="container">
+            <div class="subbar-block d-flex">
+              <button
+                class="border-0 bg-transparent subbar-item d-flex align-items-center"
+              >
+                <img src="../images/home-img/li_layout-grid.svg" alt="icon" />
+                <p>Tất cả</p>
+              </button>
+              <button
+                class="border-0 bg-transparent subbar-item d-flex align-items-center"
+              >
+                <img src="../images/home-img/map.svg" alt="icon" />
+                <p>Tìm theo vị trí</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <section class="product-category-wrapper position-relative">
+          <div class="btn-action position-absolute">
+            <button class="pre-btn button-block border-0">
+              <i class="bi bi-chevron-left"> </i>
+            </button>
+            <button class="next-btn button-block border-0">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+          <div class="container">
+            <div class="product-category-list"></div>
+          </div>
+        </section>
+        <div class="grid wide">
+          <div class="row position-relative">
+            <div class="col l-0 c-12 overlay" onclick="off()"></div>
+            <div class="col l-2 c-6 filter-mobile">
+              <div class="search-filter">
+                <div class="search-filter__title d-flex align-items-center">
+                  <button onclick="off()" class="border-0 bg-transparent">
+                    <i class="bi bi-funnel"></i>
+                  </button>
+                  <p>Bộ lọc tìm kiếm</p>
+                </div>
+                <div class="search-filter__section">
+                  <p class="search-filter__subtitle">Danh mục</p>
+                  <ul
+                    class="search-filter__list d-flex flex-column align-items-start"
+                  >
+                    <li class="search-filter__item">Trái cây</li>
+                    <li class="search-filter__item">Thịt, trứng</li>
+                    <li class="search-filter__item">Rau, củ, quả</li>
+                    <li class="search-filter__item">Sữa, bơ, phô mai</li>
+                  </ul>
+                </div>
+                <div class="search-filter__section">
+                  <p class="search-filter__subtitle">Phương thức vận chuyển</p>
+                  <div
+                    class="search-filter__checkbox-group d-flex flex-column align-items-start"
+                  >
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="express"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="express" class="search-filter__label">
+                        Hỏa tốc
+                      </label>
+                    </div>
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="fast"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="fast" class="search-filter__label"
+                        >Nhanh</label
+                      >
+                    </div>
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="standard"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="standard" class="search-filter__label">
+                        Tiêu chuẩn
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-filter__section">
+                  <p class="search-filter__subtitle">Đánh giá</p>
+                  <ul class="search-filter__list">
+                    <li class="search-filter__item">
+                      <span class="search-filter__stars">
+                        &#9733;&#9733;&#9733;&#9733;&#9733;
+                      </span>
+                      5 sao
+                    </li>
+                    <li class="search-filter__item">
+                      <span class="search-filter__stars">
+                        &#9733;&#9733;&#9733;&#9733;&#9734;
+                      </span>
+                      từ 4 sao
+                    </li>
+                    <li class="search-filter__item">
+                      <span class="search-filter__stars">
+                        &#9733;&#9733;&#9733;&#9734;&#9734;
+                      </span>
+                      từ 3 sao
+                    </li>
+                    <li class="search-filter__item">
+                      <span class="search-filter__stars">
+                        &#9733;&#9733;&#9734;&#9734;&#9734;
+                      </span>
+                      từ 2 sao
+                    </li>
+                    <li class="search-filter__item">
+                      <span class="search-filter__stars">
+                        &#9733;&#9734;&#9734;&#9734;&#9734;
+                      </span>
+                      từ 1 sao
+                    </li>
+                  </ul>
+                </div>
+                <div class="search-filter__section">
+                  <p class="search-filter__subtitle">Khoảng giá</p>
+                  <div class="price-range d-flex flex-column">
+                    <div class="price-range__block d-flex align-items-center">
+                      <input
+                        type="text"
+                        class="price-range__input"
+                        placeholder="từ"
+                      />
+                      <input
+                        type="text"
+                        class="price-range__input"
+                        placeholder="đến"
+                      />
+                    </div>
+                    <button class="price-range__button border-0">
+                      Áp dụng
+                    </button>
+                  </div>
+                </div>
+                <div class="search-filter__section">
+                  <p class="search-filter__subtitle">Thương hiệu</p>
+                  <div
+                    class="search-filter__checkbox-group d-flex flex-column align-items-start"
+                  >
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="brandA"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="brandA" class="search-filter__label">
+                        Thương hiệu A
+                      </label>
+                    </div>
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="brandB"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="brandB" class="search-filter__label">
+                        Thương hiệu B
+                      </label>
+                    </div>
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="brandC"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="brandC" class="search-filter__label">
+                        Thương hiệu C
+                      </label>
+                    </div>
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="brandD"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="brandD" class="search-filter__label">
+                        Thương hiệu D
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-filter__section">
+                  <p class="search-filter__subtitle">Chất liệu</p>
+                  <div
+                    class="search-filter__checkbox-group d-flex flex-column align-items-start"
+                  >
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="materialBlack"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="materialBlack" class="search-filter__label">
+                        Đen
+                      </label>
+                    </div>
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="materialWhite"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="materialWhite" class="search-filter__label">
+                        Trắng
+                      </label>
+                    </div>
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="materialRed"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="materialRed" class="search-filter__label">
+                        Đỏ
+                      </label>
+                    </div>
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="materialGreen"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="materialGreen" class="search-filter__label">
+                        Xanh lá
+                      </label>
+                    </div>
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="materialOrange"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="materialOrange" class="search-filter__label">
+                        Cam
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-filter__section">
+                  <p class="search-filter__subtitle">Nhà cung cấp</p>
+                  <div
+                    class="search-filter__checkbox-group d-flex flex-column align-items-start"
+                  >
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="supplierA"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="supplierA" class="search-filter__label">
+                        Nhà cung cấp A
+                      </label>
+                    </div>
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="supplierB"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="supplierB" class="search-filter__label">
+                        Nhà cung cấp B
+                      </label>
+                    </div>
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="supplierC"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="supplierC" class="search-filter__label">
+                        Nhà cung cấp C
+                      </label>
+                    </div>
+                    <div class="search-filter__option">
+                      <input
+                        type="checkbox"
+                        id="supplierD"
+                        class="search-filter__checkbox"
+                      />
+                      <label for="supplierD" class="search-filter__label">
+                        Nhà cung cấp D
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <p class="search-filter__remove-all">Xoá tất cả bộ lọc</p>
+              </div>
+            </div>
+            <div class="col l-0 c-12 bg-white" style="padding: 10px 15px">
+              <div class="search-sort-mobile">
+                <div class="search-container__moblie">
+                  <a href="#" class="btn__back-icon">
+                    <i class="bi bi-arrow-left-short"></i>
+                  </a>
+                  <div class="search-input__block">
+                    <img src="../images/search-icon-mobile.svg" alt="" />
+                    <input type="text" placeholder="Bông cải xanh" />
+                  </div>
+
+                  <button
+                    class="btn__filter border-0 bg-transparent"
+                    onclick="on()"
+                  >
+                    <i class="bi bi-funnel"></i>
+                    <p>lọc</p>
+                  </button>
+                </div>
+                <div class="sort-options__moblie">
+                  <div class="sort-option active">Liên quan</div>
+                  <div class="sort-option">Mới nhất</div>
+                  <div class="sort-option">Bán chạy</div>
+                  <div class="sort-option" style="gap: 25px">
+                    <p>Giá</p>
+                    <span
+                      class="d-flex flex-column align-items-center justify-content-center"
+                    >
+                      <i class="bi bi-caret-up-fill"></i>
+                      <i class="bi bi-caret-down-fill"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col l-10 c-12 product-container">
+              <div class="search-results">
+                <div class="row">
+                  <div class="col l-12 c-0">
+                    <div class="search-results__header">
+                      <p class="search-results__title">
+                        Tìm kiếm kết quả cho: "<span>Trai cay</span>"
+                      </p>
+                      <div
+                        class="search-results__sort d-flex align-items-center justify-content-between"
+                      >
+                        <div
+                          class="d-flex align-items-center search-results__sort-left"
+                        >
+                          <span class="search-results__sort-label">
+                            Sắp xếp theo:
+                          </span>
+                          <div
+                            class="d-flex align-items-center sort-button__container"
+                          >
+                            <button
+                              class="search-results__sort-button search-results__sort-button--active"
+                            >
+                              Nổi bật
+                            </button>
+                            <button class="search-results__sort-button">
+                              Mới nhất
+                            </button>
+                            <button class="search-results__sort-button">
+                              Bán chạy
+                            </button>
+                            <div
+                              class="search-results__sort-select d-flex align-items-center"
+                            >
+                              <select class="">
+                                <option>Giá</option>
+                                <option>500.000đ</option>
+                                <option>1.000.000đ</option>
+                                <option>2.000.000đ</option>
+                              </select>
+                              <i class="bi bi-caret-down-fill"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="search-results__pagination d-flex">
+                          <p class="search-results__page-info">
+                            <span>1</span>/200
+                          </p>
+                          <div
+                            class="search-results__page-button--block d-flex align-items-center"
+                          >
+                            <span
+                              class="search-results__page-button search-results__page-button--prev"
+                            >
+                              <i class="bi bi-chevron-left"></i>
+                            </span>
+                            <span
+                              class="search-results__page-button search-results__page-button--next"
+                            >
+                              <i class="bi bi-chevron-right"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col l-12 c-12">
+                    <div class="search-results__list-products">
+                      <div
+                        class="row no-gutters sm-gutter get-list-product"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="col l-12 c-0">
+                    <div
+                      class="d-flex justify-content-center"
+                      style="margin-top: 14px"
+                    >
+                      <ul
+                        class="pagination__list-product d-flex align-items-center"
+                      >
+                        <li class="pagination__item">
+                          <a
+                            href="#"
+                            class="pagination__link pagination__link--prev"
+                          >
+                            <i class="bi bi-chevron-left"></i>
+                          </a>
+                        </li>
+                        <li class="pagination__item">
+                          <a
+                            href="#"
+                            class="pagination__link pagination__link--page pagination__link--active"
+                          >
+                            1
+                          </a>
+                        </li>
+                        <li class="pagination__item">
+                          <a
+                            href="#"
+                            class="pagination__link pagination__link--page"
+                          >
+                            2
+                          </a>
+                        </li>
+                        <li class="pagination__item">
+                          <a
+                            href="#"
+                            class="pagination__link pagination__link--page"
+                          >
+                            3
+                          </a>
+                        </li>
+                        <li class="pagination__item">
+                          <a
+                            href="#"
+                            class="pagination__link pagination__link--page"
+                          >
+                            4
+                          </a>
+                        </li>
+                        <li class="pagination__item">
+                          <a
+                            href="#"
+                            class="pagination__link pagination__link--page"
+                          >
+                            5
+                          </a>
+                        </li>
+                        <li class="pagination__item">
+                          <a
+                            href="#"
+                            class="pagination__link pagination__link--page"
+                          >
+                            ...
+                          </a>
+                        </li>
+                        <li class="pagination__item">
+                          <a
+                            href="#"
+                            class="pagination__link pagination__link--next"
+                          >
+                            <i class="bi bi-chevron-right"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div data-include-html="footer.html"></div>
+
+    <script type="module" src="../js/select-menu.js"></script>
+    <script src="../js/load-html.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module">
+      import search_filter_products from "../js/data-search-filter.js";
+
+      const list_products_block = document.querySelector(".get-list-product");
+      const key_search = document.querySelector(
+        ".search-results__title > span"
+      );
+      const paginationBar = document.querySelector(".pagination__list-product");
+
+      const product_html = search_filter_products
+        .map((product, index) => {
+          return `<div class="col l-2-4 c-6 ">
+                          <div class="search-results__product-item bg-white">
+                            <div
+                              class="product-item__images-wrapper position-relative"
+                            >
+                              <img
+                                class="img-fluid"
+                                style="width: 100%"
+                                src=${product.img}
+                                alt="img-product"
+                              />
+                              <div
+                                class="product-item__badge-brand d-flex position-absolute"
+                              >
+                                <span>Mall</span>
+                                <img
+                                  src="../images/search-filter-product/badge-brand/iso.png"
+                                  alt="badge-img"
+                                />
+                                <img
+                                  src="../images/search-filter-product/badge-brand/fssc.png"
+                                  alt="badge-img"
+                                />
+                                <img
+                                  src="../images/search-filter-product/badge-brand/haccp.png"
+                                  alt="badge-img"
+                                />
+                              </div>
+                              <div
+                                class="product-item__discount position-absolute"
+                              >
+                                <span>14%</span>
+                              </div>
+                              <div
+                                class="product-item__tags position-absolute d-flex align-items-center"
+                              >
+                                <span>7.7</span>
+                                <p class="text-uppercase">Ommani freeship+</p>
+                              </div>
+                            </div>
+                            <div
+                              class="product-item__details d-flex flex-column"
+                            >
+                              <p class="product-item__title">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
+                                100%
+                              </p>
+                              <div
+                                class="product-item__info d-flex flex-column"
+                              >
+                                <div
+                                  class="d-flex align-items-center justify-content-between"
+                                >
+                                  <p class="product-item__price">
+                                    87.000
+                                    <span style="text-decoration: underline"
+                                      >đ</span
+                                    >
+                                  </p>
+
+                                  <img
+                                    src="../images/search-filter-product/icon/transport.svg"
+                                    alt="icon-trans"
+                                  />
+                                </div>
+                                <div
+                                  class="d-flex align-items-center"
+                                  style="gap: 6px"
+                                >
+                                  <span class="product-item__stars">
+                                    &#9733;&#9733;&#9733;&#9733;&#9733;
+                                  </span>
+                                  <span class="line-space"></span>
+                                  <p class="product-item__sold">1.6k đã bán</p>
+                                </div>
+                              </div>
+                              <div class="product-item__location">
+                                <p>TP. Hồ Chí Minh</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>`;
+        })
+        .join("");
+
+      const no_product_html = `<div
+                          class="no-product d-flex align-items-center justify-content-center flex-column"
+                          style="
+                            height: 390px;
+                            background-color: white;
+                            gap: 24px;
+                            border-radius: 16px;
+                          "
+                        >
+                          <img
+                            src="../images/search-filter-product/icon/search-empty-icon.svg"
+                            alt=""
+                          />
+                          <p
+                            style="
+                              font-size: 20px;
+                              font-weight: 400;
+                              line-height: 20px;
+                              text-align: center;
+                              color: #888888;
+                            "
+                          >
+                            Không có sản phẩm phù hợp với nội dung tìm kiếm
+                          </p>
+                        </div>`;
+
+      if (key_search.textContent === "Trai cay") {
+        list_products_block.innerHTML = product_html;
+      } else if (key_search.textContent === "Xe hoi") {
+        list_products_block.innerHTML = no_product_html;
+        if (paginationBar) {
+          paginationBar.style.cssText = "display: none !important;";
+        }
+      }
+
+      import data from "../js/data-product-category.js";
+
+      const productCategoryList = document.querySelector(
+        ".product-category-list"
+      );
+
+      const item_category = data.map((item, index) => {
+        return `<a
+                href="#"
+                class="item-category d-flex flex-column align-items-center justify-content-start item-search"
+              >
+                <img
+                  class="img-fluid"
+                  src=${item.url}
+                  alt="img"
+                />
+                <p class="category-title">${item.title}</p>
+              </a>`;
+      });
+      productCategoryList.innerHTML = item_category.join("");
+
+      const exploreItemContainer = document.querySelector(
+        ".explore-item-container"
+      );
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const preBtn = document.querySelector(".pre-btn");
+        const nextBtn = document.querySelector(".next-btn");
+        const productList = document.querySelector(".product-category-list");
+
+        const scrollAmount = 100; // Adjust this value as needed
+
+        preBtn.addEventListener("click", function () {
+          productList.scrollBy({
+            top: 0,
+            left: -scrollAmount,
+            behavior: "smooth",
+          });
+        });
+
+        nextBtn.addEventListener("click", function () {
+          productList.scrollBy({
+            top: 0,
+            left: scrollAmount,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+
+    <script>
+      const btn_filter = document.querySelector(".btn__filter");
+      const filter_block = document.querySelector(".filter-mobile");
+      const overlay = document.querySelector(".overlay");
+      const btnHandle = document.querySelector(
+        ".search-filter__title > button > i"
+      );
+      function on() {
+        overlay.style.display = "block";
+        filter_block.style.right = "0%";
+        btnHandle.classList.remove("bi-funnel");
+        btnHandle.classList.add("bi-x-lg");
+        document.body.classList.add("no-scroll");
+      }
+
+      function off() {
+        overlay.style.display = "none";
+        filter_block.style.right = "-50%";
+        btnHandle.classList.add("bi-funnel");
+        btnHandle.classList.remove("bi-x-lg");
+        document.body.classList.remove("no-scroll");
+      }
+    </script>
+  </body>
+</html>
