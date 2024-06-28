@@ -1,0 +1,303 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+body {
+  background-color: #f5f5f7;
+}
+
+a {
+  text-decoration: none;
+}
+
+.banner {
+  width: 100%;
+}
+.banner__container .row {
+  max-width: 1320px;
+}
+.banner__container .row .col {
+  width: 100%;
+}
+.banner__container .row .col .carousel-indicators button {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin: 0 8px;
+}
+
+.meilgo {
+  width: 100%;
+}
+.meilgo__container .row .col {
+  width: 100%;
+}
+.meilgo__container .row .col ul {
+  width: 80%;
+  padding: 24px 0;
+  background-color: white;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.meilgo__container .row .col ul li {
+  width: 14.2%;
+  cursor: pointer;
+}
+.meilgo__container .row .col ul li span {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.service {
+  width: 100%;
+  margin: 28px 0;
+}
+.service__container .row {
+  max-width: 1320px;
+}
+.service__container .row .custom-col {
+  overflow: hidden;
+  position: relative;
+  width: 33.333%;
+}
+.service__container .row .custom-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.service__container .row .custom-col:nth-child(2) {
+  padding: 0;
+}
+.service__container .row .custom-col::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  height: 90px;
+  transform: translateX(-50%);
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 5.76%, #007b2b 69.18%, rgba(255, 255, 255, 0) 183.72%);
+}
+.service__container .row .custom-col:nth-child(1)::before {
+  content: "Cửa hàng nông sản";
+  text-align: center;
+  padding-top: 14px;
+  width: 94.4%;
+}
+.service__container .row .custom-col:nth-child(2)::before {
+  content: "cửa hàng nông sản";
+  width: 100%;
+  text-align: center;
+  padding-top: 14px;
+}
+.service__container .row .custom-col:nth-child(3)::before {
+  content: "cửa hàng nông sản";
+  width: 94%;
+  text-align: center;
+  padding-top: 14px;
+}
+
+.legit-store {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.legit-store__container .row {
+  max-width: 1320px;
+}
+.legit-store__container .row .col .store-title {
+  background-color: white;
+  border-radius: 3px;
+  padding: 12px 16px;
+}
+.legit-store__container .row .col .store-title p {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.legit-store__container .row .col .store-cards {
+  padding-left: 16px;
+  border-radius: 3px;
+  padding-right: 16px;
+  padding-bottom: 30px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+}
+.legit-store__container .row .col .store-cards .card-wrapper {
+  border: 1px solid #d7cfcf;
+  border-radius: 6px;
+  padding: 8px;
+}
+.legit-store__container .row .col .store-cards .card-wrapper .body .title {
+  font-size: 12px;
+  font-weight: 700;
+}
+.legit-store__container .row .col .store-cards .card-wrapper .body div {
+  margin: 4px 0;
+}
+.legit-store__container .row .col .store-cards .card-wrapper .body button {
+  border: none;
+  outline: none;
+  color: #2e9dff;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px;
+}
+
+.categories {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.categories__container .row {
+  max-width: 1320px;
+}
+.categories__container .row .col .categories-title {
+  background-color: white;
+  border-radius: 3px;
+  padding: 12px 16px;
+}
+.categories__container .row .col .categories-title p {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.categories__container .row .col .categories-items {
+  width: 100%;
+  border-radius: 3px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 30px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+  overflow-x: auto;
+}
+.categories__container .row .col .categories-items .items img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.more {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.more__container .row {
+  max-width: 1320px;
+}
+.more__container .row .custom-col {
+  gap: 10px;
+}
+.more__container .row .custom-col .more-title {
+  background-color: white;
+  border-radius: 3px;
+  padding: 12px 16px;
+}
+.more__container .row .custom-col .more-title p {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.more__container .row .custom-col .more-content {
+  width: 100%;
+  border-radius: 3px;
+  gap: 10px;
+}
+.more__container .row .custom-col .more-content .store-card {
+  width: calc(33.58% - 10px);
+  padding: 12px;
+  background-color: white;
+  border-radius: 3px;
+  gap: 12px;
+}
+.more__container .row .custom-col .more-content .store-card .title .logo {
+  width: 73px;
+  height: 73px;
+}
+.more__container .row .custom-col .more-content .store-card .title .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.more__container .row .custom-col .more-content .store-card .title .info ul {
+  padding-left: 12px;
+  margin-bottom: 0;
+  gap: 4px;
+}
+.more__container .row .custom-col .more-content .store-card .title .info li:last-child {
+  gap: 8px;
+}
+.more__container .row .custom-col .more-content .store-card .title .info li:last-child img {
+  width: 30px;
+  object-fit: cover;
+}
+.more__container .row .custom-col .more-content .store-card .title .info li:nth-child(2) span {
+  color: #969696;
+}
+.more__container .row .custom-col .more-content .store-card .items .items-detail img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+.more__container .row .custom-col .more-content .store-card .items .items-detail ul {
+  width: 120px;
+  padding-left: 0;
+  margin-bottom: 0;
+  gap: 6px;
+}
+.more__container .row .custom-col .more-content .store-card .items .items-detail ul li {
+  font-size: 14px;
+}
+.more__container .row .custom-col .more-content .store-card .items .items-detail ul li:nth-child(2) {
+  color: #7b7b7b;
+}
+.more__container .row .custom-col .more-content .store-card .items .items-detail ul li:last-child {
+  color: #fb4f5b;
+  font-size: 16px;
+  font-weight: 700;
+}
+.more__container .row .custom-col:last-child {
+  height: 100px;
+}
+.more__container .row .custom-col:last-child button {
+  width: 241px;
+  padding: 12px 45px;
+  outline: none;
+  border: none;
+  background-color: white;
+  border-radius: 6px;
+  border: 2px solid #2e9dff;
+  color: #2e9dff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+.more__container .row .custom-col:last-child button:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: #2e9dff;
+  color: white;
+  border: 1px solid #2e9dff;
+}

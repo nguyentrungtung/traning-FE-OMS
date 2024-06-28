@@ -1,0 +1,104 @@
+@import "variable";
+
+@media screen and (max-width: 996px) {
+  .header {
+    display: none !important;
+  }
+
+  //   .filter-categories {
+  //     &__container {
+  //       .row {
+  //         &:first-child {
+  //           padding-top: 10px;
+  //           padding-bottom: 10px;
+  //           margin-bottom: 16.78px;
+  //           background-color: #ffff;
+  //           .header-filterMb,
+  //           .sort-filterMb {
+  //             width: 100%;
+  //             p {
+  //               margin-bottom: 0;
+  //               padding-left: 0;
+  //             }
+  //           }
+
+  //           .header-filterMb {
+  //             .search-form {
+  //               flex: 1;
+  //               margin: 0 10px;
+  //               background-color: #f0f0f0;
+  //               gap: 12px;
+  //               padding: 12px;
+  //               button,
+  //               input {
+  //                 border: none;
+  //                 outline: none;
+  //                 background-color: transparent;
+  //               }
+  //             }
+  //             .filterPopup {
+  //               position: relative;
+  //               &::after {
+  //                 position: absolute;
+  //                 content: "Lọc";
+  //                 top: 100%;
+  //                 right: 0;
+  //                 font-size: $fontsize_light;
+  //                 font-weight: 400;
+  //                 color: #1ab357;
+  //               }
+  //             }
+
+  //             .back,
+  //             .filterPopup {
+  //               display: block !important;
+  //             }
+  //             .search-form {
+  //               display: flex !important;
+  //             }
+  //           }
+
+  //           .sort-filterMb {
+  //             p {
+  //               display: none;
+  //             }
+  //             ul {
+  //               margin-top: 12px;
+  //               margin-bottom: 0;
+  //               padding-left: 0;
+  //               display: flex;
+  //               justify-content: start;
+  //               align-items: center;
+  //               li {
+  //                 span {
+  //                   padding: 0 12px;
+  //                   color: #000000;
+  //                   font-size: $fontsize_medium;
+  //                   font-weight: 400;
+  //                   border-right: 2px solid #000000;
+  //                 }
+  //                 &:first-child span {
+  //                   padding-left: 0;
+  //                 }
+
+  //                 &:last-child {
+  //                   span {
+  //                     border: none;
+  //                   }
+  //                 }
+  //               }
+  //             }
+  //           }
+  //         }
+
+  //         &:last-child {
+  //           .col-content {
+  //             .categories-items {
+  //               margin-top: 0 !important;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+}

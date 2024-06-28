@@ -1,0 +1,5 @@
+@media screen and (max-width: 996px) {
+  .header {
+    display: none !important;
+  }
+}
