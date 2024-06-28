@@ -1,0 +1,229 @@
+$background-wrapper-Color: #f5f5f7;
+$color-white: #fff;
+$color-1a1a1a: #1a1a1a;
+$color-star: #fec300;
+$color-2ead5b: #2ead5b;
+$color-e9f6df: #e9f6df;
+$color-00923f: #00923f;
+$color-343434: #343434;
+$color-969696: #969696;
+$color-29ab56: #29ab56;
+
+.background-wrapper {
+  background-color: $background-wrapper-Color;
+}
+
+.store-wrapper {
+  .subbar-top {
+    height: 38px;
+    background-color: white;
+    padding: 7px 0px;
+    .container {
+      padding: 0;
+      .subbar-block {
+        gap: 24px;
+        .subbar-item {
+          padding: 0;
+          gap: 6px;
+          p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 16.41px;
+            text-align: left;
+            color: #007b2b;
+          }
+        }
+      }
+    }
+  }
+
+  .store-body {
+    .store-details__cover-image-container {
+      .cover-img {
+        height: 350px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .store-details__card-info {
+        bottom: 12px;
+        left: 11px;
+        background-color: $color-white;
+        width: 432px;
+        height: 164px;
+        border-radius: 6px;
+        padding: 10px;
+        gap: 17px;
+
+        .store-avatar {
+          width: 90px;
+          height: 100%;
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .store__text-info {
+          gap: 10px;
+          .store-name {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16.41px;
+            color: $color-1a1a1a;
+          }
+          .store-rates {
+            gap: 8px;
+            .store_rating-star {
+              font-size: 12px;
+              font-weight: 500;
+              line-height: 14.06px;
+              color: $color-969696;
+              span {
+                font-size: 15px;
+                color: $color-star;
+              }
+            }
+            .store__status-delivery {
+              text-transform: uppercase;
+              font-size: 12px;
+              font-weight: 500;
+              line-height: 14.06px;
+              color: $color-2ead5b;
+            }
+          }
+
+          .store__follow-block {
+            gap: 6px;
+            .button-follow {
+              border: 0;
+              background-color: $color-e9f6df;
+              border-radius: 3px;
+              padding: 3px 10.5px;
+              color: $color-00923f;
+              line-height: 18px;
+              i {
+                font-size: 18px;
+                line-height: 18px;
+                color: $color-00923f;
+                &::before {
+                  font-weight: 600 !important;
+                }
+              }
+            }
+            .img-follower__block {
+              .follower-img {
+                height: 24px;
+                width: 24px;
+                &:not(:first-child) {
+                  margin-left: -10px;
+                }
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-radius: 50%;
+                  border: 2px solid $color-white;
+                }
+              }
+            }
+            .store-follower__qty {
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 18px;
+              color: $color-343434;
+            }
+          }
+          .store__brand-product {
+            gap: 7px;
+            .brand-img {
+              height: 45px;
+              img {
+                max-width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+          }
+        }
+      }
+
+      .chat-with-store {
+        gap: 10px;
+        position: absolute;
+        padding: 0;
+        bottom: 12px;
+        right: 68px;
+        height: 46px;
+        width: 165px;
+        border-radius: 6px;
+        border: 1px solid $color-29ab56;
+        background-color: $color-white;
+        p {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 18.75px;
+          color: $color-29ab56;
+        }
+        i {
+          color: #29ab56;
+          font-size: 23px;
+        }
+      }
+      .link-store {
+        position: absolute;
+        padding: 0;
+        bottom: 12px;
+        right: 12px;
+        height: 46px;
+        width: 46px;
+        background-color: $color-white;
+        border-radius: 6px;
+        border: 1px solid $color-29ab56;
+        i {
+          color: #29ab56;
+          font-size: 23px;
+          line-height: 23px;
+        }
+      }
+    }
+    .navbar-category-store {
+      position: relative;
+      .button-category {
+        background-color: white;
+        height: 36px;
+        cursor: pointer;
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 36px;
+          color: $color-29ab56;
+          text-align: center;
+        }
+
+        &.active {
+          background-color: $color-29ab56;
+          p {
+            font-weight: 700;
+            color: $color-white;
+          }
+        }
+      }
+      .tooltip-line {
+        position: absolute;
+        background-color: $color-29ab56;
+        clip-path: polygon(100% 0%, 50% 100%, 0 0%);
+        width: 30px;
+        height: 15px;
+        left: 9%;
+      }
+    }
+
+    .outstanding-products__container {
+      background-color: $color-white;
+    }
+  }
+}

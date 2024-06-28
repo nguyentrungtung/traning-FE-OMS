@@ -1,9 +1,5 @@
 import includeHTML from "../js/middleware.js";
 
-document.addEventListener("DOMContentLoaded", function () {
-  includeHTML(initializeSelectMenu);
-});
-
 function initializeSelectMenu() {
   const optionMenu = document.querySelector(".select-menu");
   if (optionMenu) {
@@ -28,3 +24,7 @@ function initializeSelectMenu() {
     console.error("Could not find element with class 'select-menu'");
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  includeHTML(initializeSelectMenu);
+});

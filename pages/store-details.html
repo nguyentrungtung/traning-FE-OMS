@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/common/common.css" />
+    <link rel="stylesheet" href="../css/grid/grid.css" />
+    <link rel="stylesheet" href="../css/header/header.css" />
+    <link rel="stylesheet" href="../css/footer/footer.css" />
+    <link rel="stylesheet" href="../css/header/header-responsive.css" />
+    <link rel="stylesheet" href="../css/footer/footer-responisve.css" />
+    <link rel="stylesheet" href="../css/store-details/store-details.css" />
+    <title>Cửa hàng</title>
+  </head>
+  <body>
+    <div data-include-html="header.html"></div>
+    <main>
+      <div class="store-wrapper background-wrapper">
+        <div class="subbar-top">
+          <div class="container">
+            <div class="subbar-block d-flex">
+              <button
+                class="border-0 bg-transparent subbar-item d-flex align-items-center"
+              >
+                <img src="../images/home-img/li_layout-grid.svg" alt="icon" />
+                <p>Tất cả</p>
+              </button>
+              <button
+                class="border-0 bg-transparent subbar-item d-flex align-items-center"
+              >
+                <img src="../images/home-img/map.svg" alt="icon" />
+                <p>Tìm theo vị trí</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid wide">
+          <div class="store-body" style="padding-bottom: 54px">
+            <div class="row">
+              <div class="col l-12">
+                <div
+                  class="store-details__cover-image-container position-relative"
+                >
+                  <div class="cover-img">
+                    <img
+                      src="../images/store-details/cover-image.png"
+                      alt="cover-img"
+                    />
+                  </div>
+                  <div
+                    class="store-details__card-info d-flex align-items-center position-absolute"
+                  >
+                    <div class="store-avatar">
+                      <img
+                        src="../images/store-details/avt-store.png"
+                        alt="store-avt"
+                      />
+                    </div>
+                    <div
+                      class="store__text-info d-flex flex-column align-items-start"
+                    >
+                      <p class="store-name">Ommani Mall Thạch Bàn Long Biên</p>
+                      <div class="store-rates d-flex align-items-center">
+                        <p class="store_rating-star">
+                          <span>&#9733;</span>4.8 (11k+)
+                        </p>
+                        <p class="store__status-delivery">Giao nhanh</p>
+                      </div>
+                      <div
+                        class="store__follow-block d-flex align-items-center"
+                      >
+                        <button class="button-follow">
+                          <i class="bi bi-plus"></i>Theo dõi
+                        </button>
+                        <div
+                          class="img-follower__block d-flex align-items-center"
+                        >
+                          <div class="follower-img">
+                            <img
+                              src="../images/store-details/img-follower/avt-01.jpg"
+                              alt="img-follower"
+                            />
+                          </div>
+                          <div class="follower-img">
+                            <img
+                              src="../images/store-details/img-follower/avt-02.jpg"
+                              alt="img-follower"
+                            />
+                          </div>
+                          <div class="follower-img">
+                            <img
+                              src="../images/store-details/img-follower/avt-03.jpg"
+                              alt="img-follower"
+                            />
+                          </div>
+                          <div class="follower-img">
+                            <img
+                              src="../images/store-details/img-follower/avt-04.jpg"
+                              alt="img-follower"
+                            />
+                          </div>
+                          <div class="follower-img">
+                            <img
+                              src="../images/store-details/img-follower/avt-05.jpg"
+                              alt="img-follower"
+                            />
+                          </div>
+                        </div>
+                        <p class="store-follower__qty">1.2k Follow</p>
+                      </div>
+                      <div
+                        class="store__brand-product d-flex align-items-center"
+                      >
+                        <div class="brand-img">
+                          <img
+                            src="../images/store-details/brand-img/iso.png"
+                            alt="brand-icon"
+                          />
+                        </div>
+                        <div class="brand-img">
+                          <img
+                            src="../images/store-details/brand-img/fssc.png"
+                            alt="brand-icon"
+                          />
+                        </div>
+                        <div class="brand-img">
+                          <img
+                            src="../images/store-details/brand-img/haccp.png"
+                            alt="brand-icon"
+                          />
+                        </div>
+                        <div class="brand-img">
+                          <img
+                            src="../images/store-details/brand-img/gmp.png"
+                            alt="brand-icon"
+                          />
+                        </div>
+                        <div class="brand-img">
+                          <img
+                            src="../images/store-details/brand-img/brc.png"
+                            alt="brand-icon"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="chat-with-store d-flex align-items-center justify-content-center"
+                  >
+                    <p>Chat ngay</p>
+                    <i class="bi bi-chat"></i>
+                  </button>
+                  <button class="link-store">
+                    <i class="bi bi-link-45deg"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="col l-12">
+                <div class="navbar-category-store">
+                  <div class="row no-gutters">
+                    <div class="col l-2-4">
+                      <div class="button-category active">
+                        <p>Trang chủ</p>
+                      </div>
+                    </div>
+                    <div class="col l-2-4">
+                      <div class="button-category">
+                        <p>Sản phẩm</p>
+                      </div>
+                    </div>
+                    <div class="col l-2-4">
+                      <div class="button-category">
+                        <p>Hồ sơ Doanh nghiệp</p>
+                      </div>
+                    </div>
+                    <div class="col l-2-4">
+                      <div class="button-category">
+                        <p>Thương hiệu</p>
+                      </div>
+                    </div>
+                    <div class="col l-2-4">
+                      <div class="button-category">
+                        <p>Liên hệ</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tooltip-line"></div>
+                </div>
+              </div>
+              <div class="col l-12">
+                <div class="outstanding-products__container">
+                  <p class="outstanding-heading">Sản phẩm nổi bật</p>
+                  <div class="outstanding__list-product">
+                    <div class="outstanding-product">
+                      <div class="product-image">
+                        <img
+                          src="../images/store-details/outstanding-product/out-01.jpg"
+                          alt="img-out-product"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div data-include-html="footer.html"></div>
+
+    <script src="../js/load-html.js"></script>
+    <script type="module" src="../js/select-menu.js"></script>
+    <script type="module" src="../js/handle-collapse.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // const button_category = document.querySelectorAll();
+    </script>
+  </body>
+</html>
