@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Local</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/header.css" />
+    <link rel="stylesheet" href="../src/css/footer.css" />
+    <link rel="stylesheet" href="../src/css/homeLocal.css" />
+    <link rel="stylesheet" href="../src/css/responsive-common.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div data-include-html="../component/header.html"></div>
+    <!-- Header -->
+
+    <main class="homeLocal">
+      <div class="w-100 container-xxl">
+        <!-- logo -->
+        <img class="mainlogo" src="../assets/images/logoHomeLocal.png" alt="" />
+        <!-- filter address -->
+        <div class="filter-address">
+          <span class="title">Lọc theo vị trí</span>
+          <div class="filter">
+            <script>
+              let filterarr = ["Tỉnh/ Thành phố", "Quận / Huyện", "Xã"];
+              for (let i = 0; i < 3; i++) {
+                document.write(`
+                            <div class="dropdown">
+                <a class="button-filter btn btn-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ${filterarr[i]}
+                  <img src="../assets/svg/play.svg" alt="">
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">1</a></li>
+                  <li><a class="dropdown-item" href="#">2</a></li>
+                  <li><a class="dropdown-item" href="#">3</a></li>
+                </ul>
+              </div>
+              `);
+              }
+            </script>
+          </div>
+        </div>
+        <!-- all product -->
+        <div class="products">
+          <div class="commonGroupProducts-main"></div>
+          <div class="commonGroupProducts-seeMore">
+            <button>xem thêm</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <div data-include-html="../component/footer.html"></div>
+    <!-- Footer -->
+  </body>
+
+  <!--------------------------------------------------------------------------------------------------------------------------------------------- -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="../src/js/scripts.js"></script>
+  <script src="../src/js/createList.js"></script>
+  <script type="module" src="../src/js/homelogin.js"></script>
+  <script>
+    createcommonGroupProducts();
+  </script>
+</html>

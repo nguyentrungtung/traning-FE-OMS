@@ -1,0 +1,177 @@
+@import "./base";
+@import "./style";
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  .Home__banner-img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .Home__marketPlace {
+    padding-top: 16px;
+    padding-bottom: 29px;
+    padding-left: 51px;
+    padding-right: 51px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    gap: 88px;
+    width: fit-content;
+    justify-content: center;
+    align-self: center;
+
+    .Home__marketPlace-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-wrap: nowrap;
+      gap: 12px;
+      img {
+        width: 47px;
+        height: 47px;
+      }
+      @extend .Roboto14;
+      color: $black2;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .Home__agriSolutions {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    .Home__agriSolutions-item {
+      flex: 1;
+      height: auto;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      .linearColor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 101px;
+        transform: rotate(180deg);
+        background: linear-gradient(
+          177.64deg,
+          rgba(255, 255, 255, 0) 5.76%,
+          #007b2b 69.18%,
+          rgba(255, 255, 255, 0) 183.72%
+        );
+        z-index: 1;
+      }
+      img {
+        position: relative;
+        width: 100%;
+        object-fit: contain;
+        box-shadow: 0px 1px 8px 0px #00000008;
+      }
+      .title {
+        position: absolute;
+        top: 16px;
+        text-transform: uppercase;
+        @extend .Roboto20;
+        font-weight: 600;
+        color: $white;
+        z-index: 2;
+        background-color: transparent;
+      }
+    }
+  }
+  .Home__topStore {
+    .Home__topStore-title {
+      align-self: flex-start;
+      @extend .Roboto22;
+      font-weight: 500;
+      color: $black1;
+    }
+    .Home__topStore-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: $white;
+      border-radius: 3px;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 14px 29px 14px;
+      gap: 19px;
+
+      .Home__topStore-list {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        .Home__topStore-item {
+          flex: 1;
+          border: 1px solid $gray3;
+          border-radius: 6px;
+          display: flex;
+          flex-direction: column;
+          .Home__topStore-img {
+            width: 100%;
+            object-fit: contain;
+          }
+          .Home__topStore-info {
+            flex: 1;
+            width: 100%;
+            padding: 0px 8px;
+            padding-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            background-color: transparent;
+            .title {
+              @extend .Roboto14;
+              font-weight: 700;
+              color: $black1;
+              margin-bottom: 6px;
+            }
+            .star {
+              display: flex;
+              align-items: center;
+              margin-bottom: 8px;
+              span {
+                @extend .Roboto12;
+                color: $gray0;
+                font-weight: 500;
+              }
+            }
+            .certification {
+              padding: 3.5px 10px;
+              border-radius: 3px;
+              background-color: $blue1;
+              text-align: center;
+              align-content: center;
+              @extend .Roboto12;
+              font-weight: 500;
+              color: $blue0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.btnSwitchCarousel {
+  width: 16px !important;
+  height: 16px !important;
+  background-color: transparent !important;
+  border-radius: 50% !important;
+  border: 1px solid #ffffff !important;
+  outline: none;
+  background-clip: unset !important;
+  box-sizing: border-box !important;
+  opacity: 1 !important;
+}
+.btnSwitchCarousel.active {
+  background-color: #ffffff !important;
+}

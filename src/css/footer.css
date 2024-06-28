@@ -1,0 +1,309 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+:root {
+  font-family: "Roboto";
+  box-sizing: border-box; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+  background-color: transparent; }
+
+button {
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px; }
+
+.Roboto10 {
+  font-family: Roboto;
+  font-size: 10px;
+  line-height: 11.72px;
+  text-align: left; }
+
+.Roboto12 {
+  font-size: 12px;
+  line-height: normal;
+  text-align: left; }
+
+.Roboto13 {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left; }
+
+.Roboto14, .Footer .Footer_bottom, .Footer .commonContent, .Footer .Footer__customerSupport .Footer__customerSupport-item, .Footer .Footer__aboutOmmaniLife .Footer__aboutOmmaniLife-item, .Footer .Footer__association .Footer__association-item {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left; }
+
+.Roboto16, .Footer .Footer__item-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left; }
+
+.Roboto20 {
+  font-size: 20px;
+  text-align: center;
+  line-height: normal; }
+
+.Roboto22 {
+  font-size: 22px;
+  text-align: left;
+  line-height: normal; }
+
+.Roboto24 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+  line-height: normal; }
+
+.Roboto32 {
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left; }
+
+.divideV {
+  display: inline;
+  min-width: 1px;
+  height: 100%;
+  background-color: white; }
+
+.divideH {
+  display: inline-block;
+  min-height: 1px;
+  width: 100%;
+  background-color: white; }
+
+a {
+  color: #1a1a1a;
+  text-decoration: none; }
+
+.Template-popover {
+  border-radius: 0px;
+  position: relative;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 0px 15px 0px #0c2f4c26;
+  padding: 0px;
+  z-index: 1; }
+  .Template-popover .arrow {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    z-index: -1;
+    background-image: url("../../assets/svg/Polygon 3.svg");
+    width: 72px;
+    height: 37px; }
+
+.btnDropdown {
+  padding: 0px; }
+
+body {
+  background-color: #f0f0f0;
+  line-height: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  /* Xóa khoảng cách giữa nút và trường input */
+  display: none;
+  /* Ẩn nút tăng giảm */ }
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */ }
+
+.FlexNormal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: normal; }
+
+.Footer {
+  width: 100%;
+  background-color: #fff;
+  text-wrap: nowrap; }
+  .Footer .Footer_bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+    padding-top: 26px;
+    padding-bottom: 35px;
+    margin-left: 8px;
+    width: 100%; }
+  .Footer .Footer__item-title {
+    padding: 28px 0px 16px 0px; }
+  .Footer .Footer__commonColumn, .Footer .Footer__customerSupport, .Footer .Footer__aboutOmmaniLife, .Footer .Footer__association, .Footer .Footer__connectUs, .Footer .Footer__paymentMethods {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 100%;
+    padding-left: 0;
+    width: fit-content; }
+  .Footer .commonContent, .Footer .Footer__customerSupport .Footer__customerSupport-item, .Footer .Footer__aboutOmmaniLife .Footer__aboutOmmaniLife-item, .Footer .Footer__association .Footer__association-item {
+    color: #373737;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-wrap: nowrap; }
+    .Footer .commonContent a, .Footer .Footer__customerSupport .Footer__customerSupport-item a, .Footer .Footer__aboutOmmaniLife .Footer__aboutOmmaniLife-item a, .Footer .Footer__association .Footer__association-item a {
+      color: #373737; }
+      .Footer .commonContent a:hover, .Footer .Footer__customerSupport .Footer__customerSupport-item a:hover, .Footer .Footer__aboutOmmaniLife .Footer__aboutOmmaniLife-item a:hover, .Footer .Footer__association .Footer__association-item a:hover {
+        cursor: pointer; }
+  .Footer .Footer__certifiedBy-img {
+    width: 64px;
+    object-fit: contain; }
+  .Footer .Footer__connectUs {
+    padding-left: 0;
+    position: relative; }
+    .Footer .Footer__connectUs .Footer__connectUs-mateWithLove {
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+  .Footer .Footer__paymentMethods {
+    padding-left: 0; }
+    .Footer .Footer__paymentMethods a {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .Footer .Footer__paymentMethods img {
+      width: auto;
+      height: auto;
+      object-fit: contain; }
+    .Footer .Footer__paymentMethods .Footer__item-title {
+      padding-bottom: 0; }
+  .Footer .divideH {
+    background-color: #282828; }
+  .Footer .Footer_mobile {
+    display: none; }

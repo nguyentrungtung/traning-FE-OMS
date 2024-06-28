@@ -1,0 +1,177 @@
+@import "../scss/base";
+
+@media (max-width: 1280px) {
+}
+@media (max-width: 1140px) {
+  .Home {
+    .commonCategory {
+      .commonCategory_main {
+        padding: 50px 20px;
+        .commonCategory_list {
+          grid-template-columns: repeat(9, 1fr);
+          column-gap: 20px;
+          row-gap: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .Home {
+    .Home__marketPlace {
+      overflow-x: scroll;
+      gap: unset;
+      padding-left: 18px;
+      padding-right: 18px;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .commonCategory {
+      .commonCategory_main {
+        .commonCategory_list {
+          grid-template-columns: repeat(6, 1fr);
+          column-gap: 10px;
+          row-gap: 10px;
+        }
+      }
+    }
+    .Home__topStore {
+      .Home__topStore-content {
+        .Home__topStore-list {
+          overflow-x: scroll;
+          .Home__topStore-item {
+            min-width: 160px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+  .Home {
+    .Home__marketPlace {
+      gap: 40px;
+    }
+    .Home__topStore {
+      .Home__topStore-content {
+        .Home__topStore-list {
+          overflow-x: scroll;
+          .Home__topStore-item {
+            min-width: 155px;
+          }
+        }
+      }
+    }
+    .commonCategory {
+      .commonCategory-list {
+        overflow-x: scroll;
+      }
+    }
+  }
+  .comon-title-home {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+    color: #1a1a1a;
+  }
+}
+@media (max-width: 600px) {
+  @mixin responsive-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+    color: #1a1a1a;
+  }
+  .filter-container {
+    display: none;
+  }
+  .Home {
+    .Home__topStore {
+      background-color: $white;
+      padding-top: 8px;
+      padding-bottom: 16px;
+      .Home__topStore-title {
+        @include responsive-title;
+      }
+      .Home__topStore-content {
+        padding: 0 18px;
+        gap: 14px;
+        .Home__topStore-list {
+          .Home__topStore-item {
+            min-width: 133px;
+            .Home__topStore-info {
+              padding-left: 7px;
+              padding-right: 7px;
+              span {
+                font-size: 12px !important;
+                line-height: 18px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .Home__banner {
+      background-color: $baseColor0;
+      padding-top: 12px;
+      padding-bottom: 6px;
+      .btnSwitchCarousel {
+        width: 9px !important;
+        height: 9px !important;
+      }
+    }
+    .Home__marketPlace {
+      background-color: transparent;
+      position: relative;
+
+      .Home__marketPlace-item {
+        align-self: flex-start;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.06px;
+        text-align: center;
+        span {
+          display: inline;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    .Home__agriSolutions {
+      display: none;
+    }
+    .commonCategory {
+      background-color: $white;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      .commonCategory_main {
+        padding: 36px 18px 10px;
+
+        .commonCategory_title {
+          @include responsive-title;
+          left: 18px;
+        }
+
+        .commonCategory_list {
+          grid-template-columns: repeat(9, 1fr);
+          overflow-x: scroll;
+          column-gap: 30px;
+          row-gap: 25px;
+
+          .commonCategory_item {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 8px;
+            align-items: center;
+            gap: 10px;
+            height: fit-content;
+          }
+        }
+      }
+    }
+  }
+}

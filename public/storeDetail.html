@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/header.css" />
+    <link rel="stylesheet" href="../src/css/footer.css" />
+    <link rel="stylesheet" href="../src/css/storeDetail.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div data-include-html="../component/header.html"></div>
+    <!-- Header -->
+
+    <main class="detailStore container-xxl">
+      <!-- bannerStore -->
+      <section class="detailStore_banner">
+        <img
+          class="w-100 object-fit-contain"
+          src="../assets/images/bannerStore.png"
+          alt=""
+        />
+        <div class="btnOption">
+          <button class="btnChatNgay">
+            <span>Chat ngay</span>
+            <img src="../assets/svg/chatngay.svg" alt="" />
+          </button>
+          <button class="externalLink">
+            <img src="../assets/svg/btnLienKet.svg" alt="" />
+          </button>
+        </div>
+        <div class="boxBrandName">
+          <div class="d-flex align-items-center gap-4">
+            <img class="imgLogo" src="../assets/images/store6.png" alt="" />
+            <div class="info">
+              <div class="mainInfo">
+                <span class="i1">Ommani Mall Thạch Bàn Long Biên</span>
+                <div class="i2">
+                  <img src="../assets/svg/starShop.svg" alt="" />
+                  <span>4.8 (11k+)</span>
+                  <span>GIAO NHANH</span>
+                </div>
+                <div class="follow">
+                  <button class="btnFollow">
+                    <img src="../assets/svg/bi_chat-dots.svg" alt="" />
+                    Theo Dõi
+                  </button>
+                  <div class="avatar-group">
+                    <script>
+                      for (let i = 0; i < 5; i++) {
+                        document.write(`
+                        <div class="avatar">
+                          <img src="../assets/svg/avt${i + 1}.svg" alt="" />
+                        </div>
+                      `);
+                      }
+                    </script>
+                  </div>
+                  <span>1.2k Follow</span>
+                </div>
+                <div
+                  class="d-flex align-items-center gap-2 align-self-end pt-1"
+                >
+                  <script>
+                    for (let i = 0; i < 5; i++) {
+                      document.write(`
+                         <img src="../assets/svg/chungnhan${i + 1}.svg" alt="">
+                      `);
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- navbar -->
+      <ul class="detailStore_navbar nav nav-tabs">
+        <script>
+          let btnArr = [
+            {
+              text: "Trang chủ",
+              id: "#detailStore_homePage",
+            },
+            {
+              text: "Sản phẩm",
+              id: "#detailStore_product",
+            },
+            {
+              text: "Hồ sơ Doanh nghiệp",
+              id: "#detailStore_enterprise",
+            },
+            {
+              text: "Thương hiệu",
+              id: "#detailStore_branch",
+            },
+            {
+              text: "Liên hệ",
+              id: "#detailStore_contact",
+            },
+          ];
+          for (let i = 0; i < btnArr.length; i++) {
+            document.write(`
+                <li class="nav-item" role="presentation">
+                <button
+                  class="${i === 0 ? "active" : ""} btn-primary"
+                  data-bs-toggle="tab"
+                  data-bs-target="${btnArr[i].id}"
+                  role="tab"
+                >
+                  ${btnArr[i].text}
+                  <img src="../assets/svg/buttonActiveTamGiac.svg" alt="">
+                </button>
+              </li>
+              `);
+          }
+        </script>
+      </ul>
+      <!-- all tabs -->
+      <ul class="detailStore_tabs">
+        <li
+          class="homePage tab-pane fade show active"
+          id="detailStore_homePage"
+          role="tabpanel"
+        >
+          <!-- highlightProduct -->
+          <section class="homePage_standoutProduct">
+            <div class="title">Sản phẩm nổi bật</div>
+            <div class="standoutProductList"></div>
+          </section>
+          <!-- listProduct1 -->
+          <section class="homePage_firstList">
+            <img
+              class="listProductFirst_banner"
+              src="../assets/images/listProductFirst_banner.png"
+              alt=""
+            />
+            <div class="commonProductList"></div>
+          </section>
+          <!-- feature -->
+          <section class="homePage_simpleBanner">
+            <script>
+              for (let i = 1; i <= 3; i++) {
+                document.write(`
+                  <img src="../assets/images/homePage_simpleBanner${i}.png" alt="">
+                `);
+              }
+            </script>
+          </section>
+          <!-- second list -->
+          <section class="homePage_secondList">
+            <img
+              class="secondListImg"
+              src="../assets/images/homePage_secondList.png"
+              alt=""
+            />
+            <div class="commonProductList"></div>
+          </section>
+        </li>
+        <li class="tab-pane fade" id="detailStore_product" role="tabpanel">
+          detailStore_product
+        </li>
+        <li class="tab-pane fade" id="detailStore_enterprise" role="tabpanel">
+          detailStore_enterprise
+        </li>
+        <li class="tab-pane fade" id="detailStore_branch" role="tabpanel">
+          detailStore_branch
+        </li>
+        <li class="tab-pane fade" id="detailStore_contact" role="tabpanel">
+          detailStore_contact
+        </li>
+      </ul>
+    </main>
+
+    <!-- Footer -->
+    <div data-include-html="../component/footer.html"></div>
+    <!-- Footer -->
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="../src/js/scripts.js"></script>
+  <script src="../src/js/createList.js"></script>
+  <script>
+    createstandoutProductItem();
+    createcommonProductList(8);
+    createcommonProductList(8, ".homePage_secondList .commonProductList");
+  </script>
+</html>

@@ -1,0 +1,1212 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.producDetail .productInfo .productInfo_content .content2 ul,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+:root {
+  font-family: "Roboto";
+  box-sizing: border-box; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+  background-color: transparent; }
+
+button {
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px; }
+
+.Roboto10 {
+  font-family: Roboto;
+  font-size: 10px;
+  line-height: 11.72px;
+  text-align: left; }
+
+.Roboto12, .commonProductList .commonProductItem .info .main .bottom .sold, .commonProductList .commonProductItem .info .address, .producDetail .relatedProducts .commonProductList .commonProductItem .info .address, .commonCategory .commonCategory_main .commonCategory_list .commonCategory_item span, .starFollow .i2, .producDetail .shopInfo .leftContent .mainInfo .i2, .starFollow .i3, .producDetail .shopInfo .leftContent .mainInfo .i3 {
+  font-size: 12px;
+  line-height: normal;
+  text-align: left; }
+
+.Roboto13 {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left; }
+
+.Roboto14, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .title, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .follow, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .address, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .name, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .sold, .commonProductList .commonProductItem .info .name, .producDetail .relatedProducts .commonProductList .commonProductItem .info .name, .starFollow .i1, .producDetail .shopInfo .leftContent .mainInfo .i1, .producDetail .productBriefing .productIllustration .product-share span, .producDetail .productBriefing .productInformation .header .mainHeader .common, .producDetail .productBriefing .productInformation .content .attribute .name, .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .first span:nth-child(1), .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .first span:nth-child(2), .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .second span:nth-child(1), .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .second span:nth-child(2), .producDetail .productBriefing .productInformation .content .attribute .value .link, .producDetail .productBriefing .productInformation .content .attribute .value .soluong .available, .producDetail .productBriefing .productInformation .content .attribute .value table,
+.producDetail .productBriefing .productInformation .content .attribute .value td,
+.producDetail .productBriefing .productInformation .content .attribute .value th, .producDetail .productBriefing .productInformation .content .dambao, .producDetail .shopInfo .rightContent .contentBottom .text, .producDetail .productInfo .productInfo_content .content1 .infoDetail .attribute .prop, .producDetail .productInfo .productInfo_content .content1 .infoDetail .attribute .value {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left; }
+
+.Roboto16, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost, .commonGroupProducts .commonGroupProducts-seeMore button, .commonProductList .commonProductItem .info .main .top span, .producDetail .relatedProducts .commonProductList .commonProductItem .info .main .top span, .nav.nav-tabs, .producDetail .shopInfo .rightContent .contentTop .item, .producDetail .productInfo .productInfo_content .commonTitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left; }
+
+.Roboto20, .producDetail .productBriefing .productInformation .content .buttonShopping .addToCart span, .producDetail .productBriefing .productInformation .content .buttonShopping .muaNgay {
+  font-size: 20px;
+  text-align: center;
+  line-height: normal; }
+
+.Roboto22, .commonGroupProducts .commonGroupProducts-title, .commonCategory .commonCategory_main .commonCategory_title {
+  font-size: 22px;
+  text-align: left;
+  line-height: normal; }
+
+.Roboto24, .producDetail .productBriefing .productInformation .header .mainHeader h3, .producDetail .productBriefing .productInformation .header .mainHeader .product-cost, .producDetail .relatedProducts .relatedProducts_title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+  line-height: normal; }
+
+.Roboto32 {
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left; }
+
+.divideV {
+  display: inline;
+  min-width: 1px;
+  height: 100%;
+  background-color: white; }
+
+.divideH {
+  display: inline-block;
+  min-height: 1px;
+  width: 100%;
+  background-color: white; }
+
+a {
+  color: #1a1a1a;
+  text-decoration: none; }
+
+.Template-popover {
+  border-radius: 0px;
+  position: relative;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 0px 15px 0px #0c2f4c26;
+  padding: 0px;
+  z-index: 1; }
+  .Template-popover .arrow {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    z-index: -1;
+    background-image: url("../../assets/svg/Polygon 3.svg");
+    width: 72px;
+    height: 37px; }
+
+.btnDropdown {
+  padding: 0px; }
+
+body {
+  background-color: #f0f0f0;
+  line-height: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  /* Xóa khoảng cách giữa nút và trường input */
+  display: none;
+  /* Ẩn nút tăng giảm */ }
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */ }
+
+.FlexNormal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: normal; }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.producDetail .productInfo .productInfo_content .content2 ul,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+:root {
+  font-family: "Roboto";
+  box-sizing: border-box; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+  background-color: transparent; }
+
+button {
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px; }
+
+.Roboto10 {
+  font-family: Roboto;
+  font-size: 10px;
+  line-height: 11.72px;
+  text-align: left; }
+
+.Roboto12, .commonProductList .commonProductItem .info .main .bottom .sold, .commonProductList .commonProductItem .info .address, .producDetail .relatedProducts .commonProductList .commonProductItem .info .address, .commonCategory .commonCategory_main .commonCategory_list .commonCategory_item span, .starFollow .i2, .producDetail .shopInfo .leftContent .mainInfo .i2, .starFollow .i3, .producDetail .shopInfo .leftContent .mainInfo .i3 {
+  font-size: 12px;
+  line-height: normal;
+  text-align: left; }
+
+.Roboto13 {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left; }
+
+.Roboto14, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .title, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .follow, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .address, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .name, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .sold, .commonProductList .commonProductItem .info .name, .producDetail .relatedProducts .commonProductList .commonProductItem .info .name, .starFollow .i1, .producDetail .shopInfo .leftContent .mainInfo .i1, .producDetail .productBriefing .productIllustration .product-share span, .producDetail .productBriefing .productInformation .header .mainHeader .common, .producDetail .productBriefing .productInformation .content .attribute .name, .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .first span:nth-child(1), .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .first span:nth-child(2), .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .second span:nth-child(1), .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .second span:nth-child(2), .producDetail .productBriefing .productInformation .content .attribute .value .link, .producDetail .productBriefing .productInformation .content .attribute .value .soluong .available, .producDetail .productBriefing .productInformation .content .attribute .value table,
+.producDetail .productBriefing .productInformation .content .attribute .value td,
+.producDetail .productBriefing .productInformation .content .attribute .value th, .producDetail .productBriefing .productInformation .content .dambao, .producDetail .shopInfo .rightContent .contentBottom .text, .producDetail .productInfo .productInfo_content .content1 .infoDetail .attribute .prop, .producDetail .productInfo .productInfo_content .content1 .infoDetail .attribute .value {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left; }
+
+.Roboto16, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost, .commonGroupProducts .commonGroupProducts-seeMore button, .commonProductList .commonProductItem .info .main .top span, .producDetail .relatedProducts .commonProductList .commonProductItem .info .main .top span, .nav.nav-tabs, .producDetail .shopInfo .rightContent .contentTop .item, .producDetail .productInfo .productInfo_content .commonTitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left; }
+
+.Roboto20, .producDetail .productBriefing .productInformation .content .buttonShopping .addToCart span, .producDetail .productBriefing .productInformation .content .buttonShopping .muaNgay {
+  font-size: 20px;
+  text-align: center;
+  line-height: normal; }
+
+.Roboto22, .commonGroupProducts .commonGroupProducts-title, .commonCategory .commonCategory_main .commonCategory_title {
+  font-size: 22px;
+  text-align: left;
+  line-height: normal; }
+
+.Roboto24, .producDetail .productBriefing .productInformation .header .mainHeader h3, .producDetail .productBriefing .productInformation .header .mainHeader .product-cost, .producDetail .relatedProducts .relatedProducts_title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+  line-height: normal; }
+
+.Roboto32 {
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left; }
+
+.divideV {
+  display: inline;
+  min-width: 1px;
+  height: 100%;
+  background-color: white; }
+
+.divideH {
+  display: inline-block;
+  min-height: 1px;
+  width: 100%;
+  background-color: white; }
+
+a {
+  color: #1a1a1a;
+  text-decoration: none; }
+
+.Template-popover {
+  border-radius: 0px;
+  position: relative;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 0px 15px 0px #0c2f4c26;
+  padding: 0px;
+  z-index: 1; }
+  .Template-popover .arrow {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    z-index: -1;
+    background-image: url("../../assets/svg/Polygon 3.svg");
+    width: 72px;
+    height: 37px; }
+
+.btnDropdown {
+  padding: 0px; }
+
+body {
+  background-color: #f0f0f0;
+  line-height: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  /* Xóa khoảng cách giữa nút và trường input */
+  display: none;
+  /* Ẩn nút tăng giảm */ }
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */ }
+
+.FlexNormal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: normal; }
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto; }
+
+.commonGroupProducts .commonGroupProducts-title {
+  background-color: #fff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 11px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 3px;
+  font-weight: 500;
+  color: #1a1a1a; }
+
+.commonGroupProducts .commonGroupProducts-main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 10px; }
+  .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; }
+    .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header {
+      width: 100%;
+      display: flex;
+      gap: 12px; }
+      .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .logo {
+        height: 100%;
+        object-fit: contain; }
+      .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start; }
+        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .title {
+          font-weight: 700;
+          color: #1a1a1a; }
+        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .follow {
+          font-weight: 400;
+          color: #969696; }
+        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .address {
+          font-weight: 400;
+          color: #2ead5b; }
+        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .certificate {
+          display: flex;
+          align-items: center;
+          gap: 4px; }
+    .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 10px;
+      row-gap: 10px; }
+      .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 100%;
+        min-height: 30px; }
+        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product img {
+          width: 100%;
+          object-fit: contain; }
+        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info {
+          display: flex;
+          flex-direction: column;
+          gap: 6px; }
+          .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .name {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            max-height: 3em;
+            /* Chiều cao tối đa của span */
+            line-height: 1.5em;
+            font-weight: 400;
+            color: #1a1a1a; }
+          .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .sold {
+            color: #7b7b7b; }
+          .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost {
+            font-weight: 700;
+            color: #fb4f5b; }
+          .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost.black {
+            color: #1a1a1a;
+            font-weight: 400; }
+
+.commonGroupProducts .commonGroupProducts-seeMore {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .commonGroupProducts .commonGroupProducts-seeMore button {
+    width: 241px;
+    height: 41px;
+    border: 1px solid #2e9dff;
+    border-radius: 6px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+    text-align: center;
+    align-content: center;
+    font-weight: 500;
+    color: #2e9dff;
+    text-transform: uppercase; }
+    .commonGroupProducts .commonGroupProducts-seeMore button:hover {
+      background-color: #2e9dff;
+      color: #fff; }
+
+.commonProductList, .producDetail .relatedProducts .commonProductList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 12px;
+  row-gap: 12px; }
+  .commonProductList .commonProductItem, .producDetail .relatedProducts .commonProductList .commonProductItem {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    border-radius: 4px;
+    flex-direction: column; }
+    .commonProductList .commonProductItem .headerlogo, .producDetail .relatedProducts .commonProductList .commonProductItem .headerlogo {
+      position: relative;
+      width: 100%;
+      height: auto; }
+      .commonProductList .commonProductItem .headerlogo .headlogo, .producDetail .relatedProducts .commonProductList .commonProductItem .headerlogo .headlogo {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        padding: 4px;
+        background-color: #fff;
+        border-radius: 4px;
+        top: 0px;
+        left: 0px; }
+      .commonProductList .commonProductItem .headerlogo .freeshiplogo, .producDetail .relatedProducts .commonProductList .commonProductItem .headerlogo .freeshiplogo {
+        position: absolute;
+        bottom: 0px;
+        left: 0px; }
+      .commonProductList .commonProductItem .headerlogo .saleIcon, .producDetail .relatedProducts .commonProductList .commonProductItem .headerlogo .saleIcon {
+        position: absolute;
+        top: 0px;
+        right: 0px; }
+    .commonProductList .commonProductItem .info, .producDetail .relatedProducts .commonProductList .commonProductItem .info {
+      padding: 10px 10px 12px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px; }
+      .commonProductList .commonProductItem .info .name, .producDetail .relatedProducts .commonProductList .commonProductItem .info .name {
+        width: 100%;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis; }
+      .commonProductList .commonProductItem .info .main, .producDetail .relatedProducts .commonProductList .commonProductItem .info .main {
+        display: flex;
+        flex-direction: column;
+        gap: 5px; }
+        .commonProductList .commonProductItem .info .main .top, .producDetail .relatedProducts .commonProductList .commonProductItem .info .main .top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+          .commonProductList .commonProductItem .info .main .top span, .producDetail .relatedProducts .commonProductList .commonProductItem .info .main .top span {
+            font-weight: 700;
+            color: #2ead5b; }
+        .commonProductList .commonProductItem .info .main .bottom, .producDetail .relatedProducts .commonProductList .commonProductItem .info .main .bottom {
+          height: 14px;
+          display: flex;
+          align-items: center;
+          gap: 6px; }
+          .commonProductList .commonProductItem .info .main .bottom .stars {
+            height: 100%; }
+            .commonProductList .commonProductItem .info .main .bottom .stars img {
+              height: 100%;
+              object-fit: contain; }
+          .commonProductList .commonProductItem .info .main .bottom .divideV {
+            background-color: #2e2e2e; }
+          .commonProductList .commonProductItem .info .main .bottom .sold {
+            margin-top: 3px; }
+      .commonProductList .commonProductItem .info .address, .producDetail .relatedProducts .commonProductList .commonProductItem .info .address {
+        color: #cccccc; }
+
+.commonCategory {
+  margin-top: 24px;
+  margin-bottom: 24px; }
+  .commonCategory .commonCategory_main {
+    width: 100%;
+    height: auto;
+    padding: 58px 47px 46px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    position: relative;
+    border-radius: 3px; }
+    .commonCategory .commonCategory_main .commonCategory_title {
+      position: absolute;
+      top: 12px;
+      left: 16px;
+      font-weight: 500;
+      color: #1a1a1a; }
+    .commonCategory .commonCategory_main .commonCategory_list {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-column-gap: 41px;
+      grid-row-gap: 32px;
+      width: 100%; }
+      .commonCategory .commonCategory_main .commonCategory_list .commonCategory_item {
+        width: 90px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 12px;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        text-wrap: nowrap; }
+        .commonCategory .commonCategory_main .commonCategory_list .commonCategory_item span {
+          font-weight: 400;
+          color: #000; }
+        .commonCategory .commonCategory_main .commonCategory_list .commonCategory_item:hover {
+          transform: scale(1.1); }
+
+.displayHidden {
+  display: none; }
+
+.starFollow, .producDetail .shopInfo .leftContent .mainInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px; }
+  .starFollow .i1, .producDetail .shopInfo .leftContent .mainInfo .i1 {
+    font-weight: 500; }
+  .starFollow .i2, .producDetail .shopInfo .leftContent .mainInfo .i2 {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-weight: 500; }
+    .starFollow .i2 :nth-child(2), .producDetail .shopInfo .leftContent .mainInfo .i2 :nth-child(2) {
+      color: #969696; }
+    .starFollow .i2 :nth-child(3), .producDetail .shopInfo .leftContent .mainInfo .i2 :nth-child(3) {
+      color: #2ead5b; }
+  .starFollow .i3, .producDetail .shopInfo .leftContent .mainInfo .i3 {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    gap: 8px; }
+    .starFollow .i3 button, .producDetail .shopInfo .leftContent .mainInfo .i3 button {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 5px;
+      border-radius: 3px; }
+    .starFollow .i3 .chatngay, .producDetail .shopInfo .leftContent .mainInfo .i3 .chatngay {
+      background-color: rgba(255, 0, 2, 0.08);
+      color: #ff000f; }
+    .starFollow .i3 .xemshop, .producDetail .shopInfo .leftContent .mainInfo .i3 .xemshop {
+      background-color: aliceblue;
+      color: #2e9dff; }
+
+.avatar-group, .producDetail .shopInfo .rightContent .contentBottom .avatar-group {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .avatar-group .avatar, .producDetail .shopInfo .rightContent .contentBottom .avatar-group .avatar {
+    position: relative;
+    transition: 0.2s; }
+    .avatar-group .avatar img, .producDetail .shopInfo .rightContent .contentBottom .avatar-group .avatar img {
+      width: 40px;
+      height: 40px;
+      display: block;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #fff; }
+
+.avatar-group .avatar:nth-of-type(n + 2), .producDetail .shopInfo .rightContent .contentBottom .avatar-group .avatar:nth-of-type(n + 2) {
+  margin-left: -10px; }
+
+nav .pagination {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 24px;
+  margin-bottom: 42px; }
+  nav .pagination .page-link {
+    color: #000;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.9px; }
+  nav .pagination .page-item.active .page-link {
+    background-color: #29ab56;
+    border: none;
+    color: #fff; }
+  nav .pagination .page-link:hover {
+    color: #000;
+    text-decoration: none; }
+
+.nav.nav-tabs {
+  display: flex;
+  gap: 38px;
+  border-bottom: 1px solid #d2d2d7 !important; }
+  .nav.nav-tabs .nav-item button {
+    font-weight: 400;
+    color: #86868b;
+    padding-bottom: 6px; }
+  .nav.nav-tabs .nav-item button.active {
+    font-weight: 700;
+    color: black;
+    border-bottom: 1px solid #29ab56;
+    transform: translateY(1px); }
+
+.producDetail {
+  display: flex;
+  flex-direction: column; }
+  .producDetail .productBriefing {
+    padding-top: 14px;
+    padding-left: 24px;
+    padding-right: 33px;
+    padding-bottom: 36px;
+    border-radius: 6px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    margin-bottom: 24px; }
+    .producDetail .productBriefing .productIllustration {
+      grid-column: span 4;
+      display: flex;
+      flex-direction: column; }
+      .producDetail .productBriefing .productIllustration .product-illustration_video {
+        margin-bottom: 15px; }
+      .producDetail .productBriefing .productIllustration .product-illustration_image {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        margin-bottom: 19px; }
+        .producDetail .productBriefing .productIllustration .product-illustration_image button {
+          width: 40px;
+          height: 40px;
+          background-color: #515154;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0.25;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%; }
+          .producDetail .productBriefing .productIllustration .product-illustration_image button:hover {
+            opacity: 0.5; }
+        .producDetail .productBriefing .productIllustration .product-illustration_image .previous {
+          left: -15px;
+          transform: translateY(-50%); }
+        .producDetail .productBriefing .productIllustration .product-illustration_image .next {
+          right: -15px;
+          transform: translateY(-50%); }
+        .producDetail .productBriefing .productIllustration .product-illustration_image .list-images {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          gap: 30px;
+          overflow-x: hidden; }
+      .producDetail .productBriefing .productIllustration .product-share {
+        align-self: center;
+        display: flex;
+        align-items: center;
+        gap: 14px; }
+        .producDetail .productBriefing .productIllustration .product-share .list-social {
+          display: flex;
+          align-items: center;
+          gap: 9px; }
+          .producDetail .productBriefing .productIllustration .product-share .list-social a:hover {
+            transform: scale(1.05); }
+          .producDetail .productBriefing .productIllustration .product-share .list-social img {
+            width: 28px;
+            height: 28px;
+            object-fit: contain; }
+    .producDetail .productBriefing .productInformation {
+      grid-column: span 8;
+      display: flex;
+      flex-direction: column;
+      align-items: start; }
+      .producDetail .productBriefing .productInformation .header {
+        display: flex;
+        align-items: start;
+        gap: 12px;
+        margin-bottom: 17px; }
+        .producDetail .productBriefing .productInformation .header .mainHeader {
+          display: flex;
+          flex-direction: column;
+          position: relative; }
+          .producDetail .productBriefing .productInformation .header .mainHeader h3 {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 12px; }
+          .producDetail .productBriefing .productInformation .header .mainHeader .common {
+            display: flex;
+            align-items: center;
+            gap: 4px; }
+            .producDetail .productBriefing .productInformation .header .mainHeader .common .text {
+              font-weight: 700;
+              color: #1a1a1a;
+              text-decoration: underline; }
+            .producDetail .productBriefing .productInformation .header .mainHeader .common .text1 {
+              font-weight: 300;
+              color: #4d4d4d; }
+            .producDetail .productBriefing .productInformation .header .mainHeader .common .stars {
+              display: flex;
+              align-items: center;
+              gap: 2px; }
+              .producDetail .productBriefing .productInformation .header .mainHeader .common .stars img {
+                width: 14px;
+                height: 14px;
+                object-fit: contain; }
+          .producDetail .productBriefing .productInformation .header .mainHeader .preview {
+            display: flex;
+            align-items: center;
+            gap: 21px;
+            margin-bottom: 16px; }
+          .producDetail .productBriefing .productInformation .header .mainHeader .product-cost {
+            font-weight: 600;
+            color: #fb424f; }
+          .producDetail .productBriefing .productInformation .header .mainHeader .qrcode {
+            position: absolute;
+            bottom: 0;
+            right: 0; }
+      .producDetail .productBriefing .productInformation .content {
+        width: 100%;
+        background-color: #fbfbfb;
+        padding-top: 19px;
+        padding-right: 12px;
+        padding-left: 10px;
+        padding-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr; }
+        .producDetail .productBriefing .productInformation .content .attribute:nth-child(1) {
+          margin-bottom: 22px; }
+        .producDetail .productBriefing .productInformation .content .attribute:nth-child(2) {
+          margin-bottom: 10px; }
+        .producDetail .productBriefing .productInformation .content .attribute:nth-child(3) {
+          margin-bottom: 21px; }
+        .producDetail .productBriefing .productInformation .content .attribute:nth-child(4) {
+          margin-bottom: 20px; }
+        .producDetail .productBriefing .productInformation .content .attribute {
+          display: grid;
+          grid-template-columns: minmax(130px, auto) 1fr;
+          grid-gap: 40px; }
+          .producDetail .productBriefing .productInformation .content .attribute .name {
+            font-weight: 400; }
+          .producDetail .productBriefing .productInformation .content .attribute .value {
+            width: fit-content; }
+            .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from {
+              display: flex;
+              flex-direction: column; }
+              .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .diadiemgh {
+                margin-bottom: 8px;
+                font-weight: 700; }
+              .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                border-radius: 3px;
+                background-color: #fff;
+                border: 1px solid #cccccc;
+                padding: 13px 52px 13px 20px;
+                width: fit-content; }
+                .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: start;
+                  gap: 5px; }
+                  .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .first {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px; }
+                    .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .first span:nth-child(1) {
+                      font-weight: 400; }
+                      .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .first span:nth-child(1) span {
+                        font-weight: 700; }
+                    .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .first span:nth-child(2) {
+                      font-weight: 700;
+                      color: #0066cc; }
+                  .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .second {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px; }
+                    .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .second span:nth-child(1) {
+                      font-weight: 700; }
+                    .producDetail .productBriefing .productInformation .content .attribute .value .delivery-from .freeship .main .second span:nth-child(2) {
+                      font-weight: 400;
+                      color: #666666; }
+            .producDetail .productBriefing .productInformation .content .attribute .value .link {
+              font-weight: 700;
+              color: #116abd; }
+            .producDetail .productBriefing .productInformation .content .attribute .value .soluong {
+              display: flex;
+              align-items: center;
+              gap: 23px; }
+              .producDetail .productBriefing .productInformation .content .attribute .value .soluong .main {
+                display: flex;
+                align-items: center;
+                width: 102px;
+                height: 24px;
+                border: 1px solid #e4e4e4;
+                position: relative; }
+                .producDetail .productBriefing .productInformation .content .attribute .value .soluong .main button {
+                  width: 24px;
+                  position: absolute;
+                  height: 100%;
+                  text-align: center;
+                  align-content: center;
+                  line-height: 0; }
+                .producDetail .productBriefing .productInformation .content .attribute .value .soluong .main input {
+                  width: 100%;
+                  height: 100%;
+                  padding: 0;
+                  text-align: center;
+                  align-content: center;
+                  outline: none;
+                  border: none; }
+                .producDetail .productBriefing .productInformation .content .attribute .value .soluong .main .decrease {
+                  left: 0;
+                  border-right: 1px solid #e4e4e4; }
+                .producDetail .productBriefing .productInformation .content .attribute .value .soluong .main .increase {
+                  right: 0;
+                  border-left: 1px solid #e4e4e4; }
+            .producDetail .productBriefing .productInformation .content .attribute .value table,
+            .producDetail .productBriefing .productInformation .content .attribute .value td,
+            .producDetail .productBriefing .productInformation .content .attribute .value th {
+              border: 1px solid;
+              padding: 5px 34px;
+              text-align: center;
+              align-content: center; }
+              .producDetail .productBriefing .productInformation .content .attribute .value table .contact,
+              .producDetail .productBriefing .productInformation .content .attribute .value td .contact,
+              .producDetail .productBriefing .productInformation .content .attribute .value th .contact {
+                font-weight: 700;
+                color: #116abd; }
+        .producDetail .productBriefing .productInformation .content .buttonShopping {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          margin-left: 170px; }
+          .producDetail .productBriefing .productInformation .content .buttonShopping .addToCart {
+            width: 245px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1.85px solid #29ab56; }
+            .producDetail .productBriefing .productInformation .content .buttonShopping .addToCart span {
+              font-weight: 500;
+              color: #29ab56; }
+          .producDetail .productBriefing .productInformation .content .buttonShopping .muaNgay {
+            width: 245px;
+            height: 60px;
+            text-align: center;
+            align-content: center;
+            background-color: #29ab56;
+            color: #fff;
+            font-weight: 700; }
+        .producDetail .productBriefing .productInformation .content .dambao {
+          width: 100%;
+          font-weight: 500;
+          color: #29ab56;
+          text-align: center; }
+  .producDetail .shopInfo {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    padding-right: 62px;
+    padding-left: 34px;
+    padding-bottom: 18px;
+    background-color: #fff;
+    border-radius: 6px;
+    justify-content: space-between;
+    margin-bottom: 18px; }
+    .producDetail .shopInfo .leftContent {
+      display: flex;
+      height: 90px;
+      align-items: center;
+      gap: 17px; }
+      .producDetail .shopInfo .leftContent img {
+        height: 100%;
+        object-fit: contain; }
+    .producDetail .shopInfo .rightContent {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+      height: 100%;
+      align-items: center; }
+      .producDetail .shopInfo .rightContent .contentTop {
+        display: flex;
+        align-items: center; }
+        .producDetail .shopInfo .rightContent .contentTop .item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-weight: 700;
+          padding-left: 18px;
+          padding-right: 18px; }
+          .producDetail .shopInfo .rightContent .contentTop .item .p1 {
+            color: #29ab56; }
+          .producDetail .shopInfo .rightContent .contentTop .item .p2 {
+            color: black; }
+        .producDetail .shopInfo .rightContent .contentTop .divideV {
+          background-color: #cccccc;
+          height: 40px; }
+      .producDetail .shopInfo .rightContent .contentBottom {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        width: fit-content; }
+        .producDetail .shopInfo .rightContent .contentBottom .text :nth-child(1) {
+          font-weight: 700;
+          color: #29ab56; }
+        .producDetail .shopInfo .rightContent .contentBottom .text :nth-child(2) {
+          font-weight: 500;
+          color: black; }
+  .producDetail .productInfo {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-right: 32px;
+    padding-left: 25px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 18px;
+    min-height: 100px; }
+    .producDetail .productInfo .productInfo_content {
+      width: 100%;
+      height: 100%;
+      padding-top: 24px;
+      padding-left: 14px; }
+      .producDetail .productInfo .productInfo_content .commonTitle {
+        font-weight: 500;
+        color: #1d1d1f;
+        margin-bottom: 12px; }
+      .producDetail .productInfo .productInfo_content .content1 .infoDetail {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 590px;
+        margin-bottom: 31px; }
+        .producDetail .productInfo .productInfo_content .content1 .infoDetail .attribute:nth-child(odd) {
+          background-color: #f5f5f7; }
+        .producDetail .productInfo .productInfo_content .content1 .infoDetail .attribute {
+          width: 100%;
+          height: 38px;
+          padding-top: 9px;
+          padding-bottom: 9px;
+          padding-left: 16px;
+          display: flex;
+          align-items: center;
+          border-radius: 8px; }
+          .producDetail .productInfo .productInfo_content .content1 .infoDetail .attribute .prop {
+            font-weight: 500;
+            color: #515154;
+            min-width: 173px; }
+          .producDetail .productInfo .productInfo_content .content1 .infoDetail .attribute .value {
+            font-weight: 400;
+            color: #86868b; }
+      .producDetail .productInfo .productInfo_content .content2 {
+        padding-bottom: 32px; }
+        .producDetail .productInfo .productInfo_content .content2 p, .producDetail .productInfo .productInfo_content .content2 ul {
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+          text-align: left;
+          color: black; }
+        .producDetail .productInfo .productInfo_content .content2 .tru li::before {
+          content: "-";
+          margin-right: 5px; }
+        .producDetail .productInfo .productInfo_content .content2 .cong li::before {
+          content: "+";
+          margin-right: 5px; }
+      .producDetail .productInfo .productInfo_content .displayHidden.btnXemThem .chevronThugon {
+        transform: rotate(180deg); }
+  .producDetail .relatedProducts {
+    padding: 57px 25px 0px 25px;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 39px;
+    border-radius: 6px; }
+    .producDetail .relatedProducts .relatedProducts_title {
+      position: absolute;
+      top: 15px;
+      left: 25px;
+      font-weight: 600;
+      color: #00953d; }
+    .producDetail .relatedProducts .commonProductList {
+      display: flex;
+      width: 100%; }
+      .producDetail .relatedProducts .commonProductList :nth-child(n + 10) {
+        display: none; }

@@ -1,0 +1,120 @@
+<section class="sidebar">
+  <div class="filter">
+    <!-- title -->
+    <span class="filter-title">
+      <button><img src="../assets/svg/filter.svg" alt="" /></button>
+      <span>Bộ lọc tìm kiếm</span>
+    </span>
+    <!-- category -->
+    <div class="category">
+      <span class="common-title">Danh mục</span>
+      <div class="category-list">
+        <span>Trái cây</span>
+        <span>Thịt, trứng</span>
+        <span>Rau, củ, quả</span>
+        <span>Sữa, bơ, phô mai</span>
+      </div>
+    </div>
+    <!-- span -->
+    <div class="divideH"></div>
+    <!-- transport -->
+    <div class="transport">
+      <span class="common-title">Phương thức vận chuyển</span>
+      <div class="transport-list">
+        <span><input type="checkbox" name="" id="" /> Hỏa tốc</span>
+        <span><input type="checkbox" name="" id="" />Nhanh</span>
+        <span><input type="checkbox" name="" id="" />Tiêu chuẩn</span>
+      </div>
+    </div>
+    <!-- span -->
+    <div class="divideH"></div>
+    <!-- khoang gia -->
+    <div class="price">
+      <div class="common-title">Khoảng giá</div>
+      <div class="price-filter">
+        <input type="text" placeholder="Từ" />
+        <input type="text" placeholder="Đến" />
+      </div>
+      <button class="apply">Áp dụng</button>
+    </div>
+    <!-- span -->
+    <div class="divideH"></div>
+    <!-- evaluate -->
+    <div class="evaluate">
+      <span class="common-title">Đánh giá</span>
+      <div class="evaluate-list">
+        <script>
+          for (let i = 5; i >= 1; i--) {
+            document.write(`
+                  <div class="evaluate-item">
+                    <div class="star">
+                      ${'<img src="../assets/svg/starfull.svg" alt="">'.repeat(
+                        i
+                      )}
+                      ${'<img src="../assets/svg/starEmpty.svg" alt="">'.repeat(
+                        5 - i
+                      )}
+                    </div>
+                    <span>${i !== 5 ? "từ" : ""} ${i} sao</span>
+                  </div>
+                `);
+          }
+        </script>
+      </div>
+    </div>
+    <!-- span -->
+    <div class="divideH"></div>
+    <!-- trademark : thương hiệu-->
+    <div class="trademark">
+      <span class="common-title">Thương hiệu</span>
+      <div class="trademark-list">
+        <span><input type="checkbox" name="" id="" /> Hỏa tốc</span>
+        <span><input type="checkbox" name="" id="" />Nhanh</span>
+        <span><input type="checkbox" name="" id="" />Tiêu chuẩn</span>
+      </div>
+    </div>
+    <!-- span -->
+    <div class="divideH"></div>
+    <!-- material: chất liệu -->
+    <div class="material">
+      <span class="common-title">Chất liệu</span>
+      <div class="material-list">
+        <script>
+          let arr = ["Đen", "Trắng", "Đỏ", "Xanh lá", "Cam"];
+          for (let i = 1; i <= 5; i++) {
+            document.write(`
+                <span><input type="checkbox" name="" id="" /> ${
+                  arr[i - 1]
+                }</span>
+                `);
+          }
+        </script>
+      </div>
+    </div>
+    <!-- span -->
+    <span class="divideH"></span>
+    <!-- provider -->
+    <div class="provider">
+      <span class="common-title">Nhà cung cấp</span>
+      <div class="provider-list">
+        <script>
+          let prods = [
+            "Nhà cung cấp A",
+            "Nhà cung cấp B",
+            "Nhà cung cấp C",
+            "Nhà cung cấp D",
+          ];
+          for (let i = 1; i <= 4; i++) {
+            document.write(`
+                <span><input type="checkbox" name="" id="" /> ${
+                  prods[i - 1]
+                }</span>
+                `);
+          }
+        </script>
+      </div>
+    </div>
+    <!-- span -->
+    <span class="divideH"></span>
+  </div>
+</section>

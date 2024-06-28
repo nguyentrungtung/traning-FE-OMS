@@ -1,0 +1,53 @@
+@import "../scss/base";
+@import "../scss/style.scss";
+.homeLocal {
+  width: 100%;
+  background-color: $bgColor;
+  display: flex;
+  flex-direction: column;
+  .mainlogo {
+    width: 100%;
+    object-fit: contain;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .filter-address {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $white;
+    align-items: center;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    gap: 18px;
+    .title {
+      @extend .Roboto16;
+      font-weight: 700;
+      color: $black2;
+    }
+    .filter {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      .button-filter {
+        width: 319px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 16px;
+        border-radius: 8px;
+        background-color: $gray7;
+        border: none;
+        outline: none;
+        @extend .Roboto16;
+        color: #585858;
+        font-weight: 400;
+      }
+    }
+  }
+  .products {
+    @extend .commonGroupProducts;
+  }
+}

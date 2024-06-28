@@ -1,0 +1,101 @@
+@import "./base";
+
+.Footer {
+  width: 100%;
+  background-color: $white;
+  text-wrap: nowrap;
+  .Footer_bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+    padding-top: 26px;
+    padding-bottom: 35px;
+    margin-left: 8px;
+    width: 100%;
+    @extend .Roboto14;
+  }
+  .Footer__item-title {
+    padding: 28px 0px 16px 0px;
+    @extend .Roboto16;
+  }
+  .Footer__commonColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 100%;
+    padding-left: 0;
+    width: fit-content;
+  }
+  .commonContent {
+    @extend .Roboto14;
+    color: $black0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-wrap: nowrap;
+    a {
+      color: $black0;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .Footer__customerSupport {
+    @extend .Footer__commonColumn;
+    .Footer__customerSupport-item {
+      @extend .commonContent;
+    }
+  }
+  .Footer__aboutOmmaniLife {
+    @extend .Footer__commonColumn;
+    .Footer__aboutOmmaniLife-item {
+      @extend .commonContent;
+    }
+  }
+  .Footer__association {
+    @extend .Footer__commonColumn;
+    .Footer__association-item {
+      @extend .commonContent;
+    }
+  }
+  .Footer__certifiedBy-img {
+    width: 64px;
+    object-fit: contain;
+  }
+  .Footer__connectUs {
+    @extend .Footer__commonColumn;
+    padding-left: 0;
+    position: relative;
+    .Footer__connectUs-mateWithLove {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .Footer__paymentMethods {
+    @extend .Footer__commonColumn;
+    padding-left: 0;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+    .Footer__item-title {
+      padding-bottom: 0;
+    }
+  }
+  .divideH {
+    background-color: $black4;
+  }
+  .Footer_mobile {
+    display: none;
+  }
+}

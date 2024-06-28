@@ -1,0 +1,389 @@
+@import "../scss/base";
+.Header {
+  height: 110px;
+  padding-top: 10px;
+  color: $white;
+  background-color: $baseColor0;
+  padding-bottom: 6px;
+  img {
+    object-fit: contain;
+  }
+  .common-bottom-header {
+    align-self: flex-end;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 21px;
+  }
+  .Header__option-left {
+    display: flex;
+    height: 14px;
+    align-items: center;
+    gap: 12px;
+    @extend .Roboto12;
+    a {
+      color: $white;
+    }
+    .divideV {
+      height: 11px;
+    }
+  }
+  .Header__option-right {
+    display: flex;
+    height: 14px;
+    align-items: center;
+    gap: 17px;
+    @extend .Roboto12;
+    a {
+      color: $white;
+    }
+  }
+  .Header__bottom {
+    display: flex;
+    padding: 0px;
+    flex: 1;
+    padding-right: 28px;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .Header__logo {
+    @extend .common-bottom-header;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .Header__address {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: $white;
+    @extend .common-bottom-header;
+  }
+  .Header__search {
+    display: flex;
+    align-items: start;
+    gap: 7px;
+    flex-direction: column;
+    position: relative;
+
+    .Header__searchBar {
+      width: 545px;
+      height: 42px;
+      background-color: $white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 12px;
+      .Header__searchBar-filter {
+        display: flex;
+        align-items: center;
+        margin-right: 12px;
+        span {
+          color: $baseColor6;
+          @extend .Roboto14;
+          font-weight: 600;
+        }
+      }
+      .Header__searchBar-input {
+        height: 16px;
+        padding-left: 12px;
+        flex: 1;
+        border-left: 1px solid $black3;
+        @extend .Roboto14;
+        color: $black3;
+      }
+      .Header__searchBar-find {
+        width: 52px;
+        height: 100%;
+        align-content: center;
+        text-align: center;
+        border: 2px solid $white;
+        background-color: $baseColor1;
+        border-radius: 0px 8px 8px 0px;
+      }
+    }
+
+    .Header__listCategory {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      @extend .Roboto12;
+      a {
+        color: $white;
+      }
+    }
+    .Header__searchBar-dropdown {
+      display: none;
+      position: absolute;
+      top: 38px;
+      width: 100%;
+      min-height: 100px;
+      height: fit-content;
+      background-color: $white;
+      box-shadow: 0px 4px 16px 0px #00000014;
+      z-index: 9999;
+      .seach__item {
+        display: inline-block;
+        width: 100%;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        padding-left: 118px;
+        background-color: $white;
+        @extend .Roboto14;
+        color: $black2;
+        &:hover {
+          color: $white;
+          background-color: $baseColor5;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .Header__notification {
+    @extend .common-bottom-header;
+  }
+  .Header__message {
+    @extend .common-bottom-header;
+  }
+  .Header__cart {
+    @extend .common-bottom-header;
+    .Header__cart-popover {
+      @extend .Template-popover;
+      width: 410px;
+      height: 373px;
+      .Header__cart-content {
+        width: 100%;
+        height: 100%;
+        padding: 12px 10px 23px 10px;
+        display: flex;
+        flex-direction: column;
+        .newAdd {
+          @extend .Roboto14;
+          font-weight: 400;
+          color: $gray4;
+          padding-bottom: 14px;
+        }
+        .Header__cart-list {
+          width: 100%;
+          height: 258px;
+          overflow-y: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          .Header__cart-item {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            .info {
+              display: flex;
+              align-items: start;
+              gap: 11px;
+              span {
+                display: block;
+                width: 235px;
+                text-wrap: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                @extend .Roboto14;
+                font-weight: 400;
+                color: $black2;
+              }
+            }
+            .cost {
+              @extend .Roboto14;
+              font-weight: 500;
+              color: $baseColor4;
+            }
+          }
+        }
+        .footer {
+          width: 100%;
+          padding-top: 20px;
+          flex: 1;
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+          span {
+            @extend .Roboto14;
+            font-weight: 400;
+            color: $black5;
+          }
+          button {
+            background-color: $baseColor1;
+            border-radius: 2px;
+            padding: 5px 28px;
+            @extend .Roboto16;
+            font-weight: 700;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .Header__user {
+    @extend .common-bottom-header;
+    gap: 8px;
+    .Header__infoUser {
+      .option-user {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        gap: 4px;
+      }
+    }
+  }
+  .Header__infoUser-btn {
+    display: none;
+    gap: 8px;
+    color: $white;
+    padding: 0px;
+    @extend .Roboto12;
+    .tk {
+      @extend .Roboto10;
+      font-weight: 400;
+    }
+    .username {
+      @extend .Roboto12;
+      font-weight: 500;
+    }
+    .Header__infoUser-popover {
+      @extend .Template-popover;
+      width: 146px;
+      height: 95px;
+    }
+  }
+  .Header__noLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    @extend .Roboto12;
+    a {
+      color: $white;
+    }
+  }
+  .Header__searchMobile {
+    display: none;
+    width: 100%;
+    height: 42px;
+    position: relative;
+    align-items: center;
+    img {
+      height: 24px;
+      object-fit: contain;
+      position: absolute;
+      left: 12px;
+    }
+    .Header__searchMobile-input {
+      width: 100%;
+      height: 100%;
+      background: $white;
+      padding: 13px 102px 13px 48px;
+      @extend .Roboto14;
+      font-weight: 400;
+      color: #2f294d;
+    }
+  }
+}
+.Header.isLogin {
+  .Header__searchBar {
+    width: 787px;
+  }
+  .Header__address {
+    display: none;
+  }
+  .Header__notification {
+    display: none;
+  }
+  .Header__message {
+    display: none;
+  }
+  .Header__cart {
+    display: flex;
+  }
+  .Header__user {
+    display: flex;
+    .Header__noLogin {
+      display: none;
+    }
+    .Header__infoUser-btn {
+      display: flex;
+    }
+    .Header__infoUser-popover {
+      width: 146px;
+      height: 95px;
+      padding-top: 13px;
+      @extend .Template-popover;
+      .Header__infoUser-content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        height: 100%;
+        .option {
+          width: 100%;
+          flex: 1;
+          padding-left: 13px;
+          @extend .Roboto14;
+          color: $baseColor1;
+          text-align: start;
+          align-content: center;
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.02);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+.filter-container {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: $white;
+  .filter-container_content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: start;
+  }
+  span {
+    color: $baseColor2;
+    font-weight: 700;
+  }
+  .filter-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+}
+
+// .notification-bar-mobile
+.notification-bar {
+  display: flex;
+  padding: 18px 20px;
+  justify-content: space-between;
+  display: none;
+  background-color: white;
+}
+
+// <!-- breadcrumb -->
+.breadcrumb-container {
+  padding-top: 18px;
+  padding-bottom: 19px;
+  .breadcrumb {
+    margin: 0;
+    li {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: justified;
+      color: #333333;
+    }
+  }
+}

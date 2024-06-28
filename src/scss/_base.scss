@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+:root {
+  font-family: "Roboto";
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+button {
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+}
+
+$bgColorMain: #f5f5f7;
+$baseColor0: #1ab357;
+$baseColor1: #29ab56;
+$baseColor2: #007b2b;
+$baseColor3: #2ead5b;
+$baseColor4: #00bc3c;
+$baseColor5: #22aa00;
+$baseColor6: #5cb531;
+
+$white: #fff;
+
+$black0: #373737;
+$black1: #1a1a1a;
+$black2: #000;
+$black3: #2f294d;
+$black4: #282828;
+$black5: #4d4d4d;
+$black6: #333333;
+
+$gray0: #969696;
+$gray1: #7b7b7b;
+$gray2: #2f294d;
+$gray3: #dfdfdf;
+$gray4: #c2c2c2;
+$gray5: #cccccc;
+$gray6: #888888;
+$gray7: #f6f6f6;
+
+$blue0: #2e9dff;
+$red0: #fb4f5b;
+$red1: #fb424f;
+
+$blue1: #f0f8ff;
+
+$bgColor: #f5f5fa;
+
+.Roboto10 {
+  font-family: Roboto;
+  font-size: 10px;
+  line-height: 11.72px;
+  text-align: left;
+}
+.Roboto12 {
+  font-size: 12px;
+  line-height: normal;
+  text-align: left;
+}
+.Roboto13 {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+}
+.Roboto14 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+.Roboto16 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
+}
+.Roboto20 {
+  font-size: 20px;
+  text-align: center;
+  line-height: normal;
+}
+.Roboto22 {
+  font-size: 22px;
+  text-align: left;
+  line-height: normal;
+}
+.Roboto24 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+  line-height: normal;
+}
+
+.Roboto32 {
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left;
+}
+
+.divideV {
+  display: inline;
+  min-width: 1px;
+  height: 100%;
+  background-color: white;
+}
+.divideH {
+  display: inline-block;
+  min-height: 1px;
+  width: 100%;
+  background-color: white;
+}
+a {
+  color: $black1;
+  text-decoration: none;
+  // &:hover {
+  //   text-decoration: underline;
+  // }
+}
+.Template-popover {
+  border-radius: 0px;
+  position: relative;
+  background-color: $white;
+  border: none;
+  box-shadow: 0px 0px 15px 0px #0c2f4c26;
+  padding: 0px;
+  z-index: 1;
+  .arrow {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    z-index: -1;
+    background-image: url("../../assets/svg/Polygon\ 3.svg");
+    width: 72px;
+    height: 37px;
+  }
+}
+.btnDropdown {
+  padding: 0px;
+}
+body {
+  background-color: #f0f0f0;
+  line-height: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Xóa khoảng cách giữa nút và trường input */
+  display: none; /* Ẩn nút tăng giảm */
+}
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.FlexNormal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: normal;
+}

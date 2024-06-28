@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/header.css" />
+    <link rel="stylesheet" href="../src/css/footer.css" />
+    <link rel="stylesheet" href="../src/css/productDetail.css" />
+    <link rel="stylesheet" href="../src/css/responsive-common.css" />
+    <link rel="stylesheet" href="../src/css/responsive-productDetail.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <div data-include-html="../component/header.html"></div>
+    <!-- breadcrumb -->
+    <div data-include-html="../component/breadcrumb.html"></div>
+
+    <!-- main -->
+    <main class="producDetail container-xxl">
+      <!-- gioi thieu san pham -->
+      <div class="productBriefing">
+        <div class="productIllustration">
+          <img
+            class="product-illustration_video"
+            src="../assets/images/videoMinhHoa.png"
+            alt=""
+          />
+          <div class="displayHidden">
+            <button class="btnReturn">
+              <img src="../assets/svg/btnreturn.svg" alt="" />
+            </button>
+            <button class="btnCart">
+              <img src="../assets/svg/cart.svg" alt="" />
+            </button>
+            <div class="bottom">
+              <img class="tag" src="../assets/images/TAG.png" alt="" />
+              <img
+                class="vanchuyen"
+                src="../assets/svg/Vận chuyển.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="product-illustration_image">
+            <button class="previous">
+              <img src="../assets/svg/previous.svg" alt="" />
+            </button>
+            <button class="next">
+              <img src="../assets/svg/next.svg" alt="" />
+            </button>
+            <div class="list-images">
+              <img src="../assets/svg/hinhminhhoa1.svg" alt="" />
+              <img src="../assets/svg/hinhminhhoa2.svg" alt="" />
+              <img src="../assets/svg/hinhminhhoa2.svg" alt="" />
+              <img src="../assets/svg/hinhminhhoa2.svg" alt="" />
+              <img src="../assets/svg/hinhminhhoa2.svg" alt="" />
+              <img src="../assets/svg/hinhminhhoa2.svg" alt="" />
+              <img src="../assets/svg/hinhminhhoa2.svg" alt="" />
+            </div>
+            <script>
+              let scrollAmount = 100;
+              const previous = document.querySelector(".previous");
+              const next = document.querySelector(".next");
+              const ListImage = document.querySelector(".list-images");
+              next.addEventListener("click", () => {
+                ListImage.scrollBy({
+                  left: scrollAmount,
+                  behavior: "smooth",
+                });
+              });
+              previous.addEventListener("click", () => {
+                ListImage.scrollBy({
+                  left: -scrollAmount,
+                  behavior: "smooth",
+                });
+              });
+            </script>
+          </div>
+          <div class="product-share">
+            <span>Chia sẻ:</span>
+            <div class="list-social">
+              <a href="#"><img src="../assets/svg/image 38.svg" alt="" /></a>
+              <a href="#"><img src="../assets/svg/image 39.svg" alt="" /></a>
+              <a href="#"><img src="../assets/svg/image 41.svg" alt="" /></a>
+              <a href="#"
+                ><img src="../assets/svg/Frame 48095713.svg" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="productInformation">
+          <!--  -->
+          <div class="header">
+            <img class="mall" src="../assets/svg/mall.svg" alt="" />
+            <div class="mainHeader">
+              <h3>
+                Bông cải xanh - Công nghệ làm sạch tiêu chuẩn đức Gói 500g Đà
+                Lạt
+              </h3>
+              <img
+                class="displayHidden"
+                src="../assets/svg/Salemobile.svg"
+                alt=""
+              />
+              <div class="preview">
+                <span class="common">
+                  <span class="text">4.8</span>
+                  <div class="stars">
+                    <script>
+                      for (let i = 5; i >= 1; i--) {
+                        document.write(`
+                          <img src="../assets/svg/starShop.svg" alt="">
+                        `);
+                      }
+                    </script>
+                  </div>
+                </span>
+                <span class="common">
+                  <span class="text">513</span>
+                  <span class="text1">đánh giá</span>
+                </span>
+                <span class="common">
+                  <span class="text">246k</span>
+                  <span class="text1">Đã bán</span>
+                </span>
+              </div>
+              <span class="product-cost">132.000 đ </span>
+              <img
+                class="qrcode"
+                src="../assets/svg/QR-product-detaild.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="content">
+            <!-- attribute -->
+            <div class="attribute">
+              <span class="name">Số lượng lớn</span>
+              <div class="value">
+                <table>
+                  <tr>
+                    <td>1-10 Gói</td>
+                    <td>11 - 30 Gói</td>
+                    <td>Trên 30 gói</td>
+                  </tr>
+                  <tr>
+                    <td>132k/gói</td>
+                    <td>105k/gói</td>
+                    <td class="contact">Liên hệ</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <!-- attribute -->
+            <div class="attribute">
+              <span class="name">Truy xuất nguồn gốc:</span>
+              <div class="value"><a href="#" class="link">Link</a></div>
+            </div>
+            <!-- attribute -->
+            <div class="attribute">
+              <span class="name"> Giao hàng từ: </span>
+              <div class="value">
+                <div class="delivery-from">
+                  <span class="diadiemgh"
+                    >46 Trần Nguyên Đán, Thanh Xuân, Hà Nội</span
+                  >
+                  <div class="freeship">
+                    <img src="../assets/svg/ship.svg" alt="" />
+                    <div class="main">
+                      <div class="first">
+                        <span>Giao hàng <span>Tiêu chuẩn:</span></span>
+                        <span>Thứ 5, ngày 21/04 - Thứ 7 ngày 23/04</span>
+                      </div>
+                      <div class="second">
+                        <span>21.000 đ</span>
+                        <span>(Freeship 30K đơn hàng từ 150K)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- attribute -->
+            <div class="attribute">
+              <span class="name">Số Lượng:</span>
+              <div class="value">
+                <div class="soluong">
+                  <div class="main">
+                    <button class="decrease">
+                      <img src="../assets/svg/giam.svg" alt="" />
+                    </button>
+                    <input value="1" type="number" name="" id="" />
+                    <button class="increase">
+                      <img src="../assets/svg/tang.svg" alt="" />
+                    </button>
+                  </div>
+                  <span class="available">Có 2.400 Sản phẩm có sẵn</span>
+
+                  <script>
+                    const soluongChange =
+                      document.querySelector(".soluong .main");
+                    const increase = soluongChange.querySelector(".increase");
+                    const decrease = soluongChange.querySelector(".decrease");
+                    const input = soluongChange.querySelector("input");
+
+                    increase.addEventListener("click", () => {
+                      let currentValue = parseInt(input.value);
+                      input.value = currentValue + 1;
+                    });
+
+                    decrease.addEventListener("click", () => {
+                      let currentValue = parseInt(input.value);
+                      if (currentValue > 1) {
+                        input.value = currentValue - 1;
+                      }
+                    });
+                  </script>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column gap-4 align-items-start">
+              <div class="buttonShopping">
+                <button class="addToCart">
+                  <img src="../assets/svg/li_shopping-cart.svg" alt="" />
+                  <span>Thêm vào giỏ hàng</span>
+                </button>
+                <button class="muaNgay">Mua Ngay</button>
+              </div>
+              <div class="dambao">Ommani Đảm bảo Sản phẩm đạt tiêu chuẩn.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- shopInfo -->
+      <div class="shopInfo">
+        <div class="leftContent">
+          <img src="../assets/images/store6.png" alt="" />
+          <div class="mainInfo">
+            <span class="i1">Ommani Mall Thạch Bàn Long Biên</span>
+            <div class="i2">
+              <img src="../assets/svg/starShop.svg" alt="" />
+              <span>4.8 (11k+)</span>
+              <span>GIAO NHANH</span>
+            </div>
+
+            <div class="i3">
+              <button class="chatngay">
+                <img src="../assets/svg/chatnay.svg" alt="" />
+                <span>Chat ngay</span>
+              </button>
+              <button class="xemshop">
+                <img src="../assets/svg/xemshop.svg" alt="" />
+                <span>Xem shop</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="rightContent">
+          <div class="contentTop">
+            <script>
+              let contentTop = [
+                { p1: "219", p2: "Sản Phẩm" },
+                { p1: "98.7%", p2: "Tỉ lệ phản hồi" },
+                { p1: "Trong vài giờ", p2: "Phản hồi" },
+              ];
+              for (let i = 0; i < contentTop.length; i++) {
+                document.write(`
+                  <div class="item">
+                    <span class="p1">${contentTop[i].p1}</span>
+                    <span class="p2">${contentTop[i].p2}</span>
+                  </div>
+                  ${
+                    i !== contentTop.length - 1
+                      ? `<span class="divideV"></span>`
+                      : ""
+                  }
+                `);
+              }
+            </script>
+          </div>
+          <div class="contentBottom">
+            <div class="avatar-group">
+              <div class="avatar">
+                <img src="../assets/svg/avt1.svg" alt="Image" />
+              </div>
+              <div class="avatar">
+                <img src="../assets/svg/avt2.svg" alt="Image" />
+              </div>
+              <div class="avatar">
+                <img src="../assets/svg/avt3.svg" alt="Image" />
+              </div>
+              <div class="avatar">
+                <img src="../assets/svg/avt4.svg" alt="Image" />
+              </div>
+              <div class="avatar">
+                <img src="../assets/svg/avt5.svg" alt="Image" />
+              </div>
+            </div>
+            <span class="text">
+              <span>1.2k</span>
+              <span>Theo dõi gian hàng</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- product info -->
+      <div class="productInfo">
+        <!-- nav tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <script>
+            let btnNav = [
+              {
+                text: "Mô tả sản phẩm",
+                id: "describeProduct",
+              },
+              {
+                text: "Đánh giá (60)",
+                id: "evaluate",
+              },
+              {
+                text: "Hỏi đáp (50)",
+                id: "questionAnswer",
+              },
+            ];
+            for (let i = 0; i < btnNav.length; i++) {
+              document.write(`
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="${i === 0 ? "active" : ""}"
+                    data-bs-toggle="tab"
+                    data-bs-target="#${btnNav[i].id}"
+                    role="tab"
+                  >
+                    ${btnNav[i].text}
+                  </button>
+                </li>
+              `);
+            }
+          </script>
+        </ul>
+        <!-- tab content -->
+        <div class="tab-content">
+          <div
+            id="describeProduct"
+            role="tabpanel"
+            class="productInfo_content tab-pane fade show active"
+          >
+            <div class="content1">
+              <div class="commonTitle">THÔNG TIN CHI TIẾT</div>
+              <div class="infoDetail">
+                <div class="attribute">
+                  <div class="prop">Danh mục</div>
+                  <div class="value">Rau Xanh</div>
+                </div>
+                <div class="attribute">
+                  <div class="prop">Xuất xứ</div>
+                  <div class="value">Việt Nam</div>
+                </div>
+                <div class="attribute">
+                  <div class="prop">Đóng gói</div>
+                  <div class="value">500g/ Gói</div>
+                </div>
+                <div class="attribute">
+                  <div class="prop">Công ty Sản xuất</div>
+                  <div class="value">Công Ty TNHH Thành Công</div>
+                </div>
+                <div class="attribute">
+                  <div class="prop">Tiêu Chuẩn</div>
+                  <div class="value">9001, VIETGAP, ORGANIC</div>
+                </div>
+              </div>
+            </div>
+            <div class="content2">
+              <div class="commonTitle">MÔ TẢ SẢN PHẨM</div>
+              <p>
+                Sản phẩm không chứa các hóa chất, chất kích thích tăng trưởng
+                gây hại, đảm bảo an toàn cho sức khỏe người tiêu dùng. Do đó,
+                bạn hoàn toàn có thể an tâm khi lựa chọn sản phẩm này trong mỗi
+                bữa ăn của gia đình mình, giúp bữa ăn trở nên ngon miệng hơn.
+              </p>
+              <p>
+                Món ngon gợi ý: Bông cải xanh xào thịt bò, canh bông cải xanh
+                thịt heo, bông cải xanh xào tôm mực
+              </p>
+
+              <div class="collapse show" id="collapseExample">
+                <p>
+                  Giá sản phẩm trên OMMANI đã bao gồm thuế theo luật hiện hành.
+                  Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao
+                  hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển,
+                  phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao
+                  từ nước ngoài có giá trị trên 1 triệu đồng).....Súp lơ xanh
+                  (bông cải xanh) là loại “siêu” thực phẩm chay này mang lại rất
+                  nhiều lợi ích cho con người. Giống các loại thực vật khác
+                  trong họ cải (cải bruxen, cải xanh, cải bắp, cải xoăn), súp lơ
+                  trắng có chứa rất nhiều vitamin và khoáng chất. Một số món ăn
+                  ngon như súp lơ xào thịt, thịt bò xào súp lơ, súp lơ muối
+                  chua…Súp lơ chứa sắt và axit folic, ngoài ra còn có nhiều
+                  vitamin (A, C, vitamin nhóm B…) và khoáng chất (kali, natri,
+                  magie, đồng, sắt, lưu huỳnh, clo và phốt pho…).
+                </p>
+                <br />
+                <p>
+                  Hạt giống Bông Cải Xanh F1 No.3 - Súp Lơ Xanh là hạt giống
+                  sinh trưởng mạnh, kháng bệnh tốt. Khi lớn lên cây cao trung
+                  bình, không có nhánh, khả năng chịu nhiệt và thích nghi rộng.
+                  Mặt bông đẹp, hạt mịn, độ đồng đều rất cao, thu hoạch 55 - 60
+                  ngày sau khi rồng, thu hoạch tập trung.
+                </p>
+                <br />
+                <ul class="tru">
+                  <li>Xuất xứ: Đà Lạt</li>
+                  <br />
+                  <li>Sản phẩm của: Công ty giống cây trồng Phú Nông</li>
+                  <br />
+                  <li>Quy cách: Gói 0.5 gram</li>
+                  <br />
+                  <li>
+                    Cách trồng:
+                    <ul class="cong">
+                      <li>Khoảng cách trồng: 40x50cm</li>
+                      <li>Mật độ trồng: 20-30g/1000m2</li>
+                    </ul>
+                  </li>
+                  <br />
+                  <li>Thời gian thu hoạch: 55 - 60 ngày</li>
+                  <br />
+                </ul>
+                <p>
+                  Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành.
+                  Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao
+                  hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển,
+                  phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao
+                  từ nước ngoài có giá trị trên 1 triệu đồng).....
+                </p>
+                <br />
+                <br />
+              </div>
+            </div>
+
+            <button
+              class="displayHidden btnXemThem"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample"
+              aria-expanded="true"
+              aria-controls="collapseExample"
+            >
+              Xem thêm
+              <img src="../assets/svg/li_chevron-green.svg" alt="" />
+            </button>
+            <script>
+              let iscollapse = true;
+              const buttonTEMP = document.querySelector(
+                ".displayHidden.btnXemThem"
+              );
+              buttonTEMP.addEventListener("click", () => {
+                if (iscollapse) {
+                  buttonTEMP.innerHTML = `Thu gọn <img class="chevronThugon" src="../assets/svg/li_chevron-green.svg" alt="" />`;
+                  iscollapse = false;
+                } else {
+                  buttonTEMP.innerHTML = `Xem thêm <img src="../assets/svg/li_chevron-green.svg" alt="" />`;
+                  iscollapse = true;
+                }
+              });
+            </script>
+          </div>
+          <div
+            id="evaluate"
+            role="tabpanel"
+            class="tab-pane fade productInfo_content"
+          >
+            <div class="d-flex"></div>
+          </div>
+          <div
+            id="questionAnswer"
+            role="tabpanel"
+            class="tab-pane fade productInfo_content"
+          >
+            questionAnswer Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Ab, tempore.
+          </div>
+        </div>
+      </div>
+      <!-- related products -->
+      <div class="relatedProducts">
+        <span class="relatedProducts_title">Sản phẩm liên quan</span>
+        <div class="commonProductList"></div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <div data-include-html="../component/footer.html"></div>
+    <!-- footer -->
+  </body>
+
+  <!-- --------------------------------------------------------------------------------------------------------------------- -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="../src/js/scripts.js"></script>
+  <script src="../src/js/createList.js"></script>
+  <script>
+    createcommonProductList(6);
+    const breakpoints = ["(max-width: 768px)", "(max-width: 600px)"];
+
+    breakpoints.forEach((breakpoint) => {
+      const mediaQueryList = window.matchMedia(breakpoint);
+      handleMediaQueryChange(mediaQueryList, breakpoint);
+      mediaQueryList.addListener((e) => handleMediaQueryChange(e, breakpoint));
+      mediaQueryList.addEventListener("change", (e) =>
+        handleMediaQueryChange(e, breakpoint)
+      );
+    });
+
+    function handleMediaQueryChange(mediaQueryList, breakpoint) {
+      switch (breakpoint) {
+        case "(max-width: 768px)":
+          const content = document.querySelector(
+            ".producDetail .productInfo .productInfo_content .content2 .collapse"
+          );
+          if (mediaQueryList.matches) {
+            if (content) {
+              content.classList.remove("show");
+            }
+          } else {
+            if (content) {
+              content.classList.add("show");
+            }
+          }
+          break;
+
+        case "(max-width: 600px)":
+          break;
+
+        default:
+          break;
+      }
+    }
+  </script>
+</html>

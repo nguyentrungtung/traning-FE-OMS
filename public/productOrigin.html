@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/header.css" />
+    <link rel="stylesheet" href="../src/css/footer.css" />
+    <link rel="stylesheet" href="../src/css/productOrigin.css" />
+    <link rel="stylesheet" href="../src/css/responsive-common.css" />
+  </head>
+  <body>
+    <script>
+      const arrlist = [
+        {
+          title: "Thông tin sản phẩm",
+          listatt: [
+            {
+              name: "Tên Sản phẩm",
+              value: "Bông Cải Xanh - Đà Lạt 100g",
+            },
+            {
+              name: "Diện tích sản xuất",
+              value: "3 Hecta",
+            },
+            {
+              name: "Giải thưởng",
+              value: "9001, VIETGAP, ORGANIC",
+            },
+          ],
+        },
+        {
+          title: "Thông tin đơn vị",
+          listatt: [
+            {
+              name: "Tên đại diện",
+              value: "Mai Thùy Trang",
+            },
+            {
+              name: "Số điện thoại",
+              value: "1900 1546",
+            },
+            {
+              name: "Email",
+              value: "contact@thanhcong.vn",
+            },
+            {
+              name: "Địa chỉ",
+              value: "Đồng Trúc, Thạch Thất, Hà Nội",
+            },
+            {
+              name: "Website",
+              value: "thanhcong.com.vn",
+            },
+          ],
+        },
+        {
+          title: "Thông tin chi tiết",
+          listatt: [
+            {
+              name: "Ngày SX",
+              value: "08/04/2022",
+            },
+            {
+              name: "Ngày đóng gói",
+              value: "08/04/2022",
+            },
+            {
+              name: "Quy cách",
+              value: "100g/gói",
+            },
+            {
+              name: "HDSD",
+              value: "Có thể ăn sống hoặc chế biến theo người sử dụng",
+            },
+            {
+              name: "HDBQ",
+              value: "Để mát (7-18 °C)",
+            },
+          ],
+        },
+        {
+          title: "Thông tin chất lượng sản phẩm",
+          listatt: [
+            {
+              name: "Màu SP",
+              value: "Màu xanh tươi",
+            },
+            {
+              name: "Mùi vị",
+              value: "Không mùi, tự nhiên",
+            },
+            {
+              name: "TCCL",
+              value: "Điều kiện vệ sinh an toàn thực phẩm",
+            },
+          ],
+        },
+        {
+          title: "Thông tin nguyên liệu",
+          listatt: [
+            {
+              name: "Nguyên liệu",
+              value:
+                "Hạt giống tự nhiên, được nuôi trồng theo tiêu chuẩn chất lượng quốc tế",
+            },
+            {
+              name: "Ngày thu hoạch",
+              value: "08/04/2022",
+            },
+            {
+              name: "Tình trạng",
+              value: "Tốt",
+            },
+            {
+              name: "Loại giống",
+              value: "Đà Lạt",
+            },
+          ],
+        },
+      ];
+    </script>
+    <div class="wrapper">
+      <div class="logoMain">
+        <img src="../assets/svg/productOrigin.svg" alt="" />
+      </div>
+      <div class="titleMain">TRUY XUẤT NGUỒN GỐC</div>
+      <div class="nameCompany">Công ty TNHH Thành Công</div>
+      <div class="contentList container-xxl">
+        <script>
+          for (let i = 0; i < arrlist.length; i++) {
+            document.write(`
+                     <div class="contentItem">
+          <span class="contentItem_title">${arrlist[i].title}</span>
+          <div class="contentItem_main">
+            </div>
+            </div>
+                `);
+          }
+        </script>
+        <script>
+          const allMain = document.querySelectorAll(
+            ".contentList .contentItem .contentItem_main"
+          );
+          allMain.forEach((item, index) => {
+            let temp = "";
+            const ar = arrlist[index].listatt;
+            for (let i = 0; i < ar.length; i++) {
+              temp += `
+
+                    <div class="attribute">
+                        <span class="name">${ar[i].name}</span>
+                        <span class="value">${ar[i].value}</span>
+                    </div>
+                `;
+            }
+            item.innerHTML = temp;
+          });
+        </script>
+
+        <div class="contentItem">
+          <span class="contentItem_title">Thông tin nguyên liệu</span>
+          <table class="infoIngredient" id="data-table">
+            <thead>
+              <tr>
+                <script>
+                  let tieudeArr = [
+                    "STT",
+                    "Ngày làm việc",
+                    "Công việc",
+                    "Hình ảnh",
+                    "Liều lượng",
+                    "Cơ sở SX",
+                    "Nhân công",
+                    "Tác nhân gây hại",
+                    "Ghi chú",
+                  ];
+                  for (let i = 0; i < tieudeArr.length; i++) {
+                    document.write(`<th>${tieudeArr[i]}</th>`);
+                  }
+                </script>
+              </tr>
+            </thead>
+            <tbody>
+              <script>
+                const arrdatas = [
+                  {
+                    d1: "1",
+                    d2: "02/02/2022",
+                    d3: "Cấy trồng",
+                    d4: "",
+                    d5: "300 kg",
+                    d6: "Farm 01",
+                    d7: "12",
+                    d8: "Không",
+                    d9: "",
+                  },
+                  {
+                    d1: "2",
+                    d2: "24/02/2022",
+                    d3: "Phân bón",
+                    d4: "",
+                    d5: "12 kg",
+                    d6: "Farm 01",
+                    d7: "05",
+                    d8: "Không",
+                    d9: "",
+                  },
+                  {
+                    d1: "3",
+                    d2: "12/03/2022",
+                    d3: "Tưới nước",
+                    d4: "",
+                    d5: "20 m³",
+                    d6: "Farm 01",
+                    d7: "05",
+                    d8: "Không",
+                    d9: "",
+                  },
+                ];
+                let tableBody = document.querySelector("#data-table tbody");
+
+                for (let i = 0; i < arrdatas.length; i++) {
+                  let row = `<tr>
+                <td>${arrdatas[i].d1}</td>
+                <td>${arrdatas[i].d2}</td>
+                <td>${arrdatas[i].d3}</td>
+                <td><img src="../assets/svg/imgThongtinthanhphan.svg" alt=""></td>
+                <td>${arrdatas[i].d5}</td>
+                <td>${arrdatas[i].d6}</td>
+                <td>${arrdatas[i].d7}</td>
+                <td>${arrdatas[i].d8}</td>
+                <td>${arrdatas[i].d9}</td>
+                </tr>`;
+                  tableBody.innerHTML += row;
+                }
+              </script>
+            </tbody>
+          </table>
+        </div>
+        <div class="contentItem">
+          <span class="contentItem_title">Giấy chứng nhận</span>
+          <div class="d-flex align-items-center justify-content-between">
+            <script>
+              for (let i = 0; i < 4; i++) {
+                document.write(`
+                  <img src="../assets/images/chungnhan${i + 1}.png" alt="">
+                `);
+              }
+            </script>
+          </div>
+        </div>
+        <div class="contentItem">
+          <span class="contentItem_title">Hình ảnh Trang trại</span>
+          <div class="d-flex align-items-center justify-content-between">
+            <script>
+              for (let i = 0; i < 4; i++) {
+                document.write(
+                  ` 
+                  <img src="../assets/svg/pictrangtrai${
+                    i !== 0 ? i : ""
+                  }.png" alt="">
+                  `
+                );
+              }
+            </script>
+          </div>
+        </div>
+        <div class="contentItem">
+          <span class="contentItem_title">Bản đồ khu vực</span>
+          <img
+            src="../assets/images/Ảnh chụp Màn hình 2022-06-13 lúc 09.00 1.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="footer">©2022 Bản quyền của Công ty TNHH Ommani Farm</div>
+    </div>
+  </body>
+</html>

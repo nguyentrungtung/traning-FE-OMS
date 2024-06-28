@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/header.css" />
+    <link rel="stylesheet" href="../src/css/footer.css" />
+    <link rel="stylesheet" href="../src/css/home.css" />
+    <link rel="stylesheet" href="../src/css/responsive-common.css" />
+    <link rel="stylesheet" href="../src/css/reponsive-home.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div data-include-html="../component/header.html"></div>
+    <!-- Header -->
+
+    <!-- Home -->
+    <main class="Home container-xxl">
+      <section
+        id="Home__banner"
+        class="Home__banner carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators"></div>
+        <div class="carousel-inner"></div>
+      </section>
+      <section class="Home__marketPlace">
+        <a href="#" class="Home__marketPlace-item">
+          <img src="../assets/svg/Mục 06.svg" alt="" />
+          <span>Ommani Mall</span>
+        </a>
+        <a href="#" class="Home__marketPlace-item">
+          <img src="../assets/svg/Mục 05.svg" alt="" />
+          <span>Đi chợ</span>
+        </a>
+        <a href="#" class="Home__marketPlace-item">
+          <img src="../assets/svg/Mục 04.svg" alt="" />
+          <span>Bán Sỉ</span>
+        </a>
+        <a href="#" class="Home__marketPlace-item">
+          <img src="../assets/svg/Mục 03.svg" alt="" />
+          <span>Bán Drop</span>
+        </a>
+        <a href="#" class="Home__marketPlace-item">
+          <img src="../assets/svg/Mục 02.svg" alt="" />
+          <span>Bán Quốc Tế</span>
+        </a>
+        <a href="#" class="Home__marketPlace-item">
+          <img src="../assets/svg/Mục 01.svg" alt="" />
+          <span>OCOP</span>
+        </a>
+        <a href="#" class="Home__marketPlace-item">
+          <img src="../assets/svg/Mục 7.svg" alt="" />
+          <span>Chứng nhận</span>
+        </a>
+      </section>
+      <section class="Home__agriSolutions">
+        <a class="Home__agriSolutions-item" href="">
+          <span class="linearColor"></span>
+          <span class="title">CỬA HÀNG NÔNG SẢN</span>
+          <img src="../assets/images/solu1.png" alt="" />
+        </a>
+        <a class="Home__agriSolutions-item" href="">
+          <span class="linearColor"></span>
+          <span class="title">dịch vụ nông nghiệp</span>
+
+          <img src="../assets/images/solu2.png" alt="" />
+        </a>
+        <a class="Home__agriSolutions-item" href="">
+          <span class="linearColor"></span>
+          <span class="title">giải pháp thương mại</span>
+
+          <img src="../assets/images/solu3.png" alt="" />
+        </a>
+      </section>
+      <section class="Home__topStore">
+        <div class="Home__topStore-content">
+          <span class="Home__topStore-title">Top cửa hàng uy tín</span>
+          <div class="Home__topStore-list">
+            <script>
+              let arrindexImage = ["1", "2", "6", "3", "4", "5"];
+              arrindexImage.forEach((item, index) => {
+                document.write(`
+                  <a href="#" class="Home__topStore-item">
+                    <img
+                      class="Home__topStore-img"
+                      src="../assets/images/store${item}.png"
+                      alt=""
+                    />
+                    <div class="Home__topStore-info">
+                      <span class="title">Ommani Mall Nguyễn Văn Linh Long Biên</span>
+                      <div class="star">
+                        <img src="../assets/svg/star.svg" alt="" />
+                        <span>4.8 (11k+)</span>
+                      </div>
+                      <span class="certification">Đã Chứng Nhận</span>
+                    </div>
+                  </a>
+                `);
+              });
+            </script>
+          </div>
+        </div>
+      </section>
+
+      <section class="commonCategory">
+        <div class="commonCategory_main">
+          <span class="commonCategory_title">Tìm theo danh mục</span>
+          <div class="commonCategory_list"></div>
+        </div>
+      </section>
+      <section class="commonGroupProducts">
+        <div class="commonGroupProducts-title">Khám phá thêm</div>
+        <div class="commonGroupProducts-main"></div>
+        <div class="commonGroupProducts-seeMore">
+          <button>xem thêm</button>
+        </div>
+      </section>
+    </main>
+    <!-- Home -->
+
+    <!-- Footer -->
+    <div data-include-html="../component/footer.html"></div>
+    <!-- Footer -->
+  </body>
+
+  <!--------------------------------------------------------------------------------------------------------------------------------------------- -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="../src/js/scripts.js"></script>
+  <script type="module" src="../src/js/login.js"></script>
+  <script src="../src/js/createList.js"></script>
+
+  <script>
+    createCarouSel();
+    createListCategory();
+    createcommonGroupProducts();
+    const breakpoints = ["(max-width: 768px)", "(max-width: 600px)"];
+    breakpoints.forEach((breakpoint) => {
+      const mediaQueryList = window.matchMedia(breakpoint);
+      handleMediaQueryChange(mediaQueryList, breakpoint);
+      mediaQueryList.addListener((e) => handleMediaQueryChange(e, breakpoint));
+      mediaQueryList.addEventListener("change", (e) =>
+        handleMediaQueryChange(e, breakpoint)
+      );
+    });
+    function handleMediaQueryChange(mediaQueryList, breakpoint) {
+      if (mediaQueryList.matches) {
+        switch (breakpoint) {
+          case "(max-width: 768px)":
+            break;
+          case "(max-width: 600px)":
+            const Home = document.querySelector(".Home");
+            const HomeBanner = document.querySelector(".Home__banner");
+            const HomeExploreMore = document.querySelector(
+              ".commonGroupProducts"
+            );
+            Home.classList.remove("container-xxl");
+            HomeBanner.classList.add("container-xxl");
+            HomeExploreMore.classList.add("container-xxl");
+            break;
+
+          default:
+            break;
+        }
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,133 @@
+@import "./base";
+.wrapper {
+  width: 100%;
+  background-color: $white;
+
+  .logoMain {
+    display: flex;
+    padding-top: 56px;
+    padding-bottom: 28px;
+    img {
+      margin: auto;
+      width: 240.98px;
+      object-fit: contain;
+    }
+  }
+  .titleMain {
+    height: 58px;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    background-color: #29ab56;
+    @extend .Roboto32;
+    color: $white;
+    margin-bottom: 17px;
+  }
+  .nameCompany {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    @extend .Roboto32;
+    color: #29ab56;
+    margin-bottom: 17px;
+  }
+  .contentList {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 25px;
+    .contentItem {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .contentItem_title {
+        @extend .Roboto24;
+        font-weight: 600;
+        color: #00953d;
+      }
+      .contentItem_main {
+        display: grid;
+        grid-template-columns: 1fr;
+        .attribute:nth-child(odd) {
+          background-color: #f5f5f7;
+        }
+        .attribute {
+          display: grid;
+          grid-template-columns: minmax(172px, auto) 1fr;
+          padding-top: 7px;
+          padding-bottom: 7px;
+          padding-left: 16px;
+          border-radius: 8px;
+
+          .name {
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 18px;
+            text-align: left;
+            color: #515154;
+            align-content: center;
+          }
+          .value {
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: left;
+            color: #000;
+            align-content: center;
+          }
+        }
+      }
+      .infoIngredient {
+        th,
+        td {
+          text-align: center;
+          align-content: center;
+        }
+        th {
+          padding: 9px 26px;
+          border: 1px solid $white;
+          background-color: #29ab56;
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 24px;
+          color: $white;
+        }
+        td {
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18px;
+          color: #515154;
+          min-height: 38px;
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
+        tbody {
+          tr {
+            td:first-child {
+              font-weight: 700;
+            }
+          }
+          tr:nth-child(even) {
+            background-color: #f5f5f7;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    text-align: center;
+    align-content: center;
+    color: $white;
+    background-color: #29ab56;
+  }
+}

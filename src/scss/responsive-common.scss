@@ -1,0 +1,219 @@
+@import "../scss/base";
+
+@media (max-width: 1280px) {
+  .container-xxl {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .Header.isLogin {
+    .Header__searchBar {
+      width: 545px;
+    }
+  }
+  .Footer {
+    text-wrap: wrap;
+    .gx-5 {
+      --bs-gutter-x: 0;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .Header {
+    .Header__address {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .Header {
+    .Header__notification {
+      display: none;
+    }
+    .Header__message {
+      display: none;
+    }
+  }
+  .Footer {
+    .gx-5 {
+      --bs-gutter-x: 0;
+    }
+  }
+  .commonGroupProducts {
+    .commonGroupProducts-main {
+      grid-template-columns: repeat(2, 1fr);
+      .commonGroupProducts-item:nth-child(n + 5) {
+        display: none;
+      }
+    }
+  }
+  .commonProductList {
+    grid-template-columns: repeat(4, 1fr);
+    .commonProductItem:nth-child(n + 10) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .Header {
+    .Header__user {
+      .Header__infoUser {
+        .Header__infoUser-btn {
+          display: none;
+        }
+      }
+    }
+    .Header__search {
+      .Header__searchBar {
+        width: 400px;
+      }
+    }
+  }
+  .Footer {
+    .Footer__connectUs-mateWithLove {
+      display: none;
+    }
+  }
+  .commonGroupProducts {
+    .commonGroupProducts-main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .commonProductList {
+    grid-template-columns: repeat(3, 1fr);
+    .commonProductItem:nth-child(n + 10) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Header {
+    .Header__searchMobile {
+      display: flex;
+    }
+    .common-bottom-header {
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      align-self: center;
+    }
+    .Header__bottom {
+      justify-content: space-between;
+      position: relative;
+      padding-left: 0;
+      padding-right: 0;
+      .Header__search {
+        display: none;
+      }
+    }
+    .Header__logo {
+      width: 150px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      @extend .common-bottom-header;
+      order: 2;
+    }
+    .Header__cart {
+      @extend .common-bottom-header;
+      order: 3;
+    }
+    .Header__user {
+      @extend .common-bottom-header;
+      order: 1;
+    }
+    .Header__option-left {
+      display: none;
+    }
+    .Header__option-right {
+      display: none;
+    }
+    .Header__noLogin {
+      display: none;
+    }
+  }
+  .notification-bar {
+    display: flex;
+  }
+  .Footer {
+    height: 43px;
+    background-color: $baseColor0;
+
+    .Footer_column {
+      display: none;
+    }
+    .Footer_bottom {
+      display: none;
+    }
+    .divideH {
+      display: none;
+    }
+    .Footer_mobile {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.41px;
+      text-align: left;
+    }
+  }
+  .commonGroupProducts {
+    .commonGroupProducts-main {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .commonProductList {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 13px;
+  }
+}
+@media (max-width: 600px) {
+  .Header {
+    padding: 0;
+    height: 84px;
+    .Header__bottom {
+      padding: 0;
+      max-height: 42px;
+      .Header__logo {
+        width: 106px;
+      }
+      .Header__user {
+        width: 24px;
+        height: 24px;
+        gap: 0px;
+        img {
+          width: 100%;
+        }
+      }
+      .Header__cart {
+        width: 27px;
+        height: 24px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .Header__searchMobile {
+      display: flex;
+    }
+  }
+  .commonGroupProducts {
+    .commonGroupProducts-title {
+      display: none;
+    }
+
+    .commonGroupProducts-seeMore {
+      button {
+        margin-top: 12px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
