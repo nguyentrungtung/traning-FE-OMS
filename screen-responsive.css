@@ -1,0 +1,47 @@
+@media only screen and (max-width: 1400px) {
+    .toolbar .location{
+        display: none;
+    }
+    div.user-section{
+        display: none !important;
+    }
+    .tools .tool-comment, .tools .tool-noti{
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    /* For mobile phones: */
+    .wide-screen-header{
+        display: none !important;
+    }
+    .body-top{
+        display: none;
+    }
+    .container-carousel{
+        background-color: #19B357;
+    }
+    .mobile-header{
+        display: block !important;
+    }
+    .typer .typer-items{
+        background-color: transparent !important;
+    }
+    .store-category{
+        display: none;
+    }
+    footer{
+        background-color: #19B357 !important;
+    }
+    footer .row{
+        display: none;
+    }
+    footer .company-address, footer .company-cert{
+        display: none;  
+    }
+    footer .company-info{
+        background-color: #19B357 !important;
+        text-align: center;
+        color: white;
+    }
+}

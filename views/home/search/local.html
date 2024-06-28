@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm theo vị trí</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/screen-responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes">
+</head>
+<body>
+    <header class="bg-green text-white d-flex flex-column align-items-center">
+        <div class="helper mb-3 container">
+            <div class="d-flex justify-content-between flex-wrap">
+                <div class="helper-left d-flex">
+                    <a href="#" class="text-decoration-none text-white"><small class="px-2">Kênh người bán</small></a>
+                    <div class="vr rounded my-1"></div>
+                    <a href="#" class="text-decoration-none text-white"><small class="px-2 border-white">Trở thành người bán</small></a>
+                    <div class="vr rounded my-1"></div>
+                    <a href="#" class="text-decoration-none text-white"><small class="px-2 border-white">Download App</small></a>
+                    <div class="vr rounded my-1"></div>
+                    <a href="#" class="text-decoration-none text-white"><small class="px-2 border-white">Kết nối</small></a>
+                </div>
+                <div class="helper-right d-flex">
+                    <a href="#" class="text-decoration-none text-white"><small class="px-2">OCOP</small></a>
+                    <a href="#" class="text-decoration-none text-white"><small class="px-2">Hỗ trợ thông tin</small></a>
+                    <a href="#" class="text-decoration-none text-white"><small class="px-2">Vận chuyển</small></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="toolbar d-flex justify-content-between container flex-wrap">
+            <a href="#" class="text-white text-decoration-none brand">
+                <div class="h3 mb-0 text-upperCase text-center lh-1">Ommanilife</div>
+                <small class="text-center text-nowrap lh-1">Năng lượng cuộc sống</small>
+            </a>
+            <div class="location px-3 align-items-center">
+                <a href="#" class=" text-decoration-none text-white d-flex align-items-center">
+                    <img src="/resources/img/icons/location-pin.svg" class="size-47px py-2" alt="" srcset="">
+                    <div class="text-nowrap">Thanh Xuân</div>
+                    <small><i class="fas fa-chevron-down px-2"></i></small>
+                </a>
+            </div>
+            <div class="ms-2 searchbar flex-fill">
+                <div class="input-group rounded bg-white p-1">
+                    <button id="btn-category" class="border-0 btn text-light-green">Sản phẩm<i class="px-1 fas fa-chevron-down text-light-green"></i></button>
+                    <div class="border-secondary my-3 vr"></div>
+                    <input type="text" class="focus-ring focus-ring-light border-0 form-control" placeholder="Nhập sản phẩm cần tìm kiếm">
+                    <button class="rounded-end border-0 bg-green-btn size-47px"><img class="p-1 w-100 text-white" src="/resources/img/icons/search.svg"/></button>
+                </div>
+                <div class="pt-1 d-flex recommendation flex-wrap overflow-hidden">
+                    <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">Trái cây</a></span>
+                    <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">trứng sữa</a></span>
+                    <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">thịt boà</a></span>
+                    <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">thịt choá</a></span>
+                    <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">sữa bột, sữa tươi</a></span>
+                    <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">gạo, mì ăn liền</a></span>
+                    <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">bánh, kẹo</a></span>
+                </div>
+            </div>
+            <div class="right d-flex">
+                <div class="tools d-flex px-2 gap-2">
+                    <div class="position-relative">
+                        <div class="noti-sign">
+                            <a href="#"><i class="far fa-bell text-white h3 p-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="position-relative">
+                        <div class="noti-sign">
+                            <a href="#"><i class="far fa-comment text-white h3 p-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="position-relative">
+                        <div class="noti-sign">
+                            <a href="#">
+                                <img src="/resources/img/icons/cart.svg" class="size-47px py-2"></img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-section d-flex px-2">
+                    <a href="#" class="text-decoration-none text-white"><i class="far fa-user-circle h3 pt-2 pe-2"></i></a>
+                    <div>
+                        <div><a href="#" class="text-decoration-none text-white lh-1 text-nowrap">Đăng nhập</a></div>   
+                        <div><a href="#" class="text-decoration-none text-white lh-1 text-nowrap">Đăng ký</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="body w-100 bg-grey">
+        <div class="body-top bg-white w-100">
+            <div class="inside d-flex p-0 gap-4 container">
+                <a href="#" class="d-flex align-items-center  fw-bold text-decoration-none">
+                    <img class="size-47px py-2" src="/resources/img/icons/grid.svg" alt="" srcset="">
+                    <span class="text-dark-green">Tất cả</span>
+                </a>
+                <a href="#" class="d-flex align-items-center fw-bold text-decoration-none">
+                    <i class="far fa-map text-dark-green h5 pt-2 pe-2"></i>
+                    <span class="text-dark-green">Tìm theo vị trí</span>
+                </a>
+            </div>
+        </div>
+        <div class="container banner">
+            <img class="w-100" src="/resources/img/banner/f88bbe1a6a916ef435cf9314800278cb.png" alt="">
+        </div>
+        <div class="container location-filter p-2">
+            <div class="bg-white container justify-content-center align-items-center d-flex flex-column py-2">
+                <div class="title text-uppercase h5 fw-bold py-2">Lọc theo vị trí</div>
+                <div class="row w-75">
+                    <div class="dropdown col">
+                        <button class="btn bg-dark-grey text-grey btn-light dropdown-toggle w-100 justify-content-between d-flex align-items-center px-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tỉnh/ Thành phố
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Hà Nội</a></li>
+                            <li><a class="dropdown-item" href="#">TP. Hồ Chí Minh</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown col">
+                        <button class="btn bg-dark-grey text-grey btn-light dropdown-toggle w-100 justify-content-between d-flex align-items-center px-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Quận/ Huyện
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Ba Đình</a></li>
+                            <li><a class="dropdown-item" href="#">Đống Đa</a></li>
+                            <li><a class="dropdown-item" href="#">Mỹ Đình</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown col">
+                        <button class="btn bg-dark-grey text-grey btn-light dropdown-toggle w-100 justify-content-between d-flex align-items-center px-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Xã
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Gì đó</a></li>
+                            <li><a class="dropdown-item" href="#">Gì gì đó</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products-list container p-0 mt-1">
+            <div class="container rounded-1 product-list-items">
+                <div class="row gap-auto justify-content-around">
+                    <div class="product-item col-lg-4 col-md-6 col-sm-12 py-2 px-1">
+                        <div class="item-detail bg-white p-2 rounded-1">
+                            <a href="#" class="text-decoration-none text-black item-detail-shop d-flex gap-2">
+                                <div class="shop-img overflow-hidden my-2">
+                                    <img class="size-73px" src="/resources/img/products/products-shops/KhanhHa-shop.png" alt="">
+                                </div>
+                                <div class="shop-info d-flex flex-column gap-1">
+                                    <div class="fw-bold">Ommani Mall Thạch Bàn Long</div>
+                                    <div class="info-rating-location d-flex">
+                                        <div class="info-rating">
+                                            <i class="fas fa-star text-orange"></i>
+                                            <span class="text-grey px-1">4.8</span>
+                                            <span class="text-grey">(11.1k+)</span>
+                                        </div>
+                                        <div class="info-location text-light-green">TP.Hồ Chí Minh</div>
+                                    </div>
+                                    <div class="shop-cert h-20px d-flex">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/99fe845a8e040148509c523809855d68.png" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="item-detail-products mt-2 d-flex justify-content-between">
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px d-flex flex-column justify-content-between align-items-center">
+                                    <div class="product-img rounded size-120px">
+                                        <img src="/resources/img/products/products-images/236699cc738a5aec082af43498cd728a.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px">
+                                    <div class="product-img rounded-">
+                                        <img src="/resources/img/products/products-images/b37a8ebbd8545a0bfd53afc0c0ee7ef4.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px">
+                                    <div class="product-img rounded-">
+                                        <img src="/resources/img/products/products-images/dc59629c69a4812772932558a725b25f.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item col-lg-4 col-md-6 col-sm-12 py-2 px-1">
+                        <div class="item-detail bg-white p-2 rounded-1">
+                            <a href="#" class="text-decoration-none text-black item-detail-shop d-flex gap-2">
+                                <div class="shop-img overflow-hidden my-2">
+                                    <img class="size-73px" src="/resources/img/products/products-shops/KhanhHa-shop.png" alt="">
+                                </div>
+                                <div class="shop-info d-flex flex-column gap-1">
+                                    <div class="fw-bold">Ommani Mall Thạch Bàn Long</div>
+                                    <div class="info-rating-location d-flex">
+                                        <div class="info-rating">
+                                            <i class="fas fa-star text-orange"></i>
+                                            <span class="text-grey px-1">4.8</span>
+                                            <span class="text-grey">(11.1k+)</span>
+                                        </div>
+                                        <div class="info-location text-light-green">TP.Hồ Chí Minh</div>
+                                    </div>
+                                    <div class="shop-cert h-20px d-flex">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/99fe845a8e040148509c523809855d68.png" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="item-detail-products mt-2 d-flex justify-content-between">
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px d-flex flex-column justify-content-between align-items-center">
+                                    <div class="product-img rounded size-120px">
+                                        <img src="/resources/img/products/products-images/236699cc738a5aec082af43498cd728a.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px">
+                                    <div class="product-img rounded-">
+                                        <img src="/resources/img/products/products-images/b37a8ebbd8545a0bfd53afc0c0ee7ef4.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px">
+                                    <div class="product-img rounded-">
+                                        <img src="/resources/img/products/products-images/dc59629c69a4812772932558a725b25f.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item col-lg-4 col-md-6 col-sm-12 py-2 px-1">
+                        <div class="item-detail bg-white p-2 rounded-1">
+                            <a href="#" class="text-decoration-none text-black item-detail-shop d-flex gap-2">
+                                <div class="shop-img overflow-hidden my-2">
+                                    <img class="size-73px" src="/resources/img/products/products-shops/KhanhHa-shop.png" alt="">
+                                </div>
+                                <div class="shop-info d-flex flex-column gap-1">
+                                    <div class="fw-bold">Ommani Mall Thạch Bàn Long</div>
+                                    <div class="info-rating-location d-flex">
+                                        <div class="info-rating">
+                                            <i class="fas fa-star text-orange"></i>
+                                            <span class="text-grey px-1">4.8</span>
+                                            <span class="text-grey">(11.1k+)</span>
+                                        </div>
+                                        <div class="info-location text-light-green">TP.Hồ Chí Minh</div>
+                                    </div>
+                                    <div class="shop-cert h-20px d-flex">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/99fe845a8e040148509c523809855d68.png" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="item-detail-products mt-2 d-flex justify-content-between">
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px d-flex flex-column justify-content-between align-items-center">
+                                    <div class="product-img rounded size-120px">
+                                        <img src="/resources/img/products/products-images/236699cc738a5aec082af43498cd728a.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px">
+                                    <div class="product-img rounded-">
+                                        <img src="/resources/img/products/products-images/b37a8ebbd8545a0bfd53afc0c0ee7ef4.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px">
+                                    <div class="product-img rounded-">
+                                        <img src="/resources/img/products/products-images/dc59629c69a4812772932558a725b25f.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item col-lg-4 col-md-6 col-sm-12 py-2 px-1">
+                        <div class="item-detail bg-white p-2 rounded-1">
+                            <a href="#" class="text-decoration-none text-black item-detail-shop d-flex gap-2">
+                                <div class="shop-img overflow-hidden my-2">
+                                    <img class="size-73px" src="/resources/img/products/products-shops/KhanhHa-shop.png" alt="">
+                                </div>
+                                <div class="shop-info d-flex flex-column gap-1">
+                                    <div class="fw-bold">Ommani Mall Thạch Bàn Long</div>
+                                    <div class="info-rating-location d-flex">
+                                        <div class="info-rating">
+                                            <i class="fas fa-star text-orange"></i>
+                                            <span class="text-grey px-1">4.8</span>
+                                            <span class="text-grey">(11.1k+)</span>
+                                        </div>
+                                        <div class="info-location text-light-green">TP.Hồ Chí Minh</div>
+                                    </div>
+                                    <div class="shop-cert h-20px d-flex">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/99fe845a8e040148509c523809855d68.png" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="item-detail-products mt-2 d-flex justify-content-between">
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px d-flex flex-column justify-content-between align-items-center">
+                                    <div class="product-img rounded size-120px">
+                                        <img src="/resources/img/products/products-images/236699cc738a5aec082af43498cd728a.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px">
+                                    <div class="product-img rounded-">
+                                        <img src="/resources/img/products/products-images/b37a8ebbd8545a0bfd53afc0c0ee7ef4.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px">
+                                    <div class="product-img rounded-">
+                                        <img src="/resources/img/products/products-images/dc59629c69a4812772932558a725b25f.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item col-lg-4 col-md-6 col-sm-12 py-2 px-1">
+                        <div class="item-detail bg-white p-2 rounded-1">
+                            <a href="#" class="text-decoration-none text-black item-detail-shop d-flex gap-2">
+                                <div class="shop-img overflow-hidden my-2">
+                                    <img class="size-73px" src="/resources/img/products/products-shops/KhanhHa-shop.png" alt="">
+                                </div>
+                                <div class="shop-info d-flex flex-column gap-1">
+                                    <div class="fw-bold">Ommani Mall Thạch Bàn Long</div>
+                                    <div class="info-rating-location d-flex">
+                                        <div class="info-rating">
+                                            <i class="fas fa-star text-orange"></i>
+                                            <span class="text-grey px-1">4.8</span>
+                                            <span class="text-grey">(11.1k+)</span>
+                                        </div>
+                                        <div class="info-location text-light-green">TP.Hồ Chí Minh</div>
+                                    </div>
+                                    <div class="shop-cert h-20px d-flex">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/99fe845a8e040148509c523809855d68.png" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="item-detail-products mt-2 d-flex justify-content-between">
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px d-flex flex-column justify-content-between align-items-center">
+                                    <div class="product-img rounded size-120px">
+                                        <img src="/resources/img/products/products-images/236699cc738a5aec082af43498cd728a.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px">
+                                    <div class="product-img rounded-">
+                                        <img src="/resources/img/products/products-images/b37a8ebbd8545a0bfd53afc0c0ee7ef4.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px">
+                                    <div class="product-img rounded-">
+                                        <img src="/resources/img/products/products-images/dc59629c69a4812772932558a725b25f.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item col-lg-4 col-md-6 col-sm-12 py-2 px-1">
+                        <div class="item-detail bg-white p-2 rounded-1">
+                            <a href="#" class="text-decoration-none text-black item-detail-shop d-flex gap-2">
+                                <div class="shop-img overflow-hidden my-2">
+                                    <img class="size-73px" src="/resources/img/products/products-shops/KhanhHa-shop.png" alt="">
+                                </div>
+                                <div class="shop-info d-flex flex-column gap-1">
+                                    <div class="fw-bold">Ommani Mall Thạch Bàn Long</div>
+                                    <div class="info-rating-location d-flex">
+                                        <div class="info-rating">
+                                            <i class="fas fa-star text-orange"></i>
+                                            <span class="text-grey px-1">4.8</span>
+                                            <span class="text-grey">(11.1k+)</span>
+                                        </div>
+                                        <div class="info-location text-light-green">TP.Hồ Chí Minh</div>
+                                    </div>
+                                    <div class="shop-cert h-20px d-flex">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="">
+                                        <img class="h-20px " src="/resources/img/products/products-shop-cert/99fe845a8e040148509c523809855d68.png" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="item-detail-products mt-2 d-flex justify-content-between">
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px d-flex flex-column justify-content-between align-items-center">
+                                    <div class="product-img rounded size-120px">
+                                        <img src="/resources/img/products/products-images/236699cc738a5aec082af43498cd728a.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px">
+                                    <div class="product-img rounded-">
+                                        <img src="/resources/img/products/products-images/b37a8ebbd8545a0bfd53afc0c0ee7ef4.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="text-decoration-none text-black product-info maxw-120px">
+                                    <div class="product-img rounded-">
+                                        <img src="/resources/img/products/products-images/dc59629c69a4812772932558a725b25f.png" alt="product-img" srcset="" class="size-120px">
+                                    </div>
+                                    <div class="product-text text-wrap">
+                                        <div class="product-name minh-40px overflow-dot">Xúc Xích Đức Việt gói 16 hông khói</div>
+                                        <div class="product-sold text-grey">Đã bán 12</div>
+                                        <div class="product-price text-red fw-bold">89.000 ₫</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-list-load-more container d-flex justify-content-center py-3">
+                <button class="btn text-upperCase w-240px border-blue text-blue bg-white text-center">
+                    Xem Thêm
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-white container mt-2 py-4">
+        <div class="row gap-3 py-2">
+            <div class="customer-service col text-nowrap">
+                <h5>Hỗ trợ khách hàng</h5>
+                <div class="options d-flex flex-column gap-2 mt-3">
+                    <div class="text">Hotline: <strong><a href="tel:+1900-6789" class="text-decoration-none text-black">19006789</a></strong><div>(1.000 đ/phút, 8-21h kể cả T7, CN)</div></div>
+                    <div class="text"><a href="#" class="text-black">Các câu hỏi thường gặp</a></div>
+                    <div class="text"><a href="#" class="text-black">Gửi yêu cầu hỗ trợ</a></div>
+                    <div class="text"><a href="#" class="text-black">Hướng dẫn đặt hàng</a></div>
+                    <div class="text"><a href="#" class="text-black">Phương thức vận chuyển</a></div>
+                    <div class="text"><a href="#" class="text-black">Chính sách đổi trả</a></div>
+                    <div class="text"><a href="#" class="text-black">Chính sách hàng nhập khẩu</a></div>
+                    <div class="text">Hỗ trợ khách hàng: <a class="text-black" href="mailto:hotro@ommani.vn">hotro@ommani.vn</a></div>
+                    <div class="text">Báo lỗi bảo mật: <a class="text-black" href="mailto:security@ommani.vn">security@ommani.vn</a></div>
+                </div>
+            </div>
+            <div class="about col text-nowrap">
+                <h5>Về Ommanilife</h5>
+                <div class="options d-flex flex-column gap-2 mt-3">
+                    <div class="text"><a href="#" class="text-black">Giới thiệu về Ommani</a></div>
+                    <div class="text"><a href="#" class="text-black">Tuyển dụng</a></div>
+                    <div class="text"><a href="#" class="text-black">Chính sách bảo mật, thanh toán</a></div>
+                    <div class="text"><a href="#" class="text-black">Bảo mật thông tin cá nhân</a></div>
+                    <div class="text"><a href="#" class="text-black">Chính sách giải quyết khiếu nại</a></div>
+                    <div class="text"><a href="#" class="text-black">Điều khoản sử dụng</a></div>
+                    <div class="text"><a href="#" class="text-black">Tiếp thị liên kết cùng Ommani</a></div>
+                    <div class="text"><a href="#" class="text-black">Bán hàng cho doanh nghiệp</a></div>
+                    <div class="text"><a href="#" class="text-black">Điều kiện vận chuyển</a></div>
+                </div>
+            </div>
+            <div class="partner col text-nowrap">
+                <h5>Hợp tác và liên kết</h5>
+                <div class="options d-flex flex-column gap-2 mt-3">
+                    <div class="text"><a href="#" class="text-black">Quy chế hoạt động sàn GDTMĐT</a></div>
+                    <div class="text"><a href="#" class="text-black">Bán hàng cùng Ommani</a></div>
+                </div>
+                <h5>Chứng nhận bởi</h5>
+                <div class="options d-flex gap-2 mt-3">
+                    <a href="#"><img class="h-40px" src="resources/img/footer/cert/khong-hang-gia.png"></img></a>
+                    <a href="#"><img class="h-40px" src="resources/img/footer/cert/bo-cong-thuong.png"></img></a>
+                    <a href="#"><img class="h-40px" src="resources/img/footer/cert/tin-nhiem-mang.png"></img></a>
+                </div>
+            </div>
+            <div class="payment col">
+                <h5>Phương thức thanh toán</h5>
+                <div class="d-flex gap-1 mt-3 flex-wrap">
+                    <img src="/resources/img/footer/payment/bxl_visa.png" alt="" class="h-40px">
+                    <img src="/resources/img/footer/payment/logos_jcb.png" alt="" class="h-40px">
+                    <img src="/resources/img/footer/payment/momo.png" alt="" class="h-40px">
+                    <img src="/resources/img/footer/payment/noto_atm-sign.png" alt="" class="h-40px">
+                    <img src="/resources/img/footer/payment/uim_master-card.png" alt="" class="h-40px">
+                    <img src="/resources/img/footer/payment/viettelPay.png" alt="" class="h-40px">
+                    <img src="/resources/img/footer/payment/vnpay-seeklogo.com 1.png" alt="" class="h-40px">
+                    <img src="/resources/img/footer/payment/zaloPay.png" alt="" class="h-40px">
+                </div>
+                <h5>Dịch vụ giao hàng</h5>
+                <div class="d-flex gap-1 mt-3">
+                    <img src="/resources/img/footer/5cc832252e5c2d1c19d7a68036c4d1f9.png" alt="" class="h-40px">
+                </div>
+            </div>
+            <div class="contact col d-flex flex-column justify-content-between">
+                <div>
+                    <h5>Kết nối với chúng tôi</h5>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#"><img class="h-40px" src="/resources/img/footer/social-media/1a144b96100ee9bfd8b81f325fbc69e4.png" alt=""></a>
+                        <a href="#"><img class="h-40px" src="/resources/img/footer/social-media/9dbe51fb44371b5cce8f45cbbf4ee352.png" alt=""></a>
+                        <a href="#"><img class="h-40px" src="/resources/img/footer/social-media/f6e9771ca4a0525e5ee5439867a21a83.png" alt=""></a>
+                    </div>
+                    <h5>Tải ứng dụng trên điện thoại</h5>
+                    <div class="d-flex gap-3 mt-3 align-items-center">
+                        <img class="" src="/resources/img/footer/download/Vector.png" alt="">
+                        <div class="d-flex flex-column gap-1">
+                            <a href="#"><img class="h-40px" src="/resources/img/footer/download/google-play.png" alt=""></a>
+                            <a href="#"><img class="h-40px" src="/resources/img/footer/download/app-store.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-pink signature h3 text-end">Made with love!</div>
+            </div>
+        </div>
+        <hr class="row border-1 opacity-100 border-dark"/>
+        <div class="company-info mt-3">
+            <div class="company-address">Trụ sở chính: 43 Trần Nguyên Đán, Định Công, Q. Hoàng Mai, TP. Hà Nội</div>
+            <div class="company-cert">Giấy chứng nhận Đăng kí kinh doanh số: 0998999999 do sở kế hoạch và Đầu tư Thành Phố Hà Nội cấp lần đầu ngày 09/09/2022</div>
+            <div class="company-right">©2022 - Bản quyền của Công ty TNHH Ommani</div>
+        </div>
+    </footer>
+</body>
+</html>

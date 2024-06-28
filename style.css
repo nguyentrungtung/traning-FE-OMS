@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    font-family: 'Roboto';
+}
+/* UNIVERSAL CLASSES */
+.fs-small{
+    font-size: 12px;
+}
+.text-green{
+    color: #29AB56;
+}
+.bg-green{
+    background-color: #19b357;
+}
+.bg-light-green{
+    background-color: #62CD71;
+}
+.bg-dark-green{
+    background-color: #008129;
+}
+.bg-green-btn{
+    background-color: #00BC3C !important;
+}
+.bg-input-dropdown{
+    background-color: #22AA00;
+}
+.text-light-green{
+    color: #2EAD5B;
+}
+.text-dark-green{
+    color: #007B2B;
+}
+.text-icon-green{
+    color: #28BBA2;
+}
+.text-blue{
+    color: #2E9DFF;
+}
+.border-blue{
+    border: 1px #2E9DFF solid;
+}
+.text-zalo{
+    color: #0180C7;
+}
+.text-facebook{
+    color: #1877F2;
+}
+.text-red{
+    color: #FB4F5B;
+}
+.bg-red{
+    background-color: #FB4F5B;
+}
+.text-pink{
+    color: #F17185;
+}
+.bg-orange{
+    background-color:  #F69320;
+}
+.bg-number-orange{
+    background-color: #F69320;
+}
+.text-orange{
+    color:  #F69320;
+}
+.text-yellow{
+    color: #FEC300;
+}
+.text-grey{
+    color: #969696;
+}
+.text-icon-grey{
+    color: #A1A1A1;
+}
+.bg-grey{
+    background-color: #F5F5FA;
+}
+.bg-dark-grey{
+    background-color: #F0F0F0;
+}
+.bg-blur{
+    background-color: rgb(0, 0, 0, 0.4);
+}
+.vr{
+    border: 1px white solid;
+    opacity: 1;
+}
+.recommendation{
+    height: 30px;
+}
+
+.carousel-indicators > button{
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 50% !important;
+    border: 2px solid white !important;
+    background-color: transparent !important;
+}
+.carousel-indicators > button.active{
+    border-radius: 50% !important;
+    border: 1px solid white !important;
+    background-color: white !important;
+}
+.form-check-input:checked{
+    background-color: green !important;
+    border: 0;
+ }
+ .form-check-input, .label::after, label.form-check-label:focus, .form-check-input::after, .form-check-input:not(:disabled):not(.disabled):active:focus {
+    color: black;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 0 0 1px green !important;
+ }
+ .brand{
+    line-height: 0.1;
+ }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* (hover color for search area)  -  EFFECT*/
+
+#btn-category:hover{
+    background-color: #2EAD5B !important;
+    color: white;
+}
+#btn-category:hover i.text-light-green{
+    color: white;
+}
+.hideScrollBar::-webkit-scrollbar{
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.hideScrollBar{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.result-item-rcm:hover{
+    color: white;
+    background-color: #22AA00;
+    transition: 0.3s;
+}
+.result-item-rcm{
+    color: black;
+    transition: 0.3s;
+}
+.box-shadow-hover{
+    transition: 0.3s all;
+}
+.box-shadow-hover:hover{
+    box-shadow: 0px 0px 5px grey;
+    transition: 0.3s all;
+}
+.dropdown-menu > li >a:hover{
+    background-color: #22AA00 !important;
+    color: white;
+}
+.dropdown-menu > li:active{
+    background-color: #22AA00 !important;
+}
+.dropdown-menu > li > a:active{
+    background-color: #22AA00 !important;
+    color: white;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.typer .typer-items a:hover{
+    color: #007B2B !important;
+}
+.scale-hover{
+    transform: scale(1);
+    transition: all 0.3s;
+}
+.bold-hover{}
+.bold-hover:hover{
+    font-weight: bolder;
+    transition: all 0.3s;
+}
+.scale-hover:hover{
+    transition: all 0.3s;
+    transform: scale(1.1);
+}
+.text-black-green-hover:hover{
+    color: #29AB56 !important;
+    transition: 0.3s all;
+}
+a.border-dark:hover, button.border-dark:hover{
+    border: 1px #29AB56 solid !important;
+    transition: all 0.2s;
+}
+/* Sizing Elements */
+
+.size-47px{
+    width: 47px !important;
+    height: 47px !important;
+}
+.size-16px{
+    width: 16px !important;
+    height: 16px !important;
+}
+.h-410{
+    height: 410px;
+}
+.maxh-410px{
+    max-height: 410px;
+}
+.fit-ct{
+    width: fit-content;
+}
+.size-73px{
+    width: 73px;
+    height: 73px;
+}
+.size-80px{
+    width: 80px;
+    height: 80px;
+}
+.h-20px{
+    height: 20px;
+}
+.size-120px{
+    width: 120px;
+    height: 120px;
+}
+.maxw-120px{
+    max-width: 120px;
+}
+.w-1240px{
+    width: 1240px;
+}
+.w-240px{
+    width: 240px;
+}
+.minw-500px{
+    min-width: 500px;
+}
+.size-30px{
+    width: 30px;
+    height: 30px;
+}
+.overflow-dot{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Số dòng hiển thị */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5; /* Dòng cao cho văn bản */
+    max-height: 4em; /* 2 dòng x 1.5em dòng cao = 3em */
+}
+.no-focus-ring{
+    outline: none !important;
+    box-shadow: none !important;
+}
+/* ELEMENTs */
+.dropdown-menu{
+    padding: 0px;
+    border: 1px;
+}
+.noti-sign::after{
+    content: '1';
+    background-color: #F69320;
+    font-size: 15px;
+    color: white;
+    border-radius: 50%;
+    border: solid white 1px;
+    position: absolute;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    line-height: 17px;
+    cursor: pointer;
+}
+.typer-items{
+    width: 980px;
+}
+.store-category-tab{
+    height: 220px;
+    background-image: url('/resources/img/store-category.png');
+    background-size: cover;
+    transition: all 0.3s;
+}
+.store-category-text{
+    height: 80px;
+    background-image: linear-gradient(rgb(0, 129, 41, .3), rgb(0, 129, 41, 1), rgb(0, 129, 41, .3));
+    transition: all 0.3s;
+}
+
+.typer .typer-items a div{
+    transition: 0.3 all ease-in-out;
+}
+.mall-store-item{
+    max-width: 188px;
+}
+.product-category{
+    width: 100px;
+    height: 120px;
+}
+.product-item{
+    min-width: 400px;
+}
+a{
+    text-decoration: none;
+}
+.h-40px{
+    height: 40px;
+}
+.signature{
+    font-family: 'Great Vibes';
+}
+footer > .row > .col{
+    max-width: 300px;
+}
+.arrow-up-shape{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}

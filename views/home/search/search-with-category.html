@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/screen-responsive.css">
+    <link rel="stylesheet" href="/styles/search-style.css">
+    <link rel="stylesheet" href="/styles/search-responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes">
+</head>
+<body>
+    <header class="wide-screen-header bg-green text-white d-flex flex-column align-items-center">
+        <div class="helper mb-3 container">
+            <div class="d-flex justify-content-between flex-wrap">
+                <div class="helper-left d-flex">
+                    <a href="#" class="text-decoration-none text-white"><small class="px-2">Kênh người bán</small></a>
+                    <div class="vr rounded my-1"></div>
+                    <a href="#" class="text-decoration-none text-white"><small class="px-2 border-white">Trở thành người bán</small></a>
+                    <div class="vr rounded my-1"></div>
+                    <a href="#" class="text-decoration-none text-white"><small class="px-2 border-white">Download App</small></a>
+                    <div class="vr rounded my-1"></div>
+                    <a href="#" class="text-decoration-none text-white"><small class="px-2 border-white">Kết nối</small></a>
+                </div>
+                <div class="helper-right d-flex">
+                    <a href="#" class="text-decoration-none text-white"><small class="px-2">OCOP</small></a>
+                    <a href="#" class="text-decoration-none text-white"><small class="px-2">Hỗ trợ thông tin</small></a>
+                    <a href="#" class="text-decoration-none text-white"><small class="px-2">Vận chuyển</small></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="toolbar d-flex container flex-nowrap">
+            <a href="#" class="text-white text-decoration-none brand">
+                <div class="h3 mb-0 text-upperCase text-center">Ommanilife</div>
+                <small class="text-center text-nowrap">Năng lượng cuộc sống</small>
+            </a>
+            <div class="ms-2 searchbar flex-fill minw-500px">
+                <div class="input-group rounded bg-white p-1">
+                    <button id="btn-category" class="border-0 btn text-light-green">Sản phẩm<i class="px-1 fas fa-chevron-down text-light-green"></i></button>
+                    <div class="border-secondary my-3 vr"></div>
+                    <input type="text" class="focus-ring focus-ring-light border-0 form-control" placeholder="Nhập sản phẩm cần tìm kiếm">
+                    <button class="rounded-end border-0 bg-green-btn size-47px"><img class="p-1 w-100 text-white" src="/resources/img/icons/search.svg"/></button>
+                </div>
+                <div class="pt-1 d-flex recommendation flex-wrap overflow-hidden">
+                    <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">Trái cây</a></span>
+                    <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">trứng sữa</a></span>
+                    <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">thịt boà</a></span>
+                    <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">thịt choá</a></span>
+                    <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">sữa bột, sữa tươi</a></span>
+                    <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">gạo, mì ăn liền</a></span>
+                    <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">bánh, kẹo</a></span>
+                </div>
+            </div>
+            <div class="right d-flex">
+                <div class="tools">
+                    <div class="position-relative">
+                        <div class="noti-sign">
+                            <a href="#">
+                                <img src="/resources/img/icons/cart.svg" class="size-47px py-2"></img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-section d-flex px-2">
+                    <div class="dropdown">
+                        <a class="btn border-0 p-0 m-0 dropdown-toggle d-flex align-items-center text-white gap-2 flex-nowrap" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="d-flex gap-2">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvtZSXoa7lU0IBaV41q5B1awCYijsFF5Sh-Q&s" class="size-47px rounded-circle" alt="" srcset="">
+                                <div>
+                                    <small class="fs-small lh-1">Tài khoản</small>
+                                    <div class="lh-1">Văn Tèo</div>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu p-0 bg-transparent border-0">
+                            <li class="arrow-up-shape"></li>
+                            <li><a class="dropdown-item text-green bg-white" href="#">Tài khoản của tôi</a></li>
+                            <li><a class="dropdown-item text-green bg-white" href="#">Đơn mua</a></li>
+                            <li><a class="dropdown-item text-green bg-white" href="#">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="body w-100 bg-grey">
+        <div class="body-top w-100">
+            <div class="bg-white">
+                <div class="inside d-flex p-0 gap-4 container">
+                    <a href="#" class="d-flex align-items-center  fw-bold text-decoration-none">
+                        <img class="size-47px py-2" src="/resources/img/icons/grid.svg" alt="" srcset="">
+                        <span class="text-dark-green">Tất cả</span>
+                    </a>
+                    <a href="#" class="d-flex align-items-center fw-bold text-decoration-none">
+                        <i class="far fa-map text-dark-green h5 pt-2 pe-2"></i>
+                        <span class="text-dark-green">Tìm theo vị trí</span>
+                    </a>
+                </div>
+            </div>
+            <div class="category-bar w-100 d-flex justify-content-center align-items-center gap-2">
+                <button class="size-47px bg-dark-grey text-white border-0 rounded-circle"><i class=" fas fa-chevron-left"></i></button>
+                <div class="container m-0 p-0 overflow-scroll bg-white h-150px hideScrollBar d-flex flex-nowrap px-2">
+                    <div class="category-item py-3 align-items-center d-flex flex-column">
+                        <img src="/resources/img/categories/gao.jpg" class="size-80px" alt="">
+                        <div class="text-center py-2">Gạo</div>
+                    </div>
+                    <div class="category-item py-3 align-items-center d-flex flex-column">
+                        <img src="/resources/img/categories/gao.jpg" class="size-80px" alt="">
+                        <div class="text-center py-2">Gạo</div>
+                    </div>
+                    <div class="category-item py-3 align-items-center d-flex flex-column">
+                        <img src="/resources/img/categories/gao.jpg" class="size-80px" alt="">
+                        <div class="text-center py-2">Gạo</div>
+                    </div>
+                    <div class="category-item py-3 align-items-center d-flex flex-column">
+                        <img src="/resources/img/categories/gao.jpg" class="size-80px" alt="">
+                        <div class="text-center py-2">Gạo</div>
+                    </div>
+                    <div class="category-item py-3 align-items-center d-flex flex-column">
+                        <img src="/resources/img/categories/gao.jpg" class="size-80px" alt="">
+                        <div class="text-center py-2">Gạo</div>
+                    </div>
+                    <div class="category-item py-3 align-items-center d-flex flex-column">
+                        <img src="/resources/img/categories/gao.jpg" class="size-80px" alt="">
+                        <div class="text-center py-2">Gạo</div>
+                    </div>
+                    <div class="category-item py-3 align-items-center d-flex flex-column">
+                        <img src="/resources/img/categories/gao.jpg" class="size-80px" alt="">
+                        <div class="text-center py-2">Gạo</div>
+                    </div>
+                    <div class="category-item py-3 align-items-center d-flex flex-column">
+                        <img src="/resources/img/categories/gao.jpg" class="size-80px" alt="">
+                        <div class="text-center py-2">Gạo</div>
+                    </div>
+                    <div class="category-item py-3 align-items-center d-flex flex-column">
+                        <img src="/resources/img/categories/gao.jpg" class="size-80px" alt="">
+                        <div class="text-center py-2">Gạo</div>
+                    </div>
+                    <div class="category-item py-3 align-items-center d-flex flex-column">
+                        <img src="/resources/img/categories/gao.jpg" class="size-80px" alt="">
+                        <div class="text-center py-2">Gạo</div>
+                    </div>
+                    <div class="category-item py-3 align-items-center d-flex flex-column">
+                        <img src="/resources/img/categories/gao.jpg" class="size-80px" alt="">
+                        <div class="text-center py-2">Gạo</div>
+                    </div>
+                    <div class="category-item py-3 align-items-center d-flex flex-column">
+                        <img src="/resources/img/categories/gao.jpg" class="size-80px" alt="">
+                        <div class="text-center py-2">Gạo</div>
+                    </div>
+                    <div class="category-item py-3 align-items-center d-flex flex-column">
+                        <img src="/resources/img/categories/gao.jpg" class="size-80px" alt="">
+                        <div class="text-center py-2">Gạo</div>
+                    </div>
+                </div>
+                <button class="size-47px bg-dark-grey text-white border-0 rounded-circle"><i class=" fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="search-result container pb-5">
+            <div class="row d-flex">
+                <form class="fit-ct overflow-scroll hideScrollBar h-100 bg-white p-2 result-filter">
+                    <div class="filter-title py-2 d-flex flex-row align-items-center gap-2">
+                        <img src="/resources/img/search/filter.svg" class="h-20px" alt="">
+                        <div class="h5 fw-bold mt-2">Bộ lọc tìm kiếm</div>
+                    </div>
+                    <div class="filter-category">
+                        <div class="category-title fw-bold py-2 py-2">Danh mục</div>
+                        <ul class="category-content list-group">
+                            <a href="#"><li class="list-group-item border-0 bg-transparent">Trái cây</li></a>
+                            <a href="#"><li class="list-group-item border-0 bg-transparent">Thịt, trứng</li></a>
+                            <a href="#"><li class="list-group-item border-0 bg-transparent">Rau, củ, quả</li></a>
+                            <a href="#"><li class="list-group-item border-0 bg-transparent">Sữa, bơ, phô mai</li></a>
+                        </ul>
+                    </div>
+                    <hr class="border-1 border-secondary"/>
+                    <div class="filter-shipment">
+                        <div class="shipment-title fw-bold py-2">Phương thức vận chuyển</div>
+                        <ul class="list-group">
+                            <li class="list-group-item border-0 d-flex gap-2 bg-transparent">
+                                <div class="form-check">
+                                    <input type="checkbox" id="shipment-tieuchuan" class="focus-ring focus-ring-light form-check-input">
+                                    <label for="shipment-tieuchuan">Tiêu chuẩn</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item border-0 d-flex gap-2 bg-transparent">
+                                <div class="form-check">
+                                    <input type="checkbox" id="shipment-nhanh" class="focus-ring focus-ring-light form-check-input">
+                                    <label for="shipment-nhanh">Nhanh</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item border-0 d-flex gap-2 bg-transparent">
+                                <div class="form-check">
+                                    <input type="checkbox" id="shipment-hoatoc" class="focus-ring focus-ring-light form-check-input">
+                                    <label for="shipment-hoatoc">Hoả tốc</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="border-1 border-secondary"/>
+                    <div class="filter-price">
+                        <div class="price-title fw-bold py-2">Khoảng giá</div>
+                        <div class="price-content">
+                            <div class="content-input my-2 d-flex gap-2">
+                                <input type="number" class="form-control focus-ring focus-ring-light" placeholder="từ">
+                                <input type="number" class="form-control focus-ring focus-ring-light" placeholder="đến">
+                            </div>
+                            <div class="price-submit">
+                                <button class="btn bg-green-btn text-white w-100">Áp dụng</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="border-1 border-secondary"/>
+                    <div class="filter-rating">
+                        <div class="rating-title fw-bold">Đánh giá</div>
+                        <div class="rating-content d-flex flex-column gap-2">
+                            <button class="p-0 m-0 btn d-flex gap-3 border-0 justify-content-start text-decoration-none text-black">
+                                <div class="stars">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                </div>
+                                <div>
+                                    5 sao
+                                </div>
+                            </a>
+                            <button class="p-0 m-0 btn d-flex gap-3 border-0 justify-content-start text-decoration-none text-black">
+                                <div class="stars">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-blank.svg" alt="">
+                                </div>
+                                <div>
+                                    từ 4 sao
+                                </div>
+                            </a>
+                            <button class="p-0 m-0 btn d-flex gap-3 border-0 justify-content-start text-decoration-none text-black">
+                                <div class="stars">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-blank.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-blank.svg" alt="">
+                                </div>
+                                <div>
+                                    từ 3 sao
+                                </div>
+                            </a>
+                            <button class="p-0 m-0 btn d-flex gap-3 border-0 justify-content-start text-decoration-none text-black">
+                                <div class="stars">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-blank.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-blank.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-blank.svg" alt="">
+                                </div>
+                                <div>
+                                    từ 2 sao
+                                </div>
+                            </button>
+                            <button class="p-0 m-0 btn d-flex gap-3 border-0 justify-content-start text-decoration-none text-black">
+                                <div class="stars">
+                                    <img class="h-20px" src="/resources/img/search/star-fill.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-blank.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-blank.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-blank.svg" alt="">
+                                    <img class="h-20px" src="/resources/img/search/star-blank.svg" alt="">
+                                </div>
+                                <div>
+                                    từ 1 sao
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <hr class="border-1 border-secondary"/>
+                    <div class="filter-brand">
+                        <div class="brand-title fw-bold py-2">Thương hiệu</div>
+                        <div class="form-check">
+                            <input type="checkbox" id="checkABrand" class="focus-ring focus-ring-light form-check-input">
+                            <label for="checkABrand">Thương hiệu A</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="checkBBrand" class="focus-ring focus-ring-light form-check-input">
+                            <label for="checkBBrand">Thương hiệu B</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="checkCBrand" class="focus-ring focus-ring-light form-check-input">
+                            <label for="checkCBrand">Thương hiệu C</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="checkDBrand" class="focus-ring focus-ring-light form-check-input">
+                            <label for="checkDBrand">Thương hiệu D</label>
+                        </div>
+                    </div>
+                    <hr class="border-1 border-secondary"/>
+                    <div class="filter-material">
+                        <div class="brand-title fw-bold py-2">Chất liệu</div>
+                        <div class="form-check">
+                            <input type="checkbox" id="checkAMaterial" class="focus-ring focus-ring-light form-check-input">
+                            <label for="checkAMaterial">Đen</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="checkBMaterial" class="focus-ring focus-ring-light form-check-input">
+                            <label for="checkBMaterial">Trắng</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="checkCMaterial" class="focus-ring focus-ring-light form-check-input">
+                            <label for="checkCMaterial">Đỏ</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="checkDMaterial" class="focus-ring focus-ring-light form-check-input">
+                            <label for="checkDMaterial">Cam</label>
+                        </div>
+                    </div>
+                    <hr class="border-1 border-secondary"/>
+                    <div class="filter-provider">
+                        <div class="brand-title fw-bold py-2">Nhà cung cấp</div>
+                        <div class="form-check">
+                            <input type="checkbox" id="checkAProvider" class="focus-ring focus-ring-light form-check-input">
+                            <label for="checkAProvider">Nhà cung cấp A</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="checkBProvider" class="focus-ring focus-ring-light form-check-input">
+                            <label for="checkBProvider">Nhà cung cấp B</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="checkCProvider" class="focus-ring focus-ring-light form-check-input">
+                            <label for="checkCProvider">Nhà cung cấp C</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="checkDProvider" class="focus-ring focus-ring-light form-check-input">
+                            <label for="checkDProvider">Nhà cung cấp D</label>
+                        </div>
+                    </div>
+                    <hr class="border-1 border-secondary"/>
+                    <button class="btn text-dark-green border-0 w-100 text-start" type="reset">Xoá tất cả bộ lọc</button>
+                </form>
+                
+                <div class="d-none mobile-product-mini-filter py-1 bg-white">
+                    <div class="filter-navbar d-flex align-items-center p-3 gap-3">
+                        <div><i class="fas fa-arrow-left text-green"></i></div>
+                        <div class="input-group rounded-0 p-1 bg-dark-grey">
+                            <button class="btn btn-light bg-dark-grey border-0 size-47px"><i class="fas fa-search text-secondary"></i></button>
+                            <input type="text" class="bg-dark-grey focus-ring focus-ring-light border-0 form-control text-secondary" placeholder="Nhập sản phẩm cần tìm kiếm">
+                        </div>
+                        <button onclick="toggleMobileFilterBar()" id="showFilterBarBtn" class="btn border-0">
+                            <i class="fas fa-filter text-green"></i>
+                            <small class="float-end text-green fw-bold text-uppercase fs-small">Lọc</small>
+                        </button>
+                    </div>
+                    <div class="filter-options container">
+                        <div class="d-flex">
+                            <button onclick="onClickFilterOptions(0)" class="rounded-0 btn border-0 filter-option flex-fill text-center border-bottom border-white border-2">Liên quan</button>
+                            <div class="vr border border-1 border-end border-dark my-2"></div>
+                            <button onclick="onClickFilterOptions(1)" class="rounded-0 btn border-0 filter-option flex-fill text-center border-bottom border-white border-2">Mới nhất</button>
+                            <div class="vr border border-1 border-end border-dark my-2"></div>
+                            <button onclick="onClickFilterOptions(2)" class="rounded-0 btn border-0 filter-option flex-fill text-center border-bottom border-white border-2">Bán chạy</button>
+                            <div class="vr border border-1 border-end border-dark my-2"></div>
+                            <div onclick="onClickFilterOptions(3)" class="dropdown filter-option flex-fill">
+                                <button class="w-100 btn rounded-0 border-0 d-flex justify-content-between align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>Giá</span>
+                                    <i class="fas fa-sort text-grey"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <button class="dropdown-item btn border-0 rounded-0">Thấp đến Cao</button>
+                                    <button class="dropdown-item btn border-0 rounded-0">Cao đến thấp</button>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="result-products col">
+                    <div class="product-mini-filter">
+                        <div class="get-input d-flex gap-3">
+                            <div>Tìm kiếm kết quả cho:</div>
+                            <div id="input-text"><strong>"Trai cay"</strong></div>
+                        </div>
+                        <div class="order-bar rounded-1 px-3 d-flex justify-content-between">
+                            <div class="d-flex order-left gap-4 py-3 align-items-center">
+                                <div>Sắp xếp theo</div>
+                                <div class="order-option d-flex gap-2">
+                                    <button class="bg-green-btn rounded-0 text-white btn">Nổi bật</button>
+                                    <button class="btn rounded-0 bg-white">Mới nhất</button>
+                                    <button class="btn rounded-0 bg-white">Bán chạy</button>
+                                    <div class="dropdown bg-white">
+                                        <button class="rounded-0 w-100 bg-transparent text-black btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Giá
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Giá: Thấp đến Cao</a></li>
+                                        <li><a class="dropdown-item" href="#">Giá: Cao đến thấp</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex order-right d-flex align-items-center gap-2">
+                                <div class="page-number d-flex">
+                                    <div id="currentPage" class="text-green fw-bold">1</div>
+                                    <div>/</div>
+                                    <div id="relatedPages">200</div>
+                                </div>
+                                <div class="page-direct">
+                                    <button class="btn rounded-0 py-0 px-2 bg-white">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button class="btn rounded-0 py-0 px-2 bg-white">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-product-list container">
+                        <div class="row justify-content-start gap-2">
+                            <div class="result-item minw-190px col-lg-2 col-sm-12 p-0">
+                                <a href="#" class="text-black">
+                                    <div class="item-img position-relative">
+                                        <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
+                                        <div class="left-top position-absolute top-0 start-0 bg-white rounded-1 d-flex p-1 gap-1">
+                                            <small class="bg-green rounded-1 text-white p-0 px-2">Mall</small>
+                                            <img src="/resources/img/products/products-shop-cert/37ddf198b80b169213abef43a5731550.png" class="h-20px" alt="" srcset="">
+                                            <img src="/resources/img/products/products-shop-cert/451a35345460879b6cb354fe1ace60a9.png" class="h-20px" alt="" srcset="">
+                                            <img src="/resources/img/products/products-shop-cert/89d7ff52853185d12d486deb861203ee.png" class="h-20px" alt="" srcset="">
+                                        </div>
+                                        <div class="position-absolute position-relative top-0 end-0">
+                                            <img src="/resources/img/search/Sale.svg" class="size-30px" alt="">
+                                            <small class="position-absolute top-0 end-0 text-white">15%</small>
+                                        </div>
+                                        <div class="position-absolute position-relative bottom-0 start-0">
+                                            <img src="/resources/img/search/TAG.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item-content d-flex flex-column gap-2 p-2">
+                                        <div class="content-title overflow-dot">
+                                            Bông cải xanh 100g nội địa WuHan và tự nhiên 100g gì đó
+                                        </div>
+                                        <div class="content-body">
+                                            <div class="body-price-shipment d-flex justify-content-between">
+                                                <div class="text-light-green fw-bold">87.000 ₫</div>
+                                                <i class="fas fa-shipping-fast text-icon-green h-20px"></i>
+                                            </div>
+                                            <div class="body-rating-sold d-flex">
+                                                <small class="stars">
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                </small>
+                                                <small class="vr border-dark mx-2 my-1"></small>
+                                                <small class="text-wrap">1.6k đã bán</small>
+                                            </div>
+                                        </div>
+                                        <small class="content-location text-secondary">TP. Hồ Chí Minh</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="result-item minw-190px col-lg-2 col-sm-6 p-0">
+                                <a href="#" class="text-black">
+                                    <div class="item-img position-relative">
+                                        <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
+                                        <div class="left-top position-absolute top-0 start-0 bg-white rounded-1 d-flex p-1 gap-1">
+                                            <small class="bg-green rounded-1 text-white p-0 px-2">Mall</small>
+                                            <img src="/resources/img/products/products-shop-cert/37ddf198b80b169213abef43a5731550.png" class="h-20px" alt="" srcset="">
+                                            <img src="/resources/img/products/products-shop-cert/451a35345460879b6cb354fe1ace60a9.png" class="h-20px" alt="" srcset="">
+                                            <img src="/resources/img/products/products-shop-cert/89d7ff52853185d12d486deb861203ee.png" class="h-20px" alt="" srcset="">
+                                        </div>
+                                        <div class="position-absolute position-relative top-0 end-0">
+                                            <img src="/resources/img/search/Sale.svg" class="size-30px" alt="">
+                                            <small class="position-absolute top-0 end-0 text-white">15%</small>
+                                        </div>
+                                        <div class="position-absolute position-relative bottom-0 start-0">
+                                            <img src="/resources/img/search/TAG.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item-content d-flex flex-column gap-2 p-2">
+                                        <div class="content-title overflow-dot">
+                                            Bông cải xanh 100g nội địa WuHan và tự nhiên 100g gì đó
+                                        </div>
+                                        <div class="content-body">
+                                            <div class="body-price-shipment d-flex justify-content-between">
+                                                <div class="text-light-green fw-bold">87.000 ₫</div>
+                                                <i class="fas fa-shipping-fast text-icon-green h-20px"></i>
+                                            </div>
+                                            <div class="body-rating-sold d-flex">
+                                                <small class="stars">
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                </small>
+                                                <small class="vr border-dark mx-2 my-1"></small>
+                                                <small class="text-wrap">1.6k đã bán</small>
+                                            </div>
+                                        </div>
+                                        <small class="content-location text-secondary">TP. Hồ Chí Minh</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="result-item minw-190px col-lg-2 col-sm-6 p-0">
+                                <a href="#" class="text-black">
+                                    <div class="item-img position-relative">
+                                        <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
+                                        <div class="left-top position-absolute top-0 start-0 bg-white rounded-1 d-flex p-1 gap-1">
+                                            <small class="bg-green rounded-1 text-white p-0 px-2">Mall</small>
+                                            <img src="/resources/img/products/products-shop-cert/37ddf198b80b169213abef43a5731550.png" class="h-20px" alt="" srcset="">
+                                            <img src="/resources/img/products/products-shop-cert/451a35345460879b6cb354fe1ace60a9.png" class="h-20px" alt="" srcset="">
+                                            <img src="/resources/img/products/products-shop-cert/89d7ff52853185d12d486deb861203ee.png" class="h-20px" alt="" srcset="">
+                                        </div>
+                                        <div class="position-absolute position-relative top-0 end-0">
+                                            <img src="/resources/img/search/Sale.svg" class="size-30px" alt="">
+                                            <small class="position-absolute top-0 end-0 text-white">15%</small>
+                                        </div>
+                                        <div class="position-absolute position-relative bottom-0 start-0">
+                                            <img src="/resources/img/search/TAG.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item-content d-flex flex-column gap-2 p-2">
+                                        <div class="content-title overflow-dot">
+                                            Bông cải xanh 100g nội địa WuHan và tự nhiên 100g gì đó
+                                        </div>
+                                        <div class="content-body">
+                                            <div class="body-price-shipment d-flex justify-content-between">
+                                                <div class="text-light-green fw-bold">87.000 ₫</div>
+                                                <i class="fas fa-shipping-fast text-icon-green h-20px"></i>
+                                            </div>
+                                            <div class="body-rating-sold d-flex">
+                                                <small class="stars">
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                </small>
+                                                <small class="vr border-dark mx-2 my-1"></small>
+                                                <small class="text-wrap">1.6k đã bán</small>
+                                            </div>
+                                        </div>
+                                        <small class="content-location text-secondary">TP. Hồ Chí Minh</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="result-item minw-190px col-lg-2 col-sm-6 p-0">
+                                <a href="#" class="text-black">
+                                    <div class="item-img position-relative">
+                                        <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
+                                        <div class="left-top position-absolute top-0 start-0 bg-white rounded-1 d-flex p-1 gap-1">
+                                            <small class="bg-green rounded-1 text-white p-0 px-2">Mall</small>
+                                            <img src="/resources/img/products/products-shop-cert/37ddf198b80b169213abef43a5731550.png" class="h-20px" alt="" srcset="">
+                                            <img src="/resources/img/products/products-shop-cert/451a35345460879b6cb354fe1ace60a9.png" class="h-20px" alt="" srcset="">
+                                            <img src="/resources/img/products/products-shop-cert/89d7ff52853185d12d486deb861203ee.png" class="h-20px" alt="" srcset="">
+                                        </div>
+                                        <div class="position-absolute position-relative top-0 end-0">
+                                            <img src="/resources/img/search/Sale.svg" class="size-30px" alt="">
+                                            <small class="position-absolute top-0 end-0 text-white">15%</small>
+                                        </div>
+                                        <div class="position-absolute position-relative bottom-0 start-0">
+                                            <img src="/resources/img/search/TAG.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item-content d-flex flex-column gap-2 p-2">
+                                        <div class="content-title overflow-dot">
+                                            Bông cải xanh 100g nội địa WuHan và tự nhiên 100g gì đó
+                                        </div>
+                                        <div class="content-body">
+                                            <div class="body-price-shipment d-flex justify-content-between">
+                                                <div class="text-light-green fw-bold">87.000 ₫</div>
+                                                <i class="fas fa-shipping-fast text-icon-green h-20px"></i>
+                                            </div>
+                                            <div class="body-rating-sold d-flex">
+                                                <small class="stars">
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                </small>
+                                                <small class="vr border-dark mx-2 my-1"></small>
+                                                <small class="text-wrap">1.6k đã bán</small>
+                                            </div>
+                                        </div>
+                                        <small class="content-location text-secondary">TP. Hồ Chí Minh</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="result-item minw-190px col-lg-2 col-sm-6 p-0">
+                                <a href="#" class="text-black">
+                                    <div class="item-img position-relative">
+                                        <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
+                                        <div class="left-top position-absolute top-0 start-0 bg-white rounded-1 d-flex p-1 gap-1">
+                                            <small class="bg-green rounded-1 text-white p-0 px-2">Mall</small>
+                                            <img src="/resources/img/products/products-shop-cert/37ddf198b80b169213abef43a5731550.png" class="h-20px" alt="" srcset="">
+                                            <img src="/resources/img/products/products-shop-cert/451a35345460879b6cb354fe1ace60a9.png" class="h-20px" alt="" srcset="">
+                                            <img src="/resources/img/products/products-shop-cert/89d7ff52853185d12d486deb861203ee.png" class="h-20px" alt="" srcset="">
+                                        </div>
+                                        <div class="position-absolute position-relative top-0 end-0">
+                                            <img src="/resources/img/search/Sale.svg" class="size-30px" alt="">
+                                            <small class="position-absolute top-0 end-0 text-white">15%</small>
+                                        </div>
+                                        <div class="position-absolute position-relative bottom-0 start-0">
+                                            <img src="/resources/img/search/TAG.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item-content d-flex flex-column gap-2 p-2">
+                                        <div class="content-title overflow-dot">
+                                            Bông cải xanh 100g nội địa WuHan và tự nhiên 100g gì đó
+                                        </div>
+                                        <div class="content-body">
+                                            <div class="body-price-shipment d-flex justify-content-between">
+                                                <div class="text-light-green fw-bold">87.000 ₫</div>
+                                                <i class="fas fa-shipping-fast text-icon-green h-20px"></i>
+                                            </div>
+                                            <div class="body-rating-sold d-flex">
+                                                <small class="stars">
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                </small>
+                                                <small class="vr border-dark mx-2 my-1"></small>
+                                                <small class="text-wrap">1.6k đã bán</small>
+                                            </div>
+                                        </div>
+                                        <small class="content-location text-secondary">TP. Hồ Chí Minh</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="result-item minw-190px col-lg-2 col-sm-6 p-0">
+                                <a href="#" class="text-black">
+                                    <div class="item-img position-relative">
+                                        <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
+                                        <div class="left-top position-absolute top-0 start-0 bg-white rounded-1 d-flex p-1 gap-1">
+                                            <small class="bg-green rounded-1 text-white p-0 px-2">Mall</small>
+                                            <img src="/resources/img/products/products-shop-cert/37ddf198b80b169213abef43a5731550.png" class="h-20px" alt="" srcset="">
+                                            <img src="/resources/img/products/products-shop-cert/451a35345460879b6cb354fe1ace60a9.png" class="h-20px" alt="" srcset="">
+                                            <img src="/resources/img/products/products-shop-cert/89d7ff52853185d12d486deb861203ee.png" class="h-20px" alt="" srcset="">
+                                        </div>
+                                        <div class="position-absolute position-relative top-0 end-0">
+                                            <img src="/resources/img/search/Sale.svg" class="size-30px" alt="">
+                                            <small class="position-absolute top-0 end-0 text-white">15%</small>
+                                        </div>
+                                        <div class="position-absolute position-relative bottom-0 start-0">
+                                            <img src="/resources/img/search/TAG.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item-content d-flex flex-column gap-2 p-2">
+                                        <div class="content-title overflow-dot">
+                                            Bông cải xanh 100g nội địa WuHan và tự nhiên 100g gì đó
+                                        </div>
+                                        <div class="content-body">
+                                            <div class="body-price-shipment d-flex justify-content-between">
+                                                <div class="text-light-green fw-bold">87.000 ₫</div>
+                                                <i class="fas fa-shipping-fast text-icon-green h-20px"></i>
+                                            </div>
+                                            <div class="body-rating-sold d-flex">
+                                                <small class="stars">
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                    <small class="fas fa-star text-orange"></small>
+                                                </small>
+                                                <small class="vr border-dark mx-2 my-1"></small>
+                                                <small class="text-wrap">1.6k đã bán</small>
+                                            </div>
+                                        </div>
+                                        <small class="content-location text-secondary">TP. Hồ Chí Minh</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-jumper d-flex gap-2 justify-content-center">
+                <button class="btn bg-white rounded-0"><i class="fas fa-chevron-left text-secondary"></i></button>
+                <button class="btn rounded-0 bg-white page-selected">1</button>
+                <button class="btn rounded-0 bg-white">2</button>
+                <button class="btn rounded-0 bg-white">3</button>
+                <button class="btn rounded-0 bg-white">4</button>
+                <button class="btn rounded-0 bg-white">5</button>
+                <button class="btn rounded-0 bg-white">...</button>
+                <button class="btn rounded-0 bg-white"><i class="fas fa-chevron-left text-secondary"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="w-100 mt-2 py-4">
+        <div class="container">
+            <div class="bg-white row gap-3 py-2">
+                <div class="customer-service col text-nowrap">
+                    <h5>Hỗ trợ khách hàng</h5>
+                    <div class="options d-flex flex-column gap-2 mt-3">
+                        <div class="text">Hotline: <strong><a href="tel:+1900-6789" class="text-decoration-none text-black">19006789</a></strong><div>(1.000 đ/phút, 8-21h kể cả T7, CN)</div></div>
+                        <div class="text"><a href="#" class="text-black">Các câu hỏi thường gặp</a></div>
+                        <div class="text"><a href="#" class="text-black">Gửi yêu cầu hỗ trợ</a></div>
+                        <div class="text"><a href="#" class="text-black">Hướng dẫn đặt hàng</a></div>
+                        <div class="text"><a href="#" class="text-black">Phương thức vận chuyển</a></div>
+                        <div class="text"><a href="#" class="text-black">Chính sách đổi trả</a></div>
+                        <div class="text"><a href="#" class="text-black">Chính sách hàng nhập khẩu</a></div>
+                        <div class="text">Hỗ trợ khách hàng: <a class="text-black" href="mailto:hotro@ommani.vn">hotro@ommani.vn</a></div>
+                        <div class="text">Báo lỗi bảo mật: <a class="text-black" href="mailto:security@ommani.vn">security@ommani.vn</a></div>
+                    </div>
+                </div>
+                <div class="about col text-nowrap">
+                    <h5>Về Ommanilife</h5>
+                    <div class="options d-flex flex-column gap-2 mt-3">
+                        <div class="text"><a href="#" class="text-black">Giới thiệu về Ommani</a></div>
+                        <div class="text"><a href="#" class="text-black">Tuyển dụng</a></div>
+                        <div class="text"><a href="#" class="text-black">Chính sách bảo mật, thanh toán</a></div>
+                        <div class="text"><a href="#" class="text-black">Bảo mật thông tin cá nhân</a></div>
+                        <div class="text"><a href="#" class="text-black">Chính sách giải quyết khiếu nại</a></div>
+                        <div class="text"><a href="#" class="text-black">Điều khoản sử dụng</a></div>
+                        <div class="text"><a href="#" class="text-black">Tiếp thị liên kết cùng Ommani</a></div>
+                        <div class="text"><a href="#" class="text-black">Bán hàng cho doanh nghiệp</a></div>
+                        <div class="text"><a href="#" class="text-black">Điều kiện vận chuyển</a></div>
+                    </div>
+                </div>
+                <div class="partner col text-nowrap">
+                    <h5>Hợp tác và liên kết</h5>
+                    <div class="options d-flex flex-column gap-2 mt-3">
+                        <div class="text"><a href="#" class="text-black">Quy chế hoạt động sàn GDTMĐT</a></div>
+                        <div class="text"><a href="#" class="text-black">Bán hàng cùng Ommani</a></div>
+                    </div>
+                    <h5>Chứng nhận bởi</h5>
+                    <div class="options d-flex gap-2 mt-3">
+                        <a href="#"><img class="h-40px" src="resources/img/footer/cert/khong-hang-gia.png"></img></a>
+                        <a href="#"><img class="h-40px" src="resources/img/footer/cert/bo-cong-thuong.png"></img></a>
+                        <a href="#"><img class="h-40px" src="resources/img/footer/cert/tin-nhiem-mang.png"></img></a>
+                    </div>
+                </div>
+                <div class="payment col">
+                    <h5>Phương thức thanh toán</h5>
+                    <div class="d-flex gap-1 mt-3 flex-wrap">
+                        <img src="/resources/img/footer/payment/bxl_visa.png" alt="" class="h-40px">
+                        <img src="/resources/img/footer/payment/logos_jcb.png" alt="" class="h-40px">
+                        <img src="/resources/img/footer/payment/momo.png" alt="" class="h-40px">
+                        <img src="/resources/img/footer/payment/noto_atm-sign.png" alt="" class="h-40px">
+                        <img src="/resources/img/footer/payment/uim_master-card.png" alt="" class="h-40px">
+                        <img src="/resources/img/footer/payment/viettelPay.png" alt="" class="h-40px">
+                        <img src="/resources/img/footer/payment/vnpay-seeklogo.com 1.png" alt="" class="h-40px">
+                        <img src="/resources/img/footer/payment/zaloPay.png" alt="" class="h-40px">
+                    </div>
+                    <h5>Dịch vụ giao hàng</h5>
+                    <div class="d-flex gap-1 mt-3">
+                        <img src="/resources/img/footer/5cc832252e5c2d1c19d7a68036c4d1f9.png" alt="" class="h-40px">
+                    </div>
+                </div>
+                <div class="contact col d-flex flex-column justify-content-between">
+                    <div>
+                        <h5>Kết nối với chúng tôi</h5>
+                        <div class="d-flex gap-2 mt-3">
+                            <a href="#"><img class="h-40px" src="/resources/img/footer/social-media/1a144b96100ee9bfd8b81f325fbc69e4.png" alt=""></a>
+                            <a href="#"><img class="h-40px" src="/resources/img/footer/social-media/9dbe51fb44371b5cce8f45cbbf4ee352.png" alt=""></a>
+                            <a href="#"><img class="h-40px" src="/resources/img/footer/social-media/f6e9771ca4a0525e5ee5439867a21a83.png" alt=""></a>
+                        </div>
+                        <h5>Tải ứng dụng trên điện thoại</h5>
+                        <div class="d-flex gap-3 mt-3 align-items-center">
+                            <img class="" src="/resources/img/footer/download/Vector.png" alt="">
+                            <div class="d-flex flex-column gap-1">
+                                <a href="#"><img class="h-40px" src="/resources/img/footer/download/google-play.png" alt=""></a>
+                                <a href="#"><img class="h-40px" src="/resources/img/footer/download/app-store.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-pink signature h3 text-end">Made with love!</div>
+                </div>
+            </div>
+            <hr class="bg-white row border-1 opacity-100 border-dark"/>
+            <div class="bg-white company-info mt-3">
+                <div class="company-address">Trụ sở chính: 43 Trần Nguyên Đán, Định Công, Q. Hoàng Mai, TP. Hà Nội</div>
+                <div class="company-cert">Giấy chứng nhận Đăng kí kinh doanh số: 0998999999 do sở kế hoạch và Đầu tư Thành Phố Hà Nội cấp lần đầu ngày 09/09/2022</div>
+                <div class="company-right">©2022 - Bản quyền của Công ty TNHH Ommani</div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>
+
+<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
+ ***PUT IT UNDER H5 TAG IN MODAL-->

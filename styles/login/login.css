@@ -1,0 +1,11 @@
+.login-signup-form{
+    width: 550px !important;
+}
+.input-number{
+    width: 60px;
+    height: 70px;
+    font-size: 28px;
+}
+input.input-number:focus{
+    background-color: #F0F0F0;
+}
