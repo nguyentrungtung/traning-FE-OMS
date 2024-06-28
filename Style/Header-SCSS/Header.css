@@ -1,0 +1,116 @@
+header {
+  background: #1ab357;
+}
+header .container {
+  padding: 0;
+}
+header .container .Ommani-Header .Nav-Header {
+  padding: 0;
+  margin: 0;
+}
+header .container .Ommani-Header .Nav-Header_Left {
+  padding: 0;
+  list-style-type: none;
+  gap: 12px;
+}
+header .container .Ommani-Header .Nav-Header_Left .nav-item:not(:last-child):after {
+  content: "";
+  border-left: 1px solid white;
+  margin-left: 12px;
+}
+header .container .Ommani-Header .Nav-Header_Left .nav-item a {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  text-decoration: none;
+  color: white;
+}
+header .container .Ommani-Header .Nav-Header_Right {
+  list-style-type: none;
+  gap: 12px;
+}
+header .container .Ommani-Header .Nav-Header_Right .nav-item a {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  text-align: left;
+  text-decoration: none;
+  color: white;
+}
+header .container .Ommani-Header .Header-Content {
+  gap: 40px;
+}
+header .container .Ommani-Header .Header-Content .Map-Header {
+  padding-top: 8px;
+}
+header .container .Ommani-Header .Header-Content .Map-Header .dropdown {
+  padding: 0;
+  border-color: #1ab357;
+}
+header .container .Ommani-Header .Header-Content .Map-Header .dropdown a {
+  border-color: #1ab357;
+  padding: 0;
+  color: white;
+}
+header .container .Ommani-Header .Header-Content .Map-Header .dropdown .dropdown-menu a {
+  color: black;
+}
+header .container .Ommani-Header .Header-Content .Search-Header .Search-Block {
+  background-color: white;
+  gap: 10px;
+  border-radius: 8px 8px 8px 8px;
+}
+header .container .Ommani-Header .Header-Content .Search-Header .Search-Block .dropdown {
+  width: 40%;
+  background-color: white;
+}
+header .container .Ommani-Header .Header-Content .Search-Header .Search-Block input {
+  width: 50%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+  border: none;
+  border-left: 1px solid #9794a6;
+  padding-left: 10px;
+}
+header .container .Ommani-Header .Header-Content .Search-Header .Search-Block .span .img-btnFind {
+  padding: 0;
+}
+header .container .Ommani-Header .Header-Content .Search-Header .Search-Fast ul.list-search {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+header .container .Ommani-Header .Header-Content .Search-Header .Search-Fast ul.list-search li {
+  padding: 0;
+}
+header .container .Ommani-Header .Header-Content .Search-Header .Search-Fast ul.list-search li a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  color: white;
+  padding-left: 10px;
+  margin: 0;
+}
+header .container .Ommani-Header .Header-Content .Icon-Header .img-icon {
+  gap: 26px;
+}
+header .container .Ommani-Header .Header-Content .Icon-Header .img-icon .img-iconchuong {
+  padding-top: 8px;
+}
+header .container .Ommani-Header .Header-Content .Icon-Header .link_DangNhap {
+  padding-top: 8px;
+  align-items: self-start;
+}
+header .container .Ommani-Header .Header-Content .Icon-Header .link_DangNhap .btn {
+  margin-left: 8px;
+  padding: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+}
+header .container .Ommani-Header .Header-Content .GioHang-none {
+  display: none;
+}/*# sourceMappingURL=Header.css.map */

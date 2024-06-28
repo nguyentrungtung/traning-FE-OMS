@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--CSS Home-->
+    <link href="../Style/Header-SCSS/Header.css" rel="stylesheet">
+    <link href="../Style/Body-SCSS/Home.css" rel="stylesheet">
+    <link href="../Style/Footer-SCSS/Footer.css" rel="stylesheet">
+    <!-- <link href="../Style/Reponsive-SCSS/Responsive.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="Ommani-Header">
+                <div class="Nav-Header d-flex justify-content-between ">
+                    <ul class="Nav-Header_Left d-flex">
+                        <li class="nav-item"><a href="#">Kênh người lớn</a></li>
+                        <li class="nav-item"><a href="#">Trở thành người lớn</a></li>
+                        <li class="nav-item"><a href="#">Dowload App</a></li>
+                        <li class="nav-item"><a href="#">Kết nối</a></li>
+                    </ul>
+                    <ul class="Nav-Header_Right d-flex">
+                        <li class="nav-item"><a href="#">OCCOP</a></li>
+                        <li class="nav-item"><a href="#">Hỗ trợ thông tin</a></li>
+                        <li class="nav-item"><a href="#">Vận chuyển</a></li>
+                    </ul>
+                </div>
+                <div class="Header-Content d-flex">
+
+                    <div class="Logo-Header LogoMobile1" id="header-icon1"><img src="../Image/Img_Header/Logo.svg"
+                            alt="img "></div>
+                    <div class="Map-Header d-flex">
+                        <div>
+                            <img class="img-localMap" src="../Image/Img_Header/local_map.svg">
+                        </div>
+                        <div>
+                            <div class="dropdown">
+                                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Thanh Xuân
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Cầu Giấy</a></li>
+                                    <li><a class="dropdown-item" href="#">Hà Đông</a></li>
+                                    <li><a class="dropdown-item" href="#">Nam Từ Liêm</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="Search-Header" id="header-icon2">
+                        <div class="Search-Block d-flex align-items-center">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Dropdown button
+                                </button>
+                                <div class="dropdown-menu2" aria-labelledby="dropdownMenuButton2">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <input id="btnFind1" class="" type="text" placeholder="Nhập sản phẩm cần tìm kiếm..." />
+                            <span id="btnFind2" class="d-flex align-items-center justify-content-center">
+                                <img class="img-btnFind" src="../Image/Img_Header/Button_Find.svg" alt="img">
+                            </span>
+                        </div>
+                        <div class="Search-Fast">
+                            <ul class="list-search d-flex align-items-center">
+                                <li><a href="#">Trái cây</a></li>
+                                <li><a href="#">thịt, trứng</a></li>
+                                <li><a href="#">rau, củ, quả</a></li>
+                                <li><a href="#">sữa, bơ, phô mai</a></li>
+                                <li><a href="#">hải sản</a></li>
+                                <li><a href="#">gạo, mỳ ăn liền</a></li>
+                                <li><a href="#">bánh, kẹo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Icon-Header d-flex" id="header-icon3">
+                        <div class=" Logo-Header LogoOmmani-Mobile img-icon d-flex">
+                            <div><img class="img-iconchuong" src="../Image/Img_Header/icon-chuong1.svg" alt="img"></div>
+                            <div><img class="img-iconchuong " src="../Image/Img_Header/icon-chuong2.svg" alt="img">
+                            </div>
+                            <div><img class="img-iconchuong " src="../Image/Img_Header/icon-chuong3.svg" alt="img">
+                            </div>
+                            <div><img class="img-iconchuong" src="../Image/Img_Header/icon-chuong4.svg" alt="img"></div>
+                        </div>
+                        <div>
+                            <div class="link_DangNhap d-flex flex-column ">
+                                <button type="button" class="btn border-0" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">Đăng nhập
+                                </button>
+                                <!--dangnhap-->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header border-0">
+                                                <h3 class="modal-title" id="exampleModalLabel">Đăng
+                                                    Nhập</h3>
+                                            </div>
+                                            <div class="modal-body border-0">
+                                                <div class="d-flex flex-column align-items-center " style="gap: 10px;">
+                                                    <input style="width: 85%; height: 60px;"
+                                                        placeholder="Số điện thoại hoặc email">
+                                                    <input style="width: 85% ;height: 60px;"
+                                                        placeholder="Nhập mật khẩu" type="password">
+                                                    <p>Quên mật khẩu</p>
+                                                    <button
+                                                        style="width: 85%; background-color: #29AB56; height: 60px; color: white; border-radius: 2px;">Đăng
+                                                        nhập</button>
+                                                    <p>hoặc đăng nhập bằng</p>
+                                                    <div class="d-flex" style="gap: 10px;">
+                                                        <div><img src="../Image/Img_Home/Login/fb.svg">
+                                                        </div>
+                                                        <div><img src="../Image/Img_Home/Login/gg.svg"></div>
+                                                        <div><img src="../Image/Img_Home/Login/zalo.svg"></div>
+                                                    </div>
+                                                    <p>Bạn chưa có tài khoản?<span>Đăng kí</span></p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--dangky-->
+                                <button type="button" class="btn border-0" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModa2">
+                                    Đăng kí
+                                </button>
+
+                                <div class="modal fade" id="exampleModa2" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header border-0">
+                                                <h3 class="modal-title" id="exampleModalLabel">Đăng
+                                                    Ký</h3>
+                                            </div>
+                                            <div class="modal-body border-0">
+                                                <div class="d-flex flex-column align-items-center " style="gap: 10px;">
+                                                    <input style="width: 85%; height: 60px;"
+                                                        placeholder="Số điện thoại hoặc">
+                                                    <input style="width: 85% ;height: 60px;"
+                                                        placeholder="Nhập mật khẩu" type="password">
+                                                    <input style="width: 85% ;height: 60px;"
+                                                        placeholder="Nhập lại mật khẩu" type="password">
+                                                    <button>Đăng
+                                                        Ký</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="GioHang-none" id="header-icon4">
+                        <img src="../Image/Img_Header/icon4_header.svg" alt="img">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="Boloc">
+        <div class="container">
+            <div class="Above_Banner d-flex">
+                <div class="icon-Tatca d-flex align-items-center">
+                    <img src="../Image/Img_Home/Icon-AboveBanner/icon_tatca.svg">
+                    <p>Tất cả</p>
+                </div>
+                <div class="icon-Timtheovitri d-flex align-items-center">
+                    <img src="../Image/Img_Home/Icon-AboveBanner/icon_timtheovt.svg">
+                    <p>Tìm theo vị trí</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <!-- <div>
+                <div class="dropdown3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3"
+                        data-toggle="dropdown3" aria-haspopup="true" aria-expanded="false">
+                        Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div> -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../Image/Img_Home/Banner.svg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../Image/Img_Home/Banner.svg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../Image/Img_Home/Banner.svg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+            <div class="Below_Banner Extension-Ommani d-flex justify-content-center">
+                <a class="d-flex flex-column align-items-center">
+                    <div>
+                        <img src="../Image/Img_Extension/ex01.svg" alt="img">
+                    </div>
+                    <div class="TitleAll">
+                        <div class="Tittle">Ommani Mall</div>
+                    </div>
+                </a>
+                <a>
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="../Image/Img_Extension/ex02.svg" alt="img">
+                    </div>
+                    <div class="TitleAll">
+                        <div class="Tittle">Đi chợ</div>
+                    </div>
+                </a>
+
+                <a>
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="../Image/Img_Extension/ex03.svg" alt="img">
+                    </div>
+                    <div class="TitleAll">
+                        <div class="Tittle">Bán sỉ</div>
+                    </div>
+                </a>
+                <a>
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="../Image/Img_Extension/ex04.svg" alt="img">
+                    </div>
+                    <div class="TitleAll">
+                        <div class="Tittle">Bán Drop</div>
+                    </div>
+                </a>
+                <a>
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="../Image/Img_Extension/ex05.svg" alt="img">
+                    </div>
+                    <div class="TitleAll">
+                        <div class="Tittle">Bán quốc tế</div>
+                    </div>
+                </a>
+                <a>
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="../Image/Img_Extension/ex06.svg" alt="img">
+                    </div>
+                    <div class="TitleAll">
+                        <div class="Tittle">OCOP</div>
+                    </div>
+                </a>
+                <a>
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="../Image/Img_Extension/ex07.svg" alt="img">
+                    </div>
+                    <div class="TitleAll">
+                        <div class="Tittle">Chứng nhận</div>
+                    </div>
+                </a>
+            </div>
+            <div class="Cuahang d-flex">
+                <div class="item-Cuahang"><img src="../Image/Img_Home/Store.png" alt="img"></div>
+                <div class="item-Cuahang"> <img src="../Image/Img_Home/Store.png" alt="img"></div>
+                <div class="item-Cuahang"><img src="../Image/Img_Home/Store.png" alt="img"></div>
+
+                <!-- <div class="item-Cuahang"></div>
+                <div class="item-Cuahang"><img src="../Image/Img_Home/Store.svg" alt="img"></div>
+                <div class="item-Cuahang"><img src="../Image/Img_Home/Store.svg" alt="img"></div> -->
+            </div>
+            <div class="TopCuaHang d-flex flex-column">
+                <h2>Top cửa hàng uy tín</h2>
+                <div class="ContentTopCH d-flex ">
+                    <div class="ContentCH1 d-flex flex-column">
+                        <div class="Logo-topCH">
+                            <img style="width: 100%;" src="../Image/Img_Home/TopCuaHang/Logo01.svg">
+                        </div>
+                        <div class="Content-logo">
+                            <span class="Text-LongBien">
+                                <p>Ommani Mail Nguyễn Văn Linh Long Biên</p>
+                            </span>
+                            <span class="Text-Like d-flex">
+                                <span><img style="width: 100%;" src="../Image/Img_Home/TopCuaHang/icon_Star.svg"></span>
+                                <p>4.8(11k+)</p>
+                            </span>
+                            <span><button class="Text-Button">Đã Chứng Nhận</button></span>
+                        </div>
+                    </div>
+                    <div class="ContentCH1 d-flex flex-column">
+                        <div class="Logo-topCH">
+                            <img style="width: 100%;" src="../Image/Img_Home/TopCuaHang/Logo02.svg">
+                        </div>
+                        <div class="Content-logo">
+                            <span class="Text-LongBien">
+                                <p>Ommani Mail Nguyễn Văn Linh Long Biên</p>
+                            </span>
+                            <span class="Text-Like d-flex">
+                                <span><img style="width: 100%;" src="../Image/Img_Home/TopCuaHang/icon_Star.svg"></span>
+                                <p>4.8(11k+)</p>
+                            </span>
+                            <span><button class="Text-Button">Đã Chứng Nhận</button></span>
+                        </div>
+                    </div>
+                    <div class="ContentCH1 d-flex flex-column">
+                        <div class="Logo-topCH">
+                            <img style="width: 100%;" src="../Image/Img_Home/TopCuaHang/Logo03.svg">
+                        </div>
+                        <div class="Content-logo">
+                            <span class="Text-LongBien">
+                                <p>Ommani Mail Nguyễn Văn Linh Long Biên</p>
+                            </span>
+                            <span class="Text-Like d-flex">
+                                <span><img style="width: 100%;" src="../Image/Img_Home/TopCuaHang/icon_Star.svg"></span>
+                                <p>4.8(11k+)</p>
+                            </span>
+                            <span><button class="Text-Button">Đã Chứng Nhận</button></span>
+                        </div>
+                    </div>
+                    <div class="ContentCH1 d-flex flex-column">
+                        <div class="Logo-topCH">
+                            <img style="width: 100%;" src="../Image/Img_Home/TopCuaHang/Logo04.svg">
+                        </div>
+                        <div class="Content-logo">
+                            <span class="Text-LongBien">
+                                <p>Ommani Mail Nguyễn Văn Linh Long Biên</p>
+                            </span>
+                            <span class="Text-Like d-flex">
+                                <span><img style="width: 100%;" src="../Image/Img_Home/TopCuaHang/icon_Star.svg"></span>
+                                <p>4.8(11k+)</p>
+                            </span>
+                            <span><button class="Text-Button">Đã Chứng Nhận</button></span>
+                        </div>
+                    </div>
+                    <div class="ContentCH1 d-flex flex-column">
+                        <div class="Logo-topCH">
+                            <img style="width: 100%;" src="../Image/Img_Home/TopCuaHang/Logo05.svg">
+                        </div>
+                        <div class="Content-logo">
+                            <span class="Text-LongBien">
+                                <p>Ommani Mail Nguyễn Văn Linh Long Biên</p>
+                            </span>
+                            <span class="Text-Like d-flex">
+                                <span><img style="width: 100%;" src="../Image/Img_Home/TopCuaHang/icon_Star.svg"></span>
+                                <p>4.8(11k+)</p>
+                            </span>
+                            <span><button class="Text-Button">Đã Chứng Nhận</button></span>
+                        </div>
+                    </div>
+                    <div class="ContentCH1 d-flex flex-column">
+                        <div class="Logo-topCH">
+                            <img style="width: 100%;" src="../Image/Img_Home/TopCuaHang/Logo06.svg">
+                        </div>
+                        <div class="Content-logo">
+                            <span class="Text-LongBien">
+                                <p>Ommani Mail Nguyễn Văn Linh Long Biên</p>
+                            </span>
+                            <span class="Text-Like d-flex">
+                                <span><img style="width: 100%;" src="../Image/Img_Home/TopCuaHang/icon_Star.svg"></span>
+                                <p>4.8(11k+)</p>
+                            </span>
+                            <span><button class="Text-Button">Đã Chứng Nhận</button></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Find_DanhMuc d-flex flex-column">
+                <h2>Tìm theo danh mục</h2>
+                <div class="Danhmuc">
+                    <div class=" abc d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class=" abc d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <span><img class="img-danhmuc" src="../Image/Img_Home/DanhMuc/Danhmuc1.svg"></span>
+                        <span class="Text-danhmuc">
+                            <p>Trái cây</p>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="title-khampha">
+                <h2>Khám phá thêm</h2>
+            </div>
+            <div class="content-khampha">
+
+                <div class="khampha-Thachbanlong d-flex flex-column">
+                    <div class="logo-an d-flex">
+                        <div><img src="../Image/Img_Home/Ommani_thacnbanlong/logoAn.svg"></div>
+                        <div class="content-logo d-flex flex-column">
+                            <div class="nth-p">
+                                <p class="abc">Ommani Mall Thạch Bàn Long</p>
+                                <div class="star d-flex align-items-center ">
+                                    <span><img class="star-img" src="../Image/Img_Home/Ommani_thacnbanlong/star.svg">
+                                    </span>
+                                    <span class="d-flex">
+                                        <p>4.8(11k+)
+                                        <p style="color: green;">TP.Hồ Chí Minh</p>
+                                        </p>
+                                    </span>
+                                </div>
+                                <img class="Toplogo" src="../Image/Img_Home/Ommani_thacnbanlong/toplogoAn.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sanpham-xucxich d-flex" style="gap: 10px;">
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/xucxichducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/rauducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/nuocngot.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="khampha-Thachbanlong d-flex flex-column">
+                    <div class="logo-an d-flex">
+                        <div><img src="../Image/Img_Home/Ommani_thacnbanlong/logoAn.svg"></div>
+                        <div class="content-logo d-flex flex-column">
+                            <div class="nth-p">
+                                <p class="abc">Ommani Mall Thạch Bàn Long</p>
+                                <div class="star d-flex align-items-center ">
+                                    <span><img class="star-img" src="../Image/Img_Home/Ommani_thacnbanlong/star.svg">
+                                    </span>
+                                    <span class="d-flex">
+                                        <p>4.8(11k+)
+                                        <p style="color: green;">TP.Hồ Chí Minh</p>
+                                        </p>
+                                    </span>
+                                </div>
+                                <img class="Toplogo" src="../Image/Img_Home/Ommani_thacnbanlong/toplogoAn.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sanpham-xucxich d-flex" style="gap: 10px;">
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/xucxichducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/rauducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/nuocngot.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="khampha-Thachbanlong d-flex flex-column">
+                    <div class="logo-an d-flex">
+                        <div><img src="../Image/Img_Home/Ommani_thacnbanlong/logoAn.svg"></div>
+                        <div class="content-logo d-flex flex-column">
+                            <div class="nth-p">
+                                <p class="abc">Ommani Mall Thạch Bàn Long</p>
+                                <div class="star d-flex align-items-center ">
+                                    <span><img class="star-img" src="../Image/Img_Home/Ommani_thacnbanlong/star.svg">
+                                    </span>
+                                    <span class="d-flex">
+                                        <p>4.8(11k+)
+                                        <p style="color: green;">TP.Hồ Chí Minh</p>
+                                        </p>
+                                    </span>
+                                </div>
+                                <img class="Toplogo" src="../Image/Img_Home/Ommani_thacnbanlong/toplogoAn.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sanpham-xucxich d-flex" style="gap: 10px;">
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/xucxichducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/rauducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/nuocngot.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="khampha-Thachbanlong d-flex flex-column">
+                    <div class="logo-an d-flex">
+                        <div><img src="../Image/Img_Home/Ommani_thacnbanlong/logoAn.svg"></div>
+                        <div class="content-logo d-flex flex-column">
+                            <div class="nth-p">
+                                <p class="abc">Ommani Mall Thạch Bàn Long</p>
+                                <div class="star d-flex align-items-center ">
+                                    <span><img class="star-img" src="../Image/Img_Home/Ommani_thacnbanlong/star.svg">
+                                    </span>
+                                    <span class="d-flex">
+                                        <p>4.8(11k+)
+                                        <p style="color: green;">TP.Hồ Chí Minh</p>
+                                        </p>
+                                    </span>
+                                </div>
+                                <img class="Toplogo" src="../Image/Img_Home/Ommani_thacnbanlong/toplogoAn.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sanpham-xucxich d-flex" style="gap: 10px;">
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/xucxichducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/rauducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/nuocngot.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="khampha-Thachbanlong d-flex flex-column">
+                    <div class="logo-an d-flex">
+                        <div><img src="../Image/Img_Home/Ommani_thacnbanlong/logoAn.svg"></div>
+                        <div class="content-logo d-flex flex-column">
+                            <div class="nth-p">
+                                <p class="abc">Ommani Mall Thạch Bàn Long</p>
+                                <div class="star d-flex align-items-center ">
+                                    <span><img class="star-img" src="../Image/Img_Home/Ommani_thacnbanlong/star.svg">
+                                    </span>
+                                    <span class="d-flex">
+                                        <p>4.8(11k+)
+                                        <p style="color: green;">TP.Hồ Chí Minh</p>
+                                        </p>
+                                    </span>
+                                </div>
+                                <img class="Toplogo" src="../Image/Img_Home/Ommani_thacnbanlong/toplogoAn.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sanpham-xucxich d-flex" style="gap: 10px;">
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/xucxichducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/rauducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/nuocngot.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="khampha-Thachbanlong d-flex flex-column">
+                    <div class="logo-an d-flex">
+                        <div><img src="../Image/Img_Home/Ommani_thacnbanlong/logoAn.svg"></div>
+                        <div class="content-logo d-flex flex-column">
+                            <div class="nth-p">
+                                <p class="abc">Ommani Mall Thạch Bàn Long</p>
+                                <div class="star d-flex align-items-center ">
+                                    <span><img class="star-img" src="../Image/Img_Home/Ommani_thacnbanlong/star.svg">
+                                    </span>
+                                    <span class="d-flex">
+                                        <p>4.8(11k+)
+                                        <p style="color: green;">TP.Hồ Chí Minh</p>
+                                        </p>
+                                    </span>
+                                </div>
+                                <img class="Toplogo" src="../Image/Img_Home/Ommani_thacnbanlong/toplogoAn.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sanpham-xucxich d-flex" style="gap: 10px;">
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/xucxichducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/rauducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/nuocngot.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="khampha-Thachbanlong d-flex flex-column">
+                    <div class="logo-an d-flex">
+                        <div><img src="../Image/Img_Home/Ommani_thacnbanlong/logoAn.svg"></div>
+                        <div class="content-logo d-flex flex-column">
+                            <div class="nth-p">
+                                <p class="abc">Ommani Mall Thạch Bàn Long</p>
+                                <div class="star d-flex align-items-center ">
+                                    <span><img class="star-img" src="../Image/Img_Home/Ommani_thacnbanlong/star.svg">
+                                    </span>
+                                    <span class="d-flex">
+                                        <p>4.8(11k+)
+                                        <p style="color: green;">TP.Hồ Chí Minh</p>
+                                        </p>
+                                    </span>
+                                </div>
+                                <img class="Toplogo" src="../Image/Img_Home/Ommani_thacnbanlong/toplogoAn.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sanpham-xucxich d-flex" style="gap: 10px;">
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/xucxichducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/rauducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/nuocngot.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="khampha-Thachbanlong d-flex flex-column">
+                    <div class="logo-an d-flex">
+                        <div><img src="../Image/Img_Home/Ommani_thacnbanlong/logoAn.svg"></div>
+                        <div class="content-logo d-flex flex-column">
+                            <div class="nth-p">
+                                <p class="abc">Ommani Mall Thạch Bàn Long</p>
+                                <div class="star d-flex align-items-center ">
+                                    <span><img class="star-img" src="../Image/Img_Home/Ommani_thacnbanlong/star.svg">
+                                    </span>
+                                    <span class="d-flex">
+                                        <p>4.8(11k+)
+                                        <p style="color: green;">TP.Hồ Chí Minh</p>
+                                        </p>
+                                    </span>
+                                </div>
+                                <img class="Toplogo" src="../Image/Img_Home/Ommani_thacnbanlong/toplogoAn.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sanpham-xucxich d-flex" style="gap: 10px;">
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/xucxichducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/rauducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/nuocngot.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="khampha-Thachbanlong d-flex flex-column">
+                    <div class="logo-an d-flex">
+                        <div><img src="../Image/Img_Home/Ommani_thacnbanlong/logoAn.svg"></div>
+                        <div class="content-logo d-flex flex-column">
+                            <div class="nth-p">
+                                <p class="abc">Ommani Mall Thạch Bàn Long</p>
+                                <div class="star d-flex align-items-center ">
+                                    <span><img class="star-img" src="../Image/Img_Home/Ommani_thacnbanlong/star.svg">
+                                    </span>
+                                    <span class="d-flex">
+                                        <p>4.8(11k+)
+                                        <p style="color: green;">TP.Hồ Chí Minh</p>
+                                        </p>
+                                    </span>
+                                </div>
+                                <img class="Toplogo" src="../Image/Img_Home/Ommani_thacnbanlong/toplogoAn.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sanpham-xucxich d-flex" style="gap: 10px;">
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/xucxichducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/rauducviet.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                        <div class="xucxich-ducviet d-flex flex-column">
+                            <div class="customFont-xx d-flex flex-column" style="gap: 10px;">
+                                <img src="../Image/Img_Home/Ommani_thacnbanlong/nuocngot.svg">
+                                <p>Xúc xích Đức Việt gói 16 hông khói...</p>
+                                <p>Đã bán 12</p>
+                                <p>89.000 đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+            <div class="btnXemthem">
+                <button class="btn">
+                    <p>Xem thêm</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="content d-flex">
+                <div class="content1-footer ">
+                    <p>Hỗ trợ khách hàng</p>
+                    <ul>
+                        <li><a href="#">Hot-Line: 1900-6789</a></li>
+                        <li><a href="#">(1000đ/phút, 8-21h kể cả T7,CN)</a></li>
+                        <li><a href="#">Các câu hỏi thường gặp</a></li>
+                        <li><a href="#">Gửi yêu cầu hỗ trợ</a></li>
+                        <li><a href="#">Hướng dẫn đặt hàng</a></li>
+                        <li><a href="#">Phương thức vận chuyển</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Hàng nhập khẩu</a></li>
+                        <li><a href="#">Hỗ trợ khách hàng hotro@ommani.vn</a></li>
+                        <li><a href="#">Báo lỗi bảo mật security@ommani.vn</a></li>
+
+                    </ul>
+                </div>
+                <div class="content1-footer ">
+                    <p>Về Ommani Life</p>
+                    <ul>
+
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Chính sách bảo mật, thanh toán</a></li>
+                        <li><a href="#">Bảo mật thông tin cá nhân</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Bán hàng cho doanh nghiệp</a></li>
+                        <li><a href="#">Điều kiện vận chuyển</a></li>
+                    </ul>
+                </div>
+                <div class="content2-footer ">
+                    <p>Hợp tác và liên kết</p>
+                    <ul>
+                        <li><a href="#">Quy chế hoạt động sàn GDTMDT</a></li>
+                        <li><a href="#">Bán hàng Ommani</a></li>
+                    </ul>
+                    <p>Chứng nhận bởi</p>
+                    <img class="img-chungnhan" src="../Image/Img_Footer/logoChungnhan1.svg" alt="img">
+                    <img class="img-chungnhan" src="../Image/Img_Footer/logoChungnhan2.svg" alt="img">
+                    <img class="img-chungnhan" style="margin-top: 20px;" src="../Image/Img_Footer/logoChungnhan3.svg"
+                        alt="img">
+                </div>
+                <div class="content2-footer ">
+                    <p>Phương thức thanh toán</p>
+                    <p><img src="../Image/Img_Footer/Phuongthucthoanhtoan.PNG"></p>
+                    <p>Dịch vụ giao hàng</p>
+                    <img class="img-chungnhan" src="../Image/Img_Footer/giaohang.svg" alt="img">
+
+                </div>
+                <div class="content2-footer ">
+                    <p>Kết nối với chúng tôi</p>
+                    <div><img src="../Image/Img_Footer/fb.svg">
+                        <img src="../Image/Img_Footer/ytb.svg">
+                        <img src="../Image/Img_Footer/zalo.svg">
+                    </div>
+                    <p style="margin-top: 20px;">Tải ứng dụng trên điện thoại</p>
+                    <div class="d-flex">
+                        <img class="img-chungnhan" src="../Image/Img_Footer/qr.svg" alt="img">
+                        <div class="d-flex flex-column">
+                            <img class="img-chungnhan" src="../Image/Img_Footer/gg.svg" alt="img">
+                            <img class="img-chungnhan" src="../Image/Img_Footer/app.svg" alt="img">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="diachi">
+                <ul>
+                    <li><a href="#">Trụ sở chính: 43 Định Công , Q.Hoàng Mai, TP.Hà Nội</a></li>
+                    <li><a href="#">Giấy chứng nhận đăng kí kinh doanh số:00000000000999999999999 do cơ sở kế
+                            hoạch và đầu tư Hà Nộicấp 09/08/2024</a></li>
+                    <li><a href="#">@2022-Bản quyền công ty TNHH Ommani</a></li>
+                </ul>
+
+            </div>
+            <div class="last-itemFooter">
+                <p>©2022 - Bản quyền của Công ty TNHH Ommani</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>

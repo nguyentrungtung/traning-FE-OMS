@@ -1,0 +1,251 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(Roboto-Regular.ttf);
+}
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.Boloc .container {
+  padding: 0;
+}
+.Boloc .container .Above_Banner {
+  gap: 24px;
+}
+.Boloc .container .Above_Banner .icon-Tatca {
+  gap: 6px;
+}
+.Boloc .container .Above_Banner .icon-Tatca p {
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.41px;
+  text-align: left;
+  color: #007b2b;
+}
+.Boloc .container .Above_Banner .icon-Timtheovitri {
+  gap: 6px;
+}
+.Boloc .container .Above_Banner .icon-Timtheovitri p {
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.41px;
+  text-align: left;
+  color: #007b2b;
+}
+
+.main {
+  background-color: #f5f5f7;
+}
+.main .container {
+  padding: 0;
+}
+.main .container .carousel .carousel-indicators button {
+  width: 16px;
+  height: 16px;
+  border: 1px #ffffff;
+  border-radius: 50%;
+}
+.main .Below_Banner {
+  width: 80%;
+  margin: 0 auto 20px;
+  background-color: white;
+  height: 120px;
+  gap: 80px;
+  padding-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.main .Below_Banner a {
+  text-decoration: none;
+}
+.main .Below_Banner a .TitleAll .Tittle {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+  text-align: center;
+  color: black;
+  padding-top: 12px;
+}
+.main .Cuahang {
+  gap: 10px;
+}
+.main .Cuahang .item-Cuahang {
+  background-color: blue;
+  width: 33%;
+}
+.main .Cuahang .item-Cuahang img {
+  width: 100%;
+  height: 100%;
+}
+.main .TopCuaHang {
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 3px;
+}
+.main .TopCuaHang h2 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 25.78px;
+  text-align: left;
+  color: #1a1a1a;
+}
+.main .TopCuaHang .ContentTopCH {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 22px;
+}
+.main .TopCuaHang .ContentTopCH .ContentCH1 {
+  border-radius: 6px;
+  opacity: 0px;
+  border: 1px solid #dfdfdf;
+}
+.main .TopCuaHang .ContentTopCH .ContentCH1 .Content-logo {
+  margin: 0 14px 14px 8px;
+}
+.main .TopCuaHang .ContentTopCH .ContentCH1 .Content-logo .Text-LongBien {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.8px;
+  text-align: left;
+  color: #1a1a1a;
+}
+.main .TopCuaHang .ContentTopCH .ContentCH1 .Content-logo .Text-Like {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.06px;
+  text-align: left;
+  color: #969696;
+}
+.main .TopCuaHang .ContentTopCH .ContentCH1 .Content-logo .Text-Button {
+  width: 110px;
+  border: none;
+  height: 21px;
+  padding: 1px 0px 0px 0px;
+  gap: 10px;
+  border-radius: 3px;
+  opacity: 0px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.06px;
+  text-align: left;
+  color: #2e9dff;
+}
+.main .Find_DanhMuc {
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 3px;
+}
+.main .Find_DanhMuc h2 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 25.78px;
+  text-align: left;
+  color: #1a1a1a;
+}
+.main .Find_DanhMuc .Danhmuc {
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.main .Find_DanhMuc .Danhmuc .Text-danhmuc {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  text-align: center;
+  margin-top: 14px;
+}
+.main .title-khampha {
+  background-color: white;
+  border-radius: 3px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.main .title-khampha h2 {
+  padding: 7px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 25.78px;
+  text-align: left;
+  color: #1a1a1a;
+}
+.main .content-khampha {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.main .content-khampha .khampha-Thachbanlong {
+  background-color: white;
+  border-radius: 3px;
+  padding: 10px;
+}
+.main .content-khampha .khampha-Thachbanlong .logo-an {
+  gap: 15px;
+}
+.main .content-khampha .khampha-Thachbanlong .logo-an .content-logo {
+  gap: 10px;
+}
+.main .content-khampha .khampha-Thachbanlong .logo-an .content-logo .nth-p .abc {
+  padding-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.41px;
+  text-align: left;
+}
+.main .content-khampha .khampha-Thachbanlong .logo-an .content-logo .nth-p p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+}
+.main .content-khampha .khampha-Thachbanlong .sanpham-xucxich .xucxich-ducviet .customFont-xx p:nth-child(2) {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #1a1a1a;
+  margin: 0;
+}
+.main .content-khampha .khampha-Thachbanlong .sanpham-xucxich .xucxich-ducviet .customFont-xx p:nth-child(3) {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+  text-align: left;
+  color: #7b7b7b;
+  margin: 0;
+}
+.main .content-khampha .khampha-Thachbanlong .sanpham-xucxich .xucxich-ducviet .customFont-xx p:nth-child(4) {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.75px;
+  text-align: left;
+  margin: 0;
+}
+.main .btnXemthem {
+  display: flex;
+}
+.main .btnXemthem button {
+  width: 20%;
+  margin: 30px auto;
+  background-color: #ffffff;
+  border: solid 1px #2e9dff;
+  border-radius: 6px;
+}
+.main .btnXemthem button p {
+  height: 30px;
+  margin: auto;
+  padding: 8px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  color: #2e9dff;
+  text-transform: uppercase;
+}/*# sourceMappingURL=Home.css.map */

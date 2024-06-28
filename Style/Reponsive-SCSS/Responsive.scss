@@ -1,0 +1,189 @@
+//1360px
+@media only screen and (max-width: 1410px) {
+    header {
+        .container {
+            .Ommani-Header {
+                .Header-Content {
+                    gap: 12px;
+                }
+            }
+        }
+    }
+    .main {
+        // .container {
+        //     // .Below_Banner {
+        //     // }
+        //     .Cuahang {
+        //         .hinhanh {
+        //             img {
+        //                 width: 99%;
+        //                 height: 100%;
+        //             }
+        //         }
+        //     }
+        // }
+        $container-max-widths: 1320px;
+    }
+}
+@media only screen and (max-width: 1280px) {
+}
+//1280
+//1140
+//992
+//768-Tablet
+//550
+//responsive cho css
+
+//Moblile: width <390*/ (46.1875 *16= 740px)
+@media only screen and (max-width: 392px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+    header {
+        .container {
+            .Ommani-Header {
+                width: 100%;
+
+                .Nav-Header {
+                    display: none !important;
+                }
+                .Header-Content {
+                    display: flex !important ;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    #header-icon1 {
+                        order: 2;
+                    }
+                    #header-icon2 {
+                        order: 4;
+                    }
+                    #header-icon3 {
+                        order: 3;
+                        div img {
+                            margin-top: 20px;
+                        }
+                    }
+                    #header-icon4 {
+                        order: 1;
+                        display: block;
+                        padding: 0;
+                        margin: 0;
+                    }
+                    .Map-Header {
+                        display: none !important;
+                    }
+                    .Icon-Header {
+                        .img-icon {
+                            .img-iconchuong {
+                                display: none;
+                            }
+                        }
+                        .link_DangNhap {
+                            display: none !important;
+                        }
+                    }
+
+                    .Search-Header {
+                        .Search-Block {
+                            width: 100% !important;
+                            border: none;
+                            border-radius: none;
+                            input {
+                                margin-left: 10px !important;
+                            }
+
+                            .form-select {
+                                display: none;
+                            }
+                            span .img-btnFin {
+                                background-color: white;
+                            }
+                            #btnFind1 {
+                                order: 1;
+                            }
+                        }
+
+                        .Search-Fast ul.list-search {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //main
+    .Boloc {
+        .container {
+            .Above_Banner {
+                display: none !important;
+            }
+        }
+    }
+    .main {
+        .Home_Banner {
+            background-color: #1ab357;
+            height: 5%;
+
+            .carousel {
+                .carousel-inner {
+                    width: 95%;
+                    margin: 10px auto;
+                }
+            }
+        }
+        .Below_Banner {
+            width: 95%;
+            height: 30%;
+            margin: 0 auto;
+            overflow-x: auto;
+            gap: 10px;
+        }
+        .Cuahang {
+            display: none !important;
+        }
+        .TopCuaHang {
+            .ContentTopCH {
+                overflow-x: auto;
+            }
+        }
+        .Find_DanhMuc {
+            .Danhmuc {
+                overflow-x: auto;
+            }
+        }
+        .content-khampha {
+            padding: 10px;
+            grid-template-rows: repeat(4, 1fr);
+            overflow-x: auto;
+        }
+    }
+
+    .footer {
+        height: 5%;
+        .content {
+            display: none !important;
+        }
+        .diachi {
+            display: none !important;
+        }
+        .last-itemFooter {
+            width: 100%;
+            background: #1ab357;
+            display: block;
+
+            p {
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 16.41px;
+                text-align: left;
+                color: white;
+            }
+        }
+    }
+}

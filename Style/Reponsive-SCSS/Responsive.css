@@ -1,0 +1,125 @@
+@media only screen and (max-width: 1410px) {
+  header .container .Ommani-Header .Header-Content {
+    gap: 12px;
+  }
+}
+@media only screen and (max-width: 392px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  header .container .Ommani-Header {
+    width: 100%;
+  }
+  header .container .Ommani-Header .Nav-Header {
+    display: none !important;
+  }
+  header .container .Ommani-Header .Header-Content {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .container .Ommani-Header .Header-Content #header-icon1 {
+    order: 2;
+  }
+  header .container .Ommani-Header .Header-Content #header-icon2 {
+    order: 4;
+  }
+  header .container .Ommani-Header .Header-Content #header-icon3 {
+    order: 3;
+  }
+  header .container .Ommani-Header .Header-Content #header-icon3 div img {
+    margin-top: 20px;
+  }
+  header .container .Ommani-Header .Header-Content #header-icon4 {
+    order: 1;
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+  header .container .Ommani-Header .Header-Content .Map-Header {
+    display: none !important;
+  }
+  header .container .Ommani-Header .Header-Content .Icon-Header .img-icon .img-iconchuong {
+    display: none;
+  }
+  header .container .Ommani-Header .Header-Content .Icon-Header .link_DangNhap {
+    display: none !important;
+  }
+  header .container .Ommani-Header .Header-Content .Search-Header .Search-Block {
+    width: 100% !important;
+    border: none;
+    border-radius: none;
+  }
+  header .container .Ommani-Header .Header-Content .Search-Header .Search-Block input {
+    margin-left: 10px !important;
+  }
+  header .container .Ommani-Header .Header-Content .Search-Header .Search-Block .form-select {
+    display: none;
+  }
+  header .container .Ommani-Header .Header-Content .Search-Header .Search-Block span .img-btnFin {
+    background-color: white;
+  }
+  header .container .Ommani-Header .Header-Content .Search-Header .Search-Block #btnFind1 {
+    order: 1;
+  }
+  header .container .Ommani-Header .Header-Content .Search-Header .Search-Fast ul.list-search {
+    display: none !important;
+  }
+  .Boloc .container .Above_Banner {
+    display: none !important;
+  }
+  .main .Home_Banner {
+    background-color: #1ab357;
+    height: 5%;
+  }
+  .main .Home_Banner .carousel .carousel-inner {
+    width: 95%;
+    margin: 10px auto;
+  }
+  .main .Below_Banner {
+    width: 95%;
+    height: 30%;
+    margin: 0 auto;
+    overflow-x: auto;
+    gap: 10px;
+  }
+  .main .Cuahang {
+    display: none !important;
+  }
+  .main .TopCuaHang .ContentTopCH {
+    overflow-x: auto;
+  }
+  .main .Find_DanhMuc .Danhmuc {
+    overflow-x: auto;
+  }
+  .main .content-khampha {
+    padding: 10px;
+    grid-template-rows: repeat(4, 1fr);
+    overflow-x: auto;
+  }
+  .footer {
+    height: 5%;
+  }
+  .footer .content {
+    display: none !important;
+  }
+  .footer .diachi {
+    display: none !important;
+  }
+  .footer .last-itemFooter {
+    width: 100%;
+    background: #1ab357;
+    display: block;
+  }
+  .footer .last-itemFooter p {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    text-align: left;
+    color: white;
+  }
+}/*# sourceMappingURL=Responsive.css.map */
