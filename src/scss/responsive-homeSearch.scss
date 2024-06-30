@@ -26,6 +26,11 @@
       padding-bottom: 30px;
       transform: translateX(100%);
       transition: transform 600ms ease-in-out;
+      scrollbar-width: none;
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
 
       .filter {
         .filter-title {

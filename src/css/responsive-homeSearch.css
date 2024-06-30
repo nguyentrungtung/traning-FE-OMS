@@ -272,7 +272,10 @@ input[type="number"] {
     overflow-y: scroll;
     padding-bottom: 30px;
     transform: translateX(100%);
-    transition: transform 600ms ease-in-out; }
+    transition: transform 600ms ease-in-out;
+    scrollbar-width: none; }
+    .homeSearch .sidebar ::-webkit-scrollbar {
+      display: none; }
     .homeSearch .sidebar .filter .filter-title {
       gap: 20px; }
       .homeSearch .sidebar .filter .filter-title .btnFilter {
