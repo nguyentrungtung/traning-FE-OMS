@@ -822,6 +822,97 @@ nav .pagination {
     border-bottom: 1px solid #29ab56;
     transform: translateY(1px); }
 
+.postList, .producDetail .productInfo .productInfo_content1 .postList, .producDetail .productInfo .productInfo_content2 .postList {
+  display: flex;
+  flex-direction: column; }
+  .postList .postItem, .producDetail .productInfo .productInfo_content1 .postList .postItem, .producDetail .productInfo .productInfo_content2 .postList .postItem {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px; }
+    .postList .postItem .postItem_user, .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_user, .producDetail .productInfo .productInfo_content2 .postList .postItem .postItem_user, .postList .postItem .postItem_admin, .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin, .producDetail .productInfo .productInfo_content2 .postList .postItem .postItem_admin {
+      display: flex;
+      flex-direction: column;
+      gap: 10px; }
+      .postList .postItem .postItem_user .l1, .postList .postItem .postItem_admin .l1 {
+        display: flex;
+        align-items: center;
+        gap: 10px; }
+        .postList .postItem .postItem_user .l1 img, .postList .postItem .postItem_admin .l1 img {
+          width: 24px;
+          height: 24px;
+          object-fit: contain; }
+        .postList .postItem .postItem_user .l1 span:first-of-type, .postList .postItem .postItem_admin .l1 span:first-of-type {
+          font-family: Roboto;
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 21px;
+          text-align: left;
+          color: #444444; }
+        .postList .postItem .postItem_user .l1 span:last-of-type, .postList .postItem .postItem_admin .l1 span:last-of-type {
+          display: flex;
+          align-items: center;
+          gap: 8px; }
+          .postList .postItem .postItem_user .l1 span:last-of-type img, .postList .postItem .postItem_admin .l1 span:last-of-type img {
+            max-width: 14px;
+            max-height: 14px; }
+      .postList .postItem .postItem_user .l2, .postList .postItem .postItem_admin .l2 {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+        color: #515154;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px; }
+        .postList .postItem .postItem_user .l2 img, .postList .postItem .postItem_admin .l2 img {
+          width: 76px;
+          height: 76px;
+          object-fit: contain; }
+      .postList .postItem .postItem_user .l3 .item:last-of-type, .postList .postItem .postItem_admin .l3 .item:last-of-type {
+        color: #888888; }
+      .postList .postItem .postItem_user .l3 .item, .postList .postItem .postItem_admin .l3 .item {
+        display: flex;
+        align-items: center;
+        gap: 6px; }
+        .postList .postItem .postItem_user .l3 .item span, .postList .postItem .postItem_admin .l3 .item span {
+          font-family: Roboto;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 20px;
+          text-align: left; }
+    .postList .postItem .postItem_admin, .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin, .producDetail .productInfo .productInfo_content2 .postList .postItem .postItem_admin {
+      border-radius: 0px 16px 16px 16px;
+      width: 100%;
+      gap: 10px;
+      padding-left: 16px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      background-color: #f5f5f7; }
+      .postList .postItem .postItem_admin .l1 span:last-of-type {
+        font-family: Roboto;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: left;
+        color: #ff4127;
+        padding-left: 6px;
+        padding-right: 6px;
+        background-color: #fff; }
+      .postList .postItem .postItem_admin .l2 {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+        color: #515154; }
+  .postList .divideH, .producDetail .productInfo .productInfo_content1 .postList .divideH, .producDetail .productInfo .productInfo_content2 .postList .divideH {
+    background-color: #efefef;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+
 .producDetail {
   display: flex;
   flex-direction: column; }
@@ -1231,6 +1322,9 @@ nav .pagination {
                 width: 16px;
                 height: 16px;
                 object-fit: contain; }
+          .producDetail .productInfo .productInfo_content1 .header .stars .divideV {
+            margin-left: 24px;
+            margin-right: 24px; }
           .producDetail .productInfo .productInfo_content1 .header .stars .list {
             display: flex;
             flex-direction: column;
@@ -1260,96 +1354,6 @@ nav .pagination {
           grid-template-columns: repeat(8, 1fr);
           column-gap: 14px;
           row-gap: 10px; }
-      .producDetail .productInfo .productInfo_content1 .postList {
-        display: flex;
-        flex-direction: column; }
-        .producDetail .productInfo .productInfo_content1 .postList .postItem {
-          display: flex;
-          flex-direction: column;
-          align-items: start;
-          gap: 15px; }
-          .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_user, .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin {
-            display: flex;
-            flex-direction: column;
-            gap: 10px; }
-            .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_user .l1, .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin .l1 {
-              display: flex;
-              align-items: center;
-              gap: 10px; }
-              .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_user .l1 img, .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin .l1 img {
-                width: 24px;
-                height: 24px;
-                object-fit: contain; }
-              .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_user .l1 span:first-of-type, .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin .l1 span:first-of-type {
-                font-family: Roboto;
-                font-size: 15px;
-                font-weight: 500;
-                line-height: 21px;
-                text-align: left;
-                color: #444444; }
-              .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_user .l1 span:last-of-type, .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin .l1 span:last-of-type {
-                display: flex;
-                align-items: center;
-                gap: 8px; }
-                .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_user .l1 span:last-of-type img, .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin .l1 span:last-of-type img {
-                  max-width: 14px;
-                  max-height: 14px; }
-            .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_user .l2, .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin .l2 {
-              font-family: Roboto;
-              font-size: 13px;
-              font-weight: 400;
-              line-height: 20px;
-              text-align: left;
-              color: #515154;
-              display: flex;
-              flex-direction: column;
-              align-items: start;
-              gap: 10px; }
-              .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_user .l2 img, .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin .l2 img {
-                width: 76px;
-                height: 76px;
-                object-fit: contain; }
-            .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_user .l3 .item:last-of-type, .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin .l3 .item:last-of-type {
-              color: #888888; }
-            .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_user .l3 .item, .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin .l3 .item {
-              display: flex;
-              align-items: center;
-              gap: 6px; }
-              .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_user .l3 .item span, .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin .l3 .item span {
-                font-family: Roboto;
-                font-size: 13px;
-                font-weight: 400;
-                line-height: 20px;
-                text-align: left; }
-          .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin {
-            border-radius: 0px 16px 16px 16px;
-            width: 100%;
-            gap: 10px;
-            padding-left: 16px;
-            padding-top: 16px;
-            padding-bottom: 16px;
-            background-color: #f5f5f7; }
-            .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin .l1 span:last-of-type {
-              font-family: Roboto;
-              font-size: 11px;
-              font-weight: 400;
-              line-height: 16px;
-              text-align: left;
-              color: #ff4127;
-              padding-left: 6px;
-              padding-right: 6px;
-              background-color: #fff; }
-            .producDetail .productInfo .productInfo_content1 .postList .postItem .postItem_admin .l2 {
-              font-family: Roboto;
-              font-size: 13px;
-              font-weight: 400;
-              line-height: 20px;
-              text-align: left;
-              color: #515154; }
-        .producDetail .productInfo .productInfo_content1 .postList .divideH {
-          background-color: #efefef;
-          margin-top: 20px;
-          margin-bottom: 20px; }
     .producDetail .productInfo .productInfo_content2 {
       padding-top: 30px;
       padding-left: 0;
@@ -1360,7 +1364,8 @@ nav .pagination {
         height: 131px;
         width: 100%;
         border: 1px solid #d2d2d7;
-        border-radius: 6px; }
+        border-radius: 6px;
+        margin-bottom: 32px; }
         .producDetail .productInfo .productInfo_content2 form textarea {
           flex: 1;
           width: 100%;
@@ -1402,6 +1407,18 @@ nav .pagination {
             border-radius: 4px; }
         .producDetail .productInfo .productInfo_content2 form textarea::placeholder {
           color: #86868b; }
+      .producDetail .productInfo .productInfo_content2 .postList .postItem .postItem_user .l3 .item:first-of-type, .producDetail .productInfo .productInfo_content2 .postList .postItem .postItem_admin .l3 .item:first-of-type {
+        color: #0066cc; }
+      .producDetail .productInfo .productInfo_content2 .postList .postItem .postItem_admin .l2 {
+        display: flex;
+        flex-direction: column;
+        gap: 0px; }
+      .producDetail .productInfo .productInfo_content2 .postList .postItem .postItem_admin .l3 {
+        display: flex;
+        align-items: center;
+        gap: 16px; }
+        .producDetail .productInfo .productInfo_content2 .postList .postItem .postItem_admin .l3 span {
+          color: #0066cc; }
   .producDetail .relatedProducts {
     padding: 57px 25px 0px 25px;
     background-color: #fff;

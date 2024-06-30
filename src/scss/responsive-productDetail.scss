@@ -205,6 +205,7 @@
       border-radius: 0;
       .productInfo_content {
         padding: 0;
+        padding-bottom: 20px;
         .content1 {
           .infoDetail {
             width: 100%;
@@ -232,6 +233,21 @@
           font-size: 14px;
           font-weight: 400;
           color: #29ab56;
+        }
+      }
+      .productInfo_content1 {
+        padding-top: 0;
+        padding-left: 0;
+        .header {
+          .stars {
+            .list {
+              .item {
+                .progress {
+                  width: 97px;
+                }
+              }
+            }
+          }
         }
       }
     }

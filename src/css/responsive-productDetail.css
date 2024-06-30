@@ -379,7 +379,8 @@ input[type="number"] {
     .producDetail .productInfo .nav.nav-tabs {
       display: none; }
     .producDetail .productInfo .productInfo_content {
-      padding: 0; }
+      padding: 0;
+      padding-bottom: 20px; }
       .producDetail .productInfo .productInfo_content .content1 .infoDetail {
         width: 100%;
         margin-bottom: 20px; }
@@ -400,5 +401,10 @@ input[type="number"] {
         font-size: 14px;
         font-weight: 400;
         color: #29ab56; }
+    .producDetail .productInfo .productInfo_content1 {
+      padding-top: 0;
+      padding-left: 0; }
+      .producDetail .productInfo .productInfo_content1 .header .stars .list .item .progress {
+        width: 97px; }
   .producDetail .relatedProducts {
     display: none; } }
