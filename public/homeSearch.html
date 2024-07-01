@@ -319,24 +319,18 @@
                   <img src="../assets/svg/rightCr.svg" alt="" />
                 </a>
               </li>
-              <li class="page-item active">
-                <a href="javascript:void(0)" class="page-link">1</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="javascript:void(0)">2</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="javascript:void(0)">3</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="javascript:void(0)">4</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="javascript:void(0)">5</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="javascript:void(0)">...</a>
-              </li>
+              <script>
+                const paginationArr = ["1", "2", "3", "4", "5", "..."];
+                for (let i = 0; i < paginationArr.length; i++) {
+                  document.write(`
+                    <li class="page-item ${i === 0 ? "active" : ""}">
+                      <a class="page-link" href="javascript:void(0)">${
+                        paginationArr[i]
+                      }</a>
+                    </li>
+                  `);
+                }
+              </script>
               <li class="page-item">
                 <a class="page-link" href="javascript:void(0)">
                   <img src="../assets/svg/leftchevron.svg" alt="" />

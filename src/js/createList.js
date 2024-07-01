@@ -217,7 +217,7 @@ const createstandoutProductItem = () => {
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
-                  <span>Vừa mở bán</span>
+                  <span class="d-xxl-block d-none">Vừa mở bán</span>
                 </div>
               </div>
     `;

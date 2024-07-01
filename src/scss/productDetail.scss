@@ -322,9 +322,12 @@
             .delivery-from {
               display: flex;
               flex-direction: column;
-              .diadiemgh {
-                margin-bottom: 8px;
+              span:first-of-type {
+                font-family: Roboto;
+                font-size: 14px;
                 font-weight: 700;
+                line-height: 20px;
+                text-align: left;
               }
               .freeship {
                 display: flex;
@@ -667,6 +670,15 @@
               text-align: left;
               color: #222222;
             }
+            .rating {
+              span {
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 18.2px;
+                text-align: left;
+              }
+            }
             span:nth-of-type(2) {
               font-family: Roboto;
               font-size: 13px;
@@ -725,6 +737,46 @@
           grid-template-columns: repeat(8, 1fr);
           column-gap: 14px;
           row-gap: 10px;
+        }
+      }
+      .divideH {
+        background-color: #dfe5ea;
+        margin-bottom: 32px;
+      }
+      .filterMobile {
+        margin-bottom: 32px;
+        .filterType {
+          display: flex;
+          gap: 22px;
+          button {
+            padding: 12px 16px;
+            background-color: #f8f8f8;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18.2px;
+            text-align: left;
+          }
+          button.active {
+            background-color: #29ab56;
+            color: $white;
+          }
+        }
+        .filterStar {
+          display: flex;
+          gap: 10px;
+          button {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            background-color: #f8f8f8;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18.2px;
+            text-align: left;
+            padding: 12px;
+          }
         }
       }
       .postList {

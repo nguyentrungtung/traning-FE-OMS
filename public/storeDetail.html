@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../src/css/header.css" />
     <link rel="stylesheet" href="../src/css/footer.css" />
     <link rel="stylesheet" href="../src/css/storeDetail.css" />
+    <link rel="stylesheet" href="../src/css/responsive-storeDetail.css" />
   </head>
   <body>
     <!-- Header -->
@@ -119,9 +120,9 @@
         </script>
       </ul>
       <!-- all tabs -->
-      <ul class="detailStore_tabs">
+      <ul class="detailStore_tabs tab-content">
         <li
-          class="homePage tab-pane fade show active"
+          class="tab-pane fade show active"
           id="detailStore_homePage"
           role="tabpanel"
         >
@@ -132,11 +133,13 @@
           </section>
           <!-- listProduct1 -->
           <section class="homePage_firstList">
-            <img
-              class="listProductFirst_banner"
-              src="../assets/images/listProductFirst_banner.png"
-              alt=""
-            />
+            <div class="listProductFirst_banner">
+              <img
+                class=""
+                src="../assets/images/listProductFirst_banner.png"
+                alt=""
+              />
+            </div>
             <div class="commonProductList"></div>
           </section>
           <!-- feature -->
@@ -144,7 +147,9 @@
             <script>
               for (let i = 1; i <= 3; i++) {
                 document.write(`
+                <div>
                   <img src="../assets/images/homePage_simpleBanner${i}.png" alt="">
+                  </div>
                 `);
               }
             </script>
@@ -160,24 +165,428 @@
           </section>
         </li>
         <li class="tab-pane fade" id="detailStore_product" role="tabpanel">
-          detailStore_product
+          <div class="d-flex" style="gap: 23px">
+            <div class="sidebarLeft">
+              <div class="d-flex flex-column gap-3">
+                <span class="commonTitle">Tất cả</span>
+                <script>
+                  const list1Sidebar = [
+                    "Thức ăn đông lạnh",
+                    "Rau, củ, quả",
+                    "Cá, Thủy hải sản",
+                    "Chăm sóc nhà cửa",
+                    "Đồ uống",
+                    "Thịt, trứng",
+                    "Sữa, bơ, phô mai",
+                    "Dầu ăn, gia vị",
+                    "Trái cây",
+                    "Gạo, mì, nông sản",
+                    "Gia dụng, tiện ích",
+                  ];
+                  for (let i = 0; i < list1Sidebar.length; i++) {
+                    document.write(`
+                    <div class="dropdown">
+                      <button class="sidebarLeft_dropdown" data-bs-toggle="dropdown"> 
+                        <img src="../assets/svg/sidebarStdt${
+                          i + 1
+                        }.svg" alt="">  
+                        <span>${list1Sidebar[i]}</span>  
+                        <span><img src="../assets/svg/chevronDown.svg" alt=""></span>
+                      </button>
+  
+                      <ul class="dropdown-menu menuDropdown">
+                        
+                      </ul>
+                    </div>
+                    `);
+                  }
+                </script>
+              </div>
+              <span class="divideH"></span>
+              <div class="filterCost d-flex flex-column gap-3 mb-3">
+                <div class="d-flex flex-column gap-3">
+                  <label class="form-label commonTitle" for="customRange1"
+                    >Giá</label
+                  >
+                  <span>0 - 5.000.000đ</span>
+                </div>
+              </div>
+              <div class="filterStar d-flex flex-column gap-3">
+                <span class="commonTitle">Đánh giá</span>
+                <div class="d-flex flex-column gap-4">
+                  <script>
+                    const listSidebar2 = [
+                      "Từ 5 sao",
+                      "Từ 4 sao",
+                      "Từ 3 sao",
+                      "Từ 2 sao",
+                    ];
+                    for (let i = 0; i < listSidebar2.length; i++) {
+                      document.write(`
+                        <div class="item d-flex align-items-center gap-3">
+                        <input
+                          type="checkbox"
+                          id="${listSidebar2[i]}"
+                          name="${listSidebar2[i]}"
+                          value="${listSidebar2[i]}"
+                        />
+                        <label for="${listSidebar2[i]}">${listSidebar2[i]}</label>
+                      </div>  
+                      `);
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+            <div class="mainContent">
+              <div
+                class="advanceTop d-flex align-items-center justify-content-between"
+              >
+                <div class="advanceTop_sort d-flex align-items-center">
+                  <span>Sắp xếp theo:</span>
+                  <div class="d-flex align-items-center gap-3">
+                    <script>
+                      const listSort = ["Nổi bật", "Mới nhất", "Bán chạy"];
+                      for (let i = 0; i < listSort.length; i++) {
+                        document.write(`
+                          <button>${listSort[i]}</button>
+                        `);
+                      }
+                      document.write(`
+                        <button>
+                          Giá
+                          <img src="../assets/svg/buttonSortCost.svg" alt="">
+                        </button>
+                      `);
+                    </script>
+                  </div>
+                  <script>
+                    const allbtns = document.querySelectorAll(
+                      ".advanceTop_sort button"
+                    );
+                    for (let i = 0; i < allbtns.length; i++) {
+                      allbtns[i].addEventListener("click", function () {
+                        allbtns.forEach(function (btn) {
+                          btn.classList.remove("active");
+                        });
+                        this.classList.add("active");
+                      });
+                    }
+                  </script>
+                </div>
+                <div class="advanceTop_pagination">
+                  <span><span class="presentPage">1</span>/200</span>
+                  <button>
+                    <img src="../assets/svg/chevronrightAdvance.svg" alt="" />
+                  </button>
+                  <button>
+                    <img src="../assets/svg/chevronrightAdvance1.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+              <div class="commonProductList"></div>
+              <nav>
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a
+                      class="page-link"
+                      href="javascript:void(0)"
+                      aria-label="Previous"
+                    >
+                      <img src="../assets/svg/rightCr.svg" alt="" />
+                    </a>
+                  </li>
+                  <script>
+                    const paginationArr = ["1", "2", "3", "4", "5", "..."];
+                    for (let i = 0; i < paginationArr.length; i++) {
+                      document.write(`
+                        <li class="page-item ${i === 0 ? "active" : ""}">
+                          <a class="page-link" href="javascript:void(0)">${
+                            paginationArr[i]
+                          }</a>
+                        </li>
+                      `);
+                    }
+                  </script>
+                  <li class="page-item">
+                    <a class="page-link" href="javascript:void(0)">
+                      <img src="../assets/svg/leftchevron.svg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!-- display: flex;
+      gap: 23px; -->
         </li>
         <li class="tab-pane fade" id="detailStore_enterprise" role="tabpanel">
-          detailStore_enterprise
+          <div class="listBusinessProfile">
+            <div class="itemProfile">
+              <span class="commonTitle">Thông tin cơ bản</span>
+              <div class="itemProfile_content">
+                <div class="leftContent">
+                  <span>"Sản xuất Rau, Củ, Quả"</span> - Chính triết lý này đã
+                  cho phép chúng tôi phát triển trong ngành chỉ trong một thời
+                  gian ngắn. Chúng tôi có khả năng cung cấp cho khách hàng một
+                  giải pháp sạch từ việc lên ý tưởng thương hiệu, lấy mẫu, sản
+                  xuất, hỗ trợ hậu cần, v.v. Với các văn phòng ở TP. Hà Nội & Hồ
+                  Chí Minh, chúng tôi là nhà cung cấp đáng tin cậy của bạn cho
+                  Rau, củ, quả và các vật dụng liên quan. Chúng tôi cung cấp cho
+                  khách hàng nhiều tùy chỉnh từ định lượng, đặc tính, tùy chọn
+                  đóng gói, tùy chọn bao bì, v.v. Liên hệ với chúng tôi ngay hôm
+                  nay để nhận được báo giá dựa trên yêu cầu của bạn. CHÚNG TÔI
+                  CẠNH TRANH: - Chúng tôi là nhà sản xuất có chứng nhận
+                  UNBLEACHED HEMP. - Chúng tôi là nhà sản xuất duy nhất sử dụng
+                  100% ORGANIC tự nhiên - Chúng tôi có nhà máy sản xuất của
+                  riêng mình, có nghĩa là bạn đang nhận được giá xuất xưởng -
+                  không phải trả cho người môi giới hoặc người trung gian. -
+                  Chúng tôi có nhiều lựa chọn nhất về trọng lượng sản phẩm và
+                  kích thước box. - Chúng tôi có thời gian thực hiện ngắn được
+                  phê duyệt - Chúng tôi có tất cả các nguồn lực sẵn có để giúp
+                  bạn thiết kế, xây dựng thương hiệu và quảng bá sản phẩm của
+                  mình.
+                </div>
+                <div class="rightContent">
+                  <table>
+                    <script>
+                      const dataTable = [
+                        { t1: "Chỉ Số Hạng:", t2: "Kim cương" },
+                        { t1: "Đánh giá:", t2: "4.8/5" },
+                        { t1: "Thời gian đáp ứng:", t2: "<= 8h" },
+                        { t1: "Tỷ lệ phản hồi:", t2: "98.7%" },
+                        { t1: "Tổng sản phẩm:", t2: "219" },
+                      ];
+                      for (let i = 0; i < dataTable.length; i++) {
+                        document.write(`
+                            <tr>
+                              <td>${dataTable[i].t1}</td>
+                              <td>${dataTable[i].t2}</td>
+                            </tr>
+                            `);
+                      }
+                    </script>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="itemProfile">
+              <span class="commonTitle">Thông tin đơn vị</span>
+              <div class="itemProfile_content">
+                <div class="leftContent tableCustom">
+                  <script>
+                    const tableDataleft = [
+                      { t1: "Tên đại diện", t2: "Mai Thùy Trang" },
+                      { t1: "Số điện thoại", t2: "1900 1546" },
+                      { t1: "Email", t2: "contact@thanhcong.vn" },
+                      { t1: "Địa chỉ", t2: "Đồng Trúc, Thạch Thất, Hà Nội" },
+                      { t1: "Website", t2: "thanhcong.com.vn" },
+                      { t1: "Chứng chỉ", t2: "ISO 9001" },
+                      { t1: "Năm thành lập", t2: "2004" },
+                    ];
+                    for (let i = 0; i < tableDataleft.length; i++) {
+                      document.write(`
+                            <div class="attribute">
+                                <span class="name">${tableDataleft[i].t1}</span>
+                                <span class="value">${tableDataleft[i].t2}</span>
+                            </div>
+                            `);
+                    }
+                  </script>
+                </div>
+                <div class="rightContent tableCustom">
+                  <script>
+                    const tableDataRight = [
+                      {
+                        t1: "Loại hình",
+                        t2: "Nhà sản xuất, Công ty Thương mại, Nhà phân phối / Bán buôn",
+                      },
+                      { t1: "Sản phẩm chính", t2: "Rau, Củ, Quả" },
+                      { t1: "Tổng doanh thu", t2: "156 tỷ/ năm" },
+                      {
+                        t1: "Thị trường chính",
+                        t2: "Hà Nội, Đà Lạt, TP. Hồ Chí Minh",
+                      },
+                      { t1: "Tổng nhân viên", t2: "50-100 Người" },
+                      { t1: "Giấy chứng nhận", t2: "Đăng ký Doanh nghiệp" },
+                    ];
+                    for (let i = 0; i < tableDataRight.length; i++) {
+                      document.write(`
+                            <div class="attribute">
+                                <span class="name">${tableDataRight[i].t1}</span>
+                                <span class="value">${tableDataRight[i].t2}</span>
+                            </div>
+                        
+                        `);
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+            <div class="itemProfile">
+              <span class="commonTitle">Năng lực sản phẩm</span>
+              <div class="tableCustom">
+                <script>
+                  const nanglsp = [
+                    "Kích thước nhà máy",
+                    "Máy móc",
+                    "Công nghệ",
+                    "Sản lượng/ Vụ",
+                    "Khả năng CC/ Ngày",
+                    "Đối tác khách hàng",
+                  ];
+                  for (let i = 0; i < nanglsp.length; i++) {
+                    document.write(`
+                      <div class="attribute">
+                                  <span class="name">${nanglsp[i]}</span>
+                                  <span class="value">-</span>
+                              </div>
+                        
+                      `);
+                  }
+                </script>
+              </div>
+            </div>
+            <div class="itemProfile">
+              <span class="commonTitle">Giấy chứng nhận</span>
+              <div class="d-flex align-items-center" style="gap: 24px">
+                <script>
+                  for (let i = 1; i <= 4; i++) {
+                    document.write(`
+                    <img src="../assets/images/chungnhan${i}.png" alt="">
+                  `);
+                  }
+                </script>
+              </div>
+            </div>
+            <div class="itemProfile">
+              <span class="commonTitle">Cơ sở sản xuất</span>
+              <div class="listCosoSanxuat">
+                <script>
+                  const listCosoSanxuat = [
+                    "Công xưởng Rau xanh RD1",
+                    "Công xưởng Rau xanh RD2",
+                    "Công xưởng gia súc",
+                    "Cơ sở đóng gói",
+                    "Lưu trữ",
+                    "Box 2",
+                  ];
+                  for (let i = 0; i < listCosoSanxuat.length; i++) {
+                    document.write(`
+                      <div class="itemCosoSanxuat">
+                        <img src="../assets/images/cssx${i + 1}.png" alt="">
+                        <span>${listCosoSanxuat[i]}</span>
+                        </div>
+                    `);
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
         </li>
         <li class="tab-pane fade" id="detailStore_branch" role="tabpanel">
-          detailStore_branch
+          <div class="d-flex flex-column" style="gap: 35px">
+            <div
+              class="d-flex align-items-center align-items-stretch"
+              style="gap: 50px; padding-left: 100px; padding-right: 140px"
+            >
+              <div class="boxLeft">
+                <span>Tầm nhìn</span>
+                <p>
+                  Là thương hiệu được mọi người biết tới với chất lượng sản phẩm
+                  tốt và giá cả hợp lý. Phù hợp cho bữa ăn mọi gia đình.
+                </p>
+              </div>
+              <div class="boxRight">
+                <span>sứ mệnh</span>
+                <p>
+                  Trở thành một công ty phát triển vững mạnh có tiêu chuẩn đạt
+                  tiêu chuẩn quốc tế.
+                </p>
+              </div>
+            </div>
+            <div
+              class="d-flex flex-column contentBottom"
+              style="gap: 6px; padding-left: 34px; padding-right: 35px"
+            >
+              <span>Về chúng tôi</span>
+              <p>
+                Push Group được thành lập vào năm 2007 với tiền thân là Thành
+                Công JSC, công ty tập trung đầu tư vào hai lĩnh vực là Nông
+                nghiệp và Dịch vụ. Thành Công được hình thành và phát triển mạnh
+                mẽ qua nhiều giai đoạn.
+              </p>
+              <p>
+                Từ những giá trị cốt lõi ban đầu, mong muốn mãnh liệt đem đến
+                cho thị trường những sản phẩm - dịch vụ tiêu chuẩn quốc tế,
+                những trải nghiệm mới mẻ và phong cách sống hiện đại, từng bước
+                xúc tiến mở rộng hoạt động kinh doanh vào nhiều lĩnh vực và vươn
+                mình trở thành đơn vị tiên phong trong các giải pháp theo xu
+                hướng mới.
+              </p>
+            </div>
+          </div>
         </li>
         <li class="tab-pane fade" id="detailStore_contact" role="tabpanel">
-          detailStore_contact
+          <div class="d-flex flex-column align-items-center" style="gap: 37px">
+            <div class="tableCustom">
+              <script>
+                const contactData = [
+                  { t1: "Tên đại diện", t2: "Mai Thùy Trang" },
+                  { t1: "Số điện thoại", t2: "1900 1546" },
+                  { t1: "Email", t2: "contact@thanhcong.vn" },
+                  { t1: "Địa chỉ", t2: "Đồng Trúc, Thạch Thất, Hà Nội" },
+                  { t1: "Website", t2: "http://thanhcong.com.vn" },
+                ];
+                for (let i = 0; i < contactData.length; i++) {
+                  document.write(`
+                    <div class="attribute">
+                        <span class="name">${contactData[i].t1}</span>
+                        <span class="value">${contactData[i].t2}</span>
+                    </div>
+                  `);
+                }
+              </script>
+            </div>
+            <form>
+              <div class="d-flex justify-content-between">
+                <span class="header"
+                  ><span>Gửi tới:</span> contact@thanhcong.vn</span
+                >
+                <button>
+                  <img src="../assets/images/closeIcon.svg" alt="" />
+                </button>
+              </div>
+              <span class="divideH"></span>
+
+              <textarea
+                placeholder="Liên hệ với nhà sản xuất để biết thêm thông tin về sản phẩm.."
+                name=""
+                id=""
+              ></textarea>
+              <span class="numberWord">0/120</span>
+              <div
+                class="listOptions d-flex flex-wrap align-items-center gap-2"
+              >
+                <button>Tôi cần thêm thông tin về sản phẩm.</button>
+                <button>Số lượng để được giá ưu đãi là bao nhiêu?</button>
+                <button>
+                  Cách thức giao hàng của tôi có được ưu đãi không?
+                </button>
+                <button>Hợp tác với NSX thế nào?</button>
+              </div>
+              <button class="sendTo">Gửi cho nhà sản xuất</button>
+            </form>
+          </div>
         </li>
       </ul>
     </main>
 
     <!-- Footer -->
     <div data-include-html="../component/footer.html"></div>
-    <!-- Footer -->
   </body>
+
+  <!-- script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script type="module" src="../src/js/scripts.js"></script>
   <script src="../src/js/createList.js"></script>
@@ -185,5 +594,9 @@
     createstandoutProductItem();
     createcommonProductList(8);
     createcommonProductList(8, ".homePage_secondList .commonProductList");
+    createcommonProductList(
+      20,
+      "#detailStore_product .mainContent .commonProductList"
+    );
   </script>
 </html>

@@ -228,7 +228,8 @@ a {
 
 body {
   background-color: #f0f0f0;
-  line-height: 0; }
+  line-height: 0;
+  background-color: #f5f5fa; }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -376,7 +377,8 @@ input[type="number"] {
     .commonProductList .commonProductItem .headerlogo {
       position: relative;
       width: 100%;
-      height: auto; }
+      height: auto;
+      line-height: 0; }
       .commonProductList .commonProductItem .headerlogo .headlogo {
         position: absolute;
         display: flex;

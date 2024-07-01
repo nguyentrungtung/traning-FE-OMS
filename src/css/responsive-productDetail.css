@@ -228,7 +228,8 @@ a {
 
 body {
   background-color: #f0f0f0;
-  line-height: 0; }
+  line-height: 0;
+  background-color: #f5f5fa; }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -404,7 +405,9 @@ input[type="number"] {
     .producDetail .productInfo .productInfo_content1 {
       padding-top: 0;
       padding-left: 0; }
-      .producDetail .productInfo .productInfo_content1 .header .stars .list .item .progress {
-        width: 97px; }
+      .producDetail .productInfo .productInfo_content1 .header {
+        margin-bottom: 12px; }
+        .producDetail .productInfo .productInfo_content1 .header .stars .list .item .progress {
+          width: 97px; }
   .producDetail .relatedProducts {
     display: none; } }

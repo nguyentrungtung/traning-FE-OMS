@@ -230,7 +230,8 @@ a {
 
 body {
   background-color: #f0f0f0;
-  line-height: 0; }
+  line-height: 0;
+  background-color: #f5f5fa; }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -477,7 +478,8 @@ a {
 
 body {
   background-color: #f0f0f0;
-  line-height: 0; }
+  line-height: 0;
+  background-color: #f5f5fa; }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -625,7 +627,8 @@ input[type="number"] {
     .commonProductList .commonProductItem .headerlogo {
       position: relative;
       width: 100%;
-      height: auto; }
+      height: auto;
+      line-height: 0; }
       .commonProductList .commonProductItem .headerlogo .headlogo {
         position: absolute;
         display: flex;
@@ -802,6 +805,34 @@ nav .pagination {
     color: #000;
     text-decoration: none; }
 
+.tableCustom {
+  display: grid;
+  grid-template-columns: 1fr; }
+  .tableCustom .attribute:nth-of-type(odd) {
+    background-color: #f5f5f7; }
+  .tableCustom .attribute {
+    display: grid;
+    grid-template-columns: minmax(172px, auto) 1fr;
+    height: 38px;
+    padding-left: 16px;
+    border-radius: 8px; }
+    .tableCustom .attribute .name {
+      font-family: Roboto;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: left;
+      color: #515154;
+      align-content: center; }
+    .tableCustom .attribute .value {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: left;
+      color: #000;
+      align-content: center; }
+
 .detailStore {
   min-height: 300px; }
   .detailStore .detailStore_banner {
@@ -882,14 +913,14 @@ nav .pagination {
               color: #343434; }
   .detailStore .detailStore_navbar {
     margin-bottom: 24px; }
-  .detailStore .detailStore_tabs .homePage .homePage_standoutProduct {
+  .detailStore .detailStore_tabs #detailStore_homePage .homePage_standoutProduct {
     min-height: 100px;
     padding: 56px 0px 27px 19px;
     position: relative;
     background-color: #fff;
     border-radius: 4px;
     margin-bottom: 24px; }
-    .detailStore .detailStore_tabs .homePage .homePage_standoutProduct .title {
+    .detailStore .detailStore_tabs #detailStore_homePage .homePage_standoutProduct .title {
       font-family: Roboto;
       font-size: 26px;
       font-style: italic;
@@ -900,21 +931,21 @@ nav .pagination {
       position: absolute;
       top: 12px;
       left: 20px; }
-    .detailStore .detailStore_tabs .homePage .homePage_standoutProduct .standoutProductList {
+    .detailStore .detailStore_tabs #detailStore_homePage .homePage_standoutProduct .standoutProductList {
       display: flex;
       gap: 24px; }
-      .detailStore .detailStore_tabs .homePage .homePage_standoutProduct .standoutProductList .standoutProductItem {
+      .detailStore .detailStore_tabs #detailStore_homePage .homePage_standoutProduct .standoutProductList .standoutProductItem {
         flex: 1;
         display: flex;
         flex-direction: column;
         position: relative; }
-        .detailStore .detailStore_tabs .homePage .homePage_standoutProduct .standoutProductList .standoutProductItem img {
+        .detailStore .detailStore_tabs #detailStore_homePage .homePage_standoutProduct .standoutProductList .standoutProductItem img {
           width: 100%;
           object-fit: contain;
           border: 1px solid #57902b;
           border-radius: 6px;
           margin-bottom: 3px; }
-        .detailStore .detailStore_tabs .homePage .homePage_standoutProduct .standoutProductList .standoutProductItem .percent {
+        .detailStore .detailStore_tabs #detailStore_homePage .homePage_standoutProduct .standoutProductList .standoutProductItem .percent {
           position: absolute;
           top: 11px;
           left: 0px;
@@ -926,66 +957,407 @@ nav .pagination {
           font-weight: 600;
           line-height: 14.06px;
           color: #fff; }
-        .detailStore .detailStore_tabs .homePage .homePage_standoutProduct .standoutProductList .standoutProductItem .name {
+        .detailStore .detailStore_tabs #detailStore_homePage .homePage_standoutProduct .standoutProductList .standoutProductItem .name {
           font-family: Roboto;
           font-size: 14px;
           font-weight: 400;
           line-height: 16.41px;
           text-align: left;
-          min-height: 33px; }
-        .detailStore .detailStore_tabs .homePage .homePage_standoutProduct .standoutProductList .standoutProductItem .gia {
+          min-height: 33px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        .detailStore .detailStore_tabs #detailStore_homePage .homePage_standoutProduct .standoutProductList .standoutProductItem .gia {
           font-family: Roboto;
           font-size: 16px;
           font-weight: 600;
           line-height: 18.75px;
           text-align: right;
           color: #fc6c1a; }
-        .detailStore .detailStore_tabs .homePage .homePage_standoutProduct .standoutProductList .standoutProductItem .progress {
+        .detailStore .detailStore_tabs #detailStore_homePage .homePage_standoutProduct .standoutProductList .standoutProductItem .progress {
           background-color: #ffd8c1;
           display: flex;
           position: relative; }
-          .detailStore .detailStore_tabs .homePage .homePage_standoutProduct .standoutProductList .standoutProductItem .progress .progress-bar {
+          .detailStore .detailStore_tabs #detailStore_homePage .homePage_standoutProduct .standoutProductList .standoutProductItem .progress .progress-bar {
             border-radius: 8px;
             background-color: #fc6c1a; }
-          .detailStore .detailStore_tabs .homePage .homePage_standoutProduct .standoutProductList .standoutProductItem .progress span {
+          .detailStore .detailStore_tabs #detailStore_homePage .homePage_standoutProduct .standoutProductList .standoutProductItem .progress span {
             align-self: center;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
             color: #fff; }
-  .detailStore .detailStore_tabs .homePage .homePage_firstList {
+  .detailStore .detailStore_tabs #detailStore_homePage .homePage_firstList {
     display: flex;
     gap: 45px;
     align-items: stretch;
     margin-bottom: 45px; }
-    .detailStore .detailStore_tabs .homePage .homePage_firstList .listProductFirst_banner {
-      flex: 1;
-      object-fit: fill; }
-    .detailStore .detailStore_tabs .homePage .homePage_firstList .commonProductList {
+    .detailStore .detailStore_tabs #detailStore_homePage .homePage_firstList .listProductFirst_banner {
+      flex: 1; }
+      .detailStore .detailStore_tabs #detailStore_homePage .homePage_firstList .listProductFirst_banner img {
+        object-fit: fill; }
+    .detailStore .detailStore_tabs #detailStore_homePage .homePage_firstList .commonProductList {
       height: fit-content;
       grid-template-columns: repeat(4, 1fr); }
-      .detailStore .detailStore_tabs .homePage .homePage_firstList .commonProductList .commonProductItem {
+      .detailStore .detailStore_tabs #detailStore_homePage .homePage_firstList .commonProductList .commonProductItem {
         height: fit-content; }
-  .detailStore .detailStore_tabs .homePage .homePage_simpleBanner {
+  .detailStore .detailStore_tabs #detailStore_homePage .homePage_simpleBanner {
     display: flex;
+    align-items: center;
     gap: 20px;
-    margin-bottom: 18px; }
-    .detailStore .detailStore_tabs .homePage .homePage_simpleBanner img {
-      flex: 1;
-      align-self: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    width: 100%; }
+    .detailStore .detailStore_tabs #detailStore_homePage .homePage_simpleBanner div {
+      flex: 1; }
+    .detailStore .detailStore_tabs #detailStore_homePage .homePage_simpleBanner img {
+      width: 100%;
       object-fit: contain; }
-  .detailStore .detailStore_tabs .homePage .homePage_secondList {
+  .detailStore .detailStore_tabs #detailStore_homePage .homePage_secondList {
     display: flex;
     gap: 45px;
     margin-bottom: 54px; }
-    .detailStore .detailStore_tabs .homePage .homePage_secondList .secondListImg {
+    .detailStore .detailStore_tabs #detailStore_homePage .homePage_secondList .secondListImg {
       flex: 1;
       object-fit: contain; }
-    .detailStore .detailStore_tabs .homePage .homePage_secondList .commonProductList {
+    .detailStore .detailStore_tabs #detailStore_homePage .homePage_secondList .commonProductList {
       height: fit-content;
       grid-template-columns: repeat(4, 1fr); }
-      .detailStore .detailStore_tabs .homePage .homePage_secondList .commonProductList .commonProductItem {
+      .detailStore .detailStore_tabs #detailStore_homePage .homePage_secondList .commonProductList .commonProductItem {
         height: fit-content; }
+  .detailStore .detailStore_tabs #detailStore_product .sidebarLeft {
+    padding-top: 17px;
+    width: 213px;
+    height: auto;
+    min-height: 300px;
+    background-color: transparent; }
+    .detailStore .detailStore_tabs #detailStore_product .sidebarLeft .commonTitle {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20.8px;
+      text-align: left;
+      color: #1b232b; }
+    .detailStore .detailStore_tabs #detailStore_product .sidebarLeft .sidebarLeft_dropdown {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19.6px;
+      text-align: left;
+      color: #374756;
+      position: relative;
+      background-color: transparent;
+      border-radius: 4px; }
+      .detailStore .detailStore_tabs #detailStore_product .sidebarLeft .sidebarLeft_dropdown span:first-of-type {
+        margin-left: 10px; }
+      .detailStore .detailStore_tabs #detailStore_product .sidebarLeft .sidebarLeft_dropdown span:last-of-type {
+        height: 100%;
+        background-color: white;
+        position: absolute;
+        padding: 0 6px;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+    .detailStore .detailStore_tabs #detailStore_product .sidebarLeft .menuDropdown {
+      width: 100%;
+      height: 100px;
+      background-color: white; }
+    .detailStore .detailStore_tabs #detailStore_product .sidebarLeft .divideH {
+      background-color: #cbd5de;
+      margin-top: 12px;
+      margin-bottom: 12px; }
+    .detailStore .detailStore_tabs #detailStore_product .sidebarLeft .filterCost {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21.6px;
+      letter-spacing: 0.5px;
+      text-align: center;
+      color: #374756; }
+    .detailStore .detailStore_tabs #detailStore_product .sidebarLeft .filterStar {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19.6px;
+      text-align: left;
+      color: #374756; }
+      .detailStore .detailStore_tabs #detailStore_product .sidebarLeft .filterStar .item {
+        display: flex;
+        align-items: center;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+        text-align: left;
+        color: #374756; }
+  .detailStore .detailStore_tabs #detailStore_product .mainContent {
+    min-height: 300px;
+    flex: 1;
+    background-color: transparent; }
+    .detailStore .detailStore_tabs #detailStore_product .mainContent .advanceTop {
+      width: 100%;
+      height: 40px;
+      padding-left: 28px;
+      padding-right: 12px;
+      background-color: #e3e3e3;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.41px;
+      text-align: left;
+      margin-bottom: 17px; }
+      .detailStore .detailStore_tabs #detailStore_product .mainContent .advanceTop .advanceTop_sort {
+        gap: 32px; }
+        .detailStore .detailStore_tabs #detailStore_product .mainContent .advanceTop .advanceTop_sort button {
+          padding: 5px 19px;
+          background-color: #fff;
+          color: black;
+          display: flex;
+          align-items: center;
+          gap: 90px; }
+        .detailStore .detailStore_tabs #detailStore_product .mainContent .advanceTop .advanceTop_sort button.active {
+          background-color: #29ab56;
+          color: white; }
+      .detailStore .detailStore_tabs #detailStore_product .mainContent .advanceTop .advanceTop_pagination {
+        display: flex;
+        align-items: center;
+        gap: 9px; }
+        .detailStore .detailStore_tabs #detailStore_product .mainContent .advanceTop .advanceTop_pagination .presentPage {
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 18.9px;
+          letter-spacing: 0.20000000298023224px;
+          text-align: left;
+          color: #29ab56; }
+  .detailStore .detailStore_tabs #detailStore_enterprise {
+    padding-top: 23px;
+    padding-left: 12px;
+    min-height: 100px;
+    background-color: #fff;
+    border-radius: 4px; }
+    .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 65px; }
+      .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column; }
+      .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .commonTitle {
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28.13px;
+        text-align: left;
+        color: #00953d;
+        margin-bottom: 10px; }
+      .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:first-of-type {
+        align-items: stretch; }
+        .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:first-of-type .itemProfile_content {
+          display: flex;
+          height: fit-content;
+          gap: 15px;
+          height: 100%;
+          align-items: stretch; }
+          .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:first-of-type .itemProfile_content .leftContent {
+            max-height: 220px;
+            overflow-y: scroll;
+            flex: 1;
+            padding-top: 10px;
+            padding-left: 16px;
+            background-color: #f5f5f7;
+            border-radius: 8px;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            text-align: left;
+            color: #000000; }
+            .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:first-of-type .itemProfile_content .leftContent span {
+              font-weight: 700; }
+          .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:first-of-type .itemProfile_content .rightContent {
+            flex: 1;
+            height: 100%;
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 18px;
+            text-align: left; }
+            .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:first-of-type .itemProfile_content .rightContent table td {
+              padding-top: 10px;
+              padding-bottom: 10px;
+              padding-left: 16px;
+              color: #515154;
+              padding-right: 40px; }
+            .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:first-of-type .itemProfile_content .rightContent table tr td:last-of-type {
+              font-weight: 700;
+              color: #29ab56; }
+      .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:nth-child(2) .itemProfile_content {
+        display: flex;
+        gap: 15px;
+        align-items: start;
+        padding-right: 16px; }
+        .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:nth-child(2) .itemProfile_content .leftContent {
+          flex: 1; }
+        .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:nth-child(2) .itemProfile_content .rightContent {
+          flex: 1; }
+      .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:nth-child(3) {
+        padding-right: 12px; }
+      .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:nth-child(5) {
+        background-color: transparent; }
+        .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:nth-child(5) .listCosoSanxuat {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          column-gap: 32px;
+          row-gap: 23px; }
+          .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:nth-child(5) .listCosoSanxuat .itemCosoSanxuat {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            font-family: Roboto;
+            font-size: 21.13px;
+            font-weight: 400;
+            line-height: 28.52px;
+            text-align: left;
+            gap: 22px; }
+            .detailStore .detailStore_tabs #detailStore_enterprise .listBusinessProfile .itemProfile:nth-child(5) .listCosoSanxuat .itemCosoSanxuat img {
+              width: 100%;
+              object-fit: contain; }
+  .detailStore .detailStore_tabs #detailStore_branch {
+    padding-top: 24px;
+    padding-bottom: 38px;
+    padding-left: 34px;
+    padding-right: 35px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 35px; }
+    .detailStore .detailStore_tabs #detailStore_branch .boxLeft,
+    .detailStore .detailStore_tabs #detailStore_branch .boxRight {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      padding-top: 74px;
+      padding-left: 50px;
+      padding-right: 51px;
+      padding-bottom: 50px;
+      box-shadow: 0px 0px 15px 0px #0c2f4c26;
+      border-radius: 6px; }
+      .detailStore .detailStore_tabs #detailStore_branch .boxLeft span,
+      .detailStore .detailStore_tabs #detailStore_branch .boxRight span {
+        font-family: Roboto;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 27px;
+        text-align: justified;
+        text-transform: uppercase; }
+      .detailStore .detailStore_tabs #detailStore_branch .boxLeft p,
+      .detailStore .detailStore_tabs #detailStore_branch .boxRight p {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        text-align: justified; }
+    .detailStore .detailStore_tabs #detailStore_branch .boxLeft {
+      background-color: #2ead5b;
+      color: #fff; }
+    .detailStore .detailStore_tabs #detailStore_branch .boxRight {
+      background-color: #fff; }
+    .detailStore .detailStore_tabs #detailStore_branch .contentBottom span {
+      font-family: Roboto;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 28.13px;
+      text-align: left;
+      color: #29ab56; }
+    .detailStore .detailStore_tabs #detailStore_branch .contentBottom p {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: justified;
+      color: #0c2f4c; }
+  .detailStore .detailStore_tabs #detailStore_contact {
+    background-color: #fff;
+    padding-top: 23px;
+    padding-bottom: 44px;
+    margin-bottom: 37px;
+    border-radius: 4px; }
+    .detailStore .detailStore_tabs #detailStore_contact .tableCustom {
+      width: 600px; }
+      .detailStore .detailStore_tabs #detailStore_contact .tableCustom .attribute:last-of-type .value {
+        color: #116abd; }
+    .detailStore .detailStore_tabs #detailStore_contact form {
+      width: 600px;
+      padding: 32px 24px 32px 24px;
+      gap: 13px;
+      border-radius: 8px 0px 0px 0px;
+      opacity: 0px;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px 0px #84848414;
+      border-radius: 8px; }
+      .detailStore .detailStore_tabs #detailStore_contact form .header {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21.6px;
+        text-align: left; }
+        .detailStore .detailStore_tabs #detailStore_contact form .header span {
+          font-weight: 400; }
+      .detailStore .detailStore_tabs #detailStore_contact form .divideH {
+        background-color: #dbdee5; }
+      .detailStore .detailStore_tabs #detailStore_contact form textarea {
+        resize: none;
+        width: 100%;
+        border: 0.5px solid #dbdee5;
+        min-height: 144px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21.6px;
+        text-align: left;
+        color: #000;
+        padding: 14px 16px 24px 16px;
+        border-radius: 4px; }
+        .detailStore .detailStore_tabs #detailStore_contact form textarea ::placeholder {
+          color: #858585; }
+      .detailStore .detailStore_tabs #detailStore_contact form .numberWord {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18.2px;
+        text-align: left;
+        color: #858585;
+        align-self: flex-end; }
+      .detailStore .detailStore_tabs #detailStore_contact form .listOptions button {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+        color: #29ab56;
+        background-color: #29ab560a;
+        padding: 6px 10px;
+        border-radius: 99px; }
+      .detailStore .detailStore_tabs #detailStore_contact form .sendTo {
+        width: 100%;
+        height: 44px;
+        background-color: #29ab56;
+        align-content: center;
+        text-align: center;
+        color: #fff;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20.3px; }
 
 .nav.nav-tabs {
   display: flex;

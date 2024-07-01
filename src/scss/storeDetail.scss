@@ -1,5 +1,39 @@
 @import "./base";
 @import "./style.scss";
+
+.tableCustom {
+  display: grid;
+  grid-template-columns: 1fr;
+  .attribute:nth-of-type(odd) {
+    background-color: #f5f5f7;
+  }
+  .attribute {
+    display: grid;
+    grid-template-columns: minmax(172px, auto) 1fr;
+    height: 38px;
+    padding-left: 16px;
+    border-radius: 8px;
+
+    .name {
+      font-family: Roboto;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: left;
+      color: #515154;
+      align-content: center;
+    }
+    .value {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: left;
+      color: #000;
+      align-content: center;
+    }
+  }
+}
 .detailStore {
   min-height: 300px;
   .detailStore_banner {
@@ -102,7 +136,7 @@
     margin-bottom: 24px;
   }
   .detailStore_tabs {
-    .homePage {
+    #detailStore_homePage {
       .homePage_standoutProduct {
         min-height: 100px;
         padding: 56px 0px 27px 19px;
@@ -158,6 +192,11 @@
               line-height: 16.41px;
               text-align: left;
               min-height: 33px;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+              overflow: hidden;
+              text-overflow: ellipsis;
             }
             .gia {
               font-family: Roboto;
@@ -195,7 +234,9 @@
 
         .listProductFirst_banner {
           flex: 1;
-          object-fit: fill;
+          img {
+            object-fit: fill;
+          }
         }
         .commonProductList {
           height: fit-content;
@@ -207,11 +248,16 @@
       }
       .homePage_simpleBanner {
         display: flex;
+        align-items: center;
         gap: 20px;
+        justify-content: space-between;
         margin-bottom: 18px;
-        img {
+        width: 100%;
+        div {
           flex: 1;
-          align-self: center;
+        }
+        img {
+          width: 100%;
           object-fit: contain;
         }
       }
@@ -229,6 +275,411 @@
           .commonProductItem {
             height: fit-content;
           }
+        }
+      }
+    }
+    #detailStore_product {
+      .sidebarLeft {
+        padding-top: 17px;
+        width: 213px;
+        height: auto;
+        min-height: 300px;
+        background-color: transparent;
+        .commonTitle {
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 20.8px;
+          text-align: left;
+          color: #1b232b;
+        }
+        .sidebarLeft_dropdown {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 19.6px;
+          text-align: left;
+          color: #374756;
+          position: relative;
+          background-color: transparent;
+          border-radius: 4px;
+          span:first-of-type {
+            margin-left: 10px;
+          }
+          span:last-of-type {
+            height: 100%;
+            background-color: white;
+            position: absolute;
+            padding: 0 6px;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .menuDropdown {
+          width: 100%;
+          height: 100px;
+          background-color: white;
+        }
+        .divideH {
+          background-color: #cbd5de;
+          margin-top: 12px;
+          margin-bottom: 12px;
+        }
+        .filterCost {
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 21.6px;
+          letter-spacing: 0.5px;
+          text-align: center;
+          color: #374756;
+        }
+        .filterStar {
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 19.6px;
+          text-align: left;
+          color: #374756;
+          .item {
+            display: flex;
+            align-items: center;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 19.6px;
+            text-align: left;
+            color: #374756;
+          }
+        }
+      }
+      .mainContent {
+        min-height: 300px;
+        flex: 1;
+        background-color: transparent;
+        .advanceTop {
+          width: 100%;
+          height: 40px;
+          padding-left: 28px;
+          padding-right: 12px;
+          background-color: #e3e3e3;
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16.41px;
+          text-align: left;
+          margin-bottom: 17px;
+          .advanceTop_sort {
+            gap: 32px;
+            button {
+              padding: 5px 19px;
+              background-color: #fff;
+              color: black;
+              display: flex;
+              align-items: center;
+              gap: 90px;
+            }
+            button.active {
+              background-color: #29ab56;
+              color: white;
+            }
+          }
+          .advanceTop_pagination {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            .presentPage {
+              font-family: Roboto;
+              font-size: 14px;
+              font-weight: 700;
+              line-height: 18.9px;
+              letter-spacing: 0.20000000298023224px;
+              text-align: left;
+              color: #29ab56;
+            }
+          }
+        }
+      }
+    }
+    #detailStore_enterprise {
+      padding-top: 23px;
+      padding-left: 12px;
+      min-height: 100px;
+      background-color: #fff;
+      border-radius: 4px;
+
+      .listBusinessProfile {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 65px;
+        .itemProfile {
+          margin-bottom: 30px;
+          display: flex;
+          flex-direction: column;
+        }
+        .commonTitle {
+          font-family: Roboto;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 28.13px;
+          text-align: left;
+          color: #00953d;
+          margin-bottom: 10px;
+        }
+        .itemProfile:first-of-type {
+          align-items: stretch;
+          .itemProfile_content {
+            display: flex;
+            height: fit-content;
+            gap: 15px;
+            height: 100%;
+            align-items: stretch;
+            .leftContent {
+              max-height: 220px;
+              overflow-y: scroll;
+              flex: 1;
+              padding-top: 10px;
+              padding-left: 16px;
+              background-color: #f5f5f7;
+              border-radius: 8px;
+              font-family: Roboto;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 21px;
+              text-align: left;
+              color: #000000;
+              span {
+                font-weight: 700;
+              }
+            }
+            .rightContent {
+              flex: 1;
+              height: 100%;
+              font-family: Roboto;
+              font-size: 13px;
+              font-weight: 500;
+              line-height: 18px;
+              text-align: left;
+
+              table {
+                td {
+                  padding-top: 10px;
+                  padding-bottom: 10px;
+                  padding-left: 16px;
+                  color: #515154;
+                  padding-right: 40px;
+                }
+                tr {
+                  td:last-of-type {
+                    font-weight: 700;
+                    color: #29ab56;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .itemProfile:nth-child(2) {
+          .itemProfile_content {
+            display: flex;
+            gap: 15px;
+            align-items: start;
+            padding-right: 16px;
+            .leftContent {
+              flex: 1;
+            }
+            .rightContent {
+              flex: 1;
+            }
+          }
+        }
+        .itemProfile:nth-child(3) {
+          padding-right: 12px;
+        }
+        .itemProfile:nth-child(5) {
+          background-color: transparent;
+          .listCosoSanxuat {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 32px;
+            row-gap: 23px;
+            .itemCosoSanxuat {
+              display: flex;
+              flex-direction: column;
+              gap: 22px;
+              font-family: Roboto;
+              font-size: 21.13px;
+              font-weight: 400;
+              line-height: 28.52px;
+              text-align: left;
+
+              img {
+                width: 100%;
+                object-fit: contain;
+              }
+              gap: 22px;
+            }
+          }
+        }
+      }
+    }
+    #detailStore_branch {
+      padding-top: 24px;
+      padding-bottom: 38px;
+      padding-left: 34px;
+      padding-right: 35px;
+      background-color: $white;
+      border-radius: 4px;
+      margin-bottom: 35px;
+      .boxLeft,
+      .boxRight {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        padding-top: 74px;
+        padding-left: 50px;
+        padding-right: 51px;
+        padding-bottom: 50px;
+        box-shadow: 0px 0px 15px 0px #0c2f4c26;
+        border-radius: 6px;
+
+        span {
+          font-family: Roboto;
+          font-size: 32px;
+          font-weight: 400;
+          line-height: 27px;
+          text-align: justified;
+          text-transform: uppercase;
+        }
+        p {
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 21px;
+          text-align: justified;
+        }
+      }
+      .boxLeft {
+        background-color: #2ead5b;
+        color: $white;
+      }
+      .boxRight {
+        background-color: #fff;
+      }
+      .contentBottom {
+        span {
+          font-family: Roboto;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 28.13px;
+          text-align: left;
+          color: #29ab56;
+        }
+        p {
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+          text-align: justified;
+          color: #0c2f4c;
+        }
+      }
+    }
+    #detailStore_contact {
+      background-color: $white;
+      padding-top: 23px;
+      padding-bottom: 44px;
+      margin-bottom: 37px;
+      border-radius: 4px;
+
+      .tableCustom {
+        width: 600px;
+        .attribute:last-of-type {
+          .value {
+            color: #116abd;
+          }
+        }
+      }
+      form {
+        width: 600px;
+        padding: 32px 24px 32px 24px;
+        gap: 13px;
+        border-radius: 8px 0px 0px 0px;
+        opacity: 0px;
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        box-shadow: 0px 0px 10px 0px #84848414;
+        border-radius: 8px;
+        .header {
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 21.6px;
+          text-align: left;
+          span {
+            font-weight: 400;
+          }
+        }
+        .divideH {
+          background-color: #dbdee5;
+        }
+
+        textarea {
+          resize: none;
+          width: 100%;
+          border: 0.5px solid #dbdee5;
+          min-height: 144px;
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 21.6px;
+          text-align: left;
+          color: #000;
+          padding: 14px 16px 24px 16px;
+          border-radius: 4px;
+          ::placeholder {
+            color: #858585;
+          }
+        }
+        .numberWord {
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18.2px;
+          text-align: left;
+          color: #858585;
+          align-self: flex-end;
+        }
+        .listOptions {
+          button {
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.41px;
+            text-align: left;
+            color: #29ab56;
+            background-color: #29ab560a;
+            padding: 6px 10px;
+            border-radius: 99px;
+          }
+        }
+        .sendTo {
+          width: 100%;
+          height: 44px;
+          background-color: #29ab56;
+          align-content: center;
+          text-align: center;
+          color: $white;
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 20.3px;
         }
       }
     }

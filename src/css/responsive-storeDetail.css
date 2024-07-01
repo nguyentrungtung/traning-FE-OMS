@@ -155,13 +155,13 @@ button {
   font-weight: 500;
   text-align: left; }
 
-.Roboto14, .Footer .Footer_bottom, .Footer .commonContent, .Footer .Footer__customerSupport .Footer__customerSupport-item, .Footer .Footer__aboutOmmaniLife .Footer__aboutOmmaniLife-item, .Footer .Footer__association .Footer__association-item {
+.Roboto14 {
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
   text-align: left; }
 
-.Roboto16, .Footer .Footer__item-title {
+.Roboto16 {
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
@@ -248,63 +248,3 @@ input[type="number"] {
   flex-direction: row;
   align-items: center;
   line-height: normal; }
-
-.Footer {
-  width: 100%;
-  background-color: #fff;
-  text-wrap: nowrap; }
-  .Footer .Footer_bottom {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: start;
-    padding-top: 26px;
-    padding-bottom: 35px;
-    margin-left: 8px;
-    width: 100%; }
-  .Footer .Footer__item-title {
-    padding: 28px 0px 16px 0px; }
-  .Footer .Footer__commonColumn, .Footer .Footer__customerSupport, .Footer .Footer__aboutOmmaniLife, .Footer .Footer__association, .Footer .Footer__connectUs, .Footer .Footer__paymentMethods {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    height: 100%;
-    padding-left: 0;
-    width: fit-content; }
-  .Footer .commonContent, .Footer .Footer__customerSupport .Footer__customerSupport-item, .Footer .Footer__aboutOmmaniLife .Footer__aboutOmmaniLife-item, .Footer .Footer__association .Footer__association-item {
-    color: #373737;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-wrap: nowrap; }
-    .Footer .commonContent a, .Footer .Footer__customerSupport .Footer__customerSupport-item a, .Footer .Footer__aboutOmmaniLife .Footer__aboutOmmaniLife-item a, .Footer .Footer__association .Footer__association-item a {
-      color: #373737; }
-      .Footer .commonContent a:hover, .Footer .Footer__customerSupport .Footer__customerSupport-item a:hover, .Footer .Footer__aboutOmmaniLife .Footer__aboutOmmaniLife-item a:hover, .Footer .Footer__association .Footer__association-item a:hover {
-        cursor: pointer; }
-  .Footer .Footer__certifiedBy-img {
-    width: 64px;
-    object-fit: contain; }
-  .Footer .Footer__connectUs {
-    padding-left: 0;
-    position: relative; }
-    .Footer .Footer__connectUs .Footer__connectUs-mateWithLove {
-      position: absolute;
-      bottom: 0;
-      right: 0; }
-  .Footer .Footer__paymentMethods {
-    padding-left: 0; }
-    .Footer .Footer__paymentMethods a {
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-    .Footer .Footer__paymentMethods img {
-      width: auto;
-      height: auto;
-      object-fit: contain; }
-    .Footer .Footer__paymentMethods .Footer__item-title {
-      padding-bottom: 0; }
-  .Footer .divideH {
-    background-color: #282828; }
-  .Footer .Footer_mobile {
-    display: none; }
