@@ -49,3 +49,10 @@ margin-left: -10px;
 span:last-of-type chọn phần tử span cuối cùng
 
 phân comment nếu mà up nhiều ảnh sẽ chỉ hiển thị ít đi
+
+X-Small None <576px
+Small sm ≥576px
+Medium md ≥768px
+Large lg ≥992px
+Extra large xl ≥1200px
+Extra extra large xxl ≥1400px

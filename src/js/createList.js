@@ -217,16 +217,12 @@ const createstandoutProductItem = () => {
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
-                  <span class="d-xxl-block d-none">Vừa mở bán</span>
+                  <span class="d-lg-block d-none">Vừa mở bán</span>
                 </div>
               </div>
     `;
   }
   list.innerHTML = str;
-  let listsquareimage = document.querySelectorAll(".square-image");
-  listsquareimage.forEach((item) => {
-    item.style.height = item.offsetWidth + "px";
-  });
 };
 const createcommonProductList = (number, listElement) => {
   let list = document.querySelector(".commonProductList");

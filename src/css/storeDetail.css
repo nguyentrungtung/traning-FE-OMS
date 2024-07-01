@@ -941,7 +941,7 @@ nav .pagination {
         position: relative; }
         .detailStore .detailStore_tabs #detailStore_homePage .homePage_standoutProduct .standoutProductList .standoutProductItem img {
           width: 100%;
-          object-fit: contain;
+          object-fit: fill;
           border: 1px solid #57902b;
           border-radius: 6px;
           margin-bottom: 3px; }
@@ -995,9 +995,8 @@ nav .pagination {
     align-items: stretch;
     margin-bottom: 45px; }
     .detailStore .detailStore_tabs #detailStore_homePage .homePage_firstList .listProductFirst_banner {
-      flex: 1; }
-      .detailStore .detailStore_tabs #detailStore_homePage .homePage_firstList .listProductFirst_banner img {
-        object-fit: fill; }
+      height: 100%;
+      object-fit: contain; }
     .detailStore .detailStore_tabs #detailStore_homePage .homePage_firstList .commonProductList {
       height: fit-content;
       grid-template-columns: repeat(4, 1fr); }
@@ -1020,8 +1019,8 @@ nav .pagination {
     gap: 45px;
     margin-bottom: 54px; }
     .detailStore .detailStore_tabs #detailStore_homePage .homePage_secondList .secondListImg {
-      flex: 1;
-      object-fit: contain; }
+      height: 100%;
+      object-fit: fill; }
     .detailStore .detailStore_tabs #detailStore_homePage .homePage_secondList .commonProductList {
       height: fit-content;
       grid-template-columns: repeat(4, 1fr); }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../src/css/header.css" />
     <link rel="stylesheet" href="../src/css/footer.css" />
     <link rel="stylesheet" href="../src/css/storeDetail.css" />
+    <link rel="stylesheet" href="../src/css/responsive-common.css" />
     <link rel="stylesheet" href="../src/css/responsive-storeDetail.css" />
   </head>
   <body>
@@ -17,19 +18,38 @@
 
     <main class="detailStore container-xxl">
       <!-- bannerStore -->
-      <section class="detailStore_banner">
+      <section class="detailStore_banner d-md-block d-flex flex-column">
         <img
-          class="w-100 object-fit-contain"
+          class="w-100 object-fit-contain d-none d-md-block"
           src="../assets/images/bannerStore.png"
           alt=""
         />
-        <div class="btnOption">
-          <button class="btnChatNgay">
-            <span>Chat ngay</span>
-            <img src="../assets/svg/chatngay.svg" alt="" />
+        <img
+          class="w-100 object-fit-contain d-block d-md-none"
+          src="../assets/images/backgroundImgMobile.png"
+          alt=""
+        />
+        <div class="topSearchMobile d-md-none d-flex gap-3 align-self-center">
+          <button>
+            <img src="../assets/svg/backIconStoreDetail.svg" alt="" />
           </button>
-          <button class="externalLink">
-            <img src="../assets/svg/btnLienKet.svg" alt="" />
+          <div class="d-flex align-items-center position-relative">
+            <img
+              class="position-absolute"
+              src="../assets/svg/li_search.png"
+              alt=""
+              style="left: 12px"
+            />
+            <input
+              placeholder="Bông cải xanh"
+              type="text"
+              name=""
+              id=""
+              style="padding-left: 48px"
+            />
+          </div>
+          <button>
+            <img src="../assets/svg/menuIconStoreDetail.svg" alt="" />
           </button>
         </div>
         <div class="boxBrandName">
@@ -52,10 +72,10 @@
                     <script>
                       for (let i = 0; i < 5; i++) {
                         document.write(`
-                        <div class="avatar">
-                          <img src="../assets/svg/avt${i + 1}.svg" alt="" />
-                        </div>
-                      `);
+                          <div class="avatar">
+                            <img src="../assets/svg/avt${i + 1}.svg" alt="" />
+                          </div>
+                        `);
                       }
                     </script>
                   </div>
@@ -67,14 +87,25 @@
                   <script>
                     for (let i = 0; i < 5; i++) {
                       document.write(`
-                         <img src="../assets/svg/chungnhan${i + 1}.svg" alt="">
-                      `);
+                           <img src="../assets/svg/chungnhan${
+                             i + 1
+                           }.svg" alt="">
+                        `);
                     }
                   </script>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="btnOption d-md-flex d-none">
+          <button class="btnChatNgay">
+            <span>Chat ngay</span>
+            <img src="../assets/svg/chatngay.svg" alt="" />
+          </button>
+          <button class="externalLink">
+            <img src="../assets/svg/btnLienKet.svg" alt="" />
+          </button>
         </div>
       </section>
       <!-- navbar -->
@@ -133,14 +164,18 @@
           </section>
           <!-- listProduct1 -->
           <section class="homePage_firstList">
-            <div class="listProductFirst_banner">
-              <img
-                class=""
-                src="../assets/images/listProductFirst_banner.png"
-                alt=""
-              />
+            <div class="row">
+              <div class="col-xxl-4 col-xl-3 d-xl-block d-none h-100">
+                <img
+                  class="listProductFirst_banner"
+                  src="../assets/images/listProductFirst_banner.png"
+                  alt=""
+                />
+              </div>
+              <div class="col-xxl-8 col-xl-9 col-lg-12 h-100">
+                <div class="commonProductList d-lg-grid d-flex"></div>
+              </div>
             </div>
-            <div class="commonProductList"></div>
           </section>
           <!-- feature -->
           <section class="homePage_simpleBanner">
@@ -156,12 +191,18 @@
           </section>
           <!-- second list -->
           <section class="homePage_secondList">
-            <img
-              class="secondListImg"
-              src="../assets/images/homePage_secondList.png"
-              alt=""
-            />
-            <div class="commonProductList"></div>
+            <div class="row">
+              <div class="col-xxl-4 col-xl-3 d-xl-block d-none h-100">
+                <img
+                  class="secondListImg"
+                  src="../assets/images/homePage_secondList.png"
+                  alt=""
+                />
+              </div>
+              <div class="col-xxl-8 col-xl-9 col-lg-12 h-100">
+                <div class="commonProductList d-lg-grid d-flex"></div>
+              </div>
+            </div>
           </section>
         </li>
         <li class="tab-pane fade" id="detailStore_product" role="tabpanel">
@@ -592,8 +633,8 @@
   <script src="../src/js/createList.js"></script>
   <script>
     createstandoutProductItem();
-    createcommonProductList(8);
-    createcommonProductList(8, ".homePage_secondList .commonProductList");
+    createcommonProductList(8, ".homePage_firstList .row .commonProductList");
+    createcommonProductList(8, ".homePage_secondList .row .commonProductList");
     createcommonProductList(
       20,
       "#detailStore_product .mainContent .commonProductList"
