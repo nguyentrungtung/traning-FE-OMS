@@ -16,20 +16,27 @@
     />
     <!-- Bootstrap CSS -->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
     <link
-      href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+
     <link rel="stylesheet" href="../css/common/common.css" />
-    <link rel="stylesheet" href="../css/grid/grid.css" />
+    <!-- <link rel="stylesheet" href="../css/grid/grid.css" /> -->
     <link rel="stylesheet" href="../css/header/header.css" />
     <link rel="stylesheet" href="../css/footer/footer.css" />
     <link rel="stylesheet" href="../css/header/header-responsive.css" />
     <link rel="stylesheet" href="../css/footer/footer-responisve.css" />
     <link rel="stylesheet" href="../css/store-details/store-details.css" />
+    <link
+      rel="stylesheet"
+      href="../css/store-details/store-details-responsive.css"
+    />
     <title>Cửa hàng</title>
   </head>
   <body>
@@ -54,10 +61,10 @@
             </div>
           </div>
         </div>
-        <div class="grid wide">
-          <div class="store-body" style="padding-bottom: 54px">
-            <div class="row">
-              <div class="col l-12">
+        <div class="store-body" style="padding-bottom: 54px">
+          <div class="container g-0">
+            <div class="row g-0">
+              <div class="col-12">
                 <div
                   class="store-details__cover-image-container position-relative"
                 >
@@ -163,6 +170,25 @@
                         </div>
                       </div>
                     </div>
+                    <div
+                      class="store-details__menu-mobile dropdown position-absolute"
+                    >
+                      <button
+                        class="button__menu-mobile border-0 bg-transparent"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="bi bi-three-dots-vertical"></i>
+                      </button>
+
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Chat ngay</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Liên kết</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                   <button
                     class="chat-with-store d-flex align-items-center justify-content-center"
@@ -175,30 +201,30 @@
                   </button>
                 </div>
               </div>
-              <div class="col l-12">
+              <div class="col-12">
                 <div class="navbar-category-store">
-                  <div class="row no-gutters">
-                    <div class="col l-2-4">
+                  <div class="row g-0 row-category-store__mobile">
+                    <div class="col-l-o-2 col-5">
                       <div class="button-category active">
                         <p>Trang chủ</p>
                       </div>
                     </div>
-                    <div class="col l-2-4">
+                    <div class="col-l-o-2 col-5">
                       <div class="button-category">
                         <p>Sản phẩm</p>
                       </div>
                     </div>
-                    <div class="col l-2-4">
+                    <div class="col-l-o-2 col-5">
                       <div class="button-category">
                         <p>Hồ sơ Doanh nghiệp</p>
                       </div>
                     </div>
-                    <div class="col l-2-4">
+                    <div class="col-l-o-2 col-5">
                       <div class="button-category">
                         <p>Thương hiệu</p>
                       </div>
                     </div>
-                    <div class="col l-2-4">
+                    <div class="col-l-o-2 col-5">
                       <div class="button-category">
                         <p>Liên hệ</p>
                       </div>
@@ -207,16 +233,312 @@
                   <div class="tooltip-line"></div>
                 </div>
               </div>
-              <div class="col l-12">
-                <div class="outstanding-products__container">
-                  <p class="outstanding-heading">Sản phẩm nổi bật</p>
-                  <div class="outstanding__list-product">
-                    <div class="outstanding-product">
-                      <div class="product-image">
-                        <img
-                          src="../images/store-details/outstanding-product/out-01.jpg"
-                          alt="img-out-product"
-                        />
+            </div>
+            <div class="store-body__content-category">
+              <div class="row g-0 content-block show">
+                <div class="col-12">
+                  <div class="outstanding-products__container">
+                    <p class="outstanding-heading">Sản phẩm nổi bật</p>
+                    <div class="outstanding__list-product"></div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="store-products__container">
+                    <div class="row g-xl-5 g-md-4 g-0">
+                      <div class="col-xl-4 col-md-5">
+                        <div class="products__banner">
+                          <div class="web-logo__sub">
+                            <img
+                              src="../images/store-details/sub-logo.svg"
+                              alt="sun-logo"
+                            />
+                          </div>
+                          <div class="products__banner-img">
+                            <img
+                              src="../images/store-details/banner-store-product/banner-product-01.png"
+                              alt="banner"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-8 col-md-7">
+                        <div class="products__list-product">
+                          <div class="row g-md-3 g-3 get-list-products"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 d-none d-sm-block">
+                  <div class="store__sliders-wrapper">
+                    <div class="slider-item">
+                      <img
+                        src="../images/store-details/Slider/slider-01.png"
+                        alt="slider"
+                      />
+                    </div>
+                    <div class="slider-item">
+                      <img
+                        src="../images/store-details/Slider/slider-02.png"
+                        alt="slider"
+                      />
+                    </div>
+                    <div class="slider-item">
+                      <img
+                        src="../images/store-details/Slider/slider-03.png"
+                        alt="slider"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 d-none d-sm-block">
+                  <div class="store-products__container">
+                    <div class="row g-xl-5 g-md-4 g-0">
+                      <div class="col-xl-4 col-md-5">
+                        <div class="products__banner">
+                          <div class="web-logo__sub">
+                            <img
+                              src="../images/store-details/sub-logo.svg"
+                              alt="sun-logo"
+                            />
+                          </div>
+                          <div class="products__banner-img">
+                            <img
+                              src="../images/store-details/banner-store-product/banner-product-02.png"
+                              alt="banner"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-8 col-md-7">
+                        <div class="products__list-product">
+                          <div
+                            class="row g-md-3 g-0 get-list-products-02"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-md-3 content-block">
+                <div class="col-lg-2">
+                  <div class="search-filter">
+                    <div class="search-filter__section">
+                      <p class="search-filter__title">Tất cả</p>
+                      <div class="search-filter__select-container">
+                        <!-- <div class="search-filter__select-item">
+                          <div class="search-filter__header">
+                            <img
+                              src="../images/store-details/sort-filter_category/thucandonglanh.png"
+                              alt="Icon"
+                              class="category__icon"
+                            />
+                            <span class="category__text">
+                              Thức ăn đông lạnh
+                            </span>
+                            <i class="bi bi-chevron-down"></i>
+                          </div>
+                          <ul class="category__list">
+                            <li class="category__item">Item 1</li>
+                            <li class="category__item">Item 2</li>
+                            <li class="category__item">Item 3</li>
+                          </ul>
+                        </div> -->
+                      </div>
+                    </div>
+                    <div class="search-filter__section">
+                      <p class="search-filter__title">Đánh giá</p>
+                      <div
+                        class="search-filter__checkbox-group d-flex flex-column align-items-start"
+                      >
+                        <div class="search-filter__option">
+                          <input
+                            type="checkbox"
+                            id="express"
+                            class="search-filter__checkbox"
+                          />
+                          <label for="express" class="search-filter__label">
+                            Từ 5 sao
+                          </label>
+                        </div>
+                        <div class="search-filter__option">
+                          <input
+                            type="checkbox"
+                            id="fast"
+                            class="search-filter__checkbox"
+                          />
+                          <label for="fast" class="search-filter__label">
+                            Từ 4 sao
+                          </label>
+                        </div>
+                        <div class="search-filter__option">
+                          <input
+                            type="checkbox"
+                            id="standard"
+                            class="search-filter__checkbox"
+                          />
+                          <label for="standard" class="search-filter__label">
+                            Từ 3 sao
+                          </label>
+                        </div>
+                        <div class="search-filter__option">
+                          <input
+                            type="checkbox"
+                            id="standard"
+                            class="search-filter__checkbox"
+                          />
+                          <label for="standard" class="search-filter__label">
+                            Từ 2 sao
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-10">
+                  <div class="search-results">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="search-results__header">
+                          <div
+                            class="search-results__sort d-flex align-items-center justify-content-between"
+                          >
+                            <div
+                              class="d-flex align-items-center search-results__sort-left"
+                            >
+                              <span class="search-results__sort-label">
+                                Sắp xếp theo:
+                              </span>
+                              <div
+                                class="d-flex align-items-center sort-button__container"
+                              >
+                                <button
+                                  class="search-results__sort-button search-results__sort-button--active"
+                                >
+                                  Nổi bật
+                                </button>
+                                <button class="search-results__sort-button">
+                                  Mới nhất
+                                </button>
+                                <button class="search-results__sort-button">
+                                  Bán chạy
+                                </button>
+                                <div
+                                  class="search-results__sort-select d-flex align-items-center"
+                                >
+                                  <select class="">
+                                    <option>Giá</option>
+                                    <option>500.000đ</option>
+                                    <option>1.000.000đ</option>
+                                    <option>2.000.000đ</option>
+                                  </select>
+                                  <i class="bi bi-caret-down-fill"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="search-results__pagination d-flex">
+                              <p class="search-results__page-info">
+                                <span>1</span>/200
+                              </p>
+                              <div
+                                class="search-results__page-button--block d-flex align-items-center"
+                              >
+                                <span
+                                  class="search-results__page-button search-results__page-button--prev"
+                                >
+                                  <i class="bi bi-chevron-left"></i>
+                                </span>
+                                <span
+                                  class="search-results__page-button search-results__page-button--next"
+                                >
+                                  <i class="bi bi-chevron-right"></i>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="search-results__list-products">
+                          <div class="row g-md-2 get-list__sort-product"></div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div
+                          class="d-flex justify-content-center"
+                          style="margin-top: 14px"
+                        >
+                          <ul
+                            class="pagination__list-product d-flex align-items-center"
+                          >
+                            <li class="pagination__item">
+                              <a
+                                href="#"
+                                class="pagination__link pagination__link--prev"
+                              >
+                                <i class="bi bi-chevron-left"></i>
+                              </a>
+                            </li>
+                            <li class="pagination__item">
+                              <a
+                                href="#"
+                                class="pagination__link pagination__link--page pagination__link--active"
+                              >
+                                1
+                              </a>
+                            </li>
+                            <li class="pagination__item">
+                              <a
+                                href="#"
+                                class="pagination__link pagination__link--page"
+                              >
+                                2
+                              </a>
+                            </li>
+                            <li class="pagination__item">
+                              <a
+                                href="#"
+                                class="pagination__link pagination__link--page"
+                              >
+                                3
+                              </a>
+                            </li>
+                            <li class="pagination__item">
+                              <a
+                                href="#"
+                                class="pagination__link pagination__link--page"
+                              >
+                                4
+                              </a>
+                            </li>
+                            <li class="pagination__item">
+                              <a
+                                href="#"
+                                class="pagination__link pagination__link--page"
+                              >
+                                5
+                              </a>
+                            </li>
+                            <li class="pagination__item">
+                              <a
+                                href="#"
+                                class="pagination__link pagination__link--page"
+                              >
+                                ...
+                              </a>
+                            </li>
+                            <li class="pagination__item">
+                              <a
+                                href="#"
+                                class="pagination__link pagination__link--next"
+                              >
+                                <i class="bi bi-chevron-right"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -232,9 +554,11 @@
     <script src="../js/load-html.js"></script>
     <script type="module" src="../js/select-menu.js"></script>
     <script type="module" src="../js/handle-collapse.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      // const button_category = document.querySelectorAll();
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/store-details.js"></script>
   </body>
 </html>

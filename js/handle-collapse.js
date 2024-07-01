@@ -7,7 +7,7 @@ function handleCollapse() {
   const columnNotChild = footerTop.querySelectorAll(".column.column-not-child");
   const columnHasChild = footerTop.querySelectorAll(".column.column-has-child");
   columnNotChild.forEach((column, parentIndex) => {
-    if (windowWidth < 768) {
+    if (windowWidth <= 768) {
       const columnTitles = column.querySelectorAll(".column-title");
       columnTitles.forEach((columnTitle) => {
         columnTitle.setAttribute("data-bs-toggle", "collapse");
@@ -47,7 +47,7 @@ function handleCollapse() {
   columnHasChild.forEach((column, subIndex) => {
     const childColumn = column.querySelectorAll(".child-column");
     childColumn.forEach((child, childIndex) => {
-      if (windowWidth < 768) {
+      if (windowWidth <= 768) {
         const columnTitles = child.querySelectorAll(".column-title");
         columnTitles.forEach((columnTitle) => {
           columnTitle.setAttribute("data-bs-toggle", "collapse");
