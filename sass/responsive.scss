@@ -19,7 +19,6 @@
       }
     }
   }
-
   .service {
     &__container {
       .row {
@@ -85,19 +84,6 @@
           .store-cards {
             gap: 14px;
             overflow-x: auto;
-          }
-        }
-      }
-    }
-  }
-
-  .footer {
-    .footer__container {
-      .row {
-        .custom-col {
-          gap: 75px;
-          div {
-            width: 23;
           }
         }
       }
@@ -310,18 +296,18 @@
     }
   }
 
-  .footer {
-    .footer__container {
-      .row {
-        .custom-col {
-          gap: 24px;
-          div {
-            width: 43%;
-          }
-        }
-      }
-    }
-  }
+  // .footer {
+  //   .footer__container {
+  //     .row {
+  //       .custom-col {
+  //         gap: 24px;
+  //         div {
+  //           width: 43%;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   .categories {
     &__container {
@@ -441,12 +427,14 @@
             box-shadow: -8px 0px 24px rgba(149, 157, 165, 0.2);
             z-index: 20;
             background-color: #ffff;
-            span {
-              &:first-child {
+            .title-filter {
+              .icon-filter {
                 display: none;
               }
-              font-size: 20px !important;
-              font-weight: 700;
+              span {
+                font-size: 20px !important;
+                font-weight: 700;
+              }
             }
             .close-filterMb {
               display: block !important;
@@ -493,31 +481,6 @@
 }
 
 @media screen and (max-width: 568px) {
-  .header {
-    .header-container {
-      .row {
-        .custom-col {
-          .header-container__bottom {
-            .account {
-              padding-bottom: 12px;
-              ul {
-                .cart-icon {
-                  &__list {
-                    position: fixed;
-                    width: 100%;
-                    height: 100%;
-                    overflow-y: auto;
-                    top: 0;
-                    left: 0;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
   .meilgo {
     .meilgo__container {
       .row {
@@ -535,22 +498,7 @@
       }
     }
   }
-  .footer {
-    padding: 14px 0;
-    background-color: #1ab357;
-    .footer__container {
-      .row {
-        .custom-col {
-          display: none !important;
-        }
-      }
-    }
-    .footer-mb {
-      display: block !important;
-      text-align: center;
-      color: #ffff;
-    }
-  }
+
   .banner {
     &__container {
       .row {

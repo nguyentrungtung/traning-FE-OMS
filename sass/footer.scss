@@ -160,3 +160,52 @@ a {
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    .footer__container {
+      .row {
+        .custom-col {
+          gap: 75px;
+          div {
+            width: 23;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .footer {
+    .footer__container {
+      .row {
+        .custom-col {
+          gap: 24px;
+          div {
+            width: 43%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .footer {
+    padding: 14px 0;
+    background-color: #1ab357;
+    .footer__container {
+      .row {
+        .custom-col {
+          display: none !important;
+        }
+      }
+    }
+    .footer-mb {
+      display: block !important;
+      text-align: center;
+      color: #ffff;
+    }
+  }
+}

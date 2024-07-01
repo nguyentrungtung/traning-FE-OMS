@@ -35,12 +35,6 @@
     gap: 14px;
     overflow-x: auto;
   }
-  .footer .footer__container .row .custom-col {
-    gap: 75px;
-  }
-  .footer .footer__container .row .custom-col div {
-    width: 23;
-  }
   .categories__container .row .col .categories-items .items-wrapper {
     padding-left: 0;
   }
@@ -155,12 +149,6 @@
   .legit-store .legit-store__container .row .col .store-cards .card-wrapper {
     width: 144px;
   }
-  .footer .footer__container .row .custom-col {
-    gap: 24px;
-  }
-  .footer .footer__container .row .custom-col div {
-    width: 43%;
-  }
   .categories__container .row .col .categories-items .items p {
     font-size: 12px;
   }
@@ -251,12 +239,12 @@
     z-index: 20;
     background-color: white;
   }
-  .filter-categories__container .row:last-child .col-filter span {
+  .filter-categories__container .row:last-child .col-filter .title-filter .icon-filter {
+    display: none;
+  }
+  .filter-categories__container .row:last-child .col-filter .title-filter span {
     font-size: 20px !important;
     font-weight: 700;
-  }
-  .filter-categories__container .row:last-child .col-filter span:first-child {
-    display: none;
   }
   .filter-categories__container .row:last-child .col-filter .close-filterMb {
     display: block !important;
@@ -287,17 +275,6 @@
   }
 }
 @media screen and (max-width: 568px) {
-  .header .header-container .row .custom-col .header-container__bottom .account {
-    padding-bottom: 12px;
-  }
-  .header .header-container .row .custom-col .header-container__bottom .account ul .cart-icon__list {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    top: 0;
-    left: 0;
-  }
   .meilgo .meilgo__container .row .col {
     background-color: white;
   }
@@ -306,18 +283,6 @@
   }
   .meilgo .meilgo__container .row .col ul li span {
     font-size: 13px;
-  }
-  .footer {
-    padding: 14px 0;
-    background-color: #1ab357;
-  }
-  .footer .footer__container .row .custom-col {
-    display: none !important;
-  }
-  .footer .footer-mb {
-    display: block !important;
-    text-align: center;
-    color: white;
   }
   .banner__container .row .col .carousel .carousel-indicators {
     bottom: -32px;

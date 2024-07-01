@@ -128,3 +128,34 @@ a {
 .footer__container .row .footer-mb {
   display: none;
 }
+
+@media screen and (max-width: 1200px) {
+  .footer .footer__container .row .custom-col {
+    gap: 75px;
+  }
+  .footer .footer__container .row .custom-col div {
+    width: 23;
+  }
+}
+@media screen and (max-width: 996px) {
+  .footer .footer__container .row .custom-col {
+    gap: 24px;
+  }
+  .footer .footer__container .row .custom-col div {
+    width: 43%;
+  }
+}
+@media screen and (max-width: 568px) {
+  .footer {
+    padding: 14px 0;
+    background-color: #1ab357;
+  }
+  .footer .footer__container .row .custom-col {
+    display: none !important;
+  }
+  .footer .footer-mb {
+    display: block !important;
+    text-align: center;
+    color: white;
+  }
+}
