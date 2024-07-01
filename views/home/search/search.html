@@ -14,7 +14,7 @@
 </head>
 <body class="position-relative">
     <header class="wide-screen-header bg-green text-white d-flex flex-column align-items-center">
-        <div class="helper mb-3 container">
+        <div class="helper mb-3 container py-1">
             <div class="d-flex justify-content-between flex-wrap">
                 <div class="helper-left d-flex">
                     <a href="#" class="text-decoration-none text-white"><small class="px-2">Kênh người bán</small></a>
@@ -33,17 +33,28 @@
                 </div>
             </div>
         </div>
-        <div class="toolbar d-flex container flex-nowrap">
+        <div class="toolbar d-flex justify-content-between container flex-wrap">
             <a href="#" class="text-white text-decoration-none brand">
-                <div class="h3 mb-0 text-upperCase text-center">Ommanilife</div>
-                <small class="text-center text-nowrap">Năng lượng cuộc sống</small>
+                <div class="h3 mb-0 text-upperCase text-center lh-1">Ommanilife</div>
+                <small class="text-center text-nowrap lh-1">Năng lượng cuộc sống</small>
             </a>
-            <div class="ms-2 searchbar flex-fill minw-500px">
-                <div class="input-group rounded bg-white p-1">
-                    <button id="btn-category" class="border-0 btn text-light-green">Sản phẩm<i class="px-1 fas fa-chevron-down text-light-green"></i></button>
-                    <div class="border-secondary my-3 vr"></div>
-                    <input type="text" class="focus-ring focus-ring-light border-0 form-control" placeholder="Nhập sản phẩm cần tìm kiếm">
+            <div class="ms-2 searchbar flex-fill">
+                <div class="input-group rounded bg-white p-1 btn-group">
+                    <div class="btn-group">
+                        <button id="btn-category" class="border-0 btn text-black text-light-green" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Sản phẩm<i class="px-1 fas fa-chevron-down text-light-green"></i></button>
+                        <ul class="dropdown-menu rounded-0">
+                            <a href="#" class="py-2 dropdown-item bg-white-to-green-hover">Shop</a>
+                            <a href="#" class="py-2 dropdown-item bg-white-to-green-hover">Cửa hàng</a>
+                            <a href="#" class="py-2 dropdown-item bg-white-to-green-hover">Store</a>
+                        </ul>
+                    </div>
+                    <input type="text" class="no-focus-ring border-0 form-control" placeholder="Nhập sản phẩm cần tìm kiếm"  data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                     <button class="rounded-end border-0 bg-green-btn size-47px"><img class="p-1 w-100 text-white" src="/resources/img/icons/search.svg"/></button>
+                    <ul class="dropdown-menu bottom-100 start-0 translate-middle-bottom w-100">
+                        <a href="#" class="py-2 dropdown-item bg-white bg-white-to-green-hover">Bông cải Hường</a>
+                        <a href="#" class="py-2 dropdown-item bg-white bg-white-to-green-hover">Cửa hàng</a>
+                        <a href="#" class="py-2 dropdown-item bg-white bg-white-to-green-hover">Store</a>
+                    </ul>
                 </div>
                 <div class="pt-1 d-flex recommendation flex-wrap overflow-hidden">
                     <span class="pe-3 text-nowrap"><a href="#" class="text-decoration-none text-white">Trái cây</a></span>
@@ -56,12 +67,68 @@
                 </div>
             </div>
             <div class="right d-flex">
-                <div class="tools">
-                    <div class="position-relative">
+                <div class="tools d-flex px-2 gap-2">
+                    <!-- <div class="position-relative tool-noti">
                         <div class="noti-sign">
-                            <a href="#">
+                            <a href="#"><i class="far fa-bell text-white h3 p-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="position-relative tool-comment">
+                        <a href="#" class="noti-sign"><i class="far fa-comment text-white h3 p-2"></i>
+                        </a>
+                    </div> -->
+                    <div class="position-relative">
+                        <div class="dropdown">
+                            <a href="123" class="noti-sign">
                                 <img src="/resources/img/icons/cart.svg" class="size-47px py-2"></img>
                             </a>
+                            <ul class="dropdown-menu rounded-0 top-100 end-0 bg-transparent">
+                                <li class="arrow-up-shape-right"></li>
+                                <div class="text-muted small bg-white p-2">Sản phẩm mới thêm</div>
+                                <li class="bg-white py-1">
+                                    <a href="#" class="dropdown-item">
+                                        <div class="cart-product d-flex">
+                                            <div class="cart-product-info d-flex gap-4 text-green-to-white-hover">
+                                                <div class="img overflow-hidden">
+                                                    <img src="/resources/img/products/products-images/236699cc738a5aec082af43498cd728a.png" class="size-47px" alt="">
+                                                </div>
+                                                <div class="name maxw-250px overflow-dot-1">Bông cải xanh 100g nội địa Nhật Bản hàng tươi 100%</div>
+                                            </div>
+                                            <div class="cart-product-price text-green-to-white-hover text-green">₫ 59.000</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="bg-white py-1">
+                                    <a href="#" class="dropdown-item">
+                                        <div class="cart-product d-flex">
+                                            <div class="cart-product-info d-flex gap-4 text-green-to-white-hover">
+                                                <div class="img overflow-hidden">
+                                                    <img src="/resources/img/products/products-images/b37a8ebbd8545a0bfd53afc0c0ee7ef4.png" class="size-47px" alt="">
+                                                </div>
+                                                <div class="name maxw-250px overflow-dot-1">Bông cải xanh 100g nội địa Nhật Bản hàng tươi 100%</div>
+                                            </div>
+                                            <div class="cart-product-price text-green-to-white-hover text-green">₫ 59.000</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="bg-white py-1">
+                                    <a href="#" class="dropdown-item">
+                                        <div class="cart-product d-flex">
+                                            <div class="cart-product-info d-flex gap-4 text-green-to-white-hover">
+                                                <div class="img overflow-hidden">
+                                                    <img src="/resources/img/products/products-images/dc59629c69a4812772932558a725b25f.png" class="size-47px" alt="">
+                                                </div>
+                                                <div class="name maxw-250px overflow-dot-1">Bông cải xanh 100g nội địa Nhật Bản hàng tươi 100%</div>
+                                            </div>
+                                            <div class="cart-product-price text-green-to-white-hover text-green">₫ 59.000</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <div class="total-section bg-white d-flex p-3 justify-content-between">
+                                    <div class="text-muted">X thêm vào giỏ hàng</div>
+                                    <button class="btn bg-green-btn text-white">Xem giỏ hàng</button>
+                                </div>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -77,10 +144,10 @@
                             </div>
                         </a>
                         <ul class="dropdown-menu p-0 bg-transparent border-0">
-                            <li class="arrow-up-shape"></li>
+                            <li class="arrow-up-shape ms-3"></li>
                             <li><a class="dropdown-item text-green bg-white" href="#">Tài khoản của tôi</a></li>
                             <li><a class="dropdown-item text-green bg-white" href="#">Đơn mua</a></li>
-                            <li><a class="dropdown-item text-green bg-white" href="#">Đăng xuất</a></li>
+                            <li><a class="dropdown-item text-green bg-white" href="/index.html">Đăng xuất</a></li>
                         </ul>
                     </div>
                 </div>
@@ -357,8 +424,8 @@
                         </div>
                     </div>
                     <div class="result-product-list container mt-3">
-                        <div class="row justify-content-between gap-2">
-                            <div class="result-item minw-190px col bg-white p-0">
+                        <div class="row justify-content-start gap-2">
+                            <div class="result-item maxw-190px col bg-white p-0">
                                 <a href="#" class="text-black">
                                     <div class="item-img position-relative">
                                         <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
@@ -401,7 +468,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="result-item minw-190px col bg-white p-0">
+                            <div class="result-item maxw-190px col bg-white p-0">
                                 <a href="#" class="text-black">
                                     <div class="item-img position-relative">
                                         <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
@@ -444,7 +511,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="result-item minw-190px col bg-white p-0">
+                            <div class="result-item maxw-190px col bg-white p-0">
                                 <a href="#" class="text-black">
                                     <div class="item-img position-relative">
                                         <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
@@ -487,7 +554,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="result-item minw-190px col bg-white p-0">
+                            <div class="result-item maxw-190px col bg-white p-0">
                                 <a href="#" class="text-black">
                                     <div class="item-img position-relative">
                                         <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
@@ -530,7 +597,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="result-item minw-190px col bg-white p-0">
+                            <div class="result-item maxw-190px col bg-white p-0">
                                 <a href="#" class="text-black">
                                     <div class="item-img position-relative">
                                         <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
@@ -573,7 +640,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="result-item minw-190px col bg-white p-0">
+                            <div class="result-item maxw-190px col bg-white p-0">
                                 <a href="#" class="text-black">
                                     <div class="item-img position-relative">
                                         <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
@@ -616,7 +683,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="result-item minw-190px col bg-white p-0">
+                            <div class="result-item maxw-190px col bg-white p-0">
                                 <a href="#" class="text-black">
                                     <div class="item-img position-relative">
                                         <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
@@ -659,7 +726,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="result-item minw-190px col bg-white p-0">
+                            <div class="result-item maxw-190px col bg-white p-0">
                                 <a href="#" class="text-black">
                                     <div class="item-img position-relative">
                                         <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
@@ -702,7 +769,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="result-item minw-190px col bg-white p-0">
+                            <div class="result-item maxw-190px col bg-white p-0">
                                 <a href="#" class="text-black">
                                     <div class="item-img position-relative">
                                         <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
@@ -745,7 +812,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="result-item minw-190px col bg-white p-0">
+                            <div class="result-item maxw-190px col bg-white p-0">
                                 <a href="#" class="text-black">
                                     <div class="item-img position-relative">
                                         <img class="w-100" src="/resources/img/search/search-products/suplo.jpg" alt="">
@@ -987,8 +1054,7 @@
             </div>
         </div>
     </div>
-
-    <footer class="w-100 mt-2 py-4">
+    <footer class="wide-screen-footer w-100 mt-2 py-4">
         <div class="container">
             <div class="bg-white row gap-3 py-2">
                 <div class="customer-service col text-nowrap">
@@ -1063,6 +1129,128 @@
                             <div class="d-flex flex-column gap-1">
                                 <a href="#"><img class="h-40px" src="/resources/img/footer/download/google-play.png" alt=""></a>
                                 <a href="#"><img class="h-40px" src="/resources/img/footer/download/app-store.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-pink signature h3 text-end">Made with love!</div>
+                </div>
+            </div>
+            <hr class="bg-white row border-1 opacity-100 border-dark"/>
+            <div class="bg-white company-info mt-3">
+                <div class="company-address">Trụ sở chính: 43 Trần Nguyên Đán, Định Công, Q. Hoàng Mai, TP. Hà Nội</div>
+                <div class="company-cert">Giấy chứng nhận Đăng kí kinh doanh số: 0998999999 do sở kế hoạch và Đầu tư Thành Phố Hà Nội cấp lần đầu ngày 09/09/2022</div>
+                <div class="company-right">©2022 - Bản quyền của Công ty TNHH Ommani</div>
+            </div>
+        </div>
+    </footer>
+    <footer class="mobile-footer w-100 mt-2 py-4 d-none">
+        <div class="container">
+            <div class="bg-white ">
+                <div class="customer-service col text-nowrap">
+                    <h5>
+                        <a data-bs-toggle="collapse" href="#footer-customer-service" role="button" aria-expanded="false" aria-controls="ooter-customer-service" class="text-black">
+                            Hỗ trợ khách hàng
+                        </a>
+                    </h5>
+                    <div class="collapse" id="footer-customer-service">
+                        <div class="options collaps d-flex flex-column gap-2 mb-3">
+                            <div class="text">Hotline: <strong><a href="tel:+1900-6789" class="text-decoration-none text-black">19006789</a></strong><div>(1.000 đ/phút, 8-21h kể cả T7, CN)</div></div>
+                            <div class="text"><a href="#" class="text-black">Các câu hỏi thường gặp</a></div>
+                            <div class="text"><a href="#" class="text-black">Gửi yêu cầu hỗ trợ</a></div>
+                            <div class="text"><a href="#" class="text-black">Hướng dẫn đặt hàng</a></div>
+                            <div class="text"><a href="#" class="text-black">Phương thức vận chuyển</a></div>
+                            <div class="text"><a href="#" class="text-black">Chính sách đổi trả</a></div>
+                            <div class="text"><a href="#" class="text-black">Chính sách hàng nhập khẩu</a></div>
+                            <div class="text">Hỗ trợ khách hàng: <a class="text-black" href="mailto:hotro@ommani.vn">hotro@ommani.vn</a></div>
+                            <div class="text">Báo lỗi bảo mật: <a class="text-black" href="mailto:security@ommani.vn">security@ommani.vn</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about col text-nowrap">
+                    <a class="text-black" data-bs-toggle="collapse" href="#footer-about" role="button" aria-expanded="false" aria-controls="footer-about">
+                        <h5>Về Ommanilife</h5>
+                    </a>
+                    
+                    <div class="collapse" id="footer-about">
+                        <div class="options d-flex flex-column gap-2 mb-3">
+                            <div class="text"><a href="#" class="text-black">Giới thiệu về Ommani</a></div>
+                            <div class="text"><a href="#" class="text-black">Tuyển dụng</a></div>
+                            <div class="text"><a href="#" class="text-black">Chính sách bảo mật, thanh toán</a></div>
+                            <div class="text"><a href="#" class="text-black">Bảo mật thông tin cá nhân</a></div>
+                            <div class="text"><a href="#" class="text-black">Chính sách giải quyết khiếu nại</a></div>
+                            <div class="text"><a href="#" class="text-black">Điều khoản sử dụng</a></div>
+                            <div class="text"><a href="#" class="text-black">Tiếp thị liên kết cùng Ommani</a></div>
+                            <div class="text"><a href="#" class="text-black">Bán hàng cho doanh nghiệp</a></div>
+                            <div class="text"><a href="#" class="text-black">Điều kiện vận chuyển</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="partner col text-nowrap rounded-0">
+                    <a class="text-black  border-top-0 border-bottom-0" data-bs-toggle="collapse" href="#footer-coop" role="button" aria-expanded="false" aria-controls="footer-coop">
+                        <h5>Hợp tác và liên kết</h5>
+                    </a>
+                    <div class="collapse  border-top-0 pt-0 mt-0" id="footer-coop">
+                        <div class=" mb-3">
+                            <div class="text"><a href="#" class="text-black">Quy chế hoạt động sàn GDTMĐT</a></div>
+                            <div class="text"><a href="#" class="text-black">Bán hàng cùng Ommani</a></div>
+                        </div>
+                    </div>
+                    <a class="text-black  border-top-2 border-bottom-0" data-bs-toggle="collapse" href="#footer-cert" role="button" aria-expanded="false" aria-controls="footer-cert">
+                        <h5>Chứng nhận bởi</h5>
+                    </a>
+                    <div class="collapse  border-top-0" id="footer-cert">
+                        <div class=" d-flex gap-2 mb-3">
+                            <a href="#"><img class="h-40px" src="/resources/img/footer/cert/khong-hang-gia.png"></img></a>
+                            <a href="#"><img class="h-40px" src="/resources/img/footer/cert/bo-cong-thuong.png"></img></a>
+                            <a href="#"><img class="h-40px" src="/resources/img/footer/cert/tin-nhiem-mang.png"></img></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment">
+                    <a class="text-black  border-bottom-0" data-bs-toggle="collapse" href="#footer-payment" role="button" aria-expanded="false" aria-controls="footer-payment">
+                        <h5>Phương thức thanh toán</h5>
+                    </a>
+                    <div class="collapse  border-top-0" id="footer-payment">
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <div><img src="/resources/img/footer/payment/bxl_visa.png" alt="" class="h-40px"></div>
+                            <div><img src="/resources/img/footer/payment/logos_jcb.png" alt="" class="h-40px"></div>
+                            <div><img src="/resources/img/footer/payment/momo.png" alt="" class="h-40px"></div>
+                            <div><img src="/resources/img/footer/payment/noto_atm-sign.png" alt="" class="h-40px"></div>
+                            <div><img src="/resources/img/footer/payment/uim_master-card.png" alt="" class="h-40px"></div>
+                            <div><img src="/resources/img/footer/payment/viettelPay.png" alt="" class="h-40px"></div>
+                            <div><img src="/resources/img/footer/payment/vnpay-seeklogo.com 1.png" alt="" class="h-40px"></div>
+                            <div><img src="/resources/img/footer/payment/zaloPay.png" alt="" class="h-40px"></div>
+                        </div>
+                    </div>
+                    <a class="text-black  border-bottom-0" data-bs-toggle="collapse" href="#footer-shipment" role="button" aria-expanded="false" aria-controls="footer-shipment">
+                        <h5>Dịch vụ giao hàng</h5>
+                    </a>
+                    <div class="collapse  border-top-0" id="footer-shipment">
+                            <img src="/resources/img/footer/5cc832252e5c2d1c19d7a68036c4d1f9.png" alt="" class="h-40px">  
+                    </div>
+                </div>
+                <div class="contact col d-flex flex-column justify-content-between ">
+                    <div>
+                        <a class="text-black  border-bottom-0" data-bs-toggle="collapse" href="#footer-social-media" role="button" aria-expanded="false" aria-controls="footer-social-media">
+                            <h5>Kết nối với chúng tôi</h5>
+                        </a>
+                        <div class="collapse" id="footer-social-media">
+                            <div class="d-flex gap-2 mb-3">
+                                <a href="#"><img class="h-40px" src="/resources/img/footer/social-media/1a144b96100ee9bfd8b81f325fbc69e4.png" alt=""></a>
+                                <a href="#"><img class="h-40px" src="/resources/img/footer/social-media/9dbe51fb44371b5cce8f45cbbf4ee352.png" alt=""></a>
+                                <a href="#"><img class="h-40px" src="/resources/img/footer/social-media/f6e9771ca4a0525e5ee5439867a21a83.png" alt=""></a>
+                            </div>
+                        </div>
+                        <a class="text-black  border-bottom-0" data-bs-toggle="collapse" href="#footer-app-downloader" role="button" aria-expanded="false" aria-controls="footer-app-downloader">
+                            <h5>Tải ứng dụng trên điện thoại</h5>
+                        </a>
+                        <div class="collapse" id="footer-app-downloader">
+                            <div class="d-flex gap-3 mb-3 align-items-center" >
+                                <img class="" src="/resources/img/footer/download/Vector.png" alt="">
+                                <div class="d-flex flex-column gap-1">
+                                    <a href="#"><img class="h-40px" src="/resources/img/footer/download/google-play.png" alt=""></a>
+                                    <a href="#"><img class="h-40px" src="/resources/img/footer/download/app-store.png" alt=""></a>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -19,55 +19,21 @@
                     <div class="h3 mb-0 text-upperCase text-center lh-1 text-nowrap ">Ommanilife</div>
                     <small class="text-center text-nowrap lh-1">Năng lượng cuộc sống</small>
                 </div>
-                <h1 class="text-nowrap ">Đăng nhập</h1>
+                <h1 class="text-nowrap">Đăng ký</h1>
             </a>
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="text-nowrap text-white fs-small text-decoration-underline link-offset-1">Bạn cần giúp đỡ?</a>
         </div>
     </header>
     <div class="body w-100 bg-dark-grey d-flex justify-content-center py-5">
-        <div class="input-form bg-white p-4 rounded-1">
-            <div class="form-title h3 fw-bold text-center py-3">
-                Đăng nhập
+        <div class="noti-form bg-white p-4 rounded-1 text-center">
+            <div class="img">
+                <img src="/resources/img/system/success.png" alt="">
             </div>
-            <div class="form-body">
-                <form name="loginForm" action="/views/home/logged-in.html" onsubmit="return validLoginForm()">
-                    <div class="form-input">
-                        <div class="input-group input-group-login p-2 border-1 border border-dark rounded-1 my-2">
-                            <input id="login-username" type="text" class="form-control focus-ring focus-ring-light border-0" placeholder="Số điện thoại hoặc email">
-                        </div>
-                        <div class="login-alert d-none text-danger">Số điện thoại chưa đúng định dạng</div>
-                        <div class="input-group input-group-login p-2 my-2 border-1 border border-dark rounded-1">
-                            <input id="login-userpassword" type="password" class="form-control focus-ring focus-ring-light border-0" placeholder="Nhập mật khẩu">
-                            <a onclick="showPwd('login-pwd-icon', 'login-userpassword')" class="btn border-0">
-                                <i class="fas fa-eye text-dark" id="login-pwd-icon"></i>
-                            </a> 
-                        </div>
-                        <div class="login-alert text-danger d-none">Thông tin đăng nhập chưa đúng</div>
-                    </div>
-                    <div class="text-end small fw-bold pb-3"><a href="/views/login/reset.html" class="text-black small">Quên mật khẩu</a></div>
-                    <button type="submit" class="btn btn-success border-0 rounded-1 text-white bg-green w-100 my-2 py-2">Đăng nhập</button>
-                </form>
+            <div class="noti-title h5 fw-bold">
+                Đăng ký thành công
             </div>
-            <div class="form-footer py-4">
-                <div class="fs-small text-center text-muted py-2">hoặc đăng nhập bằng</div>
-                <div class="login-option row gap-2 px-5">
-                    <a href="#" class="py-2 gap-2 col btn rounded-1 d-flex border-1 border-dark justify-content-center align-items-center" id="loginFacebook">
-                        <img class="size-30px" src="/resources/img/footer/social-media/f6e9771ca4a0525e5ee5439867a21a83.png" alt="">
-                        <span class="text-zalo">Zalo</span>
-                    </a>
-                    <a href="#" class="py-2 gap-2 col btn d-flex border-1 border-dark justify-content-center align-items-center" id="loginFacebook">
-                        <img class="size-30px" src="/resources/img/footer/social-media/cae8130117b6eb865ecc3737cf493500.png" alt="">
-                        <span>Google</span>
-                    </a>
-                    <a href="#" class="py-2 gap-2 col btn d-flex border-1 border-dark justify-content-center align-items-center" id="loginFacebook">
-                        <img class="size-30px" src="/resources/img/footer/social-media/1a144b96100ee9bfd8b81f325fbc69e4.png" alt="">
-                        <span class="text-facebook">Facebook</span>
-                    </a>
-                </div>
-                <div class="signup pt-4 text-center">
-                    <div class="fs-small">Bạn chưa có tài khoản? <a href="/views/login/signup.html" class="ps-1 text-green">Đăng ký</a></div>
-                </div>
-            </div>
+            <div class="noti-description small py-2">Đăng nhập để nhận ưu đãi cho thành viên mới</div>
+            <div class="noti-btn py-1"><a href="/views/home/logged-in.html" class="w-100 btn bg-green-btn text-white">Đăng nhập</a></div>
         </div>
     </div>
     <footer class="wide-screen-footer w-100 mt-2 py-4">

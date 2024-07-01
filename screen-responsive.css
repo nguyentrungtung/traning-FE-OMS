@@ -9,10 +9,20 @@
         display: none !important;
     }
 }
-
-@media only screen and (max-width: 1000px) {
+@media only screen and ((max-width: 1250px) and (min-width: 1200px)) {
+    .searchbar > .input-group > ul.dropdown-menu.translate-middle-bottom{
+        left: 175px !important;
+    }
+}
+@media only screen and (max-width: 1060px) {
     /* For mobile phones: */
+    .searchbar > .input-group > ul.dropdown-menu.translate-middle-bottom{
+        left: 175px !important;
+    }
     .wide-screen-header{
+        display: none !important;
+    }
+    .wide-screen-footer{
         display: none !important;
     }
     .body-top{
@@ -24,24 +34,13 @@
     .mobile-header{
         display: block !important;
     }
+    .mobile-footer{
+        display: block !important;
+    }
     .typer .typer-items{
         background-color: transparent !important;
     }
     .store-category{
         display: none;
-    }
-    footer{
-        background-color: #19B357 !important;
-    }
-    footer .row{
-        display: none;
-    }
-    footer .company-address, footer .company-cert{
-        display: none;  
-    }
-    footer .company-info{
-        background-color: #19B357 !important;
-        text-align: center;
-        color: white;
     }
 }

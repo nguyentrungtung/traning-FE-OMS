@@ -1,4 +1,21 @@
-.login-signup-form{
+@media screen and (max-width: 760px) {
+    header.bg-green{
+        display: none !important;
+    }
+    .bg-white{
+        background-color: transparent !important;
+    }
+    input{
+        background-color: transparent !important;
+    }
+    input.input-number{
+        background-color: #F8F8F8 !important;
+    }
+}
+.input-form{
+    width: 550px !important;
+}
+.noti-form{
     width: 550px !important;
 }
 .input-number{

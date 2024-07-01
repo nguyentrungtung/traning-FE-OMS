@@ -14,7 +14,7 @@
 <body>
     <header class="bg-green py-3 text-white d-flex flex-column align-items-center">
         <div class="container d-flex justify-content-between align-items-center px-4 w-100 flex-wrap">
-            <a href="#" class="text-white text-decoration-none brand d-flex gap-5">
+            <a href="/" class="text-white text-decoration-none brand d-flex gap-5">
                 <div>
                     <div class="h3 mb-0 text-upperCase text-center lh-1 text-nowrap ">Ommanilife</div>
                     <small class="text-center text-nowrap lh-1">Năng lượng cuộc sống</small>
@@ -25,12 +25,12 @@
         </div>
     </header>
     <div class="body w-100 bg-dark-grey d-flex justify-content-center py-5">
-        <div class="login-signup-form bg-white p-4 rounded-1">
+        <div class="input-form bg-white p-4 rounded-1">
             <div class="form-title h3 fw-bold text-center py-3">
                 Đăng ký
             </div>
             <div class="form-body">
-                <form name="loginForm" action="/views/login/otp-confirmation.html" onsubmit="return validSignupForm()">
+                <form name="loginForm" action="/views/login/otp-phone-number-confirmation.html" onsubmit="return validSignupForm()">
                     <div class="form-input">
                         <div class="input-group input-group-signup p-2 border-1 border border-dark rounded-1 my-2">
                             <input id="signup-username" type="text" class="form-control focus-ring focus-ring-light border-0" placeholder="Số điện thoại hoặc email">
@@ -38,14 +38,14 @@
                         <div class="signup-alert d-none text-danger">Số điện thoại không được để trống</div>
                         <div class="input-group input-group-signup p-2 border-1 border border-dark rounded-1 my-2">
                             <input id="signup-userpassword" type="password" class="form-control focus-ring focus-ring-light border-0" placeholder="Nhập mật khẩu">
-                            <a onclick="su_showPwd()" class="btn border-0">
+                            <a onclick="showPwd('su-eye-icon', 'signup-userpassword')" class="btn border-0">
                                 <i class="fas fa-eye text-dark" id="su-eye-icon"></i>
                             </a> 
                         </div>
                         <div class="signup-alert text-danger d-none">Mật khẩu không được để trống</div>
                         <div class="input-group input-group-signup p-2 border-1 border border-dark rounded-1 my-2">
                             <input id="signup-userrepassword" type="password" class="form-control focus-ring focus-ring-light border-0" placeholder="Nhập lại mật khẩu">
-                            <a onclick="su_showRePwd()" class="btn border-0">
+                            <a onclick="showPwd('su-eye-icon2', 'signup-userrepassword')" class="btn border-0">
                                 <i class="fas fa-eye text-dark" id="su-eye-icon2"></i>
                             </a> 
                         </div>
@@ -61,7 +61,7 @@
             </div>
         </div>
     </div>
-    <footer class="w-100 mt-2 py-4">
+    <footer class="wide-screen-footer w-100 mt-2 py-4">
         <div class="container">
             <div class="bg-white row gap-3 py-2">
                 <div class="customer-service col text-nowrap">
@@ -136,6 +136,128 @@
                             <div class="d-flex flex-column gap-1">
                                 <a href="#"><img class="h-40px" src="/resources/img/footer/download/google-play.png" alt=""></a>
                                 <a href="#"><img class="h-40px" src="/resources/img/footer/download/app-store.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-pink signature h3 text-end">Made with love!</div>
+                </div>
+            </div>
+            <hr class="bg-white row border-1 opacity-100 border-dark"/>
+            <div class="bg-white company-info mt-3">
+                <div class="company-address">Trụ sở chính: 43 Trần Nguyên Đán, Định Công, Q. Hoàng Mai, TP. Hà Nội</div>
+                <div class="company-cert">Giấy chứng nhận Đăng kí kinh doanh số: 0998999999 do sở kế hoạch và Đầu tư Thành Phố Hà Nội cấp lần đầu ngày 09/09/2022</div>
+                <div class="company-right">©2022 - Bản quyền của Công ty TNHH Ommani</div>
+            </div>
+        </div>
+    </footer>
+    <footer class="mobile-footer w-100 mt-2 py-4 d-none">
+        <div class="container">
+            <div class="bg-white ">
+                <div class="customer-service col text-nowrap">
+                    <h5>
+                        <a data-bs-toggle="collapse" href="#footer-customer-service" role="button" aria-expanded="false" aria-controls="ooter-customer-service" class="text-black">
+                            Hỗ trợ khách hàng
+                        </a>
+                    </h5>
+                    <div class="collapse" id="footer-customer-service">
+                        <div class="options collaps d-flex flex-column gap-2 mb-3">
+                            <div class="text">Hotline: <strong><a href="tel:+1900-6789" class="text-decoration-none text-black">19006789</a></strong><div>(1.000 đ/phút, 8-21h kể cả T7, CN)</div></div>
+                            <div class="text"><a href="#" class="text-black">Các câu hỏi thường gặp</a></div>
+                            <div class="text"><a href="#" class="text-black">Gửi yêu cầu hỗ trợ</a></div>
+                            <div class="text"><a href="#" class="text-black">Hướng dẫn đặt hàng</a></div>
+                            <div class="text"><a href="#" class="text-black">Phương thức vận chuyển</a></div>
+                            <div class="text"><a href="#" class="text-black">Chính sách đổi trả</a></div>
+                            <div class="text"><a href="#" class="text-black">Chính sách hàng nhập khẩu</a></div>
+                            <div class="text">Hỗ trợ khách hàng: <a class="text-black" href="mailto:hotro@ommani.vn">hotro@ommani.vn</a></div>
+                            <div class="text">Báo lỗi bảo mật: <a class="text-black" href="mailto:security@ommani.vn">security@ommani.vn</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about col text-nowrap">
+                    <a class="text-black" data-bs-toggle="collapse" href="#footer-about" role="button" aria-expanded="false" aria-controls="footer-about">
+                        <h5>Về Ommanilife</h5>
+                    </a>
+                    
+                    <div class="collapse" id="footer-about">
+                        <div class="options d-flex flex-column gap-2 mb-3">
+                            <div class="text"><a href="#" class="text-black">Giới thiệu về Ommani</a></div>
+                            <div class="text"><a href="#" class="text-black">Tuyển dụng</a></div>
+                            <div class="text"><a href="#" class="text-black">Chính sách bảo mật, thanh toán</a></div>
+                            <div class="text"><a href="#" class="text-black">Bảo mật thông tin cá nhân</a></div>
+                            <div class="text"><a href="#" class="text-black">Chính sách giải quyết khiếu nại</a></div>
+                            <div class="text"><a href="#" class="text-black">Điều khoản sử dụng</a></div>
+                            <div class="text"><a href="#" class="text-black">Tiếp thị liên kết cùng Ommani</a></div>
+                            <div class="text"><a href="#" class="text-black">Bán hàng cho doanh nghiệp</a></div>
+                            <div class="text"><a href="#" class="text-black">Điều kiện vận chuyển</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="partner col text-nowrap rounded-0">
+                    <a class="text-black  border-top-0 border-bottom-0" data-bs-toggle="collapse" href="#footer-coop" role="button" aria-expanded="false" aria-controls="footer-coop">
+                        <h5>Hợp tác và liên kết</h5>
+                    </a>
+                    <div class="collapse  border-top-0 pt-0 mt-0" id="footer-coop">
+                        <div class=" mb-3">
+                            <div class="text"><a href="#" class="text-black">Quy chế hoạt động sàn GDTMĐT</a></div>
+                            <div class="text"><a href="#" class="text-black">Bán hàng cùng Ommani</a></div>
+                        </div>
+                    </div>
+                    <a class="text-black  border-top-2 border-bottom-0" data-bs-toggle="collapse" href="#footer-cert" role="button" aria-expanded="false" aria-controls="footer-cert">
+                        <h5>Chứng nhận bởi</h5>
+                    </a>
+                    <div class="collapse  border-top-0" id="footer-cert">
+                        <div class=" d-flex gap-2 mb-3">
+                            <a href="#"><img class="h-40px" src="resources/img/footer/cert/khong-hang-gia.png"></img></a>
+                            <a href="#"><img class="h-40px" src="resources/img/footer/cert/bo-cong-thuong.png"></img></a>
+                            <a href="#"><img class="h-40px" src="resources/img/footer/cert/tin-nhiem-mang.png"></img></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment">
+                    <a class="text-black  border-bottom-0" data-bs-toggle="collapse" href="#footer-payment" role="button" aria-expanded="false" aria-controls="footer-payment">
+                        <h5>Phương thức thanh toán</h5>
+                    </a>
+                    <div class="collapse  border-top-0" id="footer-payment">
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <div><img src="/resources/img/footer/payment/bxl_visa.png" alt="" class="h-40px"></div>
+                            <div><img src="/resources/img/footer/payment/logos_jcb.png" alt="" class="h-40px"></div>
+                            <div><img src="/resources/img/footer/payment/momo.png" alt="" class="h-40px"></div>
+                            <div><img src="/resources/img/footer/payment/noto_atm-sign.png" alt="" class="h-40px"></div>
+                            <div><img src="/resources/img/footer/payment/uim_master-card.png" alt="" class="h-40px"></div>
+                            <div><img src="/resources/img/footer/payment/viettelPay.png" alt="" class="h-40px"></div>
+                            <div><img src="/resources/img/footer/payment/vnpay-seeklogo.com 1.png" alt="" class="h-40px"></div>
+                            <div><img src="/resources/img/footer/payment/zaloPay.png" alt="" class="h-40px"></div>
+                        </div>
+                    </div>
+                    <a class="text-black  border-bottom-0" data-bs-toggle="collapse" href="#footer-shipment" role="button" aria-expanded="false" aria-controls="footer-shipment">
+                        <h5>Dịch vụ giao hàng</h5>
+                    </a>
+                    <div class="collapse  border-top-0" id="footer-shipment">
+                            <img src="/resources/img/footer/5cc832252e5c2d1c19d7a68036c4d1f9.png" alt="" class="h-40px">  
+                    </div>
+                </div>
+                <div class="contact col d-flex flex-column justify-content-between ">
+                    <div>
+                        <a class="text-black  border-bottom-0" data-bs-toggle="collapse" href="#footer-social-media" role="button" aria-expanded="false" aria-controls="footer-social-media">
+                            <h5>Kết nối với chúng tôi</h5>
+                        </a>
+                        <div class="collapse" id="footer-social-media">
+                            <div class="d-flex gap-2 mb-3">
+                                <a href="#"><img class="h-40px" src="/resources/img/footer/social-media/1a144b96100ee9bfd8b81f325fbc69e4.png" alt=""></a>
+                                <a href="#"><img class="h-40px" src="/resources/img/footer/social-media/9dbe51fb44371b5cce8f45cbbf4ee352.png" alt=""></a>
+                                <a href="#"><img class="h-40px" src="/resources/img/footer/social-media/f6e9771ca4a0525e5ee5439867a21a83.png" alt=""></a>
+                            </div>
+                        </div>
+                        <a class="text-black  border-bottom-0" data-bs-toggle="collapse" href="#footer-app-downloader" role="button" aria-expanded="false" aria-controls="footer-app-downloader">
+                            <h5>Tải ứng dụng trên điện thoại</h5>
+                        </a>
+                        <div class="collapse" id="footer-app-downloader">
+                            <div class="d-flex gap-3 mb-3 align-items-center" >
+                                <img class="" src="/resources/img/footer/download/Vector.png" alt="">
+                                <div class="d-flex flex-column gap-1">
+                                    <a href="#"><img class="h-40px" src="/resources/img/footer/download/google-play.png" alt=""></a>
+                                    <a href="#"><img class="h-40px" src="/resources/img/footer/download/app-store.png" alt=""></a>
+                                </div>
                             </div>
                         </div>
                     </div>

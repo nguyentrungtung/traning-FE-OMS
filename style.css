@@ -26,7 +26,7 @@
     background-color: #22AA00;
 }
 .text-light-green{
-    color: #2EAD5B;
+    color: #2EAD5B !important;
 }
 .text-dark-green{
     color: #007B2B;
@@ -126,8 +126,9 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
-/* (hover color for search area)  -  EFFECT*/
 
+
+/* HOVER  -  EFFECT*/
 #btn-category:hover{
     background-color: #2EAD5B !important;
     color: white;
@@ -198,6 +199,17 @@ a.border-dark:hover, button.border-dark:hover{
     border: 1px #29AB56 solid !important;
     transition: all 0.2s;
 }
+.bg-white-to-green-hover{}
+.bg-white-to-green-hover:hover{
+    background-color: #22AA00 !important;
+    color: white;
+}
+.text-green-to-white-hover:hover{
+    color: white !important;
+}
+.cart-product:hover .text-green{
+    color: white !important;
+}
 /* Sizing Elements */
 
 .size-47px{
@@ -233,10 +245,14 @@ a.border-dark:hover, button.border-dark:hover{
     height: 120px;
 }
 .maxw-120px{
-    max-width: 120px;
+    min-width: 120px;
+    max-width: 150px;
 }
 .w-1240px{
     width: 1240px;
+}
+.maxw-250px{
+    max-width: 250px;
 }
 .w-240px{
     width: 240px;
@@ -247,6 +263,10 @@ a.border-dark:hover, button.border-dark:hover{
 .size-30px{
     width: 30px;
     height: 30px;
+}
+.overflow-dot-1{
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .overflow-dot{
     display: -webkit-box;
@@ -262,9 +282,24 @@ a.border-dark:hover, button.border-dark:hover{
     box-shadow: none !important;
 }
 /* ELEMENTs */
+.translate-middle-bottom{
+    translate: -125px 100%;
+}
+.btn.text-light-green:focus{
+    color: #00BC3C !important;
+}
+.dropdown-menu.dropdown-menu-search{
+    left: -130px !important;
+}
+.btn.text-light-green:hover{
+    color: white !important;
+}
 .dropdown-menu{
     padding: 0px;
     border: 1px;
+}
+.dropdown-search-list .list-group-item{
+    padding-left: 130px;
 }
 .noti-sign::after{
     content: '1';
@@ -328,4 +363,14 @@ footer > .row > .col{
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid white;
+}
+.arrow-up-shape-right{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    position: absolute;
+    top: -10px;
+    right: 10px;
 }

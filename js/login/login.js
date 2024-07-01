@@ -15,6 +15,7 @@ var pwdAlert = document.getElementsByClassName('login-alert')[1]
 var suNameAlert = document.getElementsByClassName('signup-alert')[0]
 var suPwdAlert = document.getElementsByClassName('signup-alert')[1]
 var suRePwdAlert = document.getElementsByClassName('signup-alert')[2]
+var timer = document.getElementById('timer')
 function checkNotSymbol(letter){
     if(isNaN(letter)){
         return (letter.toLowerCase() != letter.toUpperCase());
@@ -202,4 +203,14 @@ function validSignupForm(){
     return true;
 }
 var OTP = document.querySelectorAll('input-number')
-OTP.forEach((item, index)=>)
+OTP.forEach((item, index)=>
+item.addEventListener('input',(event)=>{
+    var value = event.target.value
+    console.log(value)
+}))
+function validOTP(){
+}
+function send(){
+    timer.innerHTML = "<span class='btn border-0 text-muted'>Méo gửi lại mã nữa, mệt rồi</span>"
+}
+setInterval(()=>{timer.innerHTML = "<button onclick='send()' class='btn border-0 text-green fw-bold'>Gửi lại mã</button>"}, 5000)

@@ -7,11 +7,6 @@
 .star{
     color: #FDB600;
 }
-.bg-green-btn:hover{
-    background: white !important;
-    border: #29AB56 1px solid;
-    color: #29AB56 !important;
-}
 .order-bar{
     background-color: #E3E3E3;
 }
@@ -24,8 +19,9 @@
 .text-green{
     color: #29AB56;
 }
-.minw-190px{
+.maxw-190px{
     min-width: 200px;
+    max-width: 250px;
 }
 .item-img i{
     font-size: 30px;
