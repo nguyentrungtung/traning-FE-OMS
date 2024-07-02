@@ -61,6 +61,28 @@ getMobileFilterContent[0].addEventListener('click', (event)=>{
     event.stopPropagation()
 })
 
+function onCLickSlideList(objectId, direction){
+    var object = document.getElementById(objectId)
+    var scrollDistance = 100;
+    if(direction=== 'right'){
+        object.scrollBy({
+            left: scrollDistance,
+            behavior: 'smooth'
+        })
+    }
+    else if(direction === 'left'){
+        object.scrollBy({
+            left: -scrollDistance,
+            behavior: 'smooth'
+        })
+    }
+}
+function changeImgSrc(sourceImg, targetId){
+    var img = sourceImg.querySelector('img')
+    var imgSrc = img.src
+    var targetItem = document.getElementById(targetId)
+    targetItem.src = imgSrc;
+}
 // var getMobileFilterBarContent = document.getElementsByClassName('mobile-result-filter-content')
 // getMobileFilterBarContent.addEventListener('click', (event)=>{
 //     // event.stopPropagation();

@@ -38,6 +38,13 @@
                 <div class="h3 mb-0 text-upperCase text-center lh-1">Ommanilife</div>
                 <small class="text-center text-nowrap lh-1">Năng lượng cuộc sống</small>
             </a>
+            <div class="location px-3 align-items-center">
+                <a href="#" class=" text-decoration-none text-white d-flex align-items-center">
+                    <img src="/resources/img/icons/location-pin.svg" class="size-47px py-2" alt="" srcset="">
+                    <div class="text-nowrap">Thanh Xuân</div>
+                    <small><i class="fas fa-chevron-down px-2"></i></small>
+                </a>
+            </div>
             <div class="ms-2 searchbar flex-fill">
                 <div class="input-group rounded bg-white p-1 btn-group">
                     <div class="btn-group">
@@ -49,11 +56,11 @@
                         </ul>
                     </div>
                     <input type="text" class="no-focus-ring border-0 form-control" placeholder="Nhập sản phẩm cần tìm kiếm"  data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                    <button class="rounded-end border-0 bg-green-btn size-47px"><img class="p-1 w-100 text-white" src="/resources/img/icons/search.svg"/></button>
-                    <ul class="dropdown-menu bottom-100 start-0 translate-middle-bottom w-100">
-                        <a href="#" class="py-2 dropdown-item bg-white bg-white-to-green-hover">Bông cải Hường</a>
-                        <a href="#" class="py-2 dropdown-item bg-white bg-white-to-green-hover">Cửa hàng</a>
-                        <a href="#" class="py-2 dropdown-item bg-white bg-white-to-green-hover">Store</a>
+                    <button class="rounded-end border-0 btn-success size-47px"><img class="p-1 w-100 text-white" src="/resources/img/icons/search.svg"/></button>
+                    <ul class="start-25 translate-middle-bottom bottom-100 dropdown-menu w-100">
+                        <a href="#" class="py-3 dropdown-item bg-white bg-white-to-green-hover">Bông cải Hường</a>
+                        <a href="#" class="py-3 dropdown-item bg-white bg-white-to-green-hover">Cửa hàng</a>
+                        <a href="#" class="py-3 dropdown-item bg-white bg-white-to-green-hover">Store</a>
                     </ul>
                 </div>
                 <div class="pt-1 d-flex recommendation flex-wrap overflow-hidden">
@@ -68,7 +75,7 @@
             </div>
             <div class="right d-flex">
                 <div class="tools d-flex px-2 gap-2">
-                    <!-- <div class="position-relative tool-noti">
+                    <div class="position-relative tool-noti">
                         <div class="noti-sign">
                             <a href="#"><i class="far fa-bell text-white h3 p-2"></i></a>
                         </div>
@@ -76,7 +83,7 @@
                     <div class="position-relative tool-comment">
                         <a href="#" class="noti-sign"><i class="far fa-comment text-white h3 p-2"></i>
                         </a>
-                    </div> -->
+                    </div>
                     <div class="position-relative">
                         <div class="dropdown">
                             <a href="123" class="noti-sign">
@@ -132,25 +139,106 @@
                         </div>
                     </div>
                 </div>
-                <div class="user-section d-flex px-2">
+                <div class="user-section px-2">
                     <div class="dropdown">
-                        <a class="btn border-0 p-0 m-0 dropdown-toggle d-flex align-items-center text-white gap-2 flex-nowrap" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                            <div class="d-flex gap-2">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvtZSXoa7lU0IBaV41q5B1awCYijsFF5Sh-Q&s" class="size-47px rounded-circle" alt="" srcset="">
-                                <div>
-                                    <small class="fs-small lh-1">Tài khoản</small>
-                                    <div class="lh-1">Văn Tèo</div>
-                                </div>
+                        <div class="d-flex">
+                            <a href="#" class="text-decoration-none text-white"><i class="far fa-user-circle h3 pt-2 pe-2"></i></a>
+                            <div>
+                                <div><a href="/views/login/login.html" class="text-decoration-none text-white lh-1 text-nowrap">Đăng nhập</a></div>   
+                                <div><a href="/views/login/signup.html" class="text-decoration-none text-white lh-1 text-nowrap">Đăng ký</a></div>
                             </div>
-                        </a>
-                        <ul class="dropdown-menu p-0 bg-transparent border-0">
-                            <li class="arrow-up-shape ms-3"></li>
-                            <li><a class="dropdown-item text-green bg-white" href="#">Tài khoản của tôi</a></li>
-                            <li><a class="dropdown-item text-green bg-white" href="#">Đơn mua</a></li>
-                            <li><a class="dropdown-item text-green bg-white" href="/index.html">Đăng xuất</a></li>
+                        </div>
+                        <ul class="dropdown-menu p-0 bg-transparent">
+                            <li class="w-100"><div class="arrow-up-shape ms-2"></div></li>
+                            <li><a class="dropdown-item text-green bg-white w-100" href="/views/login/login.html">Đăng nhập</a></li>
+                            <li><a class="dropdown-item text-green bg-white w-100" href="/views/login/signup.html">Đăng ký</a></li>
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+    </header>
+    <header class="mobile-header container-fluid bg-green pt-3 text-white d-flex flex-column align-items-center d-none">
+        <div class="header-upper d-flex justify-content-between align-items-center mt-5">
+            <div class="dropdown">
+                <a class="btn border-0 p-0 m-0 d-flex align-items-center text-white gap-2 flex-nowrap" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvtZSXoa7lU0IBaV41q5B1awCYijsFF5Sh-Q&s" class="size-47px rounded-circle" alt="" srcset="">
+                </a>
+                <ul class="dropdown-menu p-0 bg-transparent border-0">
+                    <li class="arrow-up-shape"></li>
+                    <li><a class="dropdown-item text-green bg-white" href="#">Tài khoản của tôi</a></li>
+                    <li><a class="dropdown-item text-green bg-white" href="#">Đơn mua</a></li>
+                    <li><a class="dropdown-item text-green bg-white" href="/index.html">Đăng xuất</a></li>
+                </ul>
+            </div>
+            <a href="#" class="text-white text-decoraion-none brand">
+                <div class="h3 mb-0 text-upperCase text-center lh-1">Ommanilife</div>
+                <small class="text-center text-nowrap lh-1">Năng lượng cuộc sống</small>
+            </a>
+            <div class="position-relative">
+                <div class="dropdown z-2">
+                    <a href="123" class="noti-sign">
+                        <img src="/resources/img/icons/cart.svg" class="size-47px py-2"></img>
+                    </a>
+                    <ul class="dropdown-menu rounded-0 top-100 end-0 bg-transparent">
+                        <li class="arrow-up-shape-right"></li>
+                        <div class="text-muted small bg-white p-2">Sản phẩm mới thêm</div>
+                        <li class="bg-white py-1">
+                            <a href="#" class="dropdown-item">
+                                <div class="cart-product d-flex">
+                                    <div class="cart-product-info d-flex gap-4 text-green-to-white-hover">
+                                        <div class="img overflow-hidden">
+                                            <img src="/resources/img/products/products-images/236699cc738a5aec082af43498cd728a.png" class="size-47px" alt="">
+                                        </div>
+                                        <div class="name maxw-250px overflow-dot-1">Bông cải xanh 100g nội địa Nhật Bản hàng tươi 100%</div>
+                                    </div>
+                                    <div class="cart-product-price text-green-to-white-hover text-green">₫ 59.000</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="bg-white py-1">
+                            <a href="#" class="dropdown-item">
+                                <div class="cart-product d-flex">
+                                    <div class="cart-product-info d-flex gap-4 text-green-to-white-hover">
+                                        <div class="img overflow-hidden">
+                                            <img src="/resources/img/products/products-images/b37a8ebbd8545a0bfd53afc0c0ee7ef4.png" class="size-47px" alt="">
+                                        </div>
+                                        <div class="name maxw-250px overflow-dot-1">Bông cải xanh 100g nội địa Nhật Bản hàng tươi 100%</div>
+                                    </div>
+                                    <div class="cart-product-price text-green-to-white-hover text-green">₫ 59.000</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="bg-white py-1">
+                            <a href="#" class="dropdown-item">
+                                <div class="cart-product d-flex">
+                                    <div class="cart-product-info d-flex gap-4 text-green-to-white-hover">
+                                        <div class="img overflow-hidden">
+                                            <img src="/resources/img/products/products-images/dc59629c69a4812772932558a725b25f.png" class="size-47px" alt="">
+                                        </div>
+                                        <div class="name maxw-250px overflow-dot-1">Bông cải xanh 100g nội địa Nhật Bản hàng tươi 100%</div>
+                                    </div>
+                                    <div class="cart-product-price text-green-to-white-hover text-green">₫ 59.000</div>
+                                </div>
+                            </a>
+                        </li>
+                        <div class="total-section bg-white d-flex p-3 justify-content-between">
+                            <div class="text-muted">X thêm vào giỏ hàng</div>
+                            <button class="btn bg-green-btn text-white">Xem giỏ hàng</button>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-lower w-100 py-2">
+            <div class="btn-group rounded-0 bg-white p-1 w-100">
+                <button class="btn btn-light bg-white border-0 size-47px fit-ct"><i class="fas fa-search text-grey"></i></button>
+                <input type="text" class="no-focus-ring border-0 form-control text-grey" placeholder="Nhập sản phẩm cần tìm kiếm" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                <ul class="dropdown-menu rounded-0 w-100 bg-transparent z-1">
+                    <a href="#" class="py-2 ms-1 dropdown-item bg-white-to-green-hover bg-white">Shop</a>
+                    <a href="#" class="py-2 ms-1 dropdown-item bg-white-to-green-hover bg-white">Cửa hàng</a>
+                    <a href="#" class="py-2 ms-1 dropdown-item bg-white-to-green-hover bg-white">Store</a>
+                </ul>
             </div>
         </div>
     </header>
@@ -276,7 +364,7 @@
                                 <input type="number" class="form-control focus-ring focus-ring-light" placeholder="đến">
                             </div>
                             <div class="price-submit">
-                                <button class="btn bg-green-btn text-white w-100">Áp dụng</button>
+                                <button class="btn btn-success text-white w-100">Áp dụng</button>
                             </div>
                         </div>
                     </div>
@@ -453,7 +541,7 @@
                             <div class="d-flex order-left gap-4 py-3 align-items-center">
                                 <div>Sắp xếp theo</div>
                                 <div class="order-option d-flex gap-2">
-                                    <button class="bg-green-btn rounded-0 text-white btn">Nổi bật</button>
+                                    <button class="btn-success rounded-0 text-white btn">Nổi bật</button>
                                     <button class="btn rounded-0 bg-white">Mới nhất</button>
                                     <button class="btn rounded-0 bg-white">Bán chạy</button>
                                     <div class="dropdown bg-white">
