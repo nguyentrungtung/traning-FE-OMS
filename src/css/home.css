@@ -840,6 +840,61 @@ nav .pagination {
 .checkBoxBlue input[type="checkbox"]:checked:after {
   display: block; }
 
+.modalRemoveItemProduct {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background-color: #fff; }
+  .modalRemoveItemProduct .top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    position: relative; }
+    .modalRemoveItemProduct .top button {
+      position: absolute;
+      right: 0;
+      top: 0; }
+    .modalRemoveItemProduct .top span:first-of-type {
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+      text-align: center; }
+    .modalRemoveItemProduct .top span:last-of-type {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21.6px;
+      text-align: center; }
+  .modalRemoveItemProduct .bottom {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%; }
+    .modalRemoveItemProduct .bottom button {
+      flex: 1;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20.3px;
+      text-align: left;
+      border: 1.5px solid #858585;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .modalRemoveItemProduct .bottom button:first-of-type {
+      color: #858585; }
+    .modalRemoveItemProduct .bottom button:last-of-type {
+      color: white;
+      background-color: #29ab56;
+      border: none; }
+
 .Home {
   display: flex;
   flex-direction: column; }

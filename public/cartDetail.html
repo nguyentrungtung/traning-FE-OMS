@@ -28,26 +28,213 @@
             <span class="quantity">Số lượng </span>
             <span class="sumCost">Thành tiền </span>
           </div>
-          <div class="cartContentList d-flex flex-column">
-            <div class="cartContentItem">
-              <div class="cartContentItem_infoShop"></div>
-              <div class="cartContentItem_listProduct">
-                <div class="cartContentItem_itemProduct"></div>
+          <div class="cartMain">
+            <div class="cartList">
+              <div class="cartItem">
+                <div class="cartItem_infoShop">
+                  <div class="d-flex align-items-center">
+                    <img
+                      style="margin-right: 10px"
+                      src="../assets/svg/shopCartIc.svg"
+                      alt=""
+                    />
+                    <img
+                      style="margin-right: 10px"
+                      src="../assets/svg/mallcartIcon.svg"
+                      alt=""
+                    />
+                    <span style="margin-right: 10px"
+                      >Ommani Mall Thạch Bàn Long Biên</span
+                    >
+                    <img src="../assets/svg/messageIconCart.svg" alt="" />
+                  </div>
+                </div>
+                <div class="cartItem_listProduct">
+                  <script>
+                    const products = [
+                      {
+                        name: "Bông cải xanh Đà Lạt - 100g",
+                        cost: "132.000 đ",
+                        sum: "1.716.000 đ",
+                      },
+                      {
+                        name: "Xúc xích Đức Việt",
+                        cost: "190.000 đ",
+                        sum: "380.000 đ",
+                      },
+                      {
+                        name: "Thịt xông khói túi 500g MAVIN",
+                        cost: "145.000 đ",
+                        sum: "580.000 đ",
+                      },
+                    ];
+                    for (let i = 0; i < products.length; i++) {
+                      document.write(`
+                        <div class="cartItem_itemProduct">
+                    <span class="checkBoxBlue">
+                      <input type="checkbox" />
+                    </span>
+                    <div class="imgName">
+                      <img src="../assets/images/imgproductitem${
+                        i === 0 ? "" : i
+                      }.png" alt="" />
+                      <span>${products[i].name}</span>
+                    </div>
+                    <span class="priceProduct">${products[i].cost}</span>
+                    <div class="quantity">
+                      <span>1</span>
+                      <div class="d-flex flex-column">
+                        <img src="../assets/svg/increaseBtn.svg" alt="" />
+                        <img src="../assets/svg/decreaseBtn.svg" alt="" />
+                      </div>
+                    
+                    </div>
+                    <span class="sumPrice">1.716.000 đ</span>
+
+
+<div
+      class="modal fade"
+      id="exampleModalToggle"
+      tabindex="-1"
+      style="display: none"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modalRemoveItemProduct">
+            <div class="top">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+              <img src="../assets/images/StickerRemoveModal.png" alt="" />
+              <div class="d-flex flex-column gap-3 align-items-center">
+                <span>XÁC NHẬN XÓA</span>
+                <span
+                  >Bạn có chắc chắn muốn xóa 01 sản phẩm trong giỏ hàng?</span
+                >
               </div>
+            </div>
+            <div class="bottom">
+              <button>Hủy</button>
+              <button>Xác nhận</button>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+                    <button data-bs-target="#exampleModalToggle"
+      data-bs-toggle="modal">
+                      <img
+                          src="../assets/svg/removeItemCart.svg"
+                          alt=""
+                          style="cursor: pointer"
+                        />
+                    </button>
+
+
+
+
+                    </div>
+                   
+                      `);
+                    }
+                  </script>
+                </div>
+              </div>
+              <div class="cartItem">
+                <div class="cartItem_infoShop">
+                  <div class="d-flex align-items-center">
+                    <img
+                      style="margin-right: 10px"
+                      src="../assets/svg/shopCartIc.svg"
+                      alt=""
+                    />
+                    <img
+                      style="margin-right: 10px"
+                      src="../assets/svg/mallcartIcon.svg"
+                      alt=""
+                    />
+                    <span style="margin-right: 10px"
+                      >Ommani Mall Thạch Bàn Long Biên</span
+                    >
+                    <img src="../assets/svg/messageIconCart.svg" alt="" />
+                  </div>
+                </div>
+                <div class="cartItem_listProduct">
+                  <script>
+                    for (let i = 0; i < products.length - 2; i++) {
+                      document.write(`
+                        <div class="cartItem_itemProduct">
+                    <span class="checkBoxBlue">
+                      <input type="checkbox" />
+                    </span>
+                    <div class="imgName">
+                      <img src="../assets/images/imgproductitem${
+                        i === 0 ? "" : i
+                      }.png" alt="" />
+                      <span>${products[i].name}</span>
+                    </div>
+                    <span class="priceProduct">${products[i].cost}</span>
+                    <div class="quantity">
+                      <span>1</span>
+                      <div class="d-flex flex-column">
+                        <img src="../assets/svg/increaseBtn.svg" alt="" />
+                        <img src="../assets/svg/decreaseBtn.svg" alt="" />
+                      </div>
+                    
+                    </div>
+                    <span class="sumPrice">1.716.000 đ</span>
+                    <img
+                      src="../assets/svg/removeItemCart.svg"
+                      alt=""
+                      style="cursor: pointer"
+                    />
+                  </div>
+                      `);
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+            <div class="messageToSeller">
+              <span>Lời nhắn:</span>
+              <input placeholder="Lưu ý cho người bán..." type="text" />
+            </div>
+          </div>
+        </div>
+
         <div class="col-xxl-3 custom-col">
           <div class="cartUserInfo">
             <div class="boxAddress">
               <span class="header">Địa chỉ</span>
               <div class="content">
                 <div><span>Hồng Anh</span><span>0919 189 199</span></div>
-                <span class="diachi"
-                  >125 Hoàng Ngân, Quận Thanh Xuân, TP. Hà Nội.</span
-                >
+                <script>
+                  let valuediachi =
+                    "125 Hoàng Ngân, Quận Thanh Xuân, TP. Hà Nội.";
+                  valuediachi = "";
+                  if (valuediachi) {
+                    document.write(
+                      `<span class="diachi">${valuediachi}</span>`
+                    );
+                  } else {
+                    document.write(`
+                      <button class="btnAddAddress d-flex align-items-stretch">
+                      <img src="../assets/svg/carbon_add.svg" alt="" />
+                      <span class="align-self-center">Thêm địa chỉ</span>
+                    </button>             
+                    `);
+                  }
+                </script>
               </div>
-              <a href="#" class="botom">Thay Đổi</a>
+              <script>
+                if (valuediachi) {
+                  document.write(`<a href="#" class="botom">Thay Đổi</a>`);
+                }
+              </script>
             </div>
             <div class="boxSumPrice">
               <div class="l1">
@@ -61,7 +248,7 @@
               </div>
               <div class="l3">(Đã bao gồm VAT nếu có)</div>
             </div>
-            <button>Gửi yêu cầu</button>
+            <button class="sendRequest">Gửi yêu cầu</button>
           </div>
         </div>
       </div>
