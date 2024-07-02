@@ -265,8 +265,7 @@ btnCategories.forEach((btn, index) => {
     btn.classList.add("active");
     var tooltip = document.querySelector(".tooltip-line");
     tooltip.style.left = e.target.offsetLeft + e.target.offsetWidth / 2 + "px";
-    // const offsetX = -(e.target.offsetLeft + e.target.offsetWidth / 2);
-    // tooltip.style.transform = `translateX(${offsetX}px)`;
+    tooltip.style.transform = `translateX(-50%)`;
 
     allContentCategory.forEach((content) => {
       content.classList.remove("show");
@@ -279,7 +278,7 @@ const list_sort_products = document.querySelector(".get-list__sort-product");
 
 const sort_product_html = search_filter_products
   .map((product, index) => {
-    return `<div class="col-l-o-2">
+    return `<div class="col-l-o-2 col-6 col-md-4 col-lg-3">
                           <div class="search-results__product-item bg-white">
                             <div
                               class="product-item__images-wrapper position-relative"
@@ -365,3 +364,112 @@ const sort_product_html = search_filter_products
   .join("");
 
 list_sort_products.innerHTML = sort_product_html;
+
+const optionMenus = document.querySelectorAll(".search-filter__select-item");
+optionMenus.forEach((optionMenu) => {
+  if (optionMenu) {
+    const selectBtn = optionMenu.querySelector(".search-filter__select-btn");
+    const options = optionMenu.querySelectorAll(".select-category__option");
+    const sBtn_text = selectBtn.querySelector(".select-category__text");
+
+    selectBtn.addEventListener("click", () => {
+      optionMenu.classList.toggle("active");
+    });
+
+    options.forEach((option) => {
+      option.addEventListener("click", () => {
+        let selectedOption = option.querySelector(
+          ".select-category__option-text"
+        ).innerText;
+        sBtn_text.innerText = selectedOption;
+        optionMenu.classList.remove("active");
+      });
+    });
+  } else {
+    console.error(
+      "Could not find element with class 'search-filter__select-item'"
+    );
+  }
+});
+
+const rangeInput = document.querySelectorAll(".range-input input"),
+  priceSpan = document.querySelectorAll(".price-input span"),
+  range = document.querySelector(".slider .progress");
+let priceGap = 1000;
+
+function formatCurrency(value) {
+  if (value === 0) return "0";
+  return new Intl.NumberFormat("vi-VN", {
+    style: "currency",
+    currency: "VND",
+    minimumFractionDigits: 0,
+  })
+    .format(value)
+    .replace("₫", "đ");
+}
+
+rangeInput.forEach((input) => {
+  input.addEventListener("input", (e) => {
+    let minVal = parseInt(rangeInput[0].value),
+      maxVal = parseInt(rangeInput[1].value);
+
+    if (maxVal - minVal < priceGap) {
+      if (e.target.className === "range-min") {
+        rangeInput[0].value = maxVal - priceGap;
+      } else {
+        rangeInput[1].value = minVal + priceGap;
+      }
+    } else {
+      priceSpan[0].textContent = formatCurrency(minVal);
+      priceSpan[1].textContent = formatCurrency(maxVal);
+      range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+      range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+    }
+  });
+});
+
+// Initialize the span elements with formatted values
+priceSpan[0].textContent = formatCurrency(parseInt(rangeInput[0].value));
+priceSpan[1].textContent = formatCurrency(parseInt(rangeInput[1].value));
+
+const slider_certify = document.querySelector(".certificate-wrapper");
+const images = document.querySelectorAll(".certificate-img img");
+
+images.forEach((img) => {
+  img.setAttribute("draggable", "false");
+});
+
+let is_down = false;
+let start_x;
+let scroll_left;
+
+slider_certify.addEventListener("mousedown", (e) => {
+  is_down = true;
+  slider_certify.classList.add("active");
+  start_x = e.pageX - slider_certify.offsetLeft;
+  scroll_left = slider_certify.scrollLeft;
+});
+
+slider_certify.addEventListener("mouseleave", () => {
+  is_down = false;
+  slider_certify.classList.remove("active");
+});
+
+slider_certify.addEventListener("mouseup", () => {
+  is_down = false;
+  slider_certify.classList.remove("active");
+});
+
+slider_certify.addEventListener("mousemove", (e) => {
+  if (!is_down) return;
+  e.preventDefault();
+  const x = e.pageX - slider_certify.offsetLeft;
+  const walk = (x - start_x) * 2; // Tốc độ cuộn
+  slider_certify.scrollLeft = scroll_left - walk;
+});
+
+// Cho phép cuộn bằng bánh xe chuột
+slider_certify.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  slider_certify.scrollLeft += e.deltaY; // Cuộn ngang thay vì cuộn dọc
+});
