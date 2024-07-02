@@ -61,9 +61,13 @@
       @extend .title16Common;
     }
   }
-  .cartListContent {
+  .cartContentList {
     padding-right: 12px;
     padding-left: 16px;
+    .cartContentItem {
+      .cartContentItem_infoShop {
+      }
+    }
   }
   .cartUserInfo {
     .boxAddress {

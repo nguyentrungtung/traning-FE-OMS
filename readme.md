@@ -56,3 +56,5 @@ Medium md ≥768px
 Large lg ≥992px
 Extra large xl ≥1200px
 Extra extra large xxl ≥1400px
+
+https://www.jqueryscript.net/demo/jQuery-Plugin-For-Image-Zoom-On-Hover-picZoomer/
