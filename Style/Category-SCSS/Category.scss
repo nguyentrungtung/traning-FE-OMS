@@ -1,0 +1,696 @@
+@font-face {
+    font-family: myFont1;
+    src: url(/Font/Roboto-Regular.ttf);
+}
+* {
+    font-family: 'Roboto-Regular', sans-serif;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.show1 {
+    transform: translateY(0) !important;
+    transition: 0.3s ease-in-out !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 5;
+}
+.show2 {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    transition: 0.3s ease-in-out !important;
+    z-index: 5;
+}
+
+header {
+    background: #22af5b;
+    .container {
+        padding: 0;
+        .row {
+            .col {
+                padding: 0px;
+                .header_top {
+                    .nav-left {
+                        .nav-leftUL {
+                            padding: 0;
+                            list-style-type: none;
+                            li:last-child a {
+                                border: none;
+                            }
+                            li {
+                                margin-right: 12px;
+                                a {
+                                    padding-right: 12px;
+                                    text-decoration: none;
+                                    color: white;
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    line-height: 14.06px;
+                                    border-right: 1px solid white;
+                                }
+                            }
+                        }
+                    }
+                    .nav-right {
+                        .nav-rightUL {
+                            padding: 0;
+                            list-style-type: none;
+                            li:last-child a {
+                                border: none;
+                            }
+                            li {
+                                margin-left: 12px;
+                                &:first-child {
+                                    a {
+                                        padding-right: 12px;
+                                    }
+                                }
+                                &:nth-child(2) {
+                                    a {
+                                        padding-right: 12px;
+                                    }
+                                }
+                                a {
+                                    text-decoration: none;
+                                    color: white;
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    line-height: 14.06px;
+                                    border-right: 1px solid white;
+                                }
+                            }
+                        }
+                    }
+                }
+                .header_bottom {
+                    gap: 20px;
+                    .header_bottom-search {
+                        width: 70%;
+                        .input-search {
+                            width: 100%;
+                            position: relative;
+                            background-color: white;
+                            border-radius: 8px;
+                            .form-select {
+                                flex-basis: 175px;
+                                border: none;
+                            }
+                            .input-search-nhapSP {
+                                margin: 9px;
+                                flex-basis: 100%;
+                                border: none;
+                                outline: none;
+                                border-left: 1px solid #2f294d;
+                                &::placeholder {
+                                    padding-left: 12px;
+                                }
+                            }
+                            .img-search {
+                                flex-basis: 44px;
+                            }
+                            .dropdown-search {
+                                list-style-type: none;
+                                background-color: white;
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                width: 100%;
+                                transform: translateY(-10%);
+                                padding: 0px;
+                                transition: 0.3s ease-in-out; // trượt hiệu ứng sauu 0.3s
+                                opacity: 0; //trong suốt phần tử
+                                visibility: hidden; // ẩn list
+
+                                li {
+                                    padding: 16px 0;
+                                    a {
+                                        margin-left: 170px;
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                        line-height: 18.2px;
+                                        text-align: left;
+                                        color: #000000;
+                                        text-decoration: none;
+                                    }
+                                    &:hover {
+                                        background-color: #22aa00;
+                                        a {
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .search-fast {
+                            ul {
+                                margin: 0;
+                                padding: 0;
+                                list-style-type: none;
+                                gap: 10px;
+                                li {
+                                    a {
+                                        color: white;
+                                        text-decoration: none;
+
+                                        font-size: 12px;
+                                        font-weight: 400;
+                                        line-height: 14.06px;
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .header_bottom-login {
+                        gap: 20px;
+                        .icon-cart {
+                            position: relative;
+                            .dropdown-cart {
+                                list-style-type: none;
+                                position: absolute;
+                                background-color: white;
+                                width: 300px;
+                                right: 0;
+                                transform: translateY(-5%);
+                                transition: 0.3s ease-in-out;
+                                opacity: 0;
+                                visibility: hidden;
+                                width: 490px;
+                                height: 360px;
+                                padding: 0 10px;
+                                gap: 12px;
+                                li {
+                                    &:first-child {
+                                        p {
+                                            margin: 0;
+                                            font-size: 14px;
+                                            font-weight: 400;
+                                            line-height: 16.41px;
+                                            text-align: left;
+                                            color: #c2c2c2;
+                                        }
+                                    }
+                                    a {
+                                        text-decoration: none;
+                                        gap: 11px;
+                                        span {
+                                            &:nth-child(2) {
+                                                margin: 0;
+                                                font-size: 14px;
+                                                font-weight: 400;
+                                                line-height: 21px;
+                                                text-align: left;
+                                                color: #000000;
+                                            }
+                                            &:nth-child(3) {
+                                                font-size: 14px;
+                                                font-weight: 500;
+                                                line-height: 16.41px;
+                                                text-align: right;
+                                                color: #00bc3c;
+                                            }
+                                        }
+                                    }
+                                    &:last-child {
+                                        span {
+                                            &:first-child {
+                                                color: #4d4d4d;
+                                                font-size: 14px;
+                                                font-weight: 400;
+                                                line-height: 16.41px;
+                                                text-align: left;
+                                            }
+                                            &:last-child {
+                                                button {
+                                                    width: 159px;
+                                                    height: 32px;
+                                                    background: #29ab56;
+                                                    border: none;
+                                                    border-radius: 2px 0px 0px 0px;
+                                                    opacity: 0px;
+                                                    color: white;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .link-login {
+                            span {
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 16.41px;
+                                text-align: left;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.Boloc {
+    .container {
+        padding: 0;
+
+        .Above_Banner {
+            gap: 24px;
+
+            .icon-Tatca {
+                gap: 6px;
+
+                p {
+                    padding-top: 20px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 16.41px;
+                    text-align: left;
+                    color: #007b2b;
+                }
+            }
+
+            .icon-Timtheovitri {
+                gap: 6px;
+
+                p {
+                    padding-top: 20px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 16.41px;
+                    text-align: left;
+                    color: #007b2b;
+                }
+            }
+        }
+    }
+}
+.main {
+    .container {
+        padding: 0;
+        .row-1 {
+            padding: 0;
+            .col-10 {
+                padding: 18px 0px 0px 15px;
+            }
+        }
+        .row-2 {
+            .Filter_Search {
+                padding: 0;
+                .title-Filter {
+                    p {
+                        margin: 0;
+                        &:last-child {
+                            font-size: 20px;
+                            font-weight: 700;
+                            line-height: 30px;
+                            text-align: left;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .menu-category {
+                    border-bottom: 1px solid #cccccc;
+                    &-title {
+                        margin: 20px 0;
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 20px;
+                        text-align: left;
+                    }
+                    &-list {
+                        padding: 0;
+                        list-style-type: none;
+                        li {
+                            a {
+                                text-decoration: none;
+                                font-size: 13px;
+                                font-weight: 400;
+                                line-height: 20px;
+                                text-align: left;
+                                color: #333333;
+                            }
+                        }
+                    }
+                }
+                .transport {
+                    padding: 20px 0 20px;
+                    border-bottom: 1px solid #cccccc;
+                    &-title {
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 20px;
+                        text-align: left;
+                        color: #333333;
+                    }
+                    &-method {
+                        padding: 0 0 0 2px;
+                        gap: 10px;
+                        margin: 0;
+                        li {
+                            input {
+                                width: 20px;
+                                height: 20px;
+                            }
+                            label {
+                                margin-left: 10px;
+                                font-size: 13px;
+                                font-weight: 400;
+                                line-height: 20px;
+                                text-align: left;
+                                color: #333333;
+                            }
+                        }
+                    }
+                }
+                .about-price {
+                    padding: 20px 0 20px;
+                    width: 100%;
+                    border-bottom: 1px solid #cccccc;
+                    &-title {
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 20px;
+                        text-align: left;
+                        color: #333333;
+                    }
+                    &-list {
+                        width: 100%;
+                        padding: 0;
+                        list-style-type: none;
+                        li {
+                            border: 1px solid #cccccc;
+                            border-radius: 4px;
+                            width: 45%;
+                            input {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &-button {
+                        width: 209px;
+                        height: 30px;
+                        border-radius: 4px 0px 0px 0px;
+                        opacity: 0px;
+                        width: 100%;
+                        background-color: #00bc3c;
+                        padding: 5px 20px;
+                        border: none;
+                        p {
+                            font-size: 14px;
+                            font-weight: 700;
+                            line-height: 20px;
+                            text-align: center;
+                            color: white;
+                        }
+                    }
+                }
+                .reviews {
+                    padding: 20px 0 20px;
+                    width: 100%;
+                    border-bottom: 1px solid #cccccc;
+                    &-title {
+                        margin-bottom: 20px;
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 20px;
+                        text-align: left;
+                        color: #333333;
+                    }
+                    &-list {
+                        padding: 0;
+                        margin: 0;
+                        list-style-type: none;
+                        li {
+                            a {
+                                text-decoration: none;
+                                span {
+                                    &:last-child {
+                                        margin-left: 10px;
+                                        font-size: 13px;
+                                        font-weight: 400;
+                                        line-height: 20px;
+
+                                        color: #333333;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .delete-filter {
+                    margin-top: 20px;
+                    span {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        text-align: center;
+                        color: #0c2c41;
+                    }
+                }
+            }
+            .sort_Product {
+                padding: 0px 0px 0px 15px;
+                .sort_Product-item {
+                    background: #e3e3e3;
+                    div {
+                        p {
+                            padding: 10px;
+                            margin: 0;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 16.41px;
+                            text-align: left;
+                        }
+                        ul {
+                            gap: 14px;
+                            list-style-type: none;
+                            margin: 0;
+                            padding: 10px;
+                            li {
+                                background-color: white;
+                                padding: 4px 12px;
+                                &:last-child {
+                                    width: 150px;
+                                    a {
+                                        width: 100%;
+                                    }
+                                    &:hover {
+                                        span {
+                                            color: white;
+                                        }
+                                    }
+                                }
+                                a {
+                                    text-decoration: none;
+                                    color: #000000;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 16.41px;
+                                    text-align: left;
+                                }
+                                &:hover {
+                                    background: #29ab56;
+                                    a {
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .sort_Product-item-1 {
+                        span {
+                            &:first-child {
+                                margin-right: 9px;
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 18.9px;
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+
+                .sort_Product-Grid {
+                    margin-top: 17px;
+                    display: grid;
+                    grid-template-rows: repeat(5, 1fr);
+                    grid-template-columns: repeat(5, 1fr);
+                    gap: 12px;
+                    .Grid-cart1 {
+                        .img-product {
+                            position: relative;
+                            .logo-cart {
+                                border-radius: 2.3px;
+                                background-color: white;
+                                padding: 4px 4px;
+                                gap: 2px;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                list-style-type: none;
+                                li {
+                                    span {
+                                        border-radius: 3.35px;
+                                        background: #29ab56;
+                                        font-size: 13.82px;
+                                        font-weight: 600;
+                                        line-height: 16.19px;
+                                        text-align: left;
+                                        color: white;
+                                        padding: 3px 10px;
+                                    }
+                                }
+                            }
+                            .img-product-main {
+                                width: 100%;
+                            }
+                            .img-product-sale {
+                                position: absolute;
+                                right: 2px;
+                                top: 2px;
+                            }
+                            .img-product-title {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                            }
+                        }
+                        .content-product {
+                            padding: 10px;
+                            p {
+                                margin: 0;
+                                &:first-child {
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 21px;
+                                    text-align: left;
+                                    margin-bottom: 10px;
+                                }
+                                &:nth-child(2) {
+                                    span {
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                        line-height: 18.75px;
+                                        text-align: left;
+                                        color: #00bc3c;
+                                        margin-bottom: 5px;
+                                    }
+                                }
+                                &:nth-child(3) {
+                                    span {
+                                        &:last-child {
+                                            font-size: 12px;
+                                            font-weight: 400;
+                                            line-height: 14.06px;
+                                            text-align: left;
+                                            color: #000000;
+                                            margin-bottom: 10px;
+                                        }
+                                    }
+                                }
+                                &:last-child {
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    line-height: 26.18px;
+                                    text-align: left;
+                                    color: #a3a3a3;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+footer {
+    .container {
+        padding: 30px 0;
+        .content {
+            gap: 20px;
+            .content1-footer {
+                p:nth-child(1) {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 18.75px;
+                    text-align: left;
+                    color: #000000;
+                }
+                ul {
+                    padding: 0;
+                    list-style: none;
+                    li {
+                        a {
+                            text-decoration: none;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 16.41px;
+                            text-align: left;
+                            color: #373737;
+                        }
+                    }
+                }
+            }
+            .content2-footer {
+                p:nth-child(1) {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 18.75px;
+                    text-align: left;
+                    color: #000000;
+                }
+                p:nth-child(3) {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 18.75px;
+                    text-align: left;
+                    color: #000000;
+                }
+                ul {
+                    padding: 0;
+                    list-style: none;
+                    li {
+                        a {
+                            text-decoration: none;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 16.41px;
+                            text-align: left;
+                            color: #373737;
+                        }
+                    }
+                }
+                .img-chungnhan {
+                    padding-right: 20px;
+                }
+            }
+        }
+        .diachi {
+            ul {
+                border-top: 1px solid #373737;
+                padding: 20px 0;
+
+                list-style: none;
+                li {
+                    a {
+                        text-decoration: none;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 16.41px;
+                        text-align: left;
+                        color: #373737;
+                    }
+                }
+            }
+        }
+        .last-itemFooter {
+            display: none;
+        }
+    }
+}
