@@ -158,13 +158,13 @@ button {
   font-weight: 500;
   text-align: left; }
 
-.Roboto14, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .title, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .header .info .title, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .follow, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .header .info .follow, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .address, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .header .info .address, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .name, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .products .product .info .name, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .sold, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .products .product .info .sold, .commonProductList .commonProductItem .info .name, .starFollow .i1 {
+.Roboto14, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .title, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .follow, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .address, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .name, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .sold, .commonProductList .commonProductItem .info .name, .starFollow .i1 {
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
   text-align: left; }
 
-.Roboto16, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost, .commonGroupProducts .commonGroupProducts-seeMore button, .homeLocal .products .commonGroupProducts-seeMore button, .commonProductList .commonProductItem .info .main .top span, .homeLocal .filter-address .title, .homeLocal .filter-address .filter .button-filter {
+.Roboto16, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost, .commonGroupProducts .commonGroupProducts-seeMore button, .commonProductList .commonProductItem .info .main .top span {
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
@@ -175,7 +175,7 @@ button {
   text-align: center;
   line-height: normal; }
 
-.Roboto22, .commonGroupProducts .commonGroupProducts-title, .homeLocal .products .commonGroupProducts-title, .commonCategory .commonCategory_main .commonCategory_title {
+.Roboto22, .commonGroupProducts .commonGroupProducts-title, .commonCategory .commonCategory_main .commonCategory_title {
   font-size: 22px;
   text-align: left;
   line-height: normal; }
@@ -406,13 +406,13 @@ button {
   font-weight: 500;
   text-align: left; }
 
-.Roboto14, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .title, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .header .info .title, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .follow, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .header .info .follow, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .address, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .header .info .address, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .name, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .products .product .info .name, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .sold, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .products .product .info .sold, .commonProductList .commonProductItem .info .name, .starFollow .i1 {
+.Roboto14, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .title, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .follow, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .address, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .name, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .sold, .commonProductList .commonProductItem .info .name, .starFollow .i1 {
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
   text-align: left; }
 
-.Roboto16, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost, .commonGroupProducts .commonGroupProducts-seeMore button, .homeLocal .products .commonGroupProducts-seeMore button, .commonProductList .commonProductItem .info .main .top span, .homeLocal .filter-address .title, .homeLocal .filter-address .filter .button-filter {
+.Roboto16, .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost, .commonGroupProducts .commonGroupProducts-seeMore button, .commonProductList .commonProductItem .info .main .top span {
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
@@ -423,7 +423,7 @@ button {
   text-align: center;
   line-height: normal; }
 
-.Roboto22, .commonGroupProducts .commonGroupProducts-title, .homeLocal .products .commonGroupProducts-title, .commonCategory .commonCategory_main .commonCategory_title {
+.Roboto22, .commonGroupProducts .commonGroupProducts-title, .commonCategory .commonCategory_main .commonCategory_title {
   font-size: 22px;
   text-align: left;
   line-height: normal; }
@@ -505,7 +505,7 @@ input[type="number"] {
   height: 100vh;
   overflow-y: auto; }
 
-.commonGroupProducts .commonGroupProducts-title, .homeLocal .products .commonGroupProducts-title {
+.commonGroupProducts .commonGroupProducts-title {
   background-color: #fff;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -516,64 +516,64 @@ input[type="number"] {
   font-weight: 500;
   color: #1a1a1a; }
 
-.commonGroupProducts .commonGroupProducts-main, .homeLocal .products .commonGroupProducts-main {
+.commonGroupProducts .commonGroupProducts-main {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 10px;
   row-gap: 10px; }
-  .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item {
+  .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item {
     width: 100%;
     padding: 10px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     gap: 12px; }
-    .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .header {
+    .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header {
       width: 100%;
       display: flex;
       gap: 12px; }
-      .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .logo, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .header .logo {
+      .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .logo {
         height: 100%;
         object-fit: contain; }
-      .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .header .info {
+      .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info {
         flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: start; }
-        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .title, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .header .info .title {
+        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .title {
           font-weight: 700;
           color: #1a1a1a; }
-        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .follow, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .header .info .follow {
+        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .follow {
           font-weight: 400;
           color: #969696; }
-        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .address, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .header .info .address {
+        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .address {
           font-weight: 400;
           color: #2ead5b; }
-        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .certificate, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .header .info .certificate {
+        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .header .info .certificate {
           display: flex;
           align-items: center;
           gap: 4px; }
-    .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .products {
+    .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       column-gap: 10px;
       row-gap: 10px; }
-      .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .products .product {
+      .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product {
         display: flex;
         flex-direction: column;
         gap: 10px;
         max-width: 100%;
         min-height: 30px; }
-        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product img, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .products .product img {
+        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product img {
           width: 100%;
           object-fit: contain; }
-        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .products .product .info {
+        .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info {
           display: flex;
           flex-direction: column;
           gap: 6px; }
-          .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .name, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .products .product .info .name {
+          .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .name {
             display: -webkit-box;
             -webkit-box-orient: vertical;
             overflow: hidden;
@@ -584,20 +584,20 @@ input[type="number"] {
             line-height: 1.5em;
             font-weight: 400;
             color: #1a1a1a; }
-          .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .sold, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .products .product .info .sold {
+          .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .sold {
             color: #7b7b7b; }
-          .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost {
+          .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost {
             font-weight: 700;
             color: #fb4f5b; }
-          .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost.black, .homeLocal .products .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost.black {
+          .commonGroupProducts .commonGroupProducts-main .commonGroupProducts-item .products .product .info .cost.black {
             color: #1a1a1a;
             font-weight: 400; }
 
-.commonGroupProducts .commonGroupProducts-seeMore, .homeLocal .products .commonGroupProducts-seeMore {
+.commonGroupProducts .commonGroupProducts-seeMore {
   width: 100%;
   display: flex;
   justify-content: center; }
-  .commonGroupProducts .commonGroupProducts-seeMore button, .homeLocal .products .commonGroupProducts-seeMore button {
+  .commonGroupProducts .commonGroupProducts-seeMore button {
     width: 241px;
     height: 41px;
     border: 1px solid #2e9dff;
@@ -609,7 +609,7 @@ input[type="number"] {
     font-weight: 500;
     color: #2e9dff;
     text-transform: uppercase; }
-    .commonGroupProducts .commonGroupProducts-seeMore button:hover, .homeLocal .products .commonGroupProducts-seeMore button:hover {
+    .commonGroupProducts .commonGroupProducts-seeMore button:hover {
       background-color: #2e9dff;
       color: #fff; }
 
@@ -840,43 +840,189 @@ nav .pagination {
 .checkBoxBlue input[type="checkbox"]:checked:after {
   display: block; }
 
-.homeLocal {
-  width: 100%;
-  background-color: #f5f5fa;
+.cartDetail h1:first-of-type {
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 37.5px;
+  text-align: left;
+  color: #000000;
+  margin-top: 24px;
+  margin-bottom: 13px; }
+
+.cartDetail .custom-row {
+  margin-left: -7.5px;
+  margin-right: -7.5px; }
+  .cartDetail .custom-row .custom-col {
+    padding-left: 7.5px;
+    padding-right: 7.5px; }
+
+.cartDetail .title16Common, .cartDetail .cartTitle .all, .cartDetail .cartTitle .price, .cartDetail .cartTitle .quantity, .cartDetail .cartTitle .sumCost {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  text-align: right; }
+
+.cartDetail .cartTitle {
+  background-color: #fff;
+  margin-bottom: 12px;
+  padding: 14px 28px;
   display: flex;
-  flex-direction: column; }
-  .homeLocal .mainlogo {
-    width: 100%;
-    object-fit: contain;
-    margin-top: 12px;
-    margin-bottom: 12px; }
-  .homeLocal .filter-address {
+  align-items: center; }
+  .cartDetail .cartTitle .checkBoxBlue {
+    margin-right: 38px; }
+  .cartDetail .cartTitle .all {
+    margin-right: 38px;
+    width: 323px;
+    text-align: left; }
+    .cartDetail .cartTitle .all span {
+      font-weight: 400; }
+  .cartDetail .cartTitle .price {
+    margin-right: 38px;
+    width: 105px; }
+  .cartDetail .cartTitle .quantity {
+    margin-right: 38px;
+    width: 70px; }
+  .cartDetail .cartTitle .sumCost {
+    width: 105px; }
+
+.cartDetail .cartListContent {
+  padding-right: 12px;
+  padding-left: 16px; }
+
+.cartDetail .cartUserInfo .boxAddress {
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 8px;
+  padding-left: 13px;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 26px; }
+  .cartDetail .cartUserInfo .boxAddress .header {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18.75px;
+    text-align: left; }
+  .cartDetail .cartUserInfo .boxAddress .content {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    background-color: #fff;
-    align-items: center;
-    padding-top: 13px;
-    padding-bottom: 12px;
-    margin-bottom: 12px;
-    gap: 18px; }
-    .homeLocal .filter-address .title {
-      font-weight: 700;
-      color: #000; }
-    .homeLocal .filter-address .filter {
+    gap: 9px; }
+    .cartDetail .cartUserInfo .boxAddress .content div {
       display: flex;
       align-items: center;
-      gap: 16px; }
-      .homeLocal .filter-address .filter .button-filter {
-        width: 319px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0px 16px;
-        border-radius: 8px;
-        background-color: #f6f6f6;
-        border: none;
-        outline: none;
-        color: #585858;
-        font-weight: 400; }
+      justify-content: space-between; }
+      .cartDetail .cartUserInfo .boxAddress .content div span:first-of-type {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16.41px;
+        letter-spacing: 0.04em;
+        text-align: left; }
+      .cartDetail .cartUserInfo .boxAddress .content div span:last-of-type {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16.41px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        color: #595959; }
+    .cartDetail .cartUserInfo .boxAddress .content .diachi {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.41px;
+      letter-spacing: 0.04em;
+      text-align: left;
+      color: #595959; }
+  .cartDetail .cartUserInfo .boxAddress .botom {
+    align-self: flex-end;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    letter-spacing: 0.04em;
+    text-align: right;
+    color: #139640; }
+
+.cartDetail .cartUserInfo .boxSumPrice {
+  padding: 13px 16px 20px 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  color: #595959;
+  margin-bottom: 20px; }
+  .cartDetail .cartUserInfo .boxSumPrice .l1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .cartDetail .cartUserInfo .boxSumPrice .l1 span:first-of-type {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.41px;
+      letter-spacing: 0.04em;
+      text-align: left; }
+    .cartDetail .cartUserInfo .boxSumPrice .l1 span:last-of-type {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18.75px;
+      letter-spacing: 0.04em;
+      text-align: right; }
+  .cartDetail .cartUserInfo .boxSumPrice .divideH {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: #000000; }
+  .cartDetail .cartUserInfo .boxSumPrice .l2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px; }
+    .cartDetail .cartUserInfo .boxSumPrice .l2 span:first-of-type {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.41px;
+      letter-spacing: 0.04em;
+      text-align: left; }
+    .cartDetail .cartUserInfo .boxSumPrice .l2 span:last-of-type {
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 23.44px;
+      letter-spacing: 0.04em;
+      text-align: right;
+      color: #139640; }
+  .cartDetail .cartUserInfo .boxSumPrice .l3 {
+    align-self: flex-end;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 16.41px;
+    letter-spacing: 0.04em;
+    text-align: right;
+    color: #139640; }
+
+.cartDetail .cartUserInfo button {
+  width: 100%;
+  height: 59px;
+  background-color: #29ab56;
+  color: white;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.13px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }

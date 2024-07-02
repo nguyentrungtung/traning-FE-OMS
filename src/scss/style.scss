@@ -1,4 +1,6 @@
 @import "./base";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
 .wrapper {
   width: 100vw;
   height: 100vh;
@@ -384,4 +386,36 @@ nav .pagination {
 .dropdown .dropdown-menu {
   border: none;
   outline: none;
+}
+.checkBoxBlue {
+  & input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: 1px solid #cdcdcd;
+  }
+  & input[type="checkbox"]:after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f00c";
+    color: white;
+    display: none;
+  }
+  & input[type="checkbox"]:hover {
+    background-color: #e4e4e4;
+  }
+  & input[type="checkbox"]:checked {
+    background-color: #1771cd;
+  }
+  & input[type="checkbox"]:checked:after {
+    display: block;
+  }
 }

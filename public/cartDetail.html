@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cartDetail</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/header.css" />
+    <link rel="stylesheet" href="../src/css/footer.css" />
+    <link rel="stylesheet" href="../src/css/cartDetail.css" />
+    <link rel="stylesheet" href="../src/css/responsive-common.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div data-include-html="../component/header.html"></div>
+
+    <!-- cartDetail -->
+    <main class="cartDetail container-xxl">
+      <h1>Giỏ hàng</h1>
+      <div class="row custom-row">
+        <div class="col-xxl-9 custom-col">
+          <div class="cartTitle">
+            <span class="checkBoxBlue"><input type="checkbox" /></span>
+            <span class="all"
+              >Tất cả <span>(Chọn tất cả 3 sản phẩm)</span></span
+            >
+            <span class="price">Đơn giá </span>
+            <span class="quantity">Số lượng </span>
+            <span class="sumCost">Thành tiền </span>
+          </div>
+          <div class="cartContentList">
+            <div class="cartContentItem">
+              <div class="cartContentItem_infoShop"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-3 custom-col">
+          <div class="cartUserInfo">
+            <div class="boxAddress">
+              <span class="header">Địa chỉ</span>
+              <div class="content">
+                <div><span>Hồng Anh</span><span>0919 189 199</span></div>
+                <span class="diachi"
+                  >125 Hoàng Ngân, Quận Thanh Xuân, TP. Hà Nội.</span
+                >
+              </div>
+              <a href="#" class="botom">Thay Đổi</a>
+            </div>
+            <div class="boxSumPrice">
+              <div class="l1">
+                <span>Tạm tính: </span>
+                <span>2.676.000 đ</span>
+              </div>
+              <div class="divideH"></div>
+              <div class="l2">
+                <span>Tổng cộng:</span>
+                <span>2.676.000 đ</span>
+              </div>
+              <div class="l3">(Đã bao gồm VAT nếu có)</div>
+            </div>
+            <button>Gửi yêu cầu</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <div data-include-html="../component/footer.html"></div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="../src/js/scripts.js"></script>
+  <script></script>
+</html>
