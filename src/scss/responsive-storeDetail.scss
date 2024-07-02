@@ -73,10 +73,8 @@
           }
         }
         .homePage_firstList {
-          overflow-x: scroll;
           .commonProductList {
             .commonProductItem {
-              min-width: 193px;
             }
             .commonProductItem:nth-of-type(n + 5) {
               display: flex;
@@ -104,6 +102,29 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+  .detailStore .detailStore_banner .boxMobile {
+    position: absolute;
+    bottom: 10px;
+    .divideV {
+      height: 16px;
+      background-color: white;
+    }
+    .item {
+      font-family: Roboto;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14.06px;
+      text-align: center;
+      color: white;
+      span:first-of-type {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16.41px;
+        text-align: center;
+      }
+    }
+  }
 
   .Header {
     display: none;
@@ -125,6 +146,241 @@
           background-color: #ffffff9c;
         }
       }
+    }
+  }
+  .detailStore .detailStore_banner .boxBrandName {
+    background-color: transparent;
+    color: white;
+    box-shadow: none;
+    top: 90px;
+    bottom: unset;
+  }
+  .detailStore
+    .detailStore_banner
+    .boxBrandName
+    .info
+    .mainInfo
+    .follow
+    .btnFollow {
+    color: white;
+    background-color: #ffffff26;
+  }
+  .detailStore
+    .detailStore_tabs
+    #detailStore_homePage
+    .homePage_standoutProduct {
+    display: none;
+  }
+  .nav.nav-tabs .nav-item button {
+    min-width: 130px;
+    text-wrap: nowrap;
+    border-right: 1px solid #29ab56;
+    padding-left: 14px;
+    padding-right: 14px;
+    .polygonNavbar {
+      visibility: hidden;
+    }
+  }
+  .nav.nav-tabs {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    margin-bottom: 10px;
+  }
+  .detailStore
+    .detailStore_tabs
+    #detailStore_homePage
+    .homePage_firstList
+    .commonProductList {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .detailStore .detailStore_tabs #detailStore_product .mainContent .advanceTop {
+    padding: 0;
+    margin-bottom: 0;
+    .advanceTop_sort {
+      width: 100%;
+      .listButton {
+        padding-left: 16px;
+        padding-right: 16px;
+        justify-content: space-between;
+        width: 100%;
+        gap: unset !important;
+
+        .divideV {
+          height: 16px;
+          background-color: #000;
+        }
+        button {
+          max-width: 84px;
+          width: 84px;
+          padding: unset !important;
+          height: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 30px;
+        }
+      }
+    }
+  }
+  #detailStore_product {
+    .mainContent {
+      .commonProductList {
+        padding-left: 16px;
+        padding-right: 16px;
+        .commonProductItem:nth-of-type(n + 5) {
+          display: none;
+        }
+      }
+      .paginationBottom {
+        display: none;
+      }
+    }
+  }
+  .detailStore .detailStore_tabs #detailStore_enterprise {
+    padding-top: unset;
+    padding-left: unset;
+    .listBusinessProfile {
+      max-width: 100%;
+      .itemProfile {
+        .commonTitle {
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 16.41px;
+          text-align: left;
+          color: #00953d;
+        }
+      }
+      .itemProfile:first-of-type {
+        padding-top: 10px;
+        padding-left: 16px;
+        padding-right: 16px;
+        .itemProfile_content {
+          display: flex;
+          flex-direction: column;
+          .leftContent {
+            background-color: white;
+            padding-top: unset;
+            padding-left: unset;
+            max-width: 100%;
+          }
+        }
+      }
+      .itemProfile:nth-of-type(2) {
+        padding-left: 16px;
+        padding-right: 16px;
+        .itemProfile_content {
+          display: flex;
+          flex-direction: column;
+          .tableCustom {
+            .attribute {
+              .value {
+                align-content: center;
+                text-wrap: nowrap;
+              }
+            }
+          }
+        }
+      }
+      .itemProfile:nth-of-type(4) {
+        padding-left: 16px;
+        .listGiayChungNhan {
+          width: 100%;
+          overflow-x: scroll;
+        }
+      }
+      .itemProfile:nth-of-type(5) {
+        padding-left: 16px;
+        .listCosoSanxuat {
+          display: flex;
+          max-width: 100%;
+          overflow-x: scroll;
+          .itemCosoSanxuat {
+            img {
+              width: 400px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+  .detailStore .detailStore_tabs #detailStore_branch {
+    padding: unset;
+    margin-bottom: 0;
+    .main {
+      gap: 16px !important;
+      .main_topBox {
+        gap: 16px !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        padding-top: 12px !important;
+        .boxLeft {
+          padding-top: 33px;
+          padding-right: 23px;
+          padding-bottom: 33px;
+          padding-left: 27px;
+          gap: 6px;
+          span {
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 16px;
+            text-align: justified;
+          }
+          p {
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            text-align: justified;
+          }
+        }
+        .boxRight {
+          @extend .boxLeft;
+          background-color: #2ead5b;
+          color: white;
+        }
+      }
+      .main_bottomBox {
+        padding-bottom: 40px;
+        span {
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 16.41px;
+          text-align: left;
+          color: #29ab56;
+        }
+        p {
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+          text-align: justified;
+        }
+      }
+    }
+  }
+  .detailStore .detailStore_tabs #detailStore_contact {
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    .contentContact {
+      width: 100%;
+      .tableCustom {
+        width: 100%;
+      }
+      form {
+        width: 100%;
+      }
+    }
+    .tableCustom .attribute {
+      grid-template-columns: minmax(125px, auto) 1fr;
     }
   }
 }

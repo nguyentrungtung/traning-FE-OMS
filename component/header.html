@@ -196,15 +196,93 @@
 <!-- filter -->
 <div class="filter-container d-lg-block d-none">
   <div class="filter-container_content container-xxl">
-    <a href="#" class="filter-item">
-      <img src="../assets/images/li_layout-grid.png" alt="" />
-      <span>Tất cả</span>
-    </a>
-    <a href="#" class="filter-item">
-      <img src="../assets/images/iconoir_small-shop-alt.png" alt="" />
-      <span>Tìm theo vị trí</span>
-    </a>
+
+    
+    <div class="dropdown">
+      <button class="filter-item" data-bs-toggle="dropdown">
+        <img src="../assets/images/li_layout-grid.png" alt="" />
+        <span>Tất cả</span>
+      </button>
+      <div class="dropdown-menu">
+        <div class="dropdown-main d-flex flex-column">
+          
+        <script>
+          const alldataDropdown = [
+            {
+              class1: "Cửa hàng Nông nghiệp",
+              class2: ["Vật tư Nông nghiệp","Rau xanh","Hoa","Hạt","Hạt giống","Chăn nuôi","Thủy sản","Lâm nghiệp","Diêm nghiệp","Nước"],
+              class3: ["Thực phẩm Nông nghiệp","Thực phẩm khô","Thực phẩm tươi sống","Thực phẩm đông lạnh","Đồ uống","Bánh kẹo"]
+            },
+            {
+              class1: "Dịch vụ Nông nghiệp",
+              class2: ["Công cụ dụng cụ Nông nghiệp","Thức ăn chăn nuôi","Thuốc bảo vệ thực vật","Thú y","Du lịch","Bất động sản nông nghiệp"]
+            },
+            {
+              class1: "Thương mại",
+              class2: ["Tư vấn Marketing","Đăng ký sản phẩm thương mại hóa","Đăng ký nhận tín dụng "]
+            },
+            {
+              class1: "Pháp lý",
+              class2: ["Chứng nhận","Giám định","Thủ tục IE","Liên kết vận chuyển"]
+            },
+            {
+              class1: "Thông tin",
+              class2: ["Blog kiến thức","Hỏi đáp chuyên gia","Cổng thông tin xúc tiến Thương mại"]
+
+            }
+          ];
+          
+          const dropdownMenuAll = document.querySelector(".filter-container .filter-container_content .dropdown:first-of-type .dropdown-menu .dropdown-main");
+          let contentDropDownMenuAll = "";
+          for(let i = 0 ;i<alldataDropdown.length;i++){
+            let contentClass2 = "";
+            let contentClass3 = "";
+
+            if(alldataDropdown[i].class2){
+              const class2 = alldataDropdown[i].class2;
+              for(let j = 0 ;j<class2.length;j++){
+                contentClass2+=`<a href="#">${class2[j]}</a>`;
+              }
+            }
+
+            if(alldataDropdown[i].class3){
+              const class3 = alldataDropdown[i].class3;
+              for(let j = 0;j<class3.length;j++){
+                contentClass3 += `<a href="#">${class3[j]}</a>`;
+              }
+            }
+            
+            let menuItem = `<div class="menuItem">
+              <div class="class1">
+                <img src="../assets/svg/icondrd${i+1}.svg" alt="">
+                <div>${alldataDropdown[i].class1}</div>  
+                <img src="../assets/svg/chevronGreen.svg" alt="">
+              </div>
+              <div class="class2">${contentClass2}</div>
+              <div class="class3">${contentClass3}</div>
+              </div>`
+              contentDropDownMenuAll+=menuItem;
+          }
+          dropdownMenuAll.innerHTML = contentDropDownMenuAll;
+        </script>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="filter-item" data-bs-toggle="dropdown">
+        <img src="../assets/images/iconoir_small-shop-alt.png" alt="" />
+        <span>Tìm theo vị trí</span>
+      </button>
+      <ul class="dropdown-menu" style="min-height: 300px;line-height: 16px;">
+        dropdown2
+      </ul>
+    </div>
+    
+    
   </div>
+
 </div>
 
 

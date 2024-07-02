@@ -509,6 +509,46 @@ input[type="number"] {
     align-items: center;
     gap: 24px;
     justify-content: start; }
+    .filter-container .filter-container_content .dropdown:first-of-type .dropdown-menu {
+      padding: 11px 25px 15px 7px;
+      background-color: white;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.41px;
+      text-align: left;
+      border-radius: 6px;
+      box-shadow: 0px 0px 15px 0px #0c2f4c26; }
+      .filter-container .filter-container_content .dropdown:first-of-type .dropdown-menu .menuItem {
+        display: flex;
+        align-items: stretch;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 23.2px;
+        text-align: left;
+        text-wrap: nowrap; }
+      .filter-container .filter-container_content .dropdown:first-of-type .dropdown-menu .class1 {
+        align-self: start;
+        width: 220px;
+        padding: 10px;
+        color: #007b2b;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding-top: 8px; }
+      .filter-container .filter-container_content .dropdown:first-of-type .dropdown-menu .class2, .filter-container .filter-container_content .dropdown:first-of-type .dropdown-menu .class3 {
+        width: 175px;
+        padding: 10px;
+        padding-right: unset;
+        display: flex;
+        flex-direction: column;
+        gap: 8px; }
+        .filter-container .filter-container_content .dropdown:first-of-type .dropdown-menu .class2 a, .filter-container .filter-container_content .dropdown:first-of-type .dropdown-menu .class3 a {
+          color: #007b2b; }
+        .filter-container .filter-container_content .dropdown:first-of-type .dropdown-menu .class2 a:first-of-type, .filter-container .filter-container_content .dropdown:first-of-type .dropdown-menu .class3 a:first-of-type {
+          font-weight: 700; }
   .filter-container span {
     color: #007b2b;
     font-weight: 700; }

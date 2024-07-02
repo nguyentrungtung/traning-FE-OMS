@@ -29,11 +29,13 @@
           src="../assets/images/backgroundImgMobile.png"
           alt=""
         />
-        <div class="topSearchMobile d-md-none d-flex gap-3 align-self-center">
+        <div
+          class="topSearchMobile w-100 d-md-none d-flex gap-3 align-self-center px-3"
+        >
           <button>
             <img src="../assets/svg/backIconStoreDetail.svg" alt="" />
           </button>
-          <div class="d-flex align-items-center position-relative">
+          <div class="d-flex align-items-center position-relative w-100">
             <img
               class="position-absolute"
               src="../assets/svg/li_search.png"
@@ -41,6 +43,7 @@
               style="left: 12px"
             />
             <input
+              class="w-100"
               placeholder="Bông cải xanh"
               type="text"
               name=""
@@ -58,17 +61,26 @@
             <div class="info">
               <div class="mainInfo">
                 <span class="i1">Ommani Mall Thạch Bàn Long Biên</span>
-                <div class="i2">
+                <div class="i2 d-md-flex d-none">
                   <img src="../assets/svg/starShop.svg" alt="" />
                   <span>4.8 (11k+)</span>
                   <span>GIAO NHANH</span>
                 </div>
                 <div class="follow">
                   <button class="btnFollow">
-                    <img src="../assets/svg/bi_chat-dots.svg" alt="" />
+                    <img
+                      class="d-md-none d-block"
+                      src="../assets/svg/plusWhite.svg"
+                      alt=""
+                    />
+                    <img
+                      class="d-md-block d-none"
+                      src="../assets/svg/bi_chat-dots.svg"
+                      alt=""
+                    />
                     Theo Dõi
                   </button>
-                  <div class="avatar-group">
+                  <div class="avatar-group d-md-flex d-none">
                     <script>
                       for (let i = 0; i < 5; i++) {
                         document.write(`
@@ -79,10 +91,10 @@
                       }
                     </script>
                   </div>
-                  <span>1.2k Follow</span>
+                  <span class="d-md-block d-none">1.2k Follow</span>
                 </div>
                 <div
-                  class="d-flex align-items-center gap-2 align-self-end pt-1"
+                  class="d-flex align-items-center gap-2 align-self-end pt-1 d-md-flex d-none"
                 >
                   <script>
                     for (let i = 0; i < 5; i++) {
@@ -97,6 +109,33 @@
               </div>
             </div>
           </div>
+        </div>
+        <div
+          class="boxMobile d-md-none d-flex align-items-center px-4 justify-content-between w-100"
+        >
+          <script>
+            const boxMobile = [
+              { t1: "4.8", t2: "Đánh giá cửa hàng" },
+              { t1: "513", t2: "Người theo dõi" },
+              { t1: "98%", t2: "Tỷ lệ phản hồi" },
+            ];
+            for (let i = 0; i < boxMobile.length; i++) {
+              document.write(`
+                <div style="height:37px" class="item d-flex flex-column align-items-center justify-content-between">
+                    <span>${boxMobile[i].t1}</span>
+                    <span>${boxMobile[i].t2}</span>
+                </div>
+                ${
+                  i !== boxMobile.length - 1
+                    ? `
+                  <span class="divideV"></span>
+                
+                `
+                    : ""
+                }
+              `);
+            }
+          </script>
         </div>
         <div class="btnOption d-md-flex d-none">
           <button class="btnChatNgay">
@@ -143,7 +182,7 @@
                   role="tab"
                 >
                   ${btnArr[i].text}
-                  <img src="../assets/svg/buttonActiveTamGiac.svg" alt="">
+                  <img class="polygonNavbar" src="../assets/svg/buttonActiveTamGiac.svg" alt="">
                 </button>
               </li>
               `);
@@ -164,21 +203,21 @@
           </section>
           <!-- listProduct1 -->
           <section class="homePage_firstList">
-            <div class="row">
-              <div class="col-xxl-4 col-xl-3 d-xl-block d-none h-100">
+            <div class="row gx-0">
+              <div class="col-xxl-4 col-xl-3 d-xl-block">
                 <img
                   class="listProductFirst_banner"
                   src="../assets/images/listProductFirst_banner.png"
                   alt=""
                 />
               </div>
-              <div class="col-xxl-8 col-xl-9 col-lg-12 h-100">
-                <div class="commonProductList d-lg-grid d-flex"></div>
+              <div class="col-xxl-8 col-xl-9 col-12">
+                <div class="commonProductList d-lg-grid"></div>
               </div>
             </div>
           </section>
           <!-- feature -->
-          <section class="homePage_simpleBanner">
+          <section class="homePage_simpleBanner d-md-flex d-none">
             <script>
               for (let i = 1; i <= 3; i++) {
                 document.write(`
@@ -190,7 +229,7 @@
             </script>
           </section>
           <!-- second list -->
-          <section class="homePage_secondList">
+          <section class="homePage_secondList d-md-flex d-none">
             <div class="row">
               <div class="col-xxl-4 col-xl-3 d-xl-block d-none h-100">
                 <img
@@ -200,14 +239,14 @@
                 />
               </div>
               <div class="col-xxl-8 col-xl-9 col-lg-12 h-100">
-                <div class="commonProductList d-lg-grid d-flex"></div>
+                <div class="commonProductList d-lg-grid d-none"></div>
               </div>
             </div>
           </section>
         </li>
         <li class="tab-pane fade" id="detailStore_product" role="tabpanel">
           <div class="d-flex" style="gap: 23px">
-            <div class="sidebarLeft">
+            <div class="sidebarLeft d-md-block d-none">
               <div class="d-flex flex-column gap-3">
                 <span class="commonTitle">Tất cả</span>
                 <script>
@@ -284,13 +323,14 @@
                 class="advanceTop d-flex align-items-center justify-content-between"
               >
                 <div class="advanceTop_sort d-flex align-items-center">
-                  <span>Sắp xếp theo:</span>
-                  <div class="d-flex align-items-center gap-3">
+                  <span class="d-md-block d-none">Sắp xếp theo:</span>
+                  <div class="listButton d-flex align-items-center gap-3">
                     <script>
                       const listSort = ["Nổi bật", "Mới nhất", "Bán chạy"];
                       for (let i = 0; i < listSort.length; i++) {
                         document.write(`
                           <button>${listSort[i]}</button>
+                          <span class="divideV d-md-none d-inline"></span>
                         `);
                       }
                       document.write(`
@@ -315,7 +355,7 @@
                     }
                   </script>
                 </div>
-                <div class="advanceTop_pagination">
+                <div class="advanceTop_pagination d-md-flex d-none">
                   <span><span class="presentPage">1</span>/200</span>
                   <button>
                     <img src="../assets/svg/chevronrightAdvance.svg" alt="" />
@@ -326,7 +366,7 @@
                 </div>
               </div>
               <div class="commonProductList"></div>
-              <nav>
+              <nav class="paginationBottom">
                 <ul class="pagination">
                   <li class="page-item">
                     <a
@@ -412,7 +452,9 @@
               </div>
             </div>
             <div class="itemProfile">
-              <span class="commonTitle">Thông tin đơn vị</span>
+              <span class="commonTitle d-md-block d-none"
+                >Thông tin đơn vị</span
+              >
               <div class="itemProfile_content">
                 <div class="leftContent tableCustom">
                   <script>
@@ -440,7 +482,7 @@
                     const tableDataRight = [
                       {
                         t1: "Loại hình",
-                        t2: "Nhà sản xuất, Công ty Thương mại, Nhà phân phối / Bán buôn",
+                        t2: "Nhà phân phối / Bán buôn",
                       },
                       { t1: "Sản phẩm chính", t2: "Rau, Củ, Quả" },
                       { t1: "Tổng doanh thu", t2: "156 tỷ/ năm" },
@@ -464,7 +506,7 @@
                 </div>
               </div>
             </div>
-            <div class="itemProfile">
+            <div class="itemProfile d-md-flex d-none">
               <span class="commonTitle">Năng lực sản phẩm</span>
               <div class="tableCustom">
                 <script>
@@ -490,7 +532,10 @@
             </div>
             <div class="itemProfile">
               <span class="commonTitle">Giấy chứng nhận</span>
-              <div class="d-flex align-items-center" style="gap: 24px">
+              <div
+                class="listGiayChungNhan d-flex align-items-center"
+                style="gap: 24px"
+              >
                 <script>
                   for (let i = 1; i <= 4; i++) {
                     document.write(`
@@ -502,7 +547,7 @@
             </div>
             <div class="itemProfile">
               <span class="commonTitle">Cơ sở sản xuất</span>
-              <div class="listCosoSanxuat">
+              <div class="listCosoSanxuat d-md-grid d-flex">
                 <script>
                   const listCosoSanxuat = [
                     "Công xưởng Rau xanh RD1",
@@ -526,9 +571,9 @@
           </div>
         </li>
         <li class="tab-pane fade" id="detailStore_branch" role="tabpanel">
-          <div class="d-flex flex-column" style="gap: 35px">
+          <div class="main d-flex flex-column" style="gap: 35px">
             <div
-              class="d-flex align-items-center align-items-stretch"
+              class="main_topBox d-flex flex-md-row flex-column align-items-center align-items-stretch"
               style="gap: 50px; padding-left: 100px; padding-right: 140px"
             >
               <div class="boxLeft">
@@ -547,7 +592,7 @@
               </div>
             </div>
             <div
-              class="d-flex flex-column contentBottom"
+              class="main_bottomBox d-flex flex-column contentBottom"
               style="gap: 6px; padding-left: 34px; padding-right: 35px"
             >
               <span>Về chúng tôi</span>
@@ -569,7 +614,10 @@
           </div>
         </li>
         <li class="tab-pane fade" id="detailStore_contact" role="tabpanel">
-          <div class="d-flex flex-column align-items-center" style="gap: 37px">
+          <div
+            class="contentContact d-flex flex-column align-items-center"
+            style="gap: 37px"
+          >
             <div class="tableCustom">
               <script>
                 const contactData = [
@@ -606,6 +654,17 @@
                 id=""
               ></textarea>
               <span class="numberWord">0/120</span>
+              <script>
+                const textArea = document.querySelector(
+                  ".detailStore .detailStore_tabs #detailStore_contact form textarea"
+                );
+                textArea.addEventListener("input", function () {
+                  const count = textArea.value.length;
+                  document.querySelector(
+                    ".detailStore .detailStore_tabs #detailStore_contact form .numberWord"
+                  ).textContent = `${count}/120`;
+                });
+              </script>
               <div
                 class="listOptions d-flex flex-wrap align-items-center gap-2"
               >

@@ -805,6 +805,10 @@ nav .pagination {
     color: #000;
     text-decoration: none; }
 
+.dropdown .dropdown-menu {
+  border: none;
+  outline: none; }
+
 .Home {
   display: flex;
   flex-direction: column; }

@@ -16,6 +16,16 @@ async function includeHTML() {
       .then((response) => response.text())
       .then((data) => {
         element.innerHTML = data;
+        // chay script
+
+        const scripts = element.querySelectorAll("script");
+        scripts.forEach(async (item) => {
+          const newScript = document.createElement("script");
+          newScript.textContent = item.textContent;
+          element.appendChild(newScript);
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+          element.removeChild(newScript);
+        });
       });
 
     fetchPromises.push(fetchPromise);

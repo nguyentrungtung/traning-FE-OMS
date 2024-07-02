@@ -811,6 +811,10 @@ nav .pagination {
     color: #000;
     text-decoration: none; }
 
+.dropdown .dropdown-menu {
+  border: none;
+  outline: none; }
+
 .nav.nav-tabs {
   display: flex;
   gap: 38px;
