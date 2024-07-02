@@ -28,6 +28,10 @@
             justify-content: center;
           }
           .product-gallery__main-image {
+            .img-product-primary {
+              width: 100%;
+              height: 100%;
+            }
             .product-item__tags {
               display: flex;
               align-items: center;

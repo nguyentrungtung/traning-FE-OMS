@@ -61,40 +61,73 @@
             <p class="cart__heading">Giỏ hàng</p>
             <div class="row">
               <div class="col-9">
-                <table class="cart-table">
-                  <thead class="cart-table__header">
-                    <tr>
-                      <th width="5%">
-                        <input type="checkbox" />
-                      </th>
-                      <th width="40%">
-                        <p class="all-text">
-                          Tất cả
-                          <span class="all-count-product">
-                            (Chọn tất cả 3 sản phẩm)
-                          </span>
-                        </p>
-                      </th>
-                      <th width="15%">Đơn giá</th>
-                      <th width="15%">Số lượng</th>
-                      <th width="25%">Thành tiền</th>
-                    </tr>
-                  </thead>
-                  <tbody class="cart-table__body">
-                    <tr>
-                      <td
-                        colspan="5"
-                        class="table__store-info d-flex align-items-center"
-                        style="gap: 10px"
-                      >
-                        <i class="bi bi-shop"></i>
-                        <span class="badge-mall">Mall</span>
-                        <p>Ommani Mall Thạch Bàn Long Biên</p>
-                        <i class="bi bi-chat-dots"></i>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="cart">
+                  <div class="cart__header">
+                    <div class="cart__select-all">
+                      <input type="checkbox" checked /> Tất cả (Chọn tất cả 3
+                      sản phẩm)
+                    </div>
+                    <div class="cart__item-price">Đơn giá</div>
+                    <div class="cart__item-quantity">Số lượng</div>
+                    <div class="cart__item-total">Thành tiền</div>
+                  </div>
+
+                  <div class="cart__row">
+                    <div class="cart__item">
+                      <input type="checkbox" checked />
+                      <div class="cart__product-img">
+                        <img
+                          src="../images/cart-product/product-01.png"
+                          alt="cart__product-img"
+                        />
+                      </div>
+                      <div class="cart__item-name">
+                        Bông cải xanh Đà Lạt - 100g
+                      </div>
+                    </div>
+                    <div class="cart__item-price">132.000 đ</div>
+                    <div class="cart__item-quantity">13</div>
+                    <div class="cart__item-total">1.716.000 đ</div>
+                  </div>
+
+                  <div class="cart__row">
+                    <div class="cart__item">
+                      <input type="checkbox" checked />
+                      <div class="cart__product-img">
+                        <img
+                          src="../images/cart-product/product-02.png"
+                          alt="cart__product-img"
+                        />
+                      </div>
+                      <div class="cart__item-name">Xúc xích Đức Việt</div>
+                    </div>
+                    <div class="cart__item-price">190.000 đ</div>
+                    <div class="cart__item-quantity">2</div>
+                    <div class="cart__item-total">380.000 đ</div>
+                  </div>
+
+                  <div class="cart__row">
+                    <div class="cart__item">
+                      <input type="checkbox" checked />
+                      <div class="cart__product-img">
+                        <img
+                          src="../images/cart-product/product-03.png"
+                          alt="cart__product-img"
+                        />
+                      </div>
+                      <div class="cart__item-name">
+                        Thịt xông khói túi 500g MAVIN
+                      </div>
+                    </div>
+                    <div class="cart__item-price">145.000 đ</div>
+                    <div class="cart__item-quantity">4</div>
+                    <div class="cart__item-total">580.000 đ</div>
+                  </div>
+
+                  <div class="cart__note">
+                    <input type="text" placeholder="Lưu ý cho người bán..." />
+                  </div>
+                </div>
               </div>
               <div class="col-3"></div>
             </div>
