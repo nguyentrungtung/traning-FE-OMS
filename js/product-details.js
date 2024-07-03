@@ -15,242 +15,135 @@ tabs.forEach((tab, index) => {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const thumbnailsContainer = document.querySelector(
-//     ".product-gallery__thumbnails"
-//   );
-//   const thumbnails = document.querySelectorAll(
-//     ".product-gallery__thumbnail"
-//   );
-//   const mainImage = document.getElementById("mainImage");
-//   const preBtn = document.querySelector(".pre-btn");
-//   const nextBtn = document.querySelector(".next-btn");
-//   let currentImageIndex = 0;
+document.addEventListener("DOMContentLoaded", function () {
+  const thumbnailsContainer = document.querySelector(
+    ".product-gallery__thumbnails"
+  );
+  const thumbnails = document.querySelectorAll(".product-gallery__thumbnail");
+  const mainImage = document.getElementById("mainImage");
+  const preBtn = document.querySelector(".pre-btn");
+  const nextBtn = document.querySelector(".next-btn");
+  let currentImageIndex = 0;
 
-//   const mainImageContainer = document.querySelector(
-//     ".product-gallery__main-image"
-//   );
-//   const reviewContainer = document.createElement("div");
-//   reviewContainer.classList.add("product-gallery__review");
-//   mainImageContainer.appendChild(reviewContainer);
+  const mainImageContainer = document.querySelector(
+    ".product-gallery__main-image"
+  );
+  const reviewContainer = document.createElement("div");
+  reviewContainer.classList.add("product-gallery__review");
+  mainImageContainer.appendChild(reviewContainer);
 
-//   // Thêm biến zoomFactor để điều chỉnh mức độ zoom
-//   const zoomFactor = 2.2;
+  // Thêm biến zoomFactor để điều chỉnh mức độ zoom
+  const zoomFactor = 1.2;
 
-//   function updateMainImage(index) {
-//     thumbnails.forEach((thumbnail) => {
-//       thumbnail.classList.remove("selected");
-//     });
+  // Thêm phần tử ô vuông để làm vùng hiển thị màu sắc
+  const zoomArea = document.createElement("div");
+  zoomArea.classList.add("product-gallery__zoom-area");
+  mainImageContainer.appendChild(zoomArea);
 
-//     const selectedThumbnail = thumbnails[index];
-//     selectedThumbnail.classList.add("selected");
+  function updateMainImage(index) {
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.classList.remove("selected");
+    });
 
-//     const imgSrc = selectedThumbnail.querySelector("img").src;
-//     mainImage.src = imgSrc;
+    const selectedThumbnail = thumbnails[index];
+    selectedThumbnail.classList.add("selected");
 
-//     const thumbnailWidth = selectedThumbnail.offsetWidth;
-//     const scrollLeftOffset =
-//       selectedThumbnail.offsetLeft - thumbnailsContainer.offsetLeft;
+    const imgSrc = selectedThumbnail.querySelector("img").src;
+    mainImage.src = imgSrc;
 
-//     thumbnailsContainer.scrollTo({
-//       left: scrollLeftOffset,
-//       behavior: "smooth",
-//     });
-//   }
+    const thumbnailWidth = selectedThumbnail.offsetWidth;
+    const scrollLeftOffset =
+      selectedThumbnail.offsetLeft - thumbnailsContainer.offsetLeft;
 
-//   thumbnails.forEach((thumbnail, index) => {
-//     thumbnail.addEventListener("click", () => {
-//       updateMainImage(index);
-//     });
-//   });
+    thumbnailsContainer.scrollTo({
+      left: scrollLeftOffset,
+      behavior: "smooth",
+    });
+  }
 
-//   preBtn.addEventListener("click", () => {
-//     currentImageIndex =
-//       currentImageIndex > 0
-//         ? currentImageIndex - 1
-//         : thumbnails.length - 1;
-//     updateMainImage(currentImageIndex);
-//   });
-
-//   nextBtn.addEventListener("click", () => {
-//     currentImageIndex =
-//       currentImageIndex < thumbnails.length - 1
-//         ? currentImageIndex + 1
-//         : 0;
-//     updateMainImage(currentImageIndex);
-//   });
-
-//   thumbnails[0].classList.add("selected");
-
-//   // Add event listeners for mouse move and mouse leave
-//   mainImageContainer.addEventListener("mouseenter", function () {
-//     reviewContainer.style.backgroundImage = `url('${mainImage.src}')`;
-//     reviewContainer.style.backgroundSize = `${
-//       mainImage.naturalWidth * zoomFactor
-//     }px ${mainImage.naturalHeight * zoomFactor}px`;
-//     reviewContainer.style.display = "block";
-//   });
-
-//   mainImageContainer.addEventListener("mouseleave", function () {
-//     reviewContainer.style.display = "none";
-//   });
-
-//   mainImageContainer.addEventListener("mousemove", function (e) {
-//     const boundingRect = mainImage.getBoundingClientRect();
-//     const offsetX = e.clientX - boundingRect.left;
-//     const offsetY = e.clientY - boundingRect.top;
-
-//     const scaleX = mainImage.naturalWidth / mainImage.offsetWidth;
-//     const scaleY = mainImage.naturalHeight / mainImage.offsetHeight;
-
-//     const bgPosX = Math.max(
-//       Math.min(
-//         -offsetX * scaleX * zoomFactor + reviewContainer.offsetWidth / 2,
-//         0
-//       ),
-//       -mainImage.naturalWidth * zoomFactor + reviewContainer.offsetWidth
-//     );
-//     const bgPosY = Math.max(
-//       Math.min(
-//         -offsetY * scaleY * zoomFactor + reviewContainer.offsetHeight / 2,
-//         0
-//       ),
-//       -mainImage.naturalHeight * zoomFactor + reviewContainer.offsetHeight
-//     );
-
-//     reviewContainer.style.backgroundPosition = `${bgPosX}px ${bgPosY}px`;
-//   });
-// });
-const thumbnailsContainer = document.querySelector(
-  ".product-gallery__thumbnails"
-);
-const thumbnails = document.querySelectorAll(".product-gallery__thumbnail");
-const mainImage = document.getElementById("mainImage");
-const preBtn = document.querySelector(".pre-btn");
-const nextBtn = document.querySelector(".next-btn");
-let currentImageIndex = 0;
-
-const mainImageContainer = document.querySelector(
-  ".product-gallery__main-image"
-);
-const reviewContainer = document.createElement("div");
-reviewContainer.classList.add("product-gallery__review");
-mainImageContainer.appendChild(reviewContainer);
-
-// Thêm biến zoomFactor để điều chỉnh mức độ zoom
-const zoomFactor = 2;
-
-// Thêm phần tử ô vuông để làm vùng hiển thị màu sắc
-const zoomArea = document.createElement("div");
-zoomArea.classList.add("product-gallery__zoom-area");
-mainImageContainer.appendChild(zoomArea);
-
-function updateMainImage(index) {
-  thumbnails.forEach((thumbnail) => {
-    thumbnail.classList.remove("selected");
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => {
+      updateMainImage(index);
+    });
   });
 
-  const selectedThumbnail = thumbnails[index];
-  selectedThumbnail.classList.add("selected");
-
-  const imgSrc = selectedThumbnail.querySelector("img").src;
-  mainImage.src = imgSrc;
-
-  const thumbnailWidth = selectedThumbnail.offsetWidth;
-  const scrollLeftOffset =
-    selectedThumbnail.offsetLeft - thumbnailsContainer.offsetLeft;
-
-  thumbnailsContainer.scrollTo({
-    left: scrollLeftOffset,
-    behavior: "smooth",
+  preBtn.addEventListener("click", () => {
+    currentImageIndex =
+      currentImageIndex > 0 ? currentImageIndex - 1 : thumbnails.length - 1;
+    updateMainImage(currentImageIndex);
   });
-}
 
-thumbnails.forEach((thumbnail, index) => {
-  thumbnail.addEventListener("click", () => {
-    updateMainImage(index);
+  nextBtn.addEventListener("click", () => {
+    currentImageIndex =
+      currentImageIndex < thumbnails.length - 1 ? currentImageIndex + 1 : 0;
+    updateMainImage(currentImageIndex);
   });
-});
 
-preBtn.addEventListener("click", () => {
-  currentImageIndex =
-    currentImageIndex > 0 ? currentImageIndex - 1 : thumbnails.length - 1;
-  updateMainImage(currentImageIndex);
-});
+  thumbnails[0].classList.add("selected");
 
-nextBtn.addEventListener("click", () => {
-  currentImageIndex =
-    currentImageIndex < thumbnails.length - 1 ? currentImageIndex + 1 : 0;
-  updateMainImage(currentImageIndex);
-});
+  mainImageContainer.addEventListener("mouseenter", function () {
+    reviewContainer.style.backgroundImage = `url('${mainImage.src}')`;
+    reviewContainer.style.backgroundSize = `${
+      mainImage.naturalWidth * zoomFactor
+    }px ${mainImage.naturalHeight * zoomFactor}px`;
+    reviewContainer.style.display = "block";
+    zoomArea.style.display = "block";
+    mainImage.classList.add("grayscale");
+  });
 
-thumbnails[0].classList.add("selected");
+  mainImageContainer.addEventListener("mouseleave", function () {
+    reviewContainer.style.display = "none";
+    zoomArea.style.display = "none";
+    mainImage.classList.remove("grayscale");
+  });
 
-// Add event listeners for mouse move and mouse leave
-mainImageContainer.addEventListener("mouseenter", function () {
-  reviewContainer.style.backgroundImage = `url('${mainImage.src}')`;
-  reviewContainer.style.backgroundSize = `${
-    mainImage.naturalWidth * zoomFactor
-  }px ${mainImage.naturalHeight * zoomFactor}px`;
-  reviewContainer.style.display = "block";
-  zoomArea.style.display = "block";
-  mainImage.classList.add("grayscale");
-});
+  mainImageContainer.addEventListener("mousemove", function (e) {
+    const boundingRect = mainImage.getBoundingClientRect();
+    const offsetX = e.clientX - boundingRect.left;
+    const offsetY = e.clientY - boundingRect.top;
 
-mainImageContainer.addEventListener("mouseleave", function () {
-  reviewContainer.style.display = "none";
-  zoomArea.style.display = "none";
-  mainImage.classList.remove("grayscale");
-});
+    const scaleX = mainImage.naturalWidth / mainImage.offsetWidth;
+    const scaleY = mainImage.naturalHeight / mainImage.offsetHeight;
 
-mainImageContainer.addEventListener("mousemove", function (e) {
-  const boundingRect = mainImage.getBoundingClientRect();
-  const offsetX = e.clientX - boundingRect.left;
-  const offsetY = e.clientY - boundingRect.top;
+    const zoomAreaSize = zoomArea.offsetWidth;
+    const zoomX = offsetX - zoomAreaSize / 2;
+    const zoomY = offsetY - zoomAreaSize / 2;
 
-  const scaleX = mainImage.naturalWidth / mainImage.offsetWidth;
-  const scaleY = mainImage.naturalHeight / mainImage.offsetHeight;
+    // Giới hạn zoomArea trong ảnh chính
+    const limitedX = Math.max(
+      0,
+      Math.min(zoomX, boundingRect.width - zoomAreaSize)
+    );
+    const limitedY = Math.max(
+      0,
+      Math.min(zoomY, boundingRect.height - zoomAreaSize)
+    );
 
-  const zoomAreaSize = zoomArea.offsetWidth;
-  const zoomX = offsetX - zoomAreaSize / 2;
-  const zoomY = offsetY - zoomAreaSize / 2;
+    zoomArea.style.left = `${limitedX}px  `;
+    zoomArea.style.top = `${limitedY}px`;
 
-  // Giới hạn zoomArea trong ảnh chính
-  const limitedX = Math.max(
-    0,
-    Math.min(zoomX, boundingRect.width - zoomAreaSize)
-  );
-  const limitedY = Math.max(
-    0,
-    Math.min(zoomY, boundingRect.height - zoomAreaSize)
-  );
+    const bgPosX = Math.max(
+      Math.min(
+        -offsetX * scaleX * zoomFactor + reviewContainer.offsetWidth / 2,
+        0
+      ),
+      -mainImage.naturalWidth * zoomFactor + reviewContainer.offsetWidth
+    );
+    const bgPosY = Math.max(
+      Math.min(
+        -offsetY * scaleY * zoomFactor + reviewContainer.offsetHeight / 2,
+        0
+      ),
+      -mainImage.naturalHeight * zoomFactor + reviewContainer.offsetHeight
+    );
 
-  zoomArea.style.left = `${limitedX}px`;
-  zoomArea.style.top = `${limitedY}px`;
+    reviewContainer.style.backgroundPosition = `${bgPosX}px ${bgPosY}px`;
 
-  const bgPosX = Math.max(
-    Math.min(
-      -offsetX * scaleX * zoomFactor + reviewContainer.offsetWidth / 2,
-      0
-    ),
-    -mainImage.naturalWidth * zoomFactor + reviewContainer.offsetWidth
-  );
-  const bgPosY = Math.max(
-    Math.min(
-      -offsetY * scaleY * zoomFactor + reviewContainer.offsetHeight / 2,
-      0
-    ),
-    -mainImage.naturalHeight * zoomFactor + reviewContainer.offsetHeight
-  );
-
-  reviewContainer.style.backgroundPosition = `${bgPosX}px ${bgPosY}px`;
-
-  // Cập nhật vị trí nền của zoomArea
-  zoomArea.style.backgroundImage = `url('${mainImage.src}')`;
-  zoomArea.style.backgroundSize = `${mainImage.naturalWidth * scaleX}px ${
-    mainImage.naturalHeight * scaleY
-  }px`;
-  zoomArea.style.backgroundPosition = `-${limitedX * scaleX}px -${
-    limitedY * scaleY
-  }px`;
+    // Cập nhật vị trí nền của zoomArea
+    zoomArea.style.backgroundImage = `url('${mainImage.src}')`;
+    zoomArea.style.backgroundSize = `${mainImage.naturalWidth}px ${mainImage.naturalHeight}px`;
+    zoomArea.style.backgroundPosition = `-${limitedX * scaleX}px -${
+      limitedY * scaleY
+    }px`;
+  });
 });

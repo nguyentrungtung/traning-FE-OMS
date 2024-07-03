@@ -78,6 +78,9 @@
   border-radius: 3px;
   width: fit-content;
 }
+.product-details__wrapper .product-details__container .product-preview-info .product-gallery .product-gallery__main-image:hover {
+  cursor: zoom-in;
+}
 .product-details__wrapper .product-details__container .product-preview-info .product-gallery .product-gallery__main-image:hover .product-gallery__review {
   display: block;
 }
@@ -140,7 +143,8 @@
   position: absolute;
   width: 150px;
   height: 150px;
-  border: 1px solid #666666;
+  border: 1px solid #d2d2d7;
+  box-shadow: 0 0 10px 3px white;
   display: none;
   background-repeat: no-repeat;
   background-size: cover;

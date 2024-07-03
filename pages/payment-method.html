@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/common/common.css" />
+    <link rel="stylesheet" href="../css/footer/footer.css" />
+    <link rel="stylesheet" href="../css/footer/footer-responisve.css" />
+    <link rel="stylesheet" href="../css/payment-method/payment-method.css" />
+    <title>Phương thức thanh toán</title>
+  </head>
+  <body>
+    <header class="payment-method__header">
+      <div class="container p-0 d-flex align-items-center h-100">
+        <div class="header__logo">
+          <img src="../images/payment-method/Logo.svg" alt="logo" />
+        </div>
+
+        <div class="payment__handle-process">
+          <div class="step-block">
+            <div class="step-block__button stepper">
+              <div class="btn-rouned-check checked"></div>
+            </div>
+            <div class="step-block__button stepper">
+              <div class="btn-rouned-check"></div>
+            </div>
+            <div class="step-block__button stepper">
+              <div class="btn-rouned-check"></div>
+            </div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-block__text">
+            <p class="step-text active">Thanh toán</p>
+            <p class="step-text">Xác thực</p>
+            <p class="step-text">Giao hàng</p>
+          </div>
+        </div>
+
+        <div class="telephone">
+          <img src="../images/payment-method/phone-icon.svg" alt="" />
+          <p>1900.2233</p>
+        </div>
+      </div>
+    </header>
+    <div class="payment-method__body">
+      <div class="container p-0">
+        <div class="back-page">
+          <i class="bi bi-arrow-left"></i>
+          <span>Quay lại</span>
+        </div>
+        <div class="row">
+          <div class="col-9">
+            <p class="payment-method__title">Phương thức thanh toán</p>
+            <div class="payment-method__info">
+              <div class="choose__payment-method">
+                <div class="method-item">
+                  <label class="container-label">
+                    <input id="COD" type="checkbox" checked="checked" />
+                    <div class="checkmark"></div>
+                  </label>
+                  <label class="checkbox-name" for="COD">
+                    Thanh toán tiền mặt khi nhận hàng
+                  </label>
+                </div>
+                <div class="method-item">
+                  <label class="container-label">
+                    <input
+                      id="national-pay"
+                      type="checkbox"
+                      checked="checked"
+                    />
+                    <div class="checkmark"></div>
+                  </label>
+                  <label class="checkbox-name" for="national-pay">
+                    Thanh toán bằng thẻ Quốc Tế Visa, Master, JCB
+                  </label>
+                </div>
+                <div class="method-item">
+                  <label class="container-label">
+                    <input id="banking" type="checkbox" checked="checked" />
+                    <div class="checkmark"></div>
+                  </label>
+                  <label class="checkbox-name" for="banking">
+                    Thẻ ATM nội địa / Internet Banking
+                  </label>
+                </div>
+                <div class="method-item">
+                  <label class="container-label">
+                    <input id="transfer" type="checkbox" checked="checked" />
+                    <div class="checkmark"></div>
+                  </label>
+                  <label class="checkbox-name" for="transfer">
+                    Chuyển khoản ngân hàng
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="cart__payment-info">
+              <div class="cart-payment__address-wrapper">
+                <div class="payment-method__heading-block">
+                  <p class="cart-payment__heading">Địa chỉ giao hàng</p>
+                  <button class="button__change-address">Chỉnh sửa</button>
+                </div>
+                <div class="payment-info">
+                  <div class="customer-info">
+                    <p class="customer-name">Hồng Anh</p>
+                    <span class="customer-phone">0919 189 199</span>
+                  </div>
+                </div>
+                <div class="customer-address">
+                  <button class="btn__add-address d-none">
+                    <i class="bi bi-plus"></i> Thêm địa chỉ
+                  </button>
+                  <div class="address">
+                    <p class="name-address">
+                      125 Hoàng Ngân, Quận Thanh Xuân, TP. Hà Nội.
+                    </p>
+                    <button class="btn__change-address">Thay đổi</button>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-payment__coupon">
+                <p class="cart-payment__heading">Ommani Khuyến Mãi</p>
+                <div class="enter-coupon">
+                  <img
+                    class="img-fluid"
+                    src="../images/cart-product/coupon-icon.svg"
+                    alt=""
+                  />
+                  <p class="choose-coupon">Chọn hoặc nhập mã khuyến mãi</p>
+                </div>
+              </div>
+              <div class="cart-payment__total">
+                <div class="cart__order">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <p class="cart-payment__heading mb-0">Đơn hàng:</p>
+                    <p class="cart-payment__heading mb-0">OM1289189</p>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <p class="cart-total__heading">03 Sản phẩm</p>
+                    <button class="view-details">
+                      Xem chi tiết <i class="bi bi-caret-down-fill"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="cart__calc-money">
+                  <div class="cart__temporary-money">
+                    <p class="cart-total__heading">Tạm tính:</p>
+                    <p class="temporary-money">2.676.000 đ</p>
+                  </div>
+                  <div class="cart__temporary-money">
+                    <p class="cart-total__heading">Phí vận chuyển</p>
+                    <p class="temporary-money">50.000 đ</p>
+                  </div>
+                  <div class="cart__temporary-money">
+                    <p class="cart-total__heading">Mã Khuyến Mãi</p>
+                    <p class="temporary-money">50.000 đ</p>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="cart__total-money">
+                  <p class="cart-total__heading">Tổng cộng:</p>
+                  <p class="total-money">2.676.000 đ</p>
+                </div>
+                <p class="cart__sub-text">(Đã bao gồm VAT nếu có)</p>
+              </div>
+              <button class="btn__handle-submit--payment">Mua hàng</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-include-html="footer.html"></div>
+    <script src="../js/load-html.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../js/handle-collapse.js"></script>
+  </body>
+</html>

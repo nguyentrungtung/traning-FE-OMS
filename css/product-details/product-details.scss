@@ -104,6 +104,7 @@ $color-a3a3a3: #a3a3a3;
           width: fit-content;
 
           &:hover {
+            cursor: zoom-in;
             .product-gallery__review {
               display: block;
             }
@@ -174,7 +175,8 @@ $color-a3a3a3: #a3a3a3;
           position: absolute;
           width: 150px;
           height: 150px;
-          border: 1px solid $color-666666;
+          border: 1px solid $color-d2d2d7;
+          box-shadow: 0 0 10px 3px white;
           display: none;
           background-repeat: no-repeat;
           background-size: cover;
