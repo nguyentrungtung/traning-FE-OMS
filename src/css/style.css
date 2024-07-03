@@ -229,8 +229,8 @@ a {
 
 body {
   background-color: #f0f0f0;
-  line-height: 0;
-  background-color: #f5f5fa; }
+  background-color: #f5f5fa;
+  line-height: unset; }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {

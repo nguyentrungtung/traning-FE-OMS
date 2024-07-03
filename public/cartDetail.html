@@ -75,6 +75,49 @@
 
                 <div class="cartItem_listProduct">
                   <script>
+                    const buttonRemove = `
+                       <button class="d-md-block d-none" data-bs-target="#exampleModalToggle"
+                        data-bs-toggle="modal">
+                      <img
+                          src="../assets/svg/removeItemCart.svg"
+                          alt=""
+                          style="cursor: pointer"
+                        />
+                    </button>
+
+                    `;
+                    const modalRemoveItemProduct = `
+                       <div class="modal fade"
+                                    id="exampleModalToggle"
+                                    tabindex="-1"
+                                    style="display: none"
+                                  >
+                                    <div class="modal-dialog modal-dialog-centered">
+                                      <div class="modal-content">
+                                        <div class="modalRemoveItemProduct">
+                                          <div class="top">
+                                            <button
+                                              type="button"
+                                              class="btn-close"
+                                              data-bs-dismiss="modal"
+                                            ></button>
+                                            <img src="../assets/images/StickerRemoveModal.png" alt="" />
+                                            <div class="d-flex flex-column gap-3 align-items-center">
+                                              <span>XÁC NHẬN XÓA</span>
+                                              <span
+                                                >Bạn có chắc chắn muốn xóa 01 sản phẩm trong giỏ hàng?</span
+                                              >
+                                            </div>
+                                          </div>
+                                          <div class="bottom">
+                                            <button data-bs-dismiss="modal">Hủy</button>
+                                            <button>Xác nhận</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                    `;
                     const products = [
                       {
                         name: "Bông cải xanh Đà Lạt - 100g",
@@ -138,52 +181,9 @@
                     <!-- sumPrice  -->
                     <span class="sumPrice d-md-block d-none">1.716.000 đ</span>
 
-                    <!-- delete item -->
-                              <div
-                                    class="modal fade"
-                                    id="exampleModalToggle"
-                                    tabindex="-1"
-                                    style="display: none"
-                                  >
-                                    <div class="modal-dialog modal-dialog-centered">
-                                      <div class="modal-content">
-                                        <div class="modalRemoveItemProduct">
-                                          <div class="top">
-                                            <button
-                                              type="button"
-                                              class="btn-close"
-                                              data-bs-dismiss="modal"
-                                              aria-label="Close"
-                                            ></button>
-                                            <img src="../assets/images/StickerRemoveModal.png" alt="" />
-                                            <div class="d-flex flex-column gap-3 align-items-center">
-                                              <span>XÁC NHẬN XÓA</span>
-                                              <span
-                                                >Bạn có chắc chắn muốn xóa 01 sản phẩm trong giỏ hàng?</span
-                                              >
-                                            </div>
-                                          </div>
-                                          <div class="bottom">
-                                            <button>Hủy</button>
-                                            <button>Xác nhận</button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                    <button class="d-md-block d-none" data-bs-target="#exampleModalToggle"
-      data-bs-toggle="modal">
-                      <img
-                          src="../assets/svg/removeItemCart.svg"
-                          alt=""
-                          style="cursor: pointer"
-                        />
-                    </button>
-
-
-
-
+                    <!-- modalRemoveItemProduct -->
+                    ${modalRemoveItemProduct}
+                    ${buttonRemove}
                     </div>
                    
                       `);
@@ -367,6 +367,42 @@
                 }
               </script>
             </div> -->
+            <div class="boxEnterInformation">
+              <input placeholder="Họ và tên" type="text" name="" id="" />
+              <input
+                placeholder="Số điện thoại"
+                type="text"
+                oninput="formatPhoneNumber(this)"
+                onkeydown="return allowOnlyNumbers(event)"
+              />
+              <script>
+                function formatPhoneNumber(input) {
+                  var phoneNumber = input.value.replace(/\D/g, "");
+                  if (phoneNumber.length >= 4) {
+                    var formattedPhoneNumber = phoneNumber.replace(
+                      /^(\d{4})(\d{3})(\d{3})$/,
+                      "$1 $2 $3"
+                    );
+                    input.value = formattedPhoneNumber;
+                  }
+                }
+                function allowOnlyNumbers(event) {
+                  var keyCode = event.keyCode || event.which;
+                  if (keyCode < 48 || keyCode > 57) {
+                    if (keyCode !== 8) {
+                      event.preventDefault();
+                      return false;
+                    }
+                  }
+                }
+              </script>
+              <textarea
+                placeholder="Địa chỉ nhận hàng"
+                name=""
+                id=""
+              ></textarea>
+            </div>
+
             <div class="boxHowToReceive">
               <span class="header d-md-block d-none">Hình thức nhận hàng</span>
               <script>

@@ -231,8 +231,8 @@ a {
 
 body {
   background-color: #f0f0f0;
-  line-height: 0;
-  background-color: #f5f5fa; }
+  background-color: #f5f5fa;
+  line-height: unset; }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -479,8 +479,8 @@ a {
 
 body {
   background-color: #f0f0f0;
-  line-height: 0;
-  background-color: #f5f5fa; }
+  background-color: #f5f5fa;
+  line-height: unset; }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -938,188 +938,213 @@ nav .pagination {
   -webkit-transform: scale(1);
   transform: scale(1); }
 
-.cartUserInfo .boxAddress, .cartUserInfo .boxHowToReceive {
-  width: 100%;
-  padding-top: 14px;
-  padding-bottom: 8px;
-  padding-left: 13px;
-  padding-right: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  background-color: #fff;
-  border-radius: 4px;
-  margin-bottom: 26px; }
-  .cartUserInfo .boxAddress .header, .cartUserInfo .boxHowToReceive .header {
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 18.75px;
-    text-align: left; }
-  .cartUserInfo .boxAddress .content, .cartUserInfo .boxHowToReceive .content {
+.cartUserInfo, .cartDetail .cartUserInfo {
+  height: 100%; }
+  .cartUserInfo .boxAddress, .cartUserInfo .boxHowToReceive {
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 8px;
+    padding-left: 13px;
+    padding-right: 8px;
     display: flex;
     flex-direction: column;
-    gap: 9px; }
-    .cartUserInfo .boxAddress .content div, .cartUserInfo .boxHowToReceive .content div {
+    gap: 18px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 26px; }
+    .cartUserInfo .boxAddress .header, .cartUserInfo .boxHowToReceive .header {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18.75px;
+      text-align: left; }
+    .cartUserInfo .boxAddress .content, .cartUserInfo .boxHowToReceive .content {
       display: flex;
-      align-items: center;
-      justify-content: space-between; }
-      .cartUserInfo .boxAddress .content div span:first-of-type, .cartUserInfo .boxHowToReceive .content div span:first-of-type {
+      flex-direction: column;
+      gap: 9px; }
+      .cartUserInfo .boxAddress .content div, .cartUserInfo .boxHowToReceive .content div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .cartUserInfo .boxAddress .content div span:first-of-type, .cartUserInfo .boxHowToReceive .content div span:first-of-type {
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 16.41px;
+          letter-spacing: 0.04em;
+          text-align: left; }
+        .cartUserInfo .boxAddress .content div span:last-of-type, .cartUserInfo .boxHowToReceive .content div span:last-of-type {
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 16.41px;
+          letter-spacing: 0.04em;
+          text-align: left;
+          color: #595959; }
+      .cartUserInfo .boxAddress .content .diachi, .cartUserInfo .boxHowToReceive .content .diachi {
         font-family: Roboto;
         font-size: 14px;
-        font-weight: 700;
-        line-height: 16.41px;
-        letter-spacing: 0.04em;
-        text-align: left; }
-      .cartUserInfo .boxAddress .content div span:last-of-type, .cartUserInfo .boxHowToReceive .content div span:last-of-type {
-        font-family: Roboto;
-        font-size: 14px;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 16.41px;
         letter-spacing: 0.04em;
         text-align: left;
         color: #595959; }
-    .cartUserInfo .boxAddress .content .diachi, .cartUserInfo .boxHowToReceive .content .diachi {
+    .cartUserInfo .boxAddress .botom, .cartUserInfo .boxHowToReceive .botom {
+      align-self: flex-end;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.41px;
+      letter-spacing: 0.04em;
+      text-align: right;
+      color: #139640; }
+    .cartUserInfo .boxAddress .btnAddAddress span, .cartUserInfo .boxHowToReceive .btnAddAddress span {
+      height: 100%;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+      text-align: right;
+      color: #139640; }
+  .cartUserInfo .boxHowToReceive .listRadio {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    align-items: start;
+    padding-left: 8px; }
+    .cartUserInfo .boxHowToReceive .listRadio .radioGreen label {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18.75px;
+      letter-spacing: 0.04em;
+      text-align: left;
+      color: #595959;
+      padding-left: 33px; }
+  .cartUserInfo .boxSales {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 10px 12px 16px 13px;
+    background-color: #fff;
+    border-radius: 2px;
+    margin-bottom: 20px; }
+    .cartUserInfo .boxSales span:first-of-type {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18.75px;
+      text-align: left; }
+    .cartUserInfo .boxSales div span:last-of-type {
       font-family: Roboto;
       font-size: 14px;
       font-weight: 400;
       line-height: 16.41px;
       letter-spacing: 0.04em;
       text-align: left;
-      color: #595959; }
-  .cartUserInfo .boxAddress .botom, .cartUserInfo .boxHowToReceive .botom {
-    align-self: flex-end;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16.41px;
-    letter-spacing: 0.04em;
-    text-align: right;
-    color: #139640; }
-  .cartUserInfo .boxAddress .btnAddAddress span, .cartUserInfo .boxHowToReceive .btnAddAddress span {
-    height: 100%;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: normal;
-    text-align: right;
-    color: #139640; }
-
-.cartUserInfo .boxHowToReceive .listRadio {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  align-items: start;
-  padding-left: 8px; }
-  .cartUserInfo .boxHowToReceive .listRadio .radioGreen label {
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 18.75px;
-    letter-spacing: 0.04em;
-    text-align: left;
+      color: #139640; }
+  .cartUserInfo .boxSumPrice {
+    padding: 13px 16px 20px 16px;
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
     color: #595959;
-    padding-left: 33px; }
-
-.cartUserInfo .boxSales {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  padding: 10px 12px 16px 13px;
-  background-color: #fff;
-  border-radius: 2px;
-  margin-bottom: 20px; }
-  .cartUserInfo .boxSales span:first-of-type {
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 18.75px;
-    text-align: left; }
-  .cartUserInfo .boxSales div span:last-of-type {
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16.41px;
-    letter-spacing: 0.04em;
-    text-align: left;
-    color: #139640; }
-
-.cartUserInfo .boxSumPrice {
-  padding: 13px 16px 20px 16px;
-  background-color: #fff;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  color: #595959;
-  margin-bottom: 20px; }
-  .cartUserInfo .boxSumPrice .l1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-    .cartUserInfo .boxSumPrice .l1 span:first-of-type {
+    margin-bottom: 20px; }
+    .cartUserInfo .boxSumPrice .l1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .cartUserInfo .boxSumPrice .l1 span:first-of-type {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        letter-spacing: 0.04em;
+        text-align: left; }
+      .cartUserInfo .boxSumPrice .l1 span:last-of-type {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18.75px;
+        letter-spacing: 0.04em;
+        text-align: right; }
+    .cartUserInfo .boxSumPrice .divideH {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      background-color: #000000; }
+    .cartUserInfo .boxSumPrice .l2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px; }
+      .cartUserInfo .boxSumPrice .l2 span:first-of-type {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        letter-spacing: 0.04em;
+        text-align: left; }
+      .cartUserInfo .boxSumPrice .l2 span:last-of-type {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 23.44px;
+        letter-spacing: 0.04em;
+        text-align: right;
+        color: #139640; }
+    .cartUserInfo .boxSumPrice .l3 {
+      align-self: flex-end;
       font-family: Roboto;
       font-size: 14px;
+      font-style: italic;
       font-weight: 400;
       line-height: 16.41px;
-      letter-spacing: 0.04em;
-      text-align: left; }
-    .cartUserInfo .boxSumPrice .l1 span:last-of-type {
-      font-family: Roboto;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 18.75px;
-      letter-spacing: 0.04em;
-      text-align: right; }
-  .cartUserInfo .boxSumPrice .divideH {
-    margin-bottom: 10px;
-    margin-top: 10px;
-    background-color: #000000; }
-  .cartUserInfo .boxSumPrice .l2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px; }
-    .cartUserInfo .boxSumPrice .l2 span:first-of-type {
-      font-family: Roboto;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 16.41px;
-      letter-spacing: 0.04em;
-      text-align: left; }
-    .cartUserInfo .boxSumPrice .l2 span:last-of-type {
-      font-family: Roboto;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 23.44px;
       letter-spacing: 0.04em;
       text-align: right;
       color: #139640; }
-  .cartUserInfo .boxSumPrice .l3 {
-    align-self: flex-end;
+  .cartUserInfo .sendRequest {
+    width: 100%;
+    height: 59px;
+    background-color: #29ab56;
+    color: white;
     font-family: Roboto;
-    font-size: 14px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 16.41px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
     letter-spacing: 0.04em;
-    text-align: right;
-    color: #139640; }
-
-.cartUserInfo .sendRequest {
-  width: 100%;
-  height: 59px;
-  background-color: #29ab56;
-  color: white;
-  font-family: Roboto;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28.13px;
-  letter-spacing: 0.04em;
-  text-align: center;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+    text-align: center;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .cartUserInfo .boxEnterInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-align: left;
+    margin-bottom: 20px; }
+    .cartUserInfo .boxEnterInformation ::placeholder {
+      color: #c2c2c2; }
+    .cartUserInfo .boxEnterInformation input,
+    .cartUserInfo .boxEnterInformation textarea {
+      width: 100%;
+      border: 1px solid #c2c2c2;
+      background-color: #fff;
+      border-radius: 3px; }
+    .cartUserInfo .boxEnterInformation input:first-of-type {
+      padding: 16px; }
+    .cartUserInfo .boxEnterInformation input:last-of-type {
+      padding: 18px; }
+    
+    .cartUserInfo .boxEnterInformation textarea {
+      height: 79px;
+      padding: 15px 16px;
+      resize: none; }
 
 .cartDetail {
   margin-bottom: 83px; }

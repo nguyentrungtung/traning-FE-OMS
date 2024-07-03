@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>paymentConfirmed</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/footer.css" />
+    <link rel="stylesheet" href="../src/css/payment.css" />
+    <link rel="stylesheet" href="../src/css/responsive-common.css" />
+  </head>
+  <body>
+    <header
+      class="headerPayment d-flex align-items-center justify-content-between"
+    >
+      <img src="../assets/svg/logoHeaderPayment.svg" alt="" />
+      <div class="d-flex flex-column align-items-center gap-3">
+        <img src="../assets/svg/phoneIcon.svg" alt="" />
+        <span>1900.2233</span>
+      </div>
+    </header>
+
+    <main class="paymentConfirmed container-xxl">
+      <button class="btnBackPage d-flex align-items-center">
+        <img src="../assets/svg/arrowbackward.svg" alt="" />
+        <span>Quay lại</span>
+      </button>
+      <h1 class="namePage">Xác nhận của OMMANI LIFE</h1>
+      <div class="paymentConfirmedMain">
+        <span class="successPayment">Bạn đã thanh toán thành công!</span>
+        <div class="infoOrder">
+          <p class="fw-medium">
+            Mã đơn hàng:
+            <span class="green" style="font-size: 24px">#OM1289189</span>
+          </p>
+          <br />
+          <ul>
+            <li>Bông cải xanh Đà Lạt - 100g x13</li>
+            <li>Xúc xích Đức Việt x2</li>
+            <li>Thịt xông khói túi 500g MAVIN x4</li>
+          </ul>
+          <br />
+          <p class="fw-medium">
+            Thành tiền: 2.886.000 đ (Đã bao gồm VAT nếu có)
+          </p>
+        </div>
+        <div class="contact">
+          Nếu bạn thấy xác nhận đơn hàng quá thời gian có thể liên hệ thông tin
+          chuyển khoản gửi SMS và liên hệ Hotline 0911.999.888 để hỗ trợ.
+        </div>
+      </div>
+      <button class="btnVanChuyen">Vận chuyển</button>
+    </main>
+
+    <!-- Footer -->
+    <div data-include-html="../component/footer.html"></div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="../src/js/scripts.js"></script>
+</html>

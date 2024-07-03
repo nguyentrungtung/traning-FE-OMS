@@ -2,6 +2,7 @@
 @import "./style";
 
 .cartUserInfo {
+  height: 100%;
   .boxAddress {
     width: 100%;
     padding-top: 14px;
@@ -213,6 +214,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .boxEnterInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-align: left;
+    margin-bottom: 20px;
+    ::placeholder {
+      color: #c2c2c2;
+    }
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid #c2c2c2;
+      background-color: #fff;
+      border-radius: 3px;
+    }
+    input:first-of-type {
+      padding: 16px;
+    }
+    input:last-of-type {
+      padding: 18px;
+    }
+    textarea {
+      height: 79px;
+      padding: 15px 16px;
+      resize: none;
+    }
   }
 }
 

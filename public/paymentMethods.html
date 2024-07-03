@@ -6,12 +6,12 @@
     <title>paymentMethods</title>
     <link rel="stylesheet" href="../src/css/style.css" />
     <link rel="stylesheet" href="../src/css/footer.css" />
-    <link rel="stylesheet" href="../src/css/paymentMethods.css" />
+    <link rel="stylesheet" href="../src/css/payment.css" />
     <link rel="stylesheet" href="../src/css/responsive-common.css" />
   </head>
   <body>
     <header
-      class="headerPaymentMethods d-flex align-items-center justify-content-between"
+      class="headerPayment d-flex align-items-center justify-content-between"
     >
       <img src="../assets/svg/logoHeaderPayment.svg" alt="" />
       <div class="d-flex flex-column align-items-center gap-3">
@@ -24,12 +24,12 @@
         <img src="../assets/svg/arrowbackward.svg" alt="" />
         <span>Quay lại</span>
       </button>
-      <h1>Phương thức thanh toán</h1>
+      <h1 class="namePage">Phương thức thanh toán</h1>
       <div class="row custom-row">
         <!-- col -->
         <div class="col-xxl-9 custom-col col-12 order-xxl-1">
           <div class="paymentMethodsMain">
-            <div class="listSelection">
+            <div class="paymentMethodsMain_list">
               <script>
                 const arrlistSelection = [
                   "Thanh toán tiền mặt khi nhận hàng",
@@ -39,7 +39,7 @@
                 ];
                 for (let i = 0; i < arrlistSelection.length; i++) {
                   document.write(`
-                        <div class="radioGreen">
+                        <div class="radioGreen ${i === 0 ? "disabled" : ""}">
                 <input
                   ${i === 0 ? "disabled" : ""}
                   type="radio"
@@ -53,6 +53,37 @@
                     `);
                 }
               </script>
+            </div>
+            <div class="paymentMethodsMain_describe">
+              <p class="fw-normal">
+                B1: Quý khách chọn tài khoản ngân hàng thanh toán:
+              </p>
+              <p class="fw-normal">
+                CHỦ TÀI KHOẢN:
+                <span class="fw-bold"
+                  >CÔNG TY CỔ PHẦN OMMANI LIFE VIỆT NAM</span
+                >
+              </p>
+              <p class="fw-bold">
+                VIETCOMBANK – CN THÀNH CÔNG - STK: 04588 999 9999
+              </p>
+              <p class="fw-bold">
+                Nội dung chuyển khoản khách hàng viết theo cú pháp: Tên_Mã Đơn
+                Hàng
+              </p>
+              <br />
+              <p>
+                B2: Chuyển khoản xong, quý khách
+                <span class="fw-bold">chụp lại thông tin</span> chuyển khoản gửi
+                SMS và liên hệ Hotline <span class="fw-bold">1900 1398</span> để
+                hỗ trợ.
+              </p>
+              <p>———————————————————————————————————————————————</p>
+              <p class="green fw-bold">
+                Lưu ý: Khách hàng vui lòng chuyển khoản vào Tài khoản Công ty.
+                Chúng tôi không chịu trách nhiệm nếu quý khách chuyển vào bất kỳ
+                tài khoản cá nhân nào.
+              </p>
             </div>
           </div>
         </div>
