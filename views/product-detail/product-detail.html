@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/screen-responsive.css">
     <link rel="stylesheet" href="/styles/product-detail/product-style.css">
+    <link rel="stylesheet" href="/styles/product-detail/product-responsive.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
 </head>
 <body>
     <header class="wide-screen-header bg-green text-white d-flex flex-column align-items-center">
@@ -265,28 +268,28 @@
                 <div class="product-info-top d-flex gap-3">
                     <div class="product-info-img d-flex flex-column justify-content-end align-items-center overflow-hidden">
                         <div class="main-img size-420px">
-                            <img id="mainImg" class="w-100" src="/resources/img/products/products-images/68dc123b6cfc9c2f8b46ee5b5a5830d7.png" alt="">
+                            <img id="mainImg" class="w-100" src="/resources/img/products/products-images/68dc123b6cfc9c2f8b46ee5b5a5830d7.png" data-zoom-image="/resources/img/products/products-images/zoom-236699cc738a5aec082af43498cd728a.png" >
                         </div>
                         <div class="w-100">
                             <div class="img-list d-flex align-items-center gap-2 position-relative">
                                 <button onclick="onCLickSlideList( 'preview-img-list', 'left')" class="rounded-circle size-30px border-0 text-grey position-absolute start-25"><i class="fas fa-chevron-left"></i></button>
                                 <div id="preview-img-list" class="d-flex gap-2 flex-nowrap overflow-scroll hideScrollBar my-3 mx-3">
-                                    <a onclick="changeImgSrc(this, 'mainImg')" class="btn p-0 m-0 rounded-0 align-items-center d-flex">
+                                    <a onclick="changeImgSrc(this, 'mainImg'); changeZoomImg(this, 'mainImg')" class="btn p-0 m-0 rounded-0 align-items-center d-flex">
                                             <img class="size-85px" src="/resources/img/products/products-images/68dc123b6cfc9c2f8b46ee5b5a5830d7.png" alt="">
                                     </a>
-                                    <a onclick="changeImgSrc(this, 'mainImg')" class="btn p-0 m-0 rounded-0 align-items-center d-flex">
+                                    <a onclick="changeImgSrc(this, 'mainImg'); changeZoomImg(this, 'mainImg')" class="btn p-0 m-0 rounded-0 align-items-center d-flex">
                                         <img class="size-85px" src="/resources/img/products/products-images/68dc123b6cfc9c2f8b46ee5b5a5830d7.png" alt="">
                                     </a>
-                                    <a onclick="changeImgSrc(this, 'mainImg')" class="btn p-0 m-0 rounded-0 align-items-center d-flex">
+                                    <a onclick="changeImgSrc(this, 'mainImg'); changeZoomImg(this, 'mainImg')" class="btn p-0 m-0 rounded-0 align-items-center d-flex">
                                             <img class="size-85px" src="/resources/img/products/products-images/68dc123b6cfc9c2f8b46ee5b5a5830d7.png" alt="">
                                     </a>
-                                    <a onclick="changeImgSrc(this, 'mainImg')" class="btn p-0 m-0 rounded-0 align-items-center d-flex">
+                                    <a onclick="changeImgSrc(this, 'mainImg'); changeZoomImg(this, 'mainImg')" class="btn p-0 m-0 rounded-0 align-items-center d-flex">
                                             <img class="size-85px" src="/resources/img/products/products-images/236699cc738a5aec082af43498cd728a.png" alt="">
                                     </a>
-                                    <a onclick="changeImgSrc(this, 'mainImg')" class="btn p-0 m-0 rounded-0 align-items-center d-flex">
+                                    <a onclick="changeImgSrc(this, 'mainImg'); changeZoomImg(this, 'mainImg')" class="btn p-0 m-0 rounded-0 align-items-center d-flex">
                                             <img class="size-85px" src="/resources/img/products/products-images/236699cc738a5aec082af43498cd728a.png" alt="">
                                     </a>
-                                    <a onclick="changeImgSrc(this, 'mainImg')" class="btn p-0 m-0 rounded-0 align-items-center d-flex">
+                                    <a onclick="changeImgSrc(this, 'mainImg'); changeZoomImg(this, 'mainImg')" class="btn p-0 m-0 rounded-0 align-items-center d-flex">
                                             <img class="size-85px" src="/resources/img/products/products-images/236699cc738a5aec082af43498cd728a.png" alt="">
                                     </a>
                                 </div>
@@ -351,7 +354,7 @@
                                     </tr>
                                     <tr>
                                         <td class="bg-transparent">Truy xuất nguồn gốc:</td>
-                                        <td class="bg-transparent"><a href="/views/product-detail/origin-finer.html" class="fw-bold text-decoration-underline">Link</a></td>
+                                        <td class="bg-transparent"><a target="_blank" href="/views/product-detail/origin-finder.html" class="fw-bold text-decoration-underline">Link</a></td>
                                     </tr>
                                     <tr>
                                         <td class="bg-transparent">Giao hàng từ</td>
@@ -409,7 +412,7 @@
                     <div class="btn rounded-circle bg-grey border-0"><i class="text-green far fa-copy"></i></div>
                 </div>
             </div>
-            <div class="product-shop bg-white p-3 my-3 rounded-2 d-flex justify-content-between">
+            <div class="product-shop bg-white p-3 my-3 rounded-2 d-flex flex-wrap gap-3 justify-content-between">
                 <div class="shop-brand position-relative d-flex gap-3">
                     <div class="brand-tag position-absolute top-0 start-0 btn btn-success no-pointer py-0 border-0">
                         Mall
@@ -591,7 +594,7 @@
                 </div>
             </div>
             <div class="related-products p-3 bg-white my-3 rounded-2">
-                <div class="title text-green h4 fw-bold">Sản phẩm liên quan</div>
+                <div class="title text-green h4 fw-bold py-2">Sản phẩm liên quan</div>
                 <div class="overflow-scroll hideScrollBar d-flex flex-nowrap gap-3">
                     <div class="related-item maxw-190px col bg-white p-0">
                         <a href="#" class="text-black">
@@ -1206,11 +1209,9 @@
         <div class="container">
             <div class="bg-white">
                 <div class="customer-service col text-nowrap">
-                    <h5>
                         <a data-bs-toggle="collapse" href="#footer-customer-service" role="button" aria-expanded="false" aria-controls="ooter-customer-service" class="text-black">
-                            Hỗ trợ khách hàng
+                           <h5> Hỗ trợ khách hàng</h5>
                         </a>
-                    </h5>
                     <div class="collapse" id="footer-customer-service">
                         <div class="options collaps d-flex flex-column gap-2 mb-3">
                             <div class="text">Hotline: <strong><a href="tel:+1900-6789" class="text-decoration-none text-black">19006789</a></strong><div>(1.000 đ/phút, 8-21h kể cả T7, CN)</div></div>
@@ -1259,9 +1260,9 @@
                     </a>
                     <div class="collapse  border-top-0" id="footer-cert">
                         <div class=" d-flex gap-2 mb-3">
-                            <a href="#"><img class="h-40px" src="resources/img/footer/cert/khong-hang-gia.png"></img></a>
-                            <a href="#"><img class="h-40px" src="resources/img/footer/cert/bo-cong-thuong.png"></img></a>
-                            <a href="#"><img class="h-40px" src="resources/img/footer/cert/tin-nhiem-mang.png"></img></a>
+                            <a href="#"><img class="h-40px" src="/resources/img/footer/cert/khong-hang-gia.png"></img></a>
+                            <a href="#"><img class="h-40px" src="/resources/img/footer/cert/bo-cong-thuong.png"></img></a>
+                            <a href="#"><img class="h-40px" src="/resources/img/footer/cert/tin-nhiem-mang.png"></img></a>
                         </div>
                     </div>
                 </div>

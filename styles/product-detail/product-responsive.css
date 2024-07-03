@@ -1,0 +1,14 @@
+@media screen and (max-width: 992px) {
+    .product-shop > .shop-info{
+        display: none !important;
+    }
+    .tab-content .tab-pane .w-50{
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .product-info-top{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
