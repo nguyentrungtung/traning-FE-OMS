@@ -9,30 +9,43 @@
     <link rel="stylesheet" href="../src/css/footer.css" />
     <link rel="stylesheet" href="../src/css/cartDetail.css" />
     <link rel="stylesheet" href="../src/css/responsive-common.css" />
+    <link rel="stylesheet" href="../src/css/responsive-cartDetail.css" />
   </head>
   <body>
     <!-- Header -->
     <div data-include-html="../component/header.html"></div>
 
+    <div class="d-md-none d-flex align-items-end headerCartMobile">
+      <img src="../assets/svg/backIconStoreDetail.svg" alt="" />
+      <h1>Giỏ hàng(4)</h1>
+    </div>
+
     <!-- cartDetail -->
     <main class="cartDetail container-xxl">
-      <h1>Giỏ hàng</h1>
+      <h1 class="d-md-block d-none">Giỏ hàng</h1>
       <div class="row custom-row">
-        <div class="col-xxl-9 custom-col">
+        <!-- col -->
+        <div class="col-xxl-9 custom-col col-12 order-2 order-xxl-1">
           <div class="cartTitle">
             <span class="checkBoxBlue"><input type="checkbox" /></span>
             <span class="all"
               >Tất cả <span>(Chọn tất cả 3 sản phẩm)</span></span
             >
-            <span class="price">Đơn giá </span>
-            <span class="quantity">Số lượng </span>
-            <span class="sumCost">Thành tiền </span>
+            <span class="price d-md-block d-none">Đơn giá </span>
+            <span class="quantity d-md-block d-none">Số lượng </span>
+            <span class="sumCost d-md-block d-none">Thành tiền </span>
           </div>
           <div class="cartMain">
             <div class="cartList">
               <div class="cartItem">
                 <div class="cartItem_infoShop">
                   <div class="d-flex align-items-center">
+                    <span
+                      class="checkBoxBlue d-md-none d-block"
+                      style="margin-right: 10px"
+                    >
+                      <input type="checkbox" />
+                    </span>
                     <img
                       style="margin-right: 10px"
                       src="../assets/svg/shopCartIc.svg"
@@ -199,14 +212,14 @@
                 </div>
               </div>
             </div>
-            <div class="messageToSeller">
+            <div class="messageToSeller d-md-flex d-none">
               <span>Lời nhắn:</span>
               <input placeholder="Lưu ý cho người bán..." type="text" />
             </div>
           </div>
         </div>
-
-        <div class="col-xxl-3 custom-col">
+        <!-- col -->
+        <div class="col-xxl-3 custom-col col-12 order-1 order-xxl-2">
           <div class="cartUserInfo">
             <!-- <div class="boxAddress">
               <span class="header">Địa chỉ</span>
@@ -237,23 +250,32 @@
               </script>
             </div> -->
             <div class="boxHowToReceive">
-              <span class="header">Hình thức nhận hàng</span>
-              <div class="listRadio">
-                <div class="itemRadio">
+              <span class="header d-md-block d-none">Hình thức nhận hàng</span>
+              <script>
+                let isChooseCachthucNhanHang = false;
+                if (isChooseCachthucNhanHang) {
+                  document.write(`<div class="listRadio">
+                <div class="itemRadio radioGreen">
                   <input type="radio" name="" id="taicuahang" />
                   <label for="taicuahang">Tại cửa hàng</label>
                 </div>
-                <div class="itemRadio">
+                <div class="itemRadio radioGreen">
                   <input type="radio" name="" id="tannoi" />
                   <label for="tannoi">Nhận máy tận nơi</label>
                 </div>
-              </div>
+              </div>`);
+                }
+              </script>
               <div class="content">
-                <div><span>Hồng Anh</span><span>0919 189 199</span></div>
+                <div>
+                  <span>Hồng Anh</span>
+                  <span class="divideV d-md-none d-block"></span>
+                  <span>0919 189 199</span>
+                </div>
                 <script>
                   let valuediachi =
                     "125 Hoàng Ngân, Quận Thanh Xuân, TP. Hà Nội.";
-                  valuediachi = "";
+                  // valuediachi = "";
                   if (valuediachi) {
                     document.write(
                       `<span class="diachi">${valuediachi}</span>`
@@ -270,11 +292,22 @@
               </div>
               <script>
                 if (valuediachi) {
-                  document.write(`<a href="#" class="botom">Thay Đổi</a>`);
+                  document.write(
+                    `<a href="#" class="botom d-md-block d-none">Thay Đổi</a>
+                    <a href="#" class="botom d-md-none d-block align-self-start">Sửa địa chỉ</a>
+                    `
+                  );
                 }
               </script>
             </div>
-            <div class="boxSumPrice">
+            <div class="boxSales d-md-flex d-none">
+              <span>Ommani Khuyến Mãi</span>
+              <div class="d-flex align-items-center gap-3">
+                <img src="../assets/svg/saleiconBox.svg" alt="" />
+                <span>Chọn hoặc nhập mã khuyến mãi</span>
+              </div>
+            </div>
+            <div class="boxSumPrice d-md-flex d-none">
               <div class="l1">
                 <span>Tạm tính: </span>
                 <span>2.676.000 đ</span>
@@ -286,7 +319,7 @@
               </div>
               <div class="l3">(Đã bao gồm VAT nếu có)</div>
             </div>
-            <button class="sendRequest">Gửi yêu cầu</button>
+            <button class="sendRequest d-md-block d-none">Gửi yêu cầu</button>
           </div>
         </div>
       </div>
