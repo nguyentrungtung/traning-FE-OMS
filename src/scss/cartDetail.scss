@@ -292,6 +292,33 @@
         }
       }
     }
+    .boxHowToReceive {
+      @extend .boxAddress;
+      .listRadio {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        align-items: start;
+        margin-top: 15px;
+        margin-bottom: 12px;
+        padding-left: 8px;
+        .itemRadio {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          label {
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18.75px;
+            letter-spacing: 0.04em;
+            text-align: left;
+            color: #595959;
+          }
+        }
+      }
+    }
+
     .boxSumPrice {
       padding: 13px 16px 20px 16px;
       background-color: #fff;

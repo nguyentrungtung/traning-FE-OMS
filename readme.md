@@ -58,3 +58,7 @@ Extra large xl ≥1200px
 Extra extra large xxl ≥1400px
 
 https://www.jqueryscript.net/demo/jQuery-Plugin-For-Image-Zoom-On-Hover-picZoomer/
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/browser-scss@1.0.3/dist/browser-scss.min.js"></script>

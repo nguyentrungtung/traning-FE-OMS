@@ -208,8 +208,46 @@
 
         <div class="col-xxl-3 custom-col">
           <div class="cartUserInfo">
-            <div class="boxAddress">
+            <!-- <div class="boxAddress">
               <span class="header">Địa chỉ</span>
+              <div class="content">
+                <div><span>Hồng Anh</span><span>0919 189 199</span></div>
+                <script>
+                  let valuediachi =
+                    "125 Hoàng Ngân, Quận Thanh Xuân, TP. Hà Nội.";
+                  valuediachi = "";
+                  if (valuediachi) {
+                    document.write(
+                      `<span class="diachi">${valuediachi}</span>`
+                    );
+                  } else {
+                    document.write(`
+                      <button class="btnAddAddress d-flex align-items-stretch">
+                      <img src="../assets/svg/carbon_add.svg" alt="" />
+                      <span class="align-self-center">Thêm địa chỉ</span>
+                    </button>             
+                    `);
+                  }
+                </script>
+              </div>
+              <script>
+                if (valuediachi) {
+                  document.write(`<a href="#" class="botom">Thay Đổi</a>`);
+                }
+              </script>
+            </div> -->
+            <div class="boxHowToReceive">
+              <span class="header">Hình thức nhận hàng</span>
+              <div class="listRadio">
+                <div class="itemRadio">
+                  <input type="radio" name="" id="taicuahang" />
+                  <label for="taicuahang">Tại cửa hàng</label>
+                </div>
+                <div class="itemRadio">
+                  <input type="radio" name="" id="tannoi" />
+                  <label for="tannoi">Nhận máy tận nơi</label>
+                </div>
+              </div>
               <div class="content">
                 <div><span>Hồng Anh</span><span>0919 189 199</span></div>
                 <script>

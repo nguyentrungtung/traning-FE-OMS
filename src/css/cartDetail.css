@@ -1067,7 +1067,7 @@ nav .pagination {
         text-align: left;
         color: #9a9a9a;
         padding-left: 10px; }
-  .cartDetail .cartUserInfo .boxAddress {
+  .cartDetail .cartUserInfo .boxAddress, .cartDetail .cartUserInfo .boxHowToReceive {
     width: 100%;
     padding-top: 14px;
     padding-bottom: 8px;
@@ -1079,28 +1079,28 @@ nav .pagination {
     background-color: #fff;
     border-radius: 4px;
     margin-bottom: 26px; }
-    .cartDetail .cartUserInfo .boxAddress .header {
+    .cartDetail .cartUserInfo .boxAddress .header, .cartDetail .cartUserInfo .boxHowToReceive .header {
       font-family: Roboto;
       font-size: 16px;
       font-weight: 600;
       line-height: 18.75px;
       text-align: left; }
-    .cartDetail .cartUserInfo .boxAddress .content {
+    .cartDetail .cartUserInfo .boxAddress .content, .cartDetail .cartUserInfo .boxHowToReceive .content {
       display: flex;
       flex-direction: column;
       gap: 9px; }
-      .cartDetail .cartUserInfo .boxAddress .content div {
+      .cartDetail .cartUserInfo .boxAddress .content div, .cartDetail .cartUserInfo .boxHowToReceive .content div {
         display: flex;
         align-items: center;
         justify-content: space-between; }
-        .cartDetail .cartUserInfo .boxAddress .content div span:first-of-type {
+        .cartDetail .cartUserInfo .boxAddress .content div span:first-of-type, .cartDetail .cartUserInfo .boxHowToReceive .content div span:first-of-type {
           font-family: Roboto;
           font-size: 14px;
           font-weight: 700;
           line-height: 16.41px;
           letter-spacing: 0.04em;
           text-align: left; }
-        .cartDetail .cartUserInfo .boxAddress .content div span:last-of-type {
+        .cartDetail .cartUserInfo .boxAddress .content div span:last-of-type, .cartDetail .cartUserInfo .boxHowToReceive .content div span:last-of-type {
           font-family: Roboto;
           font-size: 14px;
           font-weight: 700;
@@ -1108,7 +1108,7 @@ nav .pagination {
           letter-spacing: 0.04em;
           text-align: left;
           color: #595959; }
-      .cartDetail .cartUserInfo .boxAddress .content .diachi {
+      .cartDetail .cartUserInfo .boxAddress .content .diachi, .cartDetail .cartUserInfo .boxHowToReceive .content .diachi {
         font-family: Roboto;
         font-size: 14px;
         font-weight: 400;
@@ -1116,7 +1116,7 @@ nav .pagination {
         letter-spacing: 0.04em;
         text-align: left;
         color: #595959; }
-    .cartDetail .cartUserInfo .boxAddress .botom {
+    .cartDetail .cartUserInfo .boxAddress .botom, .cartDetail .cartUserInfo .boxHowToReceive .botom {
       align-self: flex-end;
       font-family: Roboto;
       font-size: 14px;
@@ -1125,7 +1125,7 @@ nav .pagination {
       letter-spacing: 0.04em;
       text-align: right;
       color: #139640; }
-    .cartDetail .cartUserInfo .boxAddress .btnAddAddress span {
+    .cartDetail .cartUserInfo .boxAddress .btnAddAddress span, .cartDetail .cartUserInfo .boxHowToReceive .btnAddAddress span {
       height: 100%;
       font-family: Roboto;
       font-size: 14px;
@@ -1133,6 +1133,26 @@ nav .pagination {
       line-height: normal;
       text-align: right;
       color: #139640; }
+  .cartDetail .cartUserInfo .boxHowToReceive .listRadio {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    align-items: start;
+    margin-top: 15px;
+    margin-bottom: 12px;
+    padding-left: 8px; }
+    .cartDetail .cartUserInfo .boxHowToReceive .listRadio .itemRadio {
+      display: flex;
+      align-items: center;
+      gap: 15px; }
+      .cartDetail .cartUserInfo .boxHowToReceive .listRadio .itemRadio label {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.75px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        color: #595959; }
   .cartDetail .cartUserInfo .boxSumPrice {
     padding: 13px 16px 20px 16px;
     background-color: #fff;
