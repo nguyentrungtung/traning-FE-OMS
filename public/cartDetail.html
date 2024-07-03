@@ -59,9 +59,20 @@
                     <span style="margin-right: 10px"
                       >Ommani Mall Thạch Bàn Long Biên</span
                     >
-                    <img src="../assets/svg/messageIconCart.svg" alt="" />
+                    <img
+                      class="d-md-block d-none"
+                      src="../assets/svg/messageIconCart.svg"
+                      alt=""
+                    />
+                    <img
+                      class="d-md-none d-block"
+                      src="../assets/svg/btnRemoveItemCart.svg"
+                      alt=""
+                    />
                   </div>
                 </div>
+                <!--  -->
+
                 <div class="cartItem_listProduct">
                   <script>
                     const products = [
@@ -84,61 +95,84 @@
                     for (let i = 0; i < products.length; i++) {
                       document.write(`
                         <div class="cartItem_itemProduct">
+
+
+                    <!-- checkBoxBlue  -->
                     <span class="checkBoxBlue">
                       <input type="checkbox" />
                     </span>
+
+                    <!-- imgName  -->
                     <div class="imgName">
                       <img src="../assets/images/imgproductitem${
                         i === 0 ? "" : i
                       }.png" alt="" />
-                      <span>${products[i].name}</span>
+                      <span class="d-md-block d-none">${products[i].name}</span>
                     </div>
-                    <span class="priceProduct">${products[i].cost}</span>
-                    <div class="quantity">
+
+                    <!-- mobileInfoProduct  -->
+                    <div class="d-md-none d-flex flex-column infoItemMobile align-items-start" style="gap:6px">
+                      <span>${products[i].name}</span>
+                      <span>${products[i].cost}</span>
+                      <div class="d-flex align-items-center gap-1">
+                        <img src="../assets/svg/buttonDecMobile.svg" alt="">
+                        <span class="soluong">3</span>
+                        <img src="../assets/svg/buttonIncMobile.svg" alt="">
+                      </div>
+                    </div>
+
+                    <!-- priceProduct  -->
+                    <span class="priceProduct d-md-block d-none">${
+                      products[i].cost
+                    }</span>
+
+                    <!-- quantity  -->
+                    <div class="quantity d-md-flex d-none">
                       <span>1</span>
                       <div class="d-flex flex-column">
                         <img src="../assets/svg/increaseBtn.svg" alt="" />
                         <img src="../assets/svg/decreaseBtn.svg" alt="" />
                       </div>
-                    
                     </div>
-                    <span class="sumPrice">1.716.000 đ</span>
 
+                    <!-- sumPrice  -->
+                    <span class="sumPrice d-md-block d-none">1.716.000 đ</span>
 
-<div
-      class="modal fade"
-      id="exampleModalToggle"
-      tabindex="-1"
-      style="display: none"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modalRemoveItemProduct">
-            <div class="top">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-              <img src="../assets/images/StickerRemoveModal.png" alt="" />
-              <div class="d-flex flex-column gap-3 align-items-center">
-                <span>XÁC NHẬN XÓA</span>
-                <span
-                  >Bạn có chắc chắn muốn xóa 01 sản phẩm trong giỏ hàng?</span
-                >
-              </div>
-            </div>
-            <div class="bottom">
-              <button>Hủy</button>
-              <button>Xác nhận</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+                    <!-- delete item -->
+                              <div
+                                    class="modal fade"
+                                    id="exampleModalToggle"
+                                    tabindex="-1"
+                                    style="display: none"
+                                  >
+                                    <div class="modal-dialog modal-dialog-centered">
+                                      <div class="modal-content">
+                                        <div class="modalRemoveItemProduct">
+                                          <div class="top">
+                                            <button
+                                              type="button"
+                                              class="btn-close"
+                                              data-bs-dismiss="modal"
+                                              aria-label="Close"
+                                            ></button>
+                                            <img src="../assets/images/StickerRemoveModal.png" alt="" />
+                                            <div class="d-flex flex-column gap-3 align-items-center">
+                                              <span>XÁC NHẬN XÓA</span>
+                                              <span
+                                                >Bạn có chắc chắn muốn xóa 01 sản phẩm trong giỏ hàng?</span
+                                              >
+                                            </div>
+                                          </div>
+                                          <div class="bottom">
+                                            <button>Hủy</button>
+                                            <button>Xác nhận</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
 
-                    <button data-bs-target="#exampleModalToggle"
+                    <button class="d-md-block d-none" data-bs-target="#exampleModalToggle"
       data-bs-toggle="modal">
                       <img
                           src="../assets/svg/removeItemCart.svg"
@@ -157,9 +191,16 @@
                   </script>
                 </div>
               </div>
+              <span class="divideH d-md-none d-block"></span>
               <div class="cartItem">
                 <div class="cartItem_infoShop">
                   <div class="d-flex align-items-center">
+                    <span
+                      class="checkBoxBlue d-md-none d-block"
+                      style="margin-right: 10px"
+                    >
+                      <input type="checkbox" />
+                    </span>
                     <img
                       style="margin-right: 10px"
                       src="../assets/svg/shopCartIc.svg"
@@ -173,39 +214,116 @@
                     <span style="margin-right: 10px"
                       >Ommani Mall Thạch Bàn Long Biên</span
                     >
-                    <img src="../assets/svg/messageIconCart.svg" alt="" />
+                    <img
+                      class="d-md-block d-none"
+                      src="../assets/svg/messageIconCart.svg"
+                      alt=""
+                    />
+                    <img
+                      class="d-md-none d-block"
+                      src="../assets/svg/btnRemoveItemCart.svg"
+                      alt=""
+                    />
                   </div>
                 </div>
+                <!--  -->
+
                 <div class="cartItem_listProduct">
                   <script>
-                    for (let i = 0; i < products.length - 2; i++) {
+                    for (let i = 0; i < products.length; i++) {
                       document.write(`
                         <div class="cartItem_itemProduct">
+
+
+                    <!-- checkBoxBlue  -->
                     <span class="checkBoxBlue">
                       <input type="checkbox" />
                     </span>
+
+                    <!-- imgName  -->
                     <div class="imgName">
                       <img src="../assets/images/imgproductitem${
                         i === 0 ? "" : i
                       }.png" alt="" />
-                      <span>${products[i].name}</span>
+                      <span class="d-md-block d-none">${products[i].name}</span>
                     </div>
-                    <span class="priceProduct">${products[i].cost}</span>
-                    <div class="quantity">
+
+                    <!-- mobileInfoProduct  -->
+                    <div class="d-md-none d-flex flex-column infoItemMobile align-items-start" style="gap:6px">
+                      <span>${products[i].name}</span>
+                      <span>${products[i].cost}</span>
+                      <div class="d-flex align-items-center gap-1">
+                        <img src="../assets/svg/buttonDecMobile.svg" alt="">
+                        <span class="soluong">3</span>
+                        <img src="../assets/svg/buttonIncMobile.svg" alt="">
+                      </div>
+                    </div>
+
+                    <!-- priceProduct  -->
+                    <span class="priceProduct d-md-block d-none">${
+                      products[i].cost
+                    }</span>
+
+                    <!-- quantity  -->
+                    <div class="quantity d-md-flex d-none">
                       <span>1</span>
                       <div class="d-flex flex-column">
                         <img src="../assets/svg/increaseBtn.svg" alt="" />
                         <img src="../assets/svg/decreaseBtn.svg" alt="" />
                       </div>
-                    
                     </div>
-                    <span class="sumPrice">1.716.000 đ</span>
-                    <img
-                      src="../assets/svg/removeItemCart.svg"
-                      alt=""
-                      style="cursor: pointer"
-                    />
-                  </div>
+
+                    <!-- sumPrice  -->
+                    <span class="sumPrice d-md-block d-none">1.716.000 đ</span>
+
+                    <!-- delete item -->
+                              <div
+                                    class="modal fade"
+                                    id="exampleModalToggle"
+                                    tabindex="-1"
+                                    style="display: none"
+                                  >
+                                    <div class="modal-dialog modal-dialog-centered">
+                                      <div class="modal-content">
+                                        <div class="modalRemoveItemProduct">
+                                          <div class="top">
+                                            <button
+                                              type="button"
+                                              class="btn-close"
+                                              data-bs-dismiss="modal"
+                                              aria-label="Close"
+                                            ></button>
+                                            <img src="../assets/images/StickerRemoveModal.png" alt="" />
+                                            <div class="d-flex flex-column gap-3 align-items-center">
+                                              <span>XÁC NHẬN XÓA</span>
+                                              <span
+                                                >Bạn có chắc chắn muốn xóa 01 sản phẩm trong giỏ hàng?</span
+                                              >
+                                            </div>
+                                          </div>
+                                          <div class="bottom">
+                                            <button>Hủy</button>
+                                            <button>Xác nhận</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                    <button class="d-md-block d-none" data-bs-target="#exampleModalToggle"
+      data-bs-toggle="modal">
+                      <img
+                          src="../assets/svg/removeItemCart.svg"
+                          alt=""
+                          style="cursor: pointer"
+                        />
+                    </button>
+
+
+
+
+                    </div>
+                   
                       `);
                     }
                   </script>
@@ -321,6 +439,16 @@
             </div>
             <button class="sendRequest d-md-block d-none">Gửi yêu cầu</button>
           </div>
+        </div>
+
+        <div
+          class="bottomSumPrice d-md-none d-flex align-items-center justify-content-between"
+        >
+          <div class="d-flex flex-column align-items-start gap-1">
+            <span>Tổng:</span>
+            <span>192.000 đ</span>
+          </div>
+          <button>Gửi thông tin</button>
         </div>
       </div>
     </main>

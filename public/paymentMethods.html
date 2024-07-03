@@ -4,6 +4,140 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>paymentMethods</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/footer.css" />
+    <link rel="stylesheet" href="../src/css/paymentMethods.css" />
+    <link rel="stylesheet" href="../src/css/responsive-common.css" />
   </head>
-  <body></body>
+  <body>
+    <header
+      class="headerPaymentMethods d-flex align-items-center justify-content-between"
+    >
+      <img src="../assets/svg/logoHeaderPayment.svg" alt="" />
+      <div class="d-flex flex-column align-items-center gap-3">
+        <img src="../assets/svg/phoneIcon.svg" alt="" />
+        <span>1900.2233</span>
+      </div>
+    </header>
+    <main class="paymentMethods container-xxl">
+      <button class="btnBackPage d-flex align-items-center">
+        <img src="../assets/svg/arrowbackward.svg" alt="" />
+        <span>Quay lại</span>
+      </button>
+      <h1>Phương thức thanh toán</h1>
+      <div class="row custom-row">
+        <!-- col -->
+        <div class="col-xxl-9 custom-col col-12 order-xxl-1">
+          <div class="paymentMethodsMain">
+            <div class="listSelection">
+              <script>
+                const arrlistSelection = [
+                  "Thanh toán tiền mặt khi nhận hàng",
+                  "Thanh toán bằng thẻ Quốc Tế Visa, Master, JCB",
+                  "Thẻ ATM nội địa / Internet Banking",
+                  "Chuyển khoản ngân hàng",
+                ];
+                for (let i = 0; i < arrlistSelection.length; i++) {
+                  document.write(`
+                        <div class="radioGreen">
+                <input
+                  ${i === 0 ? "disabled" : ""}
+                  type="radio"
+                  name="listSelection"
+                  id="itemSelection${i}"
+                />
+                <label for="itemSelection${i}"
+                  >${arrlistSelection[i]}</label
+                >
+              </div>
+                    `);
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xxl-3 custom-col col-12 order-xxl-2">
+          <div class="cartUserInfo">
+            <div class="boxHowToReceive">
+              <span class="header d-md-block d-none">Hình thức nhận hàng</span>
+              <script>
+                let isChooseCachthucNhanHang = false;
+                if (isChooseCachthucNhanHang) {
+                  document.write(`<div class="listRadio">
+                <div class="itemRadio radioGreen">
+                  <input type="radio" name="" id="taicuahang" />
+                  <label for="taicuahang">Tại cửa hàng</label>
+                </div>
+                <div class="itemRadio radioGreen">
+                  <input type="radio" name="" id="tannoi" />
+                  <label for="tannoi">Nhận máy tận nơi</label>
+                </div>
+              </div>`);
+                }
+              </script>
+              <div class="content">
+                <div>
+                  <span>Hồng Anh</span>
+                  <span class="divideV d-md-none d-block"></span>
+                  <span>0919 189 199</span>
+                </div>
+                <script>
+                  let valuediachi =
+                    "125 Hoàng Ngân, Quận Thanh Xuân, TP. Hà Nội.";
+                  // valuediachi = "";
+                  if (valuediachi) {
+                    document.write(
+                      `<span class="diachi">${valuediachi}</span>`
+                    );
+                  } else {
+                    document.write(`
+                      <button class="btnAddAddress d-flex align-items-stretch">
+                      <img src="../assets/svg/carbon_add.svg" alt="" />
+                      <span class="align-self-center">Thêm địa chỉ</span>
+                    </button>             
+                    `);
+                  }
+                </script>
+              </div>
+              <script>
+                if (valuediachi) {
+                  document.write(
+                    `<a href="#" class="botom d-md-block d-none">Thay Đổi</a>
+                    <a href="#" class="botom d-md-none d-block align-self-start">Sửa địa chỉ</a>
+                    `
+                  );
+                }
+              </script>
+            </div>
+            <div class="boxSales d-md-flex d-none">
+              <span>Ommani Khuyến Mãi</span>
+              <div class="d-flex align-items-center gap-3">
+                <img src="../assets/svg/saleiconBox.svg" alt="" />
+                <span>Chọn hoặc nhập mã khuyến mãi</span>
+              </div>
+            </div>
+            <div class="boxSumPrice d-md-flex d-none">
+              <div class="l1">
+                <span>Tạm tính: </span>
+                <span>2.676.000 đ</span>
+              </div>
+              <div class="divideH"></div>
+              <div class="l2">
+                <span>Tổng cộng:</span>
+                <span>2.676.000 đ</span>
+              </div>
+              <div class="l3">(Đã bao gồm VAT nếu có)</div>
+            </div>
+            <button class="sendRequest d-md-block d-none">Gửi yêu cầu</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <div data-include-html="../component/footer.html"></div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="../src/js/scripts.js"></script>
 </html>
