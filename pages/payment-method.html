@@ -70,14 +70,14 @@
           <i class="bi bi-arrow-left"></i>
           <span>Quay lại</span>
         </div>
-        <div class="row">
+        <div class="row payment-method__content show">
           <div class="col-9">
             <p class="payment-method__title">Phương thức thanh toán</p>
             <div class="payment-method__info">
               <div class="choose__payment-method">
                 <div class="method-item">
                   <label class="container-label">
-                    <input id="COD" type="checkbox" checked="checked" />
+                    <input id="COD" type="checkbox" />
                     <div class="checkmark"></div>
                   </label>
                   <label class="checkbox-name" for="COD">
@@ -86,11 +86,7 @@
                 </div>
                 <div class="method-item">
                   <label class="container-label">
-                    <input
-                      id="national-pay"
-                      type="checkbox"
-                      checked="checked"
-                    />
+                    <input id="national-pay" type="checkbox" />
                     <div class="checkmark"></div>
                   </label>
                   <label class="checkbox-name" for="national-pay">
@@ -99,7 +95,7 @@
                 </div>
                 <div class="method-item">
                   <label class="container-label">
-                    <input id="banking" type="checkbox" checked="checked" />
+                    <input id="banking" type="checkbox" />
                     <div class="checkmark"></div>
                   </label>
                   <label class="checkbox-name" for="banking">
@@ -108,12 +104,47 @@
                 </div>
                 <div class="method-item">
                   <label class="container-label">
-                    <input id="transfer" type="checkbox" checked="checked" />
+                    <input id="transfer" type="checkbox" />
                     <div class="checkmark"></div>
                   </label>
                   <label class="checkbox-name" for="transfer">
                     Chuyển khoản ngân hàng
                   </label>
+                </div>
+              </div>
+              <div class="payment-guide">
+                <div class="step-1">
+                  <p>B1: Quý khách chọn tài khoản ngân hàng thanh toán:</p>
+                  <p>
+                    CHỦ TÀI KHOẢN:
+                    <span class="fw-bold"
+                      >CÔNG TY CỔ PHẦN OMMANI LIFE VIỆT NAM</span
+                    >
+                  </p>
+                  <p class="fw-bold">
+                    VIETCOMBANK – CN THÀNH CÔNG - STK: 04588 999 9999<br />
+                    Nội dung chuyển khoản khách hàng viết theo cú pháp: Tên_Mã
+                    Đơn Hàng
+                  </p>
+                </div>
+                <div class="step-2">
+                  <p>
+                    B2: Chuyển khoản xong, quý khách
+                    <span class="fw-bold">chụp lại thông tin</span> chuyển khoản
+                    gửi SMS và liên hệ Hotline
+                    <span class="fw-bold">1900 1398</span> để hỗ trợ.
+                  </p>
+                </div>
+                <div
+                  class="my-3"
+                  style="border: 1px dashed black; width: 60%"
+                ></div>
+                <div class="payment-note">
+                  <p>
+                    Lưu ý: Khách hàng vui lòng chuyển khoản vào Tài khoản Công
+                    ty. Chúng tôi không chịu trách nhiệm nếu quý khách chuyển
+                    vào bất kỳ tài khoản cá nhân nào.
+                  </p>
                 </div>
               </div>
             </div>
@@ -197,6 +228,56 @@
             </div>
           </div>
         </div>
+        <div class="row payment-method__content">
+          <div class="col-12">
+            <p class="payment-method__title">Xác nhận của OMMANI LIFE</p>
+            <div class="payment-method__notify">
+              <p class="notify-heading">Bạn đã thanh toán thành công!</p>
+              <div class="notify-body">
+                <p class="code-order">Mã đơn hàng: <span>#OM1289189</span></p>
+                <ul class="list-product__view">
+                  <li class="product-item">
+                    Bông cải xanh Đà Lạt - 100g
+                    <span class="ms-3 text-success fw-medium">x13</span>
+                  </li>
+                  <li class="product-item">
+                    Xúc xích Đức Việt
+                    <span class="ms-3 text-success fw-medium">x2</span>
+                  </li>
+                  <li class="product-item">
+                    Thịt xông khói túi 500g MAVIN
+                    <span class="ms-3 text-success fw-medium">x4</span>
+                  </li>
+                </ul>
+                <p class="total-money">
+                  Thành tiền: 2.886.000 <u>đ</u> (Đã bao gồm VAT nếu có)
+                </p>
+              </div>
+              <p class="notify-footer">
+                Nếu bạn thấy xác nhận đơn hàng quá thời gian có thể liên hệ
+                thông tin chuyển khoản gửi SMS và liên hệ Hotline 0911.999.888
+                để hỗ trợ.
+              </p>
+            </div>
+            <button class="btn__handle-transport">Vận chuyển</button>
+          </div>
+        </div>
+        <div class="row payment-method__content">
+          <p class="payment-method__title">Vận chuyển</p>
+          <div class="notify-transport">
+            <p>Cảm ơn bạn đã mua hàng tại OMMANI LIFE!</p>
+            <p class="fw-bold">Mã đơn hàng của bạn: <span>#SD1289189</span></p>
+            <p>
+              Thời gian giao hàng dự kiến từ 1-2 ngày làm việc, không kể Thứ 7
+              và Chủ nhật
+            </p>
+            <p class="fw-bold">
+              Liên hệ với đơn vị vận chuyển để biết chính xác thời gian giao
+              hàng!
+            </p>
+          </div>
+          <button class="btn__continue-shopping">Tiếp tục mua sắm</button>
+        </div>
       </div>
     </div>
     <div data-include-html="footer.html"></div>
@@ -207,5 +288,6 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="../js/handle-collapse.js"></script>
+    <script src="../js/payment-method.js"></script>
   </body>
 </html>

@@ -27,7 +27,6 @@ $color-595959: #595959;
       align-items: center;
       gap: 160px;
       position: relative;
-      cursor: pointer;
       width: fit-content;
       z-index: 1;
       .step-line {
@@ -50,6 +49,8 @@ $color-595959: #595959;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
+        cursor: pointer;
+
         .btn-rouned-check {
           width: 20px;
           height: 20px;
@@ -125,84 +126,240 @@ $color-595959: #595959;
     }
   }
 
-  .payment-method__title {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 37.5px;
-    color: $color-black;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .payment-method__info {
-    padding: 40px;
-    background-color: $color-white;
-    border-radius: 3px;
-
-    .choose__payment-method {
+  .payment-method__content {
+    display: none;
+    animation: moving 0.5s ease;
+    &.show {
       display: flex;
-      flex-direction: column;
-      gap: 20px;
-      .method-item {
+    }
+    .payment-method__title {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 37.5px;
+      color: $color-black;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .payment-method__info {
+      padding: 40px;
+      background-color: $color-white;
+      border-radius: 3px;
+
+      .choose__payment-method {
         display: flex;
-        align-items: center;
-        gap: 33px;
-        .container-label {
-          position: relative;
-          font-size: 17px;
-          width: 36px;
-          height: 36px;
-          border-radius: 50%;
-          user-select: none;
-          border: 1px solid #b6b6b6;
-          display: block;
-          margin: 0;
-          cursor: pointer;
-          &:has(input:checked) {
-            border: 1px solid #6ab4ff;
-          }
-
-          input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-            height: 0;
-            width: 0;
-          }
-
-          input:checked ~ .checkmark::after {
-            transform: scale(1);
-          }
-          .checkmark {
-            position: absolute;
-            top: 0;
-            left: 0;
+        flex-direction: column;
+        gap: 20px;
+        .method-item {
+          display: flex;
+          align-items: center;
+          gap: 33px;
+          .container-label {
+            position: relative;
+            font-size: 17px;
             width: 36px;
             height: 36px;
-            &:after {
-              content: "";
+            border-radius: 50%;
+            user-select: none;
+            border: 1px solid #b6b6b6;
+            display: block;
+            margin: 0;
+            cursor: pointer;
+            &:has(input:checked) {
+              border: 1px solid #6ab4ff;
+            }
+
+            input {
               position: absolute;
-              top: 20%;
-              left: 20%;
-              background-color: $color-29ab56;
-              width: 20px;
-              height: 20px;
-              border-radius: 50%;
-              transform: scale(0);
-              transition: 100ms ease;
+              opacity: 0;
+              cursor: pointer;
+              height: 0;
+              width: 0;
+
+              &:checked ~ .checkmark::after {
+                transform: scale(1);
+              }
+            }
+
+            .checkmark {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 36px;
+              height: 36px;
+              &:after {
+                content: "";
+                position: absolute;
+                top: 20%;
+                left: 20%;
+                background-color: $color-29ab56;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                transform: scale(0);
+                transition: 100ms ease;
+              }
+            }
+          }
+
+          .checkbox-name {
+            user-select: none;
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 22.27px;
+            letter-spacing: 0.04em;
+            color: #595959;
+            cursor: pointer;
+            &.checked-label {
+              color: $color-139640;
             }
           }
         }
+      }
 
-        .checkbox-name {
-          user-select: none;
-          font-size: 19px;
+      .payment-guide {
+        margin-top: 15px;
+        .step-1,
+        .step-2 {
+          font-size: 14px;
           font-weight: 400;
-          line-height: 22.27px;
+          line-height: 21px;
           letter-spacing: 0.04em;
-          color: #595959;
-          cursor: pointer;
+          color: $color-black;
         }
+        .step-2 {
+          margin-top: 20px;
+        }
+        .payment-note {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 21px;
+          letter-spacing: 0.04em;
+          color: $color-139640;
+        }
+      }
+    }
+    .payment-method__notify {
+      background-color: $color-white;
+      padding: 26px 44px;
+      border-radius: 3px;
+      .notify-heading {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 37.5px;
+        color: $color-139640;
+        margin-bottom: 23px;
+      }
+      .notify-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .code-order {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 30px;
+          letter-spacing: 0.04em;
+          color: $color-black;
+          span {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 30px;
+            letter-spacing: 0.04em;
+            color: $color-139640;
+          }
+        }
+        .list-product__view {
+          margin-left: 30px;
+          .product-item {
+            list-style: disc;
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 0.04em;
+            color: $color-black;
+          }
+        }
+        .total-money {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 30px;
+          letter-spacing: 0.04em;
+          color: $color-black;
+        }
+      }
+      .notify-footer {
+        margin-top: 14px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.04em;
+        color: $color-black;
+      }
+    }
+    .btn__handle-transport {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 41px;
+      width: 656px;
+      height: 59px;
+      border-radius: 3px;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28.13px;
+      letter-spacing: 0.04em;
+      text-align: center;
+      background-color: $color-29ab56;
+      color: $color-white;
+      padding: 0;
+      border: 0;
+      &:hover {
+        background-color: $color-139640;
+      }
+    }
+    .notify-transport {
+      background-color: $color-white;
+      padding: 26px 44px;
+      border-radius: 3px;
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        color: $color-black;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+        span {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 25px;
+          letter-spacing: 0.04em;
+          color: $color-139640;
+        }
+      }
+    }
+    .btn__continue-shopping {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 41px;
+      width: 656px;
+      height: 59px;
+      border-radius: 3px;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28.13px;
+      letter-spacing: 0.04em;
+      text-align: center;
+      background-color: $color-white;
+      color: $color-29ab56;
+      padding: 0;
+      border: 1px solid $color-29ab56;
+      transition: all 0.5s;
+      &:hover {
+        background-color: $color-29ab56;
+        color: $color-white;
       }
     }
   }
@@ -410,5 +567,16 @@ $color-595959: #595959;
         background-color: $color-139640;
       }
     }
+  }
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }

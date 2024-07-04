@@ -390,6 +390,9 @@
   color: #595959;
   cursor: pointer;
 }
+.cart-product__wrapper .cart-product__body .cart__payment-info .cart-payment__address-wrapper .cart-payment__receive .receive-checkbox__container .receive-item .checkbox-name.checked-label {
+  color: #139640;
+}
 .cart-product__wrapper .cart-product__body .cart__payment-info .cart-payment__address-wrapper .payment-info {
   margin-bottom: 9px;
 }

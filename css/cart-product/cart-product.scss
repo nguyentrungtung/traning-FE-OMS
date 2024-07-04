@@ -423,6 +423,9 @@ $color-595959: #595959;
                 letter-spacing: 0.04em;
                 color: #595959;
                 cursor: pointer;
+                &.checked-label {
+                  color: $color-139640;
+                }
               }
             }
           }

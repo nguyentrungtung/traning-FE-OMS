@@ -321,11 +321,7 @@
                       >
                         <div class="receive-item">
                           <label class="container-label">
-                            <input
-                              id="receive-store"
-                              type="checkbox"
-                              checked="checked"
-                            />
+                            <input id="receive-store" type="checkbox" />
                             <div class="checkmark"></div>
                           </label>
                           <label class="checkbox-name" for="receive-store">
@@ -334,11 +330,7 @@
                         </div>
                         <div class="receive-item">
                           <label class="container-label">
-                            <input
-                              id="receive-local"
-                              type="checkbox"
-                              checked="checked"
-                            />
+                            <input id="receive-local" type="checkbox" />
                             <div class="checkmark"></div>
                           </label>
                           <label class="checkbox-name" for="receive-local">
@@ -412,5 +404,19 @@
     ></script>
     <script type="module" src="../js/select-menu.js"></script>
     <script type="module" src="../js/handle-collapse.js"></script>
+    <script>
+      const inputs = document.querySelectorAll("input[type='checkbox']");
+      inputs.forEach((input) => {
+        input.addEventListener("change", () => {
+          const checkLabelNames = document.querySelectorAll(".checkbox-name");
+          checkLabelNames.forEach((label) => {
+            console.log(label.getAttribute("for"));
+            if (input.id === label.getAttribute("for")) {
+              label.classList.toggle("checked-label");
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
