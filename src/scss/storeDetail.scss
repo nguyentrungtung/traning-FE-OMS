@@ -336,6 +336,25 @@
           letter-spacing: 0.5px;
           text-align: center;
           color: #374756;
+          .rangeCustom {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            .circle {
+              display: inline-block;
+              min-width: 24px;
+              height: 24px;
+              border: 1px solid;
+              border-radius: 50%;
+              cursor: pointer;
+            }
+            .horizontal {
+              display: inline-block;
+              flex: 1;
+              height: 1px;
+              background-color: black;
+            }
+          }
         }
         .filterStar {
           font-family: Roboto;

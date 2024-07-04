@@ -21,7 +21,7 @@
     </div>
 
     <!-- cartDetail -->
-    <main class="cartDetail container-xxl">
+    <main class="cartDetail container-xxl ">
       <h1 class="d-md-block d-none">Giỏ hàng</h1>
       <div class="row custom-row">
         <!-- col -->
@@ -473,9 +473,36 @@
               </div>
               <div class="l3">(Đã bao gồm VAT nếu có)</div>
             </div>
-            <button class="sendRequest d-md-block d-none">Gửi yêu cầu</button>
+            <button
+              data-bs-toggle="modal"
+              data-bs-target="#modalSendRequest"
+              class="sendRequest d-md-block d-none"
+            >
+              Gửi yêu cầu
+            </button>
+            <div class="modal fade"
+            id="modalSendRequest"
+            tabindex="-1"
+            style="display: none">
+
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modalSendRequest">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" style="position: absolute; top: 32px;right: 24px;"></button>
+
+                    <div class="top">
+                      <img src="../assets/svg/StickermodalSendRequest.svg" alt="">
+                    </div>
+                    <div class="bottom d-flex flex-column">
+                      <span>GỬI THÔNG TIN THÀNH CÔNG</span>
+                      <span>CHÚNG TÔI SẼ LIÊN HỆ LẠI VỚI BẠN SỚM NHẤT!</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+       
+       
           </div>
-        </div>
 
         <div
           class="bottomSumPrice d-md-none d-flex align-items-center justify-content-between"
@@ -486,6 +513,14 @@
           </div>
           <button>Gửi thông tin</button>
         </div>
+      </div>
+    </main>
+    <main class="cartDetail emptyCart container-xxl d-none">
+      <h1 class="d-md-block d-none">Giỏ hàng</h1>
+      <div class="d-flex flex-column align-items-center" style="background-color: #fff; border-radius: 4px;padding-top: 30px;padding-bottom: 32px;">
+        <img src="../assets/images/emptyCart.png" alt="" style="object-fit: contain;width: 552px;margin-bottom: 12px;">
+      <span>Chưa có sản phẩm trong giỏ hàng.</span>
+      <button>Tiếp tục mua sắm!</button>
       </div>
     </main>
 

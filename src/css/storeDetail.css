@@ -1212,6 +1212,22 @@ nav .pagination {
       letter-spacing: 0.5px;
       text-align: center;
       color: #374756; }
+      .detailStore .detailStore_tabs #detailStore_product .sidebarLeft .filterCost .rangeCustom {
+        width: 100%;
+        display: flex;
+        align-items: center; }
+        .detailStore .detailStore_tabs #detailStore_product .sidebarLeft .filterCost .rangeCustom .circle {
+          display: inline-block;
+          min-width: 24px;
+          height: 24px;
+          border: 1px solid;
+          border-radius: 50%;
+          cursor: pointer; }
+        .detailStore .detailStore_tabs #detailStore_product .sidebarLeft .filterCost .rangeCustom .horizontal {
+          display: inline-block;
+          flex: 1;
+          height: 1px;
+          background-color: black; }
     .detailStore .detailStore_tabs #detailStore_product .sidebarLeft .filterStar {
       font-family: Roboto;
       font-size: 14px;

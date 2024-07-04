@@ -1145,6 +1145,27 @@ nav .pagination {
       height: 79px;
       padding: 15px 16px;
       resize: none; }
+  .cartUserInfo .modalSendRequest {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px;
+    position: relative;
+    gap: 24px; }
+    .cartUserInfo .modalSendRequest .top {
+      align-self: center; }
+    .cartUserInfo .modalSendRequest .bottom span:first-of-type {
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+      text-align: center;
+      color: #29ab56; }
+    .cartUserInfo .modalSendRequest .bottom span:last-of-type {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 28px;
+      text-align: center; }
 
 .cartDetail {
   margin-bottom: 83px; }
@@ -1318,3 +1339,27 @@ nav .pagination {
         text-align: left;
         color: #9a9a9a;
         padding-left: 10px; }
+
+.cartDetail.emptyCart {
+  display: flex;
+  flex-direction: column; }
+  .cartDetail.emptyCart button {
+    width: 279px;
+    height: 64px;
+    border-radius: 4px;
+    background-color: #29ab56;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    align-content: center;
+    color: #ffffff; }
+  .cartDetail.emptyCart span {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36.53px;
+    text-align: center;
+    margin-bottom: 30px; }

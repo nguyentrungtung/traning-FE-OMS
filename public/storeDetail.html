@@ -288,7 +288,108 @@
                   <label class="form-label commonTitle" for="customRange1"
                     >Giá</label
                   >
+
                   <span>0 - 5.000.000đ</span>
+                  <div class="rangeCustom">
+                    <span class="circle circle1"></span>
+                    <span class="horizontal"></span>
+                    <span class="circle circle2"></span>
+                  </div>
+                  <script>
+                    const filterCost = document.querySelector(
+                      ".detailStore .detailStore_tabs #detailStore_product .sidebarLeft .filterCost "
+                    );
+                    const rangeCustom =
+                      filterCost.querySelector(".rangeCustom");
+                    const circle1 = filterCost.querySelector(".circle1");
+                    const circle2 = filterCost.querySelector(".circle2");
+
+                    circle1.addEventListener("mousedown", startDragging);
+                    circle2.addEventListener("mousedown", startDragging);
+                    rangeCustom.addEventListener("mousemove", handleMouseMove);
+                    rangeCustom.addEventListener("mouseup", handleMouseUp);
+                    rangeCustom.addEventListener("mouseleave", handleMouseUp);
+
+                    function startDragging(event) {
+                      event.target.classList.add("dragging");
+                      rangeCustom.classList.add("dragging");
+                    }
+                    function isDragging() {
+                      return (
+                        circle1.classList.contains("dragging") ||
+                        circle2.classList.contains("dragging")
+                      );
+                    }
+
+                    function handleMouseMove(event) {
+                      if (isDragging()) {
+                        drag(event);
+                      }
+                    }
+
+                    function handleMouseUp(event) {
+                      rangeCustom.classList.remove("dragging");
+                      circle1.classList.remove("dragging");
+                      circle2.classList.remove("dragging");
+                    }
+
+                    function drag(event) {
+                      const isCircle1Dragging =
+                        circle1.classList.contains("dragging");
+                      const isCircle2Dragging =
+                        circle2.classList.contains("dragging");
+
+                      const minValue = 0;
+                      const maxValue = 5000000;
+
+                      if (!isCircle1Dragging && !isCircle2Dragging) return;
+
+                      const rangeCustomRect =
+                        rangeCustom.getBoundingClientRect();
+                      const minPositionX = circle1.offsetWidth / 2;
+                      const maxPositionX =
+                        rangeCustomRect.width - circle2.offsetWidth / 2;
+
+                      let positionX = event.clientX - rangeCustomRect.left;
+                      positionX = Math.max(
+                        minPositionX,
+                        Math.min(maxPositionX, positionX)
+                      );
+
+                      if (isCircle1Dragging) {
+                        const newPaddingLeft =
+                          positionX - circle1.offsetWidth / 2 + "px";
+                        rangeCustom.style.paddingLeft = newPaddingLeft;
+                      }
+
+                      if (isCircle2Dragging) {
+                        const newPaddingRight =
+                          rangeCustomRect.width -
+                          positionX -
+                          circle2.offsetWidth / 2 +
+                          "px";
+                        rangeCustom.style.paddingRight = newPaddingRight;
+                      }
+                      const paddingLeft = parseFloat(
+                        getComputedStyle(rangeCustom).paddingLeft
+                      );
+                      const paddingRight = parseFloat(
+                        getComputedStyle(rangeCustom).paddingRight
+                      );
+                      const rangeCustomWidth = rangeCustom.offsetWidth;
+                      const min =
+                        minValue +
+                        (maxValue - minValue) *
+                          (paddingLeft / rangeCustomWidth);
+                      const max =
+                        maxValue -
+                        (maxValue - minValue) *
+                          (paddingRight / rangeCustomWidth);
+
+                      console.log("Min:", min);
+                      console.log("Max:", max);
+                    }
+                  </script>
                 </div>
               </div>
               <div class="filterStar d-flex flex-column gap-3">

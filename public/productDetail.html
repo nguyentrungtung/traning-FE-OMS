@@ -22,11 +22,80 @@
       <!-- gioi thieu san pham -->
       <div class="productBriefing">
         <div class="productIllustration">
-          <img
-            class="product-illustration_video"
-            src="../assets/images/videoMinhHoa.png"
-            alt=""
-          />
+          <div class="mainImage">
+            <img
+              class="product-illustration_video"
+              src="../assets/images/videoMinhHoa.png"
+              alt=""
+            />
+            <div class="zoomImageReview"></div>
+            <div class="zoomImageArea"></div>
+          </div>
+          <script>
+            let mainImage = document.querySelector(
+              ".producDetail .productBriefing .productIllustration .mainImage"
+            );
+            const img = document.querySelector(
+              ".producDetail .productBriefing .productIllustration .mainImage .product-illustration_video"
+            );
+            const zoomImageReview = document.querySelector(
+              ".producDetail .productBriefing .productIllustration .mainImage .zoomImageReview"
+            );
+            const zoomImageArea = document.querySelector(
+              ".producDetail .productBriefing .productIllustration .mainImage .zoomImageArea"
+            );
+            const zoomFactor = 1.3;
+            mainImage.addEventListener("mousemove", (event) => {
+              const imgRect = img.getBoundingClientRect();
+              let mouseX = event.clientX;
+              let mouseY = event.clientY;
+
+              if (
+                mouseX < imgRect.left ||
+                mouseX > imgRect.right ||
+                mouseY < imgRect.top ||
+                mouseY > imgRect.bottom
+              ) {
+                zoomImageArea.style.display = "none";
+                zoomImageReview.style.display = "none";
+              } else {
+                zoomImageArea.style.display = "block";
+                zoomImageReview.style.display = "block";
+                const mainImageRect = mainImage.getBoundingClientRect();
+                mouseX = event.clientX - mainImageRect.left;
+                mouseY = event.clientY - mainImageRect.top;
+
+                const zoomImageAreaWidth = zoomImageArea.offsetWidth;
+                const zoomImageAreaHeight = zoomImageArea.offsetHeight;
+
+                const zoomImageAreaX = mouseX - zoomImageAreaWidth / 2;
+                const zoomImageAreaY = mouseY - zoomImageAreaHeight / 2;
+
+                zoomImageArea.style.left = `${zoomImageAreaX}px`;
+                zoomImageArea.style.top = `${zoomImageAreaY}px`;
+
+                const backgroundImage = `url(${img.src})`;
+                const backgroundSize = `${mainImageRect.width * zoomFactor}px ${
+                  mainImageRect.height * zoomFactor
+                }px`;
+
+                const positionXPercent = (mouseX / mainImageRect.width) * 100;
+                const positionYPercent = (mouseY / mainImageRect.height) * 100;
+
+                zoomImageArea.style.backgroundImage = backgroundImage;
+                zoomImageArea.style.backgroundSize = backgroundSize;
+                zoomImageArea.style.backgroundPosition = `${positionXPercent}% ${positionYPercent}%`;
+
+                zoomImageReview.style.backgroundImage = backgroundImage;
+                zoomImageReview.style.backgroundSize = `${
+                  mainImageRect.width * zoomFactor * 2
+                }px ${mainImageRect.height * zoomFactor * 2}px`;
+                zoomImageReview.style.backgroundPosition = `${positionXPercent}% ${positionYPercent}%`;
+                zoomImageReview.style.backgroundRepeat = "no-repeat";
+              }
+            });
+          </script>
+
           <div class="displayHidden">
             <button class="btnReturn">
               <img src="../assets/svg/btnreturn.svg" alt="" />
@@ -45,39 +114,53 @@
           </div>
 
           <div class="product-illustration_image">
-            <!-- <button class="previous">
+            <button class="previous">
               <img src="../assets/svg/previous.svg" alt="" />
             </button>
             <button class="next">
               <img src="../assets/svg/next.svg" alt="" />
-            </button> -->
+            </button>
 
-            <swiper-container
-              class="w-100"
-              space-between="30"
-              slides-per-view="4"
-              autoplay-delay="2000"
-              autoplay-disable-on-interaction="false"
-            >
+            <div class="listImages">
               <script>
                 for (let i = 0; i < 7; i++) {
                   document.write(`
-                  <swiper-slide>
-                    <img src="../assets/svg/hinhminhhoa${
-                      i === 0 ? "1" : "2"
-                    }.svg" alt="" />  
-                  </swiper-slide>
+                    <img class="${
+                      i === 0 ? "active" : ""
+                    }" src="../assets/svg/hinhminhhoa${
+                    (i % 4) + 1
+                  }.svg" alt="" />
                   `);
                 }
+                let imgMain = document.querySelector(
+                  ".productIllustration .product-illustration_video"
+                );
+                const listImages = document.querySelectorAll(
+                  ".producDetail .productBriefing .productIllustration .product-illustration_image .listImages img"
+                );
+
+                for (let i = 0; i < listImages.length; i++) {
+                  listImages[i].addEventListener("click", () => {
+                    listImages.forEach((img) => {
+                      img.classList.remove("active");
+                    });
+                    listImages[i].classList.add("active");
+                    imgMain.src = `../assets/svg/hinhminhhoa${(i % 4) + 1}.svg`;
+                  });
+                }
               </script>
-            </swiper-container>
+            </div>
 
             <script>
               let scrollAmount = 100;
               const previous = document.querySelector(".previous");
               const next = document.querySelector(".next");
-              const ListImage = document.querySelector(".list-images");
+              const ListImage = document.querySelector(
+                ".product-illustration_image .listImages"
+              );
+              console.log(ListImage);
               next.addEventListener("click", () => {
+                console.log("helo");
                 ListImage.scrollBy({
                   left: scrollAmount,
                   behavior: "smooth",

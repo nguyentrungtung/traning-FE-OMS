@@ -1,0 +1,375 @@
+.titleMain {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+}
+.divideHCommon {
+  max-height: 0.5px;
+  background-color: #c2c2c2;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.commonAttribute {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: start;
+  span {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+    text-align: center;
+  }
+}
+
+.profilePage {
+  padding-top: 50px;
+  padding-bottom: 124px;
+  .row {
+    --bs-gutter-x: 20px;
+  }
+  .personalProfile {
+    padding: 24px;
+    padding-bottom: 69px;
+    border: 1px solid #c2c2c2;
+    background-color: white;
+    height: 100%;
+    h1 {
+      @extend .titleMain;
+    }
+    .divideH {
+      @extend .divideHCommon;
+    }
+
+    .accordion {
+      width: 100%;
+      ul {
+        list-style: none;
+      }
+      .accordion-item {
+        border: none;
+        .accordion-button:not(.collapsed) {
+          background-color: unset;
+          box-shadow: unset;
+        }
+        .accordion-button {
+          height: 56px;
+          padding: 16px;
+          width: 100%;
+          text-decoration: none;
+          span {
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22.4px;
+            text-align: left;
+          }
+        }
+        .accordion-collapse {
+          padding-left: 52px;
+          li {
+            height: 56px;
+            align-content: center;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22.4px;
+            text-align: left;
+            color: #858585;
+            a.active {
+              color: #29ab56;
+            }
+          }
+        }
+      }
+    }
+  }
+  .personalInformation {
+    height: 100%;
+    padding: 24px;
+    padding-bottom: unset;
+    border: 1px solid #c2c2c2;
+    background-color: white;
+    h1 {
+      @extend .titleMain;
+    }
+    .divideH {
+      @extend .divideHCommon;
+    }
+    .personalInformation_main {
+      padding-bottom: 71px;
+      .chooseAvatar {
+        label {
+          img {
+            width: 76px;
+            height: 76px;
+            object-fit: fill;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+        input[type="file"] {
+          width: 0;
+          height: 0;
+          visibility: hidden;
+        }
+        .textRight {
+          span:nth-of-type(1) {
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 24.3px;
+            letter-spacing: 0.5px;
+            text-align: left;
+          }
+          span:nth-of-type(2) {
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18.2px;
+            text-align: left;
+            color: #858585;
+          }
+          button {
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 18.2px;
+            text-align: left;
+            text-decoration: underline;
+          }
+        }
+      }
+      .nameAndPhone {
+        --bs-gutter-x: 24px;
+        .nameAndPhone_name {
+          @extend .commonAttribute;
+          input {
+            width: 100%;
+            height: 58px;
+            border-radius: 3px;
+            border: 1px solid #1a1a1a;
+            padding-left: 16px;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21.6px;
+            text-align: start;
+            align-content: center;
+          }
+        }
+        .nameAndPhone_phone {
+          @extend .nameAndPhone_name;
+        }
+      }
+      .dateAndGender {
+        --bs-gutter-x: 24px;
+        .dateAndGender_date {
+          @extend .commonAttribute;
+          .item {
+            height: 58px;
+            flex: 1;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #1a1a1a;
+            cursor: pointer;
+            position: relative;
+            padding-left: 16px;
+            input {
+              width: 100%;
+            }
+            img {
+              position: absolute;
+              right: 16px;
+            }
+          }
+        }
+        .dateAndGender_gender {
+          @extend .commonAttribute;
+          select {
+            width: 100%;
+            height: 58px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border: 1px solid #1a1a1a;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("../../assets/svg/chevronDown.svg");
+            background-repeat: no-repeat;
+            background-position: right 16px center; /* Điều chỉnh vị trí theo ý muốn */
+          }
+        }
+      }
+      .emailAndConnect {
+        --bs-gutter-x: 24px;
+        .emailAndConnect_email {
+          @extend .commonAttribute;
+          input {
+            width: 100%;
+            height: 58px;
+            border-radius: 3px;
+            border: 1px solid #1a1a1a;
+            padding: 16px;
+          }
+        }
+        .emailAndConnect_connect {
+          @extend .commonAttribute;
+          .listConnect {
+            button {
+              flex: 1;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              border: 1px solid #1a1a1a;
+              justify-content: center;
+              border-radius: 3px;
+              span:last-of-type {
+                font-family: Roboto;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 14.4px;
+                text-align: center;
+                color: #29ab56;
+              }
+            }
+            button:nth-of-type(1) {
+              span:nth-of-type(1) {
+                color: #808080;
+              }
+            }
+            button:last-of-type {
+              span:first-of-type {
+                color: #1877f2;
+              }
+            }
+          }
+        }
+      }
+      .btnSaveChange {
+        width: 126px;
+        height: 50px;
+        background-color: #29ab56;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+        text-align: center;
+        color: white;
+        align-content: center;
+      }
+    }
+  }
+  .addressReceive {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 21px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    h1 {
+      @extend .titleMain;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .addressReceiveMain {
+      --bs-gutter-x: 24px;
+      .boxItem {
+        border: 1px solid #858585;
+        border-radius: 3px;
+        padding: 16px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .black0 {
+          color: #525252;
+        }
+
+        .top {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+        .bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          button {
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: normal;
+          }
+          .btnDefault {
+            width: 76px;
+            height: 28px;
+            color: white;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: normal;
+            text-align: center;
+            background-color: #29ab56;
+            border-radius: 2px;
+          }
+        }
+      }
+    }
+    .btnAddAddress {
+      width: 180px;
+      height: 44px;
+      padding: 8px 8px 8px 12px;
+      gap: 12px;
+      border-radius: 2px;
+      border: 1px 0px 0px 0px;
+      opacity: 0px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22.4px;
+      text-align: left;
+      color: #29ab56;
+      border: 1px solid #29ab56;
+      margin-left: 16px;
+    }
+    .modalAddAddress {
+      padding: 32px;
+      border-radius: 8px;
+      background-color: #fff;
+      h1 {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 26px;
+        text-align: justified;
+        color: #333333;
+      }
+      .modalAddAddressMain {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        .row {
+          --bs-gutter-x: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1066,13 +1066,41 @@ nav .pagination {
     .producDetail .productBriefing .productIllustration {
       grid-column: span 4;
       display: flex;
-      flex-direction: column; }
-      .producDetail .productBriefing .productIllustration .product-illustration_video {
-        margin-bottom: 15px; }
+      flex-direction: column;
+      position: relative; }
+      .producDetail .productBriefing .productIllustration .mainImage {
+        width: 100%;
+        margin-bottom: 15px;
+        position: relative; }
+        .producDetail .productBriefing .productIllustration .mainImage .product-illustration_video {
+          width: 100%;
+          object-fit: contain;
+          cursor: zoom-in;
+          display: block; }
+        .producDetail .productBriefing .productIllustration .mainImage .zoomImageReview {
+          display: none;
+          width: 400px;
+          height: 400px;
+          top: 0px;
+          left: calc(100% + 30px);
+          position: absolute;
+          z-index: 2;
+          background-color: #fff;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .producDetail .productBriefing .productIllustration .mainImage .zoomImageArea {
+          display: none;
+          width: 150px;
+          height: 150px;
+          position: absolute;
+          z-index: 2;
+          background-color: #fff;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border: 5px solid gray; }
       .producDetail .productBriefing .productIllustration .product-illustration_image {
+        align-self: center;
         display: flex;
         align-items: center;
-        width: 100%;
+        width: 90%;
         position: relative;
         margin-bottom: 19px; }
         .producDetail .productBriefing .productIllustration .product-illustration_image button {
@@ -1089,14 +1117,22 @@ nav .pagination {
           .producDetail .productBriefing .productIllustration .product-illustration_image button:hover {
             opacity: 0.5; }
         .producDetail .productBriefing .productIllustration .product-illustration_image .previous {
-          left: -15px;
+          left: -43px;
           transform: translateY(-50%); }
         .producDetail .productBriefing .productIllustration .product-illustration_image .next {
-          right: -15px;
+          right: -43px;
           transform: translateY(-50%); }
-        .producDetail .productBriefing .productIllustration .product-illustration_image .list-images {
+        .producDetail .productBriefing .productIllustration .product-illustration_image .listImages {
           width: 100%;
-          overflow-x: hidden; }
+          overflow-x: hidden;
+          display: flex;
+          align-items: center;
+          gap: 15px; }
+          .producDetail .productBriefing .productIllustration .product-illustration_image .listImages img {
+            cursor: pointer;
+            padding: 3px; }
+          .producDetail .productBriefing .productIllustration .product-illustration_image .listImages img.active {
+            border: 1px solid #29ab56; }
       .producDetail .productBriefing .productIllustration .product-share {
         align-self: center;
         display: flex;

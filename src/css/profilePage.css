@@ -1,0 +1,283 @@
+@charset "UTF-8";
+.titleMain, .profilePage .personalProfile h1, .profilePage .personalInformation h1, .profilePage .addressReceive h1 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left; }
+
+.divideHCommon, .profilePage .personalProfile .divideH, .profilePage .personalInformation .divideH {
+  max-height: 0.5px;
+  background-color: #c2c2c2;
+  margin-top: 16px;
+  margin-bottom: 16px; }
+
+.commonAttribute, .profilePage .personalInformation .personalInformation_main .nameAndPhone .nameAndPhone_name, .profilePage .personalInformation .personalInformation_main .nameAndPhone .nameAndPhone_phone, .profilePage .personalInformation .personalInformation_main .dateAndGender .dateAndGender_date, .profilePage .personalInformation .personalInformation_main .dateAndGender .dateAndGender_gender, .profilePage .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_email, .profilePage .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_connect {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: start; }
+  .commonAttribute span, .profilePage .personalInformation .personalInformation_main .nameAndPhone .nameAndPhone_name span, .profilePage .personalInformation .personalInformation_main .nameAndPhone .nameAndPhone_phone span, .profilePage .personalInformation .personalInformation_main .dateAndGender .dateAndGender_date span, .profilePage .personalInformation .personalInformation_main .dateAndGender .dateAndGender_gender span, .profilePage .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_email span, .profilePage .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_connect span {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+    text-align: center; }
+
+.profilePage {
+  padding-top: 50px;
+  padding-bottom: 124px; }
+  .profilePage .row {
+    --bs-gutter-x: 20px; }
+  .profilePage .personalProfile {
+    padding: 24px;
+    padding-bottom: 69px;
+    border: 1px solid #c2c2c2;
+    background-color: white;
+    height: 100%; }
+    .profilePage .personalProfile .accordion {
+      width: 100%; }
+      .profilePage .personalProfile .accordion ul {
+        list-style: none; }
+      .profilePage .personalProfile .accordion .accordion-item {
+        border: none; }
+        .profilePage .personalProfile .accordion .accordion-item .accordion-button:not(.collapsed) {
+          background-color: unset;
+          box-shadow: unset; }
+        .profilePage .personalProfile .accordion .accordion-item .accordion-button {
+          height: 56px;
+          padding: 16px;
+          width: 100%;
+          text-decoration: none; }
+          .profilePage .personalProfile .accordion .accordion-item .accordion-button span {
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22.4px;
+            text-align: left; }
+        .profilePage .personalProfile .accordion .accordion-item .accordion-collapse {
+          padding-left: 52px; }
+          .profilePage .personalProfile .accordion .accordion-item .accordion-collapse li {
+            height: 56px;
+            align-content: center;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22.4px;
+            text-align: left;
+            color: #858585; }
+            .profilePage .personalProfile .accordion .accordion-item .accordion-collapse li a.active {
+              color: #29ab56; }
+  .profilePage .personalInformation {
+    height: 100%;
+    padding: 24px;
+    padding-bottom: unset;
+    border: 1px solid #c2c2c2;
+    background-color: white; }
+    .profilePage .personalInformation .personalInformation_main {
+      padding-bottom: 71px; }
+      .profilePage .personalInformation .personalInformation_main .chooseAvatar label img {
+        width: 76px;
+        height: 76px;
+        object-fit: fill;
+        border-radius: 50%;
+        cursor: pointer; }
+      .profilePage .personalInformation .personalInformation_main .chooseAvatar input[type="file"] {
+        width: 0;
+        height: 0;
+        visibility: hidden; }
+      .profilePage .personalInformation .personalInformation_main .chooseAvatar .textRight span:nth-of-type(1) {
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24.3px;
+        letter-spacing: 0.5px;
+        text-align: left; }
+      .profilePage .personalInformation .personalInformation_main .chooseAvatar .textRight span:nth-of-type(2) {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18.2px;
+        text-align: left;
+        color: #858585; }
+      .profilePage .personalInformation .personalInformation_main .chooseAvatar .textRight button {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18.2px;
+        text-align: left;
+        text-decoration: underline; }
+      .profilePage .personalInformation .personalInformation_main .nameAndPhone {
+        --bs-gutter-x: 24px; }
+        .profilePage .personalInformation .personalInformation_main .nameAndPhone .nameAndPhone_name input, .profilePage .personalInformation .personalInformation_main .nameAndPhone .nameAndPhone_phone input {
+          width: 100%;
+          height: 58px;
+          border-radius: 3px;
+          border: 1px solid #1a1a1a;
+          padding-left: 16px;
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 21.6px;
+          text-align: start;
+          align-content: center; }
+      .profilePage .personalInformation .personalInformation_main .dateAndGender {
+        --bs-gutter-x: 24px; }
+        .profilePage .personalInformation .personalInformation_main .dateAndGender .dateAndGender_date .item {
+          height: 58px;
+          flex: 1;
+          border-radius: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #1a1a1a;
+          cursor: pointer;
+          position: relative;
+          padding-left: 16px; }
+          .profilePage .personalInformation .personalInformation_main .dateAndGender .dateAndGender_date .item input {
+            width: 100%; }
+          .profilePage .personalInformation .personalInformation_main .dateAndGender .dateAndGender_date .item img {
+            position: absolute;
+            right: 16px; }
+        .profilePage .personalInformation .personalInformation_main .dateAndGender .dateAndGender_gender select {
+          width: 100%;
+          height: 58px;
+          padding-left: 16px;
+          padding-right: 16px;
+          border: 1px solid #1a1a1a;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          background-image: url("../../assets/svg/chevronDown.svg");
+          background-repeat: no-repeat;
+          background-position: right 16px center;
+          /* Điều chỉnh vị trí theo ý muốn */ }
+      .profilePage .personalInformation .personalInformation_main .emailAndConnect {
+        --bs-gutter-x: 24px; }
+        .profilePage .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_email input {
+          width: 100%;
+          height: 58px;
+          border-radius: 3px;
+          border: 1px solid #1a1a1a;
+          padding: 16px; }
+        .profilePage .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_connect .listConnect button {
+          flex: 1;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          border: 1px solid #1a1a1a;
+          justify-content: center;
+          border-radius: 3px; }
+          .profilePage .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_connect .listConnect button span:last-of-type {
+            font-family: Roboto;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 14.4px;
+            text-align: center;
+            color: #29ab56; }
+        .profilePage .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_connect .listConnect button:nth-of-type(1) span:nth-of-type(1) {
+          color: #808080; }
+        .profilePage .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_connect .listConnect button:last-of-type span:first-of-type {
+          color: #1877f2; }
+      .profilePage .personalInformation .personalInformation_main .btnSaveChange {
+        width: 126px;
+        height: 50px;
+        background-color: #29ab56;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+        text-align: center;
+        color: white;
+        align-content: center; }
+  .profilePage .addressReceive {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 21px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px; }
+    .profilePage .addressReceive h1 {
+      text-transform: uppercase;
+      margin-bottom: 24px; }
+    .profilePage .addressReceive .addressReceiveMain {
+      --bs-gutter-x: 24px; }
+      .profilePage .addressReceive .addressReceiveMain .boxItem {
+        border: 1px solid #858585;
+        border-radius: 3px;
+        padding: 16px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 24px; }
+        .profilePage .addressReceive .addressReceiveMain .boxItem .black0 {
+          color: #525252; }
+        .profilePage .addressReceive .addressReceiveMain .boxItem .top {
+          display: flex;
+          flex-direction: column;
+          gap: 12px; }
+        .profilePage .addressReceive .addressReceiveMain .boxItem .bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+          .profilePage .addressReceive .addressReceiveMain .boxItem .bottom button {
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: normal; }
+          .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .btnDefault {
+            width: 76px;
+            height: 28px;
+            color: white;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: normal;
+            text-align: center;
+            background-color: #29ab56;
+            border-radius: 2px; }
+    .profilePage .addressReceive .btnAddAddress {
+      width: 180px;
+      height: 44px;
+      padding: 8px 8px 8px 12px;
+      gap: 12px;
+      border-radius: 2px;
+      border: 1px 0px 0px 0px;
+      opacity: 0px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22.4px;
+      text-align: left;
+      color: #29ab56;
+      border: 1px solid #29ab56;
+      margin-left: 16px; }
+    .profilePage .addressReceive .modalAddAddress {
+      padding: 32px;
+      border-radius: 8px;
+      background-color: #fff; }
+      .profilePage .addressReceive .modalAddAddress h1 {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 26px;
+        text-align: justified;
+        color: #333333; }
+      .profilePage .addressReceive .modalAddAddress .modalAddAddressMain {
+        display: flex;
+        flex-direction: column;
+        gap: 32px; }
+        .profilePage .addressReceive .modalAddAddress .modalAddAddressMain .row {
+          --bs-gutter-x: 24px; }

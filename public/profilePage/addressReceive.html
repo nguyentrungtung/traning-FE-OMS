@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../src/css/style.css" />
+    <link rel="stylesheet" href="../../src/css/header.css" />
+    <link rel="stylesheet" href="../../src/css/footer.css" />
+    <link rel="stylesheet" href="../../src/css/profilePage.css" />
+    <link rel="stylesheet" href="../../src/css/responsive-common.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"
+      integrity="sha512-K/oyQtMXpxI4+K0W7H25UopjM8pzq0yrVdFdG21Fh5dBe91I40pDd9A4lzNlHPHBIP2cwZuoxaUSX0GJSObvGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <div data-include-html="../../component/header.html"></div>
+
+    <main class="container-xxl profilePage">
+      <div class="row">
+        <div class="col-4">
+          <div class="personalProfile">
+            <h1>HỒ SƠ CÁ NHÂN</h1>
+            <span class="divideH"></span>
+            <ul class="accordion" id="accordionExample">
+              <script>
+                const listAccordionItem = [
+                  {
+                    p1: "Tài khoản của tôi",
+                    p2: ["Hồ sơ", "Địa chỉ", "Đổi mật khẩu"],
+                    link: "./profilePage/personalInformation.html",
+                  },
+                  {
+                    p1: "Lịch sử",
+                    link: "../../profilePage/historyOrder.html",
+                  },
+                  {
+                    p1: "Đơn hàng",
+                  },
+                  {
+                    p1: "Quản lý đổi trả",
+                  },
+                  {
+                    p1: "Thông báo",
+                  },
+                  {
+                    p1: "Đánh giá của tôi",
+                  },
+                ];
+                listAccordionItem.forEach((item, index) => {
+                  let contentUlCollapse = "";
+                  if (item.p2) {
+                    item.p2.forEach((item2) => {
+                      contentUlCollapse += `<li><a href="${item.link}">${item2}</a></li>`;
+                    });
+                  }
+                  document.write(`
+                      <li class="accordion-item">
+                  <a
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse${index}"
+                  >
+                    <span style="gap: 12px" class="d-flex align-items-center"
+                      ><img
+                        src="../../assets/images/iconLeftMenuProfile${
+                          index + 1
+                        }.svg"
+                        style="width: 24px; height: 24px; object-fit: contain"
+                        alt=""
+                      />
+                      <span>${item.p1}</span></span
+                    >
+                  </a>
+                  <ul
+                    id="collapse${index}"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample"
+                  >
+                    ${contentUlCollapse}
+                  </ul>
+                </li>
+                    `);
+                });
+              </script>
+            </ul>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="addressReceive">
+            <h1 style="padding-left: 16px">địa chỉ nhận hàng</h1>
+            <div class="addressReceiveMain row">
+              <div class="col-6">
+                <div class="boxItem">
+                  <div class="top">
+                    <div class="d-flex align-items-center" style="gap: 16px">
+                      <span>Nguyễn Thanh Hiếu</span>
+                      <span
+                        class="divideV"
+                        style="height: 20px; background-color: #858585"
+                      ></span>
+                      <span>032424475</span>
+                    </div>
+                    <span
+                      >50 Quang Trung, Phường xyz, Quận abc, Thành phố qwe,
+                      700000, Việt Nam</span
+                    >
+                    <span>hieunguyenn0001@gmail.com</span>
+                  </div>
+                  <div class="bottom">
+                    <div
+                      class="d-flex align-items-center"
+                      style="
+                        gap: 16px;
+                        color: #525252;
+                        text-decoration: underline;
+                      "
+                    >
+                      <button>Chỉnh sửa</button>
+                      <button>Xóa</button>
+                    </div>
+                    <button class="btnDefault">Mặc định</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="boxItem">
+                  <div class="top">
+                    <div class="d-flex align-items-center" style="gap: 16px">
+                      <span>Nguyễn Thanh Hiếu</span>
+                      <span
+                        class="divideV"
+                        style="height: 20px; background-color: #858585"
+                      ></span>
+                      <span>032424475</span>
+                    </div>
+                    <span
+                      >50 Quang Trung, Phường xyz, Quận abc, Thành phố qwe,
+                      700000, Việt Nam</span
+                    >
+                    <span>hieunguyenn0001@gmail.com</span>
+                  </div>
+                  <div class="bottom">
+                    <div
+                      class="d-flex align-items-center"
+                      style="
+                        gap: 16px;
+                        color: #525252;
+                        text-decoration: underline;
+                      "
+                    >
+                      <button>Chỉnh sửa</button>
+                      <button>Xóa</button>
+                    </div>
+                    <button class="btnDefault d-none">Mặc định</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              data-bs-toggle="modal"
+              data-bs-target="#modalAddAddress"
+              class="btnAddAddress"
+            >
+              <img src="../../assets/svg/addIcon.svg" alt="" />
+              <span>Thêm địa chỉ</span>
+            </button>
+            <div
+              class="modal fade"
+              id="modalAddAddress"
+              tabindex="-1"
+              style="display: none"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modalAddAddress">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h1 style="margin-bottom: unset">
+                        THÊM ĐỊA CHỈ GIAO HÀNG
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                      ></button>
+                    </div>
+                    <div class="modalAddAddressMain">
+                      <div class="row">
+                        <div class="col-6"></div>
+                        <div class="col-6"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <div data-include-html="../../component/footer.html"></div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script type="module" src="../../src/js/scripts.js"></script>
+</html>
