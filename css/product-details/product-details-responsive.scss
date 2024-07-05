@@ -17,6 +17,11 @@
         border-radius: 0;
         padding: 0 !important;
         .product-gallery {
+          .product-gallery__review,
+          .product-gallery__zoom-area,
+          .product-gallery__thumbnails-container {
+            display: none !important;
+          }
           .button-back__mobile {
             display: flex;
             align-items: center;

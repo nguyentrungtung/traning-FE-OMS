@@ -12,6 +12,11 @@
     border-radius: 0;
     padding: 0 !important;
   }
+  .product-details__wrapper .product-details__container .product-preview-info .product-gallery .product-gallery__review,
+  .product-details__wrapper .product-details__container .product-preview-info .product-gallery .product-gallery__zoom-area,
+  .product-details__wrapper .product-details__container .product-preview-info .product-gallery .product-gallery__thumbnails-container {
+    display: none !important;
+  }
   .product-details__wrapper .product-details__container .product-preview-info .product-gallery .button-back__mobile {
     display: flex;
     align-items: center;

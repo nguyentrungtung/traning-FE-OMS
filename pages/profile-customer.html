@@ -64,25 +64,536 @@
 
         <div class="container p-0" style="margin-top: 50px">
           <div class="row">
-            <div class="col-4">
+            <div class="col-3">
               <div class="profile-sidebar">
                 <p class="profile-customer__heading">Hồ sơ cá nhân</p>
                 <div class="profile-sidebar__categories">
                   <div class="sidebar-item">
+                    <div
+                      class="button__collapse-subcategory d-flex align-items-center justify-content-between"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseExample"
+                      aria-expanded="false"
+                      aria-controls="collapseExample"
+                    >
+                      <div class="d-flex align-items-center" style="gap: 12px">
+                        <div class="sidebar-icon">
+                          <img
+                            src="../images/profile-customer/icon/user.svg"
+                            alt="user"
+                          />
+                        </div>
+                        <p class="sidebar-title">Tài khoản của tôi</p>
+                      </div>
+                      <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="collapse subcategory-menu" id="collapseExample">
+                      <p class="button__sidebar-subtitle sub-active">Hồ sơ</p>
+                      <p class="button__sidebar-subtitle">Địa chỉ</p>
+                      <p class="button__sidebar-subtitle">Đổi mật khẩu</p>
+                    </div>
+                  </div>
+                  <div class="sidebar-item button-tab">
                     <div class="sidebar-icon">
                       <img
-                        src="../images/profile-customer/icon/user.svg"
+                        src="../images/profile-customer/icon/history.svg"
                         alt="user"
                       />
                     </div>
-                    <p class="sidebar-title">Tài khoản của tôi</p>
+                    <p class="sidebar-title">Lịch sử</p>
+                  </div>
+                  <div class="sidebar-item button-tab">
+                    <div class="sidebar-icon">
+                      <img
+                        src="../images/profile-customer/icon/order.svg"
+                        alt="user"
+                      />
+                    </div>
+                    <p class="sidebar-title">Đơn hàng</p>
+                  </div>
+                  <div class="sidebar-item button-tab">
+                    <div class="sidebar-icon">
+                      <img
+                        src="../images/profile-customer/icon/shippingbox_back.svg"
+                        alt="user"
+                      />
+                    </div>
+                    <p class="sidebar-title">Quản lý đổi trả</p>
+                  </div>
+                  <div class="sidebar-item button-tab">
+                    <div class="sidebar-icon">
+                      <img
+                        src="../images/profile-customer/icon/notification.svg"
+                        alt="user"
+                      />
+                    </div>
+                    <p class="sidebar-title">Thông báo</p>
+                  </div>
+                  <div class="sidebar-item button-tab">
+                    <div class="sidebar-icon">
+                      <img
+                        src="../images/profile-customer/icon/star.svg"
+                        alt="user"
+                      />
+                    </div>
+                    <p class="sidebar-title">Đánh giá của tôi</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-8">
-              <div class="profile-content">
+            <div class="col-9">
+              <div
+                class="profile-content user__sub-sidebar--content show__sub-sidebar--content"
+              >
                 <p class="profile-customer__heading">Thông tin cá nhân</p>
+                <div class="profile-content__user-info">
+                  <div class="row" style="row-gap: 24px">
+                    <div class="col-12">
+                      <div class="user-info__avatar">
+                        <div class="user-img">
+                          <img
+                            src="../images/profile-customer/user-img.png"
+                            alt="user-img"
+                          />
+                          <div class="overlay-img">
+                            <img
+                              class="camera-icon"
+                              src="../images/profile-customer/icon/camera.svg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="user-info__handle">
+                          <p class="text-uppercase user-info__heading">
+                            Ảnh đại diện
+                          </p>
+                          <p class="user-info__subtext">
+                            Chọn hoặc thay đổi ảnh hồ sơ của bạn
+                          </p>
+                          <button class="btn--delete-img">Xoá hình ảnh</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="fullName">Họ và tên</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="fullName"
+                          placeholder="Nhập vào họ và tên"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="phone">Số điện thoại</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="phone"
+                          placeholder="Nhập vào số điện thoại"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label>Ngày sinh</label>
+                        <div class="d-flex align-items-center" style="gap: 8px">
+                          <select class="form-select">
+                            <option selected="">Ngày</option>
+                            <option>20</option>
+                            <option>21</option>
+                          </select>
+                          <select class="form-select">
+                            <option selected="">Tháng</option>
+                            <option>12</option>
+                            <option>12</option>
+                          </select>
+                          <select class="form-select">
+                            <option selected="">Năm</option>
+                            <option>2001</option>
+                            <option>2002</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label>Giới tính</label>
+                        <select class="form-select">
+                          <option selected="">Nam</option>
+                          <option>Nữ</option>
+                          <option>Khác</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="email"
+                          placeholder="Nhập vào số điện thoại"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label>Liên kết mạng xã hội</label>
+                        <div class="row g-0" style="margin: 9px 0px">
+                          <div class="col-6">
+                            <button class="btn-link">
+                              <img
+                                class="icon-img"
+                                src="../images/profile-customer/icon/google_fill.svg"
+                                alt="icon-link"
+                              />
+                              <p class="icon-text google-color">Google</p>
+                              <a class="icon-link" href="#">Huỷ liên kết</a>
+                            </button>
+                          </div>
+                          <div class="col-6">
+                            <button class="btn-link">
+                              <img
+                                class="icon-img"
+                                src="../images/profile-customer/icon/Facebook.svg"
+                                alt="icon-link"
+                              />
+                              <p class="icon-text facebook-color">Facebook</p>
+                              <a class="icon-link" href="#">Liên kết</a>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6">
+                      <button class="btn-save">Lưu Thay Đổi</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="delivery-address user__sub-sidebar--content">
+                <p class="profile-customer__heading">Địa chỉ nhận hàng</p>
+                <div class="delivery-address__content">
+                  <div class="delivery-address__list">
+                    <div class="delivery-address__card">
+                      <div class="address-info">
+                        <div class="customer-info d-flex">
+                          <p class="customer-name">Nguyễn Công Đĩnh</p>
+                          <div class="line"></div>
+                          <p class="customer-phone">0987654321</p>
+                        </div>
+                        <p class="customer-address">
+                          50 Quang Trung, Phường xyz, Quận abc, Thành phố qwe,
+                          700000, Việt Nam
+                        </p>
+                        <p class="customer-email">
+                          nguyencongdinhnhb@gmail.com
+                        </p>
+                      </div>
+                      <div class="address-handle">
+                        <div class="btn-handle__block">
+                          <button class="btn-handle btn-edit">Chỉnh sửa</button>
+                          <button
+                            class="btn-handle btn-delete"
+                            data-bs-toggle="modal"
+                            data-bs-target="#delete-address"
+                          >
+                            Xoá
+                          </button>
+
+                          <div
+                            class="modal fade"
+                            id="delete-address"
+                            tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true"
+                          >
+                            <div class="modal-dialog modal-delete-dialog">
+                              <div class="modal-content modal-access-delete">
+                                <div class="modal-body modal-delete-body">
+                                  <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                  ></button>
+                                  <div class="modal-delete__content">
+                                    <div class="icon-access-delete">
+                                      <img
+                                        src="../images/profile-customer/icon/access-delete-icon.svg"
+                                        alt="icon-access-delete"
+                                      />
+                                    </div>
+                                    <div class="notify-delete">
+                                      <p class="notify-text text-uppercase">
+                                        Xác nhận xoá
+                                      </p>
+                                      <p class="notify-subtext">
+                                        Địa chỉ sẽ không được phục hồi sau khi
+                                        xoá!
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="modal-footer modal-delete-footer">
+                                  <button
+                                    type="button"
+                                    class="btn-handled btn-cancel"
+                                    data-bs-dismiss="modal"
+                                  >
+                                    Huỷ
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="btn-handled btn-access-delete"
+                                  >
+                                    Xác nhận
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex" style="gap: 18px">
+                          <button class="badge-address btn-origin">
+                            Mặc định
+                          </button>
+                          <button class="badge-address btn-other">
+                            Văn phòng
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="delivery-address__card">
+                      <div class="address-info">
+                        <div class="customer-info d-flex">
+                          <p class="customer-name">Nguyễn Công Đĩnh</p>
+                          <div class="line"></div>
+                          <p class="customer-phone">0987654321</p>
+                        </div>
+                        <p class="customer-address">
+                          50 Quang Trung, Phường xyz, Quận abc, Thành phố qwe,
+                          700000, Việt Nam
+                        </p>
+                        <p class="customer-email">
+                          nguyencongdinhnhb@gmail.com
+                        </p>
+                      </div>
+                      <div class="address-handle">
+                        <div class="btn-handle__block">
+                          <button class="btn-handle btn-edit">Chỉnh sửa</button>
+                          <button class="btn-handle btn-delete">Xoá</button>
+                        </div>
+                        <button class="badge-address btn-other">
+                          Văn phòng
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="btn-add-address"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    +&nbsp;&nbsp;&nbsp;Thêm địa chỉ
+                  </button>
+
+                  <div
+                    class="modal fade modal-lg"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <p class="modal-title">Thêm địa chỉ giao hàng</p>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="form-group">
+                                <label for="fullName">
+                                  Họ và tên <span class="text-danger">*</span>
+                                </label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="fullName"
+                                  placeholder="Tên người nhận hàng"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="form-group">
+                                <label for="fullName">
+                                  Số điện thoại
+                                  <span class="text-danger">*</span>
+                                </label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="fullName"
+                                  placeholder="Số điện thoại người nhận"
+                                />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="form-group">
+                                <label>Tỉnh / Thành Phố</label>
+                                <select class="form-select">
+                                  <option>Hà Nội</option>
+                                  <option>Nam Định</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="form-group">
+                                <label>Quận / Huyện</label>
+                                <select class="form-select">
+                                  <option>Thanh Xuân</option>
+                                  <option>Nghĩa Hưng</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="form-group">
+                                <label>Phường / Xã</label>
+                                <select class="form-select">
+                                  <option>Nhân Chính</option>
+                                  <option>Nghĩa Lạc</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="form-group">
+                                <label for="address">Số nhà / Tên đường</label>
+                                <textarea
+                                  class="form-control form__textarea"
+                                  id="address"
+                                  placeholder="Nhập địa chỉ..."
+                                ></textarea>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="form-group d-flex align-items-center">
+                                <input
+                                  class="form__checkbox"
+                                  type="checkbox"
+                                  name=""
+                                  id="set-origin"
+                                  style="cursor: pointer"
+                                />
+                                <label
+                                  for="set-origin"
+                                  class="mb-0"
+                                  style="cursor: pointer"
+                                >
+                                  Đặt làm mặc định
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn__add-address">
+                            Thêm địa chỉ
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="change-password user__sub-sidebar--content">
+                <p class="profile-customer__heading">Đổi mật khẩu</p>
+                <div class="change-password__form">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="old-password">Mật khẩu cũ</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="old-password"
+                          placeholder="Nhập mật khẩu cũ"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="new-password">Mật khẩu mới</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="new-password"
+                          placeholder="Nhập mật khẩu mới"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="renew-password">
+                          Nhập lại mật khẩu mới
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="renew-password"
+                          placeholder="Nhập lại mật khẩu mới"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <button class="btn__change-password">Đổi mật khẩu</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="history-content user__main-sidebar--content">
+                <h1>Lịch sử</h1>
+              </div>
+              <div
+                class="customer-order user__main-sidebar--content show__main-sidebar--content"
+              >
+                <h1>Đơn hàng</h1>
               </div>
             </div>
           </div>
@@ -96,5 +607,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/profile-customer.js"></script>
   </body>
 </html>
