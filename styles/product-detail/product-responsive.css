@@ -5,10 +5,49 @@
     .tab-content .tab-pane .w-50{
         width: 100% !important;
     }
+    .shop-banner-list{
+        display: none !important;
+    }
+    .shop-top{
+        height: 250px !important;
+    }
 }
 @media screen and (max-width: 1200px) {
     .product-info-top{
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .shop-top{
+        height: 350px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .product-section-banner-left{
+        padding: 0 !important;
+    }
+    .product-section-banner-left img{
+        object-position: center;
+    }
+    .product-section-products-right{
+        padding: 0 !important;
+        margin-top: 10px;
+    }
+    .shop-top{
+        height: 150px !important;
+    }
+    .shop-top-info-text .follower{
+        display: none !important;
+    }
+    .shop-top-info .shop-cert{
+        display: none !important;
+    }
+    .shop-top-interaction{
+        display: none !important;
+    }
+    .shop-top-interaction-2{
+        display: flex !important;
+    }
+    .nav.nav-tabs{
+        margin-bottom: 0px !important;
     }
 }

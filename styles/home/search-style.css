@@ -1,8 +1,10 @@
+@import url('./style.css');
 .result-filter{
     width: 215px;
 }
 .result-item{
     color: #0180C7;
+    max-width: 210px
 }
 .star{
     color: #FDB600;

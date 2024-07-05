@@ -51,3 +51,6 @@ function changeZoomImg(source, target){
         zoomWindowOffetx: 0 //margin left of zoomed element
     });
 }
+
+// Price Slider
+

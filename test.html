@@ -10,21 +10,104 @@
     <title>Sản phẩm ABC XYZ</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/screen-responsive.css">
     <link rel="stylesheet" href="/styles/product-detail/product-style.css">
     <link rel="stylesheet" href="/styles/product-detail/product-responsive.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.css">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        .noUi-target {
+            height: 8px;
+            border-radius: 4px;
+            background: #e0e0e0;
+        }
+        .noUi-connect {
+            background: #007bff;
+            height: 8px;
+            border-radius: 4px;
+        }
+        .noUi-horizontal .noUi-handle {
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid #007bff;
+            top: -5px;
+        }
+        .noUi-horizontal .noUi-handle:before,
+        .noUi-horizontal .noUi-handle:after {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="progress h-20px">
-        <div class="progress-bar bg-orange" role="progressbar" aria-valuenow="5" aria-valuemin="10" aria-valuemax="100" style="width: 5%">5</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <label for="slider" class="form-label">Price Range</label>
+                <div id="slider"></div>
+            </div>
+            <div class="col-md-6">
+                <label for="priceInputMin" class="form-label">Min Price</label>
+                <input type="number" class="form-control" id="priceInputMin" min="0" max="1000" step="10">
+            </div>
+            <div class="col-md-6">
+                <label for="priceInputMax" class="form-label">Max Price</label>
+                <input type="number" class="form-control" id="priceInputMax" min="0" max="1000" step="10">
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.js"></script>
     <script src="/app.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const priceInputMin = document.getElementById('priceInputMin');
+            const priceInputMax = document.getElementById('priceInputMax');
+
+            const slider = document.getElementById('slider');
+
+            noUiSlider.create(slider, {
+                start: [100, 900],
+                connect: true,
+                range: {
+                    'min': 0,
+                    'max': 1000
+                },
+                step: 10,
+                tooltips: true,
+                format: {
+                    to: function (value) {
+                        return Math.round(value);
+                    },
+                    from: function (value) {
+                        return Number(value);
+                    }
+                }
+            });
+
+            slider.noUiSlider.on('update', function (values, handle) {
+                if (handle === 0) {
+                    priceInputMin.value = values[0];
+                } else {
+                    priceInputMax.value = values[1];
+                }
+            });
+
+            priceInputMin.addEventListener('change', function() {
+                slider.noUiSlider.set([this.value, null]);
+            });
+
+            priceInputMax.addEventListener('change', function() {
+                slider.noUiSlider.set([null, this.value]);
+            });
+        });
     </script>
 </body>
 </html>
