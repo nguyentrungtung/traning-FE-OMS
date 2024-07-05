@@ -300,79 +300,7 @@
     </div>
   
   </div>
-  <button data-bs-toggle="modal"
-      data-bs-target="#modalEvaluateProduct">modalEvaluateProduct</button>
-      <div
-      class="modal fade"
-      id="modalEvaluateProduct"
-      tabindex="-1"
-      style="display: none"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modalEvaluateProduct">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              style="position: absolute; top: 32px; right: 24px"
-            ></button>
-            <div class="evaluate_info">
-              <img src="../../assets/svg/imgProductEvaluate.png" alt="">
-              <div class="d-flex flex-column align-items-start" style="gap: 8px;">
-                <span>Bông cải xanh Đà Lạt - 100g</span>
-                <span>06/04/2022 04:13</span>
-              </div>
-            </div>
-            <span class="divideH"></span>
-            <div class="evaluate_star">
-              <span class="commonTitle">ĐÁNH GIÁ</span>
-              <div class="d-flex align-items-center" style="gap: 12px;" >
-                <script>
-                  for(let i = 0 ;i<5;i++){
-                    document.write(`<img src="../../assets/svg/StargrayEvaluate.svg" alt="">`)
-                  }
-                </script>
-              </div>
-            </div>
-            <div class="evalueate_detail">
-              <textarea placeholder="Chia sẻ thêm thông tin sản phẩm" name="" id="danhgiasanpham"></textarea>
-              <span id="numberWordEvaluate" class="numberWord">0/120</span>
-              <div class="listBtn">
-                <script>
-                  const listBtn = ["Rất hài lòng!","Hài lòng!","Giao hàng nhanh, sản phẩm giống như hình!","Mua giá tốt, giao hàng nhanh!","Giao hàng chậm, cần cải thiện thêm."];
-                  for(let i = 0 ;i<listBtn.length;i++){
-                    document.write(`<button class="itemBtn">${listBtn[i]}</button>`)
-                  }
-
-                </script>
-              </div>
-            </div>
-            <script>
-              const textarea = document.getElementById("numberWordEvaluate")
-              const wordCount = document.querySelector('.modalEvaluateProduct .evalueate_detail .numberWord');
-              textarea.addEventListener('input', ()=>{
-                const text = textarea.value;
-                const words = text.trim().split(/\s+/); 
-                const wordCountValue = words.length;
-                wordCount.textContent = wordCountValue + '/120';
-              });
-            </script>
-            <div class="evaluate_bottom">
-              <button>
-                <img src="../../assets/svg/addImgIcon.svg" alt="">
-                <span>Thêm ảnh</span>
-              </button>
-              <button>Gửi đánh giá</button>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  
-  
-
+ 
     <main class="container-xxl profilePage">
       <div class="row">
         <div class="col-4">
@@ -509,6 +437,133 @@
                   />
                 </div>
                 <div class="historyOrder_orderList">
+
+                  <div
+                  class="modal fade"
+                  id="modalEvaluateProduct"
+                  tabindex="-1"
+                  style="display: none"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modalEvaluateProduct">
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          style="position: absolute; top: 32px; right: 24px"
+                        ></button>
+                        <div class="evaluate_info">
+                          <img src="../../assets/svg/imgProductEvaluate.png" alt="" />
+                          <div
+                            class="d-flex flex-column align-items-start"
+                            style="gap: 8px"
+                          >
+                            <span>Bông cải xanh Đà Lạt - 100g</span>
+                            <span>06/04/2022 04:13</span>
+                          </div>
+                        </div>
+                        <span class="divideH"></span>
+                        <div class="evaluate_star">
+                          <span class="commonTitle">ĐÁNH GIÁ</span>
+                          <div class="d-flex align-items-center" style="gap: 12px">
+                            <script>
+                              for(let i = 0 ;i<5;i++){
+                                document.write(`<img src="../../assets/svg/StargrayEvaluate.svg" alt="">`)
+                              }
+                            </script>
+                          </div>
+                        </div>
+                        <div class="evalueate_detail">
+                          <textarea
+                            placeholder="Chia sẻ thêm thông tin sản phẩm"
+                            name=""
+                            id="danhgiasanpham"
+                            oninput="handleInputEvaluate(event)"
+                            onblur="handleInputEvaluateBlur(event)"
+                          ></textarea>
+                          <div
+                            class="d-flex align-items-center justify-content-between align-self-end"
+                            style="position: relative; width: 100%"
+                          >
+                            <span id="validateTextarea" class="validateTextarea"
+                              >Lưu ý: Giới hạn nội dung đánh giá trên 5 kí tự</span
+                            >
+                            <span id="numberWordEvaluate" class="numberWord">0/120</span>
+                            <script>
+                              const numberWordEvaluate =
+                              document.getElementById("numberWordEvaluate");
+                            const handleInputEvaluate = (event) => {
+                              let text = event.target.value;
+                              let wordCountValue = text.length;
+                              numberWordEvaluate.textContent =
+                                wordCountValue.toString() + "/120";
+                              if (wordCountValue > 5) {
+                                document.getElementById(
+                                  "validateTextarea"
+                                ).style.visibility = "hidden";
+                              }
+                            };
+                            const handleInputEvaluateBlur = (event) => {
+                              if (event.target.value.length <= 5) {
+                                document.getElementById(
+                                  "validateTextarea"
+                                ).style.visibility = "unset";
+                              }
+                            };
+                            </script>
+                          </div>
+                          <div class="listBtn">
+                            <script>
+                            const databtn = [ "Rất hài lòng!",
+                                                  "Hài lòng!",
+                                                  "Giao hàng nhanh, sản phẩm giống như hình!",
+                                                  "Mua giá tốt, giao hàng nhanh!",
+                                                  "Giao hàng chậm, cần cải thiện thêm.", ];
+                          for(let i= 0;i<databtn.length;i++){
+                            document.write(`<button class="itemBtn">${databtn[i]}</button>`)
+                          }
+                            </script>
+                          </div>
+                        </div>
+
+                        <div class="evaluate_listImageUpload d-flex align-items-center w-100" style="gap: 12px;"></div>
+
+                        <div class="evaluate_bottom">
+                          <button> 
+                            <input id="chooseListImage" type="file" accept="image/*">
+                            <label for="chooseListImage">
+                              <img src="../../assets/svg/addImgIcon.svg" alt="" />
+                              <span>Thêm ảnh</span>
+                            </label>
+                          </button>
+
+                          <button>Gửi đánh giá</button>
+                        </div>
+                        <script>
+                          let btnUploadImage = document.getElementById("chooseListImage");
+                          let listImageUpload = document.querySelector(".profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .modalEvaluateProduct .evaluate_listImageUpload");
+                          btnUploadImage.addEventListener('change', function(event) {
+                            var files = event.target.files; 
+
+                            for (var i = 0; i < files.length; i++) {
+                              var file = files[i];
+                              var imageUrl = URL.createObjectURL(file); 
+
+                              var newImage = document.createElement('img');
+                              newImage.src = imageUrl;
+
+                              listImageUpload.appendChild(newImage);
+                            }
+                          });
+                        
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  
+                  <!-- create historyOrder_orderList -->
                   <script>
                     const historyOrder_orderList = [
                       { status: "dagiao", btn1: "datlai", btn2: "xemchitiet",btn3: "danhgia" },
@@ -533,11 +588,6 @@
                         btn2: "xemchitiet",
                       },
                     ];
-                    const modalEvaluateProduct = `
-                      
-                    
-                    `
-                    
                     for (let i = 0; i < historyOrder_orderList.length; i++) {
                       document.write(`
                         <div class="historyOrder_orderItem">
@@ -558,14 +608,13 @@
                         <span></span>
                         </button>
 
+
                         ${historyOrder_orderList[i].btn3 ? `
-                        <button class="${historyOrder_orderList[i].btn3}">
+                        <button data-bs-toggle="modal"
+                                data-bs-target="#modalEvaluateProduct" class="${historyOrder_orderList[i].btn3}">
                             <span></span>
                           </button>
                         `:""}
-
-
-
                       </div>
                     </div>
                     <span class="divideH"></span>
@@ -593,7 +642,7 @@
                       <div class="itemProduct">
                         <div class="left">
                           <img
-                            src="../../assets/svg/imgprHistory1.png"
+                            src="../../assets/svg/imgprHistory2.png"
                             alt=""
                           />
                           <div class="d-flex flex-column gap-2">
@@ -777,6 +826,5 @@
       
   </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
   <script type="module" src="../../src/js/scripts.js"></script>
 </html>
