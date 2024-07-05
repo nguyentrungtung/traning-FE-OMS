@@ -1,5 +1,8 @@
 @charset "UTF-8";
-.titleMain, .profilePage .personalProfile h1, .profilePage .personalInformation h1, .profilePage .addressReceive h1 {
+.modal {
+  --bs-modal-width: fit-content !important; }
+
+.titleMain, .profilePage .personalProfile h1, .profilePage .personalInformation h1, .profilePage .addressReceive h1, .profilePage .changePassword .changePassword_main h1 {
   font-family: Roboto;
   font-size: 20px;
   font-weight: 500;
@@ -24,6 +27,33 @@
     line-height: 22.4px;
     text-align: center; }
 
+.commonBtnGreen, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.datlai, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.thanhtoan {
+  border-radius: 2px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #29ab56; }
+
+.commonBtnBorder, .commonBtnBorderGray, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.huydonhang, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.xemchitiet, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.theodoidonhang, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.danhgia {
+  border-radius: 2px;
+  border: 1px solid #29ab56;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  color: #29ab56;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.commonBtnBorderGray, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.huydonhang {
+  border: 1px solid #a6a6a6;
+  color: #a6a6a6; }
+
 .profilePage {
   padding-top: 50px;
   padding-bottom: 124px; }
@@ -33,8 +63,7 @@
     padding: 24px;
     padding-bottom: 69px;
     border: 1px solid #c2c2c2;
-    background-color: white;
-    height: 100%; }
+    background-color: white; }
     .profilePage .personalProfile .accordion {
       width: 100%; }
       .profilePage .personalProfile .accordion ul {
@@ -44,12 +73,14 @@
         .profilePage .personalProfile .accordion .accordion-item .accordion-button:not(.collapsed) {
           background-color: unset;
           box-shadow: unset; }
-        .profilePage .personalProfile .accordion .accordion-item .accordion-button {
+        .profilePage .personalProfile .accordion .accordion-item .accordion-button,
+        .profilePage .personalProfile .accordion .accordion-item a {
           height: 56px;
           padding: 16px;
           width: 100%;
           text-decoration: none; }
-          .profilePage .personalProfile .accordion .accordion-item .accordion-button span {
+          .profilePage .personalProfile .accordion .accordion-item .accordion-button span,
+          .profilePage .personalProfile .accordion .accordion-item a span {
             font-family: Roboto;
             font-size: 16px;
             font-weight: 500;
@@ -245,6 +276,63 @@
             text-align: center;
             background-color: #29ab56;
             border-radius: 2px; }
+          .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalConfirmRemove, .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalCanNotRemove {
+            padding: 32px 24px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            background-color: #fff;
+            position: relative;
+            width: 600px; }
+            .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalConfirmRemove .top, .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalCanNotRemove .top {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 24px; }
+              .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalConfirmRemove .top span:first-of-type, .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalCanNotRemove .top span:first-of-type {
+                font-family: Roboto;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 28px;
+                text-align: center;
+                color: #29ab56; }
+              .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalConfirmRemove .top span:last-of-type, .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalCanNotRemove .top span:last-of-type {
+                font-family: Roboto;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 21.6px;
+                text-align: center; }
+            .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalConfirmRemove .bottom, .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalCanNotRemove .bottom {
+              display: flex;
+              align-items: center;
+              gap: 24px; }
+              .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalConfirmRemove .bottom button, .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalCanNotRemove .bottom button {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                flex: 1;
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 20.3px;
+                text-align: center; }
+              .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalConfirmRemove .bottom button:first-of-type, .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalCanNotRemove .bottom button:first-of-type {
+                border: 1.5px solid #29ab56;
+                background-color: white;
+                border-radius: 2px;
+                color: #29ab56; }
+              .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalConfirmRemove .bottom button:last-of-type, .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalCanNotRemove .bottom button:last-of-type {
+                background-color: #29ab56;
+                color: white; }
+          .profilePage .addressReceive .addressReceiveMain .boxItem .bottom .modalCanNotRemove .btnClose {
+            width: 360px;
+            background-color: #fff;
+            border-radius: 3px;
+            color: #29ab56;
+            border: 1.5px solid #29ab56;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            align-self: center; }
     .profilePage .addressReceive .btnAddAddress {
       width: 180px;
       height: 44px;
@@ -267,6 +355,10 @@
     .profilePage .addressReceive .modalAddAddress {
       padding: 32px;
       border-radius: 8px;
+      min-width: 797px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
       background-color: #fff; }
       .profilePage .addressReceive .modalAddAddress h1 {
         font-family: Roboto;
@@ -274,10 +366,479 @@
         font-weight: 500;
         line-height: 26px;
         text-align: justified;
-        color: #333333; }
+        color: #333333;
+        margin-bottom: unset; }
       .profilePage .addressReceive .modalAddAddress .modalAddAddressMain {
         display: flex;
-        flex-direction: column;
-        gap: 32px; }
+        flex-direction: column; }
+        .profilePage .addressReceive .modalAddAddress .modalAddAddressMain .commonField {
+          display: flex;
+          flex-direction: column;
+          align-items: start; }
+          .profilePage .addressReceive .modalAddAddress .modalAddAddressMain .commonField .name {
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22.4px;
+            text-align: left;
+            margin-bottom: 8px; }
+          .profilePage .addressReceive .modalAddAddress .modalAddAddressMain .commonField .redstar {
+            color: red; }
+          .profilePage .addressReceive .modalAddAddress .modalAddAddressMain .commonField .commonInput {
+            width: 100%;
+            height: 58px;
+            padding: 16px;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22.4px;
+            text-align: left;
+            color: #4d4d4d; }
         .profilePage .addressReceive .modalAddAddress .modalAddAddressMain .row {
           --bs-gutter-x: 24px; }
+          .profilePage .addressReceive .modalAddAddress .modalAddAddressMain .row textarea {
+            width: 100%;
+            height: 122px;
+            border: 1px solid #1a1a1a;
+            padding: 16px;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22.4px;
+            text-align: left;
+            resize: none; }
+        .profilePage .addressReceive .modalAddAddress .modalAddAddressMain .row:nth-of-type(1) .commonField input {
+          border-radius: 2px;
+          border: 1px solid #1a1a1a; }
+        .profilePage .addressReceive .modalAddAddress .modalAddAddressMain .setDefault span {
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+          text-align: left; }
+      .profilePage .addressReceive .modalAddAddress .btnAddAddress {
+        width: 300px;
+        height: 50px;
+        margin: 0;
+        background-color: #29ab56;
+        color: white;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+  .profilePage .changePassword {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 3px;
+    padding-bottom: 21px;
+    height: fit-content; }
+    .profilePage .changePassword .changePassword_main {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 16px;
+      border: 1px solid #858585;
+      border-radius: 3px;
+      padding: 24px;
+      margin-bottom: 40px; }
+      .profilePage .changePassword .changePassword_main .commonAttribute, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .nameAndPhone .nameAndPhone_name, .profilePage .personalInformation .personalInformation_main .nameAndPhone .changePassword .changePassword_main .nameAndPhone_name, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .nameAndPhone .nameAndPhone_phone, .profilePage .personalInformation .personalInformation_main .nameAndPhone .changePassword .changePassword_main .nameAndPhone_phone, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .dateAndGender .dateAndGender_date, .profilePage .personalInformation .personalInformation_main .dateAndGender .changePassword .changePassword_main .dateAndGender_date, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .dateAndGender .dateAndGender_gender, .profilePage .personalInformation .personalInformation_main .dateAndGender .changePassword .changePassword_main .dateAndGender_gender, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_email, .profilePage .personalInformation .personalInformation_main .emailAndConnect .changePassword .changePassword_main .emailAndConnect_email, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_connect, .profilePage .personalInformation .personalInformation_main .emailAndConnect .changePassword .changePassword_main .emailAndConnect_connect {
+        width: 437px; }
+        .profilePage .changePassword .changePassword_main .commonAttribute input, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .nameAndPhone .nameAndPhone_name input, .profilePage .personalInformation .personalInformation_main .nameAndPhone .changePassword .changePassword_main .nameAndPhone_name input, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .nameAndPhone .nameAndPhone_phone input, .profilePage .personalInformation .personalInformation_main .nameAndPhone .changePassword .changePassword_main .nameAndPhone_phone input, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .dateAndGender .dateAndGender_date input, .profilePage .personalInformation .personalInformation_main .dateAndGender .changePassword .changePassword_main .dateAndGender_date input, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .dateAndGender .dateAndGender_gender input, .profilePage .personalInformation .personalInformation_main .dateAndGender .changePassword .changePassword_main .dateAndGender_gender input, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_email input, .profilePage .personalInformation .personalInformation_main .emailAndConnect .changePassword .changePassword_main .emailAndConnect_email input, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_connect input, .profilePage .personalInformation .personalInformation_main .emailAndConnect .changePassword .changePassword_main .emailAndConnect_connect input {
+          width: 100%;
+          height: 58px;
+          padding: 16px;
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 21.6px;
+          border: 1px solid #1a1a1a;
+          border-radius: 3px; }
+          .profilePage .changePassword .changePassword_main .commonAttribute input ::placeholder, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .nameAndPhone .nameAndPhone_name input ::placeholder, .profilePage .personalInformation .personalInformation_main .nameAndPhone .changePassword .changePassword_main .nameAndPhone_name input ::placeholder, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .nameAndPhone .nameAndPhone_phone input ::placeholder, .profilePage .personalInformation .personalInformation_main .nameAndPhone .changePassword .changePassword_main .nameAndPhone_phone input ::placeholder, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .dateAndGender .dateAndGender_date input ::placeholder, .profilePage .personalInformation .personalInformation_main .dateAndGender .changePassword .changePassword_main .dateAndGender_date input ::placeholder, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .dateAndGender .dateAndGender_gender input ::placeholder, .profilePage .personalInformation .personalInformation_main .dateAndGender .changePassword .changePassword_main .dateAndGender_gender input ::placeholder, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_email input ::placeholder, .profilePage .personalInformation .personalInformation_main .emailAndConnect .changePassword .changePassword_main .emailAndConnect_email input ::placeholder, .profilePage .changePassword .changePassword_main .personalInformation .personalInformation_main .emailAndConnect .emailAndConnect_connect input ::placeholder, .profilePage .personalInformation .personalInformation_main .emailAndConnect .changePassword .changePassword_main .emailAndConnect_connect input ::placeholder {
+            color: #858585; }
+    .profilePage .changePassword .btnChangePassword {
+      align-self: center;
+      width: 300px;
+      height: 50px;
+      border-radius: 2px;
+      background-color: #29ab56;
+      color: white;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22.4px; }
+    .profilePage .changePassword .modalSuccessChangePassword {
+      width: 408px;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+      position: relative; }
+      .profilePage .changePassword .modalSuccessChangePassword span {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+        text-align: center;
+        color: #29ab56; }
+  .profilePage .historyOrder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    gap: 16px; }
+    .profilePage .historyOrder h1 {
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 26px;
+      text-align: left;
+      color: #29ab56;
+      text-transform: uppercase; }
+    .profilePage .historyOrder .historyOrder_navs {
+      border: none;
+      width: 100%;
+      border-radius: 4px;
+      padding: 3px;
+      background-color: #f0f0f0;
+      height: 46px; }
+      .profilePage .historyOrder .historyOrder_navs .nav-item {
+        flex: 1; }
+        .profilePage .historyOrder .historyOrder_navs .nav-item button {
+          width: 100%;
+          height: 100%;
+          font-family: Roboto;
+          background-color: unset;
+          font-size: 15px;
+          font-weight: 700;
+          line-height: 18px;
+          text-align: center;
+          color: #888888;
+          border-radius: 4px; }
+        .profilePage .historyOrder .historyOrder_navs .nav-item button.active {
+          color: #29ab56;
+          background-color: #fff; }
+    .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 {
+      display: flex;
+      flex-direction: column;
+      gap: 32px; }
+      .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_searchTop {
+        border-radius: 4px;
+        border: 1px solid #cacaca;
+        width: 100%;
+        height: 38px;
+        padding-left: 39px;
+        padding-right: 9px;
+        position: relative;
+        background-color: #fff;
+        display: flex;
+        align-items: center; }
+        .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_searchTop img {
+          position: absolute;
+          width: 20px;
+          left: 9px;
+          object-fit: contain; }
+        .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_searchTop input {
+          width: 100%;
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16.41px;
+          text-align: left;
+          border: none;
+          outline: none;
+          padding: 0;
+          margin: 0; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_searchTop input ::placeholder {
+            color: #858585; }
+      .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList {
+        display: flex;
+        flex-direction: column;
+        gap: 24px; }
+        .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem {
+          border-radius: 2px;
+          border: 1px solid #dbdee5;
+          padding: 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .divideH {
+            height: 0.5px;
+            max-height: 0.5px;
+            background-color: #c2c2c2; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .commonStatus, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dagiao span::before, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dangvanchuyen span::before, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dahuy span::before, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .chothanhtoan span::before, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dangxuly span::before {
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22.4px;
+            text-align: left; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dagiao, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dangvanchuyen, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dahuy {
+            display: flex;
+            align-items: center;
+            gap: 4px; }
+            .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dagiao div, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dangvanchuyen div, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dahuy div {
+              background-image: url("../../assets/svg/icondagiao.svg");
+              width: 24px;
+              height: 24px;
+              content: ""; }
+            .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dagiao span::before, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dangvanchuyen span::before, .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dahuy span::before {
+              color: #29ab56;
+              content: "ĐÃ GIAO"; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .chothanhtoan {
+            display: flex;
+            align-items: center;
+            gap: 4px; }
+            .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .chothanhtoan div {
+              background-image: url("../../assets/svg/iconchothanhtoan.svg");
+              width: 24px;
+              height: 24px;
+              content: ""; }
+            .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .chothanhtoan span::before {
+              color: #ffb800;
+              content: "CHỜ THANH TOÁN"; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dangxuly {
+            display: flex;
+            align-items: center;
+            gap: 4px; }
+            .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dangxuly div {
+              background-image: url("../../assets/svg/icondangxuly.svg");
+              width: 24px;
+              height: 24px;
+              content: ""; }
+            .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dangxuly span::before {
+              color: #fb424f;
+              content: "ĐANG XỬ LÝ"; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dangvanchuyen div {
+            background-image: url("../../assets/svg/icondangvanchuyen.svg"); }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dangvanchuyen span::before {
+            content: "ĐANG VẬN CHUYỂN"; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dahuy div {
+            background-image: url("../../assets/svg/icondahuy.svg"); }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .dahuy span::before {
+            color: #959595;
+            content: "ĐÃ HỦY"; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .listProduct {
+            display: flex;
+            flex-direction: column;
+            gap: 16px; }
+            .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .listProduct .itemProduct {
+              display: flex;
+              align-items: center;
+              gap: 24px;
+              height: 120px; }
+              .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .listProduct .itemProduct .left {
+                display: flex;
+                align-items: center;
+                flex: 1; }
+                .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .listProduct .itemProduct .left img {
+                  width: 120px;
+                  object-fit: contain;
+                  margin-right: 24px; }
+                .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .listProduct .itemProduct .left span:first-of-type {
+                  font-family: Roboto;
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 18.2px;
+                  text-align: left;
+                  color: #848484; }
+                .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .listProduct .itemProduct .left span:last-of-type {
+                  font-family: Roboto;
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 22.4px;
+                  text-align: left;
+                  color: #666666; }
+              .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .listProduct .itemProduct .right {
+                width: 392px;
+                min-height: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-wrap: nowrap; }
+                .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .listProduct .itemProduct .right .item1 {
+                  width: 150px; }
+                  .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .listProduct .itemProduct .right .item1 span:first-of-type {
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 18.2px;
+                    text-align: left;
+                    color: #a3a3a3;
+                    text-decoration: line-through; }
+                  .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .listProduct .itemProduct .right .item1 span:last-of-type {
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 22.4px;
+                    text-align: left;
+                    color: #29ab56; }
+                .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .listProduct .itemProduct .right .item2 {
+                  width: 40px;
+                  font-family: Roboto;
+                  font-size: 16px;
+                  font-weight: 700;
+                  line-height: 22.4px;
+                  text-align: left;
+                  color: #29ab56; }
+                .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .listProduct .itemProduct .right .item3 {
+                  width: 150px;
+                  font-family: Roboto;
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 22.4px;
+                  text-align: right;
+                  color: #29ab56; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem .sumPrice {
+            align-self: flex-end;
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24.3px;
+            letter-spacing: 0.5px; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.datlai {
+            width: 102px;
+            height: 34px; }
+            .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.datlai span::before {
+              content: "Đặt lại"; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.xemchitiet {
+            width: 99px;
+            height: 34px; }
+            .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.xemchitiet span::before {
+              content: "Xem chi tiết"; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.huydonhang {
+            width: 112px;
+            height: 34px; }
+            .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.huydonhang span::before {
+              content: "Hủy đơn hàng"; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.thanhtoan {
+            width: 96px;
+            height: 34px; }
+            .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.thanhtoan span::before {
+              content: "Thanh toán"; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.theodoidonhang {
+            width: 142px;
+            height: 34px; }
+            .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.theodoidonhang span::before {
+              content: "Theo dõi đơn hàng"; }
+          .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.danhgia {
+            width: 80px;
+            height: 34px; }
+            .profilePage .historyOrder .historyOrder_tabs #historyOrder_tab1 .historyOrder_orderList .historyOrder_orderItem button.danhgia span::before {
+              content: "Đánh giá"; }
+
+.modalEvaluateProduct {
+  width: 600px;
+  border-radius: 8px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative; }
+  .modalEvaluateProduct .evaluate_info {
+    display: flex;
+    align-items: center;
+    gap: 24px; }
+    .modalEvaluateProduct .evaluate_info img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain; }
+    .modalEvaluateProduct .evaluate_info span:first-of-type {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: left; }
+    .modalEvaluateProduct .evaluate_info span:last-of-type {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18.2px;
+      text-align: left;
+      color: #858585; }
+  .modalEvaluateProduct .divideH {
+    max-height: 0.5px;
+    height: 0.5px;
+    background-color: #dbdee5; }
+  .modalEvaluateProduct .evaluate_star {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 12px; }
+    .modalEvaluateProduct .evaluate_star .commonTitle {
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+      text-align: center; }
+    .modalEvaluateProduct .evaluate_star img {
+      width: 40px;
+      object-fit: contain; }
+  .modalEvaluateProduct .evalueate_detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px; }
+    .modalEvaluateProduct .evalueate_detail textarea {
+      width: 100%;
+      height: 144px;
+      border: 0.5px solid #dbdee5;
+      border-radius: 2px;
+      padding: 14px 16px;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21.6px;
+      resize: none; }
+      .modalEvaluateProduct .evalueate_detail textarea ::placeholder {
+        color: #858585; }
+    .modalEvaluateProduct .evalueate_detail .numberWord {
+      align-self: flex-end;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18.2px;
+      text-align: left;
+      color: #858585; }
+    .modalEvaluateProduct .evalueate_detail .listBtn {
+      align-self: flex-start;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 4px;
+      row-gap: 5px; }
+      .modalEvaluateProduct .evalueate_detail .listBtn .itemBtn {
+        width: fit-content;
+        padding: 6px 10px;
+        border-radius: 99px;
+        background-color: #f0f8ff;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: center;
+        color: #2e9dff; }
+  .modalEvaluateProduct .evaluate_bottom {
+    display: flex;
+    align-items: center;
+    gap: 24px; }
+    .modalEvaluateProduct .evaluate_bottom button {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20.3px;
+      flex: 1;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px; }
+    .modalEvaluateProduct .evaluate_bottom button:first-of-type {
+      border-radius: 2px;
+      border: 1.5px solid #858585; }
+    .modalEvaluateProduct .evaluate_bottom button:last-of-type {
+      background-color: #858585;
+      color: white; }

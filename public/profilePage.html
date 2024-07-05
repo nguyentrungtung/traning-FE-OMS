@@ -65,7 +65,7 @@
                   document.write(`
                       <li class="accordion-item">
                   <a
-                    class="accordion-button collapsed"
+                    class="${item.p2 ? "accordion-button" : ""} collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapse${index}"

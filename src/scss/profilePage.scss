@@ -1,3 +1,6 @@
+.modal {
+  --bs-modal-width: fit-content !important;
+}
 .titleMain {
   font-family: Roboto;
   font-size: 20px;
@@ -24,6 +27,34 @@
     text-align: center;
   }
 }
+.commonBtnGreen {
+  border-radius: 2px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #29ab56;
+}
+.commonBtnBorder {
+  border-radius: 2px;
+  border: 1px solid #29ab56;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  color: #29ab56;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.commonBtnBorderGray {
+  @extend .commonBtnBorder;
+  border: 1px solid #a6a6a6;
+  color: #a6a6a6;
+}
 
 .profilePage {
   padding-top: 50px;
@@ -36,7 +67,7 @@
     padding-bottom: 69px;
     border: 1px solid #c2c2c2;
     background-color: white;
-    height: 100%;
+    // height: 100%;
     h1 {
       @extend .titleMain;
     }
@@ -55,7 +86,8 @@
           background-color: unset;
           box-shadow: unset;
         }
-        .accordion-button {
+        .accordion-button,
+        a {
           height: 56px;
           padding: 16px;
           width: 100%;
@@ -327,6 +359,75 @@
             background-color: #29ab56;
             border-radius: 2px;
           }
+          .modalConfirmRemove {
+            padding: 32px 24px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            background-color: #fff;
+            position: relative;
+            width: 600px;
+            .top {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 24px;
+              span:first-of-type {
+                font-family: Roboto;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 28px;
+                text-align: center;
+                color: #29ab56;
+              }
+              span:last-of-type {
+                font-family: Roboto;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 21.6px;
+                text-align: center;
+              }
+            }
+            .bottom {
+              display: flex;
+              align-items: center;
+              gap: 24px;
+              button {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                flex: 1;
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 20.3px;
+                text-align: center;
+              }
+              button:first-of-type {
+                border: 1.5px solid #29ab56;
+                background-color: white;
+                border-radius: 2px;
+                color: #29ab56;
+              }
+              button:last-of-type {
+                background-color: #29ab56;
+                color: white;
+              }
+            }
+          }
+          .modalCanNotRemove {
+            @extend .modalConfirmRemove;
+            .btnClose {
+              width: 360px;
+              background-color: #fff;
+              border-radius: 3px;
+              color: #29ab56;
+              border: 1.5px solid #29ab56;
+              padding-top: 12px;
+              padding-bottom: 12px;
+              align-self: center;
+            }
+          }
         }
       }
     }
@@ -353,6 +454,10 @@
     .modalAddAddress {
       padding: 32px;
       border-radius: 8px;
+      min-width: 797px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
       background-color: #fff;
       h1 {
         font-family: Roboto;
@@ -361,15 +466,599 @@
         line-height: 26px;
         text-align: justified;
         color: #333333;
+        margin-bottom: unset;
       }
       .modalAddAddressMain {
         display: flex;
         flex-direction: column;
-        gap: 32px;
+
+        .commonField {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          .name {
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22.4px;
+            text-align: left;
+            margin-bottom: 8px;
+          }
+          .redstar {
+            color: red;
+          }
+          .commonInput {
+            width: 100%;
+            height: 58px;
+            padding: 16px;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22.4px;
+            text-align: left;
+            color: #4d4d4d;
+          }
+        }
         .row {
           --bs-gutter-x: 24px;
+          textarea {
+            width: 100%;
+            height: 122px;
+            border: 1px solid #1a1a1a;
+            padding: 16px;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22.4px;
+            text-align: left;
+            resize: none;
+          }
+        }
+        .row:nth-of-type(1) {
+          .commonField {
+            input {
+              border-radius: 2px;
+              border: 1px solid #1a1a1a;
+            }
+          }
+        }
+        .setDefault {
+          span {
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            text-align: left;
+          }
         }
       }
+      .btnAddAddress {
+        width: 300px;
+        height: 50px;
+        margin: 0;
+        background-color: #29ab56;
+        color: white;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  .changePassword {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 3px;
+    padding-bottom: 21px;
+    height: fit-content;
+    .changePassword_main {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 16px;
+      border: 1px solid #858585;
+      border-radius: 3px;
+      padding: 24px;
+      margin-bottom: 40px;
+      h1 {
+        @extend .titleMain;
+      }
+      .commonAttribute {
+        width: 437px;
+        input {
+          width: 100%;
+          height: 58px;
+          padding: 16px;
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 21.6px;
+          border: 1px solid #1a1a1a;
+          border-radius: 3px;
+          ::placeholder {
+            color: #858585;
+          }
+        }
+      }
+    }
+    .btnChangePassword {
+      align-self: center;
+      width: 300px;
+      height: 50px;
+      border-radius: 2px;
+      background-color: #29ab56;
+      color: white;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22.4px;
+    }
+    .modalSuccessChangePassword {
+      width: 408px;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+      position: relative;
+      span {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+        text-align: center;
+        color: #29ab56;
+      }
+    }
+  }
+  .historyOrder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    gap: 16px;
+    h1 {
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 26px;
+      text-align: left;
+      color: #29ab56;
+      text-transform: uppercase;
+    }
+    .historyOrder_navs {
+      border: none;
+      width: 100%;
+      border-radius: 4px;
+      padding: 3px;
+      background-color: #f0f0f0;
+      height: 46px;
+      .nav-item {
+        flex: 1;
+        button {
+          width: 100%;
+          height: 100%;
+          font-family: Roboto;
+          background-color: unset;
+          font-size: 15px;
+          font-weight: 700;
+          line-height: 18px;
+          text-align: center;
+          color: #888888;
+          border-radius: 4px;
+        }
+        button.active {
+          color: #29ab56;
+          background-color: #fff;
+        }
+      }
+    }
+    .historyOrder_tabs {
+      #historyOrder_tab1 {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        .historyOrder_searchTop {
+          border-radius: 4px;
+          border: 1px solid #cacaca;
+          width: 100%;
+          height: 38px;
+          padding-left: 39px;
+          padding-right: 9px;
+          position: relative;
+          background-color: #fff;
+          display: flex;
+          align-items: center;
+          img {
+            position: absolute;
+            width: 20px;
+            left: 9px;
+            object-fit: contain;
+          }
+          input {
+            width: 100%;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.41px;
+            text-align: left;
+            border: none;
+            outline: none;
+            padding: 0;
+            margin: 0;
+            ::placeholder {
+              color: #858585;
+            }
+          }
+        }
+        .historyOrder_orderList {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          .historyOrder_orderItem {
+            border-radius: 2px;
+            border: 1px solid #dbdee5;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .divideH {
+              height: 0.5px;
+              max-height: 0.5px;
+              background-color: #c2c2c2;
+            }
+            .commonStatus {
+              font-family: Roboto;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 22.4px;
+              text-align: left;
+            }
+            .dagiao {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              div {
+                background-image: url("../../assets/svg/icondagiao.svg");
+                width: 24px;
+                height: 24px;
+                content: "";
+              }
+              span::before {
+                @extend .commonStatus;
+                color: #29ab56;
+                content: "ĐÃ GIAO";
+              }
+            }
+            .chothanhtoan {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              div {
+                background-image: url("../../assets/svg/iconchothanhtoan.svg");
+                width: 24px;
+                height: 24px;
+                content: "";
+              }
+              span::before {
+                @extend .commonStatus;
+                color: #ffb800;
+                content: "CHỜ THANH TOÁN";
+              }
+            }
+            .dangxuly {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              div {
+                background-image: url("../../assets/svg/icondangxuly.svg");
+                width: 24px;
+                height: 24px;
+                content: "";
+              }
+              span::before {
+                @extend .commonStatus;
+                color: #fb424f;
+                content: "ĐANG XỬ LÝ";
+              }
+            }
+            .dangvanchuyen {
+              @extend .dagiao;
+              div {
+                background-image: url("../../assets/svg/icondangvanchuyen.svg");
+              }
+              span::before {
+                content: "ĐANG VẬN CHUYỂN";
+              }
+            }
+            .dahuy {
+              @extend .dagiao;
+              div {
+                background-image: url("../../assets/svg/icondahuy.svg");
+              }
+              span::before {
+                color: #959595;
+                content: "ĐÃ HỦY";
+              }
+            }
+            .listProduct {
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+              .itemProduct {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                height: 120px;
+                .left {
+                  display: flex;
+                  align-items: center;
+                  flex: 1;
+                  img {
+                    width: 120px;
+                    object-fit: contain;
+                    margin-right: 24px;
+                  }
+                  span:first-of-type {
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 18.2px;
+                    text-align: left;
+                    color: #848484;
+                  }
+                  span:last-of-type {
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 22.4px;
+                    text-align: left;
+                    color: #666666;
+                  }
+                }
+                .right {
+                  width: 392px;
+                  min-height: 10px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  text-wrap: nowrap;
+                  .item1 {
+                    width: 150px;
+                    span:first-of-type {
+                      font-family: Roboto;
+                      font-size: 14px;
+                      font-weight: 400;
+                      line-height: 18.2px;
+                      text-align: left;
+                      color: #a3a3a3;
+                      text-decoration: line-through;
+                    }
+                    span:last-of-type {
+                      font-family: Roboto;
+                      font-size: 16px;
+                      font-weight: 500;
+                      line-height: 22.4px;
+                      text-align: left;
+                      color: #29ab56;
+                    }
+                  }
+                  .item2 {
+                    width: 40px;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 22.4px;
+                    text-align: left;
+                    color: #29ab56;
+                  }
+                  .item3 {
+                    width: 150px;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 22.4px;
+                    text-align: right;
+                    color: #29ab56;
+                  }
+                }
+              }
+            }
+            .sumPrice {
+              align-self: flex-end;
+              font-family: Roboto;
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 24.3px;
+              letter-spacing: 0.5px;
+            }
+            button.datlai {
+              @extend .commonBtnGreen;
+              width: 102px;
+              height: 34px;
+              span::before {
+                content: "Đặt lại";
+              }
+            }
+            button.xemchitiet {
+              @extend .commonBtnBorder;
+              width: 99px;
+              height: 34px;
+              span::before {
+                content: "Xem chi tiết";
+              }
+            }
+            button.huydonhang {
+              @extend .commonBtnBorderGray;
+              width: 112px;
+              height: 34px;
+              span::before {
+                content: "Hủy đơn hàng";
+              }
+            }
+            button.thanhtoan {
+              @extend .commonBtnGreen;
+              width: 96px;
+              height: 34px;
+              span::before {
+                content: "Thanh toán";
+              }
+            }
+            button.theodoidonhang {
+              @extend .commonBtnBorder;
+              width: 142px;
+              height: 34px;
+              span::before {
+                content: "Theo dõi đơn hàng";
+              }
+            }
+            button.danhgia {
+              @extend .commonBtnBorder;
+              width: 80px;
+              height: 34px;
+              span::before {
+                content: "Đánh giá";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modalEvaluateProduct {
+  width: 600px;
+  border-radius: 8px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  .evaluate_info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+    span:first-of-type {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: left;
+    }
+    span:last-of-type {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18.2px;
+      text-align: left;
+      color: #858585;
+    }
+  }
+  .divideH {
+    max-height: 0.5px;
+    height: 0.5px;
+    background-color: #dbdee5;
+  }
+  .evaluate_star {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 12px;
+    .commonTitle {
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+      text-align: center;
+    }
+    img {
+      width: 40px;
+      object-fit: contain;
+    }
+  }
+  .evalueate_detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    textarea {
+      width: 100%;
+      height: 144px;
+      border: 0.5px solid #dbdee5;
+      border-radius: 2px;
+      padding: 14px 16px;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21.6px;
+      resize: none;
+      ::placeholder {
+        color: #858585;
+      }
+    }
+    .numberWord {
+      align-self: flex-end;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18.2px;
+      text-align: left;
+      color: #858585;
+    }
+    .listBtn {
+      align-self: flex-start;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 4px;
+      row-gap: 5px;
+      .itemBtn {
+        width: fit-content;
+        padding: 6px 10px;
+        border-radius: 99px;
+        background-color: #f0f8ff;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: center;
+        color: #2e9dff;
+      }
+    }
+  }
+  .evaluate_bottom {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    button {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20.3px;
+      flex: 1;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    button:first-of-type {
+      border-radius: 2px;
+      border: 1.5px solid #858585;
+    }
+    button:last-of-type {
+      background-color: #858585;
+      color: white;
     }
   }
 }
