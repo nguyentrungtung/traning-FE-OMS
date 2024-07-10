@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>detail_product</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/breadcrumb.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/detail_product.css" />
+    <link rel="stylesheet" href="../css/responsive_common.css" />
+    <link rel="stylesheet" href="../css/responsive_detail_product.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div
+        class="container-xxl h-100 d-flex flex-column justify-content-between"
+      >
+        <div class="d-xl-flex d-none justify-content-between">
+          <div class="header_option-left">
+            <script>
+              const listheader_optionleft = [
+                "Kênh người bán",
+                "Trở thành người bán",
+                "Download App",
+                "Kết nối",
+              ];
+              for (let i = 0; i < 4; i++) {
+                document.write(`
+                  <a href="#">Kênh người bán</a>
+                  ${i !== 3 ? `<div class="divideV"></div>` : ""}
+                `);
+              }
+            </script>
+          </div>
+          <div class="header_option-right">
+            <a href="#">OCOP</a>
+            <a href="#">Hỗ trợ thông tin</a>
+            <a href="#">Vận chuyển</a>
+          </div>
+        </div>
+        <div class="header_bottom align-items-xl-end align-items-center">
+          <!-- logo -->
+          <a href="#" class="logo">
+            <img
+              src="../assets/svg/logomain.svg"
+              alt=""
+              style="width: 167px; object-fit: contain"
+            />
+          </a>
+          <!-- choose address -->
+          <button class="address">
+            <img src="../assets/svg/position.svg" alt="" />
+            <span class="Roboto12">Thanh Xuân</span>
+            <img src="../assets/svg/li_chevron-down.svg" alt="" />
+          </button>
+          <!-- search -->
+          <div class="search">
+            <div class="search_bar">
+              <div class="dropdown">
+                <button data-bs-toggle="dropdown" data-bs-offset="-12,10">
+                  <span class="Roboto14">Sản phẩm</span>
+                  <img src="../assets/svg/li_chevron-green.svg" alt="" />
+                </button>
+                <div class="dropdown-menu">
+                  <div class="d-flex flex-column align-items-start">
+                    <p onclick="changeContent('Sản phẩm')">Sản phẩm</p>
+                    <p onclick="changeContent('Cửa hàng')">Cửa hàng</p>
+                  </div>
+                </div>
+              </div>
+              <input placeholder="Nhập sản phẩm cần tìm kiếm..." type="text" />
+              <button class="icon-search">
+                <img src="../assets/svg/li_search.svg" alt="" />
+              </button>
+              <script>
+                const spanNeedChange = document.querySelector(
+                  ".header .header_bottom .search .search_bar .dropdown button:first-of-type span"
+                );
+                const inputNeedChange = document.querySelector(
+                  ".header .header_bottom .search .search_bar input"
+                );
+                function changeContent(content) {
+                  spanNeedChange.textContent = content;
+                  if (content === "Sản phẩm") {
+                    inputNeedChange.placeholder =
+                      "Nhập sản phẩm cần tìm kiếm...";
+                  } else {
+                    inputNeedChange.placeholder =
+                      "Nhập cửa hàng cần tìm kiếm...";
+                  }
+                }
+              </script>
+            </div>
+            <div class="search_result-search">
+              <a href="#">
+                <div></div>
+                <span>Bông cải xanh</span></a
+              >
+              <a href="#">
+                <div></div>
+                <span>Bông Cải Xanh Đà Lạt</span></a
+              >
+              <a href="#">
+                <div></div>
+                <span>Bông Cải</span></a
+              >
+            </div>
+            <div class="search_categories d-lg-flex d-none">
+              <a href="#">Trái cây</a>
+              <a href="#">thịt, trứng</a>
+              <a href="#">rau, củ, quả</a>
+              <a href="#">sữa, bơ, phô mai</a>
+              <a href="#">hải sản</a>
+              <a href="#">gạo, mì ăn liền</a>
+              <a href="#">bánh, kẹo</a>
+            </div>
+            <script>
+              const inputHeader = document.querySelector(
+                ".header .header_bottom .search .search_bar input"
+              );
+              const resultSearch = document.querySelector(
+                ".header .header_bottom .search .search_result-search"
+              );
+              inputHeader.addEventListener("input", (e) => {
+                if (e.target.value.length > 0) {
+                  resultSearch.style.display = "block";
+                } else {
+                  resultSearch.style.display = "none";
+                }
+              });
+            </script>
+          </div>
+          <!-- bell -->
+          <a href="#" class="notification">
+            <img src="../assets/svg/bell.svg" alt="" />
+          </a>
+          <!-- message -->
+          <a href="#" class="message">
+            <img src="../assets/svg/message.svg" alt="" />
+          </a>
+          <!-- cart -->
+          <div class="cart dropdown">
+            <button
+              data-bs-toggle="dropdown"
+              data-bs-offset="-335,16"
+              data-bs-auto-close="outside"
+              class="cart_btn-dropdown"
+            >
+              <img src="../assets/svg/cart.svg" alt="" />
+            </button>
+            <div class="dropdown-menu">
+              <div class="arrow"></div>
+              <div class="content">
+                <span class="content_new-add"> Sản phẩm mới thêm </span>
+                <div class="content_list">
+                  <div class="item">
+                    <div class="info">
+                      <img src="../assets/svg/cartit1.svg" alt="" />
+                      <span
+                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
+                        100%</span
+                      >
+                    </div>
+                    <div class="cost">đ 59.000</div>
+                  </div>
+                  <div class="item">
+                    <div class="info">
+                      <img src="../assets/svg/cartit2.svg" alt="" />
+                      <span
+                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
+                        100%</span
+                      >
+                    </div>
+                    <div class="cost">đ 59.000</div>
+                  </div>
+                  <div class="item">
+                    <div class="info">
+                      <img src="../assets/svg/cartit3.svg" alt="" />
+                      <span
+                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
+                        100%</span
+                      >
+                    </div>
+                    <div class="cost">đ 59.000</div>
+                  </div>
+                  <div class="item">
+                    <div class="info">
+                      <img src="../assets/svg/cartit4.svg" alt="" />
+                      <span
+                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
+                        100%</span
+                      >
+                    </div>
+                    <div class="cost">đ 59.000</div>
+                  </div>
+                  <div class="item">
+                    <div class="info">
+                      <img src="../assets/svg/cartit5.svg" alt="" />
+                      <span
+                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
+                        100%</span
+                      >
+                    </div>
+                    <div class="cost">đ 59.000</div>
+                  </div>
+                </div>
+                <div class="content_footer">
+                  <span>78 thêm hàng vào giỏ</span>
+                  <button>Xem giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- userloginSignup -->
+          <div class="user dropdown nologin">
+            <button
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              class="user_btn-dropdown"
+              data-bs-offset="-70,20"
+            >
+              <img
+                src="../assets/svg/carbon_user-avatar.svg"
+                alt=""
+                style="width: 33px; object-fit: contain"
+              />
+            </button>
+            <div class="user_option d-lg-flex d-none">
+              <a href="#">Đăng nhập</a>
+              <a href="#">Đăng ký</a>
+            </div>
+          </div>
+          <div class="user dropdown login">
+            <button
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              class="user_btn-dropdown"
+              data-bs-offset="-70,20"
+            >
+              <img
+                src="../assets/svg/avtar.svg"
+                alt=""
+                style="width: 33px; object-fit: contain; margin-right: 8px"
+              />
+            </button>
+            <div class="dropdown-menu">
+              <div class="arrow"></div>
+              <div class="content">
+                <a href="#">Tài khoản của tôi</a>
+                <a href="#">Đơn mua</a>
+                <a href="#">Đăng xuất</a>
+              </div>
+            </div>
+            <div class="user_option d-lg-flex d-none">
+              <a href="#">Tài khoản</a>
+              <a href="#">Hoàng Anh</a>
+            </div>
+            <img
+              class="d-lg-block d-none"
+              src="../assets/svg/li_chevron-down.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- search mobile -->
+        <div class="header_search-mobile d-md-none d-flex">
+          <img src="../assets/svg/icSearchmobile.svg" alt="" />
+          <input
+            type="text"
+            class="header_search-mobile-input"
+            placeholder="Nhập sản phẩm cần tìm kiếm..."
+          />
+        </div>
+      </div>
+    </header>
+    <!-- filter -->
+    <div class="filter d-lg-block d-none">
+      <div
+        class="container-xxl d-flex align-items-center justify-content-start"
+        style="gap: 24px"
+      >
+        <div class="dropdown">
+          <button data-bs-auto-close="outside" data-bs-toggle="dropdown">
+            <img
+              src="../assets/images/li_layout-grid.png"
+              alt=""
+              style="width: 24px; object-fit: contain"
+            />
+            <span>Tất cả</span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="dropdown-content d-flex flex-column">
+              <script>
+                const alldataDropdown = [
+                  {
+                    class1: "Cửa hàng Nông nghiệp",
+                    class2: [
+                      "Vật tư Nông nghiệp",
+                      "Rau xanh",
+                      "Hoa",
+                      "Hạt",
+                      "Hạt giống",
+                      "Chăn nuôi",
+                      "Thủy sản",
+                      "Lâm nghiệp",
+                      "Diêm nghiệp",
+                      "Nước",
+                    ],
+                    class3: [
+                      "Thực phẩm Nông nghiệp",
+                      "Thực phẩm khô",
+                      "Thực phẩm tươi sống",
+                      "Thực phẩm đông lạnh",
+                      "Đồ uống",
+                      "Bánh kẹo",
+                    ],
+                  },
+                  {
+                    class1: "Dịch vụ Nông nghiệp",
+                    class2: [
+                      "Công cụ dụng cụ Nông nghiệp",
+                      "Thức ăn chăn nuôi",
+                      "Thuốc bảo vệ thực vật",
+                      "Thú y",
+                      "Du lịch",
+                      "Bất động sản nông nghiệp",
+                    ],
+                  },
+                  {
+                    class1: "Thương mại",
+                    class2: [
+                      "Tư vấn Marketing",
+                      "Đăng ký sản phẩm thương mại hóa",
+                      "Đăng ký nhận tín dụng ",
+                    ],
+                  },
+                  {
+                    class1: "Pháp lý",
+                    class2: [
+                      "Chứng nhận",
+                      "Giám định",
+                      "Thủ tục IE",
+                      "Liên kết vận chuyển",
+                    ],
+                  },
+                  {
+                    class1: "Thông tin",
+                    class2: [
+                      "Blog kiến thức",
+                      "Hỏi đáp chuyên gia",
+                      "Cổng thông tin xúc tiến Thương mại",
+                    ],
+                  },
+                ];
+
+                const dropdownMenuAll = document.querySelector(
+                  ".filter .dropdown:first-of-type .dropdown-menu .dropdown-content"
+                );
+                let contentDropDownMenuAll = "";
+                for (let i = 0; i < alldataDropdown.length; i++) {
+                  let contentClass2 = "";
+                  let contentClass3 = "";
+
+                  if (alldataDropdown[i].class2) {
+                    const class2 = alldataDropdown[i].class2;
+                    for (let j = 0; j < class2.length; j++) {
+                      contentClass2 += `<a href="#">${class2[j]}</a>`;
+                    }
+                  }
+
+                  if (alldataDropdown[i].class3) {
+                    const class3 = alldataDropdown[i].class3;
+                    for (let j = 0; j < class3.length; j++) {
+                      contentClass3 += `<a href="#">${class3[j]}</a>`;
+                    }
+                  }
+
+                  let menuItem = `<div class="dropdown-content-item">
+                    <div class="class1">
+                      <img src="../assets/svg/icondrd${i + 1}.svg" alt="">
+                      <div>${alldataDropdown[i].class1}</div>  
+                      <img src="../assets/svg/chevronGreen.svg" alt="">
+                    </div>
+                    <div class="class2">${contentClass2}</div>
+                    <div class="class3">${contentClass3}</div>
+                    </div>`;
+                  contentDropDownMenuAll += menuItem;
+                }
+                dropdownMenuAll.innerHTML = contentDropDownMenuAll;
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button data-bs-toggle="dropdown">
+            <img src="../assets/images/iconoir_small-shop-alt.png" alt="" />
+            <span>Tìm theo vị trí</span>
+          </button>
+          <ul
+            class="dropdown-menu"
+            style="min-height: 300px; line-height: 16px"
+          >
+            dropdown2
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- breadcrumb -->
+    <section class="breadcrumb-container container-xxl">
+      <nav
+        style="
+          --bs-breadcrumb-divider: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'8\' height=\'8\'%3E%3Cpath d=\'M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z\' fill=\'%236c757d\'/%3E%3C/svg%3E');
+        "
+        aria-label="breadcrumb"
+      >
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">OmmaniLife</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#">Rau, Củ, Quả</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Rau Xanh</li>
+        </ol>
+      </nav>
+    </section>
+    <!-- main -->
+
+    <main class="detail-product container-xxl">
+      <div class="product-briefing">
+        <div class="row" style="--bs-gutter-x: 30px">
+          <div class="col-md-4 col-12">
+            <div class="product-briefing_left">
+              <div class="img-container">
+                <img src="../assets/images/videoMinhHoa.png" alt="" />
+                <div class="img-zoom-review"></div>
+                <div class="img-zoom-area"></div>
+                <!-- btn hidden -->
+                <button class="btn-return d-md-none d-flex">
+                  <img src="../assets/svg/btnreturn.svg" alt="" />
+                </button>
+                <button class="btn-cart d-md-none d-flex">
+                  <img src="../assets/svg/cart.svg" alt="" />
+                </button>
+                <div
+                  class="w-100 d-md-none align-items-center justify-content-between d-flex"
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    height: fit-content;
+                    padding-right: 20px;
+                  "
+                >
+                  <img
+                    src="../assets/images/TAG.png"
+                    alt=""
+                    style="width: 265px; object-fit: contain"
+                  />
+                  <img
+                    src="../assets/svg/Vận chuyển.svg"
+                    alt=""
+                    style="width: 35px; object-fit: contain"
+                  />
+                </div>
+              </div>
+
+              <script>
+                let mainImage = document.querySelector(
+                  ".detail-product .product-briefing .product-briefing_left .img-container"
+                );
+                const img = document.querySelector(
+                  ".detail-product .product-briefing .product-briefing_left .img-container img"
+                );
+                const zoomImageReview = document.querySelector(
+                  ".detail-product .product-briefing .product-briefing_left .img-container .img-zoom-review"
+                );
+                const zoomImageArea = document.querySelector(
+                  ".detail-product .product-briefing .product-briefing_left .img-container .img-zoom-area"
+                );
+                const zoomFactor = 1.3;
+                mainImage.addEventListener("mousemove", (event) => {
+                  const imgRect = img.getBoundingClientRect();
+                  let mouseX = event.clientX;
+                  let mouseY = event.clientY;
+
+                  if (
+                    mouseX < imgRect.left ||
+                    mouseX > imgRect.right ||
+                    mouseY < imgRect.top ||
+                    mouseY > imgRect.bottom
+                  ) {
+                    zoomImageArea.style.display = "none";
+                    zoomImageReview.style.display = "none";
+                  } else {
+                    zoomImageArea.style.display = "block";
+                    zoomImageReview.style.display = "block";
+                    const mainImageRect = mainImage.getBoundingClientRect();
+
+                    mouseX = event.clientX - mainImageRect.left;
+                    mouseY = event.clientY - mainImageRect.top;
+
+                    const zoomImageAreaWidth = zoomImageArea.offsetWidth;
+                    const zoomImageAreaHeight = zoomImageArea.offsetHeight;
+
+                    const zoomImageAreaX = mouseX - zoomImageAreaWidth / 2;
+                    const zoomImageAreaY = mouseY - zoomImageAreaHeight / 2;
+
+                    console.log(zoomImageAreaX, zoomImageAreaY, "ok");
+
+                    zoomImageArea.style.left = `${zoomImageAreaX}px`;
+                    zoomImageArea.style.top = `${zoomImageAreaY}px`;
+
+                    const backgroundImage = `url(${img.src})`;
+                    const backgroundSize = `${
+                      mainImageRect.width * zoomFactor
+                    }px ${mainImageRect.height * zoomFactor}px`;
+
+                    const positionXPercent =
+                      (mouseX / mainImageRect.width) * 100;
+                    const positionYPercent =
+                      (mouseY / mainImageRect.height) * 100;
+
+                    zoomImageArea.style.backgroundImage = backgroundImage;
+                    zoomImageArea.style.backgroundSize = backgroundSize;
+                    zoomImageArea.style.backgroundPosition = `${positionXPercent}% ${positionYPercent}%`;
+
+                    zoomImageReview.style.backgroundImage = backgroundImage;
+                    zoomImageReview.style.backgroundSize = `${
+                      (mainImageRect.width * zoomFactor * 400) / 150
+                    }px ${(mainImageRect.height * zoomFactor * 400) / 150}px`;
+                    zoomImageReview.style.backgroundPosition = `${positionXPercent}% ${positionYPercent}%`;
+                    zoomImageReview.style.backgroundRepeat = "no-repeat";
+                  }
+                });
+              </script>
+              <div class="img-other d-md-flex d-none">
+                <div class="list">
+                  <script>
+                    for (let i = 0; i < 7; i++) {
+                      document.write(`
+                      <img class="${
+                        i === 0 ? "active" : ""
+                      }" src="../assets/svg/hinhminhhoa${
+                        (i % 4) + 1
+                      }.svg" alt="" />
+                    `);
+                    }
+                  </script>
+                </div>
+                <button class="previous d-md-block d-none">
+                  <img src="../assets/svg/previous.svg" alt="" />
+                </button>
+                <button class="next d-md-block d-none">
+                  <img src="../assets/svg/next.svg" alt="" />
+                </button>
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const imgOther = document.querySelector(
+                      ".detail-product .product-briefing .product-briefing_left .img-other .list"
+                    );
+                    const previousButton = document.querySelector(
+                      ".detail-product .product-briefing .product-briefing_left .img-other .previous"
+                    );
+                    const nextButton = document.querySelector(
+                      ".detail-product .product-briefing .product-briefing_left .img-other .next"
+                    );
+
+                    previousButton.addEventListener("click", function () {
+                      imgOther.scrollLeft -= 200; // Điều chỉnh giá trị theo đơn vị scroll mong muốn
+                    });
+
+                    nextButton.addEventListener("click", function () {
+                      imgOther.scrollLeft += 200; // Điều chỉnh giá trị theo đơn vị scroll mong muốn
+                    });
+                  });
+                </script>
+              </div>
+              <script>
+                let imgContainer = document.querySelector(
+                  ".detail-product .product-briefing .product-briefing_left .img-container img"
+                );
+                const listImages = document.querySelectorAll(
+                  ".detail-product .product-briefing .product-briefing_left .img-other .list img"
+                );
+
+                for (let i = 0; i < listImages.length; i++) {
+                  listImages[i].addEventListener("click", () => {
+                    listImages.forEach((img) => {
+                      img.classList.remove("active");
+                    });
+                    listImages[i].classList.add("active");
+                    imgContainer.src = `../assets/svg/hinhminhhoa${
+                      (i % 4) + 1
+                    }.svg`;
+                  });
+                }
+              </script>
+              <div
+                class="product-share d-md-flex d-none align-items-center align-self-center"
+                style="gap: 14px"
+              >
+                <span>Chia sẻ:</span>
+                <div class="d-flex align-items-center gap-2">
+                  <a href="#"
+                    ><img src="../assets/svg/image 38.svg" alt=""
+                  /></a>
+                  <a href="#"
+                    ><img src="../assets/svg/image 39.svg" alt=""
+                  /></a>
+                  <a href="#"
+                    ><img src="../assets/svg/image 41.svg" alt=""
+                  /></a>
+                  <a href="#"
+                    ><img src="../assets/svg/Frame 48095713.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 col-12">
+            <div class="product-briefing_right">
+              <div class="product-briefing_header">
+                <img
+                  class="mall-icon d-md-block d-none"
+                  src="../assets/svg/mall.svg"
+                  alt=""
+                />
+                <div class="main-header">
+                  <h3>
+                    Bông cải xanh - Công nghệ làm sạch tiêu chuẩn đức Gói 500g
+                    Đà Lạt
+                  </h3>
+
+                  <div class="preview">
+                    <span class="common">
+                      <span class="text">4.8</span>
+                      <div class="stars">
+                        <script>
+                          for (let i = 5; i >= 1; i--) {
+                            document.write(`
+                            <img src="../assets/svg/starShop.svg" alt="">
+                          `);
+                          }
+                        </script>
+                      </div>
+                    </span>
+                    <span class="common">
+                      <span class="text">513</span>
+                      <span class="text1">đánh giá</span>
+                    </span>
+                    <span class="common">
+                      <span class="text">246k</span>
+                      <span class="text1">Đã bán</span>
+                    </span>
+                  </div>
+                  <span class="product-cost"
+                    >132.000 <span style="text-decoration: underline">đ</span>
+                  </span>
+                  <img
+                    class="qrcode d-md-block d-none"
+                    src="../assets/svg/QR-product-detaild.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="product-briefing_content">
+                <div class="row">
+                  <div class="col">Số lượng lớn:</div>
+                  <div class="col">
+                    <table>
+                      <tr>
+                        <td>1-10 Gói</td>
+                        <td>11 - 30 Gói</td>
+                        <td>Trên 30 gói</td>
+                      </tr>
+                      <tr>
+                        <td>132k/gói</td>
+                        <td>105k/gói</td>
+                        <td class="contact">Liên hệ</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">Truy xuất nguồn gốc:</div>
+                  <div class="col"><a class="link" href="#">Link</a></div>
+                </div>
+                <div class="row">
+                  <div class="col">Giao hàng từ:</div>
+                  <div class="col">
+                    <div class="d-flex flex-column" style="gap: 8px">
+                      <span class="diadiem"
+                        >46 Trần Nguyên Đán, Thanh Xuân, Hà Nội</span
+                      >
+                      <div class="freeship">
+                        <img src="../assets/svg/ship.svg" alt="" />
+                        <div class="freeship_main">
+                          <div class="first">
+                            <span>Giao hàng <span>Tiêu chuẩn:</span></span>
+                            <span>Thứ 5, ngày 21/04 - Thứ 7 ngày 23/04</span>
+                          </div>
+                          <div class="second">
+                            <span>21.000 đ</span>
+                            <span>(Freeship 30K đơn hàng từ 150K)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">Số Lượng:</div>
+                  <div class="col">
+                    <div class="soluong">
+                      <div class="main">
+                        <button class="decrease">
+                          <img src="../assets/svg/giam.svg" alt="" />
+                        </button>
+                        <input value="1" type="number" name="" id="" />
+                        <button class="increase">
+                          <img src="../assets/svg/tang.svg" alt="" />
+                        </button>
+                      </div>
+                      <span class="available">Có 2.400 Sản phẩm có sẵn</span>
+
+                      <script>
+                        const soluongChange =
+                          document.querySelector(".soluong .main");
+                        const increase =
+                          soluongChange.querySelector(".increase");
+                        const decrease =
+                          soluongChange.querySelector(".decrease");
+                        const input = soluongChange.querySelector("input");
+
+                        increase.addEventListener("click", () => {
+                          let currentValue = parseInt(input.value);
+                          input.value = currentValue + 1;
+                        });
+
+                        decrease.addEventListener("click", () => {
+                          let currentValue = parseInt(input.value);
+                          if (currentValue > 1) {
+                            input.value = currentValue - 1;
+                          }
+                        });
+                      </script>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex flex-column gap-4 align-items-start">
+                  <div class="product-briefing_options">
+                    <button>
+                      <img src="../assets/svg/li_shopping-cart.svg" alt="" />
+                      <span>Thêm vào giỏ hàng</span>
+                    </button>
+                    <button>Mua Ngay</button>
+                  </div>
+                  <div class="dambao">
+                    Ommani Đảm bảo Sản phẩm đạt tiêu chuẩn.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shop-info">
+        <div class="shop-info_left">
+          <img src="../assets/images/store6.png" alt="" />
+          <div class="main-info">
+            <span class="i1">Ommani Mall Thạch Bàn Long Biên</span>
+            <div class="i2">
+              <img src="../assets/svg/starShop.svg" alt="" />
+              <span>4.8 (11k+)</span>
+              <span>GIAO NHANH</span>
+            </div>
+            <div class="i3">
+              <button class="chatngay">
+                <img src="../assets/svg/chatnay.svg" alt="" />
+                <span>Chat ngay</span>
+              </button>
+              <button class="xemshop">
+                <img src="../assets/svg/xemshop.svg" alt="" />
+                <span>Xem shop</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shop-info_right">
+          <div class="content-top">
+            <script>
+              let contentTop = [
+                { p1: "219", p2: "Sản Phẩm" },
+                { p1: "98.7%", p2: "Tỉ lệ phản hồi" },
+                { p1: "Trong vài giờ", p2: "Phản hồi" },
+              ];
+              for (let i = 0; i < contentTop.length; i++) {
+                document.write(`
+                  <div class="item">
+                    <span class="p1">${contentTop[i].p1}</span>
+                    <span class="p2">${contentTop[i].p2}</span>
+                  </div>
+                  ${
+                    i !== contentTop.length - 1
+                      ? `<span class="divideV"></span>`
+                      : ""
+                  }
+                `);
+              }
+            </script>
+          </div>
+          <div class="content-bottom">
+            <div class="avatar-group">
+              <script>
+                for (let i = 1; i <= 5; i++) {
+                  document.write(`
+                    <div class="avatar">
+                      <img src="../assets/svg/avt${i}.svg" alt="Image" />
+                    </div>
+                  `);
+                }
+              </script>
+            </div>
+            <span class="text">
+              <span>1.2k</span>
+              <span>Theo dõi gian hàng</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="product-info">
+        <!-- nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <script>
+            let btnNav = [
+              {
+                text: "Mô tả sản phẩm",
+                id: "product-info_description",
+              },
+              {
+                text: "Đánh giá (60)",
+                id: "product-info_evaluation",
+              },
+              {
+                text: "Hỏi đáp (50)",
+                id: "product-info_question",
+              },
+            ];
+            for (let i = 0; i < btnNav.length; i++) {
+              document.write(`
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="${i === 0 ? "active" : ""}"
+                    data-bs-toggle="tab"
+                    data-bs-target="#${btnNav[i].id}"
+                    role="tab"
+                  >
+                    ${btnNav[i].text}
+                  </button>
+                </li>
+              `);
+            }
+          </script>
+        </ul>
+        <!-- tab-content -->
+        <div class="tab-content">
+          <!-- tab1 -->
+          <div
+            id="product-info_description"
+            role="tabpanel"
+            class="tab-pane fade show active"
+          >
+            <div class="description-first">
+              <div class="description-first_title">THÔNG TIN CHI TIẾT</div>
+              <div class="description-first_main">
+                <script>
+                  const data = [
+                    { t1: "Danh mục", t2: "Rau Xanh" },
+                    { t1: "Xuất xứ", t2: "Việt Nam" },
+                    { t1: "Đóng gói", t2: "500g/ Gói" },
+                    { t1: "Công ty Sản xuất", t2: "Công Ty TNHH Thành Công" },
+                    { t1: "Tiêu Chuẩn", t2: "9001, VIETGAP, ORGANIC" },
+                  ];
+                  for (let i = 0; i < 5; i++) {
+                    document.write(`
+                    <div class="row">
+                      <div class="col">
+                        <span>${data[i].t1}</span>
+                      </div>
+                      <div class="col">
+                        <span>${data[i].t2}</span>
+                      </div>
+                    </div>
+                    `);
+                  }
+                </script>
+              </div>
+            </div>
+            <div class="description-second">
+              <div class="description-second_title">MÔ TẢ SẢN PHẨM</div>
+              <p>
+                Sản phẩm không chứa các hóa chất, chất kích thích tăng trưởng
+                gây hại, đảm bảo an toàn cho sức khỏe người tiêu dùng. Do đó,
+                bạn hoàn toàn có thể an tâm khi lựa chọn sản phẩm này trong mỗi
+                bữa ăn của gia đình mình, giúp bữa ăn trở nên ngon miệng hơn.
+              </p>
+              <p>
+                Món ngon gợi ý: Bông cải xanh xào thịt bò, canh bông cải xanh
+                thịt heo, bông cải xanh xào tôm mực
+              </p>
+              <div class="collapse show" id="collapseExample">
+                <p>
+                  Giá sản phẩm trên OMMANI đã bao gồm thuế theo luật hiện hành.
+                  Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao
+                  hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển,
+                  phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao
+                  từ nước ngoài có giá trị trên 1 triệu đồng).....Súp lơ xanh
+                  (bông cải xanh) là loại “siêu” thực phẩm chay này mang lại rất
+                  nhiều lợi ích cho con người. Giống các loại thực vật khác
+                  trong họ cải (cải bruxen, cải xanh, cải bắp, cải xoăn), súp lơ
+                  trắng có chứa rất nhiều vitamin và khoáng chất. Một số món ăn
+                  ngon như súp lơ xào thịt, thịt bò xào súp lơ, súp lơ muối
+                  chua…Súp lơ chứa sắt và axit folic, ngoài ra còn có nhiều
+                  vitamin (A, C, vitamin nhóm B…) và khoáng chất (kali, natri,
+                  magie, đồng, sắt, lưu huỳnh, clo và phốt pho…).
+                </p>
+                <br />
+                <p>
+                  Hạt giống Bông Cải Xanh F1 No.3 - Súp Lơ Xanh là hạt giống
+                  sinh trưởng mạnh, kháng bệnh tốt. Khi lớn lên cây cao trung
+                  bình, không có nhánh, khả năng chịu nhiệt và thích nghi rộng.
+                  Mặt bông đẹp, hạt mịn, độ đồng đều rất cao, thu hoạch 55 - 60
+                  ngày sau khi rồng, thu hoạch tập trung.
+                </p>
+                <br />
+                <ul class="tru">
+                  <li>Xuất xứ: Đà Lạt</li>
+                  <br />
+                  <li>Sản phẩm của: Công ty giống cây trồng Phú Nông</li>
+                  <br />
+                  <li>Quy cách: Gói 0.5 gram</li>
+                  <br />
+                  <li>
+                    Cách trồng:
+                    <ul class="cong">
+                      <li>Khoảng cách trồng: 40x50cm</li>
+                      <li>Mật độ trồng: 20-30g/1000m2</li>
+                    </ul>
+                  </li>
+                  <br />
+                  <li>Thời gian thu hoạch: 55 - 60 ngày</li>
+                  <br />
+                </ul>
+                <p>
+                  Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành.
+                  Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao
+                  hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển,
+                  phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao
+                  từ nước ngoài có giá trị trên 1 triệu đồng).....
+                </p>
+                <br />
+              </div>
+            </div>
+            <button
+              class="btn-see-more d-md-none d-flex align-items-center"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample"
+            >
+              Xem thêm
+              <img src="../assets/svg/li_chevron-green.svg" alt="" />
+            </button>
+            <script>
+              let iscollapse = true;
+              const buttonTEMP = document.querySelector(".btn-see-more");
+              buttonTEMP.addEventListener("click", () => {
+                if (iscollapse) {
+                  buttonTEMP.innerHTML = `Thu gọn <img class="chevron-collapse" src="../assets/svg/li_chevron-green.svg" alt="" />`;
+                  iscollapse = false;
+                } else {
+                  buttonTEMP.innerHTML = `Xem thêm <img src="../assets/svg/li_chevron-green.svg" alt="" />`;
+                  iscollapse = true;
+                }
+              });
+            </script>
+          </div>
+          <div class="divideH tabs-separate d-md-none d-block"></div>
+          <!-- tab2 -->
+          <div
+            id="product-info_evaluation"
+            role="tabpanel"
+            class="tab-pane fade"
+          >
+            <div class="evaluation-header d-flex d-md-grid">
+              <div class="stars flex-row flex-md-column">
+                <div
+                  class="top d-flex flex-wrap flex-md-row flex-column align-items-md-center align-items-start"
+                >
+                  <span class="rating"
+                    >4.6<span class="d-inline d-md-none">/5</span></span
+                  >
+                  <div class="t2 d-none d-md-flex">
+                    <script>
+                      for (let i = 1; i <= 5; i++) {
+                        document.write(`
+                        <img src="../assets/svg/star.svg" alt="">
+                      `);
+                      }
+                    </script>
+                  </div>
+                  <span>20 đánh giá</span>
+                </div>
+                <div class="divideV d-inline d-md-none"></div>
+                <div class="list">
+                  <script>
+                    const arrlistitem = [70, 18, 7, 2, 1];
+                    for (let i = 0; i < 5; i++) {
+                      let spanAndImg = "";
+                      for (let j = 0; j < 5 - i; j++) {
+                        spanAndImg += `<img style="margin-right: 0" src="../assets/svg/starMobile.svg" alt="">`;
+                      }
+                      for (let k = 0; k < i; k++) {
+                        spanAndImg += `<img style="margin-right: 0" src="../assets/svg/starMobileGray.svg" alt="" />`;
+                      }
+                      document.write(`
+                      <div class="item">
+                        <span class="d-none d-md-inline">${5 - i}</span>
+                        <img class="d-none d-md-inline" src="../assets/images/starGray.svg" alt="" />
+                        <span class="d-flex d-md-none align-items-center" style="gap:4px;min-width: 64px; margin-right:14px">
+                          ${spanAndImg}
+                          </span>
+
+
+                        <div class="progress">
+                          <div
+                            class="progress-bar"
+                            role="progressbar"
+                            style="width: ${arrlistitem[i]}%"
+                          ></div>
+                        </div>
+                        <span>${
+                          arrlistitem[i]
+                        }<span class="d-none d-md-inline">%</span></span>
+                      </div>
+                    `);
+                    }
+                  </script>
+                </div>
+              </div>
+              <div class="divideV d-none d-xl-block"></div>
+              <div class="list-img d-none d-xl-grid">
+                <script>
+                  for (let i = 1; i <= 15; i++) {
+                    document.write(`
+                    <img src="../assets/images/commentimg${i}.png" alt="">
+                  `);
+                  }
+                </script>
+              </div>
+            </div>
+            <span class="divideH d-md-none d-block"></span>
+            <div class="filter-mobile d-md-none d-flex flex-column gap-3">
+              <div class="filter-type">
+                <button class="active">Mới nhất</button>
+                <button>Hình ảnh</button>
+                <button>Nội dung</button>
+                <script>
+                  const btns = document.querySelectorAll(
+                    ".detail-product .product-info #product-info_evaluation .filter-mobile .filter-type button"
+                  );
+                  btns.forEach((btn) => {
+                    btn.addEventListener("click", () => {
+                      btns.forEach((btn) => {
+                        btn.classList.remove("active");
+                      });
+                      btn.classList.add("active");
+                    });
+                  });
+                </script>
+              </div>
+              <div class="filter-star">
+                <script>
+                  for (let i = 5; i >= 1; i--) {
+                    document.write(`
+                    <button class="${i === 5 ? "active" : ""}">  
+                      <span>${i}</span>  
+                      <img src="../assets/svg/starMobile.svg" alt="">
+                    </button>
+                  `);
+                  }
+                </script>
+                <script>
+                  const filterStar = document.querySelectorAll(
+                    ".detail-product .product-info #product-info_evaluation .filter-mobile .filter-star button"
+                  );
+                  filterStar.forEach((btn) => {
+                    btn.addEventListener("click", () => {
+                      filterStar.forEach((btn) => {
+                        btn.classList.remove("active");
+                      });
+                      btn.classList.add("active");
+                    });
+                  });
+                </script>
+              </div>
+            </div>
+            <!-- postList -->
+            <div class="post-list">
+              <script>
+                const createPostItem = (addL2) => {
+                  return `
+                  <div class="post-item">
+                  <div class="post-item_user">
+                    <div class="l1">
+                      <div class="d-flex align-items-center gap-md-2 gap-3">
+                          <img
+                          class="user_avatar"
+                          src="../assets/svg/avtComment.svg"
+                          alt=""
+                        />
+                        <div class="d-flex gap-md-3 flex-md-row flex-column gap-1">
+                          <span>Nguyễn Văn Sơn</span>
+                          <span>
+                            <img src="../assets/images/star.svg" alt="" />
+                            <img src="../assets/images/star.svg" alt="" />
+                            <img src="../assets/images/star.svg" alt="" />
+                            <img src="../assets/images/star.svg" alt="" />
+                            <img src="../assets/images/star.svg" alt="" />
+                        </span>                             
+                        </div>
+                      </div>
+                      <div class="l1_date d-md-none d-block">16/03/2022</div>
+                    </div>
+                    <div class="l2">Bắp rất ngon
+                      ${
+                        addL2
+                          ? `
+                        <div class="d-flex gap-2 align-items-center" >
+                           <img src="../assets/images/imgcomment1.png" alt="">
+                            <img src="../assets/images/imgcomment2.png" alt="">
+                          </div>
+                      `
+                          : ""
+                      }
+                      </div>
+                    <div class="l3 d-md-flex d-none align-items-center gap-4">
+                      <div class="item">
+                        <img src="../assets/svg/like.svg" alt="" />
+                        <span>Hữu ích</span>
+                      </div>
+                      <div class="item">
+                        <img src="../assets/svg/mesageUserPostItem.svg" alt="" />
+                        <span>1 thảo luận</span>
+                      </div>
+                      <div class="item">
+                        <img src="../assets/svg/postItemUserl3.svg" alt="" />
+                        <span>Đã dùng 2 tuần</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-item_admin">
+                    <div class="l1">
+                      <img class="d-md-block d-none" src="../assets/svg/avtComment.svg" alt="" />
+                      <span></span>
+                      <span class="d-md-block d-none">Quản trị viên</span>
+                    </div>
+                    <div class="l2">
+                      Cảm ơn bạn đã tin tưởng mua hàng tại Shop. Chúc bạn có trải
+                      nghiệm thú vị!
+                    </div>
+                    <div class="l3 d-md-flex d-none align-items-center gap-4">
+                      <div class="item">
+                        <img src="../assets/svg/like.svg" alt="" />
+                        <span>Hữu ích</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <span class="divideH"></span>
+
+                  `;
+                };
+
+                document.write(createPostItem(false));
+                document.write(createPostItem(true));
+              </script>
+            </div>
+          </div>
+          <!-- tab3 -->
+          <div id="product-info_question" role="tabpanel" class="tab-pane fade">
+            <form>
+              <textarea
+                placeholder="Mời bạn để lại bình luận"
+                name=""
+                id=""
+              ></textarea>
+              <div class="bottom">
+                <button class="d-flex align-items-center gap-2">
+                  <img src="../assets/svg/guianh.svg" alt="" />
+                  <span>Gửi ảnh</span>
+                </button>
+                <button>Gửi</button>
+              </div>
+            </form>
+            <div class="post-list">
+              <script>
+                const createPostItemContent2 = (commentUser, commentAdmin) => {
+                  return `
+                  <div class="post-item">
+                <div class="post-item_user">
+                  <div class="l1">
+                    <img
+                      class="user_avatar"
+                      src="../assets/svg/avtComment.svg"
+                      alt=""
+                    />
+                    <span>Nguyễn Văn Sơn</span>
+                  </div>
+                  <div class="l2">
+                    ${commentUser}
+                  </div>
+                  <div class="l3 d-flex align-items-center gap-4">
+                    <div class="item">
+                      <img src="../assets/svg/messagecommentBlue.svg" alt="" />
+                      <span>Trả lời</span>
+                    </div>
+                    <div class="item">
+                      <img src="../assets/svg/postItemUserl3.svg" alt="" />
+                      <span>5 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-item_admin">
+                  <div class="l1">
+                    <img src="../assets/svg/avtComment.svg" alt="" />
+                    <span>Hoàng Ngọc</span>
+                    <span>Quản trị viên</span>
+                  </div>
+                  <div class="l2">
+                    ${commentAdmin}
+                  </div>
+                  <div class="l3">
+                    <div class="item">
+                      <img src="../assets/svg/likeblue.svg" alt="" />
+                      <span>Hài lòng</span>
+                    </div>
+                    <div class="item">
+                      <img src="../assets/svg/dislikeblue.svg" alt="" />
+                      <span>Không hài lòng</span>
+                    </div>
+                    <div class="item">
+                      <img src="../assets/svg/messagecommentBlue.svg" alt="" />
+                      <span>Trả lời</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="divideH"></span>
+
+                  `;
+                };
+                document.write(
+                  createPostItemContent2(
+                    "Sản phẩm đã được kiểm định chưa vậy Admin",
+                    `<p>Chào bạn!</p>
+                    <p>
+                      Dạ tất cả sản phẩm của chúng tôi đều được kiểm định qua
+                      tiêu chuẩn ISOSERT Trước khi lên sàn.
+                    </p>
+                    <p>Thông tin đến bạn!</p>`
+                  )
+                );
+                document.write(
+                  createPostItemContent2(
+                    `
+                    Dạ cho e hỏi mua số lượng lớn có được giảm giá nhiều không
+                `,
+                    `
+                    <p>Chào bạn!
+                  </p>
+                  <p>Với sản phẩm này thì còn số lượng rất nhiều, bạn liên hệ với nhà cung cấp để biết mức giá ưu đãi cho sản phẩm này
+                  </p>
+                  <p>Chia sẻ cùng bạn.</p>
+                `
+                  )
+                );
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="related-product d-md-block d-none">
+        <span class="related-product_title">Sản phẩm liên quan</span>
+        <div class="list-product"></div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container-xxl d-none d-lg-block">
+        <div class="row g-0">
+          <div class="col">
+            <div class="footer-column">
+              <span class="footer-column_title">Hỗ Trợ khách hàng</span>
+              <div class="footer-column_list">
+                <div class="d-flex flex-column align-items-start gap-1">
+                  <a href="#"
+                    >Hotline: <span class="fw-bold">1900-6789</span></a
+                  >
+                  <span>(1.000 đ/phút, 8-21h kể cả T7, CN)</span>
+                </div>
+                <a href="#">Các câu hỏi thường gặp</a>
+                <a href="#">Gửi yêu cầu hỗ trợ</a>
+                <a href="#">Hướng dẫn đặt hàng</a>
+                <a href="#">Phương thức vận chuyển</a>
+                <a href="#">Chính sách đổi trả</a>
+                <a href="#">Chính sách hàng nhập khẩu</a>
+                <a href="#">Hỗ trợ khách hàng: hotro@ommani.vn</a>
+                <a href="#">Báo lỗi bảo mật: security@ommani.vn</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="footer-column">
+              <span class="footer-column_title">Về Ommani Life</span>
+              <div class="footer-column_list">
+                <a href="#">Giới thiệu về Ommani</a>
+                <a href="#">Tuyển dụng</a>
+                <a href="#">Chính sách bảo mật, thanh toán</a>
+                <a href="#">Bảo mật thông tin cá nhân</a>
+                <a href="#">Chính sách giải quyết khiếu nại</a>
+                <a href="#">Điều khoản sử dụng</a>
+                <a href="#">Tiếp thị liên kết cùng Ommani</a>
+                <a href="#">Bán hàng cho Doanh nghiệp</a>
+                <a href="#">Điều kiện vận chuyển</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex flex-column" style="gap: 23px">
+              <div class="footer-column">
+                <span class="footer-column_title">Hợp tác và liên kết</span>
+                <div class="footer-column_list">
+                  <a href="#">Quy chế hoạt động sàn GDTMĐT</a>
+                  <a href="#">Bán hàng cùng Ommani</a>
+                </div>
+              </div>
+              <div class="footer-column">
+                <span class="footer-column_title">Chứng nhận bởi</span>
+                <div class="d-flex flex-column" style="gap: 21px">
+                  <div class="d-flex align-items-center" style="gap: 18px">
+                    <a href="#"
+                      ><img src="../assets/svg/image 17.svg" alt=""
+                    /></a>
+                    <a href="#"
+                      ><img src="../assets/svg/image 14.svg" alt=""
+                    /></a>
+                  </div>
+                  <a href="#">
+                    <img src="../assets/svg/image 15.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex flex-column" style="gap: 25px">
+              <div class="footer-column gap-0">
+                <span class="footer-column_title">Phương thức thanh toán</span>
+                <div class="d-flex gap-2 align-items-stretch mb-2">
+                  <a class="align-self-center" href="#">
+                    <img src="../assets/svg/Vector.svg" alt="" />
+                  </a>
+                  <a class="align-self-center" href="#">
+                    <img src="../assets/svg/uim_master-card.svg" alt="" />
+                  </a>
+                  <a class="align-self-center" href="#">
+                    <img src="../assets/svg/logos_jcb.svg" alt="" />
+                  </a>
+                  <a class="align-self-center" href="#">
+                    <img src="../assets/svg/noto_atm-sign.svg" alt="" />
+                  </a>
+                </div>
+                <div class="d-flex gap-2">
+                  <a class="align-self-center" href="#">
+                    <img src="../assets/svg/image 24.svg" alt="" />
+                  </a>
+                  <a class="align-self-center" href="">
+                    <img src="../assets/svg/image 25.svg" alt="" />
+                  </a>
+                  <a class="align-self-center" href="#">
+                    <img src="../assets/svg/image 26.svg" alt="" />
+                  </a>
+                  <a class="align-self-center" href="#">
+                    <img src="../assets/svg/vnpay-seeklogo.com 1.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+              <div class="footer-column gap-2 align-items-stretch">
+                <span class="footer-column_title">Dịch vụ giao hàng</span>
+                <a href="#">
+                  <img src="../assets/images/image 18.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col d-xl-block d-none">
+            <div
+              class="d-flex flex-column h-100"
+              style="gap: 32px; position: relative"
+            >
+              <div class="footer-column">
+                <span class="footer-column_title">Kết nối với chúng tôi</span>
+                <div class="d-flex align-items-center gap-3">
+                  <a href="#">
+                    <img src="../assets/images/image 21.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="../assets/images/image 23.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="../assets/svg/image 22.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+              <div class="footer-column">
+                <span class="footer-column_title"
+                  >Tải ứng dụng trên điện thoại
+                </span>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="../assets/svg/QR Code.svg" alt="" />
+                  <div class="d-flex flex-column align-items-start gap-1">
+                    <a href="#"
+                      ><img src="../assets/svg/image 16.svg" alt=""
+                    /></a>
+                    <a href="#"
+                      ><img src="../assets/svg/image 20.svg" alt=""
+                    /></a>
+                  </div>
+                </div>
+              </div>
+              <img
+                class="Footer__connectUs-mateWithLove"
+                src="../assets/svg/Mate with love!.svg"
+                alt=""
+                style="position: absolute; bottom: 0; right: 0"
+              />
+            </div>
+          </div>
+        </div>
+        <span class="divideH"></span>
+        <div class="footer_bottom">
+          <p>
+            Trụ sở chính: 43 Trần Nguyên Đán, Định Công, Q. Hoàng Mai, TP. Hà
+            Nội
+          </p>
+          <p>
+            Giấy chứng nhận Đăng kí kinh doanh số: 0998999999 do sở kế hoạch và
+            Đầu tư Thành Phố Hà Nội cấp lần đầu ngày 09/09/2022
+          </p>
+          <p>©2022 - Bản quyền của Công ty TNHH Ommani</p>
+        </div>
+      </div>
+      <div class="footer_mobile d-flex d-lg-none">
+        ©2022 - Bản quyền của Công ty TNHH Ommani
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/createList.js"></script>
+  <script src="../js/login.js"></script>
+  <script>
+    createcommonProductList(
+      6,
+      ".detail-product .related-product .list-product"
+    );
+
+    const breakpoints = ["(max-width: 768px)", "(max-width: 600px)"];
+
+    breakpoints.forEach((breakpoint) => {
+      const mediaQueryList = window.matchMedia(breakpoint);
+      handleMediaQueryChange(mediaQueryList, breakpoint);
+      mediaQueryList.addListener((e) => handleMediaQueryChange(e, breakpoint));
+      mediaQueryList.addEventListener("change", (e) =>
+        handleMediaQueryChange(e, breakpoint)
+      );
+    });
+
+    function handleMediaQueryChange(mediaQueryList, breakpoint) {
+      switch (breakpoint) {
+        case "(max-width: 768px)":
+          const content = document.querySelector(
+            ".detail-product .product-info #product-info_description .description-second .collapse"
+          );
+          const evaluation = document.querySelector(
+            ".detail-product .product-info #product-info_evaluation"
+          );
+
+          if (mediaQueryList.matches) {
+            content.classList.remove("show");
+            evaluation.classList.add("show", "active");
+          } else {
+            content.classList.add("show");
+            evaluation.classList.remove("show", "active");
+          }
+          break;
+
+        case "(max-width: 600px)":
+          break;
+
+        default:
+          break;
+      }
+    }
+  </script>
+</html>

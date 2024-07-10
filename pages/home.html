@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/responsive_common.css" />
+    <link rel="stylesheet" href="../css/responsive_home.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div
+        class="container-xxl h-100 d-flex flex-column justify-content-between"
+      >
+        <div class="d-xl-flex d-none justify-content-between">
+          <div class="header_option-left">
+            <script>
+              const listheader_optionleft = [
+                "Kênh người bán",
+                "Trở thành người bán",
+                "Download App",
+                "Kết nối",
+              ];
+              for (let i = 0; i < 4; i++) {
+                document.write(`
+                  <a href="#">Kênh người bán</a>
+                  ${i !== 3 ? `<div class="divideV"></div>` : ""}
+                `);
+              }
+            </script>
+          </div>
+          <div class="header_option-right">
+            <a href="#">OCOP</a>
+            <a href="#">Hỗ trợ thông tin</a>
+            <a href="#">Vận chuyển</a>
+          </div>
+        </div>
+        <div class="header_bottom align-items-xl-end align-items-center">
+          <!-- logo -->
+          <a href="#" class="logo">
+            <img
+              src="../assets/svg/logomain.svg"
+              alt=""
+              style="width: 167px; object-fit: contain"
+            />
+          </a>
+          <!-- choose address -->
+          <button class="address">
+            <img src="../assets/svg/position.svg" alt="" />
+            <span class="Roboto12">Thanh Xuân</span>
+            <img src="../assets/svg/li_chevron-down.svg" alt="" />
+          </button>
+          <!-- search -->
+          <div class="search">
+            <div class="search_bar">
+              <div class="dropdown">
+                <button data-bs-toggle="dropdown" data-bs-offset="-12,10">
+                  <span class="Roboto14">Sản phẩm</span>
+                  <img src="../assets/svg/li_chevron-green.svg" alt="" />
+                </button>
+                <div class="dropdown-menu">
+                  <div class="d-flex flex-column align-items-start">
+                    <p onclick="changeContent('Sản phẩm')">Sản phẩm</p>
+                    <p onclick="changeContent('Cửa hàng')">Cửa hàng</p>
+                  </div>
+                </div>
+              </div>
+              <input placeholder="Nhập sản phẩm cần tìm kiếm..." type="text" />
+              <button class="icon-search">
+                <img src="../assets/svg/li_search.svg" alt="" />
+              </button>
+              <script>
+                const spanNeedChange = document.querySelector(
+                  ".header .header_bottom .search .search_bar .dropdown button:first-of-type span"
+                );
+                const inputNeedChange = document.querySelector(
+                  ".header .header_bottom .search .search_bar input"
+                );
+                function changeContent(content) {
+                  spanNeedChange.textContent = content;
+                  if (content === "Sản phẩm") {
+                    inputNeedChange.placeholder =
+                      "Nhập sản phẩm cần tìm kiếm...";
+                  } else {
+                    inputNeedChange.placeholder =
+                      "Nhập cửa hàng cần tìm kiếm...";
+                  }
+                }
+              </script>
+            </div>
+            <div class="search_result-search">
+              <a href="#">
+                <div></div>
+                <span>Bông cải xanh</span></a
+              >
+              <a href="#">
+                <div></div>
+                <span>Bông Cải Xanh Đà Lạt</span></a
+              >
+              <a href="#">
+                <div></div>
+                <span>Bông Cải</span></a
+              >
+            </div>
+            <div class="search_categories d-lg-flex d-none">
+              <a href="#">Trái cây</a>
+              <a href="#">thịt, trứng</a>
+              <a href="#">rau, củ, quả</a>
+              <a href="#">sữa, bơ, phô mai</a>
+              <a href="#">hải sản</a>
+              <a href="#">gạo, mì ăn liền</a>
+              <a href="#">bánh, kẹo</a>
+            </div>
+            <script>
+              const inputHeader = document.querySelector(
+                ".header .header_bottom .search .search_bar input"
+              );
+              const resultSearch = document.querySelector(
+                ".header .header_bottom .search .search_result-search"
+              );
+              inputHeader.addEventListener("input", (e) => {
+                if (e.target.value.length > 0) {
+                  resultSearch.style.display = "block";
+                } else {
+                  resultSearch.style.display = "none";
+                }
+              });
+            </script>
+          </div>
+          <!-- bell -->
+          <a href="#" class="notification">
+            <img src="../assets/svg/bell.svg" alt="" />
+          </a>
+          <!-- message -->
+          <a href="#" class="message">
+            <img src="../assets/svg/message.svg" alt="" />
+          </a>
+          <!-- cart -->
+          <div class="cart dropdown">
+            <button
+              data-bs-toggle="dropdown"
+              data-bs-offset="-335,16"
+              data-bs-auto-close="outside"
+              class="cart_btn-dropdown"
+            >
+              <img src="../assets/svg/cart.svg" alt="" />
+            </button>
+            <div class="dropdown-menu">
+              <div class="arrow"></div>
+              <div class="content">
+                <span class="content_new-add"> Sản phẩm mới thêm </span>
+                <div class="content_list">
+                  <div class="item">
+                    <div class="info">
+                      <img src="../assets/svg/cartit1.svg" alt="" />
+                      <span
+                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
+                        100%</span
+                      >
+                    </div>
+                    <div class="cost">đ 59.000</div>
+                  </div>
+                  <div class="item">
+                    <div class="info">
+                      <img src="../assets/svg/cartit2.svg" alt="" />
+                      <span
+                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
+                        100%</span
+                      >
+                    </div>
+                    <div class="cost">đ 59.000</div>
+                  </div>
+                  <div class="item">
+                    <div class="info">
+                      <img src="../assets/svg/cartit3.svg" alt="" />
+                      <span
+                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
+                        100%</span
+                      >
+                    </div>
+                    <div class="cost">đ 59.000</div>
+                  </div>
+                  <div class="item">
+                    <div class="info">
+                      <img src="../assets/svg/cartit4.svg" alt="" />
+                      <span
+                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
+                        100%</span
+                      >
+                    </div>
+                    <div class="cost">đ 59.000</div>
+                  </div>
+                  <div class="item">
+                    <div class="info">
+                      <img src="../assets/svg/cartit5.svg" alt="" />
+                      <span
+                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
+                        100%</span
+                      >
+                    </div>
+                    <div class="cost">đ 59.000</div>
+                  </div>
+                </div>
+                <div class="content_footer">
+                  <span>78 thêm hàng vào giỏ</span>
+                  <button>Xem giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- userloginSignup -->
+          <div class="user dropdown nologin">
+            <button
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              class="user_btn-dropdown"
+              data-bs-offset="-70,20"
+            >
+              <img
+                src="../assets/svg/carbon_user-avatar.svg"
+                alt=""
+                style="width: 33px; object-fit: contain"
+              />
+            </button>
+            <div class="user_option d-lg-flex d-none">
+              <a href="#">Đăng nhập</a>
+              <a href="#">Đăng ký</a>
+            </div>
+          </div>
+          <div class="user dropdown login">
+            <button
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              class="user_btn-dropdown"
+              data-bs-offset="-70,20"
+            >
+              <img
+                src="../assets/svg/avtar.svg"
+                alt=""
+                style="width: 33px; object-fit: contain; margin-right: 8px"
+              />
+            </button>
+            <div class="dropdown-menu">
+              <div class="arrow"></div>
+              <div class="content">
+                <a href="#">Tài khoản của tôi</a>
+                <a href="#">Đơn mua</a>
+                <a href="#">Đăng xuất</a>
+              </div>
+            </div>
+            <div class="user_option d-lg-flex d-none">
+              <a href="#">Tài khoản</a>
+              <a href="#">Hoàng Anh</a>
+            </div>
+            <img
+              class="d-lg-block d-none"
+              src="../assets/svg/li_chevron-down.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- search mobile -->
+        <div class="header_search-mobile d-md-none d-flex">
+          <img src="../assets/svg/icSearchmobile.svg" alt="" />
+          <input
+            type="text"
+            class="header_search-mobile-input"
+            placeholder="Nhập sản phẩm cần tìm kiếm..."
+          />
+        </div>
+      </div>
+    </header>
+    <!-- filter -->
+    <div class="filter d-lg-block d-none">
+      <div
+        class="container-xxl d-flex align-items-center justify-content-start"
+        style="gap: 24px"
+      >
+        <div class="dropdown">
+          <button data-bs-auto-close="outside" data-bs-toggle="dropdown">
+            <img
+              src="../assets/images/li_layout-grid.png"
+              alt=""
+              style="width: 24px; object-fit: contain"
+            />
+            <span>Tất cả</span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="dropdown-content d-flex flex-column">
+              <script>
+                const alldataDropdown = [
+                  {
+                    class1: "Cửa hàng Nông nghiệp",
+                    class2: [
+                      "Vật tư Nông nghiệp",
+                      "Rau xanh",
+                      "Hoa",
+                      "Hạt",
+                      "Hạt giống",
+                      "Chăn nuôi",
+                      "Thủy sản",
+                      "Lâm nghiệp",
+                      "Diêm nghiệp",
+                      "Nước",
+                    ],
+                    class3: [
+                      "Thực phẩm Nông nghiệp",
+                      "Thực phẩm khô",
+                      "Thực phẩm tươi sống",
+                      "Thực phẩm đông lạnh",
+                      "Đồ uống",
+                      "Bánh kẹo",
+                    ],
+                  },
+                  {
+                    class1: "Dịch vụ Nông nghiệp",
+                    class2: [
+                      "Công cụ dụng cụ Nông nghiệp",
+                      "Thức ăn chăn nuôi",
+                      "Thuốc bảo vệ thực vật",
+                      "Thú y",
+                      "Du lịch",
+                      "Bất động sản nông nghiệp",
+                    ],
+                  },
+                  {
+                    class1: "Thương mại",
+                    class2: [
+                      "Tư vấn Marketing",
+                      "Đăng ký sản phẩm thương mại hóa",
+                      "Đăng ký nhận tín dụng ",
+                    ],
+                  },
+                  {
+                    class1: "Pháp lý",
+                    class2: [
+                      "Chứng nhận",
+                      "Giám định",
+                      "Thủ tục IE",
+                      "Liên kết vận chuyển",
+                    ],
+                  },
+                  {
+                    class1: "Thông tin",
+                    class2: [
+                      "Blog kiến thức",
+                      "Hỏi đáp chuyên gia",
+                      "Cổng thông tin xúc tiến Thương mại",
+                    ],
+                  },
+                ];
+
+                const dropdownMenuAll = document.querySelector(
+                  ".filter .dropdown:first-of-type .dropdown-menu .dropdown-content"
+                );
+                let contentDropDownMenuAll = "";
+                for (let i = 0; i < alldataDropdown.length; i++) {
+                  let contentClass2 = "";
+                  let contentClass3 = "";
+
+                  if (alldataDropdown[i].class2) {
+                    const class2 = alldataDropdown[i].class2;
+                    for (let j = 0; j < class2.length; j++) {
+                      contentClass2 += `<a href="#">${class2[j]}</a>`;
+                    }
+                  }
+
+                  if (alldataDropdown[i].class3) {
+                    const class3 = alldataDropdown[i].class3;
+                    for (let j = 0; j < class3.length; j++) {
+                      contentClass3 += `<a href="#">${class3[j]}</a>`;
+                    }
+                  }
+
+                  let menuItem = `<div class="dropdown-content-item">
+                    <div class="class1">
+                      <img src="../assets/svg/icondrd${i + 1}.svg" alt="">
+                      <div>${alldataDropdown[i].class1}</div>  
+                      <img src="../assets/svg/chevronGreen.svg" alt="">
+                    </div>
+                    <div class="class2">${contentClass2}</div>
+                    <div class="class3">${contentClass3}</div>
+                    </div>`;
+                  contentDropDownMenuAll += menuItem;
+                }
+                dropdownMenuAll.innerHTML = contentDropDownMenuAll;
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button data-bs-toggle="dropdown">
+            <img src="../assets/images/iconoir_small-shop-alt.png" alt="" />
+            <span>Tìm theo vị trí</span>
+          </button>
+          <ul
+            class="dropdown-menu"
+            style="min-height: 300px; line-height: 16px"
+          >
+            dropdown2
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- home -->
+    <main class="home container-xxl d-flex flex-column">
+      <section
+        class="banner carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="2000"
+        id="banner"
+      >
+        <div class="carousel-indicators"></div>
+        <div class="carousel-inner"></div>
+      </section>
+      <section class="market-place">
+        <script>
+          const HomemarketPlaceArr = ["06", "05", "04", "03", "02", "01", "7"];
+          const HomemarketPlaceArr1 = [
+            "Ommani Mall",
+            "Đi chợ",
+            "Bán Sỉ",
+            "Bán Drop",
+            "Bán Quốc Tế",
+            "OCOP",
+            "Chứng nhận",
+          ];
+
+          for (let i = 0; i < HomemarketPlaceArr.length; i++) {
+            document.write(`
+              <a href="#">
+                <img src="../assets/svg/Mục ${HomemarketPlaceArr[i]}.svg" alt="" />
+                <span>${HomemarketPlaceArr1[i]}</span>
+              </a>
+            `);
+          }
+        </script>
+      </section>
+      <section class="agri-solutions">
+        <script>
+          const arrAgriSolutions = [
+            "CỬA HÀNG NÔNG SẢN",
+            "dịch vụ nông nghiệp",
+            "giải pháp thương mại",
+          ];
+          for (let i = 0; i < 3; i++) {
+            document.write(`
+               <a href="#">
+                <span></span>
+                <span>${arrAgriSolutions[i]}</span>
+                <img src="../assets/images/solu${i + 1}.png" alt="" />
+              </a>
+            `);
+          }
+        </script>
+      </section>
+      <section class="top-store">
+        <span class="top-store_title">Top cửa hàng uy tín</span>
+        <div class="top-store_list">
+          <script>
+            let arrindexImage = ["1", "2", "6", "3", "4", "5"];
+            arrindexImage.forEach((item, index) => {
+              document.write(`
+                  <a href="#" class="item">
+                    <img
+                      class= "item_avatar"
+                      src="../assets/images/store${item}.png"
+                      alt=""
+                    />
+                    <div class="item_info d-flex flex-column align-items-start">
+                      <span class="name">Ommani Mall Nguyễn Văn Linh Long Biên</span>
+                      <div class="stars d-flex align-items-center" style="gap:3px">
+                        <img src="../assets/svg/star.svg" alt="" />
+                        <span>4.8 (11k+)</span>
+                      </div>
+                      <span class="certification">Đã Chứng Nhận</span>
+                    </div>
+                  </a>
+                `);
+            });
+          </script>
+        </div>
+      </section>
+      <section class="common-category">
+        <span class="common-category_title">Tìm theo danh mục</span>
+        <div class="common-category_list">
+          <script>
+            const categoryData = [
+              {
+                title: "Trái cây",
+                img: "../assets/images/cate1.png",
+              },
+              {
+                title: "Thịt, Trứng",
+                img: "../assets/images/cate2.png",
+              },
+              {
+                title: "Cá, Thuỷ hải sản",
+                img: "../assets/images/cate3.png",
+              },
+              {
+                title: "Rau, Củ",
+                img: "../assets/images/cate4.png",
+              },
+              {
+                title: "Thực phẩm Việt",
+                img: "../assets/images/cate5.png",
+              },
+              {
+                title: "Sữa, Bơ",
+                img: "../assets/images/cate6.png",
+              },
+              {
+                title: "Đông lạnh",
+                img: "../assets/images/cate7.png",
+              },
+              {
+                title: "Dầu ăn",
+                img: "../assets/images/cate8.png",
+              },
+              {
+                title: "Gạo, Mì, Nông sản",
+                img: "../assets/images/cate9.png",
+              },
+              {
+                title: "Đồ hộp",
+                img: "../assets/images/cate10.png",
+              },
+              {
+                title: "Bia, Đồ uống",
+                img: "../assets/images/cate11.png",
+              },
+              {
+                title: "Thực phẩm chay",
+                img: "../assets/images/cate12.png",
+              },
+              {
+                title: "Dành cho trẻ em",
+                img: "../assets/images/cate13.png",
+              },
+              {
+                title: "Bánh kẹo, giỏ quà",
+                img: "../assets/images/cate14.png",
+              },
+              {
+                title: "Đồ ăn, Thú cưng",
+                img: "../assets/images/cate15.png",
+              },
+              {
+                title: "Chăm sóc cá nhân",
+                img: "../assets/images/cate16.png",
+              },
+              {
+                title: "Chăm sóc nhà cửa",
+                img: "../assets/images/cate17.png",
+              },
+            ];
+            for (let i = 0; i < categoryData.length; i++) {
+              document.write(`
+                <a href="#" class="item">
+                    <img src="../assets/images/cate${i + 1}.png" alt="">
+                    <span>${categoryData[i].title}</span>
+                </a>
+              `);
+            }
+          </script>
+        </div>
+      </section>
+      <section class="common-group-product">
+        <div class="common-group-product_title">Khám phá thêm</div>
+        <div class="common-group-product_list"></div>
+        <div class="common-group-product_see-more">
+          <button>xem thêm</button>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container-xxl d-none d-lg-block">
+        <div class="row g-0">
+          <div class="col">
+            <div class="footer-column">
+              <span class="footer-column_title">Hỗ Trợ khách hàng</span>
+              <div class="footer-column_list">
+                <div class="d-flex flex-column align-items-start gap-1">
+                  <a href="#"
+                    >Hotline: <span class="fw-bold">1900-6789</span></a
+                  >
+                  <span>(1.000 đ/phút, 8-21h kể cả T7, CN)</span>
+                </div>
+                <a href="#">Các câu hỏi thường gặp</a>
+                <a href="#">Gửi yêu cầu hỗ trợ</a>
+                <a href="#">Hướng dẫn đặt hàng</a>
+                <a href="#">Phương thức vận chuyển</a>
+                <a href="#">Chính sách đổi trả</a>
+                <a href="#">Chính sách hàng nhập khẩu</a>
+                <a href="#">Hỗ trợ khách hàng: hotro@ommani.vn</a>
+                <a href="#">Báo lỗi bảo mật: security@ommani.vn</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="footer-column">
+              <span class="footer-column_title">Về Ommani Life</span>
+              <div class="footer-column_list">
+                <a href="#">Giới thiệu về Ommani</a>
+                <a href="#">Tuyển dụng</a>
+                <a href="#">Chính sách bảo mật, thanh toán</a>
+                <a href="#">Bảo mật thông tin cá nhân</a>
+                <a href="#">Chính sách giải quyết khiếu nại</a>
+                <a href="#">Điều khoản sử dụng</a>
+                <a href="#">Tiếp thị liên kết cùng Ommani</a>
+                <a href="#">Bán hàng cho Doanh nghiệp</a>
+                <a href="#">Điều kiện vận chuyển</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex flex-column" style="gap: 23px">
+              <div class="footer-column">
+                <span class="footer-column_title">Hợp tác và liên kết</span>
+                <div class="footer-column_list">
+                  <a href="#">Quy chế hoạt động sàn GDTMĐT</a>
+                  <a href="#">Bán hàng cùng Ommani</a>
+                </div>
+              </div>
+              <div class="footer-column">
+                <span class="footer-column_title">Chứng nhận bởi</span>
+                <div class="d-flex flex-column" style="gap: 21px">
+                  <div class="d-flex align-items-center" style="gap: 18px">
+                    <a href="#"
+                      ><img src="../assets/svg/image 17.svg" alt=""
+                    /></a>
+                    <a href="#"
+                      ><img src="../assets/svg/image 14.svg" alt=""
+                    /></a>
+                  </div>
+                  <a href="#">
+                    <img src="../assets/svg/image 15.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex flex-column" style="gap: 25px">
+              <div class="footer-column gap-0">
+                <span class="footer-column_title">Phương thức thanh toán</span>
+                <div class="d-flex gap-2 align-items-stretch mb-2">
+                  <a class="align-self-center" href="#">
+                    <img src="../assets/svg/Vector.svg" alt="" />
+                  </a>
+                  <a class="align-self-center" href="#">
+                    <img src="../assets/svg/uim_master-card.svg" alt="" />
+                  </a>
+                  <a class="align-self-center" href="#">
+                    <img src="../assets/svg/logos_jcb.svg" alt="" />
+                  </a>
+                  <a class="align-self-center" href="#">
+                    <img src="../assets/svg/noto_atm-sign.svg" alt="" />
+                  </a>
+                </div>
+                <div class="d-flex gap-2">
+                  <a class="align-self-center" href="#">
+                    <img src="../assets/svg/image 24.svg" alt="" />
+                  </a>
+                  <a class="align-self-center" href="">
+                    <img src="../assets/svg/image 25.svg" alt="" />
+                  </a>
+                  <a class="align-self-center" href="#">
+                    <img src="../assets/svg/image 26.svg" alt="" />
+                  </a>
+                  <a class="align-self-center" href="#">
+                    <img src="../assets/svg/vnpay-seeklogo.com 1.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+              <div class="footer-column gap-2 align-items-stretch">
+                <span class="footer-column_title">Dịch vụ giao hàng</span>
+                <a href="#">
+                  <img src="../assets/images/image 18.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col d-xl-block d-none">
+            <div
+              class="d-flex flex-column h-100"
+              style="gap: 32px; position: relative"
+            >
+              <div class="footer-column">
+                <span class="footer-column_title">Kết nối với chúng tôi</span>
+                <div class="d-flex align-items-center gap-3">
+                  <a href="#">
+                    <img src="../assets/images/image 21.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="../assets/images/image 23.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="../assets/svg/image 22.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+              <div class="footer-column">
+                <span class="footer-column_title"
+                  >Tải ứng dụng trên điện thoại
+                </span>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="../assets/svg/QR Code.svg" alt="" />
+                  <div class="d-flex flex-column align-items-start gap-1">
+                    <a href="#"
+                      ><img src="../assets/svg/image 16.svg" alt=""
+                    /></a>
+                    <a href="#"
+                      ><img src="../assets/svg/image 20.svg" alt=""
+                    /></a>
+                  </div>
+                </div>
+              </div>
+              <img
+                class="Footer__connectUs-mateWithLove"
+                src="../assets/svg/Mate with love!.svg"
+                alt=""
+                style="position: absolute; bottom: 0; right: 0"
+              />
+            </div>
+          </div>
+        </div>
+        <span class="divideH"></span>
+        <div class="footer_bottom">
+          <p>
+            Trụ sở chính: 43 Trần Nguyên Đán, Định Công, Q. Hoàng Mai, TP. Hà
+            Nội
+          </p>
+          <p>
+            Giấy chứng nhận Đăng kí kinh doanh số: 0998999999 do sở kế hoạch và
+            Đầu tư Thành Phố Hà Nội cấp lần đầu ngày 09/09/2022
+          </p>
+          <p>©2022 - Bản quyền của Công ty TNHH Ommani</p>
+        </div>
+      </div>
+      <div class="footer_mobile d-flex d-lg-none">
+        ©2022 - Bản quyền của Công ty TNHH Ommani
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/createList.js"></script>
+  <script src="../js/login.js"></script>
+  <script>
+    createCarouSel(".home .banner .carousel-indicators");
+    createcommongroupproduct(
+      ".common-group-product .common-group-product_list"
+    );
+  </script>
+</html>

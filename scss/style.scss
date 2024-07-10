@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css");
+
+$bgColorMain: #f5f5f7;
+$baseColor0: #1ab357;
+$baseColor1: #29ab56;
+$baseColor2: #007b2b;
+$baseColor3: #2ead5b;
+$baseColor4: #00bc3c;
+$baseColor5: #22aa00;
+$baseColor6: #5cb531;
+$white: #fff;
+$black0: #373737;
+$black1: #1a1a1a;
+$black2: #000;
+$black3: #2f294d;
+$black4: #282828;
+$black5: #4d4d4d;
+$black6: #333333;
+$gray0: #969696;
+$gray1: #7b7b7b;
+$gray2: #2f294d;
+$gray3: #dfdfdf;
+$gray4: #c2c2c2;
+$gray5: #cccccc;
+$gray6: #888888;
+$gray7: #f6f6f6;
+$blue0: #2e9dff;
+$red0: #fb4f5b;
+$red1: #fb424f;
+$blue1: #f0f8ff;
+$bgColor: #f5f5fa;
+
+body {
+  font-family: Roboto;
+  background-color: #f5f5fa !important;
+}
+.fontPrimary {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+  text-align: center;
+  color: #000;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Xóa khoảng cách giữa nút và trường input */
+  display: none; /* Ẩn nút tăng giảm */
+}
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+.divideV {
+  display: inline;
+  min-width: 1px;
+  height: 100%;
+  background-color: white;
+}
+.divideH {
+  display: inline-block;
+  min-height: 1px;
+  width: 100%;
+  background-color: white;
+}
+.Roboto10 {
+  font-family: Roboto;
+  font-size: 10px;
+  line-height: 11.72px;
+  text-align: left;
+}
+.Roboto12 {
+  font-size: 12px;
+  line-height: normal;
+  text-align: left;
+}
+.Roboto13 {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+}
+.Roboto14 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+.Roboto16 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
+}
+.Roboto20 {
+  font-size: 20px;
+  text-align: center;
+  line-height: normal;
+}
+.Roboto22 {
+  font-size: 22px;
+  text-align: left;
+  line-height: normal;
+}
+.Roboto24 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+  line-height: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+button {
+  cursor: pointer;
+  padding: 0px;
+}
+.commonGroupProducts {
+  .commonGroupProducts-title {
+    background-color: $white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 11px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 3px;
+    @extend .Roboto22;
+    font-weight: 500;
+    color: $black1;
+  }
+  .commonGroupProducts-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    .commonGroupProducts-item {
+      width: 100%;
+      padding: 10px;
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .header {
+        width: 100%;
+        display: flex;
+        gap: 12px;
+        .logo {
+          height: 100%;
+          object-fit: contain;
+        }
+        .info {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: start;
+          .title {
+            @extend .Roboto14;
+            font-weight: 700;
+            color: $black1;
+          }
+          .follow {
+            @extend .Roboto14;
+            font-weight: 400;
+            color: $gray0;
+          }
+          .address {
+            @extend .Roboto14;
+            font-weight: 400;
+            color: $baseColor3;
+          }
+          .certificate {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+          }
+        }
+      }
+      .products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+        .product {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          max-width: 100%;
+          min-height: 30px;
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+          .info {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            .name {
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              -webkit-line-clamp: 2;
+              max-height: 3em; /* Chiều cao tối đa của span */
+              line-height: 1.5em;
+              @extend .Roboto14;
+              font-weight: 400;
+              color: $black1;
+            }
+            .sold {
+              @extend .Roboto14;
+              color: $gray1;
+            }
+            .cost {
+              @extend .Roboto16;
+              font-weight: 700;
+              color: $red0;
+            }
+            .cost.black {
+              color: $black1;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+  .commonGroupProducts-seeMore {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    button {
+      width: 241px;
+      height: 41px;
+      border: 1px solid $blue0;
+      border-radius: 6px;
+      margin-top: 24px;
+      margin-bottom: 32px;
+      text-align: center;
+      align-content: center;
+      @extend .Roboto16;
+      font-weight: 500;
+      color: $blue0;
+      text-transform: uppercase;
+      &:hover {
+        background-color: $blue0;
+        color: $white;
+      }
+    }
+  }
+}
+.commonProductList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 12px;
+  row-gap: 12px;
+  .commonProductItem {
+    width: 100%;
+    background-color: $white;
+    display: flex;
+    border-radius: 4px;
+    flex-direction: column;
+    .headerlogo {
+      position: relative;
+      width: 100%;
+      height: auto;
+      line-height: 0;
+      .headlogo {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        padding: 4px;
+        background-color: $white;
+        border-radius: 4px;
+        top: 0px;
+        left: 0px;
+      }
+      .freeshiplogo {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+      }
+      .saleIcon {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+    }
+    .info {
+      padding: 10px 10px 12px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .name {
+        width: 100%;
+        @extend .Roboto14;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          span {
+            @extend .Roboto16;
+            font-weight: 700;
+            color: $baseColor3;
+          }
+        }
+        .bottom {
+          height: 14px;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          .stars {
+            height: 100%;
+            img {
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+          .divideV {
+            background-color: #2e2e2e;
+          }
+          .sold {
+            @extend .Roboto12;
+            margin-top: 3px;
+          }
+        }
+      }
+      .address {
+        @extend .Roboto12;
+        color: $gray5;
+      }
+    }
+  }
+}
+.commonCategory {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  .commonCategory_main {
+    width: 100%;
+    height: auto;
+    padding: 58px 47px 46px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $white;
+    position: relative;
+    border-radius: 3px;
+    .commonCategory_title {
+      position: absolute;
+      top: 12px;
+      left: 16px;
+      @extend .Roboto22;
+      font-weight: 500;
+      color: $black1;
+    }
+    .commonCategory_list {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-column-gap: 41px;
+      grid-row-gap: 32px;
+      width: 100%;
+      .commonCategory_item {
+        width: 90px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 12px;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        text-wrap: nowrap;
+        span {
+          @extend .Roboto12;
+          font-weight: 400;
+          color: $black2;
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+.star-follow {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+  .i1 {
+    @extend .Roboto14;
+    font-weight: 500;
+  }
+  .i2 {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-weight: 500;
+    @extend .Roboto12;
+    :nth-child(2) {
+      color: #969696;
+    }
+    :nth-child(3) {
+      color: #2ead5b;
+    }
+  }
+  .i3 {
+    display: flex;
+    align-items: center;
+    @extend .Roboto12;
+    font-weight: 500;
+    gap: 8px;
+    button {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 5px;
+      border-radius: 3px;
+    }
+    .chatngay {
+      background-color: rgba(255, 0, 2, 0.08);
+      color: #ff000f;
+    }
+    .xemshop {
+      background-color: rgba(240, 248, 255, 1);
+      color: #2e9dff;
+    }
+  }
+}
+.avatar-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .avatar {
+    position: relative;
+    transition: 0.2s;
+    img {
+      width: 40px;
+      height: 40px;
+      display: block;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #fff;
+    }
+  }
+}
+.avatar-group .avatar:nth-of-type(n + 2) {
+  margin-left: -10px;
+}
+nav .pagination {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 24px;
+  margin-bottom: 42px;
+
+  .page-link {
+    color: $black2;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.9px;
+  }
+  .page-item.active {
+    .page-link {
+      background-color: #29ab56;
+      border: none;
+      color: $white;
+    }
+  }
+  .page-link:hover {
+    color: $black2;
+    text-decoration: none;
+  }
+}
+.dropdown .dropdown-menu {
+  border: none;
+  outline: none;
+}
+.checkBoxBlue {
+  & input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: 1px solid #cdcdcd;
+  }
+  & input[type="checkbox"]:after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f00c";
+    color: white;
+    display: none;
+  }
+  & input[type="checkbox"]:hover {
+    background-color: #e4e4e4;
+  }
+  & input[type="checkbox"]:checked {
+    background-color: #1771cd;
+  }
+  & input[type="checkbox"]:checked:after {
+    display: block;
+  }
+}
+.custom-dropdown-menu {
+  border-radius: 0px;
+  position: relative;
+  background-color: $white;
+  border: none;
+  box-shadow: 0px 0px 15px 0px #0c2f4c26;
+  padding: 0px;
+  z-index: 1;
+  .arrow {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    z-index: -1;
+    background-image: url("../../assets/svg/Polygon\ 3.svg");
+    width: 72px;
+    height: 37px;
+  }
+}
+.dropdown {
+  .dropdown-menu {
+    --bs-dropdown-min-width: unset;
+  }
+}
+.common-box-white {
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+@mixin box-white6 {
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+@mixin ellipsis-2-line {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
