@@ -1,3 +1,5 @@
+@import "./style.scss";
+
 @mixin scrollauto {
   width: 100%;
   overflow-x: scroll;
@@ -102,12 +104,16 @@
     }
     .market-place {
       padding-top: 12px;
-      padding-bottom: 47px;
-      gap: 14px;
+      padding-bottom: 26px;
+      gap: 25px;
       a {
-        min-width: 80px;
+        width: fit-content;
+        align-items: center;
+        min-width: 68px;
         span {
-          transform: translateY(calc(100% + 8px));
+          width: 100%;
+          position: relative;
+          transform: unset;
           font-family: Roboto;
           font-size: 12px;
           font-weight: 400;

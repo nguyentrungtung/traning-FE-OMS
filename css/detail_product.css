@@ -1026,6 +1026,15 @@ nav .pagination .page-link:hover {
   gap: 10px;
   border: 1.85px solid #29ab56;
 }
+.detail-product .product-briefing .product-briefing_right .product-briefing_content .product-briefing_options button:first-of-type:hover {
+  background-color: #29ab56;
+}
+.detail-product .product-briefing .product-briefing_right .product-briefing_content .product-briefing_options button:first-of-type:hover span {
+  color: white;
+}
+.detail-product .product-briefing .product-briefing_right .product-briefing_content .product-briefing_options button:first-of-type:hover img {
+  filter: brightness(10000%);
+}
 .detail-product .product-briefing .product-briefing_right .product-briefing_content .product-briefing_options button:first-of-type span {
   font-weight: 500;
   color: #29ab56;

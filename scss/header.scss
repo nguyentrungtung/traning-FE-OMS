@@ -204,6 +204,11 @@
               display: flex;
               align-items: start;
               justify-content: space-between;
+              &:hover {
+                cursor: pointer;
+                background-color: #f0f0f0;
+              }
+
               .info {
                 display: flex;
                 align-items: start;
@@ -303,7 +308,6 @@
     }
     .user.login {
       .user_option {
-        margin-left: 11px;
         margin-right: 8px;
       }
     }

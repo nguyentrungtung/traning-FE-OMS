@@ -738,7 +738,6 @@ nav .pagination .page-link:hover {
   grid-row-gap: 32px;
 }
 .home.container-xxl .common-category .common-category_list .item {
-  width: 90px;
   height: 120px;
   display: flex;
   flex-direction: column;
@@ -757,12 +756,17 @@ nav .pagination .page-link:hover {
   transform: scale(1.1);
 }
 .home.container-xxl .common-category .common-category_list .item span {
+  width: 90px;
   font-family: Roboto;
   font-size: 12px;
   font-weight: 400;
   line-height: 14.06px;
   text-align: center;
-  text-wrap: nowrap;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 .home.container-xxl .common-group-product {
   margin-top: 24px;
@@ -809,6 +813,11 @@ nav .pagination .page-link:hover {
 .home.container-xxl .common-group-product .common-group-product_list .item .item_header .info .title {
   font-weight: 700;
   color: #1a1a1a;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 .home.container-xxl .common-group-product .common-group-product_list .item .item_header .info .follow {
   font-weight: 400;

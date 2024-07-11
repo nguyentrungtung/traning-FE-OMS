@@ -742,6 +742,10 @@ nav .pagination .page-link:hover {
   align-items: start;
   justify-content: space-between;
 }
+.header .header_bottom .cart .dropdown-menu .content .content_list .item:hover {
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
 .header .header_bottom .cart .dropdown-menu .content .content_list .item .info {
   display: flex;
   align-items: start;
@@ -824,7 +828,6 @@ nav .pagination .page-link:hover {
   background-color: #f0f0f0;
 }
 .header .header_bottom .user.login .user_option {
-  margin-left: 11px;
   margin-right: 8px;
 }
 .header .header_bottom .user.nologin .user_option {

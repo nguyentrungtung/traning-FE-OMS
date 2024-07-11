@@ -155,56 +155,24 @@
               <div class="content">
                 <span class="content_new-add"> Sản phẩm mới thêm </span>
                 <div class="content_list">
-                  <div class="item">
-                    <div class="info">
-                      <img src="../assets/svg/cartit1.svg" alt="" />
-                      <span
-                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
-                        100%</span
-                      >
-                    </div>
-                    <div class="cost">đ 59.000</div>
-                  </div>
-                  <div class="item">
-                    <div class="info">
-                      <img src="../assets/svg/cartit2.svg" alt="" />
-                      <span
-                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
-                        100%</span
-                      >
-                    </div>
-                    <div class="cost">đ 59.000</div>
-                  </div>
-                  <div class="item">
-                    <div class="info">
-                      <img src="../assets/svg/cartit3.svg" alt="" />
-                      <span
-                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
-                        100%</span
-                      >
-                    </div>
-                    <div class="cost">đ 59.000</div>
-                  </div>
-                  <div class="item">
-                    <div class="info">
-                      <img src="../assets/svg/cartit4.svg" alt="" />
-                      <span
-                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
-                        100%</span
-                      >
-                    </div>
-                    <div class="cost">đ 59.000</div>
-                  </div>
-                  <div class="item">
-                    <div class="info">
-                      <img src="../assets/svg/cartit5.svg" alt="" />
-                      <span
-                        >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
-                        100%</span
-                      >
-                    </div>
-                    <div class="cost">đ 59.000</div>
-                  </div>
+                  <script>
+                    for (let i = 1; i <= 5; i++) {
+                      document.write(`
+                        <a href="./detail_product.html" class="item">
+                            <div class="info">
+                            <img src="../assets/svg/cartit${i}.svg" alt="" />
+                            <span
+                              title="Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
+                            100%"
+                              >Bông cải xanh 100g nội địa Nhật Bản và tự nhiên
+                              100%</span
+                            >
+                          </div>
+                          <div class="cost">đ 59.000</div>
+                        </a>  
+                      `);
+                    }
+                  </script>
                 </div>
                 <div class="content_footer">
                   <span>78 thêm hàng vào giỏ</span>
@@ -431,7 +399,7 @@
             document.write(`
               <a href="#">
                 <img src="../assets/svg/Mục ${HomemarketPlaceArr[i]}.svg" alt="" />
-                <span>${HomemarketPlaceArr1[i]}</span>
+                <span title="${HomemarketPlaceArr1[i]}">${HomemarketPlaceArr1[i]}</span>
               </a>
             `);
           }
@@ -469,7 +437,7 @@
                       alt=""
                     />
                     <div class="item_info d-flex flex-column align-items-start">
-                      <span class="name">Ommani Mall Nguyễn Văn Linh Long Biên</span>
+                      <span title="Ommani Mall Nguyễn Văn Linh Long Biên" class="name">Ommani Mall Nguyễn Văn Linh Long Biên</span>
                       <div class="stars d-flex align-items-center" style="gap:3px">
                         <img src="../assets/svg/star.svg" alt="" />
                         <span>4.8 (11k+)</span>
@@ -560,7 +528,9 @@
               document.write(`
                 <a href="#" class="item">
                     <img src="../assets/images/cate${i + 1}.png" alt="">
-                    <span>${categoryData[i].title}</span>
+                    <span title="${categoryData[i].title}">${
+                categoryData[i].title
+              }</span>
                 </a>
               `);
             }

@@ -41,14 +41,16 @@ const createcommongroupproduct = (queryStr) => {
     let tempProducts = "";
     for (let j = 1; j <= 3; j++) {
       tempProducts += `
-        <a href="#" class="product">
+        <a href="./detail_product.html" class="product">
           <img src="../assets/images/explore${i}${j}.png" alt="" />
           <div class="info">
             <span 
               data-bs-custom-class="custom-tooltip"
               data-bs-toggle="tooltip"
               data-bs-placement="bottom"
-              data-bs-title="Xúc Xích Đức Việt gói 16 hông khói" >
+              data-bs-title="Xúc Xích Đức Việt gói 16 hông khói"
+              >
+
               Xúc Xích Đức Việt gói 16 hông khói ...
             </span>
             <span class="sold">Đã bán 12</span>
@@ -62,7 +64,7 @@ const createcommongroupproduct = (queryStr) => {
               <div class="item_header">
                 <img class="logo" src="../assets/images/explorelogo${i}.png" alt="" />
                 <div class="info">
-                  <span class="title">Ommani Mall Thạch Bàn Long</span>
+                  <div class="title">Ommani Mall Thạch Bàn Long</div>
                   <div class="d-flex gap-1">
                     <img src="../assets/svg/star.svg" alt="" />
                     <span class="follow">4.8 (11k+)</span>

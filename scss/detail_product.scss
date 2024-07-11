@@ -490,6 +490,16 @@
             gap: 10px;
             border: 1.85px solid #29ab56;
 
+            &:hover {
+              background-color: #29ab56;
+              span {
+                color: white;
+              }
+              img {
+                filter: brightness(10000%);
+              }
+            }
+
             span {
               @extend .Roboto20;
               font-weight: 500;

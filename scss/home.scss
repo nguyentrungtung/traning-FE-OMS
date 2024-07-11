@@ -194,7 +194,6 @@
       grid-column-gap: 41px;
       grid-row-gap: 32px;
       .item {
-        width: 90px;
         height: 120px;
         display: flex;
         flex-direction: column;
@@ -211,14 +210,14 @@
             transform: scale(1.1);
           }
         }
-
         span {
+          width: 90px;
           font-family: Roboto;
           font-size: 12px;
           font-weight: 400;
           line-height: 14.06px;
           text-align: center;
-          text-wrap: nowrap;
+          @include ellipsis-1-line();
         }
       }
     }
@@ -267,6 +266,7 @@
               @extend .Roboto14;
               font-weight: 700;
               color: $black1;
+              @include ellipsis-1-line;
             }
             .follow {
               @extend .Roboto14;
