@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap, Boostrap-icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Css -->
+    <link rel="stylesheet" href="../assets/common/common.css" />
+    <link rel="stylesheet" href="../assets/product-detail/product-detail.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/product-detail/product-detail-responsive.css"
+    />
+    <title>Chi tiết sản phẩm</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header_wrapper d-none d-md-flex">
+      <div class="container-lg container-xxl p-0">
+        <div
+          class="header_top-bar d-none d-lg-flex align-items-center justify-content-between"
+        >
+          <ul class="header_right-link d-flex align-items-center">
+            <li class="header-link"><a href="#">Kênh người bán</a></li>
+            <li class="header-link"><a href="#">Trở thành người bán</a></li>
+            <li class="header-link"><a href="#">Download App</a></li>
+            <li class="header-link"><a href="#">Kết nối</a></li>
+          </ul>
+          <ul class="header_left-link d-flex align-items-center">
+            <li class="header-link"><a href="#">OCCOP</a></li>
+            <li class="header-link"><a href="#">Hỗ trợ thông tin</a></li>
+            <li class="header-link"><a href="#">Vận chuyển</a></li>
+          </ul>
+        </div>
+        <div class="header_main d-flex justify-content-between">
+          <div class="header_logo">
+            <a href="/pages/home.html">
+              <img src="../images/home/web-logo.svg" alt="web-logo" />
+            </a>
+          </div>
+          <div class="header_location d-none">
+            <i class="header_location-icon bi bi-geo-alt"></i>
+            <span class="header_location-text">Thanh Xuân</span>
+            <i class="arrow_icon bi bi-chevron-down"></i>
+          </div>
+          <div class="header_search position-relative d-none d-md-block">
+            <div class="header_search-block b d-flex align-items-center">
+              <div class="select-menu">
+                <div class="select-btn">
+                  <span class="sBtn-text">Sản phẩm</span>
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+
+                <ul class="options">
+                  <li class="option">
+                    <span class="option-text">Cửa hàng</span>
+                  </li>
+                  <li class="option">
+                    <span class="option-text">Sản phẩm</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="header_search-input d-flex align-items-center">
+                <span class="space-border"></span>
+                <input
+                  class="header_input-product border-0"
+                  type="text"
+                  placeholder="Nhập sản phẩm cần tìm kiếm..."
+                />
+                <input
+                  class="header_input-store border-0 d-none"
+                  type="text"
+                  placeholder="Nhập cửa hàng cần tìm kiếm..."
+                />
+                <button
+                  class="header_button-search d-flex align-items-center justify-content-center"
+                >
+                  <img src="../images/home/search-icon.svg" alt="search-icon" />
+                </button>
+              </div>
+            </div>
+            <div class="header_search-history position-absolute">
+              <ul class="header_search-history-list">
+                <li class="header_search-history-item">
+                  <i class="bi bi-search"></i>
+                  <a href="#">Bông cải Bắp</a>
+                </li>
+                <li class="header_search-history-item">
+                  <i class="bi bi-search"></i>
+                  <a href="#">Bông cải xanh</a>
+                </li>
+                <li class="header_search-history-item">
+                  <i class="bi bi-search"></i>
+                  <a href="#">Bông cải Hà Lan</a>
+                </li>
+                <li class="header_search-history-item">
+                  <i class="bi bi-search"></i>
+                  <a href="#">Bông cải xanh nội địa Nhật Bản</a>
+                </li>
+                <li class="header_search-history-item">
+                  <i class="bi bi-search"></i>
+                  <a href="#">Bông cải sạch</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="header_key-search d-none d-lg-block">
+              <ul class="d-flex align-items-center">
+                <li><a href="#">Trái cây</a></li>
+                <li><a href="#">thịt, trứng</a></li>
+                <li><a href="#">rau, củ, quả</a></li>
+                <li><a href="#">sữa, bơ, phô mai</a></li>
+                <li><a href="#">hải sản</a></li>
+                <li><a href="#">gạo, mỳ ăn liền</a></li>
+                <li><a href="#">bánh, kẹo</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header_icons">
+            <div class="header_icon header header_icon--notification d-none">
+              <i class="bi bi-bell icon"></i>
+            </div>
+            <div class="header_icon header header_icon--messages d-none">
+              <i class="bi bi-chat icon"></i>
+            </div>
+            <div class="header_icon header header_icon--cart dropdown">
+              <i
+                class="bi bi-cart2 icon"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-bs-offset="20, 20"
+              ></i>
+              <span class="header_cart-notify">5</span>
+
+              <div class="dropdown-menu header_cart-menu border-0">
+                <p class="header_cart-title">Sản phẩm mới thêm</p>
+                <ul class="header_cart-list-product d-flex flex-column">
+                  <li class="header_cart-product">
+                    <a href="#" class="d-flex align-items-start">
+                      <img
+                        class="header_product-img img-fluid"
+                        src="../images/home/header-cart-img/img-01.png"
+                        alt="product"
+                      />
+                      <div class="header_product-info d-flex align-items-start">
+                        <p class="header_product-name">
+                          Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%
+                        </p>
+                        <p
+                          class="header_product-price d-flex align-items-center"
+                        >
+                          <u>đ</u>
+                          &nbsp;100.000
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="header_cart-product">
+                    <a href="#" class="d-flex align-items-start">
+                      <img
+                        class="header_product-img img-fluid"
+                        src="../images/home/header-cart-img/img-02.png"
+                        alt="product"
+                      />
+                      <div class="header_product-info d-flex align-items-start">
+                        <p class="header_product-name">
+                          Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%
+                        </p>
+                        <p
+                          class="header_product-price d-flex align-items-center"
+                        >
+                          <u>đ</u>
+                          &nbsp;100.000
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="header_cart-product">
+                    <a href="#" class="d-flex align-items-start">
+                      <img
+                        class="header_product-img img-fluid"
+                        src="../images/home/header-cart-img/img-03.png"
+                        alt="product"
+                      />
+                      <div class="header_product-info d-flex align-items-start">
+                        <p class="header_product-name">
+                          Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%
+                        </p>
+                        <p
+                          class="header_product-price d-flex align-items-center"
+                        >
+                          <u>đ</u>
+                          &nbsp;100.000
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="header_cart-product">
+                    <a href="#" class="d-flex align-items-start">
+                      <img
+                        class="header_product-img img-fluid"
+                        src="../images/home/header-cart-img/img-04.png"
+                        alt="product"
+                      />
+                      <div class="header_product-info d-flex align-items-start">
+                        <p class="header_product-name">
+                          Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%
+                        </p>
+                        <p
+                          class="header_product-price d-flex align-items-center"
+                        >
+                          <u>đ</u>
+                          &nbsp;100.000
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="header_cart-product">
+                    <a href="#" class="d-flex align-items-start">
+                      <img
+                        class="header_product-img img-fluid"
+                        src="../images/home/header-cart-img/img-05.png"
+                        alt="product"
+                      />
+                      <div class="header_product-info d-flex align-items-start">
+                        <p class="header_product-name">
+                          Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%
+                        </p>
+                        <p
+                          class="header_product-price d-flex align-items-center"
+                        >
+                          <u>đ</u>
+                          &nbsp;100.000
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+                <div
+                  class="header_cart-footer d-flex align-items-start justify-content-between"
+                >
+                  <p class="header_cart-qty">78 thêm vào giỏ hàng</p>
+                  <button class="header_cart-btn border-0">Xem giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="header_icon header_icon--auth dropdown d-flex align-items-center"
+            >
+              <i class="bi bi-person-circle icon d-none"></i>
+              <img
+                class="header_customer-img"
+                src="../images/home/avatar.jpg"
+                alt="avatar"
+              />
+              <div
+                class="header_auth d-flex flex-column"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-bs-offset="0, 20"
+              >
+                <a href="#" class="header__auth-login d-none">Đăng nhập</a>
+                <a href="#" class="header__auth-register d-none">Đăng ký</a>
+                <p class="header_customer-title d-none d-lg-block">Tài khoản</p>
+                <p class="header_customer-name d-none d-lg-block">Hoàng Anh</p>
+              </div>
+              <i
+                class="bi bi-chevron-down d-none d-lg-block"
+                style="font-size: 15px; color: white"
+              ></i>
+
+              <ul class="dropdown-menu header_customer-menu border-0">
+                <li>
+                  <a class="header_customer-item" href="#">Tài khoản của tôi</a>
+                </li>
+                <li><a class="header_customer-item" href="#">Đơn mua</a></li>
+                <li><a class="header_customer-item" href="#">Đăng xuất</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="header_search-mobile w-100">
+            <img
+              src="../images/home/search-icon-mobile.svg"
+              alt="header_search-mobile-icon"
+            />
+            <input type="text" placeholder="Nhập sản phẩm cần tìm kiếm..." />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="body_wrapper">
+      <div class="subbar-top d-none d-md-block">
+        <div class="container-lg container-xxl p-0">
+          <div class="subbar-block d-flex">
+            <div class="dropdown">
+              <button
+                class="border-0 bg-transparent subbar-item d-flex align-items-center"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="../images/home/grid-icon.svg" alt="icon" />
+                <p>Tất cả</p>
+              </button>
+              <div class="dropdown-menu subbar_all-menu border-0">
+                <div class="subbar_menu-item d-flex">
+                  <div class="subbar_menu--title">
+                    <img
+                      class="subbar_icon--main"
+                      src="../images/home/all-menu-subbar/home.svg"
+                      alt="subbar_icon"
+                    />
+                    <p>Cửa hàng nông nghiệp</p>
+                    <img
+                      class="subbar_icon--down"
+                      src="../images/home/all-menu-subbar/li_chevron-down.svg"
+                      alt="subbar_icon"
+                    />
+                  </div>
+                  <div class="subbar_menu--content">
+                    <div class="subbar_content-item">
+                      <p>Vật tư Nông nghiệp</p>
+                      <ul>
+                        <li><a href="#">Rau xanh</a></li>
+                        <li><a href="#">Hoa</a></li>
+                        <li><a href="#">Hạt</a></li>
+                        <li><a href="#">Hạt giống</a></li>
+                        <li><a href="#">Chăn nuôi</a></li>
+                        <li><a href="#">Thủy sản</a></li>
+                        <li><a href="#">Lâm nghiệp</a></li>
+                        <li><a href="#">Diêm nghiệp</a></li>
+                        <li><a href="#">Nước</a></li>
+                      </ul>
+                    </div>
+                    <div class="subbar_content-item">
+                      <p>Thực phẩm Nông nghiệp</p>
+                      <ul>
+                        <li><a href="#">Thực phẩm khô</a></li>
+                        <li><a href="#">Thực phẩm tươi sống</a></li>
+                        <li><a href="#">Thực phẩm đông lạnh</a></li>
+                        <li><a href="#">Đồ uống</a></li>
+                        <li><a href="#">Bánh kẹo</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="subbar_menu-item d-flex">
+                  <div class="subbar_menu--title">
+                    <img
+                      class="subbar_icon--main"
+                      src="../images/home/all-menu-subbar/service.svg"
+                      alt="subbar_icon"
+                    />
+                    <p>Dịch vụ Nông nghiệp</p>
+                    <img
+                      class="subbar_icon--down"
+                      src="../images/home/all-menu-subbar/li_chevron-down.svg"
+                      alt="subbar_icon"
+                    />
+                  </div>
+                  <div class="subbar_menu--content">
+                    <div class="subbar_content-item">
+                      <ul>
+                        <li><a href="#">Công cụ dụng cụ Nông nghiệp</a></li>
+                        <li><a href="#">Thức ăn chăn nuôi</a></li>
+                        <li><a href="#">Thuốc bảo vệ thực vật</a></li>
+                        <li><a href="#">Thú y</a></li>
+                        <li><a href="#">Du lịch</a></li>
+                        <li><a href="#">Bất động sản nông nghiệp</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="subbar_menu-item d-flex">
+                  <div class="subbar_menu--title">
+                    <img
+                      class="subbar_icon--main"
+                      src="../images/home/all-menu-subbar/marketing.svg"
+                      alt="subbar_icon"
+                    />
+                    <p>Thương mại</p>
+                    <img
+                      class="subbar_icon--down"
+                      src="../images/home/all-menu-subbar/li_chevron-down.svg"
+                      alt="subbar_icon"
+                    />
+                  </div>
+                  <div class="subbar_menu--content">
+                    <div class="subbar_content-item">
+                      <ul>
+                        <li><a href="#">Tư vấn Marketing</a></li>
+                        <li><a href="#">Đăng ký sản phẩm thương mại hóa</a></li>
+                        <li><a href="#">Đăng ký nhận tín dụng</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="subbar_menu-item d-flex">
+                  <div class="subbar_menu--title">
+                    <img
+                      class="subbar_icon--main"
+                      src="../images/home/all-menu-subbar/juridical.svg"
+                      alt="subbar_icon"
+                    />
+                    <p>Pháp lý</p>
+                    <img
+                      class="subbar_icon--down"
+                      src="../images/home/all-menu-subbar/li_chevron-down.svg"
+                      alt="subbar_icon"
+                    />
+                  </div>
+                  <div class="subbar_menu--content">
+                    <div class="subbar_content-item">
+                      <ul>
+                        <li><a href="#">Chứng nhận </a></li>
+                        <li><a href="#">Giám định</a></li>
+                        <li><a href="#">Thủ tục IE</a></li>
+                        <li><a href="#">Liên kết vận chuyển</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="subbar_menu-item d-flex">
+                  <div class="subbar_menu--title">
+                    <img
+                      class="subbar_icon--main"
+                      src="../images/home/all-menu-subbar/info.svg"
+                      alt="subbar_icon"
+                    />
+                    <p>Thông tin</p>
+                    <img
+                      class="subbar_icon--down"
+                      src="../images/home/all-menu-subbar/li_chevron-down.svg"
+                      alt="subbar_icon"
+                    />
+                  </div>
+                  <div class="subbar_menu--content">
+                    <div class="subbar_content-item">
+                      <ul>
+                        <li><a href="#">Blog kiến thức</a></li>
+                        <li><a href="#">Hỏi đáp chuyên gia</a></li>
+                        <li>
+                          <a href="#">Cổng thông tin xúc tiến Thương mại</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button
+                class="border-0 bg-transparent subbar-item d-flex align-items-center"
+              >
+                <img src="../images/home/map.svg" alt="icon" />
+                <p>Tìm theo vị trí</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-lg container-xxl p-0">
+        <div class="breadcrumb_block d-none d-md-block">
+          <nav
+            style="
+              --bs-breadcrumb-divider: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'8\' height=\'8\'%3E%3Cpath d=\'M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z\' fill=\'%236c757d\'/%3E%3C/svg%3E');
+            "
+            aria-label="breadcrumb"
+          >
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">OmmaniLife</a></li>
+              <li class="breadcrumb-item">
+                <a href="#">Rau, Củ, Quả</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Rau Xanh
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="body_product-info">
+          <div class="row g-0 gx-md-3">
+            <div class="col-xl-5 col-md-4">
+              <div
+                class="body_product-gallery d-flex flex-column align-items-center"
+              >
+                <a
+                  href="#"
+                  class="button_back-mobile d-flex align-items-center justify-content-center d-md-none"
+                >
+                  <i class="bi bi-arrow-left-short"></i>
+                </a>
+                <a
+                  href="#"
+                  class="button_cart-mobile d-flex align-items-center justify-content-center d-md-none"
+                >
+                  <i class="bi bi-cart2"></i>
+                </a>
+                <div
+                  class="product_item-tags position-absolute d-flex align-items-center d-md-none"
+                >
+                  <span>7.7</span>
+                  <p class="text-uppercase">Ommani freeship+</p>
+                </div>
+                <img
+                  class="img-trans-mobile d-block d-md-none"
+                  src="../images/product-detail/icon/transport-mobile.svg"
+                  alt="icon-trans"
+                />
+                <div class="product-gallery_image-block">
+                  <div class="product-gallery_img-primary">
+                    <img
+                      src="../images/product-detail/img-product/img-product_primary.png"
+                      alt="img-product-primary"
+                      id="mainImage"
+                    />
+                  </div>
+                  <div class="product-gallery_review"></div>
+                  <div class="product-gallery_zoom-area"></div>
+                </div>
+                <div
+                  class="product-gallery_thumbnails-container position-relative d-none d-md-block"
+                >
+                  <div
+                    class="product-gallery_thumbnails d-flex align-items-center"
+                  >
+                    <div class="product-gallery_thumbnail">
+                      <img
+                        src="../images/product-detail/img-product/img-product_primary.png"
+                        alt="Primary Image"
+                      />
+                    </div>
+                    <div class="product-gallery_thumbnail">
+                      <img
+                        src="../images/product-detail/img-product/thumb1.png"
+                        alt="Thumb 1"
+                      />
+                    </div>
+                    <div class="product-gallery_thumbnail">
+                      <img
+                        src="../images/product-detail/img-product/thumb2.jpg"
+                        alt="Thumb 2"
+                      />
+                    </div>
+                    <div class="product-gallery_thumbnail">
+                      <img
+                        src="../images/product-detail/img-product/thumb3.png"
+                        alt="Thumb 3"
+                      />
+                    </div>
+                    <div class="product-gallery_thumbnail">
+                      <img
+                        src="../images/product-detail/img-product/thumb4.jpg"
+                        alt="Thumb 4"
+                      />
+                    </div>
+                    <div class="product-gallery_thumbnail">
+                      <img
+                        src="../images/product-detail/img-product/thumb5.png"
+                        alt="Thumb 5"
+                      />
+                    </div>
+                  </div>
+                  <button class="btn-thumb pre-btn">
+                    <i class="bi bi-chevron-left"></i>
+                  </button>
+                  <button class="btn-thumb next-btn">
+                    <i class="bi bi-chevron-right"></i>
+                  </button>
+                </div>
+                <div class="product-gallery_share d-none d-md-flex">
+                  <p>Chia sẻ:</p>
+                  <div class="share-block d-flex align-items-center">
+                    <a href="#" class="product-gallery_share-icon">
+                      <img
+                        src="../images/product-detail/icon/mess.svg"
+                        alt="icon-share"
+                      />
+                    </a>
+                    <a href="#" class="product-gallery_share-icon">
+                      <img
+                        src="../images/product-detail/icon/fb.svg"
+                        alt="icon-share"
+                      />
+                    </a>
+                    <a href="#" class="product-gallery_share-icon">
+                      <img
+                        src="../images/product-detail/icon/zalo.svg"
+                        alt="icon-share"
+                      />
+                    </a>
+                    <a href="#" class="product-gallery_share-icon">
+                      <span
+                        class="d-flex align-items-center justify-content-center"
+                      >
+                        <img
+                          src="../images/product-detail/icon/files.svg"
+                          alt="icon-share"
+                        />
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-7 col-md-8">
+              <div class="body_product-detail">
+                <div class="row g-0">
+                  <div class="col-12">
+                    <div class="product-detail_header d-flex align-items-start">
+                      <span class="product-detail_badge d-none d-md-block"
+                        >Mall</span
+                      >
+                      <div class="product-detail_container">
+                        <div
+                          class="product-detail_name-evaluate d-flex flex-column align-items-start position-relative"
+                        >
+                          <p class="product-detail_name d-none d-md-block">
+                            Bông Cải Xanh - Công Nghệ Làm Sạch Tiêu Chuẩn Đức
+                            Gói 500g Đà Lạt
+                          </p>
+                          <p class="product-detail_name--mobile d-md-none">
+                            Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%
+                            Cách dùng theo hướng dẫn chính của các chuyên gia
+                            hàng đầu
+                          </p>
+                          <div
+                            class="product-item__discount position-absolute d-block d-md-none"
+                          >
+                            <span>14%</span>
+                          </div>
+                          <span class="product-price__mobile d-block d-md-none">
+                            87.000 <u>đ</u>
+                          </span>
+                          <div
+                            class="d-flex align-items-center product-detail_evaluate"
+                          >
+                            <div
+                              class="product-detail_star d-flex align-items-center"
+                            >
+                              <p style="text-decoration: underline">4.8</p>
+                              <span> &#9733;&#9733;&#9733;&#9733;&#9733; </span>
+                            </div>
+                            <p class="product-detail_rating">
+                              <span style="text-decoration: underline">
+                                513
+                              </span>
+                              đánh giá
+                            </p>
+                            <p class="product-detail_sold">
+                              <span style="text-decoration: underline">
+                                246k
+                              </span>
+                              đã bán
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="product-detail_price-qr d-none d-md-flex align-items-end justify-content-between"
+                          style="width: 92%"
+                        >
+                          <p class="product-detail_price">
+                            132.000
+                            <span style="text-decoration: underline">đ</span>
+                          </p>
+                          <div class="product-detail_qr">
+                            <img
+                              src="../images/product-detail/icon/qr.svg"
+                              alt="qr"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 d-none d-md-block">
+                    <div class="product-detail_body d-flex flex-column">
+                      <table class="product-detail_table-review">
+                        <tr class="product-detail_table-row">
+                          <th class="product-detail_table-heading">
+                            <p class="product-detail_table-heading-text">
+                              Số lượng lớn:
+                            </p>
+                          </th>
+                          <td
+                            class="product-detail_table-body product-detail_table-quantity"
+                          >
+                            <table class="product-qty__table">
+                              <tr class="table__row">
+                                <th class="table__header">1-10 Gói</th>
+                                <th class="table__header">11 - 30 Gói</th>
+                                <th class="table__header">Trên 30 gói</th>
+                              </tr>
+                              <tr class="table__row">
+                                <td class="table__data">132k/gói</td>
+                                <td class="table__data">105k/gói</td>
+                                <td class="table__data table__data--contact">
+                                  <a href="#" class="table__link">Liên hệ</a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+
+                        <tr class="product-detail_table-row">
+                          <th class="product-detail_table-heading">
+                            <p class="product-detail_table-heading-text">
+                              Truy xuất nguồn gốc:
+                            </p>
+                          </th>
+                          <td
+                            class="product-detail_table-body product-detail_origin"
+                          >
+                            <div class="d-flex align-items-center">
+                              <a href="#" class="product-detail_origin-link">
+                                Link
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr class="product-detail_table-row">
+                          <th class="product-detail_table-heading">
+                            <p class="product-detail_table-heading-text">
+                              Giao hàng từ:
+                            </p>
+                          </th>
+                          <td
+                            class="product-detail_table-body product-detail_delivery"
+                          >
+                            <div
+                              class="product-detail_delivery-info d-flex flex-column align-items-start"
+                            >
+                              <p class="product-detail_address">
+                                46 Trần Nguyên Đán, Thanh Xuân, Hà Nội
+                              </p>
+                              <div
+                                class="product-detail_delivery-option d-flex align-items-center justify-content-start"
+                              >
+                                <img
+                                  src="../images/product-detail/icon/ship.svg"
+                                  alt=""
+                                />
+                                <div
+                                  class="d-flex flex-column align-items-start"
+                                  style="gap: 5px"
+                                >
+                                  <p class="product-detail_delivery-standard">
+                                    Giao hàng
+                                    <span class="product-detail_delivery-type">
+                                      Tiêu chuẩn:
+                                    </span>
+                                    <span class="product-detail_delivery-date">
+                                      Thứ 5, ngày 21/04 - Thứ 7 ngày 23/04
+                                    </span>
+                                  </p>
+                                  <p class="product-detail_delivery-cost">
+                                    <span>21.000 đ</span> (Freeship 30K đơn hàng
+                                    từ 150K)
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr class="product-detail_table-row">
+                          <th class="product-detail_table-heading">
+                            <p class="product-detail_table-heading-text">
+                              Số lượng:
+                            </p>
+                          </th>
+                          <td
+                            class="product-detail_table-body product-detail_quantity-selector"
+                          >
+                            <div
+                              class="d-flex align-items-center"
+                              style="gap: 23px"
+                            >
+                              <div class="d-flex align-items-center">
+                                <button
+                                  class="product-detail_quantity-button product-detail_quantity-button--decrease"
+                                >
+                                  <i class="btn-minus bi bi-dash"></i>
+                                </button>
+                                <input
+                                  type="text"
+                                  class="product-detail_quantity-input"
+                                  value="01"
+                                />
+                                <button
+                                  class="product-detail_quantity-button product-detail_quantity-button--increase"
+                                >
+                                  <i class="btn-plus bi bi-plus btn-handle"></i>
+                                </button>
+                              </div>
+                              <p class="product-detail_stock">
+                                Có 2.400 Sản phẩm có sẵn
+                              </p>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr class="product-detail_table-row">
+                          <th class="product-detail_table-heading"></th>
+                          <td
+                            class="product-detail_table-body product-detail_actions"
+                          >
+                            <div class="product-detail_buttons">
+                              <button
+                                class="product-detail_action-button product-detail_action-button--cart"
+                              >
+                                <i class="bi bi-cart2"></i> Thêm Vào Giỏ Hàng
+                              </button>
+                              <button
+                                class="product-detail_action-button product-detail_action-button--buy"
+                              >
+                                Mua Ngay
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                      <p class="product-detail_slogan">
+                        Ommani Đảm bảo Sản phẩm đạt tiêu chuẩn.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="body_store-wrapper">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-6 col-12">
+              <div class="store_info d-flex align-items-center">
+                <span class="store_info-badge d-none d-md-block">Mall</span>
+                <img
+                  class="store_info-img"
+                  src="../images/home/reputation-store/top-market.png"
+                  alt=""
+                />
+                <div class="store_info-block d-flex flex-column">
+                  <p class="store_name">Ommani Mall Thạch Bàn Long Biên</p>
+                  <div class="d-flex align-items-center" style="gap: 8px">
+                    <p class="store_rating"><span>&#9733;</span> 4.8 (11k+)</p>
+                    <p class="store_type text-uppercase">GIAO NHANH</p>
+                  </div>
+                  <div class="store_button-action d-flex align-items-center">
+                    <button class="store_button store_button--chat">
+                      <i class="bi bi-chat-dots"></i> Chat ngay
+                    </button>
+                    <button class="store_button store_button--view">
+                      <i class="bi bi-shop"></i> Xem shop
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 d-none d-md-block">
+              <div class="store_ratings d-flex flex-column align-items-end">
+                <div class="store_evaluate d-flex align-items-center">
+                  <div class="evaluate-info store_total-product">
+                    <span>219</span>
+                    <p>Sản phẩm</p>
+                  </div>
+                  <div class="evaluate-info store_rate-reaction">
+                    <span>98.7%</span>
+                    <p>Tỉ lệ phản hồi</p>
+                  </div>
+                  <div class="evaluate-info store_reaction-time">
+                    <span>Trong vài giờ</span>
+                    <p>Phản hồi</p>
+                  </div>
+                </div>
+                <div class="store_follower d-flex align-items-center">
+                  <div
+                    class="store_follower-avatar d-flex align-items-center justify-content-center"
+                  >
+                    <div class="circle">
+                      <img
+                        src="../images/product-detail/avt-follower/avt-01.jpg"
+                        alt="avt-icon"
+                      />
+                    </div>
+                    <div class="circle">
+                      <img
+                        src="../images/product-detail/avt-follower/avt-02.jpg"
+                        alt="avt-icon"
+                      />
+                    </div>
+                    <div class="circle">
+                      <img
+                        src="../images/product-detail/avt-follower/avt-03.jpg"
+                        alt="avt-icon"
+                      />
+                    </div>
+                    <div class="circle">
+                      <img
+                        src="../images/product-detail/avt-follower/avt-04.jpg"
+                        alt="avt-icon"
+                      />
+                    </div>
+                    <div class="circle">
+                      <img
+                        src="../images/product-detail/avt-follower/avt-05.jpg"
+                        alt="avt-icon"
+                      />
+                    </div>
+                  </div>
+                  <div class="store_follower-text d-flex align-items-center">
+                    <span>1.2k</span>
+                    <p>Theo dõi gian hàng</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="body_overview">
+          <div class="row g-0">
+            <div class="col-12">
+              <div
+                class="overview_tab-box position-relative d-none d-md-flex align-items-center"
+              >
+                <button class="overview_tab-btn active">Mô tả sản phẩm</button>
+                <button class="overview_tab-btn">Đánh giá (60)</button>
+                <button class="overview_tab-btn">Hỏi đáp (50)</button>
+                <div class="under-line position-absolute"></div>
+              </div>
+              <div class="overview_content-box">
+                <div class="overview_content description_content show">
+                  <div class="description_table">
+                    <span class="text-uppercase description_heading"
+                      >Thông tin chi tiết</span
+                    >
+                    <table>
+                      <tr>
+                        <th width="30%">Danh mục</th>
+                        <td width="70%">Rau xanh</td>
+                      </tr>
+                      <tr>
+                        <th width="30%">Xuất xứ</th>
+                        <td width="70%">Việt Nam</td>
+                      </tr>
+                      <tr>
+                        <th width="30%">Đóng gói</th>
+                        <td width="70%">500g/ Gói</td>
+                      </tr>
+                      <tr>
+                        <th width="30%">Công ty Sản xuất</th>
+                        <td width="70%">Công Ty TNHH Thành Công</td>
+                      </tr>
+                      <tr>
+                        <th width="30%">Tiêu Chuẩn</th>
+                        <td width="70%">9001, VIETGAP, ORGANIC</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="description_text">
+                    <span class="text-uppercase description_heading"
+                      >Mô tả sản phẩm</span
+                    >
+                    <p>
+                      Sản phẩm không chứa các hóa chất, chất kích thích tăng
+                      trưởng gây hại, đảm bảo an toàn cho sức khỏe người tiêu
+                      dùng. Do đó, bạn hoàn toàn có thể an tâm khi lựa chọn sản
+                      phẩm này trong mỗi bữa ăn của gia đình mình, giúp bữa ăn
+                      trở nên ngon miệng hơn.
+                    </p>
+                    <p>
+                      Món ngon gợi ý: Bông cải xanh xào thịt bò, canh bông cải
+                      xanh thịt heo, bông cải xanh xào tôm mực.
+                    </p>
+                    <div class="collapse" id="collapseDescText">
+                      <p>
+                        Giá sản phẩm trên OMMANI đã bao gồm thuế theo luật hiện
+                        hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và
+                        địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác
+                        như phí vận chuyển, phụ phí hàng cồng kềnh, thuế nhập
+                        khẩu (đối với đơn hàng giao từ nước ngoài có giá trị
+                        trên 1 triệu đồng).....Súp lơ xanh (bông cải xanh) là
+                        loại “siêu” thực phẩm chay này mang lại rất nhiều lợi
+                        ích cho con người. Giống các loại thực vật khác trong họ
+                        cải (cải bruxen, cải xanh, cải bắp, cải xoăn), súp lơ
+                        trắng có chứa rất nhiều vitamin và khoáng chất. Một số
+                        món ăn ngon như súp lơ xào thịt, thịt bò xào súp lơ, súp
+                        lơ muối chua…Súp lơ chứa sắt và axit folic, ngoài ra còn
+                        có nhiều vitamin (A, C, vitamin nhóm B…) và khoáng chất
+                        (kali, natri, magie, đồng, sắt, lưu huỳnh, clo và phốt
+                        pho…).
+                      </p>
+                      <br />
+                      <p>
+                        Hạt giống Bông Cải Xanh F1 No.3 - Súp Lơ Xanh là hạt
+                        giống sinh trưởng mạnh, kháng bệnh tốt. Khi lớn lên cây
+                        cao trung bình, không có nhánh, khả năng chịu nhiệt và
+                        thích nghi rộng. Mặt bông đẹp, hạt mịn, độ đồng đều rất
+                        cao, thu hoạch 55 - 60 ngày sau khi rồng, thu hoạch tập
+                        trung.
+                      </p>
+                      <br />
+                      <p>- Xuất xứ: Đà Lạt</p>
+                      <br />
+                      <p>- Sản phẩm của: Công ty giống cây trồng Phú Nông</p>
+                      <br />
+                      <p>- Quy cách: Gói 0.5 gram</p>
+                      <br />
+                      <p>- Cách trồng:</p>
+                      <p>+ Khoảng cách trồng: 40x50cm</p>
+                      <p>+ Mật độ trồng: 20-30g/1000m2</p>
+                      <br />
+                      <p>- Thời gian thu hoạch: 55 - 60 ngày</p>
+                      <br />
+                      <p>
+                        Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện
+                        hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và
+                        địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác
+                        như phí vận chuyển, phụ phí hàng cồng kềnh, thuế nhập
+                        khẩu (đối với đơn hàng giao từ nước ngoài có giá trị
+                        trên 1 triệu đồng).....
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    class="description_button-show d-md-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseDescText"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                  >
+                    Xem thêm &nbsp;<i class="bi bi-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="overview_content ratings_content">
+                  <div class="ratings_average-product">
+                    <div class="ratings_average-star">
+                      <div class="ratings_heading">
+                        <p class="ratings_average-count">4.6</p>
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <p class="ratings_total-evaluate">20 đánh giá</p>
+                      </div>
+                      <div class="ratings_star-block">
+                        <div class="ratings_bar">
+                          <p class="ratings_bar-star">5 <span>&#9733;</span></p>
+                          <div
+                            class="progress"
+                            role="progressbar"
+                            aria-label="Basic example"
+                            aria-valuenow="0"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-bar" style="width: 70%"></div>
+                          </div>
+                          <p class="ratings_bar-star-percent">70%</p>
+                        </div>
+                        <div class="ratings_bar">
+                          <p class="ratings_bar-star">4 <span>&#9733;</span></p>
+                          <div
+                            class="progress"
+                            role="progressbar"
+                            aria-label="Basic example"
+                            aria-valuenow="0"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-bar" style="width: 18%"></div>
+                          </div>
+                          <p class="ratings_bar-star-percent">18%</p>
+                        </div>
+                        <div class="ratings_bar">
+                          <p class="ratings_bar-star">3 <span>&#9733;</span></p>
+                          <div
+                            class="progress"
+                            role="progressbar"
+                            aria-label="Basic example"
+                            aria-valuenow="0"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-bar" style="width: 7%"></div>
+                          </div>
+                          <p class="ratings_bar-star-percent">7%</p>
+                        </div>
+                        <div class="ratings_bar">
+                          <p class="ratings_bar-star">2 <span>&#9733;</span></p>
+                          <div
+                            class="progress"
+                            role="progressbar"
+                            aria-label="Basic example"
+                            aria-valuenow="0"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-bar" style="width: 2%"></div>
+                          </div>
+                          <p class="ratings_bar-star-percent">2%</p>
+                        </div>
+                        <div class="ratings_bar">
+                          <p class="ratings_bar-star">1 <span>&#9733;</span></p>
+                          <div
+                            class="progress"
+                            role="progressbar"
+                            aria-label="Basic example"
+                            aria-valuenow="0"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-bar" style="width: 1%"></div>
+                          </div>
+                          <p class="ratings_bar-star-percent">1%</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line-space"></div>
+                    <div class="ratings_product-imgs">
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-01.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-02.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-03.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-04.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-05.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-06.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-07.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-08.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-09.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-10.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-11.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-12.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-13.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-14.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ratings_product-img">
+                        <img
+                          src="../images/product-detail/ratings-product-img/img-15.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ratings_feedback">
+                    <div class="ratings_customer-feedback">
+                      <div class="customer-feedback_heading">
+                        <div class="customer-feedback_img">
+                          <img
+                            src="../images/product-detail/avt-customer/avt-01.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="customer-feedback_name">Nguyễn Văn Sơn</p>
+                        <span class="customer-feedback_star"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        >
+                      </div>
+                      <div class="customer-feedback_message">Bắp rất ngon</div>
+                      <div class="customer-feedback_upload-img d-none">
+                        <div class="upload-img">
+                          <img
+                            src="../images/product-detail/img-customer-upload/img-01.jpg"
+                            alt="upload-img"
+                          />
+                        </div>
+                        <div class="upload-img">
+                          <img
+                            src="../images/product-detail/img-customer-upload/img-02.jpg"
+                            alt="upload-img"
+                          />
+                        </div>
+                      </div>
+                      <div class="customer-feedback_actions">
+                        <div class="action">
+                          <img
+                            src="../images/product-detail/icon/like.svg"
+                            alt=""
+                          />
+                          <p>Hữu ích</p>
+                        </div>
+                        <div class="action">
+                          <img
+                            src="../images/product-detail/icon/chat.svg"
+                            alt=""
+                          />
+                          <p>1 thảo luận</p>
+                        </div>
+                        <div class="action">
+                          <img
+                            src="../images/product-detail/icon/history.svg"
+                            alt=""
+                          />
+                          <span>Đã dùng 2 tuần</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ratings_admin-feedback">
+                      <div class="admin-feedback_heading">
+                        <div class="customer-feedback_img">
+                          <img
+                            src="../images/product-detail/avt-customer/avt-01.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="admin-feedback_name">Hoàng Ngọc</p>
+                        <span class="admin-feedback_badge">
+                          Quản trị viên
+                        </span>
+                      </div>
+                      <div class="admin-feedback_message">
+                        Cảm ơn bạn đã tin tưởng mua hàng tại Shop. Chúc bạn có
+                        trải nghiệm thú vị!
+                      </div>
+                      <div class="admin-feedback_actions">
+                        <div class="action">
+                          <img
+                            src="../images/product-detail/icon/like.svg"
+                            alt=""
+                          />
+                          <p>Hữu ích</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ratings_feedback">
+                    <div class="ratings_customer-feedback">
+                      <div class="customer-feedback_heading">
+                        <div class="customer-feedback_img">
+                          <img
+                            src="../images/product-detail/avt-customer/avt-01.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="customer-feedback_name">Phạm Minh</p>
+                        <span class="customer-feedback_star"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        >
+                      </div>
+                      <div class="customer-feedback_message">
+                        Tôi đã mua Số lượng lớn ở Shop, nhân viên bán hàng rất
+                        nhiệt tình, sản phẩm quá đẹp
+                      </div>
+                      <div class="customer-feedback_upload-img">
+                        <div class="upload-img">
+                          <img
+                            src="../images/product-detail/img-customer-upload/img-01.jpg"
+                            alt="upload-img"
+                          />
+                        </div>
+                        <div class="upload-img">
+                          <img
+                            src="../images/product-detail/img-customer-upload/img-02.jpg"
+                            alt="upload-img"
+                          />
+                        </div>
+                      </div>
+                      <div class="customer-feedback_actions">
+                        <div class="action">
+                          <img
+                            src="../images/product-detail/icon/like.svg"
+                            alt=""
+                          />
+                          <p>Hữu ích</p>
+                        </div>
+                        <div class="action">
+                          <img
+                            src="../images/product-detail/icon/chat.svg"
+                            alt=""
+                          />
+                          <p>0 thảo luận</p>
+                        </div>
+                        <div class="action">
+                          <img
+                            src="../images/product-detail/icon/history.svg"
+                            alt=""
+                          />
+                          <span>Đã dùng 2 tuần</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ratings_admin-feedback">
+                      <div class="admin-feedback_heading">
+                        <div class="customer-feedback_img">
+                          <img
+                            src="../images/product-detail/avt-customer/avt-01.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="admin-feedback_name">Hoàng Ngọc</p>
+                        <span class="admin-feedback_badge">
+                          Quản trị viên
+                        </span>
+                      </div>
+                      <div class="admin-feedback_message">
+                        Cảm ơn bạn đã tin tưởng mua hàng tại Shop. Chúc bạn vui
+                        vẻ!
+                      </div>
+                      <div class="admin-feedback_actions">
+                        <div class="action">
+                          <img
+                            src="../images/product-detail/icon/like.svg"
+                            alt=""
+                          />
+                          <p>Hữu ích</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ratings_feedback">
+                    <div class="ratings_customer-feedback">
+                      <div class="customer-feedback_heading">
+                        <div class="customer-feedback_img">
+                          <img
+                            src="../images/product-detail/avt-customer/avt-01.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="customer-feedback_name">Phạm Minh</p>
+                        <span class="customer-feedback_star"
+                          >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                        >
+                      </div>
+                      <div class="customer-feedback_message">
+                        Tôi đã ăn và cảm thấy rất ngon! Cảm ơn Shop đã tư vấn
+                        nhiệt tình
+                      </div>
+                      <div class="customer-feedback_upload-img">
+                        <div class="upload-img">
+                          <img
+                            src="../images/product-detail/img-customer-upload/img-03.jpg"
+                            alt="upload-img"
+                          />
+                        </div>
+                        <div class="upload-img">
+                          <img
+                            src="../images/product-detail/img-customer-upload/img-04.jpg"
+                            alt="upload-img"
+                          />
+                        </div>
+                      </div>
+                      <div class="customer-feedback_actions">
+                        <div class="action">
+                          <img
+                            src="../images/product-detail/icon/like.svg"
+                            alt=""
+                          />
+                          <p>Hữu ích</p>
+                        </div>
+                        <div class="action">
+                          <img
+                            src="../images/product-detail/icon/chat.svg"
+                            alt=""
+                          />
+                          <p>1 thảo luận</p>
+                        </div>
+                        <div class="action">
+                          <img
+                            src="../images/product-detail/icon/history.svg"
+                            alt=""
+                          />
+                          <span>Đã dùng 2 tuần</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ratings_admin-feedback">
+                      <div class="admin-feedback_heading">
+                        <div class="customer-feedback_img">
+                          <img
+                            src="../images/product-detail/avt-customer/avt-01.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="admin-feedback_name">Hoàng Ngọc</p>
+                        <span class="admin-feedback_badge">
+                          Quản trị viên
+                        </span>
+                      </div>
+                      <div class="admin-feedback_message">
+                        Cảm ơn bạn đã tin tưởng mua hàng tại Shop. Chúc bạn có
+                        trải nghiệm thú vị!
+                      </div>
+                      <div class="admin-feedback_actions">
+                        <div class="action">
+                          <img
+                            src="../images/product-detail/icon/like.svg"
+                            alt=""
+                          />
+                          <p>Hữu ích</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="overview_content qa_content">
+                  <div class="comment-box">
+                    <textarea placeholder="Mời bạn để lại bình luận"></textarea>
+                    <div class="button_actions">
+                      <button class="upload-button">
+                        <i class="bi bi-card-image"></i>&nbsp;&nbsp;Gửi ảnh
+                      </button>
+                      <button class="send-button">Gửi</button>
+                    </div>
+                  </div>
+                  <div class="qa_comment">
+                    <div class="qa_customer-comment">
+                      <div class="customer-comment_heading">
+                        <div class="customer-comment_img">
+                          <img
+                            src="../images/product-detail/avt-customer/avt-01.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="customer-comment_name">Nguyễn Văn Sơn</p>
+                      </div>
+                      <div class="customer-comment_message">
+                        Sản phẩm đã được kiểm định chưa vậy Admin
+                      </div>
+                      <div class="customer-comment_actions">
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/chat-blue.svg"
+                            alt=""
+                          />
+                          <p>Trả lời</p>
+                        </div>
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/history.svg"
+                            alt=""
+                          />
+                          <span>5 ngày trước</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="qa_admin-comment">
+                      <div class="admin-comment_heading">
+                        <div class="admin-comment_img">
+                          <img
+                            src="../images/product-detail/avt-customer/avt-01.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="admin-comment_name">Nguyễn Văn Sơn</p>
+                        <span class="admin-comment_badge">Quản trị viên</span>
+                      </div>
+                      <div class="admin-comment_message">
+                        Chào bạn!<br />
+                        Dạ tất cả sản phẩm của chúng tôi đều được kiểm định qua
+                        tiêu chuẩn ISOSERT Trước khi lên sàn.<br />
+                        Thông tin đến bạn!
+                      </div>
+                      <div class="admin-comment_actions">
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/like-blue.svg"
+                            alt=""
+                          />
+                          <p>Hài lòng</p>
+                        </div>
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/dislike-blue.svg"
+                            alt=""
+                          />
+                          <p>Không hài lòng</p>
+                        </div>
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/chat-blue.svg"
+                            alt=""
+                          />
+                          <p>Trả lời</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qa_comment">
+                    <div class="qa_customer-comment">
+                      <div class="customer-comment_heading">
+                        <div class="customer-comment_img">
+                          <img
+                            src="../images/product-detail/avt-customer/avt-01.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="customer-comment_name">Nguyễn Văn Sơn</p>
+                      </div>
+                      <div class="customer-comment_message">
+                        Dạ cho e hỏi mua số lượng lớn có được giảm giá nhiều
+                        không
+                      </div>
+                      <div class="customer-comment_actions">
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/chat-blue.svg"
+                            alt=""
+                          />
+                          <p>Trả lời</p>
+                        </div>
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/history.svg"
+                            alt=""
+                          />
+                          <span>5 ngày trước</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="qa_admin-comment">
+                      <div class="admin-comment_heading">
+                        <div class="admin-comment_img">
+                          <img
+                            src="../images/product-detail/avt-customer/avt-01.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="admin-comment_name">Nguyễn Văn Sơn</p>
+                        <span class="admin-comment_badge">Quản trị viên</span>
+                      </div>
+                      <div class="admin-comment_message">
+                        Chào bạn!<br />
+                        Với sản phẩm này thì còn số lượng rất nhiều, bạn liên hệ
+                        với nhà cung cấp để biết mức giá ưu đãi cho sản phẩm
+                        này.
+                        <br />
+                        Thông tin đến bạn!
+                      </div>
+                      <div class="admin-comment_actions">
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/like-blue.svg"
+                            alt=""
+                          />
+                          <p>Hài lòng</p>
+                        </div>
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/dislike-blue.svg"
+                            alt=""
+                          />
+                          <p>Không hài lòng</p>
+                        </div>
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/chat-blue.svg"
+                            alt=""
+                          />
+                          <p>Trả lời</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qa_comment">
+                    <div class="qa_customer-comment">
+                      <div class="customer-comment_heading">
+                        <div class="customer-comment_img">
+                          <img
+                            src="../images/product-detail/avt-customer/avt-01.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="customer-comment_name">Nguyễn Văn Sơn</p>
+                      </div>
+                      <div class="customer-comment_message">
+                        Cho mình hỏi mình muốn mua hàng sản phẩm tốt không
+                      </div>
+                      <div class="customer-comment_actions">
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/chat-blue.svg"
+                            alt=""
+                          />
+                          <p>Trả lời</p>
+                        </div>
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/history.svg"
+                            alt=""
+                          />
+                          <span>5 ngày trước</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="qa_admin-comment">
+                      <div class="admin-comment_heading">
+                        <div class="admin-comment_img">
+                          <img
+                            src="../images/product-detail/avt-customer/avt-01.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="admin-comment_name">Nguyễn Văn Sơn</p>
+                        <span class="admin-comment_badge">Quản trị viên</span>
+                      </div>
+                      <div class="admin-comment_message">
+                        Chào bạn!<br />
+                        Với sản phẩm này thì nhà sản xuất đã kiểm định chặt
+                        chẽ!<br />
+                        Chia sẻ cùng bạn.
+                      </div>
+                      <div class="admin-comment_actions">
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/like-blue.svg"
+                            alt=""
+                          />
+                          <p>Hài lòng</p>
+                        </div>
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/dislike-blue.svg"
+                            alt=""
+                          />
+                          <p>Không hài lòng</p>
+                        </div>
+                        <div class="action_reply">
+                          <img
+                            src="../images/product-detail/icon/chat-blue.svg"
+                            alt=""
+                          />
+                          <p>Trả lời</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="body_related-products d-none d-md-block">
+          <p class="related-products_heading">Sản phẩm liên quan</p>
+          <div class="row g-3 get-related-products"></div>
+        </div>
+        <div class="rating-product_customer-mobile d-md-none">
+          <div
+            class="product-rating_average d-flex justify-content-between align-items-center"
+          >
+            <div class="product-rating_info--mobile">
+              <span class="average"> 4.9<span class="total">/5</span> </span>
+              <p>86 đánh giá</p>
+            </div>
+            <div class="line-space"></div>
+            <div
+              class="product-rating_stars--mobile d-flex flex-column align-items-center"
+            >
+              <div class="star-container five-star">
+                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <div
+                  class="progress"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="0"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar" style="width: 70%"></div>
+                </div>
+                <p>70</p>
+              </div>
+              <div class="star-container four-star">
+                <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                <div
+                  class="progress"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="0"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar" style="width: 5%"></div>
+                </div>
+                <p>5</p>
+              </div>
+              <div class="star-container three-star">
+                <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span>
+                <div
+                  class="progress"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="0"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar" style="width: 8%"></div>
+                </div>
+                <p>8</p>
+              </div>
+              <div class="star-container two-star">
+                <span>&#9733;&#9733;&#9734;&#9734;&#9734;</span>
+                <div
+                  class="progress"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="0"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar" style="width: 2%"></div>
+                </div>
+                <p>2</p>
+              </div>
+              <div class="star-container one-star">
+                <span>&#9733;&#9734;&#9734;&#9734;&#9734;</span>
+                <div
+                  class="progress"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="0"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar" style="width: 1%"></div>
+                </div>
+                <p>1</p>
+              </div>
+            </div>
+          </div>
+          <div class="filter-comment_options d-flex flex-column">
+            <div
+              class="filter-comment_block d-flex align-items-center justify-content-start"
+            >
+              <button class="btn-lastest btn--active">Mới nhất</button>
+              <button class="btn-images">Hình ảnh</button>
+              <button class="btn-content">Nội dung</button>
+            </div>
+            <div
+              class="filter-comment_stars d-flex align-items-center justify-content-between"
+            >
+              <button class="btn_filter-star">
+                <p>5</p>
+                <span>&#9733;</span>
+              </button>
+              <button class="btn_filter-star">
+                <p>4</p>
+                <span>&#9733;</span>
+              </button>
+              <button class="btn_filter-star">
+                <p>3</p>
+                <span>&#9733;</span>
+              </button>
+              <button class="btn_filter-star">
+                <p>2</p>
+                <span>&#9733;</span>
+              </button>
+              <button class="btn_filter-star">
+                <p>1</p>
+                <span>&#9733;</span>
+              </button>
+            </div>
+            <div class="customer-comment_container">
+              <div class="comment-block d-flex flex-column">
+                <div
+                  class="customer-info d-flex align-items-start justify-content-between"
+                >
+                  <div class="customer-info_left d-flex align-items-center">
+                    <div class="customer-avt">
+                      <img
+                        class="img-fluid"
+                        src="../images/product-detail/comment-mobile/avt-customer/customer-01.png"
+                        alt="avt"
+                      />
+                    </div>
+                    <div
+                      class="d-flex flex-column align-items-start block-name-star"
+                    >
+                      <p class="customer-name">Tra My</p>
+                      <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                  </div>
+                  <div class="customer-info_right-date">16/03/2022</div>
+                </div>
+                <p class="customer-comment_text">
+                  Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                  nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                  vì lúc mua có chương trình giảm giá. Thanks shop nhé.
+                </p>
+                <div class="customer_upload-product-img-video">
+                  <div class="img_customer-upload">
+                    <img
+                      src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
+                      alt="img-upload"
+                    />
+                  </div>
+                  <div class="img_customer-upload">
+                    <img
+                      src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
+                      alt="img-upload"
+                    />
+                  </div>
+                  <div class="img_customer-upload">
+                    <img
+                      src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
+                      alt="img-upload"
+                    />
+                  </div>
+                  <div class="img_customer-upload">
+                    <img
+                      src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
+                      alt="img-upload"
+                    />
+                  </div>
+                </div>
+                <div class="feedback-seller">
+                  <p class="feedback-heading">Phản hồi người bán</p>
+                  <p class="rep-comment">
+                    Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                  </p>
+                </div>
+              </div>
+              <div class="comment-block d-flex flex-column">
+                <div
+                  class="customer-info d-flex align-items-start justify-content-between"
+                >
+                  <div class="customer-info_left d-flex align-items-center">
+                    <div class="customer-avt">
+                      <img
+                        class="img-fluid"
+                        src="../images/product-detail/comment-mobile/avt-customer/customer-01.png"
+                        alt="avt"
+                      />
+                    </div>
+                    <div
+                      class="d-flex flex-column align-items-start block-name-star"
+                    >
+                      <p class="customer-name">Tra My</p>
+                      <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                  </div>
+                  <div class="customer-info_right-date">16/03/2022</div>
+                </div>
+                <p class="customer-comment_text">
+                  Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                  nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                  vì lúc mua có chương trình giảm giá. Thanks shop nhé.
+                </p>
+                <div class="customer_upload-product-img-video">
+                  <div class="img_customer-upload">
+                    <img
+                      src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
+                      alt="img-upload"
+                    />
+                  </div>
+                  <div class="img_customer-upload">
+                    <img
+                      src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
+                      alt="img-upload"
+                    />
+                  </div>
+                  <div class="img_customer-upload">
+                    <img
+                      src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
+                      alt="img-upload"
+                    />
+                  </div>
+                  <div class="img_customer-upload">
+                    <img
+                      src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
+                      alt="img-upload"
+                    />
+                  </div>
+                </div>
+                <div class="feedback-seller">
+                  <p class="feedback-heading">Phản hồi người bán</p>
+                  <p class="rep-comment">
+                    Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                  </p>
+                </div>
+              </div>
+              <div class="comment-block d-flex flex-column">
+                <div
+                  class="customer-info d-flex align-items-start justify-content-between"
+                >
+                  <div class="customer-info_left d-flex align-items-center">
+                    <div class="customer-avt">
+                      <img
+                        class="img-fluid"
+                        src="../images/product-detail/comment-mobile/avt-customer/customer-01.png"
+                        alt="avt"
+                      />
+                    </div>
+                    <div
+                      class="d-flex flex-column align-items-start block-name-star"
+                    >
+                      <p class="customer-name">Tra My</p>
+                      <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                  </div>
+                  <div class="customer-info_right-date">16/03/2022</div>
+                </div>
+                <p class="customer-comment_text">
+                  Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                  nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                  vì lúc mua có chương trình giảm giá. Thanks shop nhé.
+                </p>
+                <div class="customer_upload-product-img-video">
+                  <div class="img_customer-upload">
+                    <img
+                      src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
+                      alt="img-upload"
+                    />
+                  </div>
+                  <div class="img_customer-upload">
+                    <img
+                      src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
+                      alt="img-upload"
+                    />
+                  </div>
+                  <div class="img_customer-upload">
+                    <img
+                      src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
+                      alt="img-upload"
+                    />
+                  </div>
+                  <div class="img_customer-upload">
+                    <img
+                      src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
+                      alt="img-upload"
+                    />
+                  </div>
+                </div>
+                <div class="feedback-seller">
+                  <p class="feedback-heading">Phản hồi người bán</p>
+                  <p class="rep-comment">
+                    Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer_wrapper d-none d-md-block">
+      <div class="container-lg container-xxl p-0">
+        <div class="footer_top">
+          <div class="footer_column">
+            <p class="footer_column-title">Hỗ Trợ khách hàng</p>
+            <div class="footer_column-content">
+              <ul class="footer_list-link">
+                <li class="footer_link">
+                  <a href="#"
+                    >Hotline: <span>1900-6789</span><br />(1.000 đ/phút, 8-21h
+                    kể cả T7, CN)
+                  </a>
+                </li>
+                <li class="footer_link">
+                  <a href="#">Các câu hỏi thường gặp</a>
+                </li>
+                <li class="footer_link"><a href="#">Gửi yêu cầu hỗ trợ</a></li>
+                <li class="footer_link"><a href="#">Hướng dẫn đặt hàng</a></li>
+                <li class="footer_link">
+                  <a href="#">Phương thức vận chuyển</a>
+                </li>
+                <li class="footer_link"><a href="#">Chính sách đổi trả</a></li>
+                <li class="footer_link">
+                  <a href="#">Chính sách hàng nhập khẩu</a>
+                </li>
+                <li class="footer_link">
+                  <a href="#">Hỗ trợ khách hàng: hotro@ommani.vn</a>
+                </li>
+                <li class="footer_link">
+                  <a href="#">Báo lỗi bảo mật: security@ommani.vn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer_column">
+            <p class="footer_column-title">Về Ommani Life</p>
+            <div class="footer_column-content">
+              <ul class="footer_list-link">
+                <li class="footer_link">
+                  <a href="#">Giới thiệu về Ommani</a>
+                </li>
+                <li class="footer_link"><a href="#">Tuyển dụng</a></li>
+                <li class="footer_link">
+                  <a href="#">Chính sách bảo mật, thanh toán</a>
+                </li>
+                <li class="footer_link">
+                  <a href="#">Bảo mật thông tin cá nhân</a>
+                </li>
+                <li class="footer_link">
+                  <a href="#">Chính sách giải quyết khiếu nại</a>
+                </li>
+                <li class="footer_link"><a href="#">Điều khoản sử dụng</a></li>
+                <li class="footer_link">
+                  <a href="#">Tiếp thị liên kết cùng Ommani</a>
+                </li>
+                <li class="footer_link">
+                  <a href="#">Bán hàng cho Doanh nghiệp</a>
+                </li>
+                <li class="footer_link">
+                  <a href="#">Điều kiện vận chuyển</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer_column">
+            <div class="footer_child-column">
+              <p class="footer_column-title">Hợp tác và liên kết</p>
+              <div class="footer_column-content">
+                <ul class="footer_list-link">
+                  <li class="footer_link">
+                    <a href="#">Quy chế hoạt động sàn GDTMĐT</a>
+                  </li>
+                  <li class="footer_link">
+                    <a href="#">Bán hàng cùng Ommani</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer_child-column">
+              <p class="footer_column-title">Chứng nhận bởi</p>
+              <div class="footer_column-content">
+                <ul class="footer_list-link d-flex align-items-center">
+                  <li class="footer_link">
+                    <a href="#">
+                      <img
+                        src="../images/home/footer-img/footer-img-say-notfakeprod.png"
+                        alt="img"
+                      />
+                    </a>
+                  </li>
+                  <li class="footer_link">
+                    <a href="#">
+                      <img
+                        src="../images/home/footer-img/footer-img-BCT.png"
+                        alt="img"
+                      />
+                    </a>
+                  </li>
+                  <li class="footer_link w-100">
+                    <a href="#">
+                      <img
+                        src="../images/home/footer-img/footer-img-trusth-web.png"
+                        alt="img"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer_column">
+            <div class="footer_child-column">
+              <p class="footer_column-title">Phương thức thanh toán</p>
+              <div class="footer_column-content">
+                <ul
+                  class="footer_list-link list-img d-flex flex-column align-items-start"
+                >
+                  <div class="d-flex align-items-center" style="gap: 12px">
+                    <li class="footer_link">
+                      <a href="#">
+                        <img
+                          src="../images/home/footer-img/visa.png"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li class="footer_link">
+                      <a href="#">
+                        <img
+                          src="../images/home/footer-img/master.png"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li class="footer_link">
+                      <a href="#">
+                        <img
+                          src="../images/home/footer-img/jcb.png"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li class="footer_link">
+                      <a href="#">
+                        <img
+                          src="../images/home/footer-img/atm.png"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                  </div>
+                  <div class="d-flex align-items-center" style="gap: 12px">
+                    <li class="footer_link">
+                      <a href="#">
+                        <img
+                          src="../images/home/footer-img/zalopay.png"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li class="footer_link">
+                      <a href="#">
+                        <img
+                          src="../images/home/footer-img/momo.png"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li class="footer_link">
+                      <a href="#">
+                        <img
+                          src="../images/home/footer-img/viettel-pay.png"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                    <li class="footer_link">
+                      <a href="#">
+                        <img
+                          src="../images/home/footer-img/vnpay.png"
+                          alt="img"
+                        />
+                      </a>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="footer_child-column">
+              <p class="footer_column-title">Dịch vụ giao hàng</p>
+              <div class="footer_column-content">
+                <ul class="footer_list-link d-flex align-items-center">
+                  <li class="footer_link">
+                    <a href="#">
+                      <img src="../images/home/footer-img/ghtk.svg" alt="img" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer_column">
+            <div class="footer_child-column">
+              <p class="footer_column-title">Kết nối với chúng tôi</p>
+              <div class="footer_column-content">
+                <ul class="footer_list-link footer_list-img">
+                  <li class="footer_link">
+                    <a href="#"
+                      ><img src="../images/home/footer-img/fb.svg" alt="img"
+                    /></a>
+                  </li>
+                  <li class="footer_link">
+                    <a href="#">
+                      <img
+                        src="../images/home/footer-img/youtube.svg"
+                        alt="img"
+                      />
+                    </a>
+                  </li>
+                  <li class="footer_link">
+                    <a href="#">
+                      <img src="../images/home/footer-img/zalo.svg" alt="img" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer_child-column">
+              <p class="footer_column-title">Tải ứng dụng trên điện thoại</p>
+              <div class="footer_column-content">
+                <ul class="footer_list-link footer_list-img gap-4">
+                  <li class="footer_link">
+                    <a href="#">
+                      <img
+                        src="../images/home/footer-img/qrcode.svg"
+                        alt="img"
+                      />
+                    </a>
+                  </li>
+                  <li class="footer_link d-flex flex-column gap-1">
+                    <a href="#">
+                      <img
+                        src="../images/home/footer-img/ggplay.svg"
+                        alt="img"
+                      />
+                    </a>
+                    <a href="#">
+                      <img
+                        src="../images/home/footer-img/appstore.svg"
+                        alt="img"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p
+          class="footer_text"
+          style="
+            font-family: Great Vibes;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 25.04px;
+            text-align: center;
+            color: #f17185;
+            margin-bottom: -10px;
+            text-align: right;
+          "
+        >
+          Made with love!
+        </p>
+        <hr
+          class="footer_line"
+          style="color: #282828; margin-top: 10px; margin-bottom: 0px"
+        />
+        <div class="footer_bottom">
+          <div class="d-flex flex-column" style="gap: 8px">
+            <p class="footer_address">
+              Trụ sở chính: 43 Trần Nguyên Đán, Định Công, Q. Hoàng Mai, TP. Hà
+              Nội
+            </p>
+            <p class="footer_info">
+              Giấy chứng nhận Đăng kí kinh doanh số: 0998999999 do sở kế hoạch
+              và Đầu tư Thành Phố Hà Nội cấp lần đầu ngày 09/09/2022
+            </p>
+            <p class="footer_license">
+              ©2022 - Bản quyền của Công ty TNHH Ommani
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer class="footer_mobile d-flex d-md-none">
+      <p>©2022 - Bản quyền của Công ty TNHH Ommani</p>
+    </footer>
+
+    <!-- Button in mobile -->
+    <div class="button-block_mobile d-flex d-md-none">
+      <button class="button_action-mobile button_add-cart">
+        <i class="bi bi-cart2"></i> Thêm Vào Giỏ
+      </button>
+      <button class="button_action-mobile button_buy-now">Mua Ngay</button>
+    </div>
+
+    <!-- Script -->
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/product-detail.js"></script>
+  </body>
+</html>

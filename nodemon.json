@@ -1,5 +1,0 @@
-{
-  "watch": ["css"],
-  "ext": "scss",
-  "exec": "sass css:css"
-}
