@@ -589,6 +589,9 @@ nav .pagination .page-link:hover {
   }
 }
 @media (max-width: 992px) {
+  .detail-product .product-briefing .product-briefing_right .product-briefing_header .main-header h3 {
+    font-size: 18px;
+  }
   .detail-product .product-briefing .product-briefing_right .product-briefing_content .product-briefing_options button {
     max-width: 230px;
   }

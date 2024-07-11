@@ -63,21 +63,20 @@
   .detail-product
     .product-briefing
     .product-briefing_right
+    .product-briefing_header
+    .main-header
+    h3 {
+    font-size: 18px;
+  }
+  .detail-product
+    .product-briefing
+    .product-briefing_right
     .product-briefing_content
     .product-briefing_options {
     button {
       max-width: 230px;
     }
   }
-
-  // .detail-product {
-  //   .product-briefing {
-  //     .product-briefing_left,
-  //     .product-briefing_right {
-  //       max-width: unset;
-  //     }
-  //   }
-  // }
 
   .detail-product
     .product-briefing

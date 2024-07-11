@@ -395,12 +395,6 @@
             <img src="../assets/images/iconoir_small-shop-alt.png" alt="" />
             <span>Tìm theo vị trí</span>
           </button>
-          <ul
-            class="dropdown-menu"
-            style="min-height: 300px; line-height: 16px"
-          >
-            dropdown2
-          </ul>
         </div>
       </div>
     </div>
@@ -427,10 +421,36 @@
     <main class="detail-product container-xxl">
       <div class="product-briefing">
         <div class="row" style="--bs-gutter-x: 30px">
-          <div class="col-12 col-lg-5 col-xxl-auto">
+          <div class="col-12 col-md-5 col-xxl-auto">
             <div class="product-briefing_left">
               <div class="img-container">
-                <img src="../assets/images/videoMinhHoa.png" alt="" />
+                <img
+                  class="d-md-block d-none"
+                  src="../assets/images/videoMinhHoa.png"
+                  alt=""
+                />
+                <section
+                  class="banner carousel slide d-md-none d-block"
+                  data-bs-ride="carousel"
+                  data-bs-interval="2000"
+                  id="banner"
+                >
+                  <div class="carousel-inner">
+                    <script>
+                      for (let i = 1; i <= 4; i++) {
+                        document.write(`
+                        <div class="carousel-item active">
+                          <img
+                            class="w-100 object-fit-contain"
+                            src="../assets/svg/hinhminhhoa${i}.svg"
+                            alt=""
+                          />
+                        </div>
+                        `);
+                      }
+                    </script>
+                  </div>
+                </section>
                 <div class="img-zoom-review"></div>
                 <div class="img-zoom-area"></div>
                 <!-- btn hidden -->
@@ -623,7 +643,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-7 col-xxl-auto">
+          <div class="col-12 col-md-7 col-xxl-auto">
             <div class="product-briefing_right">
               <div class="product-briefing_header">
                 <img
@@ -763,7 +783,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="d-flex flex-column gap-4 align-items-start">
+                <div
+                  class="d-lg-flex d-none flex-column gap-4 align-items-start"
+                >
                   <div class="product-briefing_options">
                     <button>
                       <img src="../assets/svg/li_shopping-cart.svg" alt="" />
@@ -1309,10 +1331,13 @@
         <span class="related-product_title">Sản phẩm liên quan</span>
         <div class="list-product"></div>
       </div>
-      <div class="option-mobile position-fixed d-md-none d-flex">
+      <div
+        class="option-mobile position-fixed d-lg-none d-flex"
+        style="bottom: 0px; left: 0px"
+      >
         <button>
           <img src="../assets/svg/li_shopping-cartGreen.svg" alt="" />
-          <span>Thêm vào giỏ</span>
+          <span>Thêm vào giỏ hàng</span>
         </button>
         <button>Mua ngay</button>
       </div>
