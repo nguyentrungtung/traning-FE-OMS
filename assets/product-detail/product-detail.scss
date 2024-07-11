@@ -835,6 +835,7 @@ $text-link-color: #2e9dff;
                   font-weight: 700;
                   line-height: 16.41px;
                   color: $text-primary-color;
+                  text-decoration: underline;
                 }
                 span {
                   color: #fec300;
@@ -848,6 +849,7 @@ $text-link-color: #2e9dff;
                 line-height: 16.41px;
                 span {
                   font-weight: 700;
+                  text-decoration: underline;
                 }
               }
             }

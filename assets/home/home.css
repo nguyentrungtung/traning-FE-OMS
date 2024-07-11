@@ -440,7 +440,7 @@
   line-height: 25.78px;
   text-align: left;
   color: #000;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 .content_wrapper .subbar-top {
   height: 38px;
@@ -684,6 +684,7 @@
   line-height: 14.06px;
   margin-bottom: 0;
   color: #000;
+  white-space: nowrap;
 }
 .content_wrapper .content_explore {
   margin-top: 24px;

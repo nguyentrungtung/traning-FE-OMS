@@ -257,6 +257,13 @@
     justify-content: end;
     width: 100%;
   }
+  .body_wrapper .body_product-info .body_product-detail .product-detail_header .product-detail_container .product-detail_name-evaluate .product-detail_evaluate .product-detail_star p {
+    text-decoration: none;
+  }
+  .body_wrapper .body_product-info .body_product-detail .product-detail_header .product-detail_container .product-detail_name-evaluate .product-detail_evaluate .product-detail_rating span,
+  .body_wrapper .body_product-info .body_product-detail .product-detail_header .product-detail_container .product-detail_name-evaluate .product-detail_evaluate .product-detail_sold span {
+    text-decoration: none;
+  }
   .body_wrapper .body_store-wrapper {
     margin-top: 8px;
     margin-left: 0px;

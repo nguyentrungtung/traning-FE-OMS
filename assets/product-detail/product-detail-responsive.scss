@@ -447,6 +447,17 @@ $text-link-color: #2e9dff;
               .product-detail_evaluate {
                 justify-content: end;
                 width: 100%;
+                .product-detail_star {
+                  p {
+                    text-decoration: none;
+                  }
+                }
+                .product-detail_rating,
+                .product-detail_sold {
+                  span {
+                    text-decoration: none;
+                  }
+                }
               }
             }
           }

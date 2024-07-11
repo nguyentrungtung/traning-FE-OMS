@@ -460,7 +460,7 @@ $text-link-color: #2e9dff;
     line-height: 25.78px;
     text-align: left;
     color: $text-primary-color;
-    margin-bottom: 19px;
+    margin-bottom: 20px;
   }
   .subbar-top {
     height: 38px;
@@ -727,6 +727,7 @@ $text-link-color: #2e9dff;
           line-height: 14.06px;
           margin-bottom: 0;
           color: $text-primary-color;
+          white-space: nowrap;
         }
       }
     }
