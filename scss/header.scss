@@ -255,7 +255,6 @@
       align-items: center;
       @extend .common-header-bottom;
       .user_btn-dropdown {
-        margin-right: 11px;
         .arrow {
           right: 10px;
         }
@@ -265,7 +264,6 @@
         flex-direction: column;
         align-items: start;
         gap: 6px;
-        margin-right: 8px;
         a {
           font-family: Roboto;
           font-size: 13px;
@@ -275,6 +273,7 @@
           color: white;
         }
       }
+
       .dropdown-menu {
         @extend .custom-dropdown-menu;
         .content {
@@ -300,6 +299,17 @@
             }
           }
         }
+      }
+    }
+    .user.login {
+      .user_option {
+        margin-left: 11px;
+        margin-right: 8px;
+      }
+    }
+    .user.nologin {
+      .user_option {
+        margin-left: 8px;
       }
     }
   }
@@ -329,6 +339,7 @@
 
 .header.is-login {
   .header_bottom {
+    padding-right: 7px;
     .address {
       display: none;
     }

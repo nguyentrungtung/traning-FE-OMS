@@ -21,6 +21,10 @@
   .market-place {
     align-self: center;
     padding: 16px 51px 29px 51px;
+    padding-top: 16px;
+    padding-bottom: 57px;
+    padding-right: 68px;
+    padding-left: 51px;
     background-color: $white;
     display: flex;
     align-items: center;
@@ -34,17 +38,26 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      &:hover {
-        transform: scale(1.1);
-      }
+      position: relative;
       img {
         width: 47px;
         height: 47px;
         object-fit: contain;
+        transition: transform ease-in-out 200ms;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
       span {
         @extend .Roboto14;
         color: $black2;
+        position: absolute;
+        bottom: 0px;
+        transform: translateY(calc(100% + 12.6px));
+        max-width: 84px;
+        overflow: hidden;
+        text-wrap: nowrap;
+        text-overflow: ellipsis;
       }
     }
   }
@@ -121,6 +134,7 @@
         border-radius: 6px;
         display: flex;
         flex-direction: column;
+        gap: 4px;
         .item_avatar {
           width: 100%;
           object-fit: contain;
@@ -135,6 +149,7 @@
             font-weight: 700;
             color: $black1;
             margin-bottom: 6px;
+            @include ellipsis-2-line();
           }
           .stars {
             display: flex;
@@ -187,9 +202,16 @@
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
-        &:hover {
-          transform: scale(1.1);
+        img {
+          width: 80px;
+          height: 80px;
+          object-fit: contain;
+          transition: transform ease-in-out 200ms;
+          &:hover {
+            transform: scale(1.1);
+          }
         }
+
         span {
           font-family: Roboto;
           font-size: 12px;
@@ -274,31 +296,30 @@
             gap: 10px;
             max-width: 100%;
             min-height: 30px;
+            width: 100%;
             img {
-              width: 100%;
+              width: 120px;
+              height: 120px;
               object-fit: contain;
             }
             .info {
               display: flex;
               flex-direction: column;
               gap: 6px;
-              .name {
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                -webkit-line-clamp: 2;
-                max-height: 3em; /* Chiều cao tối đa của span */
-                line-height: 1.5em;
-                @extend .Roboto14;
+              span:nth-of-type(1) {
+                font-family: Roboto;
+                font-size: 14px;
                 font-weight: 400;
-                color: $black1;
+                line-height: 21px;
+                text-align: left;
+                color: #1a1a1a;
+                @include ellipsis-2-line();
               }
-              .sold {
+              span:nth-of-type(2) {
                 @extend .Roboto14;
                 color: $gray1;
               }
-              .cost {
+              span:nth-of-type(3) {
                 @extend .Roboto16;
                 font-weight: 400;
               }
@@ -319,6 +340,7 @@
       width: 100%;
       display: flex;
       justify-content: center;
+
       button {
         width: 241px;
         height: 41px;
@@ -332,8 +354,13 @@
         font-weight: 500;
         color: $blue0;
         text-transform: uppercase;
+        background-image: linear-gradient(to right, $blue0 0%, $blue0 0%);
+        background-size: 0% 100%;
+        background-repeat: no-repeat;
+        transition: background-size 0.3s ease-in-out;
+
         &:hover {
-          background-color: $blue0;
+          background-size: 100% 100%;
           color: $white;
         }
       }

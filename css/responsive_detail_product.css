@@ -538,7 +538,35 @@ nav .pagination .page-link:hover {
   border-radius: 3px;
 }
 
+@media (min-width: 1400px) {
+  .container-xxl {
+    max-width: 1240px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.tooltip.custom-tooltip {
+  --bs-tooltip-bg: rgb(79, 79, 79);
+  --bs-tooltip-color: #fff;
+}
+.tooltip.custom-tooltip .tooltip-inner {
+  text-align: center;
+}
+
+@media (max-width: 1400px) {
+  .detail-product .product-briefing .product-briefing_left,
+  .detail-product .product-briefing .product-briefing_right {
+    width: unset;
+  }
+  .detail-product .product-briefing .product-briefing_right .product-briefing_content .row:nth-of-type(3) .freeship {
+    display: none;
+  }
+}
 @media (max-width: 1200px) {
+  .detail-product .product-briefing .product-briefing_left,
+  .detail-product .product-briefing .product-briefing_right {
+    width: unset;
+  }
   .detail-product .product-briefing .product-briefing_right .product-briefing_content .row:nth-of-type(3) .freeship {
     display: none;
   }
@@ -554,9 +582,9 @@ nav .pagination .page-link:hover {
     margin-left: 0;
   }
   .detail-product .related-product .list-product {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
-  .detail-product .related-product .list-product .item-product:nth-of-type(n + 5) {
+  .detail-product .related-product .list-product .item-product:nth-of-type(n + 6) {
     display: none;
   }
 }
@@ -564,8 +592,65 @@ nav .pagination .page-link:hover {
   .detail-product .product-briefing .product-briefing_right .product-briefing_content .product-briefing_options button {
     max-width: 230px;
   }
+  .detail-product .product-briefing .product-briefing_right .product-briefing_header .main-header .qrcode {
+    display: none;
+  }
+  .detail-product .shop-info .shop-info_right {
+    display: none;
+  }
+  .detail-product .product-briefing .product-briefing_left .img-other .list {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+  .detail-product .related-product .list-product {
+    grid-template-columns: repeat(6, 1fr);
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+  .detail-product .related-product .list-product .item-product {
+    min-width: 185px;
+  }
+  .detail-product .related-product .list-product .item-product:nth-of-type(n + 5) {
+    display: flex;
+  }
 }
 @media (max-width: 768px) {
+  .detail-product .product-briefing {
+    padding-bottom: 0;
+  }
+  .detail-product .related-product {
+    display: none;
+  }
+  .detail-product .product-info #product-info_evaluation .post-list .post-item .post-item_user .l1 span:first-of-type {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18.2px;
+    text-align: left;
+  }
+  .detail-product .product-info #product-info_evaluation .post-list .post-item .post-item_admin {
+    gap: 6px;
+    padding: 10px;
+  }
+  .detail-product .product-info #product-info_evaluation .post-list .post-item .post-item_admin .l1 span:first-of-type {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.2px;
+    text-align: left;
+  }
+  .detail-product .product-info #product-info_evaluation .post-list .post-item .post-item_admin .l2 {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.8px;
+    letter-spacing: -0.200000003px;
+    text-align: left;
+  }
+}
+@media (max-width: 767px) {
   .header {
     display: none;
   }
@@ -581,8 +666,6 @@ nav .pagination .page-link:hover {
   }
   .detail-product .product-briefing {
     padding: 0;
-    display: flex;
-    flex-direction: column;
     margin-bottom: 10px;
   }
   .detail-product .product-briefing .row {
@@ -590,6 +673,7 @@ nav .pagination .page-link:hover {
   }
   .detail-product .product-briefing .product-briefing_left {
     position: relative;
+    width: 100%;
   }
   .detail-product .product-briefing .product-briefing_left .img-container {
     margin: unset;
@@ -629,23 +713,26 @@ nav .pagination .page-link:hover {
   .detail-product .product-briefing .product-briefing_right .product-briefing_header .main-header {
     padding-left: 20px;
     padding-right: 20px;
-    gap: 10px;
+    gap: 8px;
     width: 100%;
     padding-top: 16px;
   }
-  .detail-product .product-briefing .product-briefing_right .product-briefing_header .main-header h3 {
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    text-align: left;
+  .detail-product .product-briefing .product-briefing_right .product-briefing_header .main-header .title {
     order: 1;
     margin-bottom: unset;
+  }
+  .detail-product .product-briefing .product-briefing_right .product-briefing_header .main-header .title h3 {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    margin-bottom: 0;
   }
   .detail-product .product-briefing .product-briefing_right .product-briefing_header .main-header .product-cost {
     order: 2;
@@ -707,11 +794,26 @@ nav .pagination .page-link:hover {
   .detail-product .product-info #product-info_evaluation {
     padding: 12px 16px;
   }
+  .detail-product .product-info #product-info_evaluation .evaluation-header .stars {
+    width: 100%;
+  }
+  .detail-product .product-info #product-info_evaluation .evaluation-header .stars .top span:nth-of-type(2) {
+    text-wrap: nowrap;
+  }
+  .detail-product .product-info #product-info_evaluation .evaluation-header .stars .list {
+    width: 100%;
+  }
   .detail-product .product-info #product-info_evaluation .evaluation-header .stars .list .item .progress {
-    width: 170px;
+    width: 100%;
+    max-width: 170px;
+    height: 5px;
   }
   .detail-product .product-info #product-info_evaluation .post-list .post-item .post-item_user {
     width: 100%;
+  }
+  .detail-product .product-info #product-info_evaluation .post-list .post-item .post-item_user .l1 {
+    gap: unset;
+    justify-content: space-between;
   }
   .detail-product .product-info #product-info_evaluation .post-list .post-item .post-item_user .l1 .user_avatar {
     width: 40px;
@@ -723,5 +825,10 @@ nav .pagination .page-link:hover {
   }
   .detail-product .product-info #product-info_evaluation .post-list .post-item .post-item_admin .l1 span:first-of-type::after {
     content: "Phản hồi của người bán:";
+  }
+}
+@media (max-width: 320px) {
+  .detail-product .shop-info .shop-info_left .main-info .i3 {
+    display: none;
   }
 }

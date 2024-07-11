@@ -576,3 +576,24 @@ nav .pagination {
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
 }
+
+@media (min-width: 1400px) {
+  .container-xxl {
+    max-width: 1240px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.tooltip.custom-tooltip {
+  --bs-tooltip-bg: rgb(79, 79, 79);
+  --bs-tooltip-color: #fff;
+  .tooltip-inner {
+    text-align: center;
+  }
+}
+
+@mixin scroll-custom {
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}

@@ -215,35 +215,40 @@
           </div>
           <!-- userloginSignup -->
           <div class="user dropdown nologin">
-            <button
-              data-bs-toggle="dropdown"
-              data-bs-auto-close="outside"
-              class="user_btn-dropdown"
-              data-bs-offset="-70,20"
-            >
-              <img
-                src="../assets/svg/carbon_user-avatar.svg"
-                alt=""
-                style="width: 33px; object-fit: contain"
-              />
-            </button>
+            <img
+              src="../assets/svg/carbon_user-avatar.svg"
+              alt=""
+              style="width: 33px; object-fit: contain"
+            />
+
             <div class="user_option d-lg-flex d-none">
               <a href="#">Đăng nhập</a>
               <a href="#">Đăng ký</a>
             </div>
           </div>
           <div class="user dropdown login">
+            <img
+              src="../assets/svg/avtar.svg"
+              alt=""
+              style="width: 33px; object-fit: contain; margin-right: 11px"
+            />
             <button
               data-bs-toggle="dropdown"
               data-bs-auto-close="outside"
               class="user_btn-dropdown"
               data-bs-offset="-70,20"
             >
-              <img
-                src="../assets/svg/avtar.svg"
-                alt=""
-                style="width: 33px; object-fit: contain; margin-right: 8px"
-              />
+              <div class="d-flex align-items-center">
+                <div class="user_option d-lg-flex d-none">
+                  <a href="#">Tài khoản</a>
+                  <a href="#">Hoàng Anh</a>
+                </div>
+                <img
+                  class="d-lg-block d-none"
+                  src="../assets/svg/li_chevron-down.svg"
+                  alt=""
+                />
+              </div>
             </button>
             <div class="dropdown-menu">
               <div class="arrow"></div>
@@ -253,15 +258,6 @@
                 <a href="#">Đăng xuất</a>
               </div>
             </div>
-            <div class="user_option d-lg-flex d-none">
-              <a href="#">Tài khoản</a>
-              <a href="#">Hoàng Anh</a>
-            </div>
-            <img
-              class="d-lg-block d-none"
-              src="../assets/svg/li_chevron-down.svg"
-              alt=""
-            />
           </div>
         </div>
         <!-- search mobile -->
@@ -758,5 +754,13 @@
     createcommongroupproduct(
       ".common-group-product .common-group-product_list"
     );
+  </script>
+  <script>
+    var tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
   </script>
 </html>

@@ -12,19 +12,12 @@
 @media (max-width: 1200px) {
   .header {
     .header_bottom {
-      padding-left: 28px;
+      padding-right: 0 !important;
       .search {
         align-self: flex-end;
         .search_bar {
           width: 500px !important;
         }
-      }
-      .logo,
-      .cart,
-      .user {
-        height: fit-content;
-        padding-bottom: unset;
-        align-self: unset;
       }
     }
   }
@@ -59,6 +52,9 @@
       margin-right: unset !important;
     }
   }
+  .footer {
+    padding-top: unset;
+  }
 }
 @media (max-width: 768px) {
   .header {
@@ -78,11 +74,9 @@
       }
       .user {
         order: 1;
-        button {
-          img {
-            width: 24px !important;
-            height: 24px !important;
-          }
+        img {
+          width: 24px !important;
+          height: 24px !important;
         }
       }
       .cart {
@@ -93,9 +87,12 @@
           }
         }
       }
+      .logo,
+      .user,
+      .cart {
+        padding-bottom: 0;
+        height: 42px;
+      }
     }
-  }
-  .footer {
-    padding-top: unset;
   }
 }

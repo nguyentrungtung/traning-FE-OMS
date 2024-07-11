@@ -216,35 +216,40 @@
           </div>
           <!-- userloginSignup -->
           <div class="user dropdown nologin">
-            <button
-              data-bs-toggle="dropdown"
-              data-bs-auto-close="outside"
-              class="user_btn-dropdown"
-              data-bs-offset="-70,20"
-            >
-              <img
-                src="../assets/svg/carbon_user-avatar.svg"
-                alt=""
-                style="width: 33px; object-fit: contain"
-              />
-            </button>
+            <img
+              src="../assets/svg/carbon_user-avatar.svg"
+              alt=""
+              style="width: 33px; object-fit: contain"
+            />
+
             <div class="user_option d-lg-flex d-none">
               <a href="#">Đăng nhập</a>
               <a href="#">Đăng ký</a>
             </div>
           </div>
           <div class="user dropdown login">
+            <img
+              src="../assets/svg/avtar.svg"
+              alt=""
+              style="width: 33px; object-fit: contain; margin-right: 11px"
+            />
             <button
               data-bs-toggle="dropdown"
               data-bs-auto-close="outside"
               class="user_btn-dropdown"
               data-bs-offset="-70,20"
             >
-              <img
-                src="../assets/svg/avtar.svg"
-                alt=""
-                style="width: 33px; object-fit: contain; margin-right: 8px"
-              />
+              <div class="d-flex align-items-center">
+                <div class="user_option d-lg-flex d-none">
+                  <a href="#">Tài khoản</a>
+                  <a href="#">Hoàng Anh</a>
+                </div>
+                <img
+                  class="d-lg-block d-none"
+                  src="../assets/svg/li_chevron-down.svg"
+                  alt=""
+                />
+              </div>
             </button>
             <div class="dropdown-menu">
               <div class="arrow"></div>
@@ -254,15 +259,6 @@
                 <a href="#">Đăng xuất</a>
               </div>
             </div>
-            <div class="user_option d-lg-flex d-none">
-              <a href="#">Tài khoản</a>
-              <a href="#">Hoàng Anh</a>
-            </div>
-            <img
-              class="d-lg-block d-none"
-              src="../assets/svg/li_chevron-down.svg"
-              alt=""
-            />
           </div>
         </div>
         <!-- search mobile -->
@@ -409,7 +405,7 @@
       </div>
     </div>
     <!-- breadcrumb -->
-    <section class="breadcrumb-container container-xxl">
+    <section class="breadcrumb-container d-lg-block d-none container-xxl">
       <nav
         style="
           --bs-breadcrumb-divider: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'8\' height=\'8\'%3E%3Cpath d=\'M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z\' fill=\'%236c757d\'/%3E%3C/svg%3E');
@@ -428,11 +424,10 @@
       </nav>
     </section>
     <!-- main -->
-
     <main class="detail-product container-xxl">
       <div class="product-briefing">
         <div class="row" style="--bs-gutter-x: 30px">
-          <div class="col-md-4 col-12">
+          <div class="col-12 col-lg-5 col-xxl-auto">
             <div class="product-briefing_left">
               <div class="img-container">
                 <img src="../assets/images/videoMinhHoa.png" alt="" />
@@ -440,7 +435,11 @@
                 <div class="img-zoom-area"></div>
                 <!-- btn hidden -->
                 <button class="btn-return d-md-none d-flex">
-                  <img src="../assets/svg/btnreturn.svg" alt="" />
+                  <img
+                    src="../assets/svg/btnreturn.svg"
+                    alt=""
+                    style="width: 15px; object-fit: contain"
+                  />
                 </button>
                 <button class="btn-cart d-md-none d-flex">
                   <img src="../assets/svg/cart.svg" alt="" />
@@ -462,7 +461,7 @@
                   <img
                     src="../assets/svg/Vận chuyển.svg"
                     alt=""
-                    style="width: 35px; object-fit: contain"
+                    style="width: 28px; object-fit: contain"
                   />
                 </div>
               </div>
@@ -480,12 +479,11 @@
                 const zoomImageArea = document.querySelector(
                   ".detail-product .product-briefing .product-briefing_left .img-container .img-zoom-area"
                 );
-                const zoomFactor = 1.3;
+                const zoomFactor = 1.6;
                 mainImage.addEventListener("mousemove", (event) => {
                   const imgRect = img.getBoundingClientRect();
                   let mouseX = event.clientX;
                   let mouseY = event.clientY;
-
                   if (
                     mouseX < imgRect.left ||
                     mouseX > imgRect.right ||
@@ -495,8 +493,13 @@
                     zoomImageArea.style.display = "none";
                     zoomImageReview.style.display = "none";
                   } else {
-                    zoomImageArea.style.display = "block";
-                    zoomImageReview.style.display = "block";
+                    if (window.innerWidth > 1200) {
+                      zoomImageArea.style.display = "block";
+                      zoomImageReview.style.display = "block";
+                    } else {
+                      return;
+                    }
+
                     const mainImageRect = mainImage.getBoundingClientRect();
 
                     mouseX = event.clientX - mainImageRect.left;
@@ -550,10 +553,10 @@
                     }
                   </script>
                 </div>
-                <button class="previous d-md-block d-none">
+                <button class="previous d-lg-block d-none">
                   <img src="../assets/svg/previous.svg" alt="" />
                 </button>
-                <button class="next d-md-block d-none">
+                <button class="next d-lg-block d-none">
                   <img src="../assets/svg/next.svg" alt="" />
                 </button>
                 <script>
@@ -599,7 +602,7 @@
                 }
               </script>
               <div
-                class="product-share d-md-flex d-none align-items-center align-self-center"
+                class="product-share d-lg-flex d-none align-items-center align-self-center"
                 style="gap: 14px"
               >
                 <span>Chia sẻ:</span>
@@ -620,19 +623,27 @@
               </div>
             </div>
           </div>
-          <div class="col-md-8 col-12">
+          <div class="col-12 col-lg-7 col-xxl-auto">
             <div class="product-briefing_right">
               <div class="product-briefing_header">
                 <img
-                  class="mall-icon d-md-block d-none"
+                  class="mall-icon d-lg-block d-none"
                   src="../assets/svg/mall.svg"
                   alt=""
                 />
                 <div class="main-header">
-                  <h3>
-                    Bông cải xanh - Công nghệ làm sạch tiêu chuẩn đức Gói 500g
-                    Đà Lạt
-                  </h3>
+                  <div class="title d-flex align-items-start">
+                    <h3>
+                      Bông cải xanh - Công nghệ làm sạch tiêu chuẩn đức Gói 500g
+                      Đà Lạt
+                    </h3>
+                    <img
+                      src="../assets/svg/salIconProduct.svg"
+                      alt=""
+                      style="width: 25px; object-fit: contain; margin-left: 8px"
+                      class="d-md-none d-block"
+                    />
+                  </div>
 
                   <div class="preview">
                     <span class="common">
@@ -724,7 +735,9 @@
                           <img src="../assets/svg/tang.svg" alt="" />
                         </button>
                       </div>
-                      <span class="available">Có 2.400 Sản phẩm có sẵn</span>
+                      <span class="available d-xl-block d-none"
+                        >Có 2.400 Sản phẩm có sẵn</span
+                      >
 
                       <script>
                         const soluongChange =
@@ -1115,7 +1128,7 @@
                   <div class="post-item">
                   <div class="post-item_user">
                     <div class="l1">
-                      <div class="d-flex align-items-center gap-md-2 gap-3">
+                      <div class="d-flex align-items-center gap-2">
                           <img
                           class="user_avatar"
                           src="../assets/svg/avtComment.svg"
@@ -1132,13 +1145,13 @@
                         </span>                             
                         </div>
                       </div>
-                      <div class="l1_date d-md-none d-block">16/03/2022</div>
+                      <div class="l1_date d-md-none d-block align-self-start">16/03/2022</div>
                     </div>
                     <div class="l2">Bắp rất ngon
                       ${
                         addL2
                           ? `
-                        <div class="d-flex gap-2 align-items-center" >
+                        <div class="list-img-comment d-flex gap-2 align-items-center" >
                            <img src="../assets/images/imgcomment1.png" alt="">
                             <img src="../assets/images/imgcomment2.png" alt="">
                           </div>
@@ -1236,7 +1249,7 @@
                 <div class="post-item_admin">
                   <div class="l1">
                     <img src="../assets/svg/avtComment.svg" alt="" />
-                    <span>Hoàng Ngọc</span>
+                    <span></span>
                     <span>Quản trị viên</span>
                   </div>
                   <div class="l2">
@@ -1292,9 +1305,16 @@
           </div>
         </div>
       </div>
-      <div class="related-product d-md-block d-none">
+      <div class="related-product">
         <span class="related-product_title">Sản phẩm liên quan</span>
         <div class="list-product"></div>
+      </div>
+      <div class="option-mobile position-fixed d-md-none d-flex">
+        <button>
+          <img src="../assets/svg/li_shopping-cartGreen.svg" alt="" />
+          <span>Thêm vào giỏ</span>
+        </button>
+        <button>Mua ngay</button>
       </div>
     </main>
 
