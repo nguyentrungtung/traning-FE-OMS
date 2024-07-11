@@ -709,15 +709,18 @@ $text-link-color: #2e9dff;
           background-color: #515154;
           opacity: 0.3;
           border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           &.pre-btn {
-            left: -30px;
+            left: -7px;
             top: 50%;
             transform: translateY(-50%);
           }
 
           &.next-btn {
-            right: -30px;
+            right: -7px;
             top: 50%;
             transform: translateY(-50%);
           }
@@ -725,7 +728,7 @@ $text-link-color: #2e9dff;
           i {
             color: $color-white;
             &::before {
-              font-weight: 600;
+              font-weight: 700 !important;
             }
           }
         }
@@ -982,6 +985,11 @@ $text-link-color: #2e9dff;
                 line-height: 24px;
                 border: 1px solid #e4e4e4;
                 background-color: $color-white;
+
+                &.disabled {
+                  opacity: 0.5;
+                  pointer-events: none;
+                }
 
                 .btn-minus,
                 .btn-plus {
@@ -1607,6 +1615,7 @@ $text-link-color: #2e9dff;
             padding: 7px 15px;
             gap: 23px;
             .upload-button {
+              cursor: pointer;
               border: 0;
               background-color: transparent;
               font-size: 13px;
@@ -1617,6 +1626,13 @@ $text-link-color: #2e9dff;
               i {
                 font-size: 15px;
               }
+            }
+            .file-name {
+              font-size: 13px;
+              font-weight: 400;
+              line-height: 20px;
+              text-align: center;
+              color: #0066cc;
             }
             .send-button {
               padding: 2px 15px 2px 14px;
@@ -2020,6 +2036,13 @@ $text-link-color: #2e9dff;
           gap: 8px;
           border-radius: 2px;
           padding: 12px;
+          background-color: #f8f8f8;
+          &.active {
+            background-color: $primary-color;
+            p {
+              color: $color-white;
+            }
+          }
           p {
             font-size: 14px;
             font-weight: 400;
@@ -2036,6 +2059,18 @@ $text-link-color: #2e9dff;
     }
     .customer-comment_container {
       margin-top: 32px;
+      display: none;
+      &.show {
+        display: block;
+      }
+
+      .comment_rate-star {
+        display: none;
+        &.show-comment_filter-star {
+          display: block;
+        }
+      }
+
       .comment-block {
         gap: 16px;
         padding: 24px 0px;
@@ -2104,6 +2139,7 @@ $text-link-color: #2e9dff;
             }
           }
         }
+
         .feedback-seller {
           background-color: #f8f8f8;
           padding: 10px;
@@ -2125,6 +2161,34 @@ $text-link-color: #2e9dff;
             text-align: left;
           }
         }
+      }
+      .comment-block_list-img {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        .img_product {
+          flex-basis: 82px;
+          height: 82px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+          }
+        }
+      }
+      .product_content {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        color: #000;
+      }
+    }
+
+    .customer-comment_star {
+      display: none;
+      &.show_rate-star {
+        display: block;
       }
     }
   }

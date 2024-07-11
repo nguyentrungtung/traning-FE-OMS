@@ -345,3 +345,102 @@ handleResize();
 
 // Listen for window resize events
 window.addEventListener("resize", handleResize);
+
+/* handle up and down quantity product*/
+
+const decreaseButton = document.querySelector(
+  ".product-detail_quantity-button--decrease"
+);
+const increaseButton = document.querySelector(
+  ".product-detail_quantity-button--increase"
+);
+const quantityInput = document.querySelector(".product-detail_quantity-input");
+
+// Function to update the state of the decrease button
+const updateDecreaseButtonState = () => {
+  if (parseInt(quantityInput.value, 10) <= 1) {
+    decreaseButton.disabled = true;
+    decreaseButton.classList.add("disabled");
+  } else {
+    decreaseButton.disabled = false;
+    decreaseButton.classList.remove("disabled");
+  }
+};
+
+// Initialize the state of the decrease button
+updateDecreaseButtonState();
+
+// Event listener for decrease button
+decreaseButton.addEventListener("click", () => {
+  let currentValue = parseInt(quantityInput.value, 10);
+  if (currentValue > 1) {
+    quantityInput.value = String(currentValue - 1).padStart(2, "0");
+    updateDecreaseButtonState();
+  }
+});
+
+// Event listener for increase button
+increaseButton.addEventListener("click", () => {
+  let currentValue = parseInt(quantityInput.value, 10);
+  quantityInput.value = String(currentValue + 1).padStart(2, "0");
+  updateDecreaseButtonState();
+});
+
+// Event listener for input field (optional, to handle direct input)
+quantityInput.addEventListener("input", () => {
+  let currentValue = parseInt(quantityInput.value, 10);
+  if (isNaN(currentValue) || currentValue < 1) {
+    quantityInput.value = "01";
+  } else {
+    quantityInput.value = String(currentValue).padStart(2, "0");
+  }
+  updateDecreaseButtonState();
+});
+
+/* upload image*/
+
+const uploadButton = document.querySelector(".upload-button");
+const fileInput = document.getElementById("fileInput");
+const fileNameDisplay = document.querySelector(".file-name");
+
+uploadButton.addEventListener("click", () => {
+  fileInput.click();
+});
+
+fileInput.addEventListener("change", () => {
+  let fileNames = Array.from(fileInput.files).map((file) => file.name);
+  fileNameDisplay.textContent = fileNames.join(", ");
+});
+
+const btnTabs = document.querySelectorAll(".btn-tabs");
+const allContentCmts = document.querySelectorAll(".customer-comment_container");
+
+btnTabs.forEach((tab, index) => {
+  tab.addEventListener("click", (e) => {
+    btnTabs.forEach((tab) => tab.classList.remove("btn--active"));
+    tab.classList.add("btn--active");
+
+    btnFilterStar.forEach((tab, index) => {
+      tab.classList.remove("active");
+    });
+    allContentCmts.forEach((content) => {
+      content.classList.remove("show");
+    });
+    allContentCmts[index].classList.add("show");
+  });
+});
+
+const btnFilterStar = document.querySelectorAll(".btn_filter-star");
+const allContentFilterStar = document.querySelectorAll(".comment_rate-star");
+
+btnFilterStar.forEach((tab, index) => {
+  tab.addEventListener("click", (e) => {
+    btnFilterStar.forEach((tab) => tab.classList.remove("active"));
+    tab.classList.add("active");
+
+    allContentFilterStar.forEach((content) => {
+      content.classList.remove("show-comment_filter-star");
+    });
+    allContentFilterStar[index].classList.add("show-comment_filter-star");
+  });
+});

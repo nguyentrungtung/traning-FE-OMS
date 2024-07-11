@@ -166,7 +166,7 @@ const item_category = productCategories.map((item, index) => {
             src=${item.url}
             alt="img"
           />
-          <p class="content_product-category-title">${item.title}</p>
+          <p class="content_product-category-title" title="${item.title}">${item.title}</p>
         </a>`;
 });
 productCategoryList.innerHTML = item_category.join("");
@@ -339,9 +339,7 @@ const explore_item = exploreItems.map((exploreItem, index) => {
                         class="content_product-info d-flex flex-column justify-content-start"
                       >
                         <p class="content_product-name mb-0" 
-                          data-bs-toggle="tooltip" data-bs-placement="top"
-                          data-bs-custom-class="custom-tooltip"
-                          data-bs-title="Xúc Xích Đức Việt gói 16 hông khói siêu ngon"
+                          title="Xúc Xích Đức Việt gói 16 hông khói siêu ngon"
                         >
                           Xúc Xích Đức Việt gói 16 hông khói siêu ngon
                         </p>
@@ -359,6 +357,18 @@ const explore_item = exploreItems.map((exploreItem, index) => {
 });
 
 exploreItemContainer.innerHTML = explore_item.join("");
+
+const btnShowMore = document.querySelector(".content_btn-show");
+btnShowMore.addEventListener("click", () => {
+  // Số lượng phần tử mới sẽ được thêm
+  const additionalItems = explore_item.slice(0, 3).join("");
+
+  // Thêm các phần tử mới vào container
+  exploreItemContainer.innerHTML += additionalItems;
+
+  // Ẩn nút "Xem thêm"
+  btnShowMore.style.display = "none";
+});
 
 var tooltipTriggerList = [].slice.call(
   document.querySelectorAll('[data-bs-toggle="tooltip"]')

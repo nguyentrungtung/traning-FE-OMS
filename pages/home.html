@@ -148,14 +148,15 @@
               <i class="bi bi-chat icon"></i>
             </div>
             <div class="header_icon header header_icon--cart dropdown">
-              <i
-                class="bi bi-cart2 icon"
+              <div
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
                 data-bs-offset="20, 20"
-              ></i>
-              <span class="header_cart-notify">5</span>
+              >
+                <i class="bi bi-cart2 icon"></i>
+                <span class="header_cart-notify">5</span>
+              </div>
 
               <div class="dropdown-menu header_cart-menu border-0">
                 <p class="header_cart-title">Sản phẩm mới thêm</p>
@@ -168,7 +169,11 @@
                         alt="product"
                       />
                       <div class="header_product-info d-flex align-items-start">
-                        <p class="header_product-name">
+                        <p
+                          class="header_product-name"
+                          title="
+                          Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%"
+                        >
                           Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%
                         </p>
                         <p
@@ -188,7 +193,11 @@
                         alt="product"
                       />
                       <div class="header_product-info d-flex align-items-start">
-                        <p class="header_product-name">
+                        <p
+                          class="header_product-name"
+                          title="
+                          Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%"
+                        >
                           Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%
                         </p>
                         <p
@@ -208,7 +217,11 @@
                         alt="product"
                       />
                       <div class="header_product-info d-flex align-items-start">
-                        <p class="header_product-name">
+                        <p
+                          class="header_product-name"
+                          title="
+                          Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%"
+                        >
                           Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%
                         </p>
                         <p
@@ -228,7 +241,11 @@
                         alt="product"
                       />
                       <div class="header_product-info d-flex align-items-start">
-                        <p class="header_product-name">
+                        <p
+                          class="header_product-name"
+                          title="
+                          Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%"
+                        >
                           Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%
                         </p>
                         <p
@@ -248,7 +265,11 @@
                         alt="product"
                       />
                       <div class="header_product-info d-flex align-items-start">
-                        <p class="header_product-name">
+                        <p
+                          class="header_product-name"
+                          title="
+                          Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%"
+                        >
                           Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%
                         </p>
                         <p
@@ -269,30 +290,35 @@
                 </div>
               </div>
             </div>
-            <div
-              class="header_icon header_icon--auth dropdown d-flex align-items-center"
-            >
-              <i class="bi bi-person-circle icon d-none"></i>
-              <img
-                class="header_customer-img"
-                src="../images/home/avatar.jpg"
-                alt="avatar"
-              />
+            <div class="header_icon header_icon--auth dropdown">
               <div
-                class="header_auth d-flex flex-column"
+                class="d-flex align-items-center"
+                style="gap: 8px"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
                 data-bs-offset="0, 20"
               >
-                <a href="#" class="header__auth-login d-none">Đăng nhập</a>
-                <a href="#" class="header__auth-register d-none">Đăng ký</a>
-                <p class="header_customer-title d-none d-lg-block">Tài khoản</p>
-                <p class="header_customer-name d-none d-lg-block">Hoàng Anh</p>
+                <i class="bi bi-person-circle icon d-none"></i>
+                <img
+                  class="header_customer-img"
+                  src="../images/home/avatar.jpg"
+                  alt="avatar"
+                />
+                <div class="header_auth d-flex flex-column">
+                  <a href="#" class="header__auth-login d-none">Đăng nhập</a>
+                  <a href="#" class="header__auth-register d-none">Đăng ký</a>
+                  <p class="header_customer-title d-none d-lg-block">
+                    Tài khoản
+                  </p>
+                  <p class="header_customer-name d-none d-lg-block">
+                    Hoàng Anh
+                  </p>
+                </div>
+                <i
+                  class="bi bi-chevron-down d-none d-lg-block"
+                  style="font-size: 15px; color: white"
+                ></i>
               </div>
-              <i
-                class="bi bi-chevron-down d-none d-lg-block"
-                style="font-size: 15px; color: white"
-              ></i>
 
               <ul class="dropdown-menu header_customer-menu border-0">
                 <li>
@@ -623,163 +649,174 @@
         </div>
         <div class="content_reputation-store">
           <p class="content_section-heading">Top cửa hàng uy tín</p>
-          <div class="row gx-xl-3 g-2 content_store-card">
-            <div class="col-lg-2 col-md-3 col-o-2 col-sm-4 col-6">
-              <a href="#" class="content_store-item card">
-                <img
-                  src="../images/home/reputation-store/aan.png"
-                  class="card-img-top img-fluid"
-                  alt="store-img"
-                />
-                <div class="card-body d-flex flex-column">
-                  <div
-                    class="cart-heading d-flex flex-column justify-content-start"
+          <div class="content_store-card">
+            <a href="#" class="content_store-item card">
+              <img
+                src="../images/home/reputation-store/aan.png"
+                class="card-img-top img-fluid"
+                alt="store-img"
+              />
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="cart-heading d-flex flex-column justify-content-start"
+                >
+                  <p
+                    class="cart-title"
+                    title="Ommani Mall Nguyễn Văn Linh Long Biên"
                   >
-                    <p class="cart-title">
-                      Ommani Mall Nguyễn Văn Linh Long Biên
-                    </p>
-                    <div class="cart-subtitle d-flex align-items-center">
-                      <i class="bi bi-star-fill"></i>
-                      <p>4.8 (11k+)</p>
-                    </div>
+                    Ommani Mall Nguyễn Văn Linh Long Biên
+                  </p>
+                  <div class="cart-subtitle d-flex align-items-center">
+                    <i class="bi bi-star-fill"></i>
+                    <p>4.8 (11k+)</p>
                   </div>
-                  <span
-                    class="badge-store d-flex align-items-center justify-content-center"
-                    >Đã chứng nhận</span
-                  >
                 </div>
-              </a>
-            </div>
-            <div class="col-lg-2 col-md-3 col-o-2 col-sm-4 col-6">
-              <a href="#" class="content_store-item card">
-                <img
-                  src="../images/home/reputation-store/nestle.png"
-                  class="card-img-top img-fluid"
-                  alt="store-img"
-                />
-                <div class="card-body d-flex flex-column">
-                  <div
-                    class="cart-heading d-flex flex-column justify-content-start"
+                <span
+                  class="badge-store d-flex align-items-center justify-content-center"
+                  >Đã chứng nhận</span
+                >
+              </div>
+            </a>
+
+            <a href="#" class="content_store-item card">
+              <img
+                src="../images/home/reputation-store/nestle.png"
+                class="card-img-top img-fluid"
+                alt="store-img"
+              />
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="cart-heading d-flex flex-column justify-content-start"
+                >
+                  <p
+                    class="cart-title"
+                    title="Ommani Mall Nguyễn Văn Linh Long Biên"
                   >
-                    <p class="cart-title">
-                      Ommani Mall Nguyễn Văn Linh Long Biên
-                    </p>
-                    <div class="cart-subtitle d-flex align-items-center">
-                      <i class="bi bi-star-fill"></i>
-                      <p>4.8 (11k+)</p>
-                    </div>
+                    Ommani Mall Nguyễn Văn Linh Long Biên
+                  </p>
+                  <div class="cart-subtitle d-flex align-items-center">
+                    <i class="bi bi-star-fill"></i>
+                    <p>4.8 (11k+)</p>
                   </div>
-                  <span
-                    class="badge-store d-flex align-items-center justify-content-center"
-                    >Đã chứng nhận</span
-                  >
                 </div>
-              </a>
-            </div>
-            <div class="col-lg-2 col-md-3 col-o-2 col-sm-4 col-6">
-              <a href="#" class="content_store-item card">
-                <img
-                  src="../images/home/reputation-store/top-market.png"
-                  class="card-img-top img-fluid"
-                  alt="store-img"
-                />
-                <div class="card-body d-flex flex-column">
-                  <div
-                    class="cart-heading d-flex flex-column justify-content-start"
+                <span
+                  class="badge-store d-flex align-items-center justify-content-center"
+                  >Đã chứng nhận</span
+                >
+              </div>
+            </a>
+
+            <a href="#" class="content_store-item card">
+              <img
+                src="../images/home/reputation-store/top-market.png"
+                class="card-img-top img-fluid"
+                alt="store-img"
+              />
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="cart-heading d-flex flex-column justify-content-start"
+                >
+                  <p
+                    class="cart-title"
+                    title="Ommani Mall Nguyễn Văn Linh Long Biên"
                   >
-                    <p class="cart-title">
-                      Ommani Mall Nguyễn Văn Linh Long Biên
-                    </p>
-                    <div class="cart-subtitle d-flex align-items-center">
-                      <i class="bi bi-star-fill"></i>
-                      <p>4.8 (11k+)</p>
-                    </div>
+                    Ommani Mall Nguyễn Văn Linh Long Biên
+                  </p>
+                  <div class="cart-subtitle d-flex align-items-center">
+                    <i class="bi bi-star-fill"></i>
+                    <p>4.8 (11k+)</p>
                   </div>
-                  <span
-                    class="badge-store d-flex align-items-center justify-content-center"
-                    >Đã chứng nhận</span
-                  >
                 </div>
-              </a>
-            </div>
-            <div class="col-lg-2 col-md-3 col-o-2 col-sm-4 col-6">
-              <a href="#" class="content_store-item card">
-                <img
-                  src="../images/home/reputation-store/fuji-mart.png"
-                  class="card-img-top img-fluid"
-                  alt="store-img"
-                />
-                <div class="card-body d-flex flex-column">
-                  <div
-                    class="cart-heading d-flex flex-column justify-content-start"
+                <span
+                  class="badge-store d-flex align-items-center justify-content-center"
+                  >Đã chứng nhận</span
+                >
+              </div>
+            </a>
+
+            <a href="#" class="content_store-item card">
+              <img
+                src="../images/home/reputation-store/fuji-mart.png"
+                class="card-img-top img-fluid"
+                alt="store-img"
+              />
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="cart-heading d-flex flex-column justify-content-start"
+                >
+                  <p
+                    class="cart-title"
+                    title="Ommani Mall Nguyễn Văn Linh Long Biên"
                   >
-                    <p class="cart-title">
-                      Ommani Mall Nguyễn Văn Linh Long Biên
-                    </p>
-                    <div class="cart-subtitle d-flex align-items-center">
-                      <i class="bi bi-star-fill"></i>
-                      <p>4.8 (11k+)</p>
-                    </div>
+                    Ommani Mall Nguyễn Văn Linh Long Biên
+                  </p>
+                  <div class="cart-subtitle d-flex align-items-center">
+                    <i class="bi bi-star-fill"></i>
+                    <p>4.8 (11k+)</p>
                   </div>
-                  <span
-                    class="badge-store d-flex align-items-center justify-content-center"
-                    >Đã chứng nhận</span
-                  >
                 </div>
-              </a>
-            </div>
-            <div class="col-lg-2 col-md-3 col-o-2 col-sm-4 col-6">
-              <a href="#" class="content_store-item card">
-                <img
-                  src="../images/home/reputation-store/vitot.png"
-                  class="card-img-top img-fluid"
-                  alt="store-img"
-                />
-                <div class="card-body d-flex flex-column">
-                  <div
-                    class="cart-heading d-flex flex-column justify-content-start"
+                <span
+                  class="badge-store d-flex align-items-center justify-content-center"
+                  >Đã chứng nhận</span
+                >
+              </div>
+            </a>
+
+            <a href="#" class="content_store-item card">
+              <img
+                src="../images/home/reputation-store/vitot.png"
+                class="card-img-top img-fluid"
+                alt="store-img"
+              />
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="cart-heading d-flex flex-column justify-content-start"
+                >
+                  <p
+                    class="cart-title"
+                    title="Ommani Mall Nguyễn Văn Linh Long Biên"
                   >
-                    <p class="cart-title">
-                      Ommani Mall Nguyễn Văn Linh Long Biên
-                    </p>
-                    <div class="cart-subtitle d-flex align-items-center">
-                      <i class="bi bi-star-fill"></i>
-                      <p>4.8 (11k+)</p>
-                    </div>
+                    Ommani Mall Nguyễn Văn Linh Long Biên
+                  </p>
+                  <div class="cart-subtitle d-flex align-items-center">
+                    <i class="bi bi-star-fill"></i>
+                    <p>4.8 (11k+)</p>
                   </div>
-                  <span
-                    class="badge-store d-flex align-items-center justify-content-center"
-                    >Đã chứng nhận</span
-                  >
                 </div>
-              </a>
-            </div>
-            <div class="col-lg-2 col-md-3 col-o-2 col-sm-4 col-6">
-              <a href="#" class="content_store-item card">
-                <img
-                  src="../images/home/reputation-store/dacsanxunghe.png"
-                  class="card-img-top img-fluid"
-                  alt="store-img"
-                />
-                <div class="card-body d-flex flex-column">
-                  <div
-                    class="cart-heading d-flex flex-column justify-content-start"
+                <span
+                  class="badge-store d-flex align-items-center justify-content-center"
+                  >Đã chứng nhận</span
+                >
+              </div>
+            </a>
+
+            <a href="#" class="content_store-item card">
+              <img
+                src="../images/home/reputation-store/dacsanxunghe.png"
+                class="card-img-top img-fluid"
+                alt="store-img"
+              />
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="cart-heading d-flex flex-column justify-content-start"
+                >
+                  <p
+                    class="cart-title"
+                    title="Ommani Mall Nguyễn Văn Linh Long Biên"
                   >
-                    <p class="cart-title">
-                      Ommani Mall Nguyễn Văn Linh Long Biên
-                    </p>
-                    <div class="cart-subtitle d-flex align-items-center">
-                      <i class="bi bi-star-fill"></i>
-                      <p>4.8 (11k+)</p>
-                    </div>
+                    Ommani Mall Nguyễn Văn Linh Long Biên
+                  </p>
+                  <div class="cart-subtitle d-flex align-items-center">
+                    <i class="bi bi-star-fill"></i>
+                    <p>4.8 (11k+)</p>
                   </div>
-                  <span
-                    class="badge-store d-flex align-items-center justify-content-center"
-                    >Đã chứng nhận</span
-                  >
                 </div>
-              </a>
-            </div>
+                <span
+                  class="badge-store d-flex align-items-center justify-content-center"
+                  >Đã chứng nhận</span
+                >
+              </div>
+            </a>
           </div>
         </div>
         <div class="content_product-category">
