@@ -788,4 +788,24 @@
       }
     }
   </script>
+  <script>
+    const items = document.querySelectorAll(
+      ".home.container-xxl .common-group-product .common-group-product_list .item:nth-of-type(n+7)"
+    );
+
+    const hiddenItems = Array.from(items).filter((item) => {
+      const computedStyle = getComputedStyle(item);
+      return computedStyle.display === "none";
+    });
+
+    const btnXemthem = document.querySelector(
+      ".home.container-xxl .common-group-product .common-group-product_see-more button"
+    );
+    btnXemthem.addEventListener("click", () => {
+      items.forEach((item) => {
+        item.style.display = "flex";
+      });
+      btnXemthem.style.visibility = "hidden";
+    });
+  </script>
 </html>

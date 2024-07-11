@@ -879,6 +879,9 @@ nav .pagination .page-link:hover {
   color: #fb4f5b;
   font-weight: 700;
 }
+.home.container-xxl .common-group-product .common-group-product_list .item:nth-of-type(n + 7) {
+  display: none;
+}
 .home.container-xxl .common-group-product .common-group-product_see-more {
   width: 100%;
   display: flex;
