@@ -175,7 +175,28 @@
       @extend .common-header-bottom;
     }
     .cart {
+      position: relative;
       @extend .common-header-bottom;
+      .cart_btn-dropdown {
+        span {
+          top: 4px;
+          right: -9px;
+          position: absolute;
+          width: 16.84px;
+          height: 16.84px;
+          font-family: Roboto;
+          font-size: 12.35px;
+          font-weight: 500;
+          line-height: normal;
+          color: #ffffff;
+          border: 1.12px solid #f0f0f0;
+          border-radius: 100%;
+          display: block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
       .dropdown-menu {
         @extend .custom-dropdown-menu;
         width: 410px;

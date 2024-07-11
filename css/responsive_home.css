@@ -580,11 +580,11 @@ nav .pagination .page-link:hover {
     overflow-x: scroll;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    justify-content: unset;
     padding-left: 16px;
     padding-right: 16px;
     background-color: transparent;
     gap: 50px;
+    justify-content: start;
   }
   .home.container-xxl .market-place a {
     min-width: 93px;
@@ -640,7 +640,7 @@ nav .pagination .page-link:hover {
   .home.container-xxl .market-place {
     padding-top: 12px;
     padding-bottom: 26px;
-    gap: 25px;
+    gap: 30px;
   }
   .home.container-xxl .market-place a {
     width: fit-content;
@@ -657,6 +657,9 @@ nav .pagination .page-link:hover {
     line-height: 14.06px;
     text-align: center;
   }
+  .home.container-xxl .top-store {
+    margin-bottom: 12px;
+  }
   .home.container-xxl .top-store .top-store_title {
     font-family: Roboto;
     font-size: 16px;
@@ -670,6 +673,7 @@ nav .pagination .page-link:hover {
   .home.container-xxl .common-category {
     padding-top: 36px;
     padding-bottom: 10px;
+    margin-bottom: 12px;
   }
   .home.container-xxl .common-category .common-category_title {
     font-family: Roboto;
@@ -692,6 +696,9 @@ nav .pagination .page-link:hover {
   .home.container-xxl .common-category .common-category_list .item img {
     width: 63px;
     height: 63px;
+  }
+  .home.container-xxl .common-group-product {
+    margin-top: unset;
   }
   .home.container-xxl .common-group-product .common-group-product_list .item .item_products .product img {
     width: 100%;

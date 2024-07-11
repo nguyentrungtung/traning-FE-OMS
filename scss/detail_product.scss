@@ -239,9 +239,13 @@
         }
         div {
           a {
+            transition: transform ease-in-out 100ms;
             img {
               width: 28px;
               object-fit: contain;
+            }
+            &:hover {
+              transform: scale(1.1);
             }
           }
           a:last-of-type {
@@ -269,11 +273,7 @@
           position: relative;
           h3 {
             @extend .Roboto24;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            @include ellipsis-2-line();
             margin-bottom: 12px;
           }
           .common {

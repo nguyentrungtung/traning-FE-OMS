@@ -149,7 +149,18 @@
               data-bs-auto-close="outside"
               class="cart_btn-dropdown"
             >
-              <img src="../assets/svg/cart.svg" alt="" />
+              <img src="../assets/svg/li_shopping-cartWhite.svg" alt="" />
+              <script>
+                let numItemsOnCart = 6;
+                if (numItemsOnCart > 99) numItemsOnCart = 99;
+                document.write(
+                  `<span style="${
+                    numItemsOnCart > 1
+                      ? "background-color: #F69320;"
+                      : "background-color: #fb424f;"
+                  }">${numItemsOnCart}</span>`
+                );
+              </script>
             </button>
             <div class="dropdown-menu">
               <div class="arrow"></div>
@@ -422,15 +433,31 @@
                 <div class="img-zoom-review"></div>
                 <div class="img-zoom-area"></div>
                 <!-- btn hidden -->
-                <button class="btn-return d-md-none d-flex">
+                <button
+                  class="btn-return d-md-none d-flex"
+                  onclick="navigateToHome()"
+                >
                   <img
                     src="../assets/svg/btnreturn.svg"
                     alt=""
                     style="width: 15px; object-fit: contain"
                   />
+                  <script>
+                    function navigateToHome() {
+                      window.location.href = "./home.html";
+                    }
+                  </script>
                 </button>
-                <button class="btn-cart d-md-none d-flex">
+                <button
+                  class="btn-cart d-md-none d-flex"
+                  onclick="navigateToCartPage()"
+                >
                   <img src="../assets/svg/cart.svg" alt="" />
+                  <script>
+                    const navigateToCartPage = () => {
+                      window.location.href = "./cart.html";
+                    };
+                  </script>
                 </button>
                 <div
                   class="w-100 d-md-none align-items-center justify-content-between d-flex"
@@ -467,7 +494,7 @@
                 const zoomImageArea = document.querySelector(
                   ".detail-product .product-briefing .product-briefing_left .img-container .img-zoom-area"
                 );
-                const zoomFactor = 1.6;
+                const zoomFactor = 1.2;
                 mainImage.addEventListener("mousemove", (event) => {
                   const imgRect = img.getBoundingClientRect();
                   let mouseX = event.clientX;
@@ -777,7 +804,13 @@
             class="position-absolute"
             src="../assets/svg/mall.svg"
             alt=""
-            style="width: 48px; object-fit: contain; top: -5px; left: -5px"
+            style="
+              width: 48px;
+              object-fit: contain;
+              height: 20px;
+              top: -6px;
+              left: -6px;
+            "
           />
           <div class="main-info">
             <span class="i1">Ommani Mall Thạch Bàn Long Biên</span>
@@ -1505,7 +1538,11 @@
       ".detail-product .related-product .list-product"
     );
 
-    const breakpoints = ["(max-width: 768px)", "(max-width: 600px)"];
+    const breakpoints = [
+      "(max-width: 992px)",
+      "(max-width: 768px)",
+      "(max-width: 600px)",
+    ];
 
     breakpoints.forEach((breakpoint) => {
       const mediaQueryList = window.matchMedia(breakpoint);
@@ -1518,6 +1555,29 @@
 
     function handleMediaQueryChange(mediaQueryList, breakpoint) {
       switch (breakpoint) {
+        case "max-width:992px":
+          const dropdownMenuCart = document.querySelector(
+            ".header .header_bottom .cart .dropdown-menu"
+          );
+          const cartHeader = document.querySelector(
+            ".header .header_bottom .cart"
+          );
+          const userHeader = document.querySelector(
+            ".header .header_bottom .user.login"
+          );
+          if (mediaQueryList.matches) {
+            dropdownMenuCart.classList.add("d-none");
+            cartHeader.addEventListener("click", () => {
+              window.location.href = "./cart.html";
+            });
+            userHeader.addEventListener("click", () => {
+              window.location.href = "./user.html";
+            });
+          } else {
+            dropdownMenuCart.classList.remove("d-none");
+          }
+          break;
+
         case "(max-width: 768px)":
           const content = document.querySelector(
             ".detail-product .product-info #product-info_description .description-second .collapse"
@@ -1525,13 +1585,23 @@
           const evaluation = document.querySelector(
             ".detail-product .product-info #product-info_evaluation"
           );
+          const description = document.querySelector(
+            ".detail-product .product-info #product-info_description"
+          );
+          const question = document.querySelector(
+            ".detail-product .product-info #product-info_question"
+          );
 
           if (mediaQueryList.matches) {
             content.classList.remove("show");
             evaluation.classList.add("show", "active");
+            description.classList.add("show", "active");
+            question.classList.remove("show", "active");
           } else {
             content.classList.add("show");
             evaluation.classList.remove("show", "active");
+            description.classList.add("show", "active");
+            question.classList.remove("show", "active");
           }
           break;
 

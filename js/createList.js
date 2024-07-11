@@ -133,7 +133,7 @@ const createcommonProductList = (number, queryStr) => {
             </div>
 
             <div class="info">
-              <div class="name">
+              <div class="name" title="Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%">
                 Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100% x
               </div>
               <div class="main">

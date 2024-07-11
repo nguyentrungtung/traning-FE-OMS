@@ -597,7 +597,7 @@ nav .pagination .page-link:hover {
   width: 47px;
   height: 47px;
   object-fit: contain;
-  transition: transform ease-in-out 200ms;
+  transition: transform ease-in-out 100ms;
 }
 .home.container-xxl .market-place a img:hover {
   transform: scale(1.1);
@@ -750,7 +750,7 @@ nav .pagination .page-link:hover {
   width: 80px;
   height: 80px;
   object-fit: contain;
-  transition: transform ease-in-out 200ms;
+  transition: transform ease-in-out 100ms;
 }
 .home.container-xxl .common-category .common-category_list .item img:hover {
   transform: scale(1.1);

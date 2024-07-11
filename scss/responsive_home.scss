@@ -46,11 +46,11 @@
     }
     .market-place {
       @include scrollauto();
-      justify-content: unset;
       padding-left: 16px;
       padding-right: 16px;
       background-color: transparent;
       gap: 50px;
+      justify-content: start;
       a {
         min-width: 93px;
       }
@@ -105,7 +105,7 @@
     .market-place {
       padding-top: 12px;
       padding-bottom: 26px;
-      gap: 25px;
+      gap: 30px;
       a {
         width: fit-content;
         align-items: center;
@@ -123,6 +123,7 @@
       }
     }
     .top-store {
+      margin-bottom: 12px;
       .top-store_title {
         font-family: Roboto;
         font-size: 16px;
@@ -139,6 +140,7 @@
     .common-category {
       padding-top: 36px;
       padding-bottom: 10px;
+      margin-bottom: 12px;
       .common-category_title {
         font-family: Roboto;
         font-size: 16px;
@@ -163,6 +165,7 @@
       }
     }
     .common-group-product {
+      margin-top: unset;
       .common-group-product_list {
         .item {
           .item_products {

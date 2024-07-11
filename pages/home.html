@@ -148,7 +148,18 @@
               data-bs-auto-close="outside"
               class="cart_btn-dropdown"
             >
-              <img src="../assets/svg/cart.svg" alt="" />
+              <img src="../assets/svg/li_shopping-cartWhite.svg" alt="" />
+              <script>
+                let numItemsOnCart = 6;
+                if (numItemsOnCart > 99) numItemsOnCart = 99;
+                document.write(
+                  `<span style="${
+                    numItemsOnCart > 1
+                      ? "background-color: #F69320;"
+                      : "background-color: #fb424f;"
+                  }">${numItemsOnCart}</span>`
+                );
+              </script>
             </button>
             <div class="dropdown-menu">
               <div class="arrow"></div>
@@ -732,5 +743,49 @@
     tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl);
     });
+  </script>
+  <script>
+    const breakpoints = ["(max-width: 992px)"];
+
+    breakpoints.forEach((breakpoint) => {
+      const mediaQueryList = window.matchMedia(breakpoint);
+      handleMediaQueryChange(mediaQueryList, breakpoint);
+      mediaQueryList.addListener((e) => handleMediaQueryChange(e, breakpoint));
+      mediaQueryList.addEventListener("change", (e) =>
+        handleMediaQueryChange(e, breakpoint)
+      );
+    });
+    function handleMediaQueryChange(mediaQueryList, breakpoint) {
+      switch (breakpoint) {
+        case "(max-width: 992px)":
+          const dropdownMenuCart = document.querySelector(
+            ".header .header_bottom .cart .dropdown-menu"
+          );
+          const cartHeader = document.querySelector(
+            ".header .header_bottom .cart"
+          );
+          const userHeader = document.querySelector(
+            ".header .header_bottom .user.login"
+          );
+          if (mediaQueryList.matches) {
+            dropdownMenuCart.classList.add("d-none");
+            cartHeader.addEventListener("click", () => {
+              window.location.href = "./cart.html";
+            });
+            userHeader.addEventListener("click", () => {
+              window.location.href = "./user.html";
+            });
+          } else {
+            dropdownMenuCart.classList.remove("d-none");
+          }
+          break;
+
+        case "(max-width: 600px)":
+          break;
+
+        default:
+          break;
+      }
+    }
   </script>
 </html>
