@@ -788,7 +788,7 @@ nav .pagination .page-link:hover {
     margin-bottom: unset;
   }
   .detail-product .product-info #product-info_description .description-first .description-first_main .row .col:nth-of-type(1) {
-    max-width: 150px;
+    max-width: 130px;
   }
   .detail-product .product-info .divideH.tabs-separate {
     width: 100%;
