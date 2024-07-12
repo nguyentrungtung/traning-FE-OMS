@@ -150,7 +150,7 @@
             >
               <img src="../assets/svg/li_shopping-cartWhite.svg" alt="" />
               <script>
-                let numItemsOnCart = 6;
+                let numItemsOnCart = 8;
                 if (numItemsOnCart > 99) numItemsOnCart = 99;
                 document.write(
                   `<span style="${
@@ -746,7 +746,6 @@
   </script>
   <script>
     const breakpoints = ["(max-width: 992px)"];
-
     breakpoints.forEach((breakpoint) => {
       const mediaQueryList = window.matchMedia(breakpoint);
       handleMediaQueryChange(mediaQueryList, breakpoint);
@@ -767,16 +766,18 @@
           const userHeader = document.querySelector(
             ".header .header_bottom .user.login"
           );
+          const cartClickHandler = () => {
+            window.location.href = "./cart.html";
+          };
           if (mediaQueryList.matches) {
             dropdownMenuCart.classList.add("d-none");
-            cartHeader.addEventListener("click", () => {
-              window.location.href = "./cart.html";
-            });
+            cartHeader.addEventListener("click", cartClickHandler);
             userHeader.addEventListener("click", () => {
               window.location.href = "./user.html";
             });
           } else {
             dropdownMenuCart.classList.remove("d-none");
+            cartHeader.removeEventListener("click", cartClickHandler);
           }
           break;
 

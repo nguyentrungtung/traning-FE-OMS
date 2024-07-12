@@ -1342,6 +1342,7 @@ nav .pagination .page-link:hover {
 .detail-product .product-info #product-info_evaluation .filter-mobile .filter-type {
   display: flex;
   gap: 22px;
+  border: none !important;
 }
 .detail-product .product-info #product-info_evaluation .filter-mobile .filter-type button {
   padding: 12px 16px;
@@ -1375,6 +1376,15 @@ nav .pagination .page-link:hover {
 .detail-product .product-info #product-info_evaluation .filter-mobile .filter-star button.active {
   background-color: #dedede;
 }
+.detail-product .product-info #product-info_evaluation #filter-type-2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 12px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
 .detail-product .product-info #product-info_question {
   padding-top: 30px;
   padding-left: 0;
@@ -1383,13 +1393,26 @@ nav .pagination .page-link:hover {
 .detail-product .product-info #product-info_question form {
   display: flex;
   flex-direction: column;
-  height: 131px;
   width: 100%;
   border: 1px solid #d2d2d7;
   border-radius: 6px;
   margin-bottom: 32px;
 }
+.detail-product .product-info #product-info_question form .list-img-upload {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  gap: 8px;
+}
+.detail-product .product-info #product-info_question form .list-img-upload img {
+  padding: 3px;
+  border: 1px solid #007b2b;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
 .detail-product .product-info #product-info_question form textarea {
+  min-height: 91px;
   flex: 1;
   width: 100%;
   font-family: Roboto;
@@ -1402,6 +1425,9 @@ nav .pagination .page-link:hover {
   resize: none;
   padding-top: 8px;
   padding-left: 15px;
+}
+.detail-product .product-info #product-info_question form textarea ::-webkit-scrollbar-button {
+  display: none;
 }
 .detail-product .product-info #product-info_question form .bottom {
   padding-right: 15px;
@@ -1420,6 +1446,20 @@ nav .pagination .page-link:hover {
   line-height: 20px;
   text-align: center;
   color: #0066cc;
+}
+.detail-product .product-info #product-info_question form .bottom input {
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+}
+.detail-product .product-info #product-info_question form .bottom label:first-of-type {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  color: #0066cc;
+  cursor: pointer;
 }
 .detail-product .product-info #product-info_question form .bottom button:last-of-type {
   width: 50px;

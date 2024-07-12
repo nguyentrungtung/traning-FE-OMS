@@ -838,6 +838,7 @@
         .filter-type {
           display: flex;
           gap: 22px;
+          border: none !important;
           button {
             padding: 12px 16px;
             background-color: #f8f8f8;
@@ -875,6 +876,13 @@
       .post-list {
         @extend .post-list;
       }
+      #filter-type-2 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        gap: 12px;
+        @include scroll-custom();
+      }
     }
     #product-info_question {
       padding-top: 30px;
@@ -883,13 +891,26 @@
       form {
         display: flex;
         flex-direction: column;
-        height: 131px;
         width: 100%;
         border: 1px solid #d2d2d7;
         border-radius: 6px;
         margin-bottom: 32px;
+        .list-img-upload {
+          display: flex;
+          align-items: center;
+          padding-left: 15px;
+          gap: 8px;
+          img {
+            padding: 3px;
+            border: 1px solid #007b2b;
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+          }
+        }
 
         textarea {
+          min-height: 91px;
           flex: 1;
           width: 100%;
           font-family: Roboto;
@@ -902,6 +923,9 @@
           resize: none;
           padding-top: 8px;
           padding-left: 15px;
+          ::-webkit-scrollbar-button {
+            display: none;
+          }
         }
         .bottom {
           padding-right: 15px;
@@ -920,6 +944,20 @@
           line-height: 20px;
           text-align: center;
           color: #0066cc;
+          input {
+            width: 0px;
+            height: 0px;
+            visibility: hidden;
+          }
+          label:first-of-type {
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: normal;
+            text-align: center;
+            color: #0066cc;
+            cursor: pointer;
+          }
           button:last-of-type {
             width: 50px;
             height: 24px;

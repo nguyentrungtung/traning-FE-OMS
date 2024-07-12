@@ -824,9 +824,14 @@
                 <img src="../assets/svg/chatnay.svg" alt="" />
                 <span>Chat ngay</span>
               </button>
-              <button class="xemshop">
+              <button class="xemshop" onclick="navigateToStore()">
                 <img src="../assets/svg/xemshop.svg" alt="" />
                 <span>Xem shop</span>
+                <script>
+                  function navigateToStore() {
+                    window.location.href = "./cart.html";
+                  }
+                </script>
               </button>
             </div>
           </div>
@@ -1106,22 +1111,9 @@
             <span class="divideH d-md-none d-block"></span>
             <div class="filter-mobile d-md-none d-flex flex-column gap-3">
               <div class="filter-type">
-                <button class="active">Mới nhất</button>
-                <button>Hình ảnh</button>
-                <button>Nội dung</button>
-                <script>
-                  const btns = document.querySelectorAll(
-                    ".detail-product .product-info #product-info_evaluation .filter-mobile .filter-type button"
-                  );
-                  btns.forEach((btn) => {
-                    btn.addEventListener("click", () => {
-                      btns.forEach((btn) => {
-                        btn.classList.remove("active");
-                      });
-                      btn.classList.add("active");
-                    });
-                  });
-                </script>
+                <button class="active" id="btn-filter-type-1">Mới nhất</button>
+                <button id="btn-filter-type-2">Hình ảnh</button>
+                <button id="btn-filter-type-3">Nội dung</button>
               </div>
               <div class="filter-star">
                 <script>
@@ -1150,86 +1142,118 @@
               </div>
             </div>
             <!-- postList -->
-            <div class="post-list">
+            <div class="post-list filter-type-tab" id="filter-type-1">
               <script>
                 const createPostItem = (addL2) => {
                   return `
-                  <div class="post-item">
-                  <div class="post-item_user">
-                    <div class="l1">
-                      <div class="d-flex align-items-center gap-2">
-                          <img
-                          class="user_avatar"
-                          src="../assets/svg/avtComment.svg"
-                          alt=""
-                        />
-                        <div class="d-flex gap-md-3 flex-md-row flex-column gap-1">
-                          <span>Nguyễn Văn Sơn</span>
-                          <span>
-                            <img src="../assets/images/star.svg" alt="" />
-                            <img src="../assets/images/star.svg" alt="" />
-                            <img src="../assets/images/star.svg" alt="" />
-                            <img src="../assets/images/star.svg" alt="" />
-                            <img src="../assets/images/star.svg" alt="" />
-                        </span>                             
+                    <div class="post-item">
+                    <div class="post-item_user">
+                      <div class="l1">
+                        <div class="d-flex align-items-center gap-2">
+                            <img
+                            class="user_avatar"
+                            src="../assets/svg/avtComment.svg"
+                            alt=""
+                          />
+                          <div class="d-flex gap-md-3 flex-md-row flex-column gap-1">
+                            <span>Nguyễn Văn Sơn</span>
+                            <span>
+                              <img src="../assets/images/star.svg" alt="" />
+                              <img src="../assets/images/star.svg" alt="" />
+                              <img src="../assets/images/star.svg" alt="" />
+                              <img src="../assets/images/star.svg" alt="" />
+                              <img src="../assets/images/star.svg" alt="" />
+                          </span>                             
+                          </div>
+                        </div>
+                        <div class="l1_date d-md-none d-block align-self-start">16/03/2022</div>
+                      </div>
+                      <div class="l2">Bắp rất ngon
+                        ${
+                          addL2
+                            ? `
+                          <div class="list-img-comment d-flex gap-2 align-items-center" >
+                             <img src="../assets/images/imgcomment1.png" alt="">
+                              <img src="../assets/images/imgcomment2.png" alt="">
+                            </div>
+                        `
+                            : ""
+                        }
+                        </div>
+                      <div class="l3 d-md-flex d-none align-items-center gap-4">
+                        <div class="item">
+                          <img src="../assets/svg/like.svg" alt="" />
+                          <span>Hữu ích</span>
+                        </div>
+                        <div class="item">
+                          <img src="../assets/svg/mesageUserPostItem.svg" alt="" />
+                          <span>1 thảo luận</span>
+                        </div>
+                        <div class="item">
+                          <img src="../assets/svg/postItemUserl3.svg" alt="" />
+                          <span>Đã dùng 2 tuần</span>
                         </div>
                       </div>
-                      <div class="l1_date d-md-none d-block align-self-start">16/03/2022</div>
                     </div>
-                    <div class="l2">Bắp rất ngon
-                      ${
-                        addL2
-                          ? `
-                        <div class="list-img-comment d-flex gap-2 align-items-center" >
-                           <img src="../assets/images/imgcomment1.png" alt="">
-                            <img src="../assets/images/imgcomment2.png" alt="">
-                          </div>
-                      `
-                          : ""
-                      }
+                    <div class="post-item_admin">
+                      <div class="l1">
+                        <img class="d-md-block d-none" src="../assets/svg/avtComment.svg" alt="" />
+                        <span></span>
+                        <span class="d-md-block d-none">Quản trị viên</span>
                       </div>
-                    <div class="l3 d-md-flex d-none align-items-center gap-4">
-                      <div class="item">
-                        <img src="../assets/svg/like.svg" alt="" />
-                        <span>Hữu ích</span>
+                      <div class="l2">
+                        Cảm ơn bạn đã tin tưởng mua hàng tại Shop. Chúc bạn có trải
+                        nghiệm thú vị!
                       </div>
-                      <div class="item">
-                        <img src="../assets/svg/mesageUserPostItem.svg" alt="" />
-                        <span>1 thảo luận</span>
-                      </div>
-                      <div class="item">
-                        <img src="../assets/svg/postItemUserl3.svg" alt="" />
-                        <span>Đã dùng 2 tuần</span>
+                      <div class="l3 d-md-flex d-none align-items-center gap-4">
+                        <div class="item">
+                          <img src="../assets/svg/like.svg" alt="" />
+                          <span>Hữu ích</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="post-item_admin">
-                    <div class="l1">
-                      <img class="d-md-block d-none" src="../assets/svg/avtComment.svg" alt="" />
-                      <span></span>
-                      <span class="d-md-block d-none">Quản trị viên</span>
-                    </div>
-                    <div class="l2">
-                      Cảm ơn bạn đã tin tưởng mua hàng tại Shop. Chúc bạn có trải
-                      nghiệm thú vị!
-                    </div>
-                    <div class="l3 d-md-flex d-none align-items-center gap-4">
-                      <div class="item">
-                        <img src="../assets/svg/like.svg" alt="" />
-                        <span>Hữu ích</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <span class="divideH"></span>
-
-                  `;
+                  <span class="divideH"></span>
+  
+                    `;
                 };
 
                 document.write(createPostItem(false));
                 document.write(createPostItem(true));
               </script>
             </div>
+            <div class="filter-type-tab d-none" id="filter-type-2">
+              <script>
+                for (let i = 1; i <= 15; i++) {
+                  document.write(`
+                  <img src="../assets/images/commentimg${i}.png" alt="">
+                `);
+                }
+              </script>
+            </div>
+            <div class="filter-type-tab d-none" id="filter-type-3">
+              tab Nội dung
+            </div>
+            <script>
+              const btns = document.querySelectorAll(
+                ".detail-product .product-info #product-info_evaluation .filter-mobile .filter-type button"
+              );
+              const contents = document.querySelectorAll(
+                ".detail-product .product-info #product-info_evaluation .filter-type-tab"
+              );
+              btns.forEach((btn, index) => {
+                btn.addEventListener("click", () => {
+                  btns.forEach((btn, index) => {
+                    btn.classList.remove("active");
+                  });
+                  contents.forEach((content, index) => {
+                    content.classList.add("d-none");
+                  });
+                  contents[index].classList.remove("d-none");
+                  btns[index].classList.add("active");
+                });
+              });
+            </script>
           </div>
           <!-- tab3 -->
           <div id="product-info_question" role="tabpanel" class="tab-pane fade">
@@ -1239,13 +1263,42 @@
                 name=""
                 id=""
               ></textarea>
+              <div class="list-img-upload"></div>
               <div class="bottom">
-                <button class="d-flex align-items-center gap-2">
+                <label
+                  for="chooseImage"
+                  class="d-flex align-items-center gap-2"
+                >
                   <img src="../assets/svg/guianh.svg" alt="" />
                   <span>Gửi ảnh</span>
-                </button>
+                </label>
+                <input id="chooseImage" type="file" accept="image/*" multiple />
                 <button>Gửi</button>
               </div>
+              <script>
+                const chooseImageInput = document.querySelector(
+                  ".detail-product .product-info #product-info_question form .bottom input"
+                );
+                const listImgUpload = document.querySelector(
+                  ".detail-product .product-info #product-info_question form .list-img-upload"
+                );
+                chooseImageInput.addEventListener("change", () => {
+                  const selectedFiles = chooseImageInput.files;
+                  if (selectedFiles.length > 5) {
+                    const errorMessage = document.createElement("p");
+                    errorMessage.textContent = "Chỉ được gửi tối đa 5 ảnh.";
+                    listImgUpload.appendChild(errorMessage);
+                  } else {
+                    listImgUpload.innerHTML = "";
+                    for (let i = 0; i < selectedFiles.length; i++) {
+                      const file = selectedFiles[i];
+                      const imgElement = document.createElement("img");
+                      imgElement.src = URL.createObjectURL(file);
+                      listImgUpload.appendChild(imgElement);
+                    }
+                  }
+                });
+              </script>
             </form>
             <div class="post-list">
               <script>
