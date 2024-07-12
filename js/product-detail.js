@@ -410,8 +410,10 @@ uploadButton.addEventListener("click", () => {
 fileInput.addEventListener("change", () => {
   let fileNames = Array.from(fileInput.files).map((file) => file.name);
   fileNameDisplay.textContent = fileNames.join(", ");
+  uploadButton.innerHTML = `<i class="bi bi-card-image"></i>&nbsp;&nbsp;Đổi ảnh`;
 });
 
+/*tab in mobile*/
 const btnTabs = document.querySelectorAll(".btn-tabs");
 const allContentCmts = document.querySelectorAll(".customer-comment_container");
 
@@ -420,12 +422,18 @@ btnTabs.forEach((tab, index) => {
     btnTabs.forEach((tab) => tab.classList.remove("btn--active"));
     tab.classList.add("btn--active");
 
-    btnFilterStar.forEach((tab, index) => {
+    btnFilterStar.forEach((tab) => {
       tab.classList.remove("active");
     });
+
     allContentCmts.forEach((content) => {
       content.classList.remove("show");
     });
+
+    allContentFilterStar.forEach((content) => {
+      content.classList.remove("show-comment_filter-star");
+    });
+
     allContentCmts[index].classList.add("show");
   });
 });
@@ -436,10 +444,14 @@ const allContentFilterStar = document.querySelectorAll(".comment_rate-star");
 btnFilterStar.forEach((tab, index) => {
   tab.addEventListener("click", (e) => {
     btnFilterStar.forEach((tab) => tab.classList.remove("active"));
+    btnTabs.forEach((tab) => tab.classList.remove("btn--active"));
     tab.classList.add("active");
 
     allContentFilterStar.forEach((content) => {
       content.classList.remove("show-comment_filter-star");
+    });
+    allContentCmts.forEach((content) => {
+      content.classList.remove("show");
     });
     allContentFilterStar[index].classList.add("show-comment_filter-star");
   });

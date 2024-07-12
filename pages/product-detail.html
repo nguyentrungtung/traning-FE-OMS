@@ -146,14 +146,15 @@
               <i class="bi bi-chat icon"></i>
             </div>
             <div class="header_icon header header_icon--cart dropdown">
-              <i
-                class="bi bi-cart2 icon"
+              <div
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
                 data-bs-offset="20, 20"
-              ></i>
-              <span class="header_cart-notify">5</span>
+              >
+                <i class="bi bi-cart2 icon"></i>
+                <span class="header_cart-notify">5</span>
+              </div>
 
               <div class="dropdown-menu header_cart-menu border-0">
                 <p class="header_cart-title">Sản phẩm mới thêm</p>
@@ -270,27 +271,34 @@
             <div
               class="header_icon header_icon--auth dropdown d-flex align-items-center"
             >
-              <i class="bi bi-person-circle icon d-none"></i>
-              <img
-                class="header_customer-img"
-                src="../images/home/avatar.jpg"
-                alt="avatar"
-              />
               <div
-                class="header_auth d-flex flex-column"
+                class="d-flex align-items-center"
+                style="gap: 8px"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
                 data-bs-offset="0, 20"
               >
-                <a href="#" class="header__auth-login d-none">Đăng nhập</a>
-                <a href="#" class="header__auth-register d-none">Đăng ký</a>
-                <p class="header_customer-title d-none d-lg-block">Tài khoản</p>
-                <p class="header_customer-name d-none d-lg-block">Hoàng Anh</p>
+                <i class="bi bi-person-circle icon d-none"></i>
+                <img
+                  class="header_customer-img"
+                  src="../images/home/avatar.jpg"
+                  alt="avatar"
+                />
+                <div class="header_auth d-flex flex-column">
+                  <a href="#" class="header__auth-login d-none">Đăng nhập</a>
+                  <a href="#" class="header__auth-register d-none">Đăng ký</a>
+                  <p class="header_customer-title d-none d-lg-block">
+                    Tài khoản
+                  </p>
+                  <p class="header_customer-name d-none d-lg-block">
+                    Hoàng Anh
+                  </p>
+                </div>
+                <i
+                  class="bi bi-chevron-down d-none d-lg-block"
+                  style="font-size: 15px; color: white"
+                ></i>
               </div>
-              <i
-                class="bi bi-chevron-down d-none d-lg-block"
-                style="font-size: 15px; color: white"
-              ></i>
 
               <ul class="dropdown-menu header_customer-menu border-0">
                 <li>
@@ -1486,8 +1494,9 @@
                 <div class="overview_content qa_content">
                   <div class="comment-box">
                     <form action="">
-                      <textarea placeholder="Mời bạn để lại bình luận">
-                      </textarea>
+                      <textarea
+                        placeholder="Mời bạn để lại bình luận"
+                      ></textarea>
                       <div class="button_actions">
                         <span class="upload-button">
                           <i class="bi bi-card-image"></i>&nbsp;&nbsp;Gửi ảnh
@@ -1828,9 +1837,9 @@
             </div>
 
             <div
-              class="filter-comment_stars d-flex align-items-center justify-content-between"
+              class="filter-comment_stars d-flex align-items-center justify-content-start"
             >
-              <button class="btn_filter-star active">
+              <button class="btn_filter-star">
                 <p>5</p>
                 <span>&#9733;</span>
               </button>
@@ -1851,916 +1860,1117 @@
                 <span>&#9733;</span>
               </button>
             </div>
-
-            <div class="customer-comment_container show">
-              <div class="comment_rate-star show-comment_filter-star">
-                <div class="comment-block d-flex flex-column">
+          </div>
+          <div class="customer-comment_container show">
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-01.png"
+                      alt="avt"
+                    />
+                  </div>
                   <div
-                    class="customer-info d-flex align-items-start justify-content-between"
+                    class="d-flex flex-column align-items-start block-name-star"
                   >
-                    <div class="customer-info_left d-flex align-items-center">
-                      <div class="customer-avt">
-                        <img
-                          class="img-fluid"
-                          src="../images/product-detail/comment-mobile/avt-customer/customer-01.png"
-                          alt="avt"
-                        />
-                      </div>
-                      <div
-                        class="d-flex flex-column align-items-start block-name-star"
-                      >
-                        <p class="customer-name">Tra My</p>
-                        <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                      </div>
-                    </div>
-                    <div class="customer-info_right-date">16/03/2022</div>
-                  </div>
-                  <p class="customer-comment_text">
-                    Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
-                    nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá
-                    hời vì lúc mua có chương trình giảm giá. Thanks shop nhé.
-                  </p>
-                  <div class="customer_upload-product-img-video">
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                  </div>
-                  <div class="feedback-seller">
-                    <p class="feedback-heading">Phản hồi người bán</p>
-                    <p class="rep-comment">
-                      Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
-                    </p>
+                    <p class="customer-name">Tra My</p>
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                   </div>
                 </div>
-                <div class="comment-block d-flex flex-column">
-                  <div
-                    class="customer-info d-flex align-items-start justify-content-between"
-                  >
-                    <div class="customer-info_left d-flex align-items-center">
-                      <div class="customer-avt">
-                        <img
-                          class="img-fluid"
-                          src="../images/product-detail/comment-mobile/avt-customer/customer-02.png"
-                          alt="avt"
-                        />
-                      </div>
-                      <div
-                        class="d-flex flex-column align-items-start block-name-star"
-                      >
-                        <p class="customer-name">Nguyen Le</p>
-                        <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                      </div>
-                    </div>
-                    <div class="customer-info_right-date">10/03/2022</div>
-                  </div>
-                  <p class="customer-comment_text">
-                    Hàng giao cực nhanh, nay đặt mà mai đã có rồi. Hàng chuẩn và
-                    do áp thanh toán bằng voucher nên giá khá ổn, cực đẹp luôn
-                    nhìn sang lắm
-                  </p>
-                  <div class="customer_upload-product-img-video">
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-01.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-02.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-03.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-04.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                  </div>
-                  <div class="feedback-seller">
-                    <p class="feedback-heading">Phản hồi người bán</p>
-                    <p class="rep-comment">
-                      Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
-                    </p>
-                  </div>
-                </div>
-                <div class="comment-block d-flex flex-column">
-                  <div
-                    class="customer-info d-flex align-items-start justify-content-between"
-                  >
-                    <div class="customer-info_left d-flex align-items-center">
-                      <div class="customer-avt">
-                        <img
-                          class="img-fluid"
-                          src="../images/product-detail/comment-mobile/avt-customer/customer-03.png"
-                          alt="avt"
-                        />
-                      </div>
-                      <div
-                        class="d-flex flex-column align-items-start block-name-star"
-                      >
-                        <p class="customer-name">Hong Dang</p>
-                        <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                      </div>
-                    </div>
-                    <div class="customer-info_right-date">16/03/2022</div>
-                  </div>
-                  <p class="customer-comment_text">
-                    Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
-                    nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá
-                    hời vì lúc mua có chương trình giảm giá. Thanks shop nhé.
-                  </p>
-                  <div class="customer_upload-product-img-video">
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-01.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-02.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-03.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-04.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                  </div>
-                  <div class="feedback-seller">
-                    <p class="feedback-heading">Phản hồi người bán</p>
-                    <p class="rep-comment">
-                      Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
-                    </p>
-                  </div>
-                </div>
+                <div class="customer-info_right-date">16/03/2022</div>
               </div>
-              <div class="comment_rate-star">
-                <div class="comment-block d-flex flex-column">
-                  <div
-                    class="customer-info d-flex align-items-start justify-content-between"
-                  >
-                    <div class="customer-info_left d-flex align-items-center">
-                      <div class="customer-avt">
-                        <img
-                          class="img-fluid"
-                          src="../images/product-detail/comment-mobile/avt-customer/customer-02.png"
-                          alt="avt"
-                        />
-                      </div>
-                      <div
-                        class="d-flex flex-column align-items-start block-name-star"
-                      >
-                        <p class="customer-name">Nguyen Le</p>
-                        <span>&#9733;&#9733;&#9733;&#9733;</span>
-                      </div>
-                    </div>
-                    <div class="customer-info_right-date">10/03/2022</div>
-                  </div>
-                  <p class="customer-comment_text">
-                    Hàng giao cực nhanh, nay đặt mà mai đã có rồi. Hàng chuẩn và
-                    do áp thanh toán bằng voucher nên giá khá ổn, cực đẹp luôn
-                    nhìn sang lắm
-                  </p>
-                  <div class="customer_upload-product-img-video">
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-01.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-02.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-03.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-04.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                  </div>
-                  <div class="feedback-seller">
-                    <p class="feedback-heading">Phản hồi người bán</p>
-                    <p class="rep-comment">
-                      Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
-                    </p>
-                  </div>
-                </div>
-                <div class="comment-block d-flex flex-column">
-                  <div
-                    class="customer-info d-flex align-items-start justify-content-between"
-                  >
-                    <div class="customer-info_left d-flex align-items-center">
-                      <div class="customer-avt">
-                        <img
-                          class="img-fluid"
-                          src="../images/product-detail/comment-mobile/avt-customer/customer-01.png"
-                          alt="avt"
-                        />
-                      </div>
-                      <div
-                        class="d-flex flex-column align-items-start block-name-star"
-                      >
-                        <p class="customer-name">Tra My</p>
-                        <span>&#9733;&#9733;&#9733;&#9733;</span>
-                      </div>
-                    </div>
-                    <div class="customer-info_right-date">16/03/2022</div>
-                  </div>
-                  <p class="customer-comment_text">
-                    Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
-                    nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá
-                    hời vì lúc mua có chương trình giảm giá. Thanks shop nhé.
-                  </p>
-                  <div class="customer_upload-product-img-video">
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                  </div>
-                  <div class="feedback-seller">
-                    <p class="feedback-heading">Phản hồi người bán</p>
-                    <p class="rep-comment">
-                      Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
-                    </p>
-                  </div>
-                </div>
-                <div class="comment-block d-flex flex-column">
-                  <div
-                    class="customer-info d-flex align-items-start justify-content-between"
-                  >
-                    <div class="customer-info_left d-flex align-items-center">
-                      <div class="customer-avt">
-                        <img
-                          class="img-fluid"
-                          src="../images/product-detail/comment-mobile/avt-customer/customer-03.png"
-                          alt="avt"
-                        />
-                      </div>
-                      <div
-                        class="d-flex flex-column align-items-start block-name-star"
-                      >
-                        <p class="customer-name">Hong Dang</p>
-                        <span>&#9733;&#9733;&#9733;&#9733;</span>
-                      </div>
-                    </div>
-                    <div class="customer-info_right-date">16/03/2022</div>
-                  </div>
-                  <p class="customer-comment_text">
-                    Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
-                    nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá
-                    hời vì lúc mua có chương trình giảm giá. Thanks shop nhé.
-                  </p>
-                  <div class="customer_upload-product-img-video">
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-01.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-02.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-03.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-04.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                  </div>
-                  <div class="feedback-seller">
-                    <p class="feedback-heading">Phản hồi người bán</p>
-                    <p class="rep-comment">
-                      Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="comment_rate-star">
-                <div class="comment-block d-flex flex-column">
-                  <div
-                    class="customer-info d-flex align-items-start justify-content-between"
-                  >
-                    <div class="customer-info_left d-flex align-items-center">
-                      <div class="customer-avt">
-                        <img
-                          class="img-fluid"
-                          src="../images/product-detail/comment-mobile/avt-customer/customer-03.png"
-                          alt="avt"
-                        />
-                      </div>
-                      <div
-                        class="d-flex flex-column align-items-start block-name-star"
-                      >
-                        <p class="customer-name">Hong Dang</p>
-                        <span>&#9733;&#9733;&#9733;</span>
-                      </div>
-                    </div>
-                    <div class="customer-info_right-date">16/03/2022</div>
-                  </div>
-                  <p class="customer-comment_text">
-                    Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
-                    nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá
-                    hời vì lúc mua có chương trình giảm giá. Thanks shop nhé.
-                  </p>
-                  <div class="customer_upload-product-img-video">
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-01.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-02.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-03.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-04.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                  </div>
-                  <div class="feedback-seller">
-                    <p class="feedback-heading">Phản hồi người bán</p>
-                    <p class="rep-comment">
-                      Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
-                    </p>
-                  </div>
-                </div>
-                <div class="comment-block d-flex flex-column">
-                  <div
-                    class="customer-info d-flex align-items-start justify-content-between"
-                  >
-                    <div class="customer-info_left d-flex align-items-center">
-                      <div class="customer-avt">
-                        <img
-                          class="img-fluid"
-                          src="../images/product-detail/comment-mobile/avt-customer/customer-01.png"
-                          alt="avt"
-                        />
-                      </div>
-                      <div
-                        class="d-flex flex-column align-items-start block-name-star"
-                      >
-                        <p class="customer-name">Tra My</p>
-                        <span>&#9733;&#9733;&#9733;</span>
-                      </div>
-                    </div>
-                    <div class="customer-info_right-date">16/03/2022</div>
-                  </div>
-                  <p class="customer-comment_text">
-                    Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
-                    nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá
-                    hời vì lúc mua có chương trình giảm giá. Thanks shop nhé.
-                  </p>
-                  <div class="customer_upload-product-img-video">
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                  </div>
-                  <div class="feedback-seller">
-                    <p class="feedback-heading">Phản hồi người bán</p>
-                    <p class="rep-comment">
-                      Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="comment_rate-star">
-                <div class="comment-block d-flex flex-column">
-                  <div
-                    class="customer-info d-flex align-items-start justify-content-between"
-                  >
-                    <div class="customer-info_left d-flex align-items-center">
-                      <div class="customer-avt">
-                        <img
-                          class="img-fluid"
-                          src="../images/product-detail/comment-mobile/avt-customer/customer-01.png"
-                          alt="avt"
-                        />
-                      </div>
-                      <div
-                        class="d-flex flex-column align-items-start block-name-star"
-                      >
-                        <p class="customer-name">Tra My</p>
-                        <span>&#9733;&#9733;</span>
-                      </div>
-                    </div>
-                    <div class="customer-info_right-date">16/03/2022</div>
-                  </div>
-                  <p class="customer-comment_text">
-                    Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
-                    nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá
-                    hời vì lúc mua có chương trình giảm giá. Thanks shop nhé.
-                  </p>
-                  <div class="customer_upload-product-img-video">
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                  </div>
-                  <div class="feedback-seller">
-                    <p class="feedback-heading">Phản hồi người bán</p>
-                    <p class="rep-comment">
-                      Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
-                    </p>
-                  </div>
-                </div>
-                <div class="comment-block d-flex flex-column">
-                  <div
-                    class="customer-info d-flex align-items-start justify-content-between"
-                  >
-                    <div class="customer-info_left d-flex align-items-center">
-                      <div class="customer-avt">
-                        <img
-                          class="img-fluid"
-                          src="../images/product-detail/comment-mobile/avt-customer/customer-02.png"
-                          alt="avt"
-                        />
-                      </div>
-                      <div
-                        class="d-flex flex-column align-items-start block-name-star"
-                      >
-                        <p class="customer-name">Nguyen Le</p>
-                        <span>&#9733;&#9733;</span>
-                      </div>
-                    </div>
-                    <div class="customer-info_right-date">10/03/2022</div>
-                  </div>
-                  <p class="customer-comment_text">
-                    Hàng giao cực nhanh, nay đặt mà mai đã có rồi. Hàng chuẩn và
-                    do áp thanh toán bằng voucher nên giá khá ổn, cực đẹp luôn
-                    nhìn sang lắm
-                  </p>
-                  <div class="customer_upload-product-img-video">
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-01.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-02.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-03.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-04.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                  </div>
-                  <div class="feedback-seller">
-                    <p class="feedback-heading">Phản hồi người bán</p>
-                    <p class="rep-comment">
-                      Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
-                    </p>
-                  </div>
-                </div>
-                <div class="comment-block d-flex flex-column">
-                  <div
-                    class="customer-info d-flex align-items-start justify-content-between"
-                  >
-                    <div class="customer-info_left d-flex align-items-center">
-                      <div class="customer-avt">
-                        <img
-                          class="img-fluid"
-                          src="../images/product-detail/comment-mobile/avt-customer/customer-03.png"
-                          alt="avt"
-                        />
-                      </div>
-                      <div
-                        class="d-flex flex-column align-items-start block-name-star"
-                      >
-                        <p class="customer-name">Hong Dang</p>
-                        <span>&#9733;&#9733;</span>
-                      </div>
-                    </div>
-                    <div class="customer-info_right-date">16/03/2022</div>
-                  </div>
-                  <p class="customer-comment_text">
-                    Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
-                    nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá
-                    hời vì lúc mua có chương trình giảm giá. Thanks shop nhé.
-                  </p>
-                  <div class="customer_upload-product-img-video">
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-01.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-02.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-03.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-04.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                  </div>
-                  <div class="feedback-seller">
-                    <p class="feedback-heading">Phản hồi người bán</p>
-                    <p class="rep-comment">
-                      Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="comment_rate-star">
-                <div class="comment-block d-flex flex-column">
-                  <div
-                    class="customer-info d-flex align-items-start justify-content-between"
-                  >
-                    <div class="customer-info_left d-flex align-items-center">
-                      <div class="customer-avt">
-                        <img
-                          class="img-fluid"
-                          src="../images/product-detail/comment-mobile/avt-customer/customer-02.png"
-                          alt="avt"
-                        />
-                      </div>
-                      <div
-                        class="d-flex flex-column align-items-start block-name-star"
-                      >
-                        <p class="customer-name">Nguyen Le</p>
-                        <span>&#9733;</span>
-                      </div>
-                    </div>
-                    <div class="customer-info_right-date">10/03/2022</div>
-                  </div>
-                  <p class="customer-comment_text">
-                    Hàng giao cực nhanh, nay đặt mà mai đã có rồi. Hàng chuẩn và
-                    do áp thanh toán bằng voucher nên giá khá ổn, cực đẹp luôn
-                    nhìn sang lắm
-                  </p>
-                  <div class="customer_upload-product-img-video">
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-01.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-02.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-03.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-04.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                  </div>
-                  <div class="feedback-seller">
-                    <p class="feedback-heading">Phản hồi người bán</p>
-                    <p class="rep-comment">
-                      Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
-                    </p>
-                  </div>
-                </div>
-                <div class="comment-block d-flex flex-column">
-                  <div
-                    class="customer-info d-flex align-items-start justify-content-between"
-                  >
-                    <div class="customer-info_left d-flex align-items-center">
-                      <div class="customer-avt">
-                        <img
-                          class="img-fluid"
-                          src="../images/product-detail/comment-mobile/avt-customer/customer-01.png"
-                          alt="avt"
-                        />
-                      </div>
-                      <div
-                        class="d-flex flex-column align-items-start block-name-star"
-                      >
-                        <p class="customer-name">Tra My</p>
-                        <span>&#9733;</span>
-                      </div>
-                    </div>
-                    <div class="customer-info_right-date">16/03/2022</div>
-                  </div>
-                  <p class="customer-comment_text">
-                    Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
-                    nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá
-                    hời vì lúc mua có chương trình giảm giá. Thanks shop nhé.
-                  </p>
-                  <div class="customer_upload-product-img-video">
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                  </div>
-                  <div class="feedback-seller">
-                    <p class="feedback-heading">Phản hồi người bán</p>
-                    <p class="rep-comment">
-                      Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
-                    </p>
-                  </div>
-                </div>
-
-                <div class="comment-block d-flex flex-column">
-                  <div
-                    class="customer-info d-flex align-items-start justify-content-between"
-                  >
-                    <div class="customer-info_left d-flex align-items-center">
-                      <div class="customer-avt">
-                        <img
-                          class="img-fluid"
-                          src="../images/product-detail/comment-mobile/avt-customer/customer-03.png"
-                          alt="avt"
-                        />
-                      </div>
-                      <div
-                        class="d-flex flex-column align-items-start block-name-star"
-                      >
-                        <p class="customer-name">Hong Dang</p>
-                        <span>&#9733;</span>
-                      </div>
-                    </div>
-                    <div class="customer-info_right-date">16/03/2022</div>
-                  </div>
-                  <p class="customer-comment_text">
-                    Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
-                    nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá
-                    hời vì lúc mua có chương trình giảm giá. Thanks shop nhé.
-                  </p>
-                  <div class="customer_upload-product-img-video">
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-01.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-02.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-03.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                    <div class="img_customer-upload">
-                      <img
-                        src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-04.jpg"
-                        alt="img-upload"
-                      />
-                    </div>
-                  </div>
-                  <div class="feedback-seller">
-                    <p class="feedback-heading">Phản hồi người bán</p>
-                    <p class="rep-comment">
-                      Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="customer-comment_container">
-              <div class="comment-block_list-img">
-                <div class="img_product">
-                  <img
-                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
-                    alt="img-upload"
-                  />
-                </div>
-                <div class="img_product">
-                  <img
-                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
-                    alt="img-upload"
-                  />
-                </div>
-                <div class="img_product">
-                  <img
-                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
-                    alt="img-upload"
-                  />
-                </div>
-                <div class="img_product">
-                  <img
-                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
-                    alt="img-upload"
-                  />
-                </div>
-                <div class="img_product">
-                  <img
-                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
-                    alt="img-upload"
-                  />
-                </div>
-                <div class="img_product">
-                  <img
-                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
-                    alt="img-upload"
-                  />
-                </div>
-                <div class="img_product">
-                  <img
-                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
-                    alt="img-upload"
-                  />
-                </div>
-                <div class="img_product">
-                  <img
-                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
-                    alt="img-upload"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="customer-comment_container">
-              <p class="product_content">
-                Giá sản phẩm trên OMMANI đã bao gồm thuế theo luật hiện hành.
-                Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao
-                hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển,
-                phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ
-                nước ngoài có giá trị trên 1 triệu đồng).....Súp lơ xanh (bông
-                cải xanh) là loại “siêu” thực phẩm chay này mang lại rất nhiều
-                lợi ích cho con người. Giống các loại thực vật khác trong họ cải
-                (cải bruxen, cải xanh, cải bắp, cải xoăn), súp lơ trắng có chứa
-                rất nhiều vitamin và khoáng chất. Một số món ăn ngon như súp lơ
-                xào thịt, thịt bò xào súp lơ, súp lơ muối chua…Súp lơ chứa sắt
-                và axit folic, ngoài ra còn có nhiều vitamin (A, C, vitamin nhóm
-                B…) và khoáng chất (kali, natri, magie, đồng, sắt, lưu huỳnh,
-                clo và phốt pho…).
+              <p class="customer-comment_text">
+                Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                vì lúc mua có chương trình giảm giá. Thanks shop nhé.
               </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-02.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Nguyen Le</p>
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">10/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Hàng giao cực nhanh, nay đặt mà mai đã có rồi. Hàng chuẩn và do
+                áp thanh toán bằng voucher nên giá khá ổn, cực đẹp luôn nhìn
+                sang lắm
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-03.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Hong Dang</p>
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">16/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                vì lúc mua có chương trình giảm giá. Thanks shop nhé.
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="customer-comment_container">
+            <div class="comment-block_list-img">
+              <div class="img_product">
+                <img
+                  src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
+                  alt="img-upload"
+                />
+              </div>
+              <div class="img_product">
+                <img
+                  src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
+                  alt="img-upload"
+                />
+              </div>
+              <div class="img_product">
+                <img
+                  src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
+                  alt="img-upload"
+                />
+              </div>
+              <div class="img_product">
+                <img
+                  src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
+                  alt="img-upload"
+                />
+              </div>
+              <div class="img_product">
+                <img
+                  src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
+                  alt="img-upload"
+                />
+              </div>
+              <div class="img_product">
+                <img
+                  src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
+                  alt="img-upload"
+                />
+              </div>
+              <div class="img_product">
+                <img
+                  src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
+                  alt="img-upload"
+                />
+              </div>
+              <div class="img_product">
+                <img
+                  src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
+                  alt="img-upload"
+                />
+              </div>
+              <div class="img_product">
+                <img
+                  src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
+                  alt="img-upload"
+                />
+              </div>
+              <div class="img_product">
+                <img
+                  src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
+                  alt="img-upload"
+                />
+              </div>
+              <div class="img_product">
+                <img
+                  src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
+                  alt="img-upload"
+                />
+              </div>
+              <div class="img_product">
+                <img
+                  src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
+                  alt="img-upload"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="customer-comment_container">
+            <p class="product_content">
+              Giá sản phẩm trên OMMANI đã bao gồm thuế theo luật hiện hành. Bên
+              cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà
+              có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí
+              hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước
+              ngoài có giá trị trên 1 triệu đồng).....Súp lơ xanh (bông cải
+              xanh) là loại “siêu” thực phẩm chay này mang lại rất nhiều lợi ích
+              cho con người. Giống các loại thực vật khác trong họ cải (cải
+              bruxen, cải xanh, cải bắp, cải xoăn), súp lơ trắng có chứa rất
+              nhiều vitamin và khoáng chất. Một số món ăn ngon như súp lơ xào
+              thịt, thịt bò xào súp lơ, súp lơ muối chua…Súp lơ chứa sắt và axit
+              folic, ngoài ra còn có nhiều vitamin (A, C, vitamin nhóm B…) và
+              khoáng chất (kali, natri, magie, đồng, sắt, lưu huỳnh, clo và phốt
+              pho…).
+            </p>
+          </div>
+
+          <div class="comment_rate-star">
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-03.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Hong Dang</p>
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">16/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                vì lúc mua có chương trình giảm giá. Thanks shop nhé.
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-01.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Tra My</p>
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">16/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                vì lúc mua có chương trình giảm giá. Thanks shop nhé.
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-02.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Nguyen Le</p>
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">10/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Hàng giao cực nhanh, nay đặt mà mai đã có rồi. Hàng chuẩn và do
+                áp thanh toán bằng voucher nên giá khá ổn, cực đẹp luôn nhìn
+                sang lắm
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="comment_rate-star">
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-02.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Nguyen Le</p>
+                    <span>&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">10/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Hàng giao cực nhanh, nay đặt mà mai đã có rồi. Hàng chuẩn và do
+                áp thanh toán bằng voucher nên giá khá ổn, cực đẹp luôn nhìn
+                sang lắm
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-01.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Tra My</p>
+                    <span>&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">16/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                vì lúc mua có chương trình giảm giá. Thanks shop nhé.
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-03.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Hong Dang</p>
+                    <span>&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">16/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                vì lúc mua có chương trình giảm giá. Thanks shop nhé.
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="comment_rate-star">
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-03.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Hong Dang</p>
+                    <span>&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">16/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                vì lúc mua có chương trình giảm giá. Thanks shop nhé.
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-01.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Tra My</p>
+                    <span>&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">16/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                vì lúc mua có chương trình giảm giá. Thanks shop nhé.
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="comment_rate-star">
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-01.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Tra My</p>
+                    <span>&#9733;&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">16/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                vì lúc mua có chương trình giảm giá. Thanks shop nhé.
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-02.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Nguyen Le</p>
+                    <span>&#9733;&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">10/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Hàng giao cực nhanh, nay đặt mà mai đã có rồi. Hàng chuẩn và do
+                áp thanh toán bằng voucher nên giá khá ổn, cực đẹp luôn nhìn
+                sang lắm
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-03.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Hong Dang</p>
+                    <span>&#9733;&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">16/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                vì lúc mua có chương trình giảm giá. Thanks shop nhé.
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="comment_rate-star">
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-02.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Nguyen Le</p>
+                    <span>&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">10/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Hàng giao cực nhanh, nay đặt mà mai đã có rồi. Hàng chuẩn và do
+                áp thanh toán bằng voucher nên giá khá ổn, cực đẹp luôn nhìn
+                sang lắm
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer02-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-01.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Tra My</p>
+                    <span>&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">16/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                vì lúc mua có chương trình giảm giá. Thanks shop nhé.
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer01-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
+            </div>
+
+            <div class="comment-block d-flex flex-column">
+              <div
+                class="customer-info d-flex align-items-start justify-content-between"
+              >
+                <div class="customer-info_left d-flex align-items-center">
+                  <div class="customer-avt">
+                    <img
+                      class="img-fluid"
+                      src="../images/product-detail/comment-mobile/avt-customer/customer-03.png"
+                      alt="avt"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column align-items-start block-name-star"
+                  >
+                    <p class="customer-name">Hong Dang</p>
+                    <span>&#9733;</span>
+                  </div>
+                </div>
+                <div class="customer-info_right-date">16/03/2022</div>
+              </div>
+              <p class="customer-comment_text">
+                Sản phẩm đúng loại và màu sắc mình đặt, giao hàng tương đối
+                nhanh trong mùa dịch. Sử dụng ổn lắm, đúng dung lượng, giá hời
+                vì lúc mua có chương trình giảm giá. Thanks shop nhé.
+              </p>
+              <div class="customer_upload-product-img-video">
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-01.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-02.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-03.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+                <div class="img_customer-upload">
+                  <img
+                    src="../images/product-detail/comment-mobile/img-customer-upload/customer03-upload-04.jpg"
+                    alt="img-upload"
+                  />
+                </div>
+              </div>
+              <div class="feedback-seller">
+                <p class="feedback-heading">Phản hồi người bán</p>
+                <p class="rep-comment">
+                  Cảm ơn quý khách đã tin tưởng và đồng hành cùng Store ^^
+                </p>
+              </div>
             </div>
           </div>
         </div>
