@@ -13,6 +13,15 @@
   .header .header_bottom .search .search_bar {
     width: 500px !important;
   }
+  .header .header_bottom .address {
+    display: none;
+  }
+  .header .header_bottom .notification {
+    display: none;
+  }
+  .header .header_bottom .message {
+    display: none;
+  }
 }
 @media (max-width: 992px) {
   .header .container-xxl {

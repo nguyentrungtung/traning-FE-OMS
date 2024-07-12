@@ -17,7 +17,7 @@ let handler = {
 async function updateIsLogin() {
   let isLogin = new Proxy({ value: undefined }, handler);
   // await new Promise((resolve) => setTimeout(resolve, 1000));
-  isLogin.value = true;
+  isLogin.value = false;
 }
 
 updateIsLogin();
