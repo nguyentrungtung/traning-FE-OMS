@@ -1,0 +1,490 @@
+@import '../variables/variables.scss';
+
+main{
+    background-color: $main-bg-grey;
+    .main{
+        &__block{
+            margin: 12px auto 12px;
+            border-radius: 3px;
+            &--bg-trans{
+                background-color: transparent;
+            }
+            &--bg-white{
+                background-color: $white;
+            }
+            &--p-14px{
+                padding: 12px 14px 10px;
+                width: 100%;
+            }
+            .block{
+                &__title{
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+                &__content{
+                    padding: 20px 0px;
+                }
+                .list{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    &--gap-20px{
+                        gap: 20px;
+                    }
+                    &--gap-40px{
+                        gap: 20px;
+                    }
+                    &__item{
+                        &--border{
+                            border: 1px $border-grey solid;
+                            border-radius: 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container-carousel{
+        @include maxw-tablet{
+            background-color: $green;
+        }
+        .carousel{
+            .carousel-indicators{
+                button{
+                    width: 16px !important;
+                    height: 16px !important;
+                    border-radius: 50% !important;
+                    border: 2px solid white !important;
+                    @include maxw-tablet{
+                        width: 10px !important;
+                        height: 10px !important;
+                        border: 1px solid white !important;
+                    }
+                    background-color: transparent !important;
+                    &.active{
+                        border-radius: 50% !important;
+                        border: 1px solid white !important;
+                        background-color: white !important;
+                    }
+                }
+            }
+            .carousel-inner{
+                .carousel-item{
+                    height: 430px;
+                    @include maxw-1400px{
+                        height: 370px;
+                    }
+                    @include maxw-1200px{
+                        height: 300px;
+                    }
+                    @include maxw-desktop{
+                        height: 310px;
+                    }
+                    @include maxw-992px{
+                        height: 230px;
+                    }
+                    @include maxw-tablet{
+                        height: 170px;
+                    }
+                    @include mobile{
+                        height: 120px;
+                    }
+                    img{
+                        display: block;
+                        object-fit: cover;
+                        object-position: center center;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .features{
+        padding: 0px 130px;
+        @include maxw-992px{
+            padding: 0 !important;
+        }
+        &__content{
+            padding: 16px 30px 28px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            width: 100%;
+            background-color: $white;
+            @include maxw-1200px{
+                padding: 16px 0px 28px;
+            }
+            @include maxw-992px{
+                background-color: transparent !important;
+            }
+        }
+        &__item{
+            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            &:hover{
+                .features{
+                    &__text{
+                        color: $green;
+                    }
+                    &__img{
+                        @include move-down-hover;
+                        transition: 0.3s all;
+                    }
+                }
+            }
+        }
+        &__text{
+            padding: 12px 0px;
+            text-align: center;
+            margin: auto;
+            text-wrap: wrap;
+            @include overflow-dot-2;
+            width: 100px;
+            @include maxw-tablet{
+                max-width: 50px !important;
+            }
+        }
+        &__img{
+            align-items: center;
+            width: 47px;
+            height: 47px;
+            overflow: hidden;
+            @include mobile{
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+    .tab{
+        margin: 25px 0px 25px !important;
+        @include maxw-992px{
+            display: none !important;
+        }
+        overflow: hidden;
+        .row{}
+        &__item{
+            display: block;
+            max-height: 220px;
+            .content{
+                display: block;
+                overflow: hidden;
+                &--relative{
+                    position: relative;
+                }
+                &:hover{
+                    img{
+                        @include scale-hover;
+                        transition: 0.3s all;
+                    }
+                }
+            }
+        }
+        &__img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center center !important;
+            transition: 0.3s all;
+        }
+        &__title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 26px;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: capitalize;
+            text-align: center;
+            &--absolute{
+                z-index: 999;
+                position: absolute;
+            }
+            &--bg-green{
+                color: $white;
+                width: 100%;
+                height: 80px;
+                background-image: linear-gradient(rgb(0, 129, 43, .4), rgb(0, 123, 43, 0.8), rgb(0, 129, 41, 0.2));
+            }
+        }
+        &__text{
+        }
+    }
+    .slider{
+        width: 100%;
+        @include scroll-no-bar;
+        &--gap-20px{
+            gap: 20px;
+        }
+        &__content{
+            width: fit-content;
+            display: flex;
+            flex-wrap: nowrap;
+            &--gap-20px{
+                gap: 20px;
+            }
+        }
+        &__item{
+            &--border{
+                border: 1px solid $border-grey;
+                border-radius: 6px;
+            }
+            &__img{
+
+            }
+        }
+        .trusted-shop{
+            &__block{}
+            &__content{}
+            &__item{
+                display: block;
+                overflow: hidden;
+                width: 185px;
+                &:hover{
+                    img{
+                        @include scale-hover;
+                    }
+                }
+                @include maxw-tablet{
+                    width: 130px;
+                }
+            }
+            &__img{
+                overflow: hidden;
+                img{
+                    transition: 0.3s all;
+                }
+                width: 185px;
+                height: 185px;
+                overflow: hidden;
+                @include maxw-tablet{
+                    width: 130px !important;
+                    height: 130px !important;
+                }
+            }
+            &__info{
+                padding: 8px;
+                .title{
+                    width: 100%;
+                    font-weight: 700;
+                    @include overflow-dot-2;
+                }
+                .rating{
+                    padding: 4px 0px 4px;
+                    display: flex;
+                    gap: 3px;
+                    &-star{
+                        width: 17px;
+                        height: 17px;
+                        overflow: hidden    ;
+                    }
+                    &--text-muted{
+                        color: $text-secondary;
+                        font-size: 12px;
+                    }
+                }
+                .tag{
+                    background-color: $light-primary;
+                    color: $primary;
+                    width: fit-content;
+                    padding: 4px 10px 4px;
+                    font-size: 12px;
+                    border-radius: 3px;
+                }
+            }
+        }
+        .product-category{
+            &____block{}
+            &__content{
+                margin-left: 30px;
+                width: 1250px;
+                row-gap: 25px;
+                column-gap: 35px;
+                @include maxw-tablet{
+                    row-gap: 0px;
+                    column-gap: 15px;
+                }
+                flex-wrap: wrap;
+            }
+            &__item{
+                width: 90px;
+                display: block;
+                &:hover{
+                    .product-category{
+                        &__img{
+                            @include move-down-hover;
+                        }
+                        &__text{
+                            color: $green;
+                        }
+                    }
+                }
+            }
+            &__img{
+                transition: 0.3s all;
+                margin: auto;
+                width: 80px;
+                height: 80px;
+                @include maxw-992px{
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+            &__text{
+                margin-top: 14px;
+                text-align: center;
+                width: 90px;
+                @include overflow-dot-2;
+            }
+        }
+    }
+    .shop-list{
+        &__block{
+            @include mobile{
+                margin: 0px 16px;
+            }
+            .gutter-10px{
+                --bs-gutter-x: 10px; /* Horizontal gutter */
+                --bs-gutter-y: 10px; /* Vertical gutter */
+            }
+        }
+        &__item{
+            padding: 10px 13px;
+            background-color: $white;
+            border-radius: 3px;
+            .item{
+                &__shop{
+                    width: fit-content;
+                    display: block;
+                    display: flex;
+                    gap: 15px;
+                    &:hover{
+                        .img{
+                            img{
+                                @include scale-hover;
+                                transition-duration: 0.3s;
+                            }
+                        }
+                    }
+                    .img{
+                        overflow: hidden;
+                        width: 73px !important;
+                        height: 73px !important;
+                        @include maxw-992px{
+                            width: 62px;
+                            height: 62px;
+                        }
+                    }
+                    .info{
+                        &__name{
+                            font-weight: 700;
+                            width: 200px;
+                            text-wrap: nowrap;
+                            @include overflow-dot-1;
+                            @include maxw-tablet{
+                                width: 300px;
+                            }
+                            @include mobile{
+                                width: 200px
+                            }
+                        }
+                        &__detailed{
+                            display: flex;
+                            gap: 5px;
+                            .rating{
+                                display: flex;
+                                &-star{
+                                    width: 18px;
+                                    height: 18px;
+                                    img{
+                                        display: block;
+                                    }
+                                }
+                                &-amount{
+                                    color: $text-secondary;
+                                }
+                            }
+                            .location{
+                                color: $green;
+                            }
+                        }
+                        &__cert{
+                            display: flex;
+                            gap: 5px;
+                            flex-wrap: nowrap;
+                            width: inherit;
+                            &__img{
+                                height: 20px;
+                                width: fit-content;
+                            }
+                        }
+                    }
+                }
+                &__products{
+                    margin-top: 10px;
+                    .product{
+                        margin-top: 10px;
+                        &__col{
+                            overflow: hidden;
+                            display: block;
+                            &:hover{
+                                .product__img{
+                                    @include scale-hover;
+                                    transition: 0.3s all;
+                                }
+                            }
+                        }
+                        &__img{
+                            overflow: hidden;
+                            width: 120px;
+                            height: 120px;
+                            border-radius: 3px;
+                            @include maxw-1200px{
+                                width: 90px;
+                                height: 90px;
+                            }
+                            @include maxw-992px{
+                                width: 100px;
+                                height: 100px;
+                            }
+                            @include tablet{
+                                width: 120px;
+                                height: 120px;
+                            }
+                            img{
+                                object-position: center center;
+                            }
+                        }
+                        &__info{
+                            margin-top: 10px;
+                        }
+                        &__name{
+                            width: inherit;
+                            @include overflow-dot-2;
+                            @include maxw-tablet{
+                                max-width: 120px;
+                            }
+                        }
+                        &__sold{
+                            padding-top: 4px;
+                            width: inherit;
+                            @include overflow-dot-1;
+                            color: $text-secondary;
+                        }
+                        &__price{
+                            &--danger{
+                                width: inherit;
+                                @include overflow-dot-1;
+                                color: $danger;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,177 @@
+// Variables
+@import 'variables/variables';
+// Universal Components
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+}
+
+// Button/Input customization
+input{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.form-check-input:checked{
+    background-color: $list-action-color !important;
+    border: 0;
+}
+.form-check-input, .label::after, label.form-check-label:focus, .form-check-input::after, .form-check-input:not(:disabled):not(.disabled):active:focus {
+    color: black;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 0 0 1px $list-action-color!important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+.dropdown{
+    >.dropdown-menu{
+        padding: 0;
+        border-radius: 0;
+        border: none;
+        background-color: transparent;
+        >li.dropdown-item{
+            background-color: $white;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            &:active, &:hover{
+                background-color: $list-action-color !important;
+                color: white;
+                *{
+                    background-color: $list-action-color !important;
+                    color: white !important;
+                }
+            }
+        }
+    }
+    &:hover{
+        .dropdown-menu{
+            display: block;
+        }
+    }
+}
+.btn-group{
+    >.dropdown-menu{
+        padding: 0;
+        border-radius: 0 !important;
+        >li.dropdown-item{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            height: fit-content;
+            width: 100%;
+            background-color: white;
+            &:active, &:hover{
+                background-color: $list-action-color !important;
+                color: white;
+                *{
+                    background-color: $list-action-color !important;
+                    color: white !important;
+                }
+            }
+        }
+    }
+}
+.btn-outline-primary{
+    background-color: $white;
+    border: 1px solid $primary;
+    padding: 12px 80px 10px;
+    &:hover{
+        background-color: $primary;
+        color: $white;
+    }
+}
+// Object position customization
+.object-top.object-start{
+    object-position: top left;
+}
+.object-top.object-end{
+    object-position: top right;
+}
+.object-bottom.object-end{
+    object-position: bottom right;
+}
+.object-top.object-start{
+    object-position: bottom left;
+}
+.object-top.object-center{
+    object-position: top center;
+}
+.object-bottom.object-center{
+    object-position: bottom center;
+}
+.object-center.object-start{
+    object-position: center left;
+}
+.object-center.object-end{
+    object-position: center right;
+}
+.object-top-end{
+    object-position: top right;
+}
+.object-start{
+    object-position: left;
+}
+.object-end{
+    object-position: right;
+}
+.object-center{
+    object-position: center;
+}
+.object-top{
+    object-position: top;
+}
+.object-bottom{
+    object-position: bottom;
+}
+
+
+
+// Elements
+li.arrow-up-shape-block{
+    position: relative;
+    margin-top: 10px;
+    .arrow-up-shape{
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent !important;
+        border-right: 10px solid transparent !important;
+        border-bottom: 10px solid white !important;
+    }
+    .arrow-up-shape-right{
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent !important;
+        border-right: 10px solid transparent !important;
+        border-bottom: 10px solid white !important;
+        position: absolute;
+        top: -10px;
+        right: 0px;
+    }
+}
+
+// Hover customization
+.scale-hover:hover{
+    transition: 0.3s all;
+    transform: scale(1.05);
+}
+
+@import 'layouts/footer';
+@import 'layouts/header';
+@import 'pages/home';

@@ -1,0 +1,134 @@
+@import '../variables/variables.scss';
+@font-face {
+    font-family: 'Great Vibes';
+    src: url('/src/assets/fonts/GreatVibes-Regular.ttf');
+}
+footer{
+    background-color: $white;
+    color: black;
+    .tablet-desktop__footer{
+        @include maxw-tablet{
+            display: none;
+        }
+        &--top{
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .footer-top__item{
+                width: 20%;
+                &--desktop{
+                    @include maxw-1200px{
+                        &-w-50{
+                            width: 50% !important;
+                        }
+                        &-w-100{
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+        .signature{
+            line-height: 0px;
+        }
+        &--bottom{
+            padding: 15px;
+            .footer-bottom__item{
+                padding: 3px 0px;
+            }
+        }
+    }
+    .signature{
+        border-bottom: 1px solid black;
+        padding-bottom: 10px;
+        font-size: 20px;
+        color: pink;
+        font-family: 'Great Vibes';
+        text-align: end;
+    }
+    .footer-top__item{
+        h5{
+            padding: 10px 0px 5px 0px;
+        }
+        &__option{
+            &--flex{
+                display: flex !important;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            &--flex-col{
+                display: flex !important;
+                flex-wrap: wrap;
+            }
+            &--gap-20px{
+                column-gap: 20px;
+            }
+            &--gap-10px{
+                column-gap: 10px;
+            }
+            a{
+                display: block;
+            }
+            >*{
+                padding: 5px 0px 5px 0px;
+            }
+            &--h-40px{
+                height: 40px;
+                @include mobile{
+                    height: 30px;
+                }
+            }
+            &--h-30px{
+                height: 30px;
+                @include mobile{
+                    height: 25px;
+                }
+            }
+            &--h-60px{
+                height: 60px;
+                @include mobile{
+                    height: 50px;
+                }
+            }
+            &--customed-w-h{
+                height: auto;
+                width: 200px;
+            }
+            &--h-70px{
+                height: 70px;
+                @include mobile{
+                    height: 60px;
+                }
+            }
+        }
+    }
+    .mobile__footer{
+        display: none;
+        @include maxw-tablet{
+            display: block;
+            &--top{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                .footer-top__item{
+                    width: calc(50% - 5px);
+                    h5{
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+            .signature{
+                margin-top: 15px;
+                line-height: 0.5rem;
+            }
+            &--bottom{
+                padding: 15px;
+                .footer-bottom__item{
+                    padding: 3px 0px;
+                }
+            }
+        }
+    }
+}
