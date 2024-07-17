@@ -1,18 +1,29 @@
 $green: #22AF5B;
-$btn__green: #29AB56;
+$btn--green: #29AB56;
 $list-action-color: #22AA00;
+$bright-green: #22AA00;
 $dark-green: #007B2B;
 $light-green: #62CD71;
 $light-primary: #F0F8FF;
 $primary: #2E9DFF;
+$bg-light-primary: #F0F8FF;
+$bg-light-danger: #FFEBEB;
+$text-primary: #0066CC;
 $white: white;
 $grey: #2F294D;
 $text-secondary: #969696;
+$text-dark-secondary: #515154;
 $border-grey: #DFDFDF;
+$border-secondary: #E4E4E4;
+$bg-light-secondary: #FBFBFB;
+$bg-inner-light-secondary: #E4E4E4;
 $light-grey: #C2C2C2;
 $main-bg-grey: #F5F5FA;
-$danger: #FB424F;
-$mobile-width: 480px; 
+$danger: #FF000F;
+$black: #000000;
+$yellow: #FDD116;
+$mobile-width: 480px;
+$w-576px: 576px;
 $tablet-width: 768px; 
 $desktop-width: 1024px;
 $w-992px: 992px;
@@ -27,8 +38,23 @@ $w-1400px: 1400px;
         @content;
     }
 }
+@mixin maxw-576px{
+    @media (max-width: #{$w-576px}) {
+        @content;
+    }
+}
+@mixin minw-576px{
+    @media (min-width: #{$w-576px}) {
+        @content;
+    }
+}
 @mixin maxw-tablet{
-    @media (max-width: calc(#{$tablet-width} - 1px)) {
+    @media (max-width: $tablet-width) {
+        @content;
+    }
+}
+@mixin tablet{
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width}) {
         @content;
     }
 }
@@ -38,17 +64,17 @@ $w-1400px: 1400px;
     }
 }
 @mixin maxw-992px{
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
         @content;
     }
 }
-@mixin tablet{
-    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width}) {
+@mixin minw-992px{
+    @media (min-width: 992px) {
         @content;
     }
 }
 @mixin maxw-desktop{
-    @media (max-width: calc(#{$desktop-width} - 1px)) {
+    @media (max-width: $desktop-width) {
         @content;
     }
 }
@@ -59,22 +85,22 @@ $w-1400px: 1400px;
 }
 
 @mixin minw-1200px{
-    @media (min-width:$w-1200px){
+    @media (min-width: $w-1200px){
         @content;
     }
 }
 @mixin maxw-1200px{
-    @media (max-width: 1199px){
+    @media (max-width: $w-1200px){
         @content;
     }
 }
 @mixin minw-1400px{
-    @media (min-width:$w-1400px){
+    @media (min-width: $w-1400px){
         @content;
     }
 }
 @mixin maxw-1400px{
-    @media (max-width: 1399px){
+    @media (max-width: $w-1400px){
         @content;
     }
 }
@@ -91,15 +117,7 @@ $w-1400px: 1400px;
 }
 
 // Customized Elements
-@mixin green-btn-hover-outline{
-    background-color: $btn__green;
-    color: white;
-    @include btn-status{
-        border: $btn__green solid 1px;
-        background-color: $white;
-        color: $btn__green;
-    }
-}
+
 // Overflow-hidden customization
 @mixin overflow-dot-1{
     text-wrap: nowrap;
@@ -134,4 +152,29 @@ $w-1400px: 1400px;
 @mixin move-up-hover{
     transform: translateY(-3px);
     transition: 0.3s all;
+}
+
+@mixin btn-outline-green{
+    border-color: $btn--green;
+    background-color: $white;
+    color: $green;
+}
+@mixin btn-outline-green__hover{
+    @include btn-status{
+        background-color: $btn--green;
+        color: $white;
+    }
+}
+
+@mixin btn-green{
+    border-color: $btn--green ;
+    background-color: $btn--green;
+    color: $white;
+}
+@mixin btn-green__hover{
+    @include btn-status{
+        border-color: $btn--green;
+        background-color: $white;
+        color: $green;
+    }
 }

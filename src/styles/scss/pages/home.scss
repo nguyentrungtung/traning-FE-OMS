@@ -1,29 +1,65 @@
 @import '../variables/variables.scss';
 
 main{
+    *.active-scroll{
+        transform: scale(0.98);
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+        transition: 0.3s all;
+        transform-origin: left;
+    }
+    padding-bottom: 20px;
     background-color: $main-bg-grey;
     .main{
         &__block{
-            margin: 12px auto 12px;
+            overflow: hidden;
             border-radius: 3px;
             &--bg-trans{
                 background-color: transparent;
             }
+            &--mt-24px{
+                margin-top: 24px;
+                @include maxw-tablet{
+                    margin-top: 12px;
+                }
+            }
+            &--mt-19px{
+                margin-top: 19px;
+                @include maxw-tablet{
+                    margin-top: 8px;
+                }
+            }
             &--bg-white{
                 background-color: $white;
             }
-            &--p-14px{
+            &--padding{
                 padding: 12px 14px 10px;
-                width: 100%;
+            }
+            &--border-radius-6px{
+                border-radius: 6px;
+            }
+            &--divider{
+                width: inherit;
+                height: 24px;
+                background-color: $main-bg-grey;
+                @include maxw-tablet{
+                    height: 12px;
+                }
             }
             .block{
                 &__title{
                     font-weight: 500;
                     font-size: 22px;
                     line-height: 26px;
+                    padding: 8px 0px;
+                    border-radius: 3px;
                 }
                 &__content{
-                    padding: 20px 0px;
+                    overflow: hidden;
+                    padding: 10px 0px;
+                    &--mt-10px{
+                        padding: 10px 0px;
+                    }
                 }
                 .list{
                     display: flex;
@@ -46,7 +82,8 @@ main{
     }
     .container-carousel{
         @include maxw-tablet{
-            background-color: $green;
+            background-color: $green !important;
+            padding-bottom: 10px;
         }
         .carousel{
             .carousel-indicators{
@@ -138,7 +175,7 @@ main{
             }
         }
         &__text{
-            padding: 12px 0px;
+            padding-top: 12px;
             text-align: center;
             margin: auto;
             text-wrap: wrap;
@@ -160,11 +197,12 @@ main{
         }
     }
     .tab{
-        margin: 25px 0px 25px !important;
         @include maxw-992px{
             display: none !important;
         }
-        overflow: hidden;
+        &__content{
+            overflow: hidden;
+        }
         .row{}
         &__item{
             display: block;
@@ -214,131 +252,131 @@ main{
         }
     }
     .slider{
-        width: 100%;
         @include scroll-no-bar;
+        display: flex;
+        width: inherit;
         &--gap-20px{
             gap: 20px;
         }
-        &__content{
-            width: fit-content;
-            display: flex;
-            flex-wrap: nowrap;
-            &--gap-20px{
-                gap: 20px;
-            }
-        }
         &__item{
+            display: block;
             &--border{
                 border: 1px solid $border-grey;
                 border-radius: 6px;
             }
             &__img{
-
             }
         }
-        .trusted-shop{
-            &__block{}
-            &__content{}
-            &__item{
-                display: block;
-                overflow: hidden;
-                width: 185px;
-                &:hover{
-                    img{
-                        @include scale-hover;
-                    }
-                }
-                @include maxw-tablet{
-                    width: 130px;
-                }
-            }
-            &__img{
-                overflow: hidden;
+    }
+    
+    .trusted-shop{
+        &__block{
+            transition: 0.3s all;
+        }
+        &__content{}
+        &__item{
+            display: block;
+            &:hover{
                 img{
-                    transition: 0.3s all;
-                }
-                width: 185px;
-                height: 185px;
-                overflow: hidden;
-                @include maxw-tablet{
-                    width: 130px !important;
-                    height: 130px !important;
+                    @include scale-hover;
                 }
             }
-            &__info{
-                padding: 8px;
-                .title{
-                    width: 100%;
-                    font-weight: 700;
-                    @include overflow-dot-2;
-                }
-                .rating{
-                    padding: 4px 0px 4px;
-                    display: flex;
-                    gap: 3px;
-                    &-star{
-                        width: 17px;
-                        height: 17px;
-                        overflow: hidden    ;
-                    }
-                    &--text-muted{
-                        color: $text-secondary;
-                        font-size: 12px;
-                    }
-                }
-                .tag{
-                    background-color: $light-primary;
-                    color: $primary;
-                    width: fit-content;
-                    padding: 4px 10px 4px;
-                    font-size: 12px;
-                    border-radius: 3px;
-                }
+            @include maxw-tablet{
+                width: 130px;
             }
         }
-        .product-category{
-            &____block{}
-            &__content{
-                margin-left: 30px;
-                width: 1250px;
-                row-gap: 25px;
-                column-gap: 35px;
-                @include maxw-tablet{
-                    row-gap: 0px;
-                    column-gap: 15px;
-                }
-                flex-wrap: wrap;
-            }
-            &__item{
-                width: 90px;
-                display: block;
-                &:hover{
-                    .product-category{
-                        &__img{
-                            @include move-down-hover;
-                        }
-                        &__text{
-                            color: $green;
-                        }
-                    }
-                }
-            }
-            &__img{
+        &__img{
+            border-radius: 6px;
+            overflow: hidden;
+            margin: auto;
+            img{
                 transition: 0.3s all;
-                margin: auto;
-                width: 80px;
-                height: 80px;
-                @include maxw-992px{
-                    width: 65px;
-                    height: 65px;
-                }
             }
-            &__text{
-                margin-top: 14px;
-                text-align: center;
-                width: 90px;
+            width: 183px;
+            height: 183px;
+            overflow: hidden;
+            @include maxw-tablet{
+                width: 128px !important;
+                height: 128px !important;
+            }
+        }
+        &__info{
+            padding: 8px;
+            .title{
+                width: 100%;
+                font-weight: 700;
                 @include overflow-dot-2;
             }
+            .rating{
+                padding: 4px 0px 4px;
+                display: flex;
+                gap: 3px;
+                &-star{
+                    width: 17px;
+                    height: 17px;
+                    overflow: hidden    ;
+                }
+                &--text-muted{
+                    color: $text-secondary;
+                    font-size: 12px;
+                }
+            }
+            .tag{
+                background-color: $light-primary;
+                color: $primary;
+                width: fit-content;
+                padding: 4px 10px 4px;
+                font-size: 12px;
+                border-radius: 3px;
+            }
+        }
+    }
+    .product-category{
+        &__content{
+            overflow: scroll;
+            @include scroll-no-bar;
+            margin-left: 35px;
+            .slider{
+                width: 1200px !important;
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 30px;
+                column-gap: 40px;
+                @include maxw-tablet{
+                    column-gap: 30px;
+                    row-gap: 25px;
+                }
+            }
+        }
+        &__item{
+            width: 90px;
+            display: block;
+            &:hover{
+                .product-category{
+                    &__img{
+                        @include move-down-hover;
+                    }
+                    &__text{
+                        color: $green;
+                    }
+                }
+            }
+        }
+        &__img{
+            transition: 0.3s all;
+            margin: auto;
+            width: 80px;
+            height: 80px;
+            @include maxw-992px{
+                width: 65px;
+                height: 65px;
+            }
+        }
+        &__text{
+            margin-top: 14px;
+            text-align: center;
+            width: 90px;
+            @include overflow-dot-2;
         }
     }
     .shop-list{
@@ -346,6 +384,11 @@ main{
             @include mobile{
                 margin: 0px 16px;
             }
+            .block__title{
+                padding-left: 14px;
+            }
+        }
+        &__content{
             .gutter-10px{
                 --bs-gutter-x: 10px; /* Horizontal gutter */
                 --bs-gutter-y: 10px; /* Vertical gutter */

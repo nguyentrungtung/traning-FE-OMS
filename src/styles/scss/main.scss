@@ -7,10 +7,33 @@
     padding: 0px;
     margin: 0px;
 }
-
+.bg-light-primary{
+    background-color: $bg-light-primary;
+}
+.bg-light-danger{
+    background-color: $bg-light-danger;
+}
+.text-red{
+    color: #FF000F;
+}
+.text-blue{
+    color: $primary;
+}
 // Button/Input customization
 input{
     border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.mall-tag{
+    height: fit-content;
+    width: fit-content;
+    border-radius: 3px;
+    background-color: $green;
+    color: $white;
+    padding: 0px 10px 0px;
+}
+.no-focus-ring{
     outline: none !important;
     box-shadow: none !important;
 }
@@ -36,8 +59,90 @@ input[type=number] {
 img{
     width: 100%;
     height: 100%;
-    object-fit: cover !important;
-    object-position: center !important;
+    object-fit: cover;
+    object-position: center;
+}
+.scroll-no-bar{
+    overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+.container{
+    margin: 0 auto;
+    padding: 0;
+
+    /* Small devices (landscape phones, 576px and up) */
+    @include minw-576px {
+        width: 540px;
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @include minw-tablet{
+        width: 720px;
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @include minw-992px{
+        width: 960px;
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @include minw-1200px{
+        width: 1140px;
+    }
+    @include minw-1400px{
+        width: 1240px;
+    }
+    &--tablet{
+        margin: 0 auto;
+        padding: 0;
+    
+        /* Medium devices (tablets, 768px and up) */
+        @include minw-tablet{
+            width: 100%;
+        }
+
+        /* Large devices (desktops, 992px and up) */
+        @include minw-992px{
+            width: 960px;
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @include minw-1200px{
+            width: 1140px;
+        }
+        @include minw-1400px{
+            width: 1240px;
+        }
+    }
+    &--mobile{
+        margin: 0 auto;
+        padding: 0;
+        @include minw-576px{
+            width: 100%;
+        }
+    
+        /* Medium devices (tablets, 768px and up) */
+        @include minw-tablet{
+            width: 720px;
+        }
+
+        /* Large devices (desktops, 992px and up) */
+        @include minw-992px{
+            width: 960px;
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @include minw-1200px{
+            width: 1140px;
+        }
+        @include minw-1400px{
+            width: 1240px;
+        }
+    }
 }
 .dropdown{
     >.dropdown-menu{
@@ -97,51 +202,6 @@ img{
         color: $white;
     }
 }
-// Object position customization
-.object-top.object-start{
-    object-position: top left;
-}
-.object-top.object-end{
-    object-position: top right;
-}
-.object-bottom.object-end{
-    object-position: bottom right;
-}
-.object-top.object-start{
-    object-position: bottom left;
-}
-.object-top.object-center{
-    object-position: top center;
-}
-.object-bottom.object-center{
-    object-position: bottom center;
-}
-.object-center.object-start{
-    object-position: center left;
-}
-.object-center.object-end{
-    object-position: center right;
-}
-.object-top-end{
-    object-position: top right;
-}
-.object-start{
-    object-position: left;
-}
-.object-end{
-    object-position: right;
-}
-.object-center{
-    object-position: center;
-}
-.object-top{
-    object-position: top;
-}
-.object-bottom{
-    object-position: bottom;
-}
-
-
 
 // Elements
 li.arrow-up-shape-block{
@@ -172,6 +232,11 @@ li.arrow-up-shape-block{
     transform: scale(1.05);
 }
 
+.text-primary{
+    color: $text-primary;
+}
+
 @import 'layouts/footer';
 @import 'layouts/header';
 @import 'pages/home';
+@import 'pages/product-detail';

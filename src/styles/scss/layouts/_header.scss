@@ -51,8 +51,8 @@ header{
                         font-size: 12px;
                         margin-left: 38px;
                         height: 50px;
-                        &:active, &:hover, &:focus, &:focus-within, &[aria-expanded="true"]{
-                            border: 1px $white solid;
+                        @include dropdown-btn-status{
+                            border: 1px solid transparent;
                             color: $white !important;
                         }
                     }
@@ -171,11 +171,8 @@ header{
                         margin: 0;
                         padding: 3px;
                         border-color: transparent;
-                        @include btn-status{
-                            border-color: $white !important;
-                        }
                         img{
-                            width: 30px;
+                            width: fit-content;
                             height: 30px;
                         }
                     }
@@ -228,10 +225,13 @@ header{
                         margin-top: 5px;
                         width: 35px;
                         height: 35px;
-                        border-radius: 50%;
-                        border: 1px solid $white;
                         overflow: hidden;
                         display: block;
+                        border-radius: 50%;
+                        border: 1px solid $white;
+                        &--border-0{
+                            border: 1px solid transparent;
+                        }
                     }
                     &__tool-group{
                         .small{
@@ -331,7 +331,7 @@ header{
                 color: $dark-green !important;
                 font-weight: 500;
                 @include dropdown-btn-status{
-                    border-color: $dark-green;
+                    border-color: transparent;
                     color: $dark-green;
                 }
             }
@@ -357,6 +357,9 @@ header{
                         border-radius: 50%;
                         display: block;
                         overflow: hidden;
+                        &--border-0{
+                            border: 1px solid transparent !important;
+                        }
                     }
                     .user-mobile__dropdown{
                         top: 20px;
@@ -371,6 +374,7 @@ header{
                         max-width: 400px;
                         .dropdown-item{
                             &__product-price{
+                                margin-left: auto;
                                 width: 150px;
                                 overflow: hidden;
                                 text-overflow: ellipsis;
@@ -417,9 +421,6 @@ header{
         margin: 0;
         padding: 3px;
         border-color: transparent;
-        @include btn-status{
-            border-color: $white !important;
-        }
         img{
             width: 30px;
             height: 30px;
@@ -467,8 +468,10 @@ header{
                 }
             }
             &__product-price{
-                margin-left: 35px;
+                padding-left: 10px;
+                float: right !important;
                 color: #00BC3C;
+                margin-left: auto;
                 @include mobile{
                     display: none !important;
                 }
@@ -484,7 +487,8 @@ header{
                 justify-content: space-between;
                 padding: 10px;
                 &__btn{
-                    @include green-btn-hover-outline;
+                    @include btn-green;
+                    @include btn-green__hover;
                 }
             }
         }

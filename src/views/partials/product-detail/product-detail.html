@@ -1,1 +1,1252 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes">
+    <link rel="stylesheet" href="/src/styles/css/style.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="container main__block main__block main__block--bg-trans">
+            <div class="product-tag d-flex align-items-center block__content">
+                <a href="#" class="product-tag__name">
+                    Ommanilife
+                </a>
+                <div class="product-tag__flow-icon">
+                    <img src="/src/assets/images/icons/li_chevron-right-dark.svg" alt="">
+                </div>
+                <a href="#" class="product-tag__name">
+                    Rau, củ, quả
+                </a>
+                <div class="product-tag__flow-icon">
+                    <img src="/src/assets/images/icons/li_chevron-right-dark.svg" alt="">
+                </div>
+                <a href="#" class="product-tag__name">Rau xanh</a>
+            </div>
+        </div>
+        <div class="container--tablet main__block main__block--bg-white main__block--padding main__block--border-radius-6px">
+            <div class="block__content product-main-info__block">
+                <div class="product-img__col">
+                    <div class="product-img__main">
+                        <img id="mainImg" src="/src/assets/images/photos/product/product-img/large/68dc123b6cfc9c2f8b46ee5b5a5830d7.png" alt="">
+                        <div class="tag">
+                            <img class="left" src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            <img class="right" src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="product-img__list">
+                        <button onclick="onClickSlideBtn('listImg', 'left')" class="btn list__btn list__btn--left">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/li-chevron-left-white.svg" alt="">
+                            </div>
+                        </button>
+                        <div class="list__slider slider" id="listImg">
+                            <button onmouseover="imgSrcChanger(this, 'mainImg'); zoomImgChanger(this, 'mainImg')" class="btn item">
+                                <img src="/src/assets/images/photos/product/product-img/68dc123b6cfc9c2f8b46ee5b5a5830d7.png" alt="">
+                            </button>
+                            <button onmouseover="imgSrcChanger(this, 'mainImg'); zoomImgChanger(this, 'mainImg')" class="btn item">
+                                <img src="/src/assets/images/photos/product/product-img/68dc123b6cfc9c2f8b46ee5b5a5830d7.png" alt="">
+                            </button>
+                            <button onmouseover="imgSrcChanger(this, 'mainImg'); zoomImgChanger(this, 'mainImg')" class="btn item">
+                                <img src="/src/assets/images/photos/product/product-img/2e93ae9353938793bba02643614f92a8.png" alt="">
+                            </button>
+                            <button onmouseover="imgSrcChanger(this, 'mainImg'); zoomImgChanger(this, 'mainImg')" class="btn item">
+                                <img src="/src/assets/images/photos/product/product-img/985f7e2b6151572a2b8fd94d6192b837.png" alt="">
+                            </button>
+                            <button onmouseover="imgSrcChanger(this, 'mainImg'); zoomImgChanger(this, 'mainImg')" class="btn item">
+                                <img src="/src/assets/images/photos/product/product-img/ebefde22c979f7072818bd7e6605c934.png" alt="">
+                            </button>
+                            <button onmouseover="imgSrcChanger(this, 'mainImg'); zoomImgChanger(this, 'mainImg')" class="btn item">
+                                <img src="/src/assets/images/photos/product/product-img/7ed33b73cab292c9a408b198a66d6f2c.png" alt="">
+                            </button>
+                            <button onmouseover="imgSrcChanger(this, 'mainImg'); zoomImgChanger(this, 'mainImg')" class="btn item">
+                                <img src="/src/assets/images/photos/product/product-img/4ac0a698d3e52a975a2d18d4d368fe36.png" alt="">
+                            </button>
+                        </div>
+                        <button onclick="onClickSlideBtn('listImg', 'right')" class="btn list__btn list__btn--right">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/li-chevron-right-white.svg" alt="">
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info__col">
+                    <div class="product-info__title">
+                        <div class="left mall-tag">Mall</div>
+                        <div class="right">
+                            <div class="name">
+                                <span>Bông cải xanh - Công nghệ làm sạch tiêu chuẩn Đức Gói 500g Đà lạt</span>
+                                <div class="hidden">
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                    </div>
+                                    <div class="amount">
+                                        14%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hidden-price">132.000 ₫</div>
+                            <div class="specs">
+                                <div class="rating-star">
+                                    <span class="number">4.8</span>
+                                    <span class="icon">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                    </span>
+                                </div>
+                                <div class="rating-amount">
+                                    <span class="number">513k</span>
+                                    <span class="text"> Đánh giá</span>
+                                </div>
+                                <div class="sold">
+                                    <span class="number">249k</span>
+                                    <span class="text"> Đã bán</span>
+                                </div>
+                            </div>
+                            <div class="price_qr-code">
+                                <div class="price">132.000 ₫</div>
+                                <div class="qr-code">
+                                    <img src="/src/assets/images/photos/product/product-qr-code/82ceb80f33102de9257a5b1590f43295.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info__content">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td class="bg-transparent">Số lượng lớn</td>
+                                    <td class="bg-transparent">
+                                        <table class="table table-bordered border-dark text-center">
+                                            <tr class="text-capitalize">
+                                                <td class="bg-transparent">1-10 Gói</td>
+                                                <td class="bg-transparent">11-30 Gói</td>
+                                                <td class="bg-transparent">Trên 30 Gói</td>
+                                            </tr>
+                                            <tr class="text-capitalize text-center">
+                                                <td class="bg-transparent">132k/gói</td>
+                                                <td class="bg-transparent">105k/gói</td>
+                                                <td class="bg-transparent"><a href="#" class="fw-bold text-primary">Liên hệ</a></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-transparent">Truy xuất nguồn gốc:</td>
+                                    <td class="bg-transparent"><a target="_blank" href="/views/product-detail/origin-finder.html" class="fw-bold text-decoration-underline text-primary">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-transparent">Giao hàng từ</td>
+                                    <td class="bg-transparent"><span class="fw-bold">46 Trần Nguyên Đán, Thanh Xuân, Hà Nội</span>
+                                        <div class="w-100 bg-white border border-1 rounded-2 d-flex py-2 my-2 px-3">
+                                            <i class="fas fa-shipping-fast fs-30px"></i>
+                                            <div class="ps-3">
+                                                <div class="shipment-info">
+                                                    <span class="text-muted">Giao hàng</span>
+                                                    <span class="fw-bold">Tiêu chuẩn:</span>
+                                                    <a href="#" class="fw-bold ps-2 text-primary">Thứ 3, ngày 02/07 - Thứ 7, ngày 06/07</a>
+                                                </div>
+                                                <div class="shipment-fee">
+                                                    <span class="fw-bold">21.000 đ</span>
+                                                    <span class="text-muted">(Freeship 30K đơn hàng từ 150K)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-transparent">Số lượng:</td>
+                                    <td class="d-flex align-items-center gap-3 bg-transparent">
+                                        <div class="input-group">
+                                            <button onclick="changeValueInput('product-amount-input', 'minus')" type="button" id="button-minus">-</button>
+                                            <input type="number" class="form-control no-focus-ring text-center" value="0" min="0" id="product-amount-input">
+                                            <button onclick="changeValueInput('product-amount-input', 'add')" type="button" id="button-plus">+</button>
+                                        </div>
+                                        <span>Có <span>2.400</span> Sản phẩm có sẵn</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-transparent"></td>
+                                    <td class="bg-transparent btn-wrapper">
+                                        <button class="flex-fill btn" id="add-cart-btn">
+                                            <img src="/src/assets/images/icons/li_shopping-cart-green.svg" alt="">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                        <button class="flex-fill btn" id="buy-now-btn">Mua Ngay</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-transparent"></td>
+                                    <td class="note bg-transparent text-center">Ommani Đảm bảo Sản phẩm đạt tiêu chuẩn.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="sharing__col">
+                <span>Chia sẻ:</span>
+                <button>
+                    <img src="/src/assets/images/photos/system/social-network/image 38.svg" alt="">
+                </button>
+                <button>
+                    <img src="/src/assets/images/photos/system/social-network/1a144b96100ee9bfd8b81f325fbc69e4.png" alt="">
+                </button>
+                <button>
+                    <img src="/src/assets/images/photos/system/social-network/image 41.svg" alt="">
+                </button>
+                <button>
+                    <img src="/src/assets/images/icons/copy.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="container--tablet main__block main__block--bg-white main__block--border-radius-6px main__block--padding main__block--mt-24px">
+            <div class="block__content d-flex justify-content-between shop__block">
+                <div class="shop__block--left">
+                    <div class="left-block__tag mall-tag">Mall</div>
+                    <a href="#" class="left-block__img">
+                        <img src="/src/assets/images/photos/shop/shop/top-market.png" alt="">
+                    </a>
+                    <div class="text">
+                        <a href="#" class="left-block__name">Ommani Mall Thạch Bàn Long Biên</a>
+                        <div class="left-block__popularity">
+                            <span class="rating">
+                                <span class="icon">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                </span>
+                                <span class="number">4.8 (11k+)</span>
+                            </span>
+                            <span class="shipment">
+                                Giao nhanh
+                            </span>
+                        </div>
+                        <div class="left-block__interaction">
+                            <button class="bg-light-danger text-red">
+                                <div class="img">
+                                    <img src="/src/assets/images/icons/bubble-dots.svg" alt="">
+                                </div>
+                                <span>chat ngay</span>
+                            </button>
+                            <button class="bg-light-primary text-blue">
+                                <div class="img">
+                                    <img src="/src/assets/images/icons/iconoir_small-shop-blue.svg" alt="">
+                                </div>
+                                <span>Xem shop</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop__block--right">
+                    <div class="right-block__specs">
+                        <div class="specs__col">
+                            <div class="upper">219</div>
+                            <div class="lower">Sản phẩm</div>
+                        </div>
+                        <div class="specs__divider"></div>
+                        <div class="specs__col">
+                            <div class="upper">98.7 %</div>
+                            <div class="lower">Tỉ lệ phản hồi</div>
+                        </div>
+                        <div class="specs__divider"></div>
+                        <div class="specs__col">
+                            <div class="upper">Trong vài giờ</div>
+                            <div class="lower">Phản hồi</div>
+                        </div>
+                    </div>
+                    <div class="right-block__followers">
+                        <div class="followers__img">
+                            <div>
+                                <img src="/src/assets/images/photos/user/avatar/446bb9031372bbf4e8c6d35a4d50edbc.jpg" alt="">
+                            </div>
+                            <div>
+                                <img src="/src/assets/images/photos/user/avatar/310e6c15018701047fa5e5caaf401db3.jpg" alt="">
+                            </div>
+                            <div>
+                                <img src="/src/assets/images/photos/user/avatar/1abe4509c7d6180ab6ef68ae2c95a1b2.jpg" alt="">
+                            </div>
+                            <div>
+                                <img src="/src/assets/images/photos/user/avatar/8648ad917d5ce4117fc3c56ceb4adf90.jpg" alt="">
+                            </div>
+                            <div>
+                                <img src="/src/assets/images/photos/user/avatar/f5b2c3433464340d9383480b1ef0f337.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="followers__amount"><span>1.2k </span><strong> Theo dõi gian hàng</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container--tablet main__block main__block--bg-white main__block--mt-19px main__block--padding">
+            <div class="product-description__block">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item fs-17px" role="presentation">
+                        <button class="nav-link border-0 active" id="describing-tab" data-bs-toggle="tab" data-bs-target="#describing" type="button" role="tab" aria-controls="describing" aria-selected="true">Mô tả sản phẩm</button>
+                    </li>
+                    <li class="nav-item fs-17px" role="presentation">
+                        <button class="nav-link border-0" id="rating-tab" data-bs-toggle="tab" data-bs-target="#rating" type="button" role="tab" aria-controls="rating" aria-selected="false">Đánh giá (<span class="fs-17px">60</span>)</button>
+                    </li>
+                    <li class="nav-item fs-17px" role="presentation">
+                        <button class="nav-link border-0" id="asking-tab" data-bs-toggle="tab" data-bs-target="#asking" type="button" role="tab" aria-controls="asking" aria-selected="false">Hỏi đáp (<span class="fs-17px">50</span>)</button>
+                    </li>
+                </ul>
+                
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="describing" role="tabpanel" aria-labelledby="describing-tab" tabindex="0">
+                        <div class="title">THÔNG TIN Chi Tiết</div>
+                        <div>
+                            <table class="table table-borderless table-striped">
+                                <tr>
+                                    <th>Danh mục</th>
+                                    <td>Rau Xanh</td>
+                                </tr>
+                                <tr>
+                                    <th>Xuất xứ</td>
+                                    <td>Việt Nam</td>
+                                </tr>
+                                <tr>
+                                    <th>Đóng gói</th>
+                                    <td>500g/ Gói</td>
+                                </tr>
+                                <tr>
+                                    <th>Công ty Sản xuất</th>
+                                    <td>Công ty TNHH Thành Công</td>
+                                </tr>
+                                <tr>
+                                    <th>Tiêu chuẩn</th>
+                                    <td class="text-uppercase">9001, Vietgap, Organic</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="description text-uppercase text-black h5">Mô tả sản phẩm</div>
+                        <div class="detailed-description">
+                            <div class="general text-black">
+                                Sản phẩm không chứa các hóa chất, chất kích thích tăng trưởng gây hại, đảm bảo an toàn cho sức khỏe người tiêu dùng. Do đó, bạn hoàn toàn có thể an tâm khi lựa chọn sản phẩm này trong mỗi bữa ăn của gia đình mình, giúp bữa ăn trở nên ngon miệng hơn. <br>
+                                Món ngon gợi ý: Bông cải xanh xào thịt bò, canh bông cải xanh thịt heo, bông cải xanh xào tôm mự<br>
+                                Giá sản phẩm trên OMMANI đã bao gồm thuế theo luật hiện hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước ngoài có giá trị trên 1 triệu đồng).....Súp lơ xanh (bông cải xanh) là loại “siêu” thực phẩm chay này mang lại rất nhiều lợi ích cho con người. Giống các loại thực vật khác trong họ cải (cải bruxen, cải xanh, cải bắp, cải xoăn), súp lơ trắng có chứa rất nhiều vitamin và khoáng chất. Một số món ăn ngon như súp lơ xào thịt, thịt bò xào súp lơ, súp lơ muối chua…Súp lơ chứa sắt và axit folic, ngoài ra còn có nhiều vitamin (A, C, vitamin nhóm B…) và khoáng chất (kali, natri, magie, đồng, sắt, lưu huỳnh, clo và phốt pho…).<br>
+                                <br>
+                                Hạt giống Bông Cải Xanh F1 No.3 - Súp Lơ Xanh là hạt giống sinh trưởng mạnh, kháng bệnh tốt. Khi lớn lên cây cao trung bình, không có nhánh, khả năng chịu nhiệt và thích nghi rộng. Mặt bông đẹp, hạt mịn, độ đồng đều rất cao, thu hoạch 55 - 60 ngày sau khi rồng, thu hoạch tập trung.<br>
+                                <br>
+                                - Xuất xứ: Đà Lạt<br>
+                                <br>
+                                - Sản phẩm của: Công ty giống cây trồng Phú Nông<br>
+                                <br>
+                                - Quy cách: Gói 0.5 gram<br>
+                                <br>
+                                - Cách trồng:<br>
+                                + Khoảng cách trồng: 40x50cm<br>
+                                + Mật độ trồng: 20-30g/1000m2<br>
+                                <br>
+                                - Thời gian thu hoạch: 55 - 60 ngày<br>
+                                <br>
+                                Giá sản phẩm trên Ommanilife đã bao gồm thuế theo luật hiện hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước ngoài có giá trị trên 1 triệu đồng).....<br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="rating" role="tabpanel" aria-labelledby="rating-tab" tabindex="0">
+                        <div class="text-black">
+                            Nhìn bề ngoài đẹp, chắc, kiểu dáng thanh lịch, màu trắng xài mau dơ. Pin xài teat thời gian mới biết dc chất lượng. BH 6 tháng nên chờ xem sao. Giao hàng nhanh, nhân viên giao hàng nhiệt tình. <br><br> Chủ shop có quảng cáo trên tinh tế, nên mới biết ghé link mà mua. Anh em xài thử rồi cho đánh giá thêm, chứ mình thấy thương hiệu này lạ, mà sạc dc cho macbook, mua test thử xem sao. Anh em mua trải nghiệm giống mình đi, hàng ngon ko thì chờ mới đánh giá sau 6 tháng.
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="asking" role="tabpanel" aria-labelledby="asking-tab">
+                        <div class="text-black">
+                        ✅ Thông số kỹ thuật: <br>
+                        * Dung lượng pin: 20.000mAh 74Wh/75.5Wh  7.4V<br>
+                        Dung Lượng định mức: 11.000mAh 5V-3A<br>
+                        <br><br>
+                        * Input: Type C1: 5V/3A, 9V/3A, 12V/3A, 15V/2.6A 20V/2A
+                        <br>
+                        * Output:
+                        <br>
+                        - 1 Cổng;
+                        <br>
+                        + Type C1: 5V3A, 9V3A, 12V2.5A, 15V/3A, 20V/2.25A 5-11V/5A 55w Max
+                        <br>
+                        + Type-c 2	5V3A, 9V3A, 12V2.5A, 15V/3A, 20V/2.25A 5-11V/5A 55w Max
+                        <br>
+                        + Usb-A:  5V3A, 9V3A, 12V2.5A, 5-11V/5A max 33w
+                        <br>
+                        <br>
+                        - 2 Cổng: <br>
+                        
+                        + C+A: 5V/3A 15w max<br>
+                        
+                        + C1 + C2 5V/3A 15w max<br>
+                        
+                        - 3 Cổng: 5V/3A 15w max<br>
+                        
+                        <br><br>
+                        
+                        ✅ Kích thước củ sạc: 162 x 72 x 29.6 mm<br>
+                        ✅ Trọng lượng: 153gram<br>
+                        <br>
+                        ✅ Pin sử dụng: lithium polymer<br>
+                        ✅ĐẶT HÀNG:<br>
+                        
+                        - Sản phẩm có nhiều mức giá tùy theo hình thức. Các bạn cứ lựa theo phân loại sẽ hiện ra giá từng loại cụ thể.
+                        -Hàng nhà mình khi xuất đi sẽ có đầy đủ team niêm phong kể cả trên máy lên vỏ hộp. Các bạn khi nhận hàng thấy có hiện tượng bị rách bóc thì nên báo ngay với shop nhé.
+                        - Khi nhận hàng các bạn nhớ quay clip mở hàng để khi có vấn đề gì bạn dễ khiếu nại và giải quyết. Mọi khiếu nại khi không có clip chứng minh thì bên mình cũng khó giải quyết cho bạn được. 
+                        - Để kiểm tra hành trình đơn hàng, bạn alo tổng đài
+                        
+                        Nhớ xin số bưu tá giao hàng .
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-description__block--hidden">
+                <div class="detailed__block">
+                    <div class="detailed__content">
+                        <div class="title">Thông tin chi tiết</div>
+                        <table class="table table-borderless table-striped">
+                            <tr>
+                                <th>Danh mục</th>
+                                <td>Rau Xanh</td>
+                            </tr>
+                            <tr>
+                                <th>Xuất xứ</td>
+                                <td>Việt Nam</td>
+                            </tr>
+                            <tr>
+                                <th>Đóng gói</th>
+                                <td>500g/ Gói</td>
+                            </tr>
+                            <tr>
+                                <th>Công ty Sản xuất</th>
+                                <td>Công ty TNHH Thành Công</td>
+                            </tr>
+                            <tr>
+                                <th>Tiêu chuẩn</th>
+                                <td class="text-uppercase">9001, Vietgap, Organic</td>
+                            </tr>
+                        </table>
+                        <div class="title">Mô tả sản phẩm</div>
+                        <div>
+                            Sản phẩm không chứa các hóa chất, chất kích thích tăng trưởng gây hại, đảm bảo an toàn cho sức khỏe người tiêu dùng. Do đó, bạn hoàn toàn có thể an tâm khi lựa chọn sản phẩm này trong mỗi bữa ăn của gia đình mình, giúp bữa ăn trở nên ngon miệng hơn. <br>
+                            Món ngon gợi ý: Bông cải xanh xào thịt bò, canh bông cải xanh thịt heo, bông cải xanh xào tôm mự<br>
+                            Giá sản phẩm trên OMMANI đã bao gồm thuế theo luật hiện hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước ngoài có giá trị trên 1 triệu đồng).....Súp lơ xanh (bông cải xanh) là loại “siêu” thực phẩm chay này mang lại rất nhiều lợi ích cho con người. Giống các loại thực vật khác trong họ cải (cải bruxen, cải xanh, cải bắp, cải xoăn), súp lơ trắng có chứa rất nhiều vitamin và khoáng chất. Một số món ăn ngon như súp lơ xào thịt, thịt bò xào súp lơ, súp lơ muối chua…Súp lơ chứa sắt và axit folic, ngoài ra còn có nhiều vitamin (A, C, vitamin nhóm B…) và khoáng chất (kali, natri, magie, đồng, sắt, lưu huỳnh, clo và phốt pho…).<br>
+                            <br>
+                            Hạt giống Bông Cải Xanh F1 No.3 - Súp Lơ Xanh là hạt giống sinh trưởng mạnh, kháng bệnh tốt. Khi lớn lên cây cao trung bình, không có nhánh, khả năng chịu nhiệt và thích nghi rộng. Mặt bông đẹp, hạt mịn, độ đồng đều rất cao, thu hoạch 55 - 60 ngày sau khi rồng, thu hoạch tập trung.<br>
+                            <br>
+                            - Xuất xứ: Đà Lạt<br>
+                            <br>
+                            - Sản phẩm của: Công ty giống cây trồng Phú Nông<br>
+                            <br>
+                            - Quy cách: Gói 0.5 gram<br>
+                            <br>
+                            - Cách trồng:<br>
+                            + Khoảng cách trồng: 40x50cm<br>
+                            + Mật độ trồng: 20-30g/1000m2<br>
+                            <br>
+                            - Thời gian thu hoạch: 55 - 60 ngày<br>
+                            <br>
+                            Giá sản phẩm trên Ommanilife đã bao gồm thuế theo luật hiện hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước ngoài có giá trị trên 1 triệu đồng).....<br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="detailed__more-btn">
+                        <button class="more-btn">
+                            <span>Xem thêm</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="main__block--divider"></div>
+                <div class="rating__block">
+                    <div class="general__block d-flex">
+                        <div class="general__left">
+                            <div>
+                                <span class="big">4.9</span>
+                                <span>/5</span>
+                            </div>
+                            <div>
+                                86 đánh giá
+                            </div>
+                        </div>
+                        <div class="general__divider"></div>
+                        <div class="general__right flex-fill">
+                            <div class="item d-flex">
+                                <div class="item__stars">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/secondary-star.svg" alt="">
+                                </div>
+                                <div class="flex-fill item__progress-bar">
+                                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="81.3953488" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 81.3953488%"></div>
+                                    </div>
+                                </div>
+                                <div class="item__amount">72</div>
+                            </div>
+                            <div class="item d-flex">
+                                <div class="item__stars">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/secondary-star.svg" alt="">
+                                </div>
+                                <div class="flex-fill item__progress-bar">
+                                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="81.3953488" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 9.3%"></div>
+                                    </div>
+                                </div>
+                                <div class="item__amount">5</div>
+                            </div>
+                            <div class="item d-flex">
+                                <div class="item__stars">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/secondary-star.svg" alt="">
+                                </div>
+                                <div class="flex-fill item__progress-bar">
+                                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="5.8" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 5.8%"></div>
+                                    </div>
+                                </div>
+                                <div class="item__amount">8</div>
+                            </div>
+                            <div class="item d-flex">
+                                <div class="item__stars">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/secondary-star.svg" alt="">
+                                </div>
+                                <div class="flex-fill item__progress-bar">
+                                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="2.3" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 2.3%"></div>
+                                    </div>
+                                </div>
+                                <div class="item__amount">2</div>
+                            </div>
+                            <div class="item d-flex">
+                                <div class="item__stars">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/star.svg" alt="">
+                                    <img src="/src/assets/images/icons/secondary-star.svg" alt="">
+                                </div>
+                                <div class="flex-fill item__progress-bar">
+                                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="1.16" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 1.16%"></div>
+                                    </div>
+                                </div>
+                                <div class="item__amount">1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter__block"></div>
+                    <div class="comments__block"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container--tablet main__block main__block--mt-24px main__block--bg-white main__block--padding related-product">
+            <div class="related-product__title">Sản phẩm liên quan</div>
+            <div class="related-product__content block__content">
+                <a href="#" class="item__card">
+                    <div class="img">
+                        <img src="/src/assets/images/photos/product/product-img/0930baf9ee76d8e4d6e813b13a58e3f4.png" alt="">
+                        <div class="tag__cert">
+                            <div class="mall-tag">Mall</div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tag__sale">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/Sale.svg" alt="">
+                            </div>
+                            <div class="amount">
+                                14%
+                            </div>
+                        </div>
+                        <div class="tag__date">
+                            <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="body__name">
+                            Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                        </div>
+                        <div class="body__features">
+                            <div class="upper d-flex justify-content-between">
+                                <div class="price">87.000 ₫</div>
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="lower d-flex align-items-center">
+                                <div class="icon d-flex">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="text">1.6k đã bán</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item__card">
+                    <div class="img">
+                        <img src="/src/assets/images/photos/product/product-img/1e471119390924df0ce3e19102cc2e85.png" alt="">
+                        <div class="tag__cert">
+                            <div class="mall-tag">Mall</div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tag__sale">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/Sale.svg" alt="">
+                            </div>
+                            <div class="amount">
+                                14%
+                            </div>
+                        </div>
+                        <div class="tag__date">
+                            <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="body__name">
+                            Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                        </div>
+                        <div class="body__features">
+                            <div class="upper d-flex justify-content-between">
+                                <div class="price">87.000 ₫</div>
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="lower d-flex align-items-center">
+                                <div class="icon d-flex">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="text">1.6k đã bán</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item__card">
+                    <div class="img">
+                        <img src="/src/assets/images/photos/product/product-img/2e93ae9353938793bba02643614f92a8.png" alt="">
+                        <div class="tag__cert">
+                            <div class="mall-tag">Mall</div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tag__sale">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/Sale.svg" alt="">
+                            </div>
+                            <div class="amount">
+                                14%
+                            </div>
+                        </div>
+                        <div class="tag__date">
+                            <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="body__name">
+                            Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                        </div>
+                        <div class="body__features">
+                            <div class="upper d-flex justify-content-between">
+                                <div class="price">87.000 ₫</div>
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="lower d-flex align-items-center">
+                                <div class="icon d-flex">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="text">1.6k đã bán</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item__card">
+                    <div class="img">
+                        <img src="/src/assets/images/photos/product/product-img/3bf2969bdee5826040d4f0dc0760eddd.jpg" alt="">
+                        <div class="tag__cert">
+                            <div class="mall-tag">Mall</div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tag__sale">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/Sale.svg" alt="">
+                            </div>
+                            <div class="amount">
+                                14%
+                            </div>
+                        </div>
+                        <div class="tag__date">
+                            <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="body__name">
+                            Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                        </div>
+                        <div class="body__features">
+                            <div class="upper d-flex justify-content-between">
+                                <div class="price">87.000 ₫</div>
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="lower d-flex align-items-center">
+                                <div class="icon d-flex">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="text">1.6k đã bán</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item__card">
+                    <div class="img">
+                        <img src="/src/assets/images/photos/product/product-img/527ced644f7570a402b99b670d317263.png" alt="">
+                        <div class="tag__cert">
+                            <div class="mall-tag">Mall</div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tag__sale">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/Sale.svg" alt="">
+                            </div>
+                            <div class="amount">
+                                14%
+                            </div>
+                        </div>
+                        <div class="tag__date">
+                            <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="body__name">
+                            Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                        </div>
+                        <div class="body__features">
+                            <div class="upper d-flex justify-content-between">
+                                <div class="price">87.000 ₫</div>
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="lower d-flex align-items-center">
+                                <div class="icon d-flex">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="text">1.6k đã bán</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item__card">
+                    <div class="img">
+                        <img src="/src/assets/images/photos/product/product-img/538ff02656bbdcdd21363fb14015360f.jpg" alt="">
+                        <div class="tag__cert">
+                            <div class="mall-tag">Mall</div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tag__sale">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/Sale.svg" alt="">
+                            </div>
+                            <div class="amount">
+                                14%
+                            </div>
+                        </div>
+                        <div class="tag__date">
+                            <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="body__name">
+                            Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                        </div>
+                        <div class="body__features">
+                            <div class="upper d-flex justify-content-between">
+                                <div class="price">87.000 ₫</div>
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="lower d-flex align-items-center">
+                                <div class="icon d-flex">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="text">1.6k đã bán</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item__card">
+                    <div class="img">
+                        <img src="/src/assets/images/photos/product/product-img/5b421b4cb8c26c9b684543efeb653bec.png" alt="">
+                        <div class="tag__cert">
+                            <div class="mall-tag">Mall</div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tag__sale">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/Sale.svg" alt="">
+                            </div>
+                            <div class="amount">
+                                14%
+                            </div>
+                        </div>
+                        <div class="tag__date">
+                            <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="body__name">
+                            Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                        </div>
+                        <div class="body__features">
+                            <div class="upper d-flex justify-content-between">
+                                <div class="price">87.000 ₫</div>
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="lower d-flex align-items-center">
+                                <div class="icon d-flex">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="text">1.6k đã bán</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item__card">
+                    <div class="img">
+                        <img src="/src/assets/images/photos/product/product-img/630b348836b4d84ee46d9ee8d22e0a4e.png" alt="">
+                        <div class="tag__cert">
+                            <div class="mall-tag">Mall</div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tag__sale">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/Sale.svg" alt="">
+                            </div>
+                            <div class="amount">
+                                14%
+                            </div>
+                        </div>
+                        <div class="tag__date">
+                            <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="body__name">
+                            Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                        </div>
+                        <div class="body__features">
+                            <div class="upper d-flex justify-content-between">
+                                <div class="price">87.000 ₫</div>
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="lower d-flex align-items-center">
+                                <div class="icon d-flex">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="text">1.6k đã bán</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item__card">
+                    <div class="img">
+                        <img src="/src/assets/images/photos/product/product-img/68dc123b6cfc9c2f8b46ee5b5a5830d7.png" alt="">
+                        <div class="tag__cert">
+                            <div class="mall-tag">Mall</div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tag__sale">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/Sale.svg" alt="">
+                            </div>
+                            <div class="amount">
+                                14%
+                            </div>
+                        </div>
+                        <div class="tag__date">
+                            <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="body__name">
+                            Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                        </div>
+                        <div class="body__features">
+                            <div class="upper d-flex justify-content-between">
+                                <div class="price">87.000 ₫</div>
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="lower d-flex align-items-center">
+                                <div class="icon d-flex">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="text">1.6k đã bán</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item__card">
+                    <div class="img">
+                        <img src="/src/assets/images/photos/product/product-img/7bf4b3788ac375b320588a5a302f5888.png" alt="">
+                        <div class="tag__cert">
+                            <div class="mall-tag">Mall</div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tag__sale">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/Sale.svg" alt="">
+                            </div>
+                            <div class="amount">
+                                14%
+                            </div>
+                        </div>
+                        <div class="tag__date">
+                            <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="body__name">
+                            Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                        </div>
+                        <div class="body__features">
+                            <div class="upper d-flex justify-content-between">
+                                <div class="price">87.000 ₫</div>
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="lower d-flex align-items-center">
+                                <div class="icon d-flex">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="text">1.6k đã bán</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item__card">
+                    <div class="img">
+                        <img src="/src/assets/images/photos/product/product-img/7ed33b73cab292c9a408b198a66d6f2c.png" alt="">
+                        <div class="tag__cert">
+                            <div class="mall-tag">Mall</div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tag__sale">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/Sale.svg" alt="">
+                            </div>
+                            <div class="amount">
+                                14%
+                            </div>
+                        </div>
+                        <div class="tag__date">
+                            <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="body__name">
+                            Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                        </div>
+                        <div class="body__features">
+                            <div class="upper d-flex justify-content-between">
+                                <div class="price">87.000 ₫</div>
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="lower d-flex align-items-center">
+                                <div class="icon d-flex">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="text">1.6k đã bán</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item__card">
+                    <div class="img">
+                        <img src="/src/assets/images/photos/product/product-img/985f7e2b6151572a2b8fd94d6192b837.png" alt="">
+                        <div class="tag__cert">
+                            <div class="mall-tag">Mall</div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tag__sale">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/Sale.svg" alt="">
+                            </div>
+                            <div class="amount">
+                                14%
+                            </div>
+                        </div>
+                        <div class="tag__date">
+                            <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="body__name">
+                            Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                        </div>
+                        <div class="body__features">
+                            <div class="upper d-flex justify-content-between">
+                                <div class="price">87.000 ₫</div>
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="lower d-flex align-items-center">
+                                <div class="icon d-flex">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="text">1.6k đã bán</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item__card">
+                    <div class="img">
+                        <img src="/src/assets/images/photos/product/product-img/a0bc8e91a7ffb1f213725df36156bd14.png" alt="">
+                        <div class="tag__cert">
+                            <div class="mall-tag">Mall</div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                            </div>
+                            <div class="cert__icon">
+                                <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tag__sale">
+                            <div class="icon">
+                                <img src="/src/assets/images/icons/Sale.svg" alt="">
+                            </div>
+                            <div class="amount">
+                                14%
+                            </div>
+                        </div>
+                        <div class="tag__date">
+                            <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="body__name">
+                            Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                        </div>
+                        <div class="body__features">
+                            <div class="upper d-flex justify-content-between">
+                                <div class="price">87.000 ₫</div>
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="lower d-flex align-items-center">
+                                <div class="icon d-flex">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                    <img class="star" src="/src/assets/images/icons/star.svg" alt="">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="text">1.6k đã bán</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.6/src/jquery.ez-plus.js"></script>
+    <script src="/src/js/loadHeaderFooter.js"></script>
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/productDetail.js"></script>
+</body>
+</html
