@@ -5,19 +5,6 @@ document.addEventListener('DOMContentLoaded', function(){
             console.log(item.value)
         })
     })
-    // document.addEventListener('click', function (e) {
-    //     const clickedItem = e.target;
-    //     const isCollapseToggle = clickedItem.getAttribute('data-bs-toggle') === 'collapse';
-    //     const isCollapseTarget = clickedItem.closest('.collapse');
-        
-    //     if (!isCollapseToggle && !isCollapseTarget) {
-    //         const collapses = document.querySelectorAll('.collapse');
-    //         collapses.forEach(collapse => {
-    //             const bsCollapse = new bootstrap.Collapse(collapse, { toggle: false });
-    //             bsCollapse.hide();
-    //         });
-    //     }
-    // });
     const product_category_slider = document.querySelector('.product-category__content');
     var onHold__product_category = false;
     product_category_slider.addEventListener('mousedown', (event) => onDown(event, product_category_slider));
@@ -112,5 +99,6 @@ document.addEventListener('DOMContentLoaded', function(){
         const walk = (x - startX) * 1.2; //scroll-fast
         item.scrollLeft = scrollLeft - walk;
     }
+
 
 })

@@ -10,6 +10,49 @@
     <link rel="stylesheet" href="/src/styles/css/style.css">
 </head>
 <body>
+    <header></header>
+    <main>
+        <div class="container--tablet">
+            <div class="sidebar">
+                <div class="sidebar__title">
+                    <span><img src="/src/assets/images/icons/filter-dark.svg" alt=""></span>
+                    <span>Bộ lọc tìm kiếm</span>
+                </div>
+                <div class="sidebar__item">
+                    <div class="item__title">Danh mục</div>
+                    <div class="item__content">
+                        <a class="option" href="#">Trái cây</a>
+                        <a class="option" href="#">Thịt, trứng</a>
+                        <a class="option" href="#">Rau, củ, quả</a>
+                        <a class="option" href="#">Sữa, bơ, phô mai</a>
+                    </div>
+                </div>
+                <div class="sidebar__divider"></div>
+                <div class="sidebar__item">
+                    <div class="item__title">Phương thức vận chuyển</div>
+                    <div class="item__content">
+                        <div class="option form-check">
+                            <input type="checkbox" class="form-check-input" id="shipment-1">
+                            <label for="shipment-1">Hoả tốc</label>
+                        </div>
+                        <div class="option form-check">
+                            <input type="checkbox" class="form-check-input" id="shipment-2">
+                            <label for="shipment-2">Nhanh</label>
+                        </div>
+                        <div class="option form-check">
+                            <input type="checkbox" class="form-check-input" id="shipment-3">
+                            <label for="shipment-3">Tiêu chuẩn</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result">
+                <div class="result__keyword"></div>
+                <div class="result__filter-bar"></div>
+                <div class="result__list"></div>
+            </div>
+        </div>
+    </main>
     <footer></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>

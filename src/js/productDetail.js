@@ -148,3 +148,42 @@ moreBtn.on('click', ()=>{
     rotation += 180;
     moreBtn_icon.css('transform', `rotate(${rotation}deg)`);
 })
+
+
+$('.filter__btn').on('click', function(){
+    if($(this) == $('.filter__btn:first')){
+        $(this).addClass('filter--active');
+    }
+    else if($(this) != $('.filter__btn:first') && $(this).hasClass('filter--active')){
+        $('.filter__btn').removeClass('filter--active');
+        $('.filter__btn:first').addClass('filter--active');
+    }
+    else{
+        $('.filter__btn').removeClass('filter--active');
+        $(this).addClass('filter--active');
+    }
+})
+
+let video_container = $('.video__container')
+let video_btn = video_container.find('button');
+video_btn.on('click', function(){
+    let video = $(this).closest('.video__container').children('video');
+    let btn_overlay = $(this).closest('.video__container').children('.video__btn')
+    let icon = $(this).find('i');
+    if(video.get(0).paused){
+        video.trigger('play');
+        icon.removeClass('fa-play').addClass('fa-pause')
+        btn_overlay.fadeOut(500)
+    }
+    else{
+        video.trigger('pause');
+        icon.removeClass('fa-pause').addClass('fa-play')
+    }
+})
+let video_self = video_container.find('video')
+let btn_overlay = video_container.find('.video__btn')
+video_self.hover(function(){
+    if(!$(this).get(0).paused){
+        btn_overlay.fadeIn(300)
+    }
+})

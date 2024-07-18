@@ -543,10 +543,13 @@ main{
                 }
             }
             .rating__block{
+                margin-bottom: 50px;
                 .general{
                     &__block{
                         display: flex;
                         align-items: center;
+                        border-bottom: 1px solid $border-secondary;
+                        padding-bottom: 12px;
                     }
                     &__divider{
                         border: 1px solid $border-secondary;
@@ -592,10 +595,47 @@ main{
                     }
                 }
                 .filter{
-                    &__block{}
-                }
-                .comments{
-                    &__block{}
+                    &__block{
+                        padding-top: 32px;
+                        button.filter__btn{
+                            border: 0;
+                            border-radius: 2px;
+                            background-color: $main-bg-grey;
+                            &:hover{
+                                color: $white;
+                                background-color: $light-green;
+                            }
+                            &.filter--active{
+                                color: $white;
+                                background-color: $green;
+                            }
+                        }
+                        .upper{
+                            display: flex;
+                            gap: 22px;
+                            button{
+                                padding: 12px 16px;
+                            }
+                        }
+                        .lower{
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 12px 0px 0px;
+                            gap: 12px;
+                            button{
+                                flex: 1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 8px;
+                                padding: 13px 0px;
+                                img{
+                                    width: 15px;
+                                    height: 15px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .main__block--divider{
@@ -754,6 +794,160 @@ table.table-striped{
                 white-space: nowrap;
                 color: $text-secondary;
                 @include overflow-dot-1;
+            }
+        }
+    }
+}
+.comments{
+    &__block{
+        margin-top: 32px;
+    }
+    &__divider{
+        border-top: 1px solid $border-secondary;
+        margin: 24px 0px 24px;
+    }
+    &__item{
+        flex: 1;
+        .user{
+            &__section{
+                display: flex;
+                justify-content: space-between;
+            }
+            &__info{
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                .avatar{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+                .text{
+                    .username{
+                        line-height: 18px;
+                        font-weight: 500;
+                    }
+                    .rating{
+                        padding: 0px;
+                        line-height: 10px;
+                        img{
+                            height: 12px;
+                            width: fit-content;
+                        }
+                    }
+                }
+            }
+            &__date-rating{
+                color: $text-secondary;
+                font-size: 12px;
+            }
+            &__comment{
+                margin-top: 16px;
+                .text{
+                    font-size: 12px;
+                    line-height: 16.8px;
+                }
+                .img{
+                    margin-top: 16px;
+                    display: flex;
+                    width: inherit;
+                    overflow: scroll;
+                    @include scroll-no-bar;
+                    align-items: center;
+                    gap: 16px;
+                    &__item{
+                        flex-shrink: 0;
+                        width: 82px;
+                        height: 82px;
+                        border-radius: 5px;
+                        overflow: hidden;
+                    }
+                    .video__container{
+                        position: relative;
+                        width: inherit;
+                        height: inherit;
+                        video{
+                            width: inherit;
+                            height: inherit;
+                        }
+                        .video__btn{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            button{
+                                width: 18px;
+                                height: 18px;
+                                padding: 0px;
+                                margin: 0px;
+                                border-radius: 50%;
+                                border: 1px solid transparent;
+                                background-color: $black;
+                                opacity: 0.5;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                i{
+                                    mix-blend-mode: screen;
+                                    color: $white;
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .shop__comment{
+            margin-top: 16px;
+            padding: 10px;
+            background-color: $main-bg-grey;
+            .title{
+                font-size: 12px;
+                font-weight: 500;
+            }
+            .content{
+                padding-top: 6px;
+                font-size: 12px
+            }
+        }
+    }
+}
+.action__bar--sticky{
+    @include minw-tablet{
+        display: none;
+    }
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 54px;
+    button{
+        display: flex;
+        height: inherit;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        border: 0;
+        border-radius: 0;
+        &#buy-now-btn{
+            background-color: $green;
+            color: $white;
+            font-weight: 500;
+        }
+        &#add-cart-btn{
+            background-color: $bg-light-success;
+            color: $green;
+            img{
+                width: 27px;
+                height: fit-content;
             }
         }
     }
