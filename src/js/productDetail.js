@@ -150,17 +150,17 @@ moreBtn.on('click', ()=>{
 })
 
 
-$('.filter__btn').on('click', function(){
-    if($(this) == $('.filter__btn:first')){
-        $(this).addClass('filter--active');
+$('.filter-rating__btn').on('click', function(){
+    if($(this) == $('.filter-rating__btn:first')){
+        $(this).addClass('filter-rating__btn--active');
     }
-    else if($(this) != $('.filter__btn:first') && $(this).hasClass('filter--active')){
-        $('.filter__btn').removeClass('filter--active');
-        $('.filter__btn:first').addClass('filter--active');
+    else if($(this) != $('.filter-rating__btn:first') && $(this).hasClass('filter-rating__btn--active')){
+        $('.filter-rating__btn').removeClass('filter-rating__btn--active');
+        $('.filter-rating__btn:first').addClass('filter-rating__btn--active');
     }
     else{
-        $('.filter__btn').removeClass('filter--active');
-        $(this).addClass('filter--active');
+        $('.filter-rating__btn').removeClass('filter-rating__btn--active');
+        $(this).addClass('filter-rating__btn--active');
     }
 })
 

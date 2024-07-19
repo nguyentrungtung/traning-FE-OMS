@@ -1,85 +1,358 @@
+header.search__header{
+    @include maxw-992px{
+        display: none !important;
+    }
+}
 main{
     position: relative;
-    .sidebar{
-        width: 215px;
-        height: fit-content;
-        @include scroll-no-bar;
-        font-size: 13px;
-        &__title{
+    overflow: hidden;
+    .container--tablet{
+        overflow: visible !important;
+        @include minw-992px{
             display: flex;
-            align-items: center;
-            gap: 10px;
-            img{
-                width: 24px;
-                height: auto;
-            }
-            span{
-                font-size: 20px;
-                line-height: 30px;
-                font-weight: 700;
-            }
         }
-        &__item{
-            margin-top: 20px;
-            .item{
-                &__title{
-                    font-weight: 700;
+        padding-top: 0px;
+        .sidebar__container{
+            @include maxw-992px{
+                position: absolute;
+                right: -200%;
+                transition: 1.5s ease-in-out;
+                height: 100%;
+                background-color: rgba($color: $black, $alpha: 0.6);
+                width: 100vw;
+                display: flex;
+                justify-content: end;
+                z-index: 998;
+            }
+            .sidebar{
+                margin-top: 28px;
+                padding: 17px 0px 0px;
+                width: 215px;
+                height: calc(100vh - 17px);
+                @include scroll-no-bar;
+                top: 0;
+                font-size: 13px;
+                position: sticky;
+                position: -webkit-sticky;
+                z-index: 999;
+                flex-shrink: 0;
+                @include maxw-992px{
+                    background-color: $white;
+                    padding: 13px 10px 14px;
+                    width: 234px;
+                    margin-top: 0px;
+                    height: fit-content;
                 }
-                &__content{
-                    margin-top: 20px;
-                    &--15px{
-                        margin-top: 15px;
+                &__title{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    img{
+                        width: 24px;
+                        height: auto;
                     }
-                    .option{
-                        margin-top: 10px;
-                        display: block;
-                        color: $black;
-                        label{
-                            padding-left: 5px;
+                    span{
+                        font-size: 20px;
+                        line-height: 30px;
+                        font-weight: 700;
+                    }
+                }
+                &__item{
+                    margin-top: 20px;
+                    .item{
+                        &__title{
+                            font-weight: 700;
                         }
-                        a{
-                            display: flex;
-                            gap: 10px;
-                            padding: 0px;
-                            width: fit-content;
-                            @include btn-status{
-                                border-color: transparent;
+                        &__content{
+                            margin-top: 20px;
+                            &--15px{
+                                margin-top: 15px;
                             }
-                            .icons{
+                            .option{
+                                margin-top: 10px;
+                                display: block;
+                                color: $black;
+                                label{
+                                    padding-left: 5px;
+                                }
+                                a{
+                                    display: flex;
+                                    gap: 10px;
+                                    padding: 0px;
+                                    width: fit-content;
+                                    @include btn-status{
+                                        border-color: transparent;
+                                    }
+                                    .icons{
+                                        display: flex;
+                                        align-items: center;
+                                        img{
+                                            width:  20px;
+                                            height: 20px;
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                            >button.submit{
+                                background-color: $bright-green;
+                                color: white;
+                                font-weight: 700;
+                                margin-top: 15px;
+                                width: 100%;
+                                border: 0;
+                                padding: 5px 0px 5px;
+                                border-radius: 4px;
+                            }
+                            >.input-group{
                                 display: flex;
-                                align-items: center;
-                                img{
-                                    width:  20px;
-                                    height: 20px;
-                                    display: block;
+                                gap: 13px;
+                                input{
+                                    border-radius: 4px !important;
+                                    border: 1px $border-secondary solid !important;
                                 }
                             }
                         }
                     }
-                    >button.submit{
-                        background-color: $bright-green;
-                        color: white;
-                        font-weight: 700;
-                        margin-top: 15px;
-                        width: 100%;
-                        border: 0;
-                        padding: 5px 0px 5px;
-                        border-radius: 4px;
-                    }
-                    >.input-group{
-                        display: flex;
-                        gap: 13px;
+                }
+                &__divider{
+                    margin-top: 20px;
+                    border-bottom: 1px solid $border-secondary;
+                }
+            }
+        }
+        .result{
+            .filter-bar__row{
+                @include minw-992px{
+                    display: none !important;
+                }
+                background-color: $white;
+                padding: 10px 16px;
+                .upper{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 10px;
+                    align-items: center;
+                    padding-right: 10px;
+                    .input-group{
+                        flex: 1;
+                        align-items: center;
+                        padding: 3px;
+                        background-color: $bg-input-secondary;
                         input{
-                            border-radius: 4px !important;
-                            border: 1px $border-secondary solid !important;
+                            background-color: $bg-input-secondary;
+                            color: $text-secondary;
+                            &:focus{
+                                color: $black;
+                            }
+                        }
+                        button{
+                            @include btn-status{
+                                border: 1px solid transparent;
+                            }
+                        }
+                    }
+                    &--btn{
+                        padding: 0;
+                        border: 1px solid transparent;
+                        background-color: $white;
+                        width: fit-content;
+                        height: 25px;
+                        padding: 2px;
+                        color: $green;
+                        position: relative;
+                        span{
+                            bottom: -5px;
+                            right: -10px;
+                            font-size: 12px;
+                            line-height: 5px;
+                            position: absolute;
+                        }
+                    }
+                }
+                .lower{
+                    padding-top: 12px;
+                    display: flex;
+                    .filter-row{
+                        &__btn{
+                            background-color: $white;
+                            flex: 1;
+                            border: none;
+                            padding: 5px 0px;
+                            line-height: 16px;
+                            &--active{
+                                span{
+                                    color: $green;
+                                    font-weight: 500;
+                                    border-bottom: 2px solid $green;
+                                    i{
+                                        color: $green !important;
+                                    }
+                                }
+                            }
+                            &--toggle{
+                                padding: 4px 8px;
+                                span{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    i{
+                                        color: $text-secondary;
+                                    }
+                                }
+                            }
+                        }
+                        &__divider{
+                            border-left: 1px solid $black;
+                            margin: 5px 0px;
                         }
                     }
                 }
             }
-        }
-        &__divider{
-            margin-top: 20px;
-            border-bottom: 1px solid $border-secondary;
+            margin-top: 5px;
+            margin-left: 15px;
+            flex: 1;
+            @include maxw-992px{
+                margin-left: 0;
+            }
+            &__keyword{
+                @include maxw-992px{
+                    display: none;
+                }
+                span{
+                    font-weight: 700;
+                }
+            }
+            &__filter-bar{
+                @include maxw-992px{
+                    display: none;
+                }
+                display: flex;
+                margin-top: 17px;
+                padding: 7px 12px 7px 28px;
+                background-color: $white;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 6px;
+                .action-btn-list{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    span{
+                        padding-right: 60px;
+                        @include maxw-1400px{
+                            padding-right: 30px;
+                        }
+                    }
+                    button.filter-bar__btn{
+                        @include btn-status{
+                            background-color: $light-green;
+                            color: $white;
+                        }
+                        &--active{
+                            background-color: $green;
+                            color: $white;
+                            @include btn-status{
+                                background-color: $green;
+                                color: $white;
+                            }
+                        }
+                        border: 1px solid transparent;
+                        background-color: $white;
+                        width: 84px;
+                        padding: 5px;
+                        border-radius: 0;
+                        &--toggle{
+                            width: 140px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            @include dropdown-btn-status{
+                                i{
+                                    color: $white;
+                                }
+                            }
+                            i{
+                                color: $border-grey;
+                            }
+                        }
+                    }
+                }
+                .page-direction{
+                    .number{
+                        margin-right: 10px;
+                        line-height: 18px;
+                        &__current{
+                            font-weight: 700;
+                            color: $green;
+                        }
+                    }
+                    .direction{
+                        button{
+                            border: 1px solid transparent;
+                            width: 16px;
+                            height: 16px;text-align: center;
+                            font-size: 10px;
+                            background-color: $white;
+                            transition: 0.3s all;
+                            @include btn-status{
+                                color: $white;
+                                background-color: $green;
+                                transition: 0.3s all;
+                            }
+                        }
+                    }
+                }
+            }
+            &__content{
+                margin-top: 17px;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-gap: 12px;
+                @include maxw-1400px{
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-gap: 15px;
+                }
+                @include maxw-1200px{
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 18px;
+                    margin-top: 13px;
+                }
+                .product__card{
+                    width: 100% !important;
+                    background-color: $white;
+                    border-radius: 3px;
+                    .img{
+                        width: 100%;
+                        @include maxw-1400px{
+                            height: 210px;
+                        }
+                        @include maxw-1200px{
+                            height: 220px;
+                        }
+                    }
+                    .body{
+                        &__name{
+                            color: $black;
+                        }
+                        &__features{    
+                            .lower{
+                                .location-name{
+                                    color: $bright-green;
+                                    font-size: 12px;
+                                    padding-left: 5px;
+                                }
+                                .icon{
+                                    i{
+                                        color: $bright-green;
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

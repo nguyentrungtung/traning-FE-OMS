@@ -4,52 +4,1405 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes">
     <link rel="stylesheet" href="/src/styles/css/style.css">
 </head>
 <body>
-    <header></header>
+    <header class="search__header"></header>
     <main>
-        <div class="container--tablet">
-            <div class="sidebar">
-                <div class="sidebar__title">
-                    <span><img src="/src/assets/images/icons/filter-dark.svg" alt=""></span>
-                    <span>Bộ lọc tìm kiếm</span>
-                </div>
-                <div class="sidebar__item">
-                    <div class="item__title">Danh mục</div>
-                    <div class="item__content">
-                        <a class="option" href="#">Trái cây</a>
-                        <a class="option" href="#">Thịt, trứng</a>
-                        <a class="option" href="#">Rau, củ, quả</a>
-                        <a class="option" href="#">Sữa, bơ, phô mai</a>
+        <div class="container--tablet main__block--padding">
+            <div class="sidebar__container sticky-top">
+                <div class="sidebar">
+                    <div class="sidebar__title">
+                        <span><img src="/src/assets/images/icons/filter-dark.svg" alt=""></span>
+                        <span>Bộ lọc tìm kiếm</span>
                     </div>
-                </div>
-                <div class="sidebar__divider"></div>
-                <div class="sidebar__item">
-                    <div class="item__title">Phương thức vận chuyển</div>
-                    <div class="item__content">
-                        <div class="option form-check">
-                            <input type="checkbox" class="form-check-input" id="shipment-1">
-                            <label for="shipment-1">Hoả tốc</label>
+                    <div class="sidebar__item">
+                        <div class="item__title">Danh mục</div>
+                        <div class="item__content">
+                            <a class="option" href="#">Trái cây</a>
+                            <a class="option" href="#">Thịt, trứng</a>
+                            <a class="option" href="#">Rau, củ, quả</a>
+                            <a class="option" href="#">Sữa, bơ, phô mai</a>
                         </div>
-                        <div class="option form-check">
-                            <input type="checkbox" class="form-check-input" id="shipment-2">
-                            <label for="shipment-2">Nhanh</label>
+                    </div>
+                    <div class="sidebar__divider"></div>
+                    <div class="sidebar__item">
+                        <div class="item__title">Phương thức vận chuyển</div>
+                        <div class="item__content">
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="shipment-1">
+                                <label for="shipment-1">Hoả tốc</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="shipment-2">
+                                <label for="shipment-2">Nhanh</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="shipment-3">
+                                <label for="shipment-3">Tiêu chuẩn</label>
+                            </div>
                         </div>
-                        <div class="option form-check">
-                            <input type="checkbox" class="form-check-input" id="shipment-3">
-                            <label for="shipment-3">Tiêu chuẩn</label>
+                    </div>
+                    <div class="sidebar__divider"></div>
+                    <div class="sidebar__item">
+                        <div class="item__title">Khoảng giá</div>
+                        <div class="item__content item__content--15px">
+                            <div class="input-group">
+                                <input placeholder="từ" type="text" class="form-control">
+                                <input placeholder="đến" type="text" class="form-control">
+                            </div>
+                            <button class="submit">Áp dụng</button>
+                        </div>
+                    </div>
+                    <div class="sidebar__divider"></div>
+                    <div class="sidebar__item">
+                        <div class="item__title">Đánh giá</div>
+                        <div class="item__content">
+                            <div class="option">
+                                <a href="" class="btn">
+                                    <span class="icons">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                    </span>
+                                    <span class="text">5 sao</span>
+                                </a>
+                            </div>
+                            <div class="option">
+                                <a href="" class="btn">
+                                    <span class="icons">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                    </span>
+                                    <span class="text">từ 4 sao</span>
+                                </a>
+                            </div>
+                            <div class="option">
+                                <a href="" class="btn">
+                                    <span class="icons">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                    </span>
+                                    <span class="text">từ 3 sao</span>
+                                </a>
+                            </div>
+                            <div class="option">
+                                <a href="" class="btn">
+                                    <span class="icons">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                    </span>
+                                    <span class="text">từ 2 sao</span>
+                                </a>
+                            </div>
+                            <div class="option">
+                                <a href="" class="btn">
+                                    <span class="icons">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                    </span>
+                                    <span class="text">từ 1 sao</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar__divider"></div>
+                    <div class="sidebar__item">
+                        <div class="item__title">Thương hiệu</div>
+                        <div class="item__content">
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="brand-1">
+                                <label for="brand-1">Thương hiệu A</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="brand-2">
+                                <label for="brand-2">Thương hiệu B</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="brand-3">
+                                <label for="brand-3">Thương hiệu C</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="brand-4">
+                                <label for="brand-4">Thương hiệu D</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar__divider"></div>
+                    <div class="sidebar__item">
+                        <div class="item__title">Màu sắc</div>
+                        <div class="item__content">
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="color-1">
+                                <label for="color-1">Đen</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="color-2">
+                                <label for="color-2">Trắng</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="color-3">
+                                <label for="color-3">Đỏ</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="color-4">
+                                <label for="color-4">Xanh lá</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="color-5">
+                                <label for="color-5">Cam</label>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="result">
-                <div class="result__keyword"></div>
-                <div class="result__filter-bar"></div>
-                <div class="result__list"></div>
+                <div class="filter-bar__row">
+                    <div class="upper">
+                        <button class="upper--btn">
+                            <img src="/src/assets/images/icons/arrow-left-green.svg" alt="">
+                        </button>
+                        <div class="upper--input input-group">
+                            <button class="btn"><img src="/src/assets/images/icons/li_search-secondary.svg" alt=""></button>
+                            <input type="text" class="form-control" value="Bông cải xanh">
+                        </div>
+                        <button class="upper--btn sidebar-caller__btn">
+                            <img src="/src/assets/images/icons/filter-green.svg" alt="">
+                            <span>Lọc</span>
+                        </button>
+                    </div>
+                    <div class="lower">
+                        <button class="filter-row__btn filter-row__btn--active"><span>Liên quan</span></button>
+                        <span class="filter-row__divider"></span>
+                        <button class="filter-row__btn"><span>Mới nhất</span></button>
+                        <span class="filter-row__divider"></span>
+                        <button class="filter-row__btn"><span>Bán chạy</span></button>
+                        <span class="filter-row__divider"></span>
+                        <button class="filter-row__btn filter-row__btn--toggle">
+                            <span>
+                                Giá
+                                <i class="fas fa-sort-up fa-sort-down"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="result__keyword">Tìm kiếm kết quả cho: <span>"Trai cay"</span></div>
+                <div class="result__filter-bar">
+                    <div class="action-btn-list">
+                        <span>Sắp xếp theo:</span>
+                        <button class="filter-bar__btn filter-bar__btn--active">Nổi bật</button>
+                        <button class="filter-bar__btn">Mới nhất</button>
+                        <button class="filter-bar__btn">Bán chạy</button>
+                        <button class="filter-bar__btn filter-bar__btn--toggle">
+                            Giá
+                            <i class="fas fa-sort-up fa-sort-down"></i>
+                        </button>
+                    </div>
+                    <div class="page-direction">
+                        <span class="number">
+                            <span class="number__current">1</span>
+                            <span>/200</span>
+                        </span>
+                        <span class="direction">
+                            <button class="fas fa-chevron-left"></button>
+                            <button class="fas fa-chevron-right"></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="result__content">
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/0930baf9ee76d8e4d6e813b13a58e3f4.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/527ced644f7570a402b99b670d317263.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/538ff02656bbdcdd21363fb14015360f.jpg" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/1e471119390924df0ce3e19102cc2e85.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/2e93ae9353938793bba02643614f92a8.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/5b421b4cb8c26c9b684543efeb653bec.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/630b348836b4d84ee46d9ee8d22e0a4e.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/68dc123b6cfc9c2f8b46ee5b5a5830d7.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/7bf4b3788ac375b320588a5a302f5888.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/7ed33b73cab292c9a408b198a66d6f2c.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/985f7e2b6151572a2b8fd94d6192b837.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/a0bc8e91a7ffb1f213725df36156bd14.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/ba49eceff2beeedc7d81eaa026134953.jpg" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/c01c1dfbd1115f1e364f8476812d6441.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/c24b003932586b321d25b94d92fa2f07.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/cac30a8ac31d39d9fa4a1bc0ae13ccba.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/d130e9219ca56fb08ee238bdfd289395.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/e4c1918fde6ffcb619ba3c5d5d5a5ea3.jpg" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/ebefde22c979f7072818bd7e6605c934.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/f1829abc47f6e724a824b6bc16c634fc.jpg" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/f5e4135772225a0b49d7e0f84e0f3f3a.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/f8eb8a47b4638d1ef4283e60d7637f4e.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/f997319e07b7896a279f5262a8b9ffe2.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/fa22282cc3ad895e20a2050665bc1f2c.png" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="product__card">
+                        <div class="img">
+                            <img src="/src/assets/images/photos/product/product-img/6ceab45f14d31b1d2eaa0534795a9d2c.jpg" alt="">
+                            <div class="tag__cert">
+                                <div class="mall-tag">Mall</div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="">
+                                </div>
+                                <div class="cert__icon">
+                                    <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tag__sale">
+                                <div class="icon">
+                                    <img src="/src/assets/images/icons/Sale.svg" alt="">
+                                </div>
+                                <div class="amount">
+                                    14%
+                                </div>
+                            </div>
+                            <div class="tag__date">
+                                <img src="/src/assets/images/photos/product/product-badge/date-tag.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="body__name">
+                                Bông cải xanh 100g nội địa Nhật Bản và tự nhiên 100%, không thuốc trừ sâu.
+                            </div>
+                            <div class="body__features">
+                                <div class="upper d-flex justify-content-between">
+                                    <div class="price text-dark-red">87.000 ₫</div>
+                                    <div class="icon">
+                                        <img src="/src/assets/images/icons/Vận chuyển.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="lower d-flex align-items-center">
+                                    <div class="icon d-flex">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div class="location-name">TP.Hồ Chí Minh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
@@ -59,5 +1412,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="/src/js/loadHeaderFooter.js"></script>
     <script src="/src/js/main.js"></script>
+    <script src="/src/js/search.js"></script>
 </body>
 </html

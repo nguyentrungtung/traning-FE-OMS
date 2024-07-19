@@ -597,7 +597,7 @@ main{
                 .filter{
                     &__block{
                         padding-top: 32px;
-                        button.filter__btn{
+                        button.filter-rating__btn{
                             border: 0;
                             border-radius: 2px;
                             background-color: $main-bg-grey;
@@ -605,9 +605,9 @@ main{
                                 color: $white;
                                 background-color: $light-green;
                             }
-                            &.filter--active{
-                                color: $white;
-                                background-color: $green;
+                            &--active{
+                                color: $white !important;
+                                background-color: $green !important;
                             }
                         }
                         .upper{
@@ -683,7 +683,7 @@ main{
         display: none;
     }
 }
-.item__card{
+.product__card{
     width: 192px;
     .img{
         width: 192px;
@@ -746,6 +746,7 @@ main{
                 .price{
                     color: $bright-green;
                     font-weight: 700;
+                    font-size: 16px;
                 }
                 .icon{
                     height: 13px;

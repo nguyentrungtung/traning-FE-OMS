@@ -14,7 +14,10 @@
     background-color: $bg-light-danger;
 }
 .text-red{
-    color: #FF000F;
+    color: #FF000F !important;
+}
+.text-dark-red{
+    color: #E60A32 !important;
 }
 .text-blue{
     color: $primary;
