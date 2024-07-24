@@ -89,6 +89,10 @@ main{
             padding-bottom: 10px;
         }
         .carousel{
+            @include maxw-tablet{
+                padding: 0px 16px;
+                max-width: 100%;
+            }
             .carousel-indicators{
                 button{
                     width: 16px !important;
@@ -110,24 +114,27 @@ main{
             }
             .carousel-inner{
                 .carousel-item{
-                    height: 430px;
+                    height: 415px;
                     @include maxw-1400px{
-                        height: 370px;
+                        height: 365px;
                     }
                     @include maxw-1200px{
-                        height: 300px;
+                        height: 320px;
                     }
                     @include maxw-desktop{
-                        height: 310px;
+                        height: 315px;
                     }
                     @include maxw-992px{
-                        height: 230px;
+                        height: 235px;
                     }
                     @include maxw-tablet{
-                        height: 170px;
+                        height: 240px;
+                    }
+                    @include maxw-576px{
+                        height: 160px;
                     }
                     @include mobile{
-                        height: 120px;
+                        height: 140px;
                     }
                     img{
                         display: block;

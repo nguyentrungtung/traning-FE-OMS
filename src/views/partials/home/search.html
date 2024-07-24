@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
+    <title>Tìm kiếm</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes">
     <link rel="stylesheet" href="/src/styles/css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column position-relative overflow-x-hidden">
     <header class="search__header"></header>
     <main>
-        <div class="container--tablet main__block--padding">
-            <div class="sidebar__container sticky-top">
-                <div class="sidebar">
+        <div class="container--tablet main__block--padding filter-content-search__block">
+            <div class="sidebar__overlayer h-100"></div>
+            <div class="sidebar__container">
+                <form class="sidebar">
                     <div class="sidebar__title">
-                        <span><img src="/src/assets/images/icons/filter-dark.svg" alt=""></span>
+                        <span class="img"><img src="/src/assets/images/icons/filter-dark.svg" alt=""></span>
+                        <button class="btn sidebar__close-btn"><i class="fas fa-xmark"></i></button>
                         <span>Bộ lọc tìm kiếm</span>
                     </div>
                     <div class="sidebar__item">
@@ -171,7 +173,14 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="sidebar__divider"></div>
+                    <div class="sidebar__item">
+                        <div class="item__content">
+                            <button class="btn sidebar__reset-btn" type="reset">Xoá tất cả bộ lọc</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="shadow-block"></div>
             </div>
             <div class="result">
                 <div class="filter-bar__row">
@@ -198,7 +207,10 @@
                         <button class="filter-row__btn filter-row__btn--toggle">
                             <span>
                                 Giá
-                                <i class="fas fa-sort-up fa-sort-down"></i>
+                                <div>
+                                    <i class="fas fa-sort-up sort-hidden__icon"></i>
+                                    <i class="fas fa-sort-down sort-hidden__icon"></i>
+                                </div>
                             </span>
                         </button>
                     </div>
@@ -1402,6 +1414,16 @@
                             </div>
                         </div>
                     </a>
+                </div>
+                <div class="page-jumper">
+                    <button class="btn page-jumper__btn page-jumper__btn--direction"><i class="fas fa-chevron-left"></i></button>
+                    <button class="btn page-jumper__btn page-jumper__btn--active">1</button>
+                    <button class="btn page-jumper__btn">2</button>
+                    <button class="btn page-jumper__btn">3</button>
+                    <button class="btn page-jumper__btn">4</button>
+                    <button class="btn page-jumper__btn">5</button>
+                    <button class="btn page-jumper__btn">...</button>
+                    <button class="btn page-jumper__btn page-jumper__btn--direction"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>

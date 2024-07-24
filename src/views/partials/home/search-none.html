@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kiếm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes">
+    <link rel="stylesheet" href="/src/styles/css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header class="search__header"></header>
+    <main class="flex-fill row g-0">
+        <div class="container--tablet main__block--padding col filter-content-search__block">
+            <div class="sidebar__overlayer"></div>
+            <div class="sidebar__container">
+                <form class="sidebar h-100 overflow-scroll">
+                    <div class="sidebar__title">
+                        <span class="img"><img src="/src/assets/images/icons/filter-dark.svg" alt=""></span>
+                        <button class="btn sidebar__close-btn"><i class="fas fa-xmark"></i></button>
+                        <span>Bộ lọc tìm kiếm</span>
+                    </div>
+                    <div class="sidebar__item">
+                        <div class="item__title">Danh mục</div>
+                        <div class="item__content">
+                            <a class="option" href="#">Trái cây</a>
+                            <a class="option" href="#">Thịt, trứng</a>
+                            <a class="option" href="#">Rau, củ, quả</a>
+                            <a class="option" href="#">Sữa, bơ, phô mai</a>
+                        </div>
+                    </div>
+                    <div class="sidebar__divider"></div>
+                    <div class="sidebar__item">
+                        <div class="item__title">Phương thức vận chuyển</div>
+                        <div class="item__content">
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="shipment-1">
+                                <label for="shipment-1">Hoả tốc</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="shipment-2">
+                                <label for="shipment-2">Nhanh</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="shipment-3">
+                                <label for="shipment-3">Tiêu chuẩn</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar__divider"></div>
+                    <div class="sidebar__item">
+                        <div class="item__title">Khoảng giá</div>
+                        <div class="item__content item__content--15px">
+                            <div class="input-group">
+                                <input placeholder="từ" type="text" class="form-control">
+                                <input placeholder="đến" type="text" class="form-control">
+                            </div>
+                            <button class="submit">Áp dụng</button>
+                        </div>
+                    </div>
+                    <div class="sidebar__divider"></div>
+                    <div class="sidebar__item">
+                        <div class="item__title">Đánh giá</div>
+                        <div class="item__content">
+                            <div class="option">
+                                <a href="" class="btn">
+                                    <span class="icons">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                    </span>
+                                    <span class="text">5 sao</span>
+                                </a>
+                            </div>
+                            <div class="option">
+                                <a href="" class="btn">
+                                    <span class="icons">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                    </span>
+                                    <span class="text">từ 4 sao</span>
+                                </a>
+                            </div>
+                            <div class="option">
+                                <a href="" class="btn">
+                                    <span class="icons">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                    </span>
+                                    <span class="text">từ 3 sao</span>
+                                </a>
+                            </div>
+                            <div class="option">
+                                <a href="" class="btn">
+                                    <span class="icons">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                    </span>
+                                    <span class="text">từ 2 sao</span>
+                                </a>
+                            </div>
+                            <div class="option">
+                                <a href="" class="btn">
+                                    <span class="icons">
+                                        <img src="/src/assets/images/icons/star.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                        <img src="/src/assets/images/icons/star-outline.svg" alt="">
+                                    </span>
+                                    <span class="text">từ 1 sao</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar__divider"></div>
+                    <div class="sidebar__item">
+                        <div class="item__title">Thương hiệu</div>
+                        <div class="item__content">
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="brand-1">
+                                <label for="brand-1">Thương hiệu A</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="brand-2">
+                                <label for="brand-2">Thương hiệu B</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="brand-3">
+                                <label for="brand-3">Thương hiệu C</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="brand-4">
+                                <label for="brand-4">Thương hiệu D</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar__divider"></div>
+                    <div class="sidebar__item">
+                        <div class="item__title">Màu sắc</div>
+                        <div class="item__content">
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="color-1">
+                                <label for="color-1">Đen</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="color-2">
+                                <label for="color-2">Trắng</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="color-3">
+                                <label for="color-3">Đỏ</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="color-4">
+                                <label for="color-4">Xanh lá</label>
+                            </div>
+                            <div class="option form-check">
+                                <input type="checkbox" class="form-check-input" id="color-5">
+                                <label for="color-5">Cam</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar__divider"></div>
+                    <div class="sidebar__item">
+                        <div class="item__content">
+                            <button class="btn sidebar__reset-btn" type="reset">Xoá tất cả bộ lọc</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="shadow-block"></div>
+            </div>
+            <div class="result">
+                <div class="filter-bar__row">
+                    <div class="upper">
+                        <button class="upper--btn">
+                            <img src="/src/assets/images/icons/arrow-left-green.svg" alt="">
+                        </button>
+                        <div class="upper--input input-group">
+                            <button class="btn"><img src="/src/assets/images/icons/li_search-secondary.svg" alt=""></button>
+                            <input type="text" class="form-control" value="Xe hoi">
+                        </div>
+                        <button class="upper--btn sidebar-caller__btn">
+                            <img src="/src/assets/images/icons/filter-green.svg" alt="">
+                            <span>Lọc</span>
+                        </button>
+                    </div>
+                    <div class="lower">
+                        <button class="filter-row__btn filter-row__btn--active"><span>Liên quan</span></button>
+                        <span class="filter-row__divider"></span>
+                        <button class="filter-row__btn"><span>Mới nhất</span></button>
+                        <span class="filter-row__divider"></span>
+                        <button class="filter-row__btn"><span>Bán chạy</span></button>
+                        <span class="filter-row__divider"></span>
+                        <button class="filter-row__btn filter-row__btn--toggle">
+                            <span>
+                                Giá
+                                <div>
+                                    <i class="fas fa-sort-up sort-hidden__icon"></i>
+                                    <i class="fas fa-sort-down sort-hidden__icon"></i>
+                                </div>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="result__keyword">Tìm kiếm kết quả cho: <span>"Xe hoi"</span></div>
+                <div class="result__filter-bar">
+                    <div class="action-btn-list">
+                        <span>Sắp xếp theo:</span>
+                        <button class="filter-bar__btn filter-bar__btn--active">Nổi bật</button>
+                        <button class="filter-bar__btn">Mới nhất</button>
+                        <button class="filter-bar__btn">Bán chạy</button>
+                        <button class="filter-bar__btn filter-bar__btn--toggle">
+                            Giá
+                            <i class="fas fa-sort-up fa-sort-down"></i>
+                        </button>
+                    </div>
+                    <div class="page-direction">
+                        <span class="number">
+                            <span class="number__current">1</span>
+                            <span>/200</span>
+                        </span>
+                        <span class="direction">
+                            <button class="fas fa-chevron-left"></button>
+                            <button class="fas fa-chevron-right"></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="result__content">
+                </div>
+                <div class="notification">
+                    <div class="notification__content">
+                        <div class="notification__img">
+                            <img src="/src/assets/images/photos/system/notification/search-404.svg" alt="">
+                        </div>
+                        <div class="notification__title">Không có sản phẩm phù hợp với nội dung tìm kiếm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="/src/js/loadHeaderFooter.js"></script>
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/search.js"></script>
+</body>
+</html

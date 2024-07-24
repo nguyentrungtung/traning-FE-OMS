@@ -863,6 +863,22 @@ table.table-striped{
                         height: 82px;
                         border-radius: 5px;
                         overflow: hidden;
+                        transition: 0.3s all;
+                        &:hover{
+                            cursor: zoom-in;
+                        }
+                        &--active{
+                            border: 1px solid $green;
+                            padding: 2px;
+                            transition: 0.3s all;
+                        }
+                    }
+                    &--show{
+                        height: 0px;
+                        width: 300px;
+                        transition: 0.3s all;
+                        opacity: 0;
+                        object-position: top;
                     }
                     .video__container{
                         position: relative;

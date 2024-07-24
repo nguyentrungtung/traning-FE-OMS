@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes">
+    <link rel="stylesheet" href="/src/styles/css/style.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="container-carousel container--tablet">
+            <div id="carouselExampleIndicators" class="carousel slide container text-center overflow-hidden" data-bs-touch="true" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/src/assets/images/photos/banner/2016f179bd342bece89c30b79b7b6800.png" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/src/assets/images/photos/banner/5428345b7c76dbaf1ea255b9e30e4f5b.png" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/src/assets/images/photos/banner/be68ddd8b1b1bb4e41655b017a20d1a1.png" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/src/assets/images/photos/banner/c2d1796f5465137c5755582fbb31cb5c.png" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/src/assets/images/photos/banner/cc35ccc40a0d34c25810d4ce9c4899b5.png" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/80fb3061045855.5a6942f085e5a.jpg" alt="...">
+                    </div>
+                </div>
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button> -->
+            </div>
+        </div>
+        <div class="main__block main__block--bg-white container--tablet location-filter__group">
+            <div class="block__title">Lọc theo vị trí</div>
+            <div class="block__content">
+                <div class="btn-group">
+                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Tỉnh / Thành phố
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item"><a href="#">Hà Nội</a></li>
+                      <li class="dropdown-item"><a href="#">TP.Hồ Chí Minh</a></li>
+                      <li class="dropdown-item"><a href="#">Đà Nẵng</a></li>
+                      <li class="dropdown-item"><a href="#">Hải Phòng</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Quận / Huyện
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#">Quận Hoàng Mai</a></li>
+                        <li class="dropdown-item"><a href="#">Quận Đống Đa</a></li>
+                        <li class="dropdown-item"><a href="#">Huyện Thanh Trì</a></li>
+                        <li class="dropdown-item"><a href="#">Huyện Gia Lâm</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Xã
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item"><a href="#">Xã Thanh Liệt</a></li>
+                      <li class="dropdown-item"><a href="#">Phường Đại Kim</a></li>
+                      <li class="dropdown-item"><a href="#">Phường Trung Liệt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main__block main__block--bg-trans container--tablet border-0 shop-card-list__group">
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/aan.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall Thạch Bàn Long</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/dacsanxunghe.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall Nghiêm Xuân Yêm, Quận Hoàng Mai</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/fuji-market.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall Fuji Market Origin Style</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/nestle.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall Nestle uỷ quyền TNHH</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/top-market.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall Top Market Lê Trọng Tấn</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/vitot.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall Vitot Food - Món ngon nổi tiếng</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/0cf0ca72d6a8ec2767ea75c76cf1c192.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall Thực phẩm sạch HNH - Chăm sóc bữa ăn Việt</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/2fda004a95709049f46cac41138d32ad.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall Công ty TNHH Thực phẩm Khánh Hà</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/429958550a5e5d2d23cb44a314fdeb29.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall Ông già IKA</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/60592a3c2f0826d6cec63ef9b054cc5e.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall Đông Dương Food Hoa quả sạch Ba Miền</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/6c96f27e376af73fb3e5385488b71ee2.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall VKook - We bring the World to you</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/7cf8a7afae536f0190acae56ede58552.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall Công ty cổ phần thực phẩm Sói Biển Trung Thực</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/98955e1adabc3823e551a5c21d473d08.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall Nông sản Dũng Hà, Mang sức khoẻ và cuộc sống an lành đến mọi nơi</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/c2463f38a6098fb9407f19bfcb455ff2.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall Công ty TNHH Thực phẩm an toàn FS</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="shop__mini-card">
+                <div class="img">
+                    <img src="/src/assets/images/photos/shop/shop/ff785c460ad6132f5252eb2094fad9b8.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="info__shop-name">Ommani Mall Công ty Thực phẩm sạch Homemade Foods</div>
+                    <div class="info__features">
+                        <div class="rating">
+                            <img class="icon" src="/src/assets/images/icons/star.svg" alt="">
+                            <span class="value"> 4.8 </span>
+                            <span class="amount"> (11k+)</span>
+                        </div>
+                        <div class="location">
+                            <i class="icon fas fa-location-dot"></i>
+                            <span class="name">TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div class="info__cert">
+                        <img src="/src/assets/images/photos/shop/shop-cert/37ddf198b80b169213abef43a5731550.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/451a35345460879b6cb354fe1ace60a9.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/5610a3200c3462306c91164d3fd02da2.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/89d7ff52853185d12d486deb861203ee.png" alt="shop-certificate-icon" class="icon">
+                        <img src="/src/assets/images/photos/shop/shop-cert/99fe845a8e040148509c523809855d68.png" alt="shop-certificate-icon" class="icon">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="/src/js/loadHeaderFooter.js"></script>
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/search.js"></script>
+</body>
+</html

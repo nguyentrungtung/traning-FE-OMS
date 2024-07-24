@@ -20,7 +20,7 @@ function onClickSlideBtn(targetID, direction){
     }
 }
 
-
+// Zoom function initializing
 function initEzPlus(){
     $('.zoomContainer').remove();
     if(window.matchMedia('(min-width: 1200px)').matches){
@@ -67,6 +67,9 @@ function zoomImgChanger(source, target){
     $(targetID).data('zoom-image', imgSrc)
     initEzPlus();
 }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const related_product_slider = document.querySelector('.related-product__content');
 var onHold__related_product = false;
 related_product_slider.addEventListener('mousedown', (event) => onDown(event, related_product_slider));
@@ -126,17 +129,25 @@ function onMove(e, item) {
     item.scrollLeft = scrollLeft - walk;
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Expand Product Description with btn
 let product_description = $('.detailed__content') //hidden content - responsive content
 let moreBtn = $('.more-btn')
 let moreBtn_text = moreBtn.find('span')
 let moreBtn_icon = moreBtn.find('i')
 let rotation = 0;
-if (product_description.outerHeight() <= 500) {
-    moreBtn.hide(); // Ẩn nút nếu nội dung không vượt quá chiều cao của container
-} else {
-    moreBtn.show(); // Hiển thị nút nếu nội dung vượt quá chiều cao của container
-}
+$(window).resize(function(){
+    if($(window).width() < 750){
+        if (product_description.outerHeight() < 520) {
+            moreBtn.hide(); // Ẩn nút nếu nội dung không vượt quá chiều cao của container
+        } else {
+            moreBtn.show(); // Hiển thị nút nếu nội dung vượt quá chiều cao của container
+        }
+    }
+    else{
+        return;
+    }
+})
 moreBtn.on('click', ()=>{
     if (product_description.hasClass('expanded')) {
         moreBtn_text.text('Xem thêm');
@@ -150,6 +161,8 @@ moreBtn.on('click', ()=>{
 })
 
 
+////////////////////////////////////////////////////////////////////////////////////////////
+// Toggle filter Btn list
 $('.filter-rating__btn').on('click', function(){
     if($(this) == $('.filter-rating__btn:first')){
         $(this).addClass('filter-rating__btn--active');
@@ -164,6 +177,9 @@ $('.filter-rating__btn').on('click', function(){
     }
 })
 
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// Handle Video Click on
 let video_container = $('.video__container')
 let video_btn = video_container.find('button');
 video_btn.on('click', function(){
@@ -185,5 +201,43 @@ let btn_overlay = video_container.find('.video__btn')
 video_self.hover(function(){
     if(!$(this).get(0).paused){
         btn_overlay.fadeIn(300)
+    }
+})
+
+// Function for show preview img onClick
+$('.img__item').on('click', function(){
+    if($(this).hasClass('img__item--active')){
+        $('.img__item').removeClass('img__item--active');
+        $(this).closest('.user__comment').find('.img--show').css({
+            'margin-top': '0px',
+            'height': '0px',
+            'transition': '0.3s all',
+            'opacity': '0'
+        })
+        let removeSrc_TimeOut = setTimeout(function(){
+            $(this).closest('.user__comment').find('.img--show').removeAttr('src')
+        }, 310)
+        clearTimeout(removeSrc_TimeOut)
+    }
+    else{
+        $(this).closest('.user__comment').find('.img--show').css({
+            'margin-top': '0px',
+            'height': '0px',
+            'transition': '0.1s all',
+            'opacity': '0'
+        })
+        let removeSrc_TimeOut = setTimeout(function(){
+            $(this).closest('.user__comment').find('.img--show').removeAttr('src')
+        }, 110)
+        clearTimeout(removeSrc_TimeOut)
+        $('.img__item').removeClass('img__item--active');
+        let img_src = $(this).find('img').attr('src');
+        $(this).closest('.user__comment').find('.img--show').attr('src', img_src).css({
+            'margin-top': '12px',
+            'height': '300px',
+            'transition': '0.3s all',
+            'opacity': '1'
+        })
+        $(this).addClass('img__item--active');
     }
 })
