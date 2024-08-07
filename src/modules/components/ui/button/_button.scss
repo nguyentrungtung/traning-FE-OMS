@@ -1,0 +1,126 @@
+@import '../../../../styles/variables';
+button{
+    &.btn{
+        transition: 0.3s all;
+        border: 1px solid transparent;
+        background-color: transparent;
+        padding: 8px 16px;
+        border-radius: 8px;
+        &::after{
+            display: none;
+        }
+        &:active{
+            background-color: white !important;
+            color: $primary !important;
+        }
+        *{
+            font-weight: 500;
+        }
+        i{
+            font-weight: 900;
+        }
+        &--pill{
+            border-radius: 100px;
+        }
+        &--square{
+            width: 32px;
+            height: 32px;
+        }
+        &--round{
+            width: 32px;
+            height: 32px;
+        }
+        &--menu-action{
+            padding: 13.5px 12px;
+        }
+        &--action{
+            padding: 13.5px 10px;
+            vertical-align: middle;
+            gap: 4px;
+            i{
+                height: 100%;
+            }
+        }
+        &--white{
+            background-color: white;
+            @include btn-status{
+                background-color: $light-primary;
+                border-color: transparent;
+                color: white;
+            }
+        }
+        &--primary{
+            background-color: $primary;
+            color: white;
+            @include btn-status{
+                background-color: $primary;
+                border-color: transparent;
+                color: white;
+            }
+        }
+        &--little-light-primary{
+            background-color: $bright-primary;
+            @include btn-status{
+                background-color: $bright-primary;
+                border-color: transparent;
+            }
+        }
+        &--light-primary{
+            background-color: $light-primary;
+            @include btn-status{
+                background-color: $light-primary;
+                border-color: transparent;
+            }
+        }
+        &--dark-primary{
+            background-color: $dark-primary;
+            color: white;
+            &:hover{
+                background-color: $dark-primary;
+                color: white;
+            }
+        }
+        &--outline{
+            border: 1px solid;
+        }
+    }
+    &.text{
+        &--primary{
+            color: $primary;
+            &:hover{
+                color: $primary;
+            }
+            *{
+                color: $primary;
+            }
+        }
+        &--danger{}
+        &--white{
+            &:hover{
+                color: white;
+            }
+            &:active{
+                *{color: $primary;}
+            }
+            *{
+                color: white;
+            }
+        }
+        &--black{
+            *{
+                color: black;
+            }
+            &:hover{
+                color: black;
+            }
+        }
+    }
+    &.border{
+        &--primary{
+            border-color: $primary;
+            &:hover{
+                border-color: $primary;
+            }
+        }
+    }
+}

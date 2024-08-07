@@ -1,0 +1,70 @@
+$white: white;
+$main-bg-secondary: #ECF2F7;
+$border-secondary: #D0D6E5;
+$text-secondary: #6F767E;
+$text-dark-secondary: #6D727C;
+$primary: #0E72ED;
+$dark-primary: #054A9F;
+$bright-primary: #BBD9FF;
+$light-primary: #ECF4FF;
+$bg-tooltip: #03336E;
+$error: #ED3724;
+$success: #58C35A;
+$orange: #FF6B00;
+$aqua-teal: #01BFAC;
+$bg-notification--unread:#F6FAFF;
+$bg-notification--read:#FFFFFF;
+$icon-notification--read: #F0F2F5;
+$icon-notification--unread: #D5E7FF;
+$btn-white: #F6F9FC;
+$notification-item_border:#F0F2F5;
+$bg-date-in-range: #E1E4FC;
+$pink: #FF538A;
+$orange:  #FE9339;
+$table-header: #F6F8FA;
+$black: #061020;
+@mixin btn-status{
+    &:active, &:hover, &:focus{
+        @content;
+    }
+}
+@mixin dropdown-btn-status{
+    &:active, &:hover, &:focus, &:focus-within, &[aria-expanded="true"]{
+        @content;
+    }
+}
+@mixin overflow-dot-1{
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@mixin overflow-dot-2{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Số dòng hiển thị */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3; /* Dòng cao cho văn bản */
+    max-height: 3.3em; /* 2 dòng x 1.5em dòng cao = 3em */
+}
+@mixin center-inside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin absolute-0{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+@mixin btn-status{
+    &:active, &:hover{
+        @content;
+    }
+}
+@mixin dropdown-btn-status{
+    &:active, &:hover, &:focus, &:focus-within, &[aria-expanded="true"]{
+        @content;
+    }
+}

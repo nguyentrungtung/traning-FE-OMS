@@ -1,0 +1,105 @@
+@import '../../../styles/variables';
+.notification-panel{
+    border-top: 4px solid $aqua-teal;
+    border-radius: 4px;
+    width: 300px;
+    height: fit-content;
+    &__header{
+        background-color: white;
+        padding: 20px 12px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 600;
+        text-transform: uppercase;
+        span{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        button{
+            border: none;
+            background-color: transparent;
+            img{
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    &__body{
+        .notification{
+            &__icon{
+                width: 32px;
+                height: 32px;
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+            }
+            &__item{
+                display: block;
+                text-decoration: none;
+                padding: 12px 16px;
+                display: flex;
+                gap: 8px;
+                transition: 0.2s all;
+                border-bottom: 1px solid $notification-item_border;
+                &--read{
+                    background-color: $bg-notification--read;
+                    &:hover{
+                        background-color: #F2F2F2;
+                        transition: 0.2s all;
+                    }
+                    .notification__icon{
+                        background-color: $icon-notification--read;
+                    }
+                }
+                &--unread{
+                    background-color: $bg-notification--unread;
+                    .notification__icon{
+                        background-color: $icon-notification--unread;
+                    }
+                    &:hover{
+                        background-color: #E5EDFC;
+                        transition: 0.2s all;
+                    }
+                }
+            }
+            &__body{
+                display: block;
+            }
+            &__content{
+                font-size: 16px;
+                width: 100%;
+                @include overflow-dot-2;
+                line-height: 24px;
+                span{
+                    font-size: 16px;
+                    line-height: 24px;
+                    &.bold{
+                        font-weight: 600;
+                    }
+                    &.primary{
+                        color: $primary;
+                    }
+                }
+            }
+            &__time-stamp{
+                display: flex;
+                gap: 6px;
+                align-items: center;
+                margin-top: 4px;
+                span{
+                    color: $text-secondary;
+                }
+            }
+        }
+    }
+    &__footer{
+        background-color: $white;
+        padding: 12px 20px 20px 20px;
+        button{
+            width: 100%;
+        }
+    }
+}

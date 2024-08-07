@@ -1,0 +1,130 @@
+@import '../../styles/variables';
+.header {
+    background-color: $white;
+    .topbar {
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        .utility{
+            display: flex;
+            gap: 20px;
+            height: 24px;
+            &__item{
+                button{
+                    padding: 0px;
+                    border: none;
+                    background-color: transparent;
+                    >img{
+                        height: 24px;
+                        width: fit-content;
+                        display: block;
+                    }
+                }
+                &.bubble-notification{
+                    border: 1px solid $border-secondary;
+                    border-radius: 4px;
+                    padding: 0px 12px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 4px;
+                    >img{
+                        height: 12px;
+                        width: fit-content;
+                    }
+                }
+                &.user-section{
+                    .dropdown-menu{
+                        padding: 0;
+                        border: $main-bg-secondary 1px solid;
+                        border-radius: 4px;
+                        width: 300px;
+                        .dropdown-item{
+                            padding: 12px;
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            font-size: 16px;
+                            font-weight: 500;
+                            &:active{
+                                background-color: currentColor;
+                            }
+                        }
+                        .dropdown-divider{
+                            margin: 0px;
+                            border-top: $main-bg-secondary 1px solid;
+                        }
+                    }
+                    button{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 4px;
+                        &.dropdown-toggle::after{
+                            display: none;
+                        }
+                        span{
+                            font-weight: 500;
+                            line-height: 16.94px;
+                            color: black;
+                        }
+                        .dropdown__icon{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .navbar{
+        background-color: $dark-primary;
+        padding: 0px;
+        &-nav{
+            display: flex;
+            width: 100%;
+            padding: 0px 20px;
+            .nav-item.nav-link{
+                color: white;
+                font-weight: 600;
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                padding: 8px 24px 8px 20px;
+                border-radius: 0px;
+                &::after{
+                    display: none;
+                }
+                &.nav-item--cart{
+                    background-color: $orange;
+                    &.active{
+                        background-color: $orange;
+                        color: white;
+                    }
+                }
+                &.active, &:active{
+                    background-color: $primary;
+                    color: white;
+                }
+            }
+            img{
+                display: block;
+                width: 24px;
+                height: 24px;
+            }
+            .dropdown{
+                .dropdown-menu{
+                    min-width: 200px;
+                    top: 100%;
+                    margin-top: 12px;
+                    .dropdown-item{
+                        border-bottom: 0.5px solid $border-secondary;
+                        &:last-child{
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

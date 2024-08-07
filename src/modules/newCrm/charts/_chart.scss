@@ -1,0 +1,39 @@
+@import '../../../styles/variables';
+
+.chart{
+    &__wrapper{
+        width: 100%;
+        margin-top: 12px;
+        background-color: white;
+        border-radius: 4px;
+        border-top: 4px solid $primary;
+        padding: 20px;
+    }
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 12px;
+        .title{
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .tabs{
+            display: flex;
+            gap: 8px;
+            button{
+                background-color: $light-primary;
+                font-size: 14px;
+                font-weight: 500;
+                &.tab--active{
+                    background-color: $primary;
+                    color: white;
+                }
+            }
+        }
+    }
+    &__body{
+        margin-top: 12px;
+    }
+}

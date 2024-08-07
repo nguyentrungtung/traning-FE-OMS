@@ -1,0 +1,133 @@
+@import '../../styles/variables';
+.general-report{
+    width: 100%;
+    padding: 20px 16px;
+    background-image: url('/public/assets/images/photos/27102cdc6b1b921f40174d288936dbdb.jpg');
+    background-position: top;
+    background-size: cover;
+    &__header{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        .title{
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .menu{
+            display: flex;
+            gap: 8px;
+            .dropdown{
+                .dropdown-wrapper--date-picker{
+                    width: fit-content;
+                    .date-range-picker__wrapper{
+                        min-width: 376px;
+                        border-radius: 8px;
+                        background-color: white;
+                        .date-range-picker__footer{
+                            background-color: white;
+                            margin: 8px 16px 20px;
+                        }
+                    }
+                }
+                .dropdown-menu{
+                    height: fit-content;
+                    min-width: 200px;
+                    .dropdown-item{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        i{
+                            color: white;
+                        }
+                        &:hover{
+                            i{
+                                color: $light-primary;
+                            }
+                        }
+                        &:active{
+                            span{
+                                color: white;
+                            }
+                            i{
+                                color: $light-primary;
+                            }
+                        }
+                        &--active{
+                            &:active{
+                                background-color: $light-primary;
+                                span{
+                                    color: $dark-primary;
+                                }
+                                i{
+                                    color: $dark-primary;
+                                }
+                            }
+                            span{
+                                color: $primary;
+                            }
+                            i{
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__body{
+        display: flex;
+        gap: 12px;
+        margin-top: 24px;
+        .report-card{
+            flex: 1;
+            background-color: white;
+            display: flex;
+            gap: 8px;
+            padding: 20px;
+            border-radius: 4px;
+            align-items: center;
+            &--pink{
+                border-left: 4px solid $pink;
+                .report-card__icon{
+                    background-color: $pink;
+                }
+            }
+            &--orange{
+                border-left: 4px solid $orange;
+                .report-card__icon{
+                    background-color: $orange;
+                }
+            }
+            &__icon{
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                flex-shrink: 0;
+                @include center-inside;
+                img{
+                    height: 28px;
+                    width: fit-content;
+                }
+            }
+            &__specs{
+                display: flex;
+                grid-template-columns: repeat(auto-fit, minmax(108.5px, 1fr));
+                .spec{
+                    &__title{
+                        font-size: 14px;
+                        font-weight: 500;
+                        text-align: left;
+                        color: $text-dark-secondary;
+                    }
+                    &__number{
+                        font-size: 38px;
+                        font-weight: 500;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@import '_variables.scss';
+@font-face {
+    font-family: 'Inter';
+    src: url(../../public/assets/fonts/Inter-VariableFont.ttf);
+}
+*{
+    font-size: 14px;
+    font-family: 'Inter';
+    color: black;
+    padding: 0;
+    margin: 0;
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .tooltip{
+        .tooltip-inner{
+            background-color: $bg-tooltip;
+            width: fit-content !important;
+            white-space: nowrap;
+            max-width: none;
+        }
+        .tooltip-arrow{
+            display: none !important;
+        }
+    }
+    .text-error{
+        color: $error;
+    }
+    main{
+        padding: 12px 20px;
+        background-color: $main-bg-secondary;
+    }
+    .gap-12px{
+        gap: 12px;
+    }
+    .dropdown-menu{
+        width: 100%;
+        border-color: $border-secondary;
+        padding: 0px !important;
+        overflow: hidden;
+        .dropdown-item{
+            padding: 12px;
+            border-bottom: 1px solid;
+            border-color: $border-secondary;
+            &:hover{
+                background-color: $light-primary;
+            }
+            &:active{
+                background-color: $primary;
+                color: white;
+            }
+            &:nth-last-child(1){
+                border-bottom: none;
+            }
+        }
+    }
+    // CHeck BOx Styling
+    input[type="radio"]{
+        appearance: none;
+        border: 1px solid $border-secondary;
+        width: 16px;
+        height: 16px;
+        content: none;
+        outline: none;
+        padding: 0px;
+        margin: 0;
+    }
+    
+    input[type="radio"]:checked {
+        appearance: none;
+        outline: none;
+        padding: 0;
+        content: none;
+        border: none;
+        border-radius: 50%;
+        background-color: $primary;
+    }
+    
+    input[type="radio"]:checked::before{
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        color: white !important;
+        content: "\00A0\2713\00A0";
+        font-weight: bolder;
+        font-size: 12px;
+        border-radius: 50%;
+        background-color: $primary;
+    }
+}

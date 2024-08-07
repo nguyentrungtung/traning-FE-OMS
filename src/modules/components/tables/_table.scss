@@ -1,0 +1,208 @@
+@import '../../../styles/variables';
+.table-list{
+    background-color: transparent;
+    &__header{
+        background-color: transparent;
+        display: flex;
+        .title{
+            width: 232px;
+            height: 44px;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 44px;
+        }
+        .input__wrapper{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            .input-group{
+                padding: 4px;
+                width: 440px;
+                border-radius: 8px;
+                background-color: $white;
+                input{
+                    box-shadow: none;
+                    border: none;
+                    color: $text-secondary;
+                }
+                button{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 4px !important;
+                    @include center-inside;
+                    &:active{
+                        i{
+                            color: $primary
+                        }
+                    }
+                }
+            }
+            button{
+                border-radius: 6.5px;
+                width: 36px;
+                height: 36px;
+                @include center-inside;
+            }
+        }
+        .action-wrapper{
+            display: flex;
+            gap: 12px;
+            margin-left: auto;
+            button{
+                border-color: 1px solid $primary;
+                display: flex;
+                gap: 4px;
+                align-items: center;
+            }
+        }
+    }
+    &__body{
+        border-radius: 4px;
+        margin-top: 12px;
+        display: flex;
+        gap: 12px;
+        .table{
+            margin: 0px;
+            .img{
+                width: 60px;
+                height: 60px;
+                border-radius: 8px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+            input[type='checkbox']{
+                width: 16px;
+                height: 16px;
+                box-shadow: none;
+            }
+            thead{
+                tr{
+                    th{
+                        width: 1%;
+                        color: $text-secondary;
+                        white-space: nowrap;
+                        background-color: $table-header;
+                        border: none;
+                        padding: 10px 16px;
+                        width: fit-content;
+                        &:last-of-type{
+                            border-radius: 0px 12px 12px 0px;
+                        }
+                        &:first-of-type{
+                            border-radius: 12px 0px 0px 12px;
+                            padding: 12px;
+                        }
+                    }
+                }
+            }
+            td{
+                padding: 16px;
+                width: 1%;
+                vertical-align: middle;
+                &:first-of-type{
+                    padding: 12px;
+                }
+                &:nth-child(2){
+                    width: auto;
+                }
+                &.table-item{
+                    &__url{
+                        min-width: 400px;
+                    }
+                    &__status{
+                        min-width: 250px;
+                    }
+                    &__attr{
+                        min-width: 650px;
+                    }
+                }
+                div.attr__container{
+                    width: 100%;
+                    display: flex;
+                    gap: 5px;
+                    flex-wrap: wrap;
+                }
+                span{
+                    border-radius: 12px;
+                    padding: 5.5px 10px 5.5px;
+                    white-space: nowrap;
+                    &.error{
+                        background-color: $error;
+                        color: white;
+                    }
+                    &.success{
+                        background-color: $success;
+                        color: white;
+                    }
+                }
+                p{
+                    margin: 0;
+                }
+            }
+            &--product{
+                .product__prev{
+                    display: flex;
+                    gap: 12px;
+                    align-items: center;
+                    .text{
+                        &__name{
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__content{
+        flex: 1;
+        padding: 12px;
+        background-color: white;
+        border-radius: 4px;
+    }
+}
+.pagination__container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .pagination{
+        margin: 20px 0px 12px;
+        gap: 12px;
+        li{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid black;
+            background-color: white;
+            overflow: hidden;
+            &.active{
+                background-color: $dark-primary;
+                border-color: $dark-primary;
+                color: white;
+            }
+            &.previous, &.next{
+                &.disabled{
+                    border-color: $border-secondary;
+                    a{
+                        pointer-events: none;
+                        i{
+                            color: $border-secondary;
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+            a{
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 32px;
+                display: block;
+            }
+        }
+    }
+}

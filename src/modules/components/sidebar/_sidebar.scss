@@ -1,0 +1,60 @@
+@import '../../../styles/variables';
+.sidebar-filter{
+    background-color: transparent;
+    width: 232px;
+    .filter{
+        &__body{
+            width: inherit;
+        }
+        &__item{
+            background-color: $white;
+            border-radius: 8px;
+            margin-top: 12px;
+            &:first-child{
+                margin-top: 0px;
+            }
+            .title{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+                height: 40px;
+                span{
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 40px;
+                }
+            }
+            .options{
+                max-height: 1000px;
+                input[type="radio"]:checked::before{
+                    width: 16px;
+                    height: 16px;
+                    content: "\00A0\2713\00A0";
+                }
+                &--collapsed{
+                    max-height: 0px;
+                    overflow: hidden;
+                    input[type="radio"]:checked::before{
+                        width: 16px;
+                        height: 0px;
+                        content: '';
+                    }
+                    
+                }
+                .option{
+                    padding: 9px 12px;
+                    .form-check{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        input{
+                            box-shadow: none;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
